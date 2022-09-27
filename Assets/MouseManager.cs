@@ -78,11 +78,18 @@ public class MouseManager : MonoBehaviour
                 return;
             }
             else {
-                var used = Actions.i.UseItemMainHand(mousepos, characterPosition);
-                if (used) {
-                    EndOfAction();
-                    return;
+                var used = false;
+                if(gameobjectundermouse != null) {
+                    if (gameobjectundermouse.GetComponent<Stats>().faction != PartyManager.Faction.Openable) {
+                        used = Actions.i.UseItemMainHand(mousepos, characterPosition);
+                        if (used) {
+                            EndOfAction();
+                            return;
+                        }
+                    }
                 }
+
+
                 if (gameobjectundermouse != null) {
                     used = Actions.i.Punch(mousepos, characterPosition);
                     if (used) {

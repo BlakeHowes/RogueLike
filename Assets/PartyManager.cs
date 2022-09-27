@@ -121,6 +121,7 @@ public class PartyManager : MonoBehaviour
         }
         SwitchToNextCharacter();
         Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
+        GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
         InventoryManager.i.UpdateInventory();
 
         if (partyMemberTurnTaken.Count >= party.Count) {

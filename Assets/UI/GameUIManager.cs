@@ -16,20 +16,12 @@ public class GameUIManager : MonoBehaviour
     public ItemToolTip itemtooltip;
     public GameObject tooltipGameObject;
     public Text actionPointsText;
-    public Material SelectedMaterial;
     public void Awake() {
         i = this;
     }
     public void HighlightMouseTile(Vector3Int position) {
         uiTilemap.ClearAllTiles();
         uiTilemap.SetTile(position, mouseHighlight);
-    }
-
-    public void Update() {
-        var currentCharacter = PartyManager.i.currentCharacter;
-        if(currentCharacter != null) {
-            currentCharacter.GetComponent<SpriteRenderer>().material = SelectedMaterial;
-        }
     }
 
     public void DisableUI() {
