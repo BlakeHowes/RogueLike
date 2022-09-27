@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 4244462375
+    locked: 0
+  - name: Floor
+    uniqueID: 1518081105
+    locked: 0
+  - name: Mechanisms
+    uniqueID: 1354975459
+    locked: 0
+  - name: Items
+    uniqueID: 553094673
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: GameObjectSprites
+    uniqueID: 1935189171
+    locked: 0
+  - name: Effects
+    uniqueID: 1414855099
+    locked: 0
+  - name: UI
+    uniqueID: 3977833029
+    locked: 0
+  - name: HUD
+    uniqueID: 3477568365
+    locked: 0
