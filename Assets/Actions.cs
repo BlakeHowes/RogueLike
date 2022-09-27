@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class Actions : MonoBehaviour
 {
@@ -12,9 +11,25 @@ public class Actions : MonoBehaviour
         i = this;
     }
 
+    public void ChangeActionPoints(float amount) {
+        var currentCharacter = PartyManager.i.currentCharacter;
+        if (PartyManager.i.state == PartyManager.State.Exploring) {
+            actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
+        }
+        else {
+            actionPoints -= amount;
+        }
+        GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
+    }
+
+    public void SetActionPoints(float amount) {
+        actionPoints = amount;
+        GameUIManager.i.actionPointsText.text = actionPoints.ToString();
+    }
+
     public void Walk(Vector3Int postion,Vector3Int origin) {
         var walked =PathingManager.i.MoveOneStep(postion, origin);
-        if (walked) { actionPoints -= walkCost; }
+        if (walked) { ChangeActionPoints(walkCost); }
     }
 
     public void PickUpItem(Vector3Int position) {
@@ -23,7 +38,7 @@ public class Actions : MonoBehaviour
             var item = GridManager.i.itemMethods.RemoveItem(position);
             inventory.AddItem(item);
         }
-        actionPoints -= pickupCost;
+        ChangeActionPoints(pickupCost);
     }
 
     public bool Punch(Vector3Int position, Vector3Int origin) {
@@ -33,7 +48,7 @@ public class Actions : MonoBehaviour
         if (InMeleeRange(position, origin)) {
             var damage = origin.gameobjectSpawn().GetComponent<Stats>().GetAttack();
             position.gameobjectSpawn().GetComponent<Stats>().Damage(damage,origin);
-            actionPoints -= handCost;
+            ChangeActionPoints(handCost);
             return true;
         }
         return false;
@@ -62,13 +77,13 @@ public class Actions : MonoBehaviour
             if (position.gameobjectSpawn() != null) {
                 if(mainHandItem.ranged == true) {
                     RangedAttack(position,origin,mainHandItem);
-                    actionPoints -= handCost;
+                    ChangeActionPoints(handCost);
                     return true;
                 }
                 else {
                     if (InMeleeRange(position, origin) == true) {
                         mainHandItem.Call(position, origin);
-                        actionPoints -= handCost;
+                        ChangeActionPoints(handCost);
                         return true;
                     }
                 }
@@ -93,7 +108,7 @@ public class Actions : MonoBehaviour
         }
         item.Call(position, origin);
         GridManager.i.itemMethods.SpawnThrownItem(item, position);
-        actionPoints -= handCost;
+        ChangeActionPoints(handCost);
     }
 
     public void UseItemFromInventory(Vector3Int position,Vector3Int origin, ItemAbstract item) {
@@ -104,12 +119,12 @@ public class Actions : MonoBehaviour
             if (inventory.Contains(item)) {
                 inventory.Remove(item);
             }
-            actionPoints -= handCost;
+            ChangeActionPoints(handCost);
             return;
         }
         if (item.ranged) {
             RangedAttack(position,origin,item);
-            actionPoints -= handCost;
+            ChangeActionPoints(handCost);
             return;
         }
         ThrowItem(position, origin, item);

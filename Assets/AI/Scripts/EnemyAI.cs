@@ -46,7 +46,7 @@ public class EnemyAI:AIAbstract
 
     public override void AttackLogic() {
         if(stats.state == State.Attacking) {
-            PartyManager.i.EnemyTurn(Attack(), gameobject);
+            PartyManager.i.TakeEnemyTurn(Attack(), gameobject);
         }
     }
 
@@ -55,9 +55,12 @@ public class EnemyAI:AIAbstract
         int testbreaker = 0;
         while (Actions.i.actionPoints > 0) {
             yield return new WaitForSeconds(0.2f);
+            if(target == null) {
+                UpdateSensoryInformation(gameobject.position());
+            }
             testbreaker++;
             if(testbreaker >= 10) {
-                Debug.LogError("Attack is shit");
+                Debug.LogError("Attack is stuck");
                 break;
             }
 

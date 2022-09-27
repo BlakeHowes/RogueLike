@@ -97,15 +97,12 @@ public class GridManager : MonoBehaviour {
     public void UpdateGame() {
         Vector3Int camerapos = Camera.main.transform.position.FloorToInt();
         mechMethods.ActivateMechanisms(); //IDK ABOUT THIS
-        PartyManager.i.EnemyUpdate();//IDK ABOUT THIS
+        PartyManager.i.FindEnemies();//IDK ABOUT THIS
         //UPDATING GRAPHICAL CHANGES
         graphics.UpdateItemAbstracts(width, height, itemGrid, itemTilemap);
         graphics.UpdateItemAbstracts(width, height, mechGrid, mechTilemap);
         //graphics.UpdateGameObjects(width, height, goGrid, goTilemap);
 
-        if (PartyManager.i.state == PartyManager.State.Exploring) { 
-            Actions.i.actionPoints = PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints;
-        }
         GameUIManager.i.actionPointsText.text = Actions.i.actionPoints.ToString();
 
         InventoryManager.i.UpdateInventory();

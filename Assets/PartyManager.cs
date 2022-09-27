@@ -99,7 +99,7 @@ public class PartyManager : MonoBehaviour
     }
 
     public List<GameObject> EnemyPartyState() {
-        var attackingEnemies = AttackingEnemies();
+        var attackingEnemies = FindEnemies();
         if (attackingEnemies.Count == 0) {
             state = State.Exploring;
             return attackingEnemies;
@@ -120,37 +120,22 @@ public class PartyManager : MonoBehaviour
             partyMemberTurnTaken.Add(currentCharacter);
         }
         SwitchToNextCharacter();
-        Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
-        GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
+        Actions.i.SetActionPoints(currentCharacter.GetComponent<Stats>().actionPoints);
         InventoryManager.i.UpdateInventory();
 
         if (partyMemberTurnTaken.Count >= party.Count) {
-            StartCoroutine(EnemyTurnTest(attackingEnemies));
+            StartCoroutine(EnemyPartyTurn(attackingEnemies));
             partyMemberTurnTaken.Clear();
             Debug.Log("AI TURN");
         }
     }
 
-    public void EnemyTurn(IEnumerator enumerator,GameObject enemy) {
+    public void TakeEnemyTurn(IEnumerator enumerator,GameObject enemy) {
         currentCharacter = enemy;
         StartCoroutine(enumerator);
     }
 
-    public List<GameObject> AttackingEnemies() {
-        List<GameObject> attackingenemies = new List<GameObject> ();
-        var enemyList =FindEnemies();
-        foreach (GameObject enemy in enemyList) {
-            enemy.GetComponent<Stats>().AISense();
-            if (enemy.GetComponent<Stats>().state == AIAbstract.State.Attacking) {
-                attackingenemies.Add(enemy);
-                Debug.Log("enemy position " + enemy.position());
-            }
-        }
-        Debug.Log(attackingenemies.Count + " attackinbg enemies");
-        return attackingenemies;
-    }
-
-    public IEnumerator EnemyTurnTest(List<GameObject> attackingEnemies) {
+    public IEnumerator EnemyPartyTurn(List<GameObject> attackingEnemies) {
         MouseManager.i.disableMouse = true;
         foreach (GameObject enemy in attackingEnemies) {
             currentCharacter = enemy;
@@ -163,13 +148,6 @@ public class PartyManager : MonoBehaviour
         Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
         GameUIManager.i.actionPointsText.text = Actions.i.actionPoints.ToString();
         yield return null;
-    }
-
-    public void EnemyUpdate() {
-        var enemies = FindEnemies();
-        foreach (GameObject enemy in enemies) {
-            enemy.GetComponent<Stats>().AISense();
-        }
     }
 
 
@@ -191,7 +169,9 @@ public class PartyManager : MonoBehaviour
                             }
                         }
                         if (enemy != null) {
-                            if (enemy.GetComponent<Stats>().faction == Faction.Enemy) {
+                            var stats = enemy.GetComponent<Stats>();
+                            stats.AISense();
+                            if (stats.faction == Faction.Enemy&& stats.state == AIAbstract.State.Attacking) {
                                 if (!enemies.Contains(enemy))
                                     enemies.Add(enemy);
                             }
