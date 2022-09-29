@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Chipset_001_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 2006418531, guid: f5e39c77f1d76e1498339985385a190e, type: 3}
+  m_Sprite: {fileID: -137923481, guid: e9faba4ff40c4bb49afe39856c2cdecf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

@@ -11,7 +11,6 @@ public class StatItem : ItemAbstract
     public int armour;
 
     public int maxHealthBonus;
-    public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
     public override bool Call(Vector3Int position, Vector3Int origin) {
         //Reset Bonus Stats
         maxHealthBonus = 0;

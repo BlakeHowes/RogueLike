@@ -17,6 +17,7 @@ MonoBehaviour:
   particles: {fileID: 0}
   destroyOnUse: 0
   ranged: 0
+  Modifiers: []
   stack: 1
   attackBase: 3
   attackRandomAddition: 3
@@ -24,4 +25,3 @@ MonoBehaviour:
   AOE: 0
   range: 1
   linePrefab: {fileID: 0}
-  Modifiers: []

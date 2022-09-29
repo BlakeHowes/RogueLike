@@ -31,6 +31,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void DeselectItems() {
+        foreach (Transform child in inventoryLayout.transform) {
+            child.gameObject.GetComponent<Image>().color = Color.white;            
+        }
+        MouseManager.i.itemSelected = null;
+    }
+
     public void CreateButton(GameObject prefab,Transform parent,Sprite sprite,ItemAbstract item,ItemAbstract.Type type) {
         var equipmentclone = Instantiate(prefab, parent);
         equipmentclone.GetComponent<Image>().sprite = sprite;
@@ -40,6 +47,38 @@ public class InventoryManager : MonoBehaviour
             equipmentclone.GetComponent<InventorySlot>().item = item;
             equipmentclone.GetComponent<Image>().sprite = item.tile.sprite;
         }
+    }
+
+    public void CreateEquipmentSprite(string slotName,GameObject character,Vector3 offset) {
+        var clone = new GameObject(slotName);
+        var rend = clone.AddComponent<SpriteRenderer>();
+        clone.transform.SetParent(character.transform);
+        clone.transform.position = character.transform.position + offset;
+    }
+
+    public void UpdateEquipmentSprites(Inventory inventory) {
+        if(inventory.transform.childCount == 0) {
+            CreateEquipmentSprite("MainHandSprite", inventory.gameObject, new Vector3(0.6f, 0.74f, 0));
+            CreateEquipmentSprite("OffHandSprite", inventory.gameObject, new Vector3(-0.42f, 0.35f, 0));
+        }
+        Debug.Log("Inventory Sprites Made");
+        if (inventory.gameObject.transform.childCount >0) {
+            var mainhandgameobject = inventory.transform.Find("MainHandSprite").gameObject;
+            if (inventory.mainHand != null) {
+                mainhandgameobject.GetComponent<SpriteRenderer>().sprite = inventory.mainHand.tile.sprite;}
+            else {
+                mainhandgameobject.GetComponent<SpriteRenderer>().sprite = null;}
+
+            var offHandGameObject = inventory.transform.Find("OffHandSprite").gameObject;
+            if (inventory.offHand != null) {
+                offHandGameObject.GetComponent<SpriteRenderer>().sprite = inventory.offHand.tile.sprite;
+            }
+            else {
+                offHandGameObject.GetComponent<SpriteRenderer>().sprite = null;
+            }
+
+        }
+
     }
 
     public void AddType(ItemAbstract item,ItemAbstract.Type slotType) {
@@ -69,22 +108,24 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform child in equipmentLayout.transform) {
             Destroy(child.gameObject);
         }
+        var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
         //Main Hand
-        var mainHandItem = PartyManager.i.currentCharacter.GetComponent<Inventory>().mainHand;
+        var mainHandItem = inventory.mainHand;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform,mainHandSprite,mainHandItem,ItemAbstract.Type.Weapon);
         //Off Hand
-        var offHandItem = PartyManager.i.currentCharacter.GetComponent<Inventory>().offHand;
+        var offHandItem = inventory.offHand;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, offHandSprite, offHandItem, ItemAbstract.Type.OffHand);
         //Armour
-        var armour = PartyManager.i.currentCharacter.GetComponent<Inventory>().armour;
+        var armour = inventory.armour;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, armour, ItemAbstract.Type.Armour);
         //Trinket 1
-        var trinket1 = PartyManager.i.currentCharacter.GetComponent<Inventory>().trinket1;
+        var trinket1 = inventory.trinket1;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
         //Trinket 2
-        var trinket2 = PartyManager.i.currentCharacter.GetComponent<Inventory>().trinket2;
+        var trinket2 = inventory.trinket2;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
 
+        UpdateEquipmentSprites(inventory);
 
         //Items
         foreach (Transform child in inventoryLayout.transform) {

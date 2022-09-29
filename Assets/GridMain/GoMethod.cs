@@ -29,7 +29,7 @@ public class GoMethod
         }
         var clone = GridManager.i.InstantiateGameObject(prefab);
         SetGameObject(position, clone);
-        clone.transform.position = position+new Vector3(0.5f,0.5f);
+        clone.transform.position = position+new Vector3(0.5f,0.4999f);
         Debug.Log(clone.transform.position);
         goTilemap.SetTile(position, null);
         return clone;

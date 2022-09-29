@@ -10,6 +10,7 @@ public abstract class ItemAbstract : ScriptableObject
     public Tile tile;
     public GameObject particles;
     public bool destroyOnUse,ranged;
+    public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
     [Header("Stats")]
     public int stack = 1;
     public abstract bool Call(Vector3Int position,Vector3Int origin);

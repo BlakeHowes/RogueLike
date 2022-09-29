@@ -34,6 +34,7 @@ public class GridManager : MonoBehaviour {
 
     //TEST OBJECTS
     public GameObject playerPrefab;
+    public GameObject playerPrefab2;
 
     public void Awake() {
         i = this;
@@ -73,10 +74,8 @@ public class GridManager : MonoBehaviour {
 
     //TEST START
     public void Start() {
-        SpawnCharacter(playerPrefab, new Vector3Int(24, 8),Color.magenta);
-        SpawnCharacter(playerPrefab, new Vector3Int(25, 8), Color.yellow);
-        SpawnCharacter(playerPrefab, new Vector3Int(25, 9), Color.blue);
-        SpawnCharacter(playerPrefab, new Vector3Int(25, 10), Color.white);
+        SpawnCharacter(playerPrefab, new Vector3Int(24, 8),Color.white);
+        SpawnCharacter(playerPrefab2, new Vector3Int(25, 8), Color.white);
         PartyManager.i.UpdatePartyIcons();
         UpdateGame();
     }
@@ -87,6 +86,7 @@ public class GridManager : MonoBehaviour {
         clone.transform.position = new Vector3(position.x+0.5f, position.y+0.5f, 0);
         PartyManager.i.AddPartyMember(clone);
         clone.GetComponent<SpriteRenderer>().color = colour;
+        InventoryManager.i.UpdateEquipmentSprites(clone.GetComponent<Inventory>());
     }
 
     public GameObject[,] GetGoGrid() {

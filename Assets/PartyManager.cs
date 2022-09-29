@@ -36,6 +36,10 @@ public class PartyManager : MonoBehaviour
         }
         var playerpos = characterFollowPosition;
         foreach (GameObject member in party) {
+            if(member == null) {
+                RemoveNullCharacters(party);
+                continue;
+            }
             if(member == currentCharacter) {
                 continue;
             }
@@ -57,8 +61,8 @@ public class PartyManager : MonoBehaviour
     }
 
     public void AddPartyMember(GameObject character) {
-        currentCharacter = character;
         party.Add(character);
+        currentCharacter = party[0];
     }
 
     public void Update() {

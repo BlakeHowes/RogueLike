@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 326167d327f309e4aa54929c69c502ec, type: 2}
+  tile: {fileID: 11400000, guid: effbb03618c615a4e849235f266beb2d, type: 2}
   faction: 2
   state: 0
   baseMaxHealth: 0
   baseAttack: 0
   baseArmour: 0
+  baseActionPoints: 0
+  actionPoints: 0
   bonusAttack: 0
   bonusMaxHealth: 0
   bonusArmour: 0
@@ -117,7 +119,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -196519523, guid: f5e39c77f1d76e1498339985385a190e, type: 3}
+  m_Sprite: {fileID: 692982184, guid: 721af00762cb90f4fad2d78000febc11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

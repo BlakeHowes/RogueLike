@@ -16,7 +16,7 @@ public class Weapon : ItemAbstract
     public GameObject linePrefab;
     [NonSerialized] public int attackBonus;
     [NonSerialized] public int attackMultiple = 1;
-    public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
+
     public override bool Call(Vector3Int position, Vector3Int origin) {
         //Reset Bonus Stats
         attackBonus = 0;
