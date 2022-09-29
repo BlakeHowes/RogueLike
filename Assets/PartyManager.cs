@@ -115,8 +115,6 @@ public class PartyManager : MonoBehaviour
     public void EndTurn() {
         var attackingEnemies = EnemyPartyState();
         if (state == State.Exploring) {
-            Follow();
-            partyMemberTurnTaken.Clear();
             return;
         }
 

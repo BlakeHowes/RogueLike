@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
 {
-    public Tile tile;
+    public TileBase tile;
     public PartyManager.Faction faction = PartyManager.Faction.Enemy;
     public AIAbstract.State state = AIAbstract.State.Idle;
 

@@ -27,6 +27,10 @@ public class Actions : MonoBehaviour
         GameUIManager.i.actionPointsText.text = actionPoints.ToString();
     }
 
+    public void Wait() {
+        ChangeActionPoints(1);
+    }
+
     public void Walk(Vector3Int postion,Vector3Int origin) {
         var walked =PathingManager.i.MoveOneStep(postion, origin);
         if (walked) { ChangeActionPoints(walkCost); }

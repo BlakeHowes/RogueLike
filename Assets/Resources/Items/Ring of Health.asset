@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Ring of Health
   m_EditorClassIdentifier: 
   type: 4
-  tile: {fileID: 11400000, guid: 71e81790533591548a86c2a6cb35aa68, type: 2}
+  tile: {fileID: 11400000, guid: 9af173bbc21f59d48927109cc68613f0, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 0
   ranged: 0
+  Modifiers: []
   stack: 1
+  attack: 0
   maxHealth: 10
   armour: 0
   maxHealthBonus: 0
-  Modifiers: []

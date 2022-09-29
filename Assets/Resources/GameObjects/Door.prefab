@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: effbb03618c615a4e849235f266beb2d, type: 2}
+  tile: {fileID: 11400000, guid: 2359fc7b2ff2b0a499a78b491657aea4, type: 2}
   faction: 2
   state: 0
   baseMaxHealth: 0

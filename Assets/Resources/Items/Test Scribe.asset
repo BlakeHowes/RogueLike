@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Test Scribe
   m_EditorClassIdentifier: 
   type: 0
-  tile: {fileID: 11400000, guid: a84d9a83edf63364b9f756dae1f13783, type: 2}
+  tile: {fileID: 11400000, guid: e45007a5aa133d440ae2a35cfcbe3937, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 0
   ranged: 0

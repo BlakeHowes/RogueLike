@@ -100,11 +100,20 @@ public class MouseManager : MonoBehaviour
 
 
                 }
+                //Wait
+                if(gameobjectundermouse == currentCharacter&&mousepos.item() == null) {
+                    currentCharacter.GetComponent<Stats>().SpawnHitNumber("Wait", Color.blue, 1);
+                    Actions.i.Wait();
+
+                    EndOfAction();
+                    return;
+                }
+
                 //Walk
                 PartyManager.i.characterFollowPosition = currentCharacter.position();
                 Actions.i.Walk(mousepos, characterPosition);
                 if (PartyManager.i.state == PartyManager.State.Exploring) {
-
+                    //THIS NEEDS TO BE CHANGED TO COMBAT OVER
                     PartyManager.i.Follow();
                 }
                 //Pick Up Item
@@ -122,6 +131,9 @@ public class MouseManager : MonoBehaviour
         GridManager.i.UpdateGame();
 
         PartyManager.i.EnemyPartyState();
+        if (PartyManager.i.state == PartyManager.State.Exploring) {
+            PartyManager.i.partyMemberTurnTaken.Clear();
+        }
         //TEST ACTION POINTS
         if (Actions.i.actionPoints <= 0) {
             PartyManager.i.EndTurn();

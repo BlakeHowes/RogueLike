@@ -71,7 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: 44376a0c9103e1b4db078014b6d99ecb, type: 2}
+  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
   mainHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   offHand: {fileID: 0}
   armour: {fileID: 0}

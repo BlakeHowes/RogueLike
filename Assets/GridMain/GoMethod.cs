@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
-using static UnityEngine.GraphicsBuffer;
+
 
 public class GoMethod
 {
@@ -19,7 +19,7 @@ public class GoMethod
         if (gameobject != null) {
             return gameobject;
         }
-        var tile = goTilemap.GetTile<Tile>(position);
+        var tile = goTilemap.GetTile(position);
         if (tile == null) {
             return null;
         }
@@ -28,10 +28,11 @@ public class GoMethod
             return null;
         }
         var clone = GridManager.i.InstantiateGameObject(prefab);
+        clone.GetComponent<SpriteRenderer>().sprite = goTilemap.GetSprite(position);
         SetGameObject(position, clone);
         clone.transform.position = position+new Vector3(0.5f,0.4999f);
         Debug.Log(clone.transform.position);
-        goTilemap.SetTile(position, null);
+        goTilemap.SetColor(position, Color.clear);
         return clone;
     }
 
@@ -44,6 +45,7 @@ public class GoMethod
     }
 
     public Vector3Int FirstGameObjectInSight(Vector3Int Position,Vector3Int Origin) {
+        var faction = Origin.gameobjectSpawn().GetComponent<Stats>().faction;
         var cells =GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
         if (cells.Count == 0) {
             return Position;
@@ -52,6 +54,9 @@ public class GoMethod
             if(goTilemap.GetTile(cell)!= null || GetGameObject(cell) != null) {
                 Debug.Log("found gameobject in sight line "+cell);
                 GetGameObjectOrSpawnFromTile(cell);
+                if(cell.gameobjectGO().GetComponent<Stats>().faction == faction) {
+                    continue;
+                }
                 return cell;
             }
         }

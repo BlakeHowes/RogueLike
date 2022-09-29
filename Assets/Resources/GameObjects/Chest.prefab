@@ -47,15 +47,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: dc7d2f87f2981c044834c59d01b75e3d, type: 2}
-  gameObjectType: 1
   faction: 2
   state: 0
-  maxHealth: 0
-  health: 0
-  attack: 0
-  armour: 0
+  baseMaxHealth: 0
+  baseAttack: 0
+  baseArmour: 0
+  baseActionPoints: 0
+  actionPoints: 0
+  bonusAttack: 0
   bonusMaxHealth: 0
   bonusArmour: 0
+  healthbar: {fileID: 0}
   ai: {fileID: 0}
 --- !u!114 &2354247380013042047
 MonoBehaviour:
@@ -82,6 +84,8 @@ MonoBehaviour:
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   armour: {fileID: 0}
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
   MaxInventory: 10
 --- !u!212 &1773118153572415346
 SpriteRenderer:
@@ -124,7 +128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1345026136, guid: f5e39c77f1d76e1498339985385a190e, type: 3}
+  m_Sprite: {fileID: -1695842309, guid: 87465ad655b9c4a419b7e96af99fad00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

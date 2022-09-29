@@ -123,7 +123,7 @@ public class InventoryManager : MonoBehaviour
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
         //Trinket 2
         var trinket2 = inventory.trinket2;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
+        //CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
 
         UpdateEquipmentSprites(inventory);
 

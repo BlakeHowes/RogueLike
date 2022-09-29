@@ -44,7 +44,7 @@ public class AssetManager {
         Debug.LogError("Cant find Item corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
-    public GameObject TiletoGameObject(Tile tile) {
+    public GameObject TiletoGameObject(TileBase tile) {
         foreach (GameObject go in gos) {
             if (go.GetComponent<Stats>().tile == tile)
                 return go;
@@ -60,7 +60,8 @@ public class AssetManager {
         return null;
     }
 
-    public GameObject SearchTileSpriteInstead(Tile tile) {
+    public GameObject SearchTileSpriteInstead(TileBase tilebase) {
+        var tile = tilebase as Tile;
         var sprite = tile.sprite;
         foreach (GameObject go in gos) {
             if (go.GetComponent<SpriteRenderer>()) {
@@ -71,7 +72,7 @@ public class AssetManager {
         return null;
     }
 
-    public bool IsCharacter(Tile tile) {
+    public bool IsCharacter(TileBase tile) {
         foreach(var character in characters) {
             if(character.GetComponent<Stats>().tile == tile) {
                 return true;

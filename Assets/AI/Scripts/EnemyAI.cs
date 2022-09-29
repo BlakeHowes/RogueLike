@@ -39,7 +39,7 @@ public class EnemyAI:AIAbstract
             return;
         }
         if(stats.state == State.Idle) {
-            stats.SpawnHitNumber("!", Color.white,2);
+            stats.SpawnHitNumber("!", Color.red,2);
         }
         stats.state = State.Attacking;
     }

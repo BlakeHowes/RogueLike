@@ -7,6 +7,8 @@ public class HitNumber : MonoBehaviour {
     public AnimationCurve ScaleY;
     public AnimationCurve TransformY;
     public AnimationCurve Fade;
+    public float FadeToWhite;
+    private float whiteFade = 0;
     public float speed;
     public float scale;
     void OnEnable() {
@@ -29,7 +31,8 @@ public class HitNumber : MonoBehaviour {
             transform.localScale = new Vector3(ScaleX.Evaluate(i), ScaleY.Evaluate(i), 1);
             transform.localScale *= scale;
             transform.position = new Vector3(transform.position.x, transform.position.y + TransformY.Evaluate(i), 0);
-            text.color = new Color(1, 1, 1, Fade.Evaluate(i));
+            text.color = new Color(text.color.r+ whiteFade, text.color.g + whiteFade, text.color.b + whiteFade, Fade.Evaluate(i));
+            whiteFade += FadeToWhite;
             yield return new WaitForSeconds(speed);
         }
         Destroy(gameObject);

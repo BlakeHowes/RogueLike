@@ -166,7 +166,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  FadeToWhite: 0.15
   speed: 0.05
+  scale: 0
 --- !u!222 &5578361876964675347
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: a6d3c7093caea334cb72062728d28e08, type: 2}
+  m_Material: {fileID: 2100000, guid: 38acd3acbd101ad4380fb61887b259d8, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
