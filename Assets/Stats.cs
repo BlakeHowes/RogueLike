@@ -130,6 +130,9 @@ public class Stats : MonoBehaviour
         maxHealth = baseMaxHealth + bonusMaxHealth;
         armour = baseArmour+bonusArmour;
         actionPoints = baseActionPoints;
+        if (health < maxHealth) { 
+            UpdateHealthBar();
+        }
     }
 
     public void OnDestroy() {

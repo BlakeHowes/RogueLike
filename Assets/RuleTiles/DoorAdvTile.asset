@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4adc87f568db586478fbdd17ec6c7887, type: 3}
   m_Name: DoorAdvTile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 692982184, guid: 721af00762cb90f4fad2d78000febc11, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: cf3d01958aa19014596a80d896335ca8, type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:

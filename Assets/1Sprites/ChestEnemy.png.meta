@@ -124,7 +124,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 9
-      pivot: {x: 0.5, y: 0.4375}
+      pivot: {x: 0.5, y: 0.1875}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,13 +145,13 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 9
-      pivot: {x: 0.5, y: 0.4375}
+      pivot: {x: 0.5, y: 0.1875}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c22b5c707b5b6134e8d586e4c46ac650
+      spriteID: dd256d80330e8b442a2e398dedebb78d
       internalID: 1218049729
       vertices: []
       indices: 

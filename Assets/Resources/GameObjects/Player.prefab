@@ -77,8 +77,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4dfca35ccf9f85d44a9d0296dc810a0e, type: 2}
   - {fileID: 11400000, guid: 44376a0c9103e1b4db078014b6d99ecb, type: 2}
   - {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
-  - {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
-  - {fileID: 11400000, guid: e4581b59237beca48a63dc80379fce9f, type: 2}
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 11400000, guid: 499aa4b250acc844f82e876cbe46767e, type: 2}
   armour: {fileID: 0}

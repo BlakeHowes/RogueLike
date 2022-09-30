@@ -11,6 +11,7 @@ public class MouseManager : MonoBehaviour
     public ItemAbstract itemSelected;
     public bool disableMouse;
     bool disableToggle = false;
+    private PartyManager.State state;
     public void Awake() {
         i = this;
     }
@@ -128,11 +129,15 @@ public class MouseManager : MonoBehaviour
     }
 
     public void EndOfAction() {
+        state = PartyManager.i.state;
         GridManager.i.UpdateGame();
 
         PartyManager.i.EnemyPartyState();
         if (PartyManager.i.state == PartyManager.State.Exploring) {
-            PartyManager.i.partyMemberTurnTaken.Clear();
+            if (state == PartyManager.State.Combat) {
+                PartyManager.i.partyMemberTurnTaken.Clear();
+                PartyManager.i.currentCharacter = PartyManager.i.party[0];
+            }
         }
         //TEST ACTION POINTS
         if (Actions.i.actionPoints <= 0) {
