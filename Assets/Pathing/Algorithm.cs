@@ -18,7 +18,7 @@ public class Algorithm {
     }
 
 
-    public Vector3[] AStarSearch(Vector3Int startpos1, Vector3Int endpos1) {
+    public Vector3[] AStarSearch(Vector3Int startpos1, Vector3Int endpos1,bool ignoreEnemies) {
         var startpos = new Vector3Int(startpos1.x, startpos1.y); 
         var endpos = new Vector3Int(endpos1.x, endpos1.y);
 
@@ -31,21 +31,52 @@ public class Algorithm {
         var goTilemap = GridManager.i.goTilemap;
         var goGrid = GridManager.i.GetGoGrid();
         Vector3Int gameobjectcell = Vector3Int.zero;
-        for (int x = 0; x < grid.width; x++) {
-            for (int y = 0; y < grid.length; y++) {
-                gameobjectcell.x = x;
-                gameobjectcell.y = y;
-                if (gameobjectcell == startpos) {
-                    continue;
-                }
-                if (goTilemap.GetTile(gameobjectcell) != null|| goGrid[gameobjectcell.x,gameobjectcell.y] != null) {
-                    grid.FindCellByPosition(gameobjectcell).walkable = false;
-                }
-                else {
-                    grid.FindCellByPosition(gameobjectcell).walkable = true;
+        if (!ignoreEnemies) {
+            for (int x = 0; x < grid.width; x++) {
+                for (int y = 0; y < grid.length; y++) {
+                    gameobjectcell.x = x;
+                    gameobjectcell.y = y;
+                    if (gameobjectcell == startpos) {
+                        continue;
+                    }
+                    if (goTilemap.GetTile(gameobjectcell) != null || goGrid[gameobjectcell.x, gameobjectcell.y] != null) {
+                        grid.FindCellByPosition(gameobjectcell).walkable = false;
+                    }
+                    else {
+                        grid.FindCellByPosition(gameobjectcell).walkable = true;
+                    }
                 }
             }
         }
+        else {
+            for (int x = 0; x < grid.width; x++) {
+                for (int y = 0; y < grid.length; y++) {
+                    gameobjectcell.x = x;
+                    gameobjectcell.y = y;
+                    if (gameobjectcell == startpos) {
+                        continue;
+                    }
+                    if (goTilemap.GetTile(gameobjectcell) != null) {
+                        grid.FindCellByPosition(gameobjectcell).walkable = false;
+                    }
+                    else {
+                        grid.FindCellByPosition(gameobjectcell).walkable = true;
+                    }
+                    var go = goGrid[gameobjectcell.x, gameobjectcell.y];
+                    if (go != null) {
+                        grid.FindCellByPosition(gameobjectcell).walkable = false;
+                        if (go.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+                            grid.FindCellByPosition(gameobjectcell).walkable = true;
+                        }
+
+                    }
+                    else {
+                        grid.FindCellByPosition(gameobjectcell).walkable = true;
+                    }
+                }
+            }
+        }
+
         var startCell = grid.FindCellByPosition(startpos);
         var goalCell = grid.FindCellByPosition(endpos);
 

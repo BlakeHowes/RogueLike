@@ -12,8 +12,6 @@ public class PartyManager : MonoBehaviour
     public State state = State.Exploring;
     public Vector3Int characterFollowPosition;
     public List<GameObject> EnemiesAttacking = new List<GameObject>();
-    public Material spriteMaterial;
-    public Material hitMaterial;
     public float animationDistance;
     public List<GameObject> partyMemberTurnTaken;
 
@@ -62,13 +60,30 @@ public class PartyManager : MonoBehaviour
 
     public void AddPartyMember(GameObject character) {
         party.Add(character);
-        currentCharacter = party[0];
+        currentCharacter = character;
+        SetCurrentCharacter(party[0]);
     }
 
     public void Update() {
         if(currentCharacter == null) {
             SwitchToNextCharacter();
         }    
+    }
+
+    public void SetCurrentCharacter(GameObject character) {
+        currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
+        currentCharacter = character;
+        if (party.Contains(character)) {
+            character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial;
+        }
+        else {
+            character.GetComponent<SpriteRenderer>().material = GameUIManager.i.enemyoutlineMaterial;
+        }
+    }
+
+    public GameObject GetCurrentTurnCharacter() {
+        RemoveNullCharacters(party);
+        return currentCharacter;
     }
 
     public void RemoveNullCharacters(List<GameObject> listOfCharacters) {
@@ -98,7 +113,7 @@ public class PartyManager : MonoBehaviour
         if (currentCharacterIndex == party.Count - 1) {
             nextCharacterIndex = 0;
         }
-        currentCharacter = party[nextCharacterIndex];
+        SetCurrentCharacter(party[nextCharacterIndex]);
         InventoryManager.i.UpdateInventory();
     }
 
@@ -133,20 +148,18 @@ public class PartyManager : MonoBehaviour
     }
 
     public void TakeEnemyTurn(IEnumerator enumerator,GameObject enemy) {
-        currentCharacter = enemy;
         StartCoroutine(enumerator);
     }
 
     public IEnumerator EnemyPartyTurn(List<GameObject> attackingEnemies) {
         MouseManager.i.disableMouse = true;
         foreach (GameObject enemy in attackingEnemies) {
-            currentCharacter = enemy;
+            SetCurrentCharacter(enemy);
             enemy.GetComponent<Stats>().AIAttack();
             yield return new WaitForSeconds(1);
         }
         MouseManager.i.disableMouse = false;
-
-        currentCharacter = party[0];
+        SetCurrentCharacter(party[0]);
         Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
         GameUIManager.i.actionPointsText.text = Actions.i.actionPoints.ToString();
         yield return null;
@@ -188,6 +201,8 @@ public class PartyManager : MonoBehaviour
     public IEnumerator TakeDamageAnimation(GameObject character,Vector3Int origin) {
         var renderer = character.GetComponent<SpriteRenderer>();
         var startPosition = character.transform.position;
+        var hitMaterial = GameUIManager.i.hitMaterial;
+        var spriteMaterial = GameUIManager.i.normalMaterial;
         Debug.Log(character.transform.position);
         if (renderer != null) {
             character.transform.position = Vector3.MoveTowards(character.transform.position, origin+new Vector3(0.5f,0.5f,0), -animationDistance);
@@ -199,7 +214,9 @@ public class PartyManager : MonoBehaviour
             renderer.material = hitMaterial;
             yield return new WaitForSeconds(0.15f);
             renderer.material = spriteMaterial;
-            yield return new WaitForSeconds(0.15f);
+            if(character == currentCharacter) {
+                renderer.material = GameUIManager.i.outlineMaterial;
+            }
         }
 
     }

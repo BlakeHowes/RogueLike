@@ -31,9 +31,16 @@ public class Actions : MonoBehaviour
         ChangeActionPoints(1);
     }
 
-    public void Walk(Vector3Int postion,Vector3Int origin) {
+    public bool Walk(Vector3Int postion,Vector3Int origin) {
         var walked =PathingManager.i.MoveOneStep(postion, origin);
         if (walked) { ChangeActionPoints(walkCost); }
+        return walked;
+    }
+
+    public void MoveUpEnemy(Vector3Int postion, Vector3Int origin) {
+        PathingManager.i.EnemyMoveup(postion, origin);
+        ChangeActionPoints(walkCost);
+        Debug.Log("Moved Up");
     }
 
     public void PickUpItem(Vector3Int position) {

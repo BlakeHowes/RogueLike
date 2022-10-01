@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Chipset_001_172
+  m_Name: Highlight
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -647021089, guid: f5e39c77f1d76e1498339985385a190e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf9ee5d55ce43ca47b2f8549639562af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

@@ -52,6 +52,8 @@ MonoBehaviour:
   baseMaxHealth: 1000000
   baseAttack: 0
   baseArmour: 0
+  baseActionPoints: 0
+  actionPoints: 0
   bonusAttack: 0
   bonusMaxHealth: 0
   bonusArmour: 0

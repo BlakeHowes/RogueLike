@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf84f90dfbc4d140b833f57bba4dcac, type: 3}
   m_Name: TestWeaponMod
   m_EditorClassIdentifier: 
-  type: 4
+  type: 5
   tile: {fileID: 0}
   particles: {fileID: 0}
   destroyOnUse: 0
   ranged: 0
+  Modifiers: []
   stack: 1

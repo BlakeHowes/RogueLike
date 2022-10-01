@@ -12,6 +12,7 @@ public class MouseManager : MonoBehaviour
     public bool disableMouse;
     bool disableToggle = false;
     private PartyManager.State state;
+    private GameObject highlightedGameObbject = null;
     public void Awake() {
         i = this;
     }
@@ -34,6 +35,19 @@ public class MouseManager : MonoBehaviour
                 return;
             }
             GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
+            /*
+var character = mousepos.gameobjectSpawn();
+
+if (character != highlightedGameObbject) {
+    if (character != null) {
+        if(highlightedGameObbject != null)
+        highlightedGameObbject.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
+
+        character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial;
+        highlightedGameObbject = character;
+    }
+}
+*/
         }
         else {
             GameUIManager.i.HideHighlight();
@@ -71,6 +85,8 @@ public class MouseManager : MonoBehaviour
             var currentCharacter = PartyManager.i.currentCharacter;
             var characterPosition = currentCharacter.position();
 
+
+            currentCharacter.GetComponent<Stats>().RecalculateStats(); //RECALCUATE TEST
 
             //Use Item
             if (itemSelected != null) {
@@ -136,7 +152,7 @@ public class MouseManager : MonoBehaviour
         if (PartyManager.i.state == PartyManager.State.Exploring) {
             if (state == PartyManager.State.Combat) {
                 PartyManager.i.partyMemberTurnTaken.Clear();
-                PartyManager.i.currentCharacter = PartyManager.i.party[0];
+                PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
             }
         }
         //TEST ACTION POINTS

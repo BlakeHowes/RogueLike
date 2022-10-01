@@ -14,7 +14,7 @@ public class PartyIcon : MonoBehaviour
 
     public void Click() {
         if (!PartyManager.i.partyMemberTurnTaken.Contains(character)) {
-            PartyManager.i.currentCharacter = character;
+            PartyManager.i.SetCurrentCharacter(character);
             InventoryManager.i.UpdateInventory();
         }
     }

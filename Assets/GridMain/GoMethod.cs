@@ -30,8 +30,9 @@ public class GoMethod
         var clone = GridManager.i.InstantiateGameObject(prefab);
         clone.GetComponent<SpriteRenderer>().sprite = goTilemap.GetSprite(position);
         SetGameObject(position, clone);
-        clone.transform.position = position+new Vector3(0.5f,0.4999f);
+        clone.transform.position = position+new Vector3(0.5f,0.5f);
         Debug.Log(clone.transform.position);
+        goTilemap.SetTileFlags(position, TileFlags.None);
         goTilemap.SetColor(position, Color.clear);
         return clone;
     }
@@ -52,7 +53,7 @@ public class GoMethod
         }
         foreach (var cell in cells) { 
             if(goTilemap.GetTile(cell)!= null || GetGameObject(cell) != null) {
-                Debug.Log("found gameobject in sight line "+cell);
+                //Debug.Log("found gameobject in sight line "+cell);
                 GetGameObjectOrSpawnFromTile(cell);
                 if(cell.gameobjectGO().GetComponent<Stats>().faction == faction) {
                     continue;

@@ -14,4 +14,8 @@ public class HUDManager : MonoBehaviour
     public void ToggleInventory() {
         inventoryTilemap.gameObject.SetActive(!inventoryTilemap.gameObject.activeSelf);
     }
+
+    public void CreateAPIcons() {
+
+    }
 }

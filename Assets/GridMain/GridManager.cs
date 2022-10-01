@@ -35,7 +35,6 @@ public class GridManager : MonoBehaviour {
     //TEST OBJECTS
     public GameObject playerPrefab;
     public GameObject playerPrefab2;
-
     public void Awake() {
         i = this;
         graphics = new GridGraphics();

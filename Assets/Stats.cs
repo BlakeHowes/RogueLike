@@ -63,7 +63,6 @@ public class Stats : MonoBehaviour
         ai.UpdateSensoryInformation(gameObject.position());
     }
     public void Damage(int amount,Vector3Int origin) {
-        RecalculateStats();
         if (ai != null) {
             state = AIAbstract.State.Attacking;
         }
@@ -117,6 +116,9 @@ public class Stats : MonoBehaviour
         bonusArmour = 0;
         var position = gameObject.position();
         var inventory = GetComponent<Inventory>();
+        if (inventory.mainHand != null) {
+            inventory.mainHand.Modifiers.Clear();
+        }
         if (inventory.offHand != null) {
             inventory.offHand.Call(position, position);
         }

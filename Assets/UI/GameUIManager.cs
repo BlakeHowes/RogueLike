@@ -16,12 +16,41 @@ public class GameUIManager : MonoBehaviour
     public ItemToolTip itemtooltip;
     public GameObject tooltipGameObject;
     public Text actionPointsText;
+
+    public Material outlineMaterial;
+    public Material enemyoutlineMaterial;
+    public Material normalMaterial;
+    public Material hitMaterial;
     public void Awake() {
         i = this;
     }
     public void HighlightMouseTile(Vector3Int position) {
         uiTilemap.ClearAllTiles();
+        if (PartyManager.i.state == PartyManager.State.Combat) {
+            var origin = PartyManager.i.GetCurrentTurnCharacter().position();
+            position = GridManager.i.goMethods.FirstGameObjectInSight(position, origin);
+        }
         uiTilemap.SetTile(position, mouseHighlight);
+        var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
+
+
+        if (character != null) {
+            uiTilemap.SetTileFlags(position, TileFlags.None);
+            if (PartyManager.i.party.Contains(character)) {
+                uiTilemap.SetColor(position, Color.green);
+            }
+            else {
+                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Openable) {
+                    uiTilemap.SetColor(position, Color.yellow);
+                }
+                else {
+                    uiTilemap.SetColor(position, Color.red);
+                }
+            }
+        }
+        else {
+            uiTilemap.SetColor(position, Color.white);
+        }
     }
 
     public void DisableUI() {
@@ -31,6 +60,10 @@ public class GameUIManager : MonoBehaviour
 
     public void EnableUI() {
         canvasOverlay.gameObject.SetActive(true);
+    }
+
+    public void ShowOutlines() {
+
     }
 
     public void ShowSight(Vector3Int position) {

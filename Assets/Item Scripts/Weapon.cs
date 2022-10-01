@@ -10,7 +10,7 @@ public class Weapon : ItemAbstract
     public int attackRandomAddition;
     public int accuracy=8;
     public int AOE =0;
-
+    public bool baseRanged;
     //To be implimented
     public int range =1;
     public GameObject linePrefab;
@@ -21,9 +21,9 @@ public class Weapon : ItemAbstract
         //Reset Bonus Stats
         attackBonus = 0;
         attackMultiple = 1;
-
+        ranged = baseRanged;
         InventoryManager.i.ApplyModifiers(Modifiers, position, origin);
-        if (linePrefab != null) { EffectManager.i.LineEffect(position + new Vector3(0.5f, 0.5f, 0), origin + new Vector3(0.5f, 0.5f, 0),linePrefab) ; }
+        if (linePrefab != null) { EffectManager.i.LineEffect(position, origin,linePrefab) ; }
 
         var target = position.gameobjectSpawn();
         int damage = CalculateDamage();
@@ -32,6 +32,7 @@ public class Weapon : ItemAbstract
             var aoeCells = GridManager.i.tools.Circle(AOE, position);
             foreach(var cell in aoeCells) {
                 target =GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(cell);
+                EffectManager.i.PartEffect(cell, origin, particles);
                 if (target == null) {
                     continue;
                 }
@@ -43,6 +44,7 @@ public class Weapon : ItemAbstract
                         damage = 0;
                     }
                 }
+                EffectManager.i.PartEffect(cell, origin,particles);
                 stats.Damage(damage,origin);
             }
             return true;
@@ -58,6 +60,7 @@ public class Weapon : ItemAbstract
                 damage = 0;
             }
         }
+        EffectManager.i.PartEffect(position, origin, particles);
         stats.Damage(damage, origin);
         return true;
     }

@@ -21,6 +21,8 @@ public class InventoryManager : MonoBehaviour
     public Sprite offHandSprite;
     public Sprite armourSprite;
     public Sprite trinketSprite;
+
+    public Vector3 mainHandOffset;
     public void Awake() {
         i = this;
     }
@@ -58,7 +60,7 @@ public class InventoryManager : MonoBehaviour
 
     public void UpdateEquipmentSprites(Inventory inventory) {
         if(inventory.transform.childCount == 0) {
-            CreateEquipmentSprite("MainHandSprite", inventory.gameObject, new Vector3(0.6f, 0.74f, 0));
+            CreateEquipmentSprite("MainHandSprite", inventory.gameObject, mainHandOffset);
             CreateEquipmentSprite("OffHandSprite", inventory.gameObject, new Vector3(-0.42f, 0.35f, 0));
         }
         Debug.Log("Inventory Sprites Made");
@@ -108,7 +110,7 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform child in equipmentLayout.transform) {
             Destroy(child.gameObject);
         }
-        var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
+        var inventory = PartyManager.i.GetCurrentTurnCharacter().GetComponent<Inventory>();
         //Main Hand
         var mainHandItem = inventory.mainHand;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform,mainHandSprite,mainHandItem,ItemAbstract.Type.Weapon);
@@ -131,7 +133,7 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform child in inventoryLayout.transform) {
             Destroy(child.gameObject);
         }
-        var items = PartyManager.i.currentCharacter.GetComponent<Inventory>().items;
+        var items = PartyManager.i.GetCurrentTurnCharacter().GetComponent<Inventory>().items;
         int i = 0;
         int totalItems = items.Count;
         for (int x = 0; x < width; x++) {
@@ -147,6 +149,7 @@ public class InventoryManager : MonoBehaviour
                 i++;
             }
         }
+        PartyManager.i.GetCurrentTurnCharacter().GetComponent<Stats>().RecalculateStats();
     }
 
 

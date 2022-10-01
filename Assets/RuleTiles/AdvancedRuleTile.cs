@@ -17,6 +17,7 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor> {
         public const int Any = 3;
         public const int Specified = 4;
         public const int Nothing = 5;
+        public const int NotSpecified = 6;
     }
 
     public override bool RuleMatch(int neighbor, TileBase tile) {
@@ -26,6 +27,7 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor> {
             case Neighbor.Any: return Check_Any(tile);
             case Neighbor.Specified: return Check_Specified(tile);
             case Neighbor.Nothing: return Check_Nothing(tile);
+            case Neighbor.NotSpecified: return Check_NotSpecified(tile);
         }
         return base.RuleMatch(neighbor, tile);
     }
@@ -71,6 +73,12 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor> {
     /// <returns></returns>
     bool Check_Specified(TileBase tile) {
         return tilesToConnect.Contains(tile);
+
+        //.Contains requires "using System.Linq;"
+    }
+
+    bool Check_NotSpecified(TileBase tile) {
+        return !tilesToConnect.Contains(tile);
 
         //.Contains requires "using System.Linq;"
     }

@@ -80,7 +80,7 @@ MonoBehaviour:
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 11400000, guid: 499aa4b250acc844f82e876cbe46767e, type: 2}
   armour: {fileID: 0}
-  trinket1: {fileID: 0}
+  trinket1: {fileID: 11400000, guid: c1649bb6bc1dc9a49b3c6d2b8408975c, type: 2}
   trinket2: {fileID: 0}
   MaxInventory: 9
 --- !u!212 &7361458235895569522
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce19fdcd0fb4167459debef4bf39ffb6, type: 3}
+  m_Sprite: {fileID: -1895891435, guid: 28de6a8cc0cd26d4a99fc34df72e8883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

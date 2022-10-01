@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "BasicAI", menuName = "AI/BasicAI")]
@@ -71,7 +72,10 @@ public class EnemyAI:AIAbstract
                     Actions.i.Punch(target.position(), gameobject.position());
                 }
                 else {
-                    Actions.i.Walk(target.position(), gameobject.position());
+                    var Walked = Actions.i.Walk(target.position(), gameobject.position());
+                    if (Walked == false) {
+                        Actions.i.MoveUpEnemy(target.position(), gameobject.position());
+                    }
                     continue;
                 }
                 continue;
@@ -79,7 +83,10 @@ public class EnemyAI:AIAbstract
             if (weapon.ranged == false) {
 
                 if (inrange == false) {
-                    Actions.i.Walk(target.position(), gameobject.position());
+                    var walked = Actions.i.Walk(target.position(), gameobject.position());
+                    if (walked == false) {
+                        Actions.i.MoveUpEnemy(target.position(), gameobject.position());
+                    }
                 }
                 else {
                     Actions.i.UseItemMainHand(target.position(), gameobject.position());
