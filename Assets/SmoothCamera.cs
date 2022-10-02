@@ -19,6 +19,9 @@ public class SmoothCamera : MonoBehaviour
     }
     void FixedUpdate() {
         var currentCharacter = PartyManager.i.currentCharacter; //Change this eventually
+        if(currentCharacter == null) {
+            return;
+        }
         Vector3 position = Vector3.Lerp(transform.position, currentCharacter.transform.position, SmoothSpeed);
         position.z = -10;
         transform.position = position;

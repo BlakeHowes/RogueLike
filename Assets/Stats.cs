@@ -9,7 +9,7 @@ public class Stats : MonoBehaviour
     public TileBase tile;
     public PartyManager.Faction faction = PartyManager.Faction.Enemy;
     public AIAbstract.State state = AIAbstract.State.Idle;
-
+    public List<ItemAbstract> deathAction;
     public int baseMaxHealth;
     public int baseAttack;
     public int baseArmour;
@@ -46,7 +46,6 @@ public class Stats : MonoBehaviour
     }
 
     public void AIAttack() {
-        RecalculateStats();
         if (ai == null) {
             return;
         }
@@ -56,7 +55,6 @@ public class Stats : MonoBehaviour
     }
 
     public void AISense() {
-        RecalculateStats();
         if (ai == null) {
             return;
         }
@@ -88,7 +86,6 @@ public class Stats : MonoBehaviour
     }
 
     public void Heal(int amount) {
-        RecalculateStats();
         var healthTemp = health;
         health += amount;
         if (health >= maxHealth) {
@@ -114,8 +111,10 @@ public class Stats : MonoBehaviour
         bonusAttack = 0;
         bonusMaxHealth = 0;
         bonusArmour = 0;
+        GameUIManager.i.ClearSkills();
         var position = gameObject.position();
         var inventory = GetComponent<Inventory>();
+
         if (inventory.mainHand != null) {
             inventory.mainHand.Modifiers.Clear();
         }
@@ -125,8 +124,8 @@ public class Stats : MonoBehaviour
         if (inventory.armour != null) {
             inventory.armour.Call(position, position);
         }
-        if (inventory.trinket1 != null) {
-            inventory.trinket1.Call(position, position);
+        foreach (var item in inventory.trinkets) {
+            item.Call(position, position);
         }
         attack =baseAttack+ bonusAttack;
         maxHealth = baseMaxHealth + bonusMaxHealth;

@@ -22,11 +22,20 @@ public class Weapon : ItemAbstract
         attackBonus = 0;
         attackMultiple = 1;
         ranged = baseRanged;
+        Debug.Log("This should work");
         InventoryManager.i.ApplyModifiers(Modifiers, position, origin);
         if (linePrefab != null) { EffectManager.i.LineEffect(position, origin,linePrefab) ; }
 
         var target = position.gameobjectSpawn();
         int damage = CalculateDamage();
+
+        if(ranged == false) {
+            var inRange =Actions.i.InMeleeRange(position, origin);
+            if (inRange == false) {
+                return false;
+            }
+        }
+
         Stats stats;
         if (AOE > 0) {
             var aoeCells = GridManager.i.tools.Circle(AOE, position);
@@ -75,7 +84,7 @@ public class Weapon : ItemAbstract
     public override string Description() {
         var characterAttack = PartyManager.i.currentCharacter.GetComponent<Stats>().GetAttack();
         string description = "This " + name + " does "+(attackBase+attackBonus+ characterAttack) +"-"+(attackRandomAddition+attackBonus+attackBase+ characterAttack) +" damage";
-        description += " with and accuracy of " + accuracy;
+        description += " with an accuracy of " + accuracy;
         if(AOE > 0) {
             description += " in a " + AOE + " sized area";
         }

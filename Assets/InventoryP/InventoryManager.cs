@@ -89,9 +89,8 @@ public class InventoryManager : MonoBehaviour
             case ItemAbstract.Type.Weapon: PartyManager.i.currentCharacter.GetComponent<Inventory>().mainHand = item; break;
             case ItemAbstract.Type.OffHand: PartyManager.i.currentCharacter.GetComponent<Inventory>().offHand = item; break;
             case ItemAbstract.Type.Armour: PartyManager.i.currentCharacter.GetComponent<Inventory>().armour = item; break;
-            case ItemAbstract.Type.Trinket: PartyManager.i.currentCharacter.GetComponent<Inventory>().trinket1 = item; break;
+            case ItemAbstract.Type.Trinket: PartyManager.i.currentCharacter.GetComponent<Inventory>().trinkets.Add(item); break;
         }
-        PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats();
     }
 
     public void RemoveType(ItemAbstract item, ItemAbstract.Type slotType) {
@@ -100,9 +99,8 @@ public class InventoryManager : MonoBehaviour
             case ItemAbstract.Type.Weapon: PartyManager.i.currentCharacter.GetComponent<Inventory>().mainHand = null; break;
             case ItemAbstract.Type.OffHand: PartyManager.i.currentCharacter.GetComponent<Inventory>().offHand = null; break;
             case ItemAbstract.Type.Armour: PartyManager.i.currentCharacter.GetComponent<Inventory>().armour = null; break;
-            case ItemAbstract.Type.Trinket: PartyManager.i.currentCharacter.GetComponent<Inventory>().trinket1 = null; break;
+            case ItemAbstract.Type.Trinket: PartyManager.i.currentCharacter.GetComponent<Inventory>().trinkets.Remove(item); break;
         }
-        PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats();
     }
 
     public void UpdateInventory() {
@@ -121,11 +119,16 @@ public class InventoryManager : MonoBehaviour
         var armour = inventory.armour;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, armour, ItemAbstract.Type.Armour);
         //Trinket 1
-        var trinket1 = inventory.trinket1;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
-        //Trinket 2
-        var trinket2 = inventory.trinket2;
-        //CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket1, ItemAbstract.Type.Trinket);
+
+        int trinkettotal = 4;
+        ItemAbstract trinket = null;
+        for (int t = 0; t < trinkettotal; t++) {
+            if (inventory.trinkets.Count > t) {
+                trinket = inventory.trinkets[t];
+            }
+            CreateButton(equipmentButtonPrefab, equipmentLayout.transform, trinketSprite, trinket, ItemAbstract.Type.Trinket);
+            trinket = null;
+        }
 
         UpdateEquipmentSprites(inventory);
 
@@ -149,7 +152,6 @@ public class InventoryManager : MonoBehaviour
                 i++;
             }
         }
-        PartyManager.i.GetCurrentTurnCharacter().GetComponent<Stats>().RecalculateStats();
     }
 
 

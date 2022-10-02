@@ -31,7 +31,6 @@ public class GoMethod
         clone.GetComponent<SpriteRenderer>().sprite = goTilemap.GetSprite(position);
         SetGameObject(position, clone);
         clone.transform.position = position+new Vector3(0.5f,0.5f);
-        Debug.Log(clone.transform.position);
         goTilemap.SetTileFlags(position, TileFlags.None);
         goTilemap.SetColor(position, Color.clear);
         return clone;

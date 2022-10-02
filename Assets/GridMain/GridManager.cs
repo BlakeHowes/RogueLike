@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 
 public class GridManager : MonoBehaviour {
@@ -29,12 +30,14 @@ public class GridManager : MonoBehaviour {
     public Tilemap mechTilemap;
     public Tilemap itemTilemap;
     public Tilemap goTilemap;
-
+    public Tilemap fogTilemap;
     public Vector3Int NullValue = new Vector3Int(-1, -1, 0);
 
     //TEST OBJECTS
     public GameObject playerPrefab;
     public GameObject playerPrefab2;
+    public TileBase fog;
+    public TileBase fogWall;
     public void Awake() {
         i = this;
         graphics = new GridGraphics();
@@ -73,10 +76,24 @@ public class GridManager : MonoBehaviour {
 
     //TEST START
     public void Start() {
+        CreateFog();
         SpawnCharacter(playerPrefab, new Vector3Int(24, 8),Color.white);
         SpawnCharacter(playerPrefab2, new Vector3Int(25, 8), Color.white);
-        PartyManager.i.UpdatePartyIcons();
         UpdateGame();
+    }
+
+    public void CreateFog() {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                var pos = new Vector3Int(x, y);
+                if (!goTilemap.GetTile(pos)) {
+                    fogTilemap.SetTile(pos, fog);
+                }
+                else {
+                    fogTilemap.SetTile(pos, fog);
+                }
+            }
+        }
     }
 
     public void SpawnCharacter(GameObject character,Vector3Int position,Color colour) {
@@ -94,7 +111,6 @@ public class GridManager : MonoBehaviour {
 
 
     public void UpdateGame() {
-        Vector3Int camerapos = Camera.main.transform.position.FloorToInt();
         mechMethods.ActivateMechanisms(); //IDK ABOUT THIS
         PartyManager.i.FindEnemies();//IDK ABOUT THIS
         //UPDATING GRAPHICAL CHANGES

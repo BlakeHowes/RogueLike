@@ -9,8 +9,10 @@ public class StatItem : ItemAbstract
     public int attack;
     public int maxHealth;
     public int armour;
-
+    public bool rangedmod;
     public int maxHealthBonus;
+    public List<ItemAbstract> mainHandMods;
+    public List<ItemAbstract> skills;
     public override bool Call(Vector3Int position, Vector3Int origin) {
         //Reset Bonus Stats
         maxHealthBonus = 0;
@@ -23,18 +25,39 @@ public class StatItem : ItemAbstract
         targetStats.bonusArmour += armour;
         targetStats.bonusAttack += attack;
 
+        var inventory = origin.gameobjectSpawn().GetComponent<Inventory>();
+        if(inventory.mainHand != null) {
+            if(rangedmod == true) {
+                inventory.mainHand.ranged = true;
+            }
+            Debug.Log("range test");
+            foreach (ItemAbstract item in mainHandMods) {
+                inventory.mainHand.Modifiers.Add(item);
+            }
+        }
+
+        foreach (ItemAbstract mod in skills) {
+            GameUIManager.i.AddSkill(mod);
+        }
+        Debug.Log("Item Called");
         return true;
     }
     public override string Description() {
-        var description = "This " + this.name+ " adds ";
+        var description = "";
         if (armour > 0) {
-            description +=  armour + " armour ";
+            description += " Armour: +"+armour;
         }
         if (maxHealth > 0) {
-            description += maxHealth + " max health ";
+            description +=" Max Health: +"+ maxHealth;
         }
         if (attack > 0) {
-            description += attack + " attack ";
+            description += "Attack: +"+ attack;
+        }
+        foreach (ItemAbstract item in mainHandMods) {
+            description += item.Description();
+        }
+        foreach (ItemAbstract item in skills) {
+            description += item.Description();
         }
         return description;
     }

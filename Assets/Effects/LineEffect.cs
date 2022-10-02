@@ -5,6 +5,7 @@ using UnityEngine;
 public class LineEffect : MonoBehaviour
 {
     private LineRenderer lineRenderer;
+    public float speed;
     public void SetLine(Vector3 position, Vector3 origin) {
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.SetPosition(0, origin);
@@ -13,7 +14,7 @@ public class LineEffect : MonoBehaviour
     }
 
     IEnumerator Animate() {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(speed);
         Destroy(gameObject);
     }
 }

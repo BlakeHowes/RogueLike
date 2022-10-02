@@ -52,9 +52,9 @@ public class EnemyAI:AIAbstract
     }
 
     public IEnumerator Attack() {
-        Actions.i.actionPoints = gameobject.GetComponent<Stats>().actionPoints;
+        Actions.i.actionPoints = gameobject.GetComponent<Stats>().actionPoints+1;
         int testbreaker = 0;
-        while (Actions.i.actionPoints > 0) {
+        while (Actions.i.actionPoints > 1) {
             yield return new WaitForSeconds(0.2f);
             if(target == null) {
                 UpdateSensoryInformation(gameobject.position());

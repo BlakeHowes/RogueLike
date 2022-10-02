@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -16,11 +18,15 @@ public class GameUIManager : MonoBehaviour
     public ItemToolTip itemtooltip;
     public GameObject tooltipGameObject;
     public Text actionPointsText;
-
+    public GameObject PartyIconLayout;
     public Material outlineMaterial;
     public Material enemyoutlineMaterial;
     public Material normalMaterial;
     public Material hitMaterial;
+    public GameObject skillSlotPrefab;
+    public GameObject skillLayout;
+    public GameObject iconLayout;
+    public GameObject iconPrefab;
     public void Awake() {
         i = this;
     }
@@ -53,6 +59,18 @@ public class GameUIManager : MonoBehaviour
         }
     }
 
+    public void AddSkill(ItemAbstract skill) {
+        var clone = Instantiate(skillSlotPrefab, skillLayout.transform);
+        clone.GetComponent<SkillSlot>().AddSkill(skill);
+    }
+
+    public void ClearSkills() {
+        Debug.Log("Skills Cleared");
+        foreach(Transform child in skillLayout.transform) {
+            Destroy(child.gameObject);
+        }
+    }
+
     public void DisableUI() {
         uiTilemap.ClearAllTiles();
         canvasOverlay.gameObject.SetActive(false);
@@ -62,8 +80,19 @@ public class GameUIManager : MonoBehaviour
         canvasOverlay.gameObject.SetActive(true);
     }
 
-    public void ShowOutlines() {
-
+    public void UpdatePartyIcons(List<GameObject> party) {
+        foreach(Transform child in iconLayout.transform) {
+            Destroy(child.gameObject);
+        }
+        foreach(GameObject member in party) {
+            var clone = Instantiate(iconPrefab,iconLayout.transform);
+            var partyicon = clone.gameObject.GetComponent<PartyIcon>();
+            partyicon.SetIcon(member);
+            partyicon.DisableHighlight();
+            if (partyicon.GetCharacter() == PartyManager.i.currentCharacter) {
+                partyicon.EnableHighlight();
+            }
+        }
     }
 
     public void ShowSight(Vector3Int position) {

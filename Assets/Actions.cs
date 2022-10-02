@@ -17,9 +17,15 @@ public class Actions : MonoBehaviour
             actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
         }
         else {
+            Debug.Log("action points changed" + amount);
+            Debug.Log("before " + actionPoints);
             actionPoints -= amount;
+            Debug.Log("after " + actionPoints);
         }
-        GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
+        GameUIManager.i.actionPointsText.text = actionPoints.ToString();
+        if (actionPoints <= 0) {
+            PartyManager.i.EndTurn();
+        }
     }
 
     public void SetActionPoints(float amount) {
@@ -79,24 +85,16 @@ public class Actions : MonoBehaviour
 
     public bool UseItemMainHand(Vector3Int position,Vector3Int origin) {
         var character = origin.gameobjectSpawn();
-        character.GetComponent<Stats>().RecalculateStats();
         if (origin == position) {
             return false;
         }
         var mainHandItem = character.GetComponent<Inventory>().mainHand;
         if (mainHandItem != null) {
             if (position.gameobjectSpawn() != null) {
-                if(mainHandItem.ranged == true) {
-                    RangedAttack(position,origin,mainHandItem);
+                bool used =mainHandItem.Call(position, origin);
+                if(used == true) {
                     ChangeActionPoints(handCost);
                     return true;
-                }
-                else {
-                    if (InMeleeRange(position, origin) == true) {
-                        mainHandItem.Call(position, origin);
-                        ChangeActionPoints(handCost);
-                        return true;
-                    }
                 }
             }
         }

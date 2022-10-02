@@ -15,9 +15,6 @@ public class PartyManager : MonoBehaviour
     public float animationDistance;
     public List<GameObject> partyMemberTurnTaken;
 
-    public GameObject iconLayout;
-    public GameObject iconPrefab;
-
     public bool follow = true;
     public enum State {
         Exploring,
@@ -71,7 +68,9 @@ public class PartyManager : MonoBehaviour
     }
 
     public void SetCurrentCharacter(GameObject character) {
-        currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
+        if (currentCharacter != null) {
+            currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
+        }
         currentCharacter = character;
         if (party.Contains(character)) {
             character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial;
@@ -79,6 +78,9 @@ public class PartyManager : MonoBehaviour
         else {
             character.GetComponent<SpriteRenderer>().material = GameUIManager.i.enemyoutlineMaterial;
         }
+        GameUIManager.i.UpdatePartyIcons(party);
+        GameUIManager.i.ClearSkills();
+        character.GetComponent<Stats>().RecalculateStats();
     }
 
     public GameObject GetCurrentTurnCharacter() {
@@ -114,7 +116,8 @@ public class PartyManager : MonoBehaviour
             nextCharacterIndex = 0;
         }
         SetCurrentCharacter(party[nextCharacterIndex]);
-        InventoryManager.i.UpdateInventory();
+        GridManager.i.UpdateGame();
+        GameUIManager.i.UpdatePartyIcons(party);
     }
 
     public List<GameObject> EnemyPartyState() {
@@ -219,15 +222,5 @@ public class PartyManager : MonoBehaviour
             }
         }
 
-    }
-
-    public void UpdatePartyIcons() {
-        foreach(GameObject child in iconLayout.transform) {
-            Destroy(child.gameObject);
-        }
-        foreach(GameObject member in party) {
-            var clone =Instantiate(iconPrefab, iconLayout.transform);
-            clone.GetComponent<PartyIcon>().SetIcon(member);
-        }
     }
 }

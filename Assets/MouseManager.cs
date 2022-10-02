@@ -73,6 +73,12 @@ if (character != highlightedGameObbject) {
         //TEST INPUT
         if (Input.GetMouseButtonDown(0)) {
 
+
+            var gameobjectundermouse = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(mousepos);
+            var currentCharacter = PartyManager.i.currentCharacter;
+            var characterPosition = currentCharacter.position();
+
+            
             if (!mousepos.inbounds()) {
                 return;
             }
@@ -80,14 +86,6 @@ if (character != highlightedGameObbject) {
             if (EventSystem.current.IsPointerOverGameObject()) {
                 return;
             }
-
-            var gameobjectundermouse = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(mousepos);
-            var currentCharacter = PartyManager.i.currentCharacter;
-            var characterPosition = currentCharacter.position();
-
-
-            currentCharacter.GetComponent<Stats>().RecalculateStats(); //RECALCUATE TEST
-
             //Use Item
             if (itemSelected != null) {
                 Actions.i.UseItemFromInventory(mousepos, characterPosition, itemSelected);
@@ -154,10 +152,6 @@ if (character != highlightedGameObbject) {
                 PartyManager.i.partyMemberTurnTaken.Clear();
                 PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
             }
-        }
-        //TEST ACTION POINTS
-        if (Actions.i.actionPoints <= 0) {
-            PartyManager.i.EndTurn();
         }
     }
 

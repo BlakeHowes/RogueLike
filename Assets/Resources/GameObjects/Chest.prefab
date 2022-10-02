@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2354247380013042046}
   - component: {fileID: 2354247380013042047}
   - component: {fileID: 1773118153572415346}
+  - component: {fileID: -6281585937373113798}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -71,16 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+  items: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   armour: {fileID: 0}
@@ -128,14 +120,42 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1695842309, guid: 87465ad655b9c4a419b7e96af99fad00, type: 3}
+  m_Sprite: {fileID: 1046298395, guid: 87465ad655b9c4a419b7e96af99fad00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 21.333334, y: 21.333334}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6281585937373113798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354247380013042016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loot:
+  - item: {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+    rarity: 1
+    pool: 0
+  - item: {fileID: 11400000, guid: 4dfca35ccf9f85d44a9d0296dc810a0e, type: 2}
+    rarity: 1
+    pool: 1
+  - item: {fileID: 11400000, guid: 44376a0c9103e1b4db078014b6d99ecb, type: 2}
+    rarity: 1
+    pool: 2
+  - item: {fileID: 11400000, guid: 499aa4b250acc844f82e876cbe46767e, type: 2}
+    rarity: 1
+    pool: 3
+  - item: {fileID: 11400000, guid: afd35999249376540b738fecb8ff078c, type: 2}
+    rarity: 1
+    pool: 4

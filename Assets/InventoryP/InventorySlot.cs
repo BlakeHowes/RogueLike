@@ -48,6 +48,8 @@ public class InventorySlot : MonoBehaviour
         if (itemSelected == null) {
             Debug.Log("item removed");
             InventoryManager.i.UpdateInventory();
+
+            PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats(); //RECALCUATE TEST
             return;
         }
         //Remove item selected by mouse from inventory
@@ -55,6 +57,8 @@ public class InventorySlot : MonoBehaviour
             MouseManager.i.itemSelected = null;
             InventoryManager.i.UpdateInventory();
             Debug.Log("Item type different");
+
+            PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats(); //RECALCUATE TEST
             return;
         }
         if (inventoryItems.Contains(itemSelected)) {
@@ -67,6 +71,7 @@ public class InventorySlot : MonoBehaviour
             InventoryManager.i.AddType(item, slotType);
         }
 
+        PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats(); //RECALCUATE TEST
 
         MouseManager.i.itemSelected = null;
         InventoryManager.i.UpdateInventory();

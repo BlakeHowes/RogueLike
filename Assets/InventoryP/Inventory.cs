@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
@@ -9,8 +8,7 @@ public class Inventory : MonoBehaviour
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
     public ItemAbstract armour;
-    public ItemAbstract trinket1;
-    public ItemAbstract trinket2;
+    public List<ItemAbstract> trinkets;
 
     public int MaxInventory = 10;
     public bool AddItem(ItemAbstract item) {
