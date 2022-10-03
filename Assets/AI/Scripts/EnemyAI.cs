@@ -59,6 +59,9 @@ public class EnemyAI:AIAbstract
             if(target == null) {
                 UpdateSensoryInformation(gameobject.position());
             }
+            if(target == null) {
+                break;
+            }
             testbreaker++;
             if(testbreaker >= 10) {
                 Debug.LogError("Attack is stuck");

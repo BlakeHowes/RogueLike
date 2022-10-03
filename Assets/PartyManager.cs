@@ -81,6 +81,7 @@ public class PartyManager : MonoBehaviour
         GameUIManager.i.UpdatePartyIcons(party);
         GameUIManager.i.ClearSkills();
         character.GetComponent<Stats>().RecalculateStats();
+        GridManager.i.UpdateGame();
     }
 
     public GameObject GetCurrentTurnCharacter() {

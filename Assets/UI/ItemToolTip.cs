@@ -5,13 +5,24 @@ using UnityEngine.UI;
 
 public class ItemToolTip : MonoBehaviour
 {
+    public GameObject handle;
     public Text Title;
     public Text Description;
     public Image image;
-    public void UpdateToolTip(ItemAbstract item) {
-        if(item == null) {      
+    public Vector3 offset;
+    public void UpdateToolTip(ItemAbstract item,bool top) {
+        if(item == null) {
+            gameObject.SetActive(false);
             return;
         }
+
+        if (top) {
+            handle.transform.localPosition = new Vector3(offset.x, offset.y * -1, 0);
+        }
+        else {
+            handle.transform.localPosition = new Vector3(offset.x, offset.y, 0);
+        }
+
         Title.text = item.name.ToString();
         var description = item.Description();
         if (description != null) {
@@ -21,7 +32,6 @@ public class ItemToolTip : MonoBehaviour
             description = "Missing Description";
         }
         image.sprite = item.tile.sprite;
-
     }
 
     public void Update() {

@@ -9,21 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71193af96c337234abe6d4caf296d8f6, type: 3}
-  m_Name: HealingRing2
+  m_Script: {fileID: 11500000, guid: 0506cb9508d36954cb256d4cd7638444, type: 3}
+  m_Name: Pokeball
   m_EditorClassIdentifier: 
-  type: 4
-  tile: {fileID: 11400000, guid: 6eab26ff18fafff4da4508e7defda7f2, type: 2}
+  type: 0
+  tile: {fileID: 11400000, guid: 36f211aee49742149b7ce6922e13c61a, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 0
   ranged: 0
   Modifiers: []
   stack: 1
-  attack: 0
-  maxHealth: 0
-  armour: 0
-  rangedmod: 0
-  maxHealthBonus: 0
-  mainHandMods: []
-  skills:
-  - {fileID: 11400000, guid: b2caf15cb896d1e428f32ff85de40563, type: 2}

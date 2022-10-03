@@ -78,8 +78,13 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void EnableToolTip() {
+        bool top = false;
+        if(transform.parent.gameObject == InventoryManager.i.equipmentLayout) {
+            Debug.Log("test");
+            top = true;
+        }
         GameUIManager.i.tooltipGameObject.SetActive(true);
-        GameUIManager.i.itemtooltip.UpdateToolTip(item);
+        GameUIManager.i.itemtooltip.UpdateToolTip(item,top);
     }
 
     public void DisableToolTip() {

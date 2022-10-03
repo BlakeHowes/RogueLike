@@ -23,7 +23,7 @@ public class BuffAreaAroundCharacter : ItemAbstract
     public override string Description() {
         string description = "";
         if (healingBase > 0) {
-            description += "Heals party for: "+healingBase+"-" + healingBonus+" health";
+            description += "Skill: Restore: Heals party for: "+healingBase+"-" + healingBonus+" health";
         }
         return description;
     }

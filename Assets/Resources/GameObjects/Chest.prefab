@@ -50,10 +50,13 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: dc7d2f87f2981c044834c59d01b75e3d, type: 2}
   faction: 2
   state: 0
+  deathAction: []
   baseMaxHealth: 0
   baseAttack: 0
   baseArmour: 0
-  baseActionPoints: 0
+  baseActionPoints: 3
+  maxHealth: 0
+  health: 0
   actionPoints: 0
   bonusAttack: 0
   bonusMaxHealth: 0
@@ -76,8 +79,7 @@ MonoBehaviour:
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   armour: {fileID: 0}
-  trinket1: {fileID: 0}
-  trinket2: {fileID: 0}
+  trinkets: []
   MaxInventory: 10
 --- !u!212 &1773118153572415346
 SpriteRenderer:

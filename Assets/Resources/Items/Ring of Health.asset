@@ -22,4 +22,7 @@ MonoBehaviour:
   attack: 0
   maxHealth: 10
   armour: 0
+  rangedmod: 0
   maxHealthBonus: 0
+  mainHandMods: []
+  skills: []

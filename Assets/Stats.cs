@@ -14,8 +14,8 @@ public class Stats : MonoBehaviour
     public int baseAttack;
     public int baseArmour;
     public int baseActionPoints;
-    private int maxHealth;
-    private int health;
+    public int maxHealth;
+    public int health;
     private int attack;
     private int armour;
     public int actionPoints;

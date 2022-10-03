@@ -53,7 +53,9 @@ MonoBehaviour:
   baseMaxHealth: 100
   baseAttack: 0
   baseArmour: 0
-  baseActionPoints: 0
+  baseActionPoints: 3
+  maxHealth: 0
+  health: 0
   actionPoints: 0
   bonusAttack: 0
   bonusMaxHealth: 0
@@ -76,8 +78,7 @@ MonoBehaviour:
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   armour: {fileID: 0}
-  trinket1: {fileID: 0}
-  trinket2: {fileID: 0}
+  trinkets: []
   MaxInventory: 10
 --- !u!212 &-5738143984019610657
 SpriteRenderer:

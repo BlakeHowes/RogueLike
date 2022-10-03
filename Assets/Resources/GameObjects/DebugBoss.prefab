@@ -52,7 +52,7 @@ MonoBehaviour:
   state: 0
   deathAction: []
   baseMaxHealth: 50
-  baseAttack: 10
+  baseAttack: 15
   baseArmour: 0
   baseActionPoints: 3
   actionPoints: 0

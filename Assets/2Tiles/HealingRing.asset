@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Chipset_001_171
+  m_Name: HealingRing
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 86764f924af3a554ab02d087a06a107d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -593503066, guid: 9782e540bdaa85d4fbe265acfbdf3759, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.004989147, a: 1}
   m_Transform:
     e00: 1
     e01: 0
