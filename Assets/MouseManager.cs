@@ -57,6 +57,10 @@ if (character != highlightedGameObbject) {
             GameUIManager.i.ShowSight(MousePositionOnGrid());
         }
 
+        if (Input.GetKey(KeyCode.R)) {
+            GridManager.i.tools.FloodFill(PartyManager.i.currentCharacter.position(), GridManager.i.goTilemap, GridManager.i.fogTilemap);
+        }
+
         if (Input.GetKeyDown(KeyCode.U)) {
             PartyManager.i.currentCharacter.GetComponent<Stats>().SpawnHitNumber("10", Color.red,1);
         }

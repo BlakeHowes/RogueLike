@@ -74,6 +74,10 @@ public class Stats : MonoBehaviour
         UpdateHealthBar();
         StartCoroutine(PartyManager.i.TakeDamageAnimation(gameObject, origin));
         if (health <= 0) {
+            var position = gameObject.position();
+            foreach(ItemAbstract item in deathAction) {
+                item.Call(position, position);
+            }
             Actions.i.Die(gameObject.position());
         }
     }

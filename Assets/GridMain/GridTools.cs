@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static PartyManager;
 
 public class GridTools
 {
@@ -89,5 +90,44 @@ public class GridTools
         }
         cellsInsideShape.Remove(cellsInsideShape[0]);
         return cellsInsideShape;
+    }
+
+    public void FloodFill(Vector3Int position,Tilemap goTilemap,Tilemap fogTilemap) {
+        Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
+        cellstocheck.Enqueue(position);
+        List<Vector3Int> WallsToClear = new List<Vector3Int>();
+        int breaker = 0;
+        var checkpos = position;
+        while(cellstocheck.TryDequeue(out checkpos)) {
+
+            breaker++;
+            if(breaker > 1000) {
+                Debug.Log("Flood fill break");
+                break;
+            }
+
+            for (int x = checkpos.x - 1; x <= checkpos.x + 1; x++) {
+                for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
+                    Vector3Int pos = new Vector3Int(x, y);
+                    if (InBounds(pos)) {
+                        if (x == checkpos.x && y == checkpos.y) {
+                            continue;
+                        }
+                    }
+                    if (fogTilemap.GetTile(pos)) {
+                        if (goTilemap.GetTile(pos)) {
+                            WallsToClear.Add(pos);
+                        }
+                        else {
+                            fogTilemap.SetTile(pos, null);
+                            cellstocheck.Enqueue(pos);
+                        }
+                    }
+                }
+            }
+        }
+        foreach (Vector3Int pos in WallsToClear) {
+            fogTilemap.SetTile(pos, null);
+        }
     }
 }

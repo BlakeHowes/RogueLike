@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 
@@ -79,6 +80,7 @@ public class GridManager : MonoBehaviour {
         CreateFog();
         SpawnCharacter(playerPrefab, new Vector3Int(24, 8),Color.white);
         SpawnCharacter(playerPrefab2, new Vector3Int(25, 8), Color.white);
+        tools.FloodFill(new Vector3Int(24, 8), goTilemap, fogTilemap);
         UpdateGame();
     }
 
@@ -147,7 +149,7 @@ public class GridManager : MonoBehaviour {
     }
 
     public GameObject InstantiateGameObject(GameObject go) {
-        var clone = Instantiate(go);
+        var clone = Instantiate(go,transform);
         clone.name = go.name;
         return clone;
     }
