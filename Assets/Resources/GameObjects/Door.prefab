@@ -49,8 +49,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 2359fc7b2ff2b0a499a78b491657aea4, type: 2}
   faction: 2
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: 99fb58a1afaae174c8bbddfcc313582b, type: 2}
+  deathAction: []
   baseMaxHealth: 0
   baseAttack: 0
   baseArmour: 0

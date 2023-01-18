@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 19652850ce04e8847b0b544c026632be, type: 2}
+  tile: {fileID: 0}
   faction: 1
   state: 0
   deathAction: []
@@ -122,7 +122,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8d386ec6df97fab4387fd314b1523733, type: 3}
+  m_Sprite: {fileID: -1290304877, guid: b23342a8499c8fb4185885dce524dbe1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

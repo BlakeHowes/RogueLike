@@ -46,10 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: e7955666926ee4f4284766807aa425c1, type: 2}
+  tile: {fileID: 11400000, guid: c4c44940da013ed47b3d99e83fb210a6, type: 2}
+  baseSprite: {fileID: 0}
+  baseHair: {fileID: 0}
   faction: 3
   state: 0
-  deathAction: []
+  deathAction:
+  - {fileID: 11400000, guid: 99fb58a1afaae174c8bbddfcc313582b, type: 2}
   baseMaxHealth: 100
   baseAttack: 0
   baseArmour: 0
@@ -60,6 +63,8 @@ MonoBehaviour:
   bonusAttack: 0
   bonusMaxHealth: 0
   bonusArmour: 0
+  infiniteHealth: 1
+  showHealthBar: 0
   healthbar: {fileID: 0}
   ai: {fileID: 0}
 --- !u!114 &6086695050724890861
@@ -77,6 +82,7 @@ MonoBehaviour:
   items: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
+  helmet: {fileID: 0}
   armour: {fileID: 0}
   trinkets: []
   MaxInventory: 10
@@ -121,7 +127,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 966635813, guid: 721af00762cb90f4fad2d78000febc11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9addcd5e5711459499aced40ea42aaf5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

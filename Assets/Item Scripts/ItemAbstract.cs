@@ -9,10 +9,11 @@ public abstract class ItemAbstract : ScriptableObject
     public Type type;
     public Tile tile;
     public GameObject particles;
-    public bool destroyOnUse,ranged;
+    public bool destroyOnUse;
     public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
     [Header("Stats")]
     public int stack = 1;
+    public int range;
     public abstract bool Call(Vector3Int position,Vector3Int origin);
     public abstract string Description();
 
@@ -28,8 +29,8 @@ public abstract class ItemAbstract : ScriptableObject
         Weapon,
         OffHand,
         Armour,
+        Helmet,
         Trinket,
-        WeaponModifier,
-        EquipmentModifier
+        Skill
     }
 }

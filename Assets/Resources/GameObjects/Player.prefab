@@ -47,16 +47,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
+  baseSprite: {fileID: 21300000, guid: dc069b3b37b2e214d9ee3b562bb3b32a, type: 3}
+  baseHair: {fileID: 21300000, guid: c40adabd2d2ef8a4185a13cab940bdce, type: 3}
   faction: 0
   state: 0
   deathAction: []
-  baseMaxHealth: 50
-  baseAttack: 5
+  baseMaxHealth: 100
+  baseAttack: 0
   baseArmour: 0
   baseActionPoints: 3
-  maxHealth: 0
-  health: 0
-  actionPoints: 0
+  maxHealth: 100
+  health: 100
+  actionPoints: 3
   bonusAttack: 0
   bonusMaxHealth: 0
   bonusArmour: 0
@@ -75,16 +77,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: 4dfca35ccf9f85d44a9d0296dc810a0e, type: 2}
-  - {fileID: 11400000, guid: 44376a0c9103e1b4db078014b6d99ecb, type: 2}
-  - {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
   - {fileID: 11400000, guid: 1bbd718f8750e5e46adaeee98cd10943, type: 2}
+  - {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
+  - {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 11400000, guid: 499aa4b250acc844f82e876cbe46767e, type: 2}
-  armour: {fileID: 11400000, guid: afd35999249376540b738fecb8ff078c, type: 2}
+  helmet: {fileID: 0}
+  armour: {fileID: 11400000, guid: a2c57c278a8ca024aa3cc65b033a4da4, type: 2}
   trinkets:
-  - {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
-  - {fileID: 11400000, guid: db76fd3d4b9b4c747af6875a5e7cd995, type: 2}
+  - {fileID: 11400000, guid: 693577d97e642d045bb2f1d42677fa24, type: 2}
   MaxInventory: 9
 --- !u!212 &7361458235895569522
 SpriteRenderer:
@@ -106,7 +107,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 63f90299b0acce349a3819d53cca9ec1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,12 +128,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1895891435, guid: 28de6a8cc0cd26d4a99fc34df72e8883, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc069b3b37b2e214d9ee3b562bb3b32a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.18, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

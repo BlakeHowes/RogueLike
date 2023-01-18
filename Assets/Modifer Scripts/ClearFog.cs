@@ -6,7 +6,7 @@ public class ClearFog : ItemAbstract
 {
 
     public override bool Call(Vector3Int position, Vector3Int origin) {
-        GridManager.i.tools.FloodFill(position, GridManager.i.goTilemap, GridManager.i.fogTilemap);
+        //GridManager.i.tools.FloodFill(position, GridManager.i.goTilemap, GridManager.i.fogTilemap);
         return true;
     }
     public override string Description() {

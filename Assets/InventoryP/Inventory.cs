@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
+    public ItemAbstract helmet;
     public ItemAbstract armour;
     public List<ItemAbstract> trinkets;
 

@@ -65,7 +65,8 @@ public class Algorithm {
                     var go = goGrid[gameobjectcell.x, gameobjectcell.y];
                     if (go != null) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
-                        if (go.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+                        var faction = go.GetComponent<Stats>().faction;
+                        if (faction == PartyManager.Faction.Enemy|| faction == PartyManager.Faction.Party) {
                             grid.FindCellByPosition(gameobjectcell).walkable = true;
                         }
 

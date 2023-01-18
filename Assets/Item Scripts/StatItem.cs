@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 [CreateAssetMenu(fileName = "StatItem", menuName = "Items/StatItem")]
 public class StatItem : ItemAbstract
 {
+    public Sprite wornSprite;
     public int attack;
     public int maxHealth;
     public int armour;
-    public bool rangedmod;
     public int maxHealthBonus;
     public List<ItemAbstract> mainHandMods;
     public List<ItemAbstract> skills;
@@ -27,9 +26,6 @@ public class StatItem : ItemAbstract
 
         var inventory = origin.gameobjectSpawn().GetComponent<Inventory>();
         if(inventory.mainHand != null) {
-            if(rangedmod == true) {
-                inventory.mainHand.ranged = true;
-            }
             Debug.Log("range test");
             foreach (ItemAbstract item in mainHandMods) {
                 inventory.mainHand.Modifiers.Add(item);

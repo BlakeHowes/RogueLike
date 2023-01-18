@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static PartyManager;
 
 public class GridTools
 {
@@ -92,16 +91,34 @@ public class GridTools
         return cellsInsideShape;
     }
 
-    public void FloodFill(Vector3Int position,Tilemap goTilemap,Tilemap fogTilemap) {
+    public List<Vector3Int> BresenhamLineLength(int x0, int y0, int x1, int y1,int length) {
+        List<Vector3Int> cellsInsideShape = new List<Vector3Int>();
+        int dx = Mathf.Abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
+        int dy = -Mathf.Abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
+        int err = dx + dy, e2; /* error value e_xy */
+        int i = 0;
+        for (; ; ) {  /* loop */
+            cellsInsideShape.Add(new Vector3Int(x0, y0));
+            if (i >= length) break;
+            e2 = 2 * err;
+            if (e2 >= dy) { err += dy; x0 += sx; } /* e_xy+e_x > 0 */
+            if (e2 <= dx) { err += dx; y0 += sy; } /* e_xy+e_y < 0 */
+            i++;
+        }
+        cellsInsideShape.Remove(cellsInsideShape[0]);
+        return cellsInsideShape;
+    }
+
+    public void FloodFill(Vector3Int position,Tilemap goTilemap,Tilemap fogTilemap,int fillTotal,TileBase tile,float maxDistance) {
         Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
         cellstocheck.Enqueue(position);
         List<Vector3Int> WallsToClear = new List<Vector3Int>();
+        List<Vector3Int> checkedCells = new List<Vector3Int>();
         int breaker = 0;
         var checkpos = position;
         while(cellstocheck.TryDequeue(out checkpos)) {
-
             breaker++;
-            if(breaker > 1000) {
+            if(breaker > fillTotal) {
                 Debug.Log("Flood fill break");
                 break;
             }
@@ -114,12 +131,18 @@ public class GridTools
                             continue;
                         }
                     }
-                    if (fogTilemap.GetTile(pos)) {
-                        if (goTilemap.GetTile(pos)) {
-                            WallsToClear.Add(pos);
-                        }
-                        else {
-                            fogTilemap.SetTile(pos, null);
+               
+                    if (checkedCells.Contains(pos)) {
+                        continue;
+                    }
+                    checkedCells.Add(pos);
+                    //goTilemap.SetColor(pos, Color.white);
+                    if (goTilemap.GetTile(pos)) {
+                        WallsToClear.Add(pos);
+                    }
+                    else {
+                        if(Vector3.Distance(pos,position) < maxDistance) {
+                            fogTilemap.SetTile(pos, tile);
                             cellstocheck.Enqueue(pos);
                         }
                     }
@@ -127,7 +150,66 @@ public class GridTools
             }
         }
         foreach (Vector3Int pos in WallsToClear) {
-            fogTilemap.SetTile(pos, null);
+            fogTilemap.SetTile(pos, tile);
+            fogTilemap.SetTile(pos+new Vector3Int(0,1), tile);
+            fogTilemap.SetTile(pos + new Vector3Int(0, 2), tile);
         }
+    }
+
+    public List<Vector3Int> MeeleeRange(Vector3Int position) {
+        List<Vector3Int> cells = new List<Vector3Int>();
+        for (int x = position.x - 1; x <= position.x + 1; x++) {
+            for (int y = position.y - 1; y <= position.y + 1; y++) {
+                cells.Add(new Vector3Int(x, y));
+            }
+        }
+        return cells;
+    }
+
+    public void FloodFillMini(Vector3Int position, Tilemap goTilemap, Tilemap fogTilemap, int fillTotal, TileBase tile, float maxDistance,Tilemap miniTilemap,Tile miniSpace,Tile miniWall,Tile miniDoor,Tile miniParty, GameObject[,] goGrid) {
+        Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
+        cellstocheck.Enqueue(position);
+        List<Vector3Int> WallsToClear = new List<Vector3Int>();
+        List<Vector3Int> checkedCells = new List<Vector3Int>();
+        int breaker = 0;
+        var checkpos = position;
+        while (cellstocheck.TryDequeue(out checkpos)) {
+            breaker++;
+            if (breaker > fillTotal) {
+                Debug.Log("Flood fill break");
+                break;
+            }
+
+            for (int x = checkpos.x - 1; x <= checkpos.x + 1; x++) {
+                for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
+                    Vector3Int pos = new Vector3Int(x, y);
+                    if (InBounds(pos)) {
+                        if (x == checkpos.x && y == checkpos.y) {
+                            continue;
+                        }
+                    }
+                    if (checkedCells.Contains(pos)) {
+                        continue;
+                    }
+                    checkedCells.Add(pos);
+                    //goTilemap.SetColor(pos, Color.white);
+                    if (goTilemap.GetTile(pos)) {
+                        WallsToClear.Add(pos);
+                    }
+                    else {
+                        if (Vector3.Distance(pos, position) < maxDistance) {
+                            fogTilemap.SetTile(pos, tile);
+                            miniTilemap.SetTile(pos, miniSpace);
+                            cellstocheck.Enqueue(pos);
+                        }
+                    }
+                }
+            }
+        }
+        foreach (Vector3Int pos in WallsToClear) {
+            fogTilemap.SetTile(pos, tile);
+            miniTilemap.SetTile(pos, miniWall);
+        }
+        miniTilemap.SetTile(position, miniParty);
     }
 }

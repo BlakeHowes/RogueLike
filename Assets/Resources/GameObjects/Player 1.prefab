@@ -47,16 +47,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
+  baseSprite: {fileID: 0}
+  baseHair: {fileID: 0}
   faction: 0
   state: 0
   deathAction: []
-  baseMaxHealth: 50
+  baseMaxHealth: 100
   baseAttack: 5
   baseArmour: 0
   baseActionPoints: 3
-  maxHealth: 0
-  health: 0
-  actionPoints: 0
+  maxHealth: 100
+  health: 100
+  actionPoints: 3
   bonusAttack: 0
   bonusMaxHealth: 0
   bonusArmour: 0
@@ -74,11 +76,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: 44376a0c9103e1b4db078014b6d99ecb, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+  items: []
   mainHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   offHand: {fileID: 0}
+  helmet: {fileID: 0}
   armour: {fileID: 0}
   trinkets: []
   MaxInventory: 9
@@ -102,7 +103,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 63f90299b0acce349a3819d53cca9ec1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

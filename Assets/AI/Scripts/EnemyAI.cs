@@ -12,8 +12,11 @@ public class EnemyAI:AIAbstract
     private GameObject target;
     private Stats stats;
     private GameObject gameobject;
-    public override void UpdateSensoryInformation(Vector3Int position) {
+    public override GameObject UpdateSensoryInformation(Vector3Int position) {
         gameobject = position.gameobjectSpawn();
+        if (gameobject == null) {
+            return null;
+        }
         stats = gameobject.GetComponent<Stats>();
         var range = sightRange;
         target = null;
@@ -37,12 +40,13 @@ public class EnemyAI:AIAbstract
         
         if (target == null) {
             stats.state = State.Idle;
-            return;
+            return null;
         }
         if(stats.state == State.Idle) {
             stats.SpawnHitNumber("!", Color.red,2);
         }
         stats.state = State.Attacking;
+        return target;
     }
 
     public override void AttackLogic() {
@@ -82,21 +86,6 @@ public class EnemyAI:AIAbstract
                     continue;
                 }
                 continue;
-            }
-            if (weapon.ranged == false) {
-
-                if (inrange == false) {
-                    var walked = Actions.i.Walk(target.position(), gameobject.position());
-                    if (walked == false) {
-                        Actions.i.MoveUpEnemy(target.position(), gameobject.position());
-                    }
-                }
-                else {
-                    Actions.i.UseItemMainHand(target.position(), gameobject.position());
-                }
-            }
-            else {
-                Actions.i.UseItemMainHand(target.position(), gameobject.position());
             }
         }
         yield return null;

@@ -3,10 +3,33 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class GridGraphics
 {
+    int width;
+    int height;
+    Tile goTile;
+    Tilemap mechTilemap;
+    Tilemap itemTilemap;
+    Tilemap goTilemap;
+    Tilemap surfaceTilemap;
+    SurfaceAbstract[,] mechGrid;
+    SurfaceAbstract[,] surfaceGrid;
+    ItemAbstract[,] itemGrid;
+    GameObject[,] goGrid;
+    public GridGraphics(int width, int height, SurfaceAbstract[,] mechGrid, SurfaceAbstract[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tile goTile) {
+        this.width = width;
+        this.height = height;
+        this.mechTilemap = mechTilemap;
+        this.itemTilemap = itemTilemap;
+        this.goTilemap = goTilemap;
+        this.surfaceTilemap = surfaceTilemap;
+        this.goGrid = goGrid;
+        this.mechGrid = mechGrid;
+        this.surfaceGrid = surfaceGrid;
+        this.itemGrid = itemGrid;
+        this.goTile = goTile;
+    }
     public void UpdateGameObjects(int width,int height, GameObject[,] goGrid,Tilemap tilemap) {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
@@ -16,6 +39,17 @@ public class GridGraphics
                         tilemap.SetTile(new Vector3Int(x, y, 0), tile);
                     }
                 }
+            }
+        }
+    }
+
+    public void UpdateEverything() {
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                var position = new Vector3Int(x, y);
+                if (itemGrid[x, y] != null) itemTilemap.SetTile(position, itemGrid[x, y].tile);
+                if (mechGrid[x, y] != null) mechTilemap.SetTile(position, mechGrid[x, y].tile);
+                if (surfaceGrid[x, y] != null) surfaceTilemap.SetTile(position, surfaceGrid[x, y].tile);
             }
         }
     }
@@ -37,6 +71,8 @@ public class GridGraphics
         var healthbar =gameobject.GetComponent<Stats>().healthbar;
         gameobject.transform.position = startPosition + offset;
         healthbar.transform.position = gameobject.transform.position;
+        var distance = Vector3.Distance(startPosition, targetPosition);
+        duration *= distance;
         while (time < duration) {
             {
                 gameobject.transform.position = Vector3.Lerp(startPosition + offset, targetPosition + offset, time / duration);

@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using UnityEngine;
-
 public class Actions : MonoBehaviour
 {
     public static Actions i;
@@ -7,6 +7,7 @@ public class Actions : MonoBehaviour
     public float walkCost;
     public float pickupCost;
     public float handCost;
+    public int throwRange;
     public void Awake() {
         i = this;
     }
@@ -17,15 +18,13 @@ public class Actions : MonoBehaviour
             actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
         }
         else {
-            Debug.Log("action points changed" + amount);
-            Debug.Log("before " + actionPoints);
             actionPoints -= amount;
-            Debug.Log("after " + actionPoints);
+            if (actionPoints <= 0) {
+                PartyManager.i.EndTurn();
+            }
         }
+
         GameUIManager.i.actionPointsText.text = actionPoints.ToString();
-        if (actionPoints <= 0) {
-            PartyManager.i.EndTurn();
-        }
     }
 
     public void SetActionPoints(float amount) {
@@ -39,6 +38,12 @@ public class Actions : MonoBehaviour
 
     public bool Walk(Vector3Int postion,Vector3Int origin) {
         var walked =PathingManager.i.MoveOneStep(postion, origin);
+        if (walked) { ChangeActionPoints(walkCost); }
+        return walked;
+    }
+
+    public bool WalkLeader(Vector3Int postion, Vector3Int origin) {
+        var walked = PathingManager.i.MoveOneStepLeader(postion, origin);
         if (walked) { ChangeActionPoints(walkCost); }
         return walked;
     }
@@ -73,6 +78,7 @@ public class Actions : MonoBehaviour
 
     public void Die(Vector3Int position) {
         var character = position.gameobjectSpawn();
+        PartyManager.i.RemoveDeadEnemy(character);
         GridManager.i.goMethods.RemoveGameObject(position);
         character.GetComponent<Inventory>().DropItems(position);
         Destroy(character);
@@ -88,6 +94,9 @@ public class Actions : MonoBehaviour
         if (origin == position) {
             return false;
         }
+
+        var range = CalculateRange(origin,null);
+        if (!inRange(position,origin, range)) return false;
         var mainHandItem = character.GetComponent<Inventory>().mainHand;
         if (mainHandItem != null) {
             if (position.gameobjectSpawn() != null) {
@@ -121,7 +130,6 @@ public class Actions : MonoBehaviour
     }
 
     public void UseItemFromInventory(Vector3Int position,Vector3Int origin, ItemAbstract item) {
-        MouseManager.i.itemSelected = null;
         if (item.destroyOnUse) {
             item.Call(position, origin);
             var inventory = origin.gameobjectSpawn().GetComponent<Inventory>().items;
@@ -131,11 +139,48 @@ public class Actions : MonoBehaviour
             ChangeActionPoints(handCost);
             return;
         }
-        if (item.ranged) {
+        if (!inRange(position, origin, throwRange)) return;
+        if (item.destroyOnUse) {
             RangedAttack(position,origin,item);
             ChangeActionPoints(handCost);
             return;
         }
         ThrowItem(position, origin, item);
+    }
+
+    public int CalculateRange(Vector3Int position,ItemAbstract item) {
+        var range = 1;
+        if(item == null) {
+            var currentCharacter = position.gameobjectSpawn();
+            currentCharacter.GetComponent<Stats>().RecalculateStats();
+            item = currentCharacter.GetComponent<Inventory>().mainHand;
+            if (item != null) {
+                var weapon = item as Weapon;
+                range = weapon.range + weapon.rangeBonus;
+            }
+        }
+        else {
+            range = item.range;
+        }
+        return range;
+    }
+
+    public List<Vector3Int> CreateRange(Vector3Int position, int range) {
+        var cells = new List<Vector3Int>();
+        if (range == 1) {
+            cells = GridManager.i.tools.MeeleeRange(position);
+        }
+        else {
+            cells = GridManager.i.tools.Circle(range, position);
+        }
+        return cells;
+    }
+
+    public bool inRange(Vector3Int position, Vector3Int origin, int range) {
+        var cells = CreateRange(origin, range);
+        foreach (Vector3Int cell in cells) {
+            if (position == cell) return true;
+        }
+        return false;
     }
 }

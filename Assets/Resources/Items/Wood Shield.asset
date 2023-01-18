@@ -16,9 +16,13 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 87cd9718265b4c4469cf5702ca901751, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 0
-  ranged: 0
+  Modifiers: []
   stack: 1
+  range: 0
+  wornSprite: {fileID: 0}
+  attack: 0
   maxHealth: 0
   armour: 2
   maxHealthBonus: 0
-  Modifiers: []
+  mainHandMods: []
+  skills: []

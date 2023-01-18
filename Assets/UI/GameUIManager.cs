@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class GameUIManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class GameUIManager : MonoBehaviour
     public GameObject skillLayout;
     public GameObject iconLayout;
     public GameObject iconPrefab;
+    public TileBase rangeTile;
+    public Tilemap groundUI;
     public void Awake() {
         i = this;
     }
@@ -57,6 +60,25 @@ public class GameUIManager : MonoBehaviour
         else {
             uiTilemap.SetColor(position, Color.white);
         }
+    }
+
+    public void ShowRange(Vector3Int position,int range) {
+        groundUI.ClearAllTiles();
+        var cells =CreateRange(position, range);
+        foreach (Vector3Int cell in cells) {
+            groundUI.SetTile(cell, rangeTile);
+        }
+    }
+
+    public List<Vector3Int> CreateRange(Vector3Int position, int range) {
+        var cells = new List<Vector3Int>();
+        if (range == 1) {
+            cells = GridManager.i.tools.MeeleeRange(position);
+        }
+        else {
+            cells = GridManager.i.tools.Circle(range, position);
+        }
+        return cells;
     }
 
     public void AddSkill(ItemAbstract skill) {

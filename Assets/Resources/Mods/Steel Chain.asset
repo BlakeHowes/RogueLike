@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d4bb05dd98dce4b96887cf5859e10b, type: 3}
   m_Name: Steel Chain
   m_EditorClassIdentifier: 
-  type: 5
+  type: 6
   tile: {fileID: 0}
   particles: {fileID: 0}
   destroyOnUse: 0
   ranged: 0
+  Modifiers: []
   stack: 1
   attackBonus: 0
   attackMultiple: 0
   armour: 2
+  modType: 0

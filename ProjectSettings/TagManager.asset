@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Minimap
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - name: Floor
     uniqueID: 1518081105
     locked: 0
+  - name: GroundUI
+    uniqueID: 3806445279
+    locked: 0
   - name: Mechanisms
     uniqueID: 1354975459
     locked: 0
@@ -61,6 +64,12 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3977833029
+    locked: 0
+  - name: Fog
+    uniqueID: 1428198613
+    locked: 0
+  - name: Temp
+    uniqueID: 2471662159
     locked: 0
   - name: HUD
     uniqueID: 3477568365

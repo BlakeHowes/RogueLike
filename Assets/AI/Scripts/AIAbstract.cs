@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class AIAbstract : ScriptableObject
 {
-    public abstract void UpdateSensoryInformation(Vector3Int position);
+    public abstract GameObject UpdateSensoryInformation(Vector3Int position);
     public abstract void AttackLogic();
     
     public enum State {

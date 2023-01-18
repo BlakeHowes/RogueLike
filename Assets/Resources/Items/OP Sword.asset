@@ -16,11 +16,12 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: a6b2b0b16cb8fed4b81bc418203761c5, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 0
-  ranged: 0
+  Modifiers: []
   stack: 1
+  range: 1
   attackBase: 20
   attackRandomAddition: 1000
   accuracy: 10
   AOE: 0
-  range: 1
-  Modifiers: []
+  linePrefab: {fileID: 0}
+  PermWeaponMods: []

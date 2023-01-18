@@ -6,7 +6,7 @@ public class PartEffect : MonoBehaviour
 {
     public float time;
 
-    public void Play() {
+    public void OnEnable() {
         StartCoroutine(Animate());
     }
     public IEnumerator Animate() {

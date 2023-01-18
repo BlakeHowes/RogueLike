@@ -16,7 +16,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: e45007a5aa133d440ae2a35cfcbe3937, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 0
-  ranged: 0
   Modifiers:
   - {fileID: 11400000, guid: 40f59eda188f0f84f91fdc3d3dec4a0f, type: 2}
   stack: 1
+  range: 0

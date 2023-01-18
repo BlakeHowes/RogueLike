@@ -16,8 +16,9 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 5b3d967ba9432754b85872061b80d7b7, type: 2}
   particles: {fileID: 0}
   destroyOnUse: 1
-  ranged: 0
+  Modifiers: []
   stack: 1
+  range: 0
   damage: 0
   heal: 20
   maxHealth: 0

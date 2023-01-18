@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
-using static UnityEngine.UI.Image;
-using UnityEngine.UIElements;
 
 public class PathingManager : MonoBehaviour
 {
@@ -44,9 +42,24 @@ public class PathingManager : MonoBehaviour
         }
     }
 
+    public void SwapPlaces(Vector3Int position, Vector3Int origin) {
+        var targetGO = position.gameobjectGO();
+        if(targetGO == PartyManager.i.currentCharacter) {
+            return;
+        }
+        var originGO=origin.gameobjectGO();
+        StartCoroutine(GridManager.i.graphics.LerpPosition(origin, position, walkSpeed, GridManager.i.goTilemap));
+        StartCoroutine(GridManager.i.graphics.LerpPosition(position, origin, walkSpeed, GridManager.i.goTilemap));
+        GridManager.i.goMethods.RemoveGameObject(origin);
+        GridManager.i.goMethods.RemoveGameObject(position);
+        GridManager.i.goMethods.SetGameObject(origin, targetGO);
+        GridManager.i.goMethods.SetGameObject(position, originGO);
+    }
+
     public bool MoveOneStep(Vector3Int position, Vector3Int origin) {
         var character = origin.gameobjectSpawn();
-        if(origin == GridManager.i.NullValue) {
+
+        if (origin == GridManager.i.NullValue) {
             Debug.LogError("MoveOneStep returned, origin not found");
             return false;
         }
@@ -56,7 +69,7 @@ public class PathingManager : MonoBehaviour
                 return false;
             }
             var nextStep = path[1].FloorToInt();
-            if(GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(nextStep) == null) {
+            if (GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(nextStep) == null) {
                 StartCoroutine(GridManager.i.graphics.LerpPosition(origin, nextStep, walkSpeed, GridManager.i.goTilemap));
                 GridManager.i.goMethods.RemoveGameObject(origin);
                 GridManager.i.goMethods.SetGameObject(nextStep, character);
@@ -74,14 +87,59 @@ public class PathingManager : MonoBehaviour
         return false;
     }
 
-    public void Jump(Vector3Int position, Vector3Int origin) {
+    public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin) {
+        var character = origin.gameobjectSpawn();
+
+        if (origin == GridManager.i.NullValue) {
+            Debug.LogError("MoveOneStep returned, origin not found");
+            return false;
+        }
+        var path = algorithm.AStarSearch(origin, position, true);
+        if (path != null) {
+            if (path.Length > maxPathLength) {
+                return false;
+            }
+            var nextStep = path[1].FloorToInt();
+            var target = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(nextStep);
+            if (target == null) {
+                StartCoroutine(GridManager.i.graphics.LerpPosition(origin, nextStep, walkSpeed, GridManager.i.goTilemap));
+                GridManager.i.goMethods.RemoveGameObject(origin);
+                GridManager.i.goMethods.SetGameObject(nextStep, character);
+
+                if (nextStep.x > origin.x) {
+                    FlipCharacter(character, false);
+                }
+                else {
+                    FlipCharacter(character, true);
+                }
+
+                return true;
+            }
+            else {
+                if (target.GetComponent<Stats>().faction == character.GetComponent<Stats>().faction) {
+                    SwapPlaces(nextStep, origin);
+                    if (nextStep.x > origin.x) {
+                        FlipCharacter(character, false);
+                    }
+                    else {
+                        FlipCharacter(character, true);
+                    }
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void Jump(Vector3Int position, Vector3Int origin,float speed) {
         if (position.gameobjectSpawn() == null) {
 
             var character = origin.gameobjectSpawn();
             if(character == null) {
                 return;
             }
-            StartCoroutine(GridManager.i.graphics.LerpPosition(origin, position, walkSpeed, GridManager.i.goTilemap));
+            if (character.GetComponent<Stats>().faction == PartyManager.Faction.Wall) { return; }
+            StartCoroutine(GridManager.i.graphics.LerpPosition(origin, position, speed, GridManager.i.goTilemap));
             GridManager.i.goMethods.RemoveGameObject(origin);
             GridManager.i.goMethods.SetGameObject(position, character);
 

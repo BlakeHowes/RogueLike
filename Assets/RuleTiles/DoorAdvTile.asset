@@ -63,4 +63,5 @@ MonoBehaviour:
   tilesToConnect:
   - {fileID: 11400000, guid: e7955666926ee4f4284766807aa425c1, type: 2}
   - {fileID: 11400000}
+  - {fileID: 11400000, guid: 4d1051da059cda444bf0a1c25162e416, type: 2}
   checkSelf: 1

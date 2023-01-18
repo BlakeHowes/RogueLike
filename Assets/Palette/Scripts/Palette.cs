@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu(fileName = "Palette", menuName = "Palette")]
+[CreateAssetMenu(fileName = "Palette", menuName = "ScriptablePrefabs/Palette")]
 public class Palette : ScriptableObject {
     [Header("Mechanisms")]
     public ItemAbstract entrance;

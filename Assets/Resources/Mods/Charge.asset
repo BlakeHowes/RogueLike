@@ -16,6 +16,7 @@ MonoBehaviour:
   tile: {fileID: 0}
   particles: {fileID: 0}
   destroyOnUse: 0
-  ranged: 0
   Modifiers: []
   stack: 1
+  range: 7
+  speed: 0.025

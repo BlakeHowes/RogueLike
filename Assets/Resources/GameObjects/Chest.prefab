@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: dc7d2f87f2981c044834c59d01b75e3d, type: 2}
+  baseSprite: {fileID: 0}
+  baseHair: {fileID: 0}
   faction: 2
   state: 0
   deathAction: []
@@ -78,6 +80,7 @@ MonoBehaviour:
   items: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
+  helmet: {fileID: 0}
   armour: {fileID: 0}
   trinkets: []
   MaxInventory: 10
@@ -149,15 +152,15 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
     rarity: 1
     pool: 0
-  - item: {fileID: 11400000, guid: 4dfca35ccf9f85d44a9d0296dc810a0e, type: 2}
+  - item: {fileID: 11400000, guid: cb0aef9629ba1a24081caf9d28d7e954, type: 2}
     rarity: 1
     pool: 1
-  - item: {fileID: 11400000, guid: 44376a0c9103e1b4db078014b6d99ecb, type: 2}
+  - item: {fileID: 11400000, guid: 0a71322c622037143ba0c54b08bac782, type: 2}
     rarity: 1
     pool: 2
   - item: {fileID: 11400000, guid: 499aa4b250acc844f82e876cbe46767e, type: 2}
     rarity: 1
     pool: 3
-  - item: {fileID: 11400000, guid: afd35999249376540b738fecb8ff078c, type: 2}
+  - item: {fileID: 11400000, guid: 693577d97e642d045bb2f1d42677fa24, type: 2}
     rarity: 1
     pool: 4

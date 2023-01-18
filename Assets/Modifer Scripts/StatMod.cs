@@ -6,9 +6,14 @@ public class StatMod : ItemAbstract {
     public int attackBonus;
     public int attackMultiple;
     public int armour;
+    public ModType modType;
+    public enum ModType {
+        weapon,
+        equipment
+    }
     public override bool Call(Vector3Int position, Vector3Int origin) {
 
-        if(type == Type.WeaponModifier) {
+        if(modType == ModType.weapon) {
             ItemAbstract item = PartyManager.i.currentCharacter.GetComponent<Inventory>().mainHand;
             Weapon weapon = null;
             if (item is Weapon) {
@@ -20,7 +25,7 @@ public class StatMod : ItemAbstract {
             weapon.attackBonus += attackBonus;
             weapon.attackMultiple += attackMultiple;
         }
-        if(type == Type.EquipmentModifier) {
+        if(modType == ModType.equipment) {
             PartyManager.i.currentCharacter.GetComponent<Stats>().bonusArmour += armour;
         }
 
@@ -28,7 +33,7 @@ public class StatMod : ItemAbstract {
     }
 
     public void OnEnable() {
-        type = Type.WeaponModifier;
+        modType = ModType.weapon;
     }
     public override string Description() {
         throw new System.NotImplementedException();

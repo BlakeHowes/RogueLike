@@ -22,6 +22,5 @@ public class EffectManager : MonoBehaviour
         }
         var clone = Instantiate(partPrefab);
         clone.transform.position = position+ offset;
-        clone.GetComponent<PartEffect>().Play();
     }
 }

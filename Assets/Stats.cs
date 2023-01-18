@@ -1,3 +1,4 @@
+using Panda;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ using UnityEngine.UI;
 public class Stats : MonoBehaviour
 {
     public TileBase tile;
+    public Sprite baseSprite;
+    public Sprite baseHair;
     public PartyManager.Faction faction = PartyManager.Faction.Enemy;
     public AIAbstract.State state = AIAbstract.State.Idle;
     public List<ItemAbstract> deathAction;
@@ -23,6 +26,8 @@ public class Stats : MonoBehaviour
     public int bonusMaxHealth;
     public int bonusArmour;
 
+    public bool infiniteHealth = false;
+    public bool showHealthBar = true;
 
     public GameObject healthbar;
     private Slider healthbarSlider;
@@ -46,24 +51,23 @@ public class Stats : MonoBehaviour
     }
 
     public void AIAttack() {
-        if (ai == null) {
-            return;
-        }
-        if (state == AIAbstract.State.Attacking) {
-            ai.AttackLogic();
-        }
+        GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
     }
 
     public void AISense() {
-        if (ai == null) {
-            return;
-        }
-        ai.UpdateSensoryInformation(gameObject.position());
+        GetComponent<Behaviours>().UpdateInformation();
+
     }
     public void Damage(int amount,Vector3Int origin) {
-        if (ai != null) {
-            state = AIAbstract.State.Attacking;
+
+        if (infiniteHealth) { StartCoroutine(
+            PartyManager.i.TakeDamageAnimationWall(gameObject, origin));
+            SpawnHitNumber(amount.ToString(), Color.red, 1);
+            return; 
         }
+
+        if (ai != null) { state = AIAbstract.State.Attacking; }
+
         amount -= armour;
         health -= amount;
         //Create hit number
@@ -100,6 +104,7 @@ public class Stats : MonoBehaviour
     }
 
     public void UpdateHealthBar() {
+        if (!showHealthBar) { return; }
         if(health < maxHealth) {
             healthbar.SetActive(true);
             healthbarSlider.maxValue = maxHealth;
@@ -120,10 +125,14 @@ public class Stats : MonoBehaviour
         var inventory = GetComponent<Inventory>();
 
         if (inventory.mainHand != null) {
-            inventory.mainHand.Modifiers.Clear();
+            var weapon = inventory.mainHand as Weapon;
+            weapon.RefreshStats();
         }
         if (inventory.offHand != null) {
             inventory.offHand.Call(position, position);
+        }
+        if (inventory.helmet != null) {
+            inventory.helmet.Call(position, position);
         }
         if (inventory.armour != null) {
             inventory.armour.Call(position, position);
@@ -134,7 +143,6 @@ public class Stats : MonoBehaviour
         attack =baseAttack+ bonusAttack;
         maxHealth = baseMaxHealth + bonusMaxHealth;
         armour = baseArmour+bonusArmour;
-        actionPoints = baseActionPoints;
         if (health < maxHealth) { 
             UpdateHealthBar();
         }
@@ -145,6 +153,8 @@ public class Stats : MonoBehaviour
     }
 
     public void CreateHealthBar() {
+        if (!showHealthBar) { return; }
+
         healthbar = Instantiate(GameUIManager.i.healthBarPrefab,GameUIManager.i.canvasWorld);
         healthbar.transform.position = transform.position;
         healthbarSlider = healthbar.GetComponent<Slider>();

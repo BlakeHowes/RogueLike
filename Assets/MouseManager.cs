@@ -1,22 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.TextCore.Text;
 
 public class MouseManager : MonoBehaviour
 {
     public static MouseManager i;
     public ItemAbstract itemSelected;
     public bool disableMouse;
-    bool disableToggle = false;
-    private PartyManager.State state;
-    private GameObject highlightedGameObbject = null;
+    public bool disableToggle = false;
+    public PartyManager.State state;
+    public GameObject highlightedGameObbject = null;
     public void Awake() {
         i = this;
     }
     public void Update() {
+        var mousepos = MousePositionOnGrid();
+        if (!mousepos.inbounds()) {
+            GameUIManager.i.HideHighlight();
+            return;
+        }
         if (disableToggle == true && disableMouse == false) {
             GameUIManager.i.EnableUI();
             disableMouse = false;
@@ -26,28 +29,12 @@ public class MouseManager : MonoBehaviour
             disableToggle = true;
             return;
         }
-
-        var mousepos = MousePositionOnGrid();
-
-        if (mousepos.inbounds()) {
+        if (!GridManager.i.FogTile(mousepos)) {
             if (EventSystem.current.IsPointerOverGameObject()) {
                 GameUIManager.i.HideHighlight();
                 return;
             }
             GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
-            /*
-var character = mousepos.gameobjectSpawn();
-
-if (character != highlightedGameObbject) {
-    if (character != null) {
-        if(highlightedGameObbject != null)
-        highlightedGameObbject.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
-
-        character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial;
-        highlightedGameObbject = character;
-    }
-}
-*/
         }
         else {
             GameUIManager.i.HideHighlight();
@@ -55,10 +42,6 @@ if (character != highlightedGameObbject) {
 
         if (Input.GetKey(KeyCode.Y)) {
             GameUIManager.i.ShowSight(MousePositionOnGrid());
-        }
-
-        if (Input.GetKey(KeyCode.R)) {
-            GridManager.i.tools.FloodFill(PartyManager.i.currentCharacter.position(), GridManager.i.goTilemap, GridManager.i.fogTilemap);
         }
 
         if (Input.GetKeyDown(KeyCode.U)) {
@@ -76,24 +59,21 @@ if (character != highlightedGameObbject) {
 
         //TEST INPUT
         if (Input.GetMouseButtonDown(0)) {
-
-
             var gameobjectundermouse = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(mousepos);
             var currentCharacter = PartyManager.i.currentCharacter;
             var characterPosition = currentCharacter.position();
 
             
-            if (!mousepos.inbounds()) {
-                return;
-            }
-
             if (EventSystem.current.IsPointerOverGameObject()) {
                 return;
             }
+
+
             //Use Item
             if (itemSelected != null) {
                 Actions.i.UseItemFromInventory(mousepos, characterPosition, itemSelected);
                 EndOfAction();
+                itemSelected = null;
                 return;
             }
             else {
@@ -101,11 +81,14 @@ if (character != highlightedGameObbject) {
                 if(gameobjectundermouse != null) {
                     if(gameobjectundermouse.GetComponent<Stats>().faction != PartyManager.Faction.Party) {
                         if (gameobjectundermouse.GetComponent<Stats>().faction != PartyManager.Faction.Openable) {
-                            used = Actions.i.UseItemMainHand(mousepos, characterPosition);
-                            if (used) {
-                                EndOfAction();
-                                return;
+                            if (GridManager.i.goMethods.IsInSight(characterPosition, mousepos)) {
+                                used = Actions.i.UseItemMainHand(mousepos, characterPosition);
+                                if (used) {
+                                    EndOfAction();
+                                    return;
+                                }
                             }
+
                         }
 
                         if (gameobjectundermouse != null) {
@@ -123,18 +106,13 @@ if (character != highlightedGameObbject) {
                 if(gameobjectundermouse == currentCharacter&&mousepos.item() == null) {
                     currentCharacter.GetComponent<Stats>().SpawnHitNumber("Wait", Color.blue, 1);
                     Actions.i.Wait();
-
                     EndOfAction();
                     return;
                 }
 
                 //Walk
                 PartyManager.i.characterFollowPosition = currentCharacter.position();
-                Actions.i.Walk(mousepos, characterPosition);
-                if (PartyManager.i.state == PartyManager.State.Exploring) {
-                    //THIS NEEDS TO BE CHANGED TO COMBAT OVER
-                    PartyManager.i.Follow();
-                }
+                Actions.i.WalkLeader(mousepos, characterPosition);
                 //Pick Up Item
                 var newpos = PartyManager.i.currentCharacter.position();
                 var item = newpos.item();
@@ -147,16 +125,18 @@ if (character != highlightedGameObbject) {
     }
 
     public void EndOfAction() {
-        state = PartyManager.i.state;
-        GridManager.i.UpdateGame();
-
         PartyManager.i.EnemyPartyState();
         if (PartyManager.i.state == PartyManager.State.Exploring) {
             if (state == PartyManager.State.Combat) {
                 PartyManager.i.partyMemberTurnTaken.Clear();
                 PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
             }
+            else {
+                PartyManager.i.Follow();
+            }
         }
+        state = PartyManager.i.state;
+        GridManager.i.UpdateGame();
     }
 
     public Vector3Int MousePositionOnGrid() {
