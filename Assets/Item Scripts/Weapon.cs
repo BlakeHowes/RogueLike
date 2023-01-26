@@ -1,88 +1,112 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.Image;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
+using static UnityEngine.GraphicsBuffer;
+
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
 public class Weapon : ItemAbstract
 {
-    public int attackBase=5;
-    public int attackRandomAddition;
-    public int accuracy=8;
-    public int AOE =0;
-    //To be implimented
     public GameObject linePrefab;
-    [NonSerialized] public int attackBonus;
-    [NonSerialized] public int attackMultiple = 1;
-    [NonSerialized] public int rangeBonus;
-    public List<ItemAbstract> PermWeaponMods;
 
-    public void RefreshStats() {
-        Modifiers.Clear();
-        attackBonus = 0;
-        rangeBonus = 0;
-        attackMultiple = 1;
+    [Header("Base Stats")]
+    public int actionPointCost;
+    public int damageBase = 5;
+    public int damageMaxBase;
+    public int accuracyBase = 8;
+    public int rangeBase = 1;
+    public int damageMultipleBase = 1;
+
+    [Header("Temporary Stats")]
+    public int rangeTemp;
+    public int accuracyTemp;
+    public int damageTemp;
+    public int damageMaxTemp;
+    public int damageMultipleTemp;
+    public int damage;
+    public void ResetTempStats() {
+        rangeTemp = rangeBase;
+        accuracyTemp = accuracyBase;
+        damageTemp = damageBase;
+        damageMaxTemp = damageMaxBase;
+        damageMultipleTemp = damageMultipleBase;
     }
-    public override bool Call(Vector3Int position, Vector3Int origin) {
-        InventoryManager.i.ApplyModifiers(PermWeaponMods, position, origin);
-        InventoryManager.i.ApplyModifiers(Modifiers, position, origin);
-        if (linePrefab != null) { EffectManager.i.LineEffect(position, origin,linePrefab) ; }
 
+    public void SetDamage(Vector3Int position) {
+        var stats = position.gameobjectGO().GetComponent<Stats>();
+
+        //Chance of hitting a zero on characters
+        if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
+            var accuracyRoll = Random.Range(0.0f, 10.0f);
+            if (accuracyTemp < accuracyRoll) {
+                damage = 0;
+            }
+        }
+        damage = Random.Range(damageTemp, damageTemp + damageMaxBase);
+        damage *= damageMultipleTemp;
+    }
+
+    public override bool Condition(Vector3Int position, Vector3Int origin) {
+        if (GridManager.i.tools.InRange(position, origin, rangeTemp)) { return true; }
+        return false;
+    }
+
+    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         var target = position.gameobjectSpawn();
-        int damage = CalculateDamage();
+        var originCharacter = origin.gameobjectSpawn();
 
-        Stats stats;
-        if (AOE > 0) {
-            var aoeCells = GridManager.i.tools.Circle(AOE, position);
-            foreach(var cell in aoeCells) {
-                target =GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(cell);
-                EffectManager.i.PartEffect(cell, origin, particles);
-                if (target == null) {
-                    continue;
-                }
-                stats = target.GetComponent<Stats>();
-
-                if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
-                    var accuracyRoll = Random.Range(0.0f, 10.0f);
-                    if (accuracy < accuracyRoll) {
-                        damage = 0;
-                    }
-                }
-                EffectManager.i.PartEffect(cell, origin,particles);
-                stats.Damage(damage,origin);
+        if (signal == Signal.ActionPointSum) {
+            if (!ConditionsMet) { return; }
+            if (MouseManager.i.itemSelected == null)
+                originCharacter.GetComponent<Stats>().actionPointsSum += actionPointCost;
+            foreach (ItemAbstract mod in Modifiers) {
+                mod.Call(position, origin, Signal.CalculateStats);
             }
-            return true;
+            return;
         }
-        if (target != null) {
-            stats = target.GetComponent<Stats>();
 
-            if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
-                var accuracyRoll = Random.Range(0.0f, 10.0f);
-                if (accuracy < accuracyRoll) {
-                    damage = 0;
-                }
+        if (signal == Signal.CalculateStats) {
+            ResetTempStats();           
+            foreach (ItemAbstract mod in Modifiers) {
+                mod.Call(position, origin, Signal.CalculateStats);
             }
-            EffectManager.i.PartEffect(position, origin, particles);
-            stats.Damage(damage, origin);
-           
+            return;
         }
-        return true;
-    }
 
-    public int CalculateDamage() {
-        var damage = Random.Range(attackBase, attackBase + attackRandomAddition);
-        damage += attackBonus;
-        damage *= attackMultiple;
-        return damage;
+        if(signal == Signal.WeaponDamageCalculate) {
+            SetDamage(position);
+        }
+
+        foreach (ItemAbstract mod in Modifiers) {
+            mod.Call(position, origin, signal);
+        }
+        
+        if (signal != Signal.Attack) { return; }
+        if (ConditionsMet == false) { return; }
+        if (target == null) { return; }
+
+        
+
+
+
+        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
+
+
+        //Remove health from target
+        target.GetComponent<Stats>().TakeDamage(damage, origin);
+
+        EffectManager.i.LineEffect(position, origin, linePrefab);
+        EffectManager.i.PartEffect(position, origin, particles);
     }
 
     public override string Description() {
-        var characterAttack = PartyManager.i.currentCharacter.GetComponent<Stats>().GetAttack();
-        string description = "This " + name + " does "+(attackBase+attackBonus+ characterAttack) +"-"+(attackRandomAddition+attackBonus+attackBase+ characterAttack) +" damage";
-        description += " with an accuracy of " + accuracy;
-        if(AOE > 0) {
-            description += " in a " + AOE + " sized area";
-        }
+        var currentCharacter = PartyManager.i.currentCharacter;
+        var position = currentCharacter.position();
+        string description = "This " + name + " does "+ damageTemp +"-"+ (damageTemp+damageMaxTemp) +" damage";
+        description += " with an accuracy of " + accuracyTemp;
         return description;
     }
 

@@ -14,14 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   tile: {fileID: 11400000, guid: ecd8ca0c5f6dfab4f8df11ef120ae9d4, type: 2}
+  actionPointCost: 1
   particles: {fileID: 8288408381700605430, guid: b4449ad1c19fde34d9fd314218fc3c46, type: 3}
-  destroyOnUse: 0
   Modifiers: []
-  stack: 1
-  range: 9
-  attackBase: 1
-  attackRandomAddition: 4
-  accuracy: 8
-  AOE: 1
   linePrefab: {fileID: 1536987088575334153, guid: 0d32699a6ae2be243a2a437c7bc3d577, type: 3}
-  PermWeaponMods: []
+  damageBase: 5
+  damageMaxBase: 0
+  accuracyBase: 8
+  rangeBase: 5
+  damageMultipleBase: 1

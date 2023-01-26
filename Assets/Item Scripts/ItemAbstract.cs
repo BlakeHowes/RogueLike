@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,21 +10,25 @@ public abstract class ItemAbstract : ScriptableObject
     public Type type;
     public Tile tile;
     public GameObject particles;
-    public bool destroyOnUse;
     public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
-    [Header("Stats")]
-    public int stack = 1;
-    public int range;
-    public abstract bool Call(Vector3Int position,Vector3Int origin);
+    [NonSerialized]public bool ConditionsMet;
+    public Texture2D PreviewIcon;
+    public abstract void Call(Vector3Int position,Vector3Int origin,Signal signal);
+
+    public void CheckConditions(Vector3Int position, Vector3Int origin) {
+        ConditionsMet = false;
+        foreach (ItemAbstract item in Modifiers) {
+            item.CheckConditions(position, origin);
+        }
+        if (Condition(position, origin)) {
+            MouseManager.i.itemCanBeUsed = true;
+            ConditionsMet = true;
+        }
+    }
+
+    public abstract bool Condition(Vector3Int position, Vector3Int origin);
     public abstract string Description();
 
-    public void DestoryItem() {
-        var inventory =PartyManager.i.currentCharacter.GetComponent<Inventory>().items;
-        if (inventory.Contains(this)) {
-            inventory.Remove(this);
-        }
-        this.position();
-    }
     public enum Type {
         Consumable,
         Weapon,
@@ -32,5 +37,17 @@ public abstract class ItemAbstract : ScriptableObject
         Helmet,
         Trinket,
         Skill
+    }
+    public enum Signal {
+        CalculateStats,
+        ActionPointSum,
+        WeaponDamageCalculate,
+        SelectItem,
+        Attack,
+        CreateSkill,
+        Pickup,
+        Heal,
+        TakeDamage,
+        Death
     }
 }

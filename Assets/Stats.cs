@@ -1,53 +1,80 @@
 using Panda;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using static ItemAbstract;
 
-public class Stats : MonoBehaviour
-{
+public class Stats : MonoBehaviour {
     public TileBase tile;
     public Sprite baseSprite;
     public Sprite baseHair;
+    public Sprite baseFace;
     public PartyManager.Faction faction = PartyManager.Faction.Enemy;
     public AIAbstract.State state = AIAbstract.State.Idle;
     public List<ItemAbstract> deathAction;
-    public int baseMaxHealth;
-    public int baseAttack;
-    public int baseArmour;
-    public int baseActionPoints;
-    public int maxHealth;
-    public int health;
-    private int attack;
-    private int armour;
-    public int actionPoints;
-    public int bonusAttack;
-    public int bonusMaxHealth;
-    public int bonusArmour;
 
+    [Header("Base Stats")]
+    public int maxHealthBase;
+    public int armourBase;
+    public int actionPointsBase;
+    public int throwingRangeBase;
+    public int fistDamageBase;
+    public int walkCostBase;
+
+    [Header("Temporary Stats")]
+    [NonSerialized] public int maxHealthTemp;
+    [NonSerialized] public int armourTemp;
+    [NonSerialized] public int throwingRangeTemp;
+    [NonSerialized] public int fistDamageTemp;
+    [NonSerialized] public int walkCostTemp;
+
+    [Header("Dynamic Stats")]
+    public int health;
+    public int actionPoints;
+    public int actionPointsSum;
+
+    [Header("Options")]
     public bool infiniteHealth = false;
     public bool showHealthBar = true;
 
+    [Header("Resources")]
     public GameObject healthbar;
     private Slider healthbarSlider;
     public AIAbstract ai;
     public void OnEnable() {
-        if(maxHealth == 0) {
-            maxHealth = baseMaxHealth;
-            health = maxHealth;
+        if(faction == PartyManager.Faction.Party) {
+            DontDestroyOnLoad(this);
         }
-        actionPoints = baseActionPoints;
+        if (faction != PartyManager.Faction.Wall && faction != PartyManager.Faction.Breakable) {
+            var inventory = GetComponent<Inventory>();
+            InventoryManager.i.UpdateEquipmentSprites(inventory);
+            InventoryManager.i.CreateCharacterSprite(gameObject);
+        }
+        if (maxHealthTemp == 0) {
+            maxHealthTemp = maxHealthBase;
+            health = maxHealthTemp;
+        }
+        if (!GridManager.i) return;
+        
+        ResetActionPoints();
         CreateHealthBar();
-        if(ai != null) {
+        ResetTempStats();
+        if (ai != null) {
             var aiPrefab = ai;
             ai = Instantiate(aiPrefab);
         }
     }
 
-    public int GetAttack() {
-        RecalculateStats();
-        return attack;
+    public void ResetTempStats() {
+        actionPointsSum = 0;
+        maxHealthTemp = maxHealthBase;
+        armourTemp = armourBase;
+        throwingRangeTemp = throwingRangeBase;
+        fistDamageTemp = fistDamageBase;
+        walkCostTemp = walkCostBase;
     }
 
     public void AIAttack() {
@@ -58,32 +85,41 @@ public class Stats : MonoBehaviour
         GetComponent<Behaviours>().UpdateInformation();
 
     }
-    public void Damage(int amount,Vector3Int origin) {
+    public void TakeDamage(int damage,Vector3Int origin) {
+        var position = gameObject.position();
+        var inventory = GetComponent<Inventory>();
+
+        inventory.CallEquipment(position, position, Signal.CalculateStats);
+        Debug.Log("character "+gameObject.name+" armour temp "+armourTemp);
+        inventory.CallEquipment(position, position, Signal.TakeDamage);
 
         if (infiniteHealth) { StartCoroutine(
-            PartyManager.i.TakeDamageAnimationWall(gameObject, origin));
-            SpawnHitNumber(amount.ToString(), Color.red, 1);
+            PartyManager.i.TakeDamageAnimation(gameObject, origin));
+            SpawnHitNumber(damage.ToString(), Color.red, 1);
             return; 
         }
 
         if (ai != null) { state = AIAbstract.State.Attacking; }
-
-        amount -= armour;
-        health -= amount;
+        Debug.Log(armourTemp);
+       
+        if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); StartCoroutine(PartyManager.i.TakeDamageAnimation(gameObject, origin)); return;}
+        damage -= armourTemp;
+        if (damage < 1) { damage = 1; }
+        health -= damage;
         //Create hit number
-        if (faction != PartyManager.Faction.Openable) {
-            if (amount == 0) { SpawnHitNumber("Dodge", Color.yellow, 1); }
-            SpawnHitNumber(amount.ToString(),Color.red,1);
+        if (faction != PartyManager.Faction.Breakable) {
+            if (damage == 0) { SpawnHitNumber("Dodge", Color.yellow, 1); }
+            SpawnHitNumber(damage.ToString(),Color.red,1);
         }
         UpdateHealthBar();
         StartCoroutine(PartyManager.i.TakeDamageAnimation(gameObject, origin));
-        if (health <= 0) {
-            var position = gameObject.position();
-            foreach(ItemAbstract item in deathAction) {
-                item.Call(position, position);
-            }
-            Actions.i.Die(gameObject.position());
+
+        if (health > 0) { return; }
+        inventory.CallEquipment(position, position, Signal.Death);
+        foreach (var item in deathAction) {
+            item.Call(position, position, Signal.Death);
         }
+        Actions.i.Die(gameObject.position());
     }
 
     public void SpawnHitNumber(string value,Color colour,float scale) {
@@ -94,10 +130,15 @@ public class Stats : MonoBehaviour
     }
 
     public void Heal(int amount) {
+        var position = gameObject.position();
+        var inventory = GetComponent<Inventory>();
+
+        inventory.CallEquipment(position, position, Signal.Heal);
+
         var healthTemp = health;
         health += amount;
-        if (health >= maxHealth) {
-            health = maxHealth;
+        if (health >= maxHealthTemp) {
+            health = maxHealthTemp;
         }
         SpawnHitNumber((health - healthTemp).ToString(), Color.green,1);
         UpdateHealthBar();
@@ -105,9 +146,9 @@ public class Stats : MonoBehaviour
 
     public void UpdateHealthBar() {
         if (!showHealthBar) { return; }
-        if(health < maxHealth) {
+        if(health < maxHealthTemp) {
             healthbar.SetActive(true);
-            healthbarSlider.maxValue = maxHealth;
+            healthbarSlider.maxValue = maxHealthTemp;
             healthbarSlider.value = health;
             healthbar.transform.position = transform.position;
         }
@@ -116,34 +157,15 @@ public class Stats : MonoBehaviour
         }
     }
 
-    public void RecalculateStats() {
-        bonusAttack = 0;
-        bonusMaxHealth = 0;
-        bonusArmour = 0;
-        GameUIManager.i.ClearSkills();
-        var position = gameObject.position();
-        var inventory = GetComponent<Inventory>();
+    public void ResetActionPoints() {
+        actionPoints = actionPointsBase;
+    }
 
-        if (inventory.mainHand != null) {
-            var weapon = inventory.mainHand as Weapon;
-            weapon.RefreshStats();
-        }
-        if (inventory.offHand != null) {
-            inventory.offHand.Call(position, position);
-        }
-        if (inventory.helmet != null) {
-            inventory.helmet.Call(position, position);
-        }
-        if (inventory.armour != null) {
-            inventory.armour.Call(position, position);
-        }
-        foreach (var item in inventory.trinkets) {
-            item.Call(position, position);
-        }
-        attack =baseAttack+ bonusAttack;
-        maxHealth = baseMaxHealth + bonusMaxHealth;
-        armour = baseArmour+bonusArmour;
-        if (health < maxHealth) { 
+    public void RecalculateStats() {
+        ResetTempStats();
+        var position = gameObject.position();
+        GetComponent<Inventory>().CallEquipment(position,position, Signal.CalculateStats);
+        if (health < maxHealthTemp) { 
             UpdateHealthBar();
         }
     }

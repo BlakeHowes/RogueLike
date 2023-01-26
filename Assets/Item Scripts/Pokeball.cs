@@ -6,7 +6,12 @@ using UnityEngine;
 public class Pokeball : ItemAbstract
 {
     [NonSerialized] GameObject caughtCharacter;
-    public override bool Call(Vector3Int position, Vector3Int origin) {
+
+    public override bool Condition(Vector3Int position, Vector3Int origin) {
+        return true;
+    }
+    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+        if (signal != Signal.Attack) { return; }
         var character = position.gameobjectSpawn();
         var originCharacter = origin.gameobjectSpawn();
 
@@ -17,20 +22,17 @@ public class Pokeball : ItemAbstract
             PartyManager.i.AddPartyMember(position.gameobjectSpawn());
             caughtCharacter = null;
             Debug.Log("character is here");
-            return true;
+            return;
         }
 
         if (character != null) {
             var stats = character.GetComponent<Stats>();
-            if (stats.faction != PartyManager.Faction.Party) {
-
-                if (stats.health < stats.maxHealth / 3||stats.health <3) {
-                    stats.faction = PartyManager.Faction.Party;
-                    PartyManager.i.AddPartyMember(position.gameobjectSpawn());
-                }
+            if (stats.faction != PartyManager.Faction.Party && stats.faction != PartyManager.Faction.Wall) {
+                stats.faction = PartyManager.Faction.Party;
+                PartyManager.i.AddPartyMember(position.gameobjectSpawn());
             }
         }
-        return true;
+        return;
     }
 
     public override string Description() {

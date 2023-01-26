@@ -47,19 +47,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 2359fc7b2ff2b0a499a78b491657aea4, type: 2}
+  baseSprite: {fileID: 0}
+  baseHair: {fileID: 0}
   faction: 2
   state: 0
-  deathAction: []
-  baseMaxHealth: 0
-  baseAttack: 0
-  baseArmour: 0
-  baseActionPoints: 3
-  maxHealth: 0
+  deathAction:
+  - {fileID: 11400000, guid: 62f84d7b5400df441974c00adf260c81, type: 2}
+  maxHealthBase: 0
+  armourBase: 0
+  actionPointsBase: 0
+  throwingRangeBase: 0
+  fistDamageBase: 0
+  walkCostBase: 0
   health: 0
   actionPoints: 0
-  bonusAttack: 0
-  bonusMaxHealth: 0
-  bonusArmour: 0
+  actionPointsSum: 0
+  infiniteHealth: 0
+  showHealthBar: 1
   healthbar: {fileID: 0}
   ai: {fileID: 0}
 --- !u!114 &3381531369335737433
@@ -77,8 +81,10 @@ MonoBehaviour:
   items: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
+  helmet: {fileID: 0}
   armour: {fileID: 0}
   trinkets: []
+  skills: []
   MaxInventory: 10
 --- !u!212 &7784706712300013749
 SpriteRenderer:

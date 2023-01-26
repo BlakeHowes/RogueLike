@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 169ef098a03625545965ca0e9d7f3394, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e634058a3d61fc44a208eaf323957f0, type: 3}
   m_Name: ClearFog
   m_EditorClassIdentifier: 
   type: 0
   tile: {fileID: 0}
   particles: {fileID: 0}
-  destroyOnUse: 0
-  ranged: 0
   Modifiers: []
-  stack: 1

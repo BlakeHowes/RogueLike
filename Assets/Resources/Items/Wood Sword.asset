@@ -15,15 +15,19 @@ MonoBehaviour:
   type: 1
   tile: {fileID: 11400000, guid: 18b969edb2c9df448bbb1d37fa8b438d, type: 2}
   particles: {fileID: 0}
-  destroyOnUse: 0
-  ranged: 1
   Modifiers:
-  - {fileID: 11400000, guid: 5242faba32ab8294a9363c08069b1c9c, type: 2}
-  stack: 1
-  attackBase: 3
-  attackRandomAddition: 3
-  accuracy: 8
-  AOE: 0
-  baseRanged: 0
-  range: 1
+  - {fileID: 11400000, guid: 65595c12956f63c41b95a2a12e14507a, type: 2}
+  PreviewIcon: {fileID: 0}
   linePrefab: {fileID: 0}
+  actionPointCost: 1
+  damageBase: 5
+  damageMaxBase: 10
+  accuracyBase: 8
+  rangeBase: 1
+  damageMultipleBase: 1
+  rangeTemp: 1
+  accuracyTemp: 8
+  damageTemp: 4
+  damageMaxTemp: 0
+  damageMultipleTemp: 1
+  damage: 7

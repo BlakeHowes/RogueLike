@@ -41,6 +41,7 @@ public class itemMethods {
     }
 
     public void DropItem(ItemAbstract item, Vector3Int position) {
+        if (item == null) { return; }
         var clone =GridManager.i.InstantiateItem(item);
         if (IsThisCellEmpty(position)) {  
             SetItem(clone, position);
@@ -48,21 +49,24 @@ public class itemMethods {
         }
         var pos = SearchForFreeCell(position);
         SetItem(clone, pos);
+        Actions.i.TileLerpPosition(pos, position, pos,0.1f, itemTilemap, null);
     }
 
-    public void SpawnThrownItem(ItemAbstract item, Vector3Int position) {
+    public Vector3Int SpawnThrownItem(ItemAbstract item, Vector3Int position) {
         var clone = GridManager.i.InstantiateItem(item);
         if (IsThisCellEmpty(position)) {
             SetItem(clone, position);
-            return;
+            return position;
         }
         var characterpos = PartyManager.i.currentCharacter.position();
         var line = GridManager.i.tools.BresenhamLine(position.x,position.y, characterpos.x, characterpos.y);
         if (IsThisCellEmpty(line[0])) {
             SetItem(clone, line[0]);
-            return;
+            itemTilemap.SetTile(line[0], item.tile);
+            return line[0];
         }
         SetItem(clone, SearchForFreeCell(line[0]));
+        return GridManager.i.NullValue;
     }
 
     public ItemAbstract RemoveItem(Vector3Int position) {

@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class GridGraphics
+public class GridGraphics 
 {
     int width;
     int height;
@@ -83,5 +83,22 @@ public class GridGraphics
             gameobject.transform.position = targetPosition + offset;
             healthbar.transform.position = gameobject.transform.position;
         }
+    }
+
+    public IEnumerator TileLerp(Vector3Int targetTile,Vector3Int startlocation, Vector3Int endlocation, float lerpduration,Tilemap tilemap,GameObject particleEffect) {
+        Vector3 start = startlocation - targetTile;
+        Debug.Log("TESING IF THIS WORKS");
+        Vector3 end = endlocation - targetTile;
+        Vector3 lerpPos = start;
+        float TimeElapsed = 0;
+        while (TimeElapsed < lerpduration) {
+            lerpPos.x = Mathf.Lerp(start.x, end.x, TimeElapsed / lerpduration);
+            lerpPos.y = Mathf.Lerp(start.y, end.y, TimeElapsed / lerpduration);
+            Matrix4x4 translatematrix = Matrix4x4.Translate(lerpPos);
+            tilemap.SetTransformMatrix(targetTile, translatematrix);
+            TimeElapsed += Time.deltaTime;
+            yield return null;
+        }
+        if (particleEffect != null) { EffectManager.i.PartEffect(endlocation, startlocation, particleEffect); }
     }
 }

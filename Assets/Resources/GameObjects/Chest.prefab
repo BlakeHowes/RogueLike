@@ -53,16 +53,17 @@ MonoBehaviour:
   faction: 2
   state: 0
   deathAction: []
-  baseMaxHealth: 0
-  baseAttack: 0
-  baseArmour: 0
-  baseActionPoints: 3
-  maxHealth: 0
+  maxHealthBase: 0
+  armourBase: 0
+  actionPointsBase: 0
+  throwingRangeBase: 0
+  fistDamageBase: 0
+  walkCostBase: 0
   health: 0
   actionPoints: 0
-  bonusAttack: 0
-  bonusMaxHealth: 0
-  bonusArmour: 0
+  actionPointsSum: 0
+  infiniteHealth: 0
+  showHealthBar: 1
   healthbar: {fileID: 0}
   ai: {fileID: 0}
 --- !u!114 &2354247380013042047
@@ -77,7 +78,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
@@ -158,9 +163,6 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 0a71322c622037143ba0c54b08bac782, type: 2}
     rarity: 1
     pool: 2
-  - item: {fileID: 11400000, guid: 499aa4b250acc844f82e876cbe46767e, type: 2}
-    rarity: 1
-    pool: 3
   - item: {fileID: 11400000, guid: 693577d97e642d045bb2f1d42677fa24, type: 2}
     rarity: 1
     pool: 4

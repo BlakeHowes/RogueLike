@@ -48,46 +48,4 @@ public class EnemyAI:AIAbstract
         stats.state = State.Attacking;
         return target;
     }
-
-    public override void AttackLogic() {
-        if(stats.state == State.Attacking) {
-            PartyManager.i.TakeEnemyTurn(Attack(), gameobject);
-        }
-    }
-
-    public IEnumerator Attack() {
-        Actions.i.actionPoints = gameobject.GetComponent<Stats>().actionPoints+1;
-        int testbreaker = 0;
-        while (Actions.i.actionPoints > 1) {
-            yield return new WaitForSeconds(0.2f);
-            if(target == null) {
-                UpdateSensoryInformation(gameobject.position());
-            }
-            if(target == null) {
-                break;
-            }
-            testbreaker++;
-            if(testbreaker >= 10) {
-                Debug.LogError("Attack is stuck");
-                break;
-            }
-
-            var weapon = gameobject.GetComponent<Inventory>().mainHand;
-            var inrange = Actions.i.InMeleeRange(gameobject.position(), target.position());
-            if (weapon == null) {
-                if (inrange) {
-                    Actions.i.Punch(target.position(), gameobject.position());
-                }
-                else {
-                    var Walked = Actions.i.Walk(target.position(), gameobject.position());
-                    if (Walked == false) {
-                        Actions.i.MoveUpEnemy(target.position(), gameobject.position());
-                    }
-                    continue;
-                }
-                continue;
-            }
-        }
-        yield return null;
-    }
 }

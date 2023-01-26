@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Panda;
+using UnityEngine.UIElements;
 
 public class Behaviours : MonoBehaviour
 {
     public AIAbstract Ai;
-
-    Vector3Int origin;
-    Vector3Int targetPosition;
-    GameObject target;
+    public Vector3Int origin;
+    public Vector3Int targetPosition;
+    public GameObject target;
     public void OnEnable() {
         if(GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
             PartyManager.i.AddEnemy(gameObject);
         }
+        //GetComponent<InventoryManager>().UpdateInventory();
     }
 
     public void UpdateInformation() {
@@ -21,16 +22,27 @@ public class Behaviours : MonoBehaviour
         target = Ai.UpdateSensoryInformation(origin);
         if (target != null) {
             targetPosition = target.position();
+            ChangeColour(Color.white);
         }
-        if (GridManager.i.fogTilemap.GetTile(origin) != null) {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.black;
-        }
-        else {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        }
-        if (GetComponent<Stats>().state == AIAbstract.State.Idle) {
+
+        if (target == null) {
+            targetPosition = target.position();
+            ChangeColour(Color.clear);
             GetComponent<PandaBehaviour>().Tick();
         }
+        if (GridManager.i.fogTilemap.GetTile(origin) == null) { ChangeColour(Color.white); }
+    }
+
+    public void ChangeColour(Color colour) {
+        gameObject.GetComponent<SpriteRenderer>().color = colour;
+        foreach (Transform child in transform) {
+            child.gameObject.GetComponent<SpriteRenderer>().color = colour;
+        }
+        var stats = gameObject.GetComponent<Stats>();
+        var healthBar = stats.healthbar;
+        if (healthBar && colour == Color.clear) { healthBar.SetActive(false); return; }
+        else { healthBar.SetActive(true); }
+        stats.UpdateHealthBar();
     }
 
     [Task]
@@ -46,18 +58,10 @@ public class Behaviours : MonoBehaviour
     }
 
     [Task]
-    bool ActionPointsAboveZero() {
-        if (Actions.i.actionPoints > 1) return true;
-        return false;
-    }
-    [Task]
     void checkEndTurn() {
-        if (Actions.i.actionPoints <= 1) {
-            
-            GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
-            PartyManager.i.EndEnemyTurn(gameObject);
-         }
-        ThisTask.Succeed();
+        if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
+        GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
+        PartyManager.i.EndEnemyTurn(gameObject);
     }
 
 
@@ -73,13 +77,7 @@ public class Behaviours : MonoBehaviour
 
     [Task]
     void HideInFog() {
-        Debug.Log("hide");
-        if (GridManager.i.fogTilemap.GetTile(origin) != null) {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.black;
-        }
-        else {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        }
+
         ThisTask.Succeed();
     }
 
@@ -91,19 +89,9 @@ public class Behaviours : MonoBehaviour
     }
     [Task]
     void Attack() {
-        if(GetComponent<Inventory>().mainHand == null) {
-            var punched =Actions.i.Punch(targetPosition, origin);
-            if (punched) {
-                ThisTask.Succeed();
-                return;
-            }
-            else {
-                ThisTask.Fail();
-                return;
-            }
-        }
-        var attacked = Actions.i.UseItemMainHand(targetPosition, origin);
-        if (attacked) {
+        gameObject.GetComponent<Stats>().ResetTempStats();
+        GetComponent<Inventory>().CallEquipment(origin, origin, ItemAbstract.Signal.CalculateStats);
+        if (MouseManager.i.Attack(targetPosition, origin, target, gameObject)){
             ThisTask.Succeed();
             return;
         }
@@ -131,20 +119,18 @@ public class Behaviours : MonoBehaviour
 
     [Task]
     void MoveToTarget() {
-        if (target != null) {
-            var walked =Actions.i.Walk(targetPosition, origin);
-            if (walked) {
-                ThisTask.Succeed();
-                return;
-            }
+        if (target == null) { ThisTask.Fail(); return; }
+        if(MouseManager.i.Walk(targetPosition, origin, gameObject.GetComponent<Stats>())) {
+            ThisTask.Succeed();
+            return;
         }
-        ThisTask.Fail();
-        return;
+        ThisTask.Fail(); return;
     }
 
     [Task]
-    void AdvanceToTarget() {
-        Actions.i.MoveUpEnemy(targetPosition,origin);
+    void AdvanceToTarget() {       
+        PathingManager.i.EnemyMoveup(targetPosition, origin);
+        gameObject.GetComponent<Stats>().actionPoints -= 1;
         ThisTask.Succeed();
     }
 

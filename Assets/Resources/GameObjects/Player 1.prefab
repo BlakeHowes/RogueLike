@@ -47,21 +47,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
-  baseSprite: {fileID: 0}
-  baseHair: {fileID: 0}
+  baseSprite: {fileID: 21300000, guid: dc069b3b37b2e214d9ee3b562bb3b32a, type: 3}
+  baseHair: {fileID: 21300000, guid: 9ce34ec7ea6ec9d45a2d77de486f43aa, type: 3}
+  baseFace: {fileID: 21300000, guid: 9d2725cf49d9a9a409587820aeb266dd, type: 3}
   faction: 0
   state: 0
   deathAction: []
-  baseMaxHealth: 100
-  baseAttack: 5
-  baseArmour: 0
-  baseActionPoints: 3
-  maxHealth: 100
+  maxHealthBase: 100
+  armourBase: 0
+  actionPointsBase: 4
+  throwingRangeBase: 1
+  fistDamageBase: 1
+  walkCostBase: 1
   health: 100
   actionPoints: 3
-  bonusAttack: 0
-  bonusMaxHealth: 0
-  bonusArmour: 0
+  actionPointsSum: 0
+  infiniteHealth: 0
+  showHealthBar: 1
   healthbar: {fileID: 0}
   ai: {fileID: 0}
 --- !u!114 &6780645703283991167
@@ -77,10 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+  skills: []
+  misc: []
   mainHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 0}
-  armour: {fileID: 0}
+  helmet: {fileID: 11400000, guid: 13b4bceec1561d94c95903ce2e18c39d, type: 2}
+  armour: {fileID: 11400000, guid: 8d1ee927282434d4e8820da7941d45d1, type: 2}
   trinkets: []
   MaxInventory: 9
 --- !u!212 &7361458235895569522
@@ -124,7 +128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 533792605, guid: 28de6a8cc0cd26d4a99fc34df72e8883, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bcca4d6893c4d1c49ab9015f7d073243, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

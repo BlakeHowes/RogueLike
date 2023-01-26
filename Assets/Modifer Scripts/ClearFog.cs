@@ -5,9 +5,12 @@ using UnityEngine;
 public class ClearFog : ItemAbstract
 {
 
-    public override bool Call(Vector3Int position, Vector3Int origin) {
-        //GridManager.i.tools.FloodFill(position, GridManager.i.goTilemap, GridManager.i.fogTilemap);
+    public override bool Condition(Vector3Int position, Vector3Int origin) {
         return true;
+    }
+    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+        GridManager.i.ClearFogDoor(position);
+        Debug.Log("clear");
     }
     public override string Description() {
         throw new System.NotImplementedException();

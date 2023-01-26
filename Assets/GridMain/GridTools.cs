@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class GridTools
 {
@@ -15,6 +17,20 @@ public class GridTools
     public Vector3Int Difference(Vector3Int position1,Vector3Int position2) {
         Vector3 difference = new Vector3(Mathf.Abs(position1.x - position2.x), Mathf.Abs(position1.y - position2.y), 0);
         return difference.FloorToInt();
+    }
+
+    public bool InRange(Vector3Int position,Vector3Int origin, int range) {
+        var cells = new List<Vector3Int>();
+        if (range == 1) { cells = MeeleeRange(origin); }
+        else { cells = Circle(range, origin); }
+        if (cells.Contains(position)) { return true; }
+        return false;
+    }
+
+    public bool InMeeleeRange(Vector3Int position, Vector3Int origin) {
+        var cells = MeeleeRange(origin);
+        if (cells.Contains(position)) { return true; }
+        return false;
     }
 
     public List<Vector3Int> Circle(int radius,Vector3Int position) {
@@ -119,7 +135,6 @@ public class GridTools
         while(cellstocheck.TryDequeue(out checkpos)) {
             breaker++;
             if(breaker > fillTotal) {
-                Debug.Log("Flood fill break");
                 break;
             }
 
@@ -137,7 +152,7 @@ public class GridTools
                     }
                     checkedCells.Add(pos);
                     //goTilemap.SetColor(pos, Color.white);
-                    if (goTilemap.GetTile(pos)) {
+                    if (pos.gameobjectGO()) {
                         WallsToClear.Add(pos);
                     }
                     else {
@@ -149,10 +164,16 @@ public class GridTools
                 }
             }
         }
+        var offset1 = new Vector3Int(0, 1);
+        var offset2 = new Vector3Int(0, 2);
         foreach (Vector3Int pos in WallsToClear) {
             fogTilemap.SetTile(pos, tile);
-            fogTilemap.SetTile(pos+new Vector3Int(0,1), tile);
-            fogTilemap.SetTile(pos + new Vector3Int(0, 2), tile);
+            var posOffset = pos + offset1;
+            var posOffset2 = pos + offset2;
+            if (!posOffset.gameobjectGO()) { continue; }
+            fogTilemap.SetTile(posOffset, tile);
+            if (!posOffset2.gameobjectGO()) { continue; }
+            fogTilemap.SetTile(pos + offset2, tile);
         }
     }
 

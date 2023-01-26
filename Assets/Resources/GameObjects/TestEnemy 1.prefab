@@ -72,6 +72,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ai: {fileID: 11400000, guid: d68cdce08e583844db20ac4fb2307e4b, type: 2}
+  origin: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  target: {fileID: 0}
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,19 +90,21 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 19652850ce04e8847b0b544c026632be, type: 2}
   baseSprite: {fileID: 0}
   baseHair: {fileID: 0}
+  baseFace: {fileID: 0}
   faction: 1
   state: 0
   deathAction: []
-  baseMaxHealth: 20
-  baseAttack: 9
-  baseArmour: 0
-  baseActionPoints: 4
-  maxHealth: 0
+  maxHealthBase: 20
+  armourBase: 0
+  actionPointsBase: 3
+  throwingRangeBase: 1
+  fistDamageBase: 1
+  walkCostBase: 1
   health: 20
   actionPoints: 0
-  bonusAttack: 0
-  bonusMaxHealth: 0
-  bonusArmour: 0
+  actionPointsSum: 0
+  infiniteHealth: 0
+  showHealthBar: 1
   healthbar: {fileID: 0}
   ai: {fileID: 0}
 --- !u!114 &3243932232630802516
@@ -115,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
+  skills: []
+  misc: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

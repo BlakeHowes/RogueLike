@@ -3,37 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu(fileName = "StatMod", menuName = "Mods/StatMod")]
 public class StatMod : ItemAbstract {
-    public int attackBonus;
-    public int attackMultiple;
+    public int damage;
+    public int damageMultiple;
     public int armour;
-    public ModType modType;
-    public enum ModType {
-        weapon,
-        equipment
+
+    public override bool Condition(Vector3Int position, Vector3Int origin) {
+        return false;
     }
-    public override bool Call(Vector3Int position, Vector3Int origin) {
+    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+        if (signal != Signal.CalculateStats) { return; }
 
-        if(modType == ModType.weapon) {
-            ItemAbstract item = PartyManager.i.currentCharacter.GetComponent<Inventory>().mainHand;
-            Weapon weapon = null;
-            if (item is Weapon) {
-                weapon = item as Weapon;
-            }
-            if (weapon == null) {
-                return false;
-            }
-            weapon.attackBonus += attackBonus;
-            weapon.attackMultiple += attackMultiple;
-        }
-        if(modType == ModType.equipment) {
-            PartyManager.i.currentCharacter.GetComponent<Stats>().bonusArmour += armour;
-        }
+        var item = origin.gameobjectGO().GetComponent<Inventory>().mainHand;
+        var weapon = item as Weapon;
+        if (weapon == null) { goto Stats; }
+        weapon.damageTemp += damage;
+        weapon.damageMultipleTemp += damageMultiple;
 
-        return true;
-    }
-
-    public void OnEnable() {
-        modType = ModType.weapon;
+        Stats:
+        PartyManager.i.currentCharacter.GetComponent<Stats>().armourTemp += armour;
     }
     public override string Description() {
         throw new System.NotImplementedException();

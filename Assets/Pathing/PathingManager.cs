@@ -9,7 +9,10 @@ public class PathingManager : MonoBehaviour
     private Grid2D grid;
     private Algorithm algorithm;
     public int maxPathLength;
+    [Range(0,0.5f)]
     public float walkSpeed;
+    [Range(0, 0.5f)]
+    public float repeatSpeed;
     public void Awake() {
         i = this;
     }
@@ -115,17 +118,15 @@ public class PathingManager : MonoBehaviour
 
                 return true;
             }
-            else {
-                if (target.GetComponent<Stats>().faction == character.GetComponent<Stats>().faction) {
-                    SwapPlaces(nextStep, origin);
-                    if (nextStep.x > origin.x) {
-                        FlipCharacter(character, false);
-                    }
-                    else {
-                        FlipCharacter(character, true);
-                    }
-                    return true;
+            if (target.GetComponent<Stats>().faction == character.GetComponent<Stats>().faction) {
+                SwapPlaces(nextStep, origin);
+                if (nextStep.x > origin.x) {
+                    FlipCharacter(character, false);
                 }
+                else {
+                    FlipCharacter(character, true);
+                }
+                return true;
             }
         }
         return false;

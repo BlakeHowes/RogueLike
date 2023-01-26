@@ -20,10 +20,11 @@ public class InventoryManager : MonoBehaviour
 
     public Sprite mainHandSprite;
     public Sprite offHandSprite;
+    public Sprite helmetSprite;
     public Sprite armourSprite;
     public Sprite trinketSprite;
 
-    public Vector3 mainHandOffset;
+    public Vector3 mainHandOffset = new Vector3(0.6f,0.499f,0);
     public void Awake() {
         i = this;
     }
@@ -84,23 +85,32 @@ public class InventoryManager : MonoBehaviour
         return target;
     }
 
-    public void CreateCharacterSprite(GameObject character,ItemAbstract armour,ItemAbstract helmet) {
+    public void CreateCharacterSprite(GameObject character) {
         var stats = character.GetComponent<Stats>();
+        var inventory = character.GetComponent<Inventory>();
+        var armour = inventory.armour;
+        var helmet = inventory.helmet;
         var baseSprite = stats.baseSprite;
         if (baseSprite == null) return;
         Texture2D baseTexture = duplicateTexture(baseSprite.texture);
+        if (stats.baseFace != null)
+            baseTexture = PasteSprite(stats.baseFace, baseTexture, new Vector3Int(1, 18));
+        if (helmet) {
+            var helmetEqupment = helmet as Equipment;
+            if (helmetEqupment.hideHair) { goto skipHair; }
+        }
+        if (stats.baseHair != null)
+            baseTexture = PasteSprite(stats.baseHair, baseTexture, new Vector3Int(1, 18));
+        skipHair:
+        if (armour != null) {
+            Equipment armourItem = armour as Equipment;
+            baseTexture = PasteSprite(armourItem.wornSprite, baseTexture, new Vector3Int(0, 0));
+        }
         if (helmet != null) {
             baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, new Vector3Int(1, 18));
         }
-        else {
-            if (stats.baseHair != null)
-                baseTexture = PasteSprite(stats.baseHair, baseTexture, new Vector3Int(1, 18));
-        }
 
-        if (armour != null) {
-            Equipment armourItem = armour as Equipment;
-            baseTexture = PasteSprite(armourItem.wornSprite, baseTexture, new Vector3Int(1,1));
-        }
+
         var sprite = Sprite.Create(baseTexture, new Rect(0, 0, 18, 34), new Vector2(0.5f, 0.125f), 16);
         sprite.name = character.name + " Generated";
         character.GetComponent<SpriteRenderer>().sprite = sprite;
@@ -118,7 +128,6 @@ public class InventoryManager : MonoBehaviour
             CreateEquipmentSprite("MainHandSprite", inventory.gameObject, mainHandOffset);
             CreateEquipmentSprite("OffHandSprite", inventory.gameObject, new Vector3(-0.42f, 0.35f, 0));
         }
-        Debug.Log("Inventory Sprites Made");
         if (inventory.gameObject.transform.childCount >0) {
             var mainhandgameobject = inventory.transform.Find("MainHandSprite");
             if(mainhandgameobject != null) {
@@ -166,11 +175,12 @@ public class InventoryManager : MonoBehaviour
     }
 
     public void UpdateInventory() {
+        
         //Equipment
         foreach (Transform child in equipmentLayout.transform) {
             Destroy(child.gameObject);
         }
-        var character =PartyManager.i.currentCharacter;
+        var character = PartyManager.i.currentCharacter;
         var inventory = character.GetComponent<Inventory>();
         //Main Hand
         var mainHandItem = inventory.mainHand;
@@ -180,7 +190,7 @@ public class InventoryManager : MonoBehaviour
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, offHandSprite, offHandItem, ItemAbstract.Type.OffHand);
         //Armour
         var helmet = inventory.helmet;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, helmet, ItemAbstract.Type.Helmet);
+        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, helmetSprite, helmet, ItemAbstract.Type.Helmet);
         //Trinket 1
         var armour = inventory.armour;
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, armour, ItemAbstract.Type.Armour);
@@ -197,13 +207,14 @@ public class InventoryManager : MonoBehaviour
         }
 
         UpdateEquipmentSprites(inventory);
-        CreateCharacterSprite(character, armour, helmet);
+        CreateCharacterSprite(character);
         GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
+        GameUIManager.i.CreateSkills();
         //Items
         foreach (Transform child in inventoryLayout.transform) {
             Destroy(child.gameObject);
         }
-        var items = PartyManager.i.GetCurrentTurnCharacter().GetComponent<Inventory>().items;
+        var items = character.GetComponent<Inventory>().items;      
         int i = 0;
         int totalItems = items.Count;
         for (int x = 0; x < width; x++) {
@@ -211,6 +222,7 @@ public class InventoryManager : MonoBehaviour
                 if (i == totalItems) {
                     return;
                 }
+                if (!items[i]) { items.RemoveAt(i); return; }
                 var buttonclone =Instantiate(inventoryButtonPrefab);
                 buttonclone.transform.SetParent(inventoryLayout.transform, false);
                 buttonclone.GetComponent<InventorySlot>().AddItem(items[i]);
@@ -219,22 +231,6 @@ public class InventoryManager : MonoBehaviour
                 i++;
             }
         }
-    }
-
-
-    //Maybe Move this later
-    public void ApplyModifiers(List<ItemAbstract> Modifiers,Vector3Int position,Vector3Int origin) {
-        List<ItemAbstract> missingmods = new List<ItemAbstract>();
-        foreach (ItemAbstract mod in Modifiers) {
-            Debug.Log(mod + "MODD");
-            if (mod == null) {
-                missingmods.Add(mod);
-                continue;
-            }
-            mod.Call(position, origin);
-        }
-        foreach (ItemAbstract mod in missingmods) {
-            Modifiers.Remove(mod);
-        }
+        
     }
 }

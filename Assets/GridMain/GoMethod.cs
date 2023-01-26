@@ -13,7 +13,7 @@ public class GoMethod
     }
 
     public GameObject GetGameObjectOrSpawnFromTile(Vector3Int position) {
-
+        if (!position.inbounds()) { return null; }
         var gameobject = goGrid[position.x, position.y];
         if (gameobject != null) {return gameobject;}
 
@@ -56,26 +56,53 @@ public class GoMethod
     }
 
     public GameObject GetGameObject(Vector3Int position) {
-        return goGrid[position.x, position.y];
+        if (position.inbounds()) {
+            return goGrid[position.x, position.y];
+        }
+        return null;
     }
 
-    public Vector3Int FirstGameObjectInSight(Vector3Int Position,Vector3Int Origin) {
-        var faction = Origin.gameobjectSpawn().GetComponent<Stats>().faction;
+    public Vector3Int FirstGameObjectInSightIncludingAllies(Vector3Int Position,Vector3Int Origin) {
         var cells =GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
         if (cells.Count == 0) {
             return Position;
         }
         foreach (var cell in cells) { 
             if(goTilemap.GetTile(cell)!= null || GetGameObject(cell) != null) {
-                //Debug.Log("found gameobject in sight line "+cell);
+                GetGameObjectOrSpawnFromTile(cell);
+                return cell;
+            }
+        }
+        return Position;
+    }
+
+    public Vector3Int FirstGameObjectInSight(Vector3Int Position, Vector3Int Origin) {
+        var faction = Origin.gameobjectSpawn().GetComponent<Stats>().faction; 
+        var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        if (cells.Count == 0) {
+            return Position;
+        }
+        foreach (var cell in cells) {
+            if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {
                 GetGameObjectOrSpawnFromTile(cell);
                 var cellFaction = cell.gameobjectGO().GetComponent<Stats>().faction;
-                if (cellFaction == faction) {
-                    continue;
-                }
-                if(faction == PartyManager.Faction.Party&& cellFaction == PartyManager.Faction.Enemy) {
-                    continue;
-                }
+                if (cellFaction == faction) { continue; }
+                return cell;
+            }
+        }
+        return Position;
+    }
+
+    public Vector3Int FirstWallInSight(Vector3Int Position, Vector3Int Origin) {
+        var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        if (cells.Count == 0) {
+            return Position;
+        }
+        foreach (var cell in cells) {
+            if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {
+                GetGameObjectOrSpawnFromTile(cell);
+                var cellFaction = cell.gameobjectGO().GetComponent<Stats>().faction;
+                if (cellFaction != PartyManager.Faction.Wall) { continue; }
                 return cell;
             }
         }
@@ -142,7 +169,7 @@ public class GoMethod
             }
         }
         Debug.LogError("Could not find "+gameobject+" on goGrid ");
-        return Vector3Int.zero;
+        return GridManager.i.NullValue;
     }
 
     public GameObject SpawnFloodFill(Vector3Int position,GameObject prefab) {

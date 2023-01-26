@@ -20,6 +20,8 @@ public class PartyIcon : MonoBehaviour
     }
 
     public void Click() {
+        Camera.main.GetComponent<SmoothCamera>().resetFollow();
+        MouseManager.i.itemSelected = null;
         if(PartyManager.i.state == PartyManager.State.Exploring) {
             PartyManager.i.partyMemberTurnTaken.Clear();
         }

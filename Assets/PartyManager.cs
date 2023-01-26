@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -59,7 +58,7 @@ public class PartyManager : MonoBehaviour {
     public enum Faction {
         Party,
         Enemy,
-        Openable,
+        Breakable,
         Wall,
         Passive
     }
@@ -88,8 +87,11 @@ public class PartyManager : MonoBehaviour {
             character.GetComponent<SpriteRenderer>().material = GameUIManager.i.enemyoutlineMaterial;
         }
         GameUIManager.i.UpdatePartyIcons(party);
-        GameUIManager.i.ClearSkills();
-        character.GetComponent<Stats>().RecalculateStats();
+
+        var stats = character.GetComponent<Stats>();
+        stats.ResetTempStats();
+        stats.RecalculateStats();
+        GameUIManager.i.actionPointsText.text = stats.actionPoints.ToString();
         GridManager.i.UpdateGame();
     }
 
@@ -132,7 +134,7 @@ public class PartyManager : MonoBehaviour {
 
     public List<GameObject> EnemyPartyState() {
         RemoveNullCharacters(enemyParty);
-        FindEnemies();
+        //FindEnemies();
         List<GameObject> attackingEnemies = new List<GameObject>();
         for (int i = 0; i < enemyParty.Count; i++) {
             if (enemyParty[i] == null) continue;
@@ -164,24 +166,25 @@ public class PartyManager : MonoBehaviour {
         if (currentCharacter != null) {
             partyMemberTurnTaken.Add(currentCharacter);
         }
-        SwitchToNextCharacter();
-        Actions.i.SetActionPoints(currentCharacter.GetComponent<Stats>().actionPoints);
+        SwitchToNextCharacter();        
         InventoryManager.i.UpdateInventory();
 
         if (partyMemberTurnTaken.Count >= party.Count) {
             MouseManager.i.disableMouse = true;
-            Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
             SetCurrentCharacter(attackingEnemies[0]);
             attackingEnemies[0].GetComponent<Stats>().AIAttack();
         }
+        Camera.main.GetComponent<SmoothCamera>().resetFollow();
     }
 
     public void PartyStartTurn() {
-        Debug.Log("ReEnabled");
         MouseManager.i.disableMouse = false;
+        RemoveNullCharacters(party);
+        foreach (var player in party) {
+            if(player != null)
+            player.GetComponent<Stats>().ResetActionPoints();
+        }
         SetCurrentCharacter(party[0]);
-        Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
-        GameUIManager.i.actionPointsText.text = Actions.i.actionPoints.ToString();
         partyMemberTurnTaken.Clear();
         enemyTurnTaken.Clear();
     }
@@ -198,11 +201,18 @@ public class PartyManager : MonoBehaviour {
             if (!enemyTurnTaken.Contains(enemyMember)) {
                 if (enemyMember == null) continue;
                 SetCurrentCharacter(enemyMember);
-                Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
-                enemyMember.GetComponent<Stats>().AIAttack();
+
+                //Get Enemy ready for their turn
+                var enemyStats = enemyMember.GetComponent<Stats>();
+                enemyStats.ResetActionPoints();
+                enemyStats.AIAttack();
                 Debug.Log("Set");
                 return;
             }
+        }
+
+        foreach (GameObject enemyMember in attackingEnemies) {
+            enemyMember.GetComponent<Stats>().ResetActionPoints();
         }
         PartyStartTurn();
     }
@@ -222,37 +232,12 @@ public class PartyManager : MonoBehaviour {
         yield return null;
     }
 
-
-    // Maybe change this to a circle, idk
-    public void FindEnemies() {
-        var assets = GridManager.i.assets;
-        List<GameObject> enemies = new List<GameObject>();
-        List<GameObject> enemiesChecked = new List<GameObject>();
-        foreach (GameObject character in party) {
-            var position = character.position();
-            for (int x = position.x - enemyRange; x <= position.x + enemyRange; x++) {
-                for (int y = position.y - enemyRange; y <= position.y + enemyRange; y++) {
-                    var pos = new Vector3Int(x, y, 0);
-                    if (pos.inbounds()) {
-                        var enemy = GridManager.i.goMethods.GetGameObject(pos);
-                        var tile = GridManager.i.goTilemap.GetTile<Tile>(pos);
-                        if (tile != null && enemy == null) {
-                            if (assets.IsCharacter(tile)) {
-                                enemy = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(pos);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     public void AddEnemy(GameObject enemy) {
         if (enemyParty.Contains(enemy)) return;
         enemyParty.Add(enemy);
     }
 
-    public IEnumerator TakeDamageAnimation(GameObject character,Vector3Int origin) {
+    public IEnumerator TakeDamageAnimation(GameObject character, Vector3Int origin) {
         if (character == null) yield return null;
         var position = character.position();
         var renderer = character.GetComponent<SpriteRenderer>();
@@ -261,45 +246,21 @@ public class PartyManager : MonoBehaviour {
         var spriteMaterial = GameUIManager.i.normalMaterial;
         GridManager.i.goTilemap.SetColor(position, Color.clear);
         Debug.Log(character.transform.position);
-        if (renderer != null) {
-            character.transform.position = Vector3.MoveTowards(character.transform.position, origin+new Vector3(0.5f,0.5f,0), -animationDistance);
-            renderer.material = hitMaterial;
-            yield return new WaitForSeconds(0.15f);
-            renderer.material = spriteMaterial;
-            character.transform.position = position + new Vector3(0.5f, 0.5f, 0);
-            yield return new WaitForSeconds(0.15f);
-            renderer.material = hitMaterial;
-            yield return new WaitForSeconds(0.15f);
-            renderer.material = spriteMaterial;
-            if(character == currentCharacter) {
-                renderer.material = GameUIManager.i.outlineMaterial;
-            }
-        }
 
-    }
-    public IEnumerator TakeDamageAnimationWall(GameObject character, Vector3Int origin) {
-        if (character == null) yield return null;
-        var position = character.position();
-        var renderer = character.GetComponent<SpriteRenderer>();
-        var startPosition = character.transform.position;
-        var hitMaterial = GameUIManager.i.hitMaterial;
-        var spriteMaterial = GameUIManager.i.normalMaterial;
-        GridManager.i.goTilemap.SetColor(position, Color.clear);
-        Debug.Log(character.transform.position);
-        if (renderer != null) {
-            //character.transform.position = Vector3.MoveTowards(character.transform.position, origin + new Vector3(0.5f, 0.5f, 0), -animationDistance);
-            renderer.material = hitMaterial;
-            yield return new WaitForSeconds(0.15f);
-            renderer.material = spriteMaterial;
-            //character.transform.position = position + new Vector3(0.5f, 0.5f, 0);
-            yield return new WaitForSeconds(0.15f);
-            renderer.material = hitMaterial;
-            yield return new WaitForSeconds(0.15f);
-            renderer.material = spriteMaterial;
-            if (character == currentCharacter) {
-                renderer.material = GameUIManager.i.outlineMaterial;
-            }
-        }
+        if (renderer == null) { yield return null; }
+        if (character.GetComponent<Stats>().faction != Faction.Wall)
+            character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -animationDistance);
 
+        renderer.material = hitMaterial;
+        yield return new WaitForSeconds(0.15f);
+        renderer.material = spriteMaterial;
+        character.transform.position = startPosition;
+        yield return new WaitForSeconds(0.15f);
+        renderer.material = hitMaterial;
+        yield return new WaitForSeconds(0.15f);
+        renderer.material = spriteMaterial;
+        if (character == currentCharacter) {
+            renderer.material = GameUIManager.i.outlineMaterial;
+        }
     }
 }

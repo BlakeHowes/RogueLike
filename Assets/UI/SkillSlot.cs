@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class SkillSlot : MonoBehaviour
 {
     public ItemAbstract skill;
-    public void Call() {
-        var pos = PartyManager.i.currentCharacter.position();
-        skill.Call(pos, pos);
+    public void SelectSkill() {
+        MouseManager.i.itemSelected = skill;
     }
 
     public void AddSkill(ItemAbstract skill) {
         this.skill = skill;
-        GetComponent<Image>().sprite = skill.tile.sprite;
+        
+        if (skill == null) { Debug.LogError("SKILL IS NULL"); return; }
+        var image = GetComponent<Image>().sprite;
+        if (skill.tile != null) { GetComponent<Image>().sprite = skill.tile.sprite;return; }
+        image = GameUIManager.i.defaultSkillSprite;
     }
 
     public void EnableToolTip() {

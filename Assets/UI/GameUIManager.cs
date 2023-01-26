@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
+using static ItemAbstract;
+using static UnityEngine.UI.Image;
 
-public class GameUIManager : MonoBehaviour
-{
+public class GameUIManager : MonoBehaviour {
     public static GameUIManager i;
     public Tile mouseHighlight;
     public Tilemap uiTilemap;
@@ -30,18 +28,23 @@ public class GameUIManager : MonoBehaviour
     public GameObject iconPrefab;
     public TileBase rangeTile;
     public Tilemap groundUI;
+    public Sprite defaultSkillSprite;
+    public Texture2D boarderEffectTexture;
     public void Awake() {
         i = this;
     }
+
     public void HighlightMouseTile(Vector3Int position) {
         uiTilemap.ClearAllTiles();
+        groundUI.ClearAllTiles();
+        var origin = PartyManager.i.GetCurrentTurnCharacter().position();
         if (PartyManager.i.state == PartyManager.State.Combat) {
-            var origin = PartyManager.i.GetCurrentTurnCharacter().position();
-            position = GridManager.i.goMethods.FirstGameObjectInSight(position, origin);
+           
+            //position = GridManager.i.goMethods.FirstGameObjectInSight(position, origin);
         }
         uiTilemap.SetTile(position, mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
-
+       
 
         if (character != null) {
             uiTilemap.SetTileFlags(position, TileFlags.None);
@@ -49,11 +52,13 @@ public class GameUIManager : MonoBehaviour
                 uiTilemap.SetColor(position, Color.green);
             }
             else {
-                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Openable) {
-                    uiTilemap.SetColor(position, Color.yellow);
-                }
-                else {
-                    uiTilemap.SetColor(position, Color.red);
+                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Breakable) { uiTilemap.SetColor(position, Color.yellow); }
+                if (character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+                    var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
+                    inventory.CallEquipment(origin, origin, Signal.CalculateStats);
+                    var weapon = inventory.mainHand as Weapon;
+                    if (!weapon) { ShowRange(origin, 1); }
+                    else { ShowRange(origin, weapon.rangeTemp); }
                 }
             }
         }
@@ -65,7 +70,10 @@ public class GameUIManager : MonoBehaviour
     public void ShowRange(Vector3Int position,int range) {
         groundUI.ClearAllTiles();
         var cells =CreateRange(position, range);
+        var goMethods = GridManager.i.goMethods;
         foreach (Vector3Int cell in cells) {
+            var hit =goMethods.FirstGameObjectInSight(cell,position );
+            if(cell == hit)
             groundUI.SetTile(cell, rangeTile);
         }
     }
@@ -86,11 +94,17 @@ public class GameUIManager : MonoBehaviour
         clone.GetComponent<SkillSlot>().AddSkill(skill);
     }
 
-    public void ClearSkills() {
-        Debug.Log("Skills Cleared");
+    public void CreateSkills() {
         foreach(Transform child in skillLayout.transform) {
             Destroy(child.gameObject);
         }
+        var currentCharacter = PartyManager.i.currentCharacter;
+        var position = currentCharacter.position();
+        var inventory = currentCharacter.GetComponent<Inventory>();
+        foreach (ItemAbstract skill in inventory.skills) {
+            AddSkill(skill);
+        }
+        inventory.CallEquipment(position, position, ItemAbstract.Signal.CreateSkill);
     }
 
     public void DisableUI() {
@@ -103,12 +117,16 @@ public class GameUIManager : MonoBehaviour
     }
 
     public void UpdatePartyIcons(List<GameObject> party) {
-        foreach(Transform child in iconLayout.transform) {
+        var colour = Color.black;
+        if (PartyManager.i.state == PartyManager.State.Combat) { colour = Color.red; }
+
+        foreach (Transform child in iconLayout.transform) {
             Destroy(child.gameObject);
         }
         foreach(GameObject member in party) {
             var clone = Instantiate(iconPrefab,iconLayout.transform);
             var partyicon = clone.gameObject.GetComponent<PartyIcon>();
+            partyicon.GetComponent<Image>().color = colour;
             partyicon.SetIcon(member);
             partyicon.DisableHighlight();
             if (partyicon.GetCharacter() == PartyManager.i.currentCharacter) {
@@ -126,7 +144,6 @@ public class GameUIManager : MonoBehaviour
         cells = GridManager.i.tools.BresenhamLine(playerpos.x, playerpos.y, position.x, position.y);
         foreach (Vector3Int cell in cells) {
             uiTilemap.SetTile(cell, mouseHighlight);
-
         }
     }
 

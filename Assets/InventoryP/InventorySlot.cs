@@ -15,15 +15,6 @@ public class InventorySlot : MonoBehaviour
     public void SelectItem() {
         Debug.Log("Item Selected");
         var itemSelected = MouseManager.i.itemSelected;
-        ModContainer modContainer = null;
-        if (itemSelected is ModContainer) {
-            modContainer = itemSelected as ModContainer;
-            modContainer.ModItem(item);
-            InventoryManager.i.DeselectItems();
-            Debug.Log("Mods Added");
-            return;
-        }
-
         InventoryManager.i.ResetSelectionColours();
         if(itemSelected == item) {
             InventoryManager.i.DeselectItems();
