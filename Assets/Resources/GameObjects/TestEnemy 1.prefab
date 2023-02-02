@@ -52,7 +52,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 4900000, guid: 2e75fb225ce22e24abbc22d3cea94150, type: 3}
   autoReset: 1
-  tickOn: 3
+  tickOn: 0
   sourceInfos:
   - isFoldout: 1
     breakPoints: 
@@ -71,10 +71,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ai: {fileID: 11400000, guid: d68cdce08e583844db20ac4fb2307e4b, type: 2}
   origin: {x: 0, y: 0, z: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
+  stats: {fileID: 0}
+  sightRange: 12
+  state: 1
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,13 +102,13 @@ MonoBehaviour:
   throwingRangeBase: 1
   fistDamageBase: 1
   walkCostBase: 1
+  enemyAlertRangeBase: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   healthbar: {fileID: 0}
-  ai: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
+using Panda;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -9,14 +11,13 @@ public class PartyManager : MonoBehaviour {
     public List<GameObject> party = new List<GameObject>();
     public List<GameObject> enemyParty = new List<GameObject>();
     public int enemyRange;
-    public State state = State.Exploring;
     public Vector3Int characterFollowPosition;
     public float animationDistance;
     public List<GameObject> partyMemberTurnTaken = new List<GameObject>();
     public List<GameObject> enemyTurnTaken = new List<GameObject>();
     public bool follow = true;
     public enum State {
-        Exploring,
+        Idle,
         Combat
     }
 
@@ -34,15 +35,15 @@ public class PartyManager : MonoBehaviour {
         if (!follow) {
             return;
         }
+        foreach(GameObject member in party) {
+            if(member.GetComponent<Stats>().state == State.Combat) {
+                return;
+            }
+        }
         var playerpos = characterFollowPosition;
         foreach (GameObject member in party) {
-            if (member == null) {
-                RemoveNullCharacters(party);
-                continue;
-            }
-            if (member == currentCharacter) {
-                continue;
-            }
+            if (member == null) { RemoveNullCharacters(party); continue; }
+            if (member == currentCharacter) {  continue; }
             var memberpos = member.position();
             var moved = PathingManager.i.MoveOneStep(playerpos, memberpos);
             if (moved == false && !Actions.i.InMeleeRange(playerpos, memberpos)) {
@@ -132,37 +133,7 @@ public class PartyManager : MonoBehaviour {
         GameUIManager.i.UpdatePartyIcons(party);
     }
 
-    public List<GameObject> EnemyPartyState() {
-        RemoveNullCharacters(enemyParty);
-        //FindEnemies();
-        List<GameObject> attackingEnemies = new List<GameObject>();
-        for (int i = 0; i < enemyParty.Count; i++) {
-            if (enemyParty[i] == null) continue;
-            enemyParty[i].GetComponent<Stats>().AISense();
-        }
-        if (enemyParty.Count > 0) {
-            foreach (GameObject character in enemyParty) {
-                if (character == null) continue;
-                var stats = character.GetComponent<Stats>();
-                if (stats.state == AIAbstract.State.Attacking) {
-                    attackingEnemies.Add(character);
-                }
-            }
-        }
-        if (attackingEnemies.Count == 0) {
-            state = State.Exploring;
-            return attackingEnemies;
-        }
-        state = State.Combat;
-        return attackingEnemies;
-    }
-
     public void EndTurn() {
-        var attackingEnemies = EnemyPartyState();
-        if (state == State.Exploring) {
-            return;
-        }
-
         if (currentCharacter != null) {
             partyMemberTurnTaken.Add(currentCharacter);
         }
@@ -170,12 +141,33 @@ public class PartyManager : MonoBehaviour {
         InventoryManager.i.UpdateInventory();
 
         if (partyMemberTurnTaken.Count >= party.Count) {
-            MouseManager.i.disableMouse = true;
-            SetCurrentCharacter(attackingEnemies[0]);
-            attackingEnemies[0].GetComponent<Stats>().AIAttack();
+            EnemyPartyStartTurn();
         }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
     }
+
+    public void EnemyPartyStartTurn() {
+        MouseManager.i.disableMouse = true;
+        foreach(GameObject enemy in enemyParty) {
+            enemy.GetComponent<Stats>().ResetActionPoints();
+        }
+        enemyTurnTaken.Clear();
+        SetCurrentCharacter(enemyParty[0]);
+        enemyParty[0].GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+    }
+
+    public void NextEnemy(GameObject enemy) {
+        enemyTurnTaken.Add(enemy);
+        Debug.Log("Next Enemy");
+        foreach(GameObject enemyCharacter in enemyParty) {
+            if (enemyTurnTaken.Contains(enemyCharacter)) { continue;}
+            SetCurrentCharacter(enemyCharacter);
+            enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+            return;
+        }
+        PartyStartTurn();
+    }
+
 
     public void PartyStartTurn() {
         MouseManager.i.disableMouse = false;
@@ -183,6 +175,7 @@ public class PartyManager : MonoBehaviour {
         foreach (var player in party) {
             if(player != null)
             player.GetComponent<Stats>().ResetActionPoints();
+            player.GetComponent<NPCSearch>().Search();
         }
         SetCurrentCharacter(party[0]);
         partyMemberTurnTaken.Clear();
@@ -193,48 +186,18 @@ public class PartyManager : MonoBehaviour {
         StartCoroutine(enumerator);
     }
 
-    public void EndEnemyTurn(GameObject enemy) {
-        var attackingEnemies = EnemyPartyState();
-        enemyTurnTaken.Add(enemy);
-        Debug.Log(attackingEnemies.Count);
-        foreach (GameObject enemyMember in attackingEnemies) {
-            if (!enemyTurnTaken.Contains(enemyMember)) {
-                if (enemyMember == null) continue;
-                SetCurrentCharacter(enemyMember);
-
-                //Get Enemy ready for their turn
-                var enemyStats = enemyMember.GetComponent<Stats>();
-                enemyStats.ResetActionPoints();
-                enemyStats.AIAttack();
-                Debug.Log("Set");
-                return;
-            }
-        }
-
-        foreach (GameObject enemyMember in attackingEnemies) {
-            enemyMember.GetComponent<Stats>().ResetActionPoints();
-        }
-        PartyStartTurn();
-    }
-
-    public IEnumerator EnemyPartyTurn(List<GameObject> attackingEnemies) {
-        MouseManager.i.disableMouse = true;
-        foreach (GameObject enemy in attackingEnemies) {
-            SetCurrentCharacter(enemy);
-            Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
-            enemy.GetComponent<Stats>().AIAttack();
-            yield return new WaitForSeconds(3);
-        }
-        MouseManager.i.disableMouse = false;
-        SetCurrentCharacter(party[0]);
-        Actions.i.actionPoints = currentCharacter.GetComponent<Stats>().actionPoints;
-        GameUIManager.i.actionPointsText.text = Actions.i.actionPoints.ToString();
-        yield return null;
-    }
-
     public void AddEnemy(GameObject enemy) {
         if (enemyParty.Contains(enemy)) return;
         enemyParty.Add(enemy);
+        var stats = enemy.GetComponent<Stats>();
+        stats.SpawnHitNumber("!", Color.red, 2);
+        stats.state = State.Combat;
+        enemy.GetComponent<Behaviours>().ChangeColour(Color.white);
+    }
+
+    public void RemoveEnemy(GameObject enemy) {
+        if (!enemyParty.Contains(enemy)) return;
+        enemyParty.Remove(enemy);
     }
 
     public IEnumerator TakeDamageAnimation(GameObject character, Vector3Int origin) {
@@ -245,7 +208,6 @@ public class PartyManager : MonoBehaviour {
         var hitMaterial = GameUIManager.i.hitMaterial;
         var spriteMaterial = GameUIManager.i.normalMaterial;
         GridManager.i.goTilemap.SetColor(position, Color.clear);
-        Debug.Log(character.transform.position);
 
         if (renderer == null) { yield return null; }
         if (character.GetComponent<Stats>().faction != Faction.Wall)

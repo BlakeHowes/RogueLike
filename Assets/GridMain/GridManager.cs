@@ -1,3 +1,4 @@
+using Panda;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,6 +26,9 @@ public class GridManager : MonoBehaviour {
     [NonSerialized] public mechMethods mechMethods;
     [NonSerialized] public itemMethods itemMethods;
     [NonSerialized] public GoMethod goMethods;
+
+    //NPC tick
+    public List<Behaviours> NPCBehaviours = new List<Behaviours>();
 
     // Tilemaps
     public Tilemap mechTilemap;
@@ -108,14 +112,13 @@ public class GridManager : MonoBehaviour {
                         Destroy(clone.GetComponent<CharacterCreator>());
                     }
                 }
-                
             }
             return;
         }
         DebugSpawn:
         foreach (GameObject character in partyPrefabs) {
             var clone = goMethods.SpawnFloodFill(position, character);
-            PartyManager.i.AddPartyMember(clone);
+            PartyManager.i.AddPartyMember(clone);  
         }
     }
 
@@ -141,6 +144,9 @@ public class GridManager : MonoBehaviour {
         GameUIManager.i.actionPointsText.text = partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
         ClearFog();
         ClearSemiFog();
+        foreach (var party in PartyManager.i.party) {
+            party.GetComponent<NPCSearch>().Search();
+        }
     }
 
     public void CreateFog() {
@@ -246,10 +252,20 @@ public class GridManager : MonoBehaviour {
 
     public void UpdateGame() {
         InstantiateGosAroundCharacters();
-        Tick();
         graphics.UpdateEverything();
         GameUIManager.i.actionPointsText.text = PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints.ToString();
         InventoryManager.i.UpdateInventory();
+    }
+
+    public void TickGame() {
+        Tick();
+        foreach (Behaviours behaviour in NPCBehaviours) {
+            if (!behaviour) { continue; }
+            if (PartyManager.i.enemyParty.Contains(behaviour.gameObject)) { continue; }
+            behaviour.IdleBehaviour();
+
+        }
+        UpdateGame();
     }
 
     public bool FogTile(Vector3Int position) {
@@ -257,21 +273,6 @@ public class GridManager : MonoBehaviour {
             return true;
         }
         return false;
-    }
-
-    public void CreateEnemies() { //THIS WILL BE REPLACED BY PALETTEMANAGER AND BE SEARCHED AROUND THE PLAYER ONLY
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                var pos = new Vector3Int(x, y, 0);
-                var tile = goTilemap.GetTile<Tile>(pos);
-                if (tile != null) {
-                    var enemy = assets.TiletoGameObject(tile);
-                    if (enemy.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
-                        goMethods.GetGameObjectOrSpawnFromTile(pos);
-                    }
-                }
-            }
-        }
     }
 
     public ItemAbstract InstantiateItem(ItemAbstract item) {

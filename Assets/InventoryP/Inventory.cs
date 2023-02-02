@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static ItemAbstract;
 
@@ -15,13 +16,15 @@ public class Inventory : MonoBehaviour
     public List<ItemAbstract> trinkets;
 
     public int MaxInventory = 10;
-    public bool AddItem(ItemAbstract item) {
+    public void AddItem(ItemAbstract item) {
         if(items.Count < MaxInventory) {
             items.Add(item);
-            return true;
+            return;
         }
-        return false;
+        GridManager.i.itemMethods.DropItem(item,gameObject.position());
+        GridManager.i.UpdateGame();
     }
+
     public void RemoveItem(ItemAbstract item) {
         if (items.Contains(item)) {
             items.Remove(item);
@@ -38,47 +41,22 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
-        foreach (var item in misc) {
-            if (item)
-                item.Call(position, origin, signal);
-        }
-        if (helmet != null) {
-            helmet.Call(position, origin, signal);
-        }
-        if (armour != null) {
-            armour.Call(position, origin, signal);
-        }
-        foreach (var item in trinkets) {
-            if(item)
-            item.Call(position, origin, signal);
-        }
-        if (offHand != null) {
-            offHand.Call(position, origin, signal);
-        }
-        if (mainHand != null) {
-            mainHand.Call(position, origin, signal);
-        }
+        foreach (var item in misc) { if (item) item.Call(position, origin, signal); }
+        foreach (var item in trinkets) { if (item) item.Call(position, origin, signal); }
+
+        if (helmet) { helmet.Call(position, origin, signal); }
+        if (armour) { armour.Call(position, origin, signal); }
+        if (offHand) { offHand.Call(position, origin, signal); }
+        if (mainHand) { mainHand.Call(position, origin, signal); }
     }
 
     public void CheckEquipment(Vector3Int position, Vector3Int origin) {
-        foreach (var item in misc) {
-            if (item)
-                item.CheckConditions(position, origin);
-        }
-        if (offHand != null) {
-            offHand.CheckConditions(position, origin);
-        }
-        if (helmet != null) {
-            helmet.CheckConditions(position, origin);
-        }
-        if (armour != null) {
-            armour.CheckConditions(position, origin);
-        }
-        foreach (var item in trinkets) {
-            item.CheckConditions(position, origin);
-        }
-        if (mainHand != null) {
-            mainHand.CheckConditions(position, origin);
-        }
+        foreach (var item in misc) { if (item) item.CheckConditions(position, origin); }
+        foreach (var item in trinkets) { item.CheckConditions(position, origin); }
+
+        if (offHand) { offHand.CheckConditions(position, origin); }
+        if (helmet) { helmet.CheckConditions(position, origin); }
+        if (armour) { armour.CheckConditions(position, origin); }
+        if (mainHand) { mainHand.CheckConditions(position, origin); }
     }
 }

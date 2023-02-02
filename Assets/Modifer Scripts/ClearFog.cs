@@ -10,7 +10,6 @@ public class ClearFog : ItemAbstract
     }
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         GridManager.i.ClearFogDoor(position);
-        Debug.Log("clear");
     }
     public override string Description() {
         throw new System.NotImplementedException();

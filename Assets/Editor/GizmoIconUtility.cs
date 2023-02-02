@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Callbacks;
 using UnityEngine.UIElements;
 using static UnityEditor.Progress;
+using UnityEditor.Sprites;
 
 namespace FolderIcons {
     public class GizmoIconUtility {
@@ -20,7 +21,7 @@ namespace FolderIcons {
                 if (!item.tile) { return; }
                 if (!item.tile.sprite) { return; }
                 if (!item.tile.sprite.texture) { return; }
-                var texture = item.tile.sprite.texture;
+                var texture = SpriteUtility.GetSpriteTexture(item.tile.sprite, false);
                 Rect rbase = rect;
                 if (rbase.height >= rbase.width) {
                     rbase.height -= 14; // fix for vertical grid layout

@@ -20,8 +20,9 @@ public class ChargeMod : ItemAbstract
         }
 
         if (GridManager.i.tools.InMeeleeRange(position, origin)) { return false; }
-        var enemy = GridManager.i.goMethods.FirstGameObjectInSightIncludingAllies(position, origin);
-        if (enemy.gameobjectGO().GetComponent<Stats>().faction == PartyManager.i.GetCurrentTurnCharacter().GetComponent<Stats>().faction) {
+        var enemy = GridManager.i.goMethods.FirstGameObjectInSightIncludingAllies(position, origin).gameobjectGO();
+        if (!enemy) { return false; }
+        if (enemy.GetComponent<Stats>().faction == PartyManager.i.GetCurrentTurnCharacter().GetComponent<Stats>().faction) {
             return false;
         }
         return true;

@@ -10,23 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
-  m_Name: Wood Sword
+  m_Name: Bronse Dagger
   m_EditorClassIdentifier: 
   type: 1
-  tile: {fileID: 11400000, guid: 18b969edb2c9df448bbb1d37fa8b438d, type: 2}
+  tile: {fileID: 11400000, guid: 8d8be093f818d91408501e1f98e14b1a, type: 2}
   particles: {fileID: 0}
   Modifiers: []
-  PreviewIcon: {fileID: 0}
   linePrefab: {fileID: 0}
+  duelWield: 1
   actionPointCost: 1
-  damageBase: 5
-  damageMaxBase: 10
+  damageBase: 3
+  damageMaxBase: 6
   accuracyBase: 8
   rangeBase: 1
   damageMultipleBase: 1
-  rangeTemp: 1
-  accuracyTemp: 8
-  damageTemp: 8
-  damageMaxTemp: 10
-  damageMultipleTemp: 1
-  damage: 10

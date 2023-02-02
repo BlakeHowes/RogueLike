@@ -1,17 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.UI.Image;
-using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
-using static UnityEngine.GraphicsBuffer;
+
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
 public class Weapon : ItemAbstract
 {
     public GameObject linePrefab;
-
+    public bool duelWield = false;
     [Header("Base Stats")]
     public int actionPointCost;
     public int damageBase = 5;
@@ -21,12 +19,12 @@ public class Weapon : ItemAbstract
     public int damageMultipleBase = 1;
 
     [Header("Temporary Stats")]
-    public int rangeTemp;
-    public int accuracyTemp;
-    public int damageTemp;
-    public int damageMaxTemp;
-    public int damageMultipleTemp;
-    public int damage;
+    [NonSerialized] public int rangeTemp;
+    [NonSerialized] public int accuracyTemp;
+    [NonSerialized] public int damageTemp;
+    [NonSerialized] public int damageMaxTemp;
+    [NonSerialized] public int damageMultipleTemp;
+    [NonSerialized] public int damage;
     public void ResetTempStats() {
         rangeTemp = rangeBase;
         accuracyTemp = accuracyBase;

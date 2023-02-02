@@ -22,9 +22,11 @@ public class PartyIcon : MonoBehaviour
     public void Click() {
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
         MouseManager.i.itemSelected = null;
-        if(PartyManager.i.state == PartyManager.State.Exploring) {
+        /*
+        if(PartyManager.i.state == PartyManager.State.Idle) {
             PartyManager.i.partyMemberTurnTaken.Clear();
         }
+        */
         if (!PartyManager.i.partyMemberTurnTaken.Contains(character)) {
             PartyManager.i.SetCurrentCharacter(character);
             InventoryManager.i.UpdateInventory();

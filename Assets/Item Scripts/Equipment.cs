@@ -41,10 +41,8 @@ public class Equipment : ItemAbstract
         if (signal != Signal.CalculateStats) { return; }
         ResetTempStats();
         var targetStats = originCharacter.GetComponent<Stats>();
-        Debug.Log("target Character "+originCharacter);
         targetStats.maxHealthTemp += maxHealthTemp;
         targetStats.armourTemp += armourTemp;
-        Debug.Log("temp " + armourTemp);
         var mainHand = originCharacter.GetComponent<Inventory>().mainHand;
         if (mainHand != null) { 
             var weapon = mainHand as Weapon;

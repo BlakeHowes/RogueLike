@@ -18,7 +18,7 @@ MonoBehaviour:
   Modifiers: []
   PreviewIcon: {fileID: 0}
   linePrefab: {fileID: 0}
-  actionPointCost: 0
+  actionPointCost: 1
   damageBase: 12
   damageMaxBase: 32
   accuracyBase: 8

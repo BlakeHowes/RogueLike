@@ -38,10 +38,6 @@ public class GameUIManager : MonoBehaviour {
         uiTilemap.ClearAllTiles();
         groundUI.ClearAllTiles();
         var origin = PartyManager.i.GetCurrentTurnCharacter().position();
-        if (PartyManager.i.state == PartyManager.State.Combat) {
-           
-            //position = GridManager.i.goMethods.FirstGameObjectInSight(position, origin);
-        }
         uiTilemap.SetTile(position, mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
        
@@ -54,6 +50,7 @@ public class GameUIManager : MonoBehaviour {
             else {
                 if(character.GetComponent<Stats>().faction == PartyManager.Faction.Breakable) { uiTilemap.SetColor(position, Color.yellow); }
                 if (character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+                    uiTilemap.SetColor(position, Color.red);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
                     inventory.CallEquipment(origin, origin, Signal.CalculateStats);
                     var weapon = inventory.mainHand as Weapon;
@@ -117,15 +114,17 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void UpdatePartyIcons(List<GameObject> party) {
-        var colour = Color.black;
-        if (PartyManager.i.state == PartyManager.State.Combat) { colour = Color.red; }
-
         foreach (Transform child in iconLayout.transform) {
             Destroy(child.gameObject);
         }
         foreach(GameObject member in party) {
             var clone = Instantiate(iconPrefab,iconLayout.transform);
             var partyicon = clone.gameObject.GetComponent<PartyIcon>();
+            var state = member.GetComponent<Stats>().state;
+            var colour = Color.black;
+            if (state == PartyManager.State.Combat) {
+                colour = Color.red;
+            }
             partyicon.GetComponent<Image>().color = colour;
             partyicon.SetIcon(member);
             partyicon.DisableHighlight();

@@ -128,28 +128,21 @@ public class InventoryManager : MonoBehaviour
             CreateEquipmentSprite("MainHandSprite", inventory.gameObject, mainHandOffset);
             CreateEquipmentSprite("OffHandSprite", inventory.gameObject, new Vector3(-0.42f, 0.35f, 0));
         }
-        if (inventory.gameObject.transform.childCount >0) {
-            var mainhandgameobject = inventory.transform.Find("MainHandSprite");
-            if(mainhandgameobject != null) {
-                if (inventory.mainHand != null) {
-                    mainhandgameobject.GetComponent<SpriteRenderer>().sprite = inventory.mainHand.tile.sprite;
-                }
-                else {
-                    mainhandgameobject.GetComponent<SpriteRenderer>().sprite = null;
-                }
-            }
-
-            var offHandGameObject = inventory.transform.Find("OffHandSprite");
-            if(offHandGameObject != null) {
-                if (inventory.offHand != null) {
-                    offHandGameObject.GetComponent<SpriteRenderer>().sprite = inventory.offHand.tile.sprite;
-                }
-                else {
-                    offHandGameObject.GetComponent<SpriteRenderer>().sprite = null;
-                }
-            }
+        if (inventory.gameObject.transform.childCount <= 0) { return; }
+        var mainhandgameobject = inventory.transform.Find("MainHandSprite");
+        var offHandGameObject = inventory.transform.Find("OffHandSprite");
+        UpdateEquipmentGO(mainhandgameobject.gameObject, inventory.mainHand);
+        if (inventory.mainHand) {
+            var weapon = inventory.mainHand as Weapon;
+            if (weapon.duelWield) { UpdateEquipmentGO(offHandGameObject.gameObject, inventory.mainHand); return; }
         }
-        
+        UpdateEquipmentGO(offHandGameObject.gameObject, inventory.offHand);
+    }
+
+    public void UpdateEquipmentGO(GameObject go,ItemAbstract item) {
+        if (!go) { return; }
+        if (item) { go.GetComponent<SpriteRenderer>().sprite = item.tile.sprite;return; }
+        go.GetComponent<SpriteRenderer>().sprite = null;
     }
 
     public void AddType(ItemAbstract item,ItemAbstract.Type slotType) {

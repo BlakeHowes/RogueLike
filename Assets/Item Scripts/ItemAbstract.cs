@@ -12,7 +12,6 @@ public abstract class ItemAbstract : ScriptableObject
     public GameObject particles;
     public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
     [NonSerialized]public bool ConditionsMet;
-    public Texture2D PreviewIcon;
     public abstract void Call(Vector3Int position,Vector3Int origin,Signal signal);
 
     public void CheckConditions(Vector3Int position, Vector3Int origin) {

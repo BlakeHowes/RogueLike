@@ -1,23 +1,19 @@
 tree("Root")
-	sequence
-		FindEnemies()
-		HideInFog()
-		tree("State")
-tree("State")
 	fallback
 		tree("Idle")
 		tree("Combat")
+		tree("Lost Target")
 tree("Idle")
 	sequence
 		not isInCombat
-		WalkRandomly
+		WalkRandomly()
 tree("Combat")
 	while 
 		isInCombat
 		repeat
 			sequence
 				Wait(0.1)
-				FindEnemies()
+				CheckInformation()
 				tree("Actions")	
 				Wait(0.2)
 				checkEndTurn()
@@ -26,3 +22,13 @@ tree("Actions")
 		Attack()
 		MoveToTarget()
 		AdvanceToTarget()
+
+tree("Lost Target")
+	sequence
+		not isInCombat
+		Wait(0.5)
+		MakeQuestionMark()
+		SetActionPoints(0)
+		Wait(0.5)
+		Wait(0.5)
+		checkEndTurn()

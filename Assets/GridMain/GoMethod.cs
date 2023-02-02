@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using static UnityEngine.GraphicsBuffer;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
+using UnityEngine.UIElements;
+
 public class GoMethod
 {
     private GameObject[,] goGrid;
@@ -117,7 +121,7 @@ public class GoMethod
         return false;
     }
 
-    public List<GameObject> GameObjectsInSight(int range,Vector3Int position, PartyManager.Faction faction) {
+    public List<GameObject> GameObjectsInRange(int range,Vector3Int position, PartyManager.Faction faction) {
         List<GameObject> characters = new List<GameObject>();
         var seenGos =GridManager.i.tools.Circle(range, position);
         foreach(var positionInCircle in seenGos) {
@@ -130,20 +134,33 @@ public class GoMethod
         return characters;
     }
 
-    public GameObject FindClosestGameObject(int range, Vector3Int position, PartyManager.Faction faction) {
+    public List<GameObject> GameObjectsInSightExcludingAllies(int range, Vector3Int position, PartyManager.Faction faction) {
+        List<GameObject> characters = new List<GameObject>();
+        var seenGos = GridManager.i.tools.Circle(range, position);
+        foreach (var positionInCircle in seenGos) {
+            var character = goGrid[positionInCircle.x, positionInCircle.y];
+            if (character == null) { continue; }
+            if (!IsInSight(position, positionInCircle)) { continue; }
+            if (character.GetComponent<Stats>().faction == faction) {
+                characters.Add(character);
+            }
+        }
+        return characters;
+    }
+
+    public GameObject FindClosestGameObject(int range, Vector3Int position, PartyManager.Faction faction, bool inSight) {
         var visibility = GridManager.i.tools.Circle(range, position);
         float closestDistace = float.MaxValue;
         GameObject closestTarget = null;
         foreach (Vector3Int pos in visibility) {
             var target = GetGameObject(pos);
-            if (target != null) {
-                if (target.GetComponent<Stats>().faction == faction) {
-                    var distance = Vector3Int.Distance(position, pos);
-                    if (distance < closestDistace) {
-                        closestDistace = distance;
-                        closestTarget = target;
-                    }
-                }
+            if (target == null) { continue; }
+            if (inSight) { if (!IsInSight(position, pos)) { continue; } }
+            if (target.GetComponent<Stats>().faction != faction) { continue; }
+            var distance = Vector3Int.Distance(position, pos);
+            if (distance < closestDistace) {
+                closestDistace = distance;
+                closestTarget = target;
             }
         }
         return closestTarget;
@@ -204,7 +221,6 @@ public class GoMethod
                         return clone;
                     }
                     if (assets.IsCharacter(tile)) {
-                        Debug.Log("enqueue0");
                         cellstocheck.Enqueue(pos);
                     }
                 }

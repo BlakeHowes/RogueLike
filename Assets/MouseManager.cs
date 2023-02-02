@@ -52,7 +52,7 @@ public class MouseManager : MonoBehaviour
             var origin = currentCharacter.position();
             var currentStats =currentCharacter.GetComponent<Stats>();
             var inventory = currentCharacter.GetComponent<Inventory>();
-            var state = PartyManager.i.state;
+            var state = currentStats.state;
             //Update the stats of the character whos turn it is currently based on their equipment
             currentStats.ResetTempStats();
             currentCharacter.GetComponent<Inventory>().CallEquipment(origin, origin, ItemAbstract.Signal.CalculateStats);
@@ -86,6 +86,10 @@ public class MouseManager : MonoBehaviour
             var item = newpos.item();
             if (item != null && position == newpos) {
                 Actions.i.PickUpItem(newpos);
+            }
+
+            if (newpos == position || newpos == origin) {
+                walked = false;
             }
             EndOfAction();
         }
@@ -166,7 +170,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public bool CheckActionPoints(Vector3Int origin,Inventory inventory,Stats stats) {
-        if(PartyManager.i.state == State.Exploring) { return true; }
+        if(stats.state == State.Idle) { return true; }
         stats.actionPointsSum = 0;
         inventory.CallEquipment(origin, origin,ItemAbstract.Signal.ActionPointSum);
         var sum = stats.actionPointsSum;
@@ -175,11 +179,17 @@ public class MouseManager : MonoBehaviour
     }
 
     public void EndOfAction() {
-        GridManager.i.ClearSemiFog();
         var partyManager = PartyManager.i;
-        partyManager.EnemyPartyState();
+        var currentCharacter = PartyManager.i.currentCharacter;
+        var currentStats = currentCharacter.GetComponent<Stats>();
+        GridManager.i.ClearSemiFog();
+        foreach(GameObject member in partyManager.party) {
+            member.GetComponent<NPCSearch>().Search();
+        }
 
-        if (partyManager.state == State.Exploring) {
+        partyManager.Follow();
+        
+        if (currentStats.state == State.Idle) {
             foreach (GameObject member in partyManager.party) {
                 member.GetComponent<Stats>().ResetActionPoints();
             }
@@ -187,21 +197,22 @@ public class MouseManager : MonoBehaviour
                 partyManager.partyMemberTurnTaken.Clear();
                 partyManager.SetCurrentCharacter(PartyManager.i.party[0]);
             }
-            partyManager.Follow();
+            
         }
-        state = partyManager.state;
-        if(partyManager.currentCharacter.GetComponent<Stats>().actionPoints <= 0) {
+        
+        if (partyManager.currentCharacter.GetComponent<Stats>().actionPoints <= 0) {
             partyManager.EndTurn();
             walked = false;
         }
-        GridManager.i.UpdateGame();
-        GameUIManager.i.uiTilemap.ClearAllTiles();
+        
+        GridManager.i.TickGame();
+
         if (Input.GetMouseButtonDown(0)) {
-            StartCoroutine(MovementTest(clickPosition));
+            StartCoroutine(RepeatInput(clickPosition));
         }
     }
 
-    public IEnumerator MovementTest(Vector3Int position) {
+    public IEnumerator RepeatInput(Vector3Int position) {
         var repeatSpeedPathing = PathingManager.i.repeatSpeed;
         while (walked) {
             yield return new WaitForSeconds(repeatSpeedPathing);

@@ -27,11 +27,11 @@ public class InventorySlot : MonoBehaviour
     public void Equip() {
         var itemSelected = MouseManager.i.itemSelected;
         var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
-        var inventoryItems = inventory.items;
+        var inventoryItems = inventory;
         GetComponent<Image>().sprite = defaultImage;
         //remove already equiped item and add to inventory
         if (item != null) {
-            inventoryItems.Add(item);
+            inventoryItems.AddItem(item);
             InventoryManager.i.RemoveType(item,slotType);
             item = null;
         }
@@ -52,8 +52,8 @@ public class InventorySlot : MonoBehaviour
             PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats(); //RECALCUATE TEST
             return;
         }
-        if (inventoryItems.Contains(itemSelected)) {
-            inventoryItems.Remove(itemSelected);
+        if (inventoryItems.items.Contains(itemSelected)) {
+            inventoryItems.RemoveItem(itemSelected);
         }
 
         GetComponent<Image>().sprite = itemSelected.tile.sprite;

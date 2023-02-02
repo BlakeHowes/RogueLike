@@ -13,7 +13,7 @@ public class Stats : MonoBehaviour {
     public Sprite baseHair;
     public Sprite baseFace;
     public PartyManager.Faction faction = PartyManager.Faction.Enemy;
-    public AIAbstract.State state = AIAbstract.State.Idle;
+    public PartyManager.State state = PartyManager.State.Idle;
     public List<ItemAbstract> deathAction;
 
     [Header("Base Stats")]
@@ -23,6 +23,7 @@ public class Stats : MonoBehaviour {
     public int throwingRangeBase;
     public int fistDamageBase;
     public int walkCostBase;
+    public int enemyAlertRangeBase;
 
     [Header("Temporary Stats")]
     [NonSerialized] public int maxHealthTemp;
@@ -30,6 +31,7 @@ public class Stats : MonoBehaviour {
     [NonSerialized] public int throwingRangeTemp;
     [NonSerialized] public int fistDamageTemp;
     [NonSerialized] public int walkCostTemp;
+    [NonSerialized] public int enemyAlertRangeTemp;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -43,7 +45,6 @@ public class Stats : MonoBehaviour {
     [Header("Resources")]
     public GameObject healthbar;
     private Slider healthbarSlider;
-    public AIAbstract ai;
     public void OnEnable() {
         if(faction == PartyManager.Faction.Party) {
             DontDestroyOnLoad(this);
@@ -62,10 +63,6 @@ public class Stats : MonoBehaviour {
         ResetActionPoints();
         CreateHealthBar();
         ResetTempStats();
-        if (ai != null) {
-            var aiPrefab = ai;
-            ai = Instantiate(aiPrefab);
-        }
     }
 
     public void ResetTempStats() {
@@ -75,22 +72,14 @@ public class Stats : MonoBehaviour {
         throwingRangeTemp = throwingRangeBase;
         fistDamageTemp = fistDamageBase;
         walkCostTemp = walkCostBase;
+        enemyAlertRangeTemp = enemyAlertRangeBase;
     }
 
-    public void AIAttack() {
-        GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
-    }
-
-    public void AISense() {
-        GetComponent<Behaviours>().UpdateInformation();
-
-    }
     public void TakeDamage(int damage,Vector3Int origin) {
         var position = gameObject.position();
         var inventory = GetComponent<Inventory>();
 
         inventory.CallEquipment(position, position, Signal.CalculateStats);
-        Debug.Log("character "+gameObject.name+" armour temp "+armourTemp);
         inventory.CallEquipment(position, position, Signal.TakeDamage);
 
         if (infiniteHealth) { StartCoroutine(
@@ -99,9 +88,6 @@ public class Stats : MonoBehaviour {
             return; 
         }
 
-        if (ai != null) { state = AIAbstract.State.Attacking; }
-        Debug.Log(armourTemp);
-       
         if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); StartCoroutine(PartyManager.i.TakeDamageAnimation(gameObject, origin)); return;}
         damage -= armourTemp;
         if (damage < 1) { damage = 1; }
