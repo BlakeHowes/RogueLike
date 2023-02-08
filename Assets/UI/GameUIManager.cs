@@ -48,7 +48,7 @@ public class GameUIManager : MonoBehaviour {
                 uiTilemap.SetColor(position, Color.green);
             }
             else {
-                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Breakable) { uiTilemap.SetColor(position, Color.yellow); }
+                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Interactable) { uiTilemap.SetColor(position, Color.yellow); }
                 if (character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
                     uiTilemap.SetColor(position, Color.red);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();

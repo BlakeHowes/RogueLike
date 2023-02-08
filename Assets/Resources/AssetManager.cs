@@ -12,17 +12,14 @@ public class AssetManager {
     public AssetManager() {
         //LOAD RESOURCES
         var mechResources = Resources.LoadAll<ItemAbstract>("Mechs");
-        foreach (ItemAbstract mech in mechResources) {
-            mechs.Add(mech);
-        }
+        foreach (ItemAbstract mech in mechResources) { mechs.Add(mech); }
+
         var itemResources = Resources.LoadAll<ItemAbstract>("Items");
-        foreach (ItemAbstract item in itemResources) {
-            items.Add(item);
-        }
+        foreach (ItemAbstract item in itemResources) { items.Add(item); }
+
         var goResources = Resources.LoadAll<GameObject>("GameObjects");
-        foreach (GameObject go in goResources) {
-            gos.Add(go);
-        }
+        foreach (GameObject go in goResources) { gos.Add(go); }
+
         foreach (GameObject go in goResources) {
             var faction = go.GetComponent<Stats>().faction;
             if (faction == PartyManager.Faction.Enemy|| faction==PartyManager.Faction.Party)
@@ -34,31 +31,26 @@ public class AssetManager {
     }
     public ItemAbstract TiletoMech(Tile tile) {
         foreach (ItemAbstract item in mechs) {
-            if (item.tile == tile)
-                return item;
-        }
+            if (item.tile == tile) return item; }
+
         Debug.LogError("Cant find Mech corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
     public ItemAbstract TiletoItem(Tile tile) {
         foreach (ItemAbstract item in items) {
-            if (item.tile == tile)
-                return item;
-        }
+            if (item.tile == tile) return item; }
+
         Debug.LogError("Cant find Item corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
     public GameObject TiletoGameObject(TileBase tile) {
         foreach (GameObject go in gos) {
-            if (go.GetComponent<Stats>().tile == tile)
-                return go;
-        }
+            if (go.GetComponent<Stats>().tile == tile) return go; }
 
         var gameobject =SearchTileSpriteInstead(tile);
         if (gameobject != null) {
             Debug.Log("Found " + gameobject + " using sprite lookup :)");
-            return gameobject;
-        }
+            return gameobject; }
 
         Debug.LogError("Cant find GameObject corrosponding with " + tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
@@ -69,9 +61,7 @@ public class AssetManager {
         var sprite = tile.sprite;
         foreach (GameObject go in gos) {
             if (go.GetComponent<SpriteRenderer>()) {
-                if (go.GetComponent<SpriteRenderer>().sprite == sprite)
-                    return go;
-            }
+                if (go.GetComponent<SpriteRenderer>().sprite == sprite) return go; }
         }
         return null;
     }

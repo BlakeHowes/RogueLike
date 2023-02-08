@@ -6,9 +6,11 @@ using static ItemAbstract;
 
 public class Inventory : MonoBehaviour
 {
+    public bool showWeapons;
+    public bool showArmour;
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> skills = new List<ItemAbstract>();
-    public List<ItemAbstract> misc = new List<ItemAbstract>();
+    public List<ItemAbstract> permanentTraits = new List<ItemAbstract>();
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
     public ItemAbstract helmet;
@@ -41,7 +43,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
-        foreach (var item in misc) { if (item) item.Call(position, origin, signal); }
+        foreach (var item in permanentTraits) { if (item) item.Call(position, origin, signal); }
         foreach (var item in trinkets) { if (item) item.Call(position, origin, signal); }
 
         if (helmet) { helmet.Call(position, origin, signal); }
@@ -51,7 +53,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void CheckEquipment(Vector3Int position, Vector3Int origin) {
-        foreach (var item in misc) { if (item) item.CheckConditions(position, origin); }
+        foreach (var item in permanentTraits) { if (item) item.CheckConditions(position, origin); }
         foreach (var item in trinkets) { item.CheckConditions(position, origin); }
 
         if (offHand) { offHand.CheckConditions(position, origin); }

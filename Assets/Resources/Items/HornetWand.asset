@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
-  m_Name: Wand Of AOE
+  m_Name: HornetWand
   m_EditorClassIdentifier: 
   type: 1
-  tile: {fileID: 11400000, guid: ecd8ca0c5f6dfab4f8df11ef120ae9d4, type: 2}
+  tile: {fileID: 11400000, guid: 23ea02ed19402474d99957d7b9c90fb0, type: 2}
+  particles: {fileID: 0}
+  Modifiers:
+  - {fileID: 11400000, guid: 4e34272fb2c46784db178d0e29771bf6, type: 2}
+  linePrefab: {fileID: 0}
+  duelWield: 0
   actionPointCost: 1
-  particles: {fileID: 8288408381700605430, guid: b4449ad1c19fde34d9fd314218fc3c46, type: 3}
-  Modifiers: []
-  linePrefab: {fileID: 1536987088575334153, guid: 0d32699a6ae2be243a2a437c7bc3d577, type: 3}
   damageBase: 5
-  damageMaxBase: 0
+  damageMaxBase: 3
   accuracyBase: 8
   rangeBase: 5
   damageMultipleBase: 1

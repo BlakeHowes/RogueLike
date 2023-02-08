@@ -97,7 +97,7 @@ public class GoMethod
         return Position;
     }
 
-    public Vector3Int FirstWallInSight(Vector3Int Position, Vector3Int Origin) {
+    public Vector3Int FirstLightBlockingThingInSight(Vector3Int Position, Vector3Int Origin) {
         var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
         if (cells.Count == 0) {
             return Position;
@@ -105,8 +105,8 @@ public class GoMethod
         foreach (var cell in cells) {
             if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {
                 GetGameObjectOrSpawnFromTile(cell);
-                var cellFaction = cell.gameobjectGO().GetComponent<Stats>().faction;
-                if (cellFaction != PartyManager.Faction.Wall) { continue; }
+                var blocksLight = cell.gameobjectGO().GetComponent<Stats>().blocksLight;
+                if (!blocksLight) { continue; }
                 return cell;
             }
         }
@@ -115,6 +115,14 @@ public class GoMethod
 
     public bool IsInSight(Vector3Int position,Vector3Int target) {
         var gameobjectInSight =FirstGameObjectInSight(target, position);
+        if (gameobjectInSight == target) {
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsBehindLightBlocker(Vector3Int position, Vector3Int target) {
+        var gameobjectInSight = FirstLightBlockingThingInSight(target, position);
         if (gameobjectInSight == target) {
             return true;
         }
@@ -140,7 +148,7 @@ public class GoMethod
         foreach (var positionInCircle in seenGos) {
             var character = goGrid[positionInCircle.x, positionInCircle.y];
             if (character == null) { continue; }
-            if (!IsInSight(position, positionInCircle)) { continue; }
+            if (!IsBehindLightBlocker(position, positionInCircle)) { continue; }
             if (character.GetComponent<Stats>().faction == faction) {
                 characters.Add(character);
             }

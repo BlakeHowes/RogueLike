@@ -59,7 +59,7 @@ public class PartyManager : MonoBehaviour {
     public enum Faction {
         Party,
         Enemy,
-        Breakable,
+        Interactable,
         Wall,
         Passive
     }

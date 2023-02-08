@@ -103,7 +103,7 @@ public class GridManager : MonoBehaviour {
             foreach (GameObject character in partyFromLastScene) {
                 GameObject clone = null;
                 if (character.TryGetComponent<Stats>(out Stats stats)) {
-                    if (stats == null) { continue; }
+                    if (stats == null || character.activeSelf == false) { continue; }
                     clone = goMethods.SpawnFloodFill(position, character);
                     PartyManager.i.AddPartyMember(clone);
                     if (clone.TryGetComponent<CharacterCreator>(out CharacterCreator cc)) {
@@ -227,7 +227,7 @@ public class GridManager : MonoBehaviour {
         clone.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
         PartyManager.i.AddPartyMember(clone);
         clone.GetComponent<SpriteRenderer>().color = colour;
-        InventoryManager.i.UpdateEquipmentSprites(clone.GetComponent<Inventory>());
+        InventoryManager.i.UpdateSpriteFromItems(clone.GetComponent<Inventory>());
     }
 
     public GameObject[,] GetGoGrid() {

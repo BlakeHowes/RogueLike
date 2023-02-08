@@ -42,6 +42,6 @@ Material:
     - _ThicknessY: 0.031
     - _YThickness: 0.03
     m_Colors:
-    - _Color: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Thickness: {r: 0.06, g: 0.06, b: 0, a: 0}
   m_BuildTextureStacks: []

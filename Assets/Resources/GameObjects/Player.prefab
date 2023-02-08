@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6780645703283991165}
+  - component: {fileID: -2139632145659441176}
   - component: {fileID: 6780645703283991166}
   - component: {fileID: 6780645703283991167}
   - component: {fileID: 7475694374052512725}
@@ -35,6 +36,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2139632145659441176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780645703283991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5610c26518ed66428e968e72df3dce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  race: {fileID: 11400000, guid: 0e06e039699fcd5498c53a73d8e02fe0, type: 2}
+  body: {fileID: 21300000, guid: 0ba2785c87038d146b44d0a40ef32156, type: 3}
+  bodyPalette: {fileID: 11400000, guid: 59bfa559bb80de749a2990c62bb72ef7, type: 2}
+  hair: {fileID: 21300000, guid: 38667c2fd024e244db3522254f355162, type: 3}
+  hairPalette: {fileID: 11400000, guid: 4f0892ca02c175849826c40814e9029c, type: 2}
+  loadout: {fileID: 11400000, guid: 0d507749a8acf8640b02ea5a081c0f67, type: 2}
+  face: {fileID: 21300000, guid: 0713137dcfc414748b44eeb67faf2f4b, type: 3}
+  facePalette: {fileID: 11400000, guid: a9690c5de50602f48815b14c0925e043, type: 2}
+  headOffset: {x: 1, y: 18, z: 0}
+  male: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,12 +71,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
-  baseSprite: {fileID: 21300000, guid: dc069b3b37b2e214d9ee3b562bb3b32a, type: 3}
-  baseHair: {fileID: 21300000, guid: c40adabd2d2ef8a4185a13cab940bdce, type: 3}
-  baseFace: {fileID: 21300000, guid: 9d2725cf49d9a9a409587820aeb266dd, type: 3}
   faction: 0
   state: 0
   deathAction: []
+  blocksLight: 0
   maxHealthBase: 100
   armourBase: 0
   actionPointsBase: 14
@@ -79,6 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showWeapons: 1
+  showArmour: 1
   items:
   - {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   - {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}

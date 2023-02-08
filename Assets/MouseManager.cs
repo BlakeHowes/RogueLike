@@ -28,7 +28,7 @@ public class MouseManager : MonoBehaviour
 
         if (position != lastMousePosition) {
             lastMousePosition = position;
-            if (EventSystem.current.IsPointerOverGameObject()) { return; }
+            if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
             if (GridManager.i.FogTile(position)) {
                 GameUIManager.i.HideHighlight();
             }
@@ -119,7 +119,7 @@ public class MouseManager : MonoBehaviour
         if (targetStats.faction == currentStats.faction) { return false; }
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
-
+        if(currentStats.state == State.Idle && targetStats.faction == Faction.Interactable) { goto Meelee; }
         inventory.CheckEquipment(position, origin);
         if (itemCanBeUsed == true) {
             if (CheckActionPoints(origin, inventory, currentStats) == false) { return false; };
@@ -129,6 +129,7 @@ public class MouseManager : MonoBehaviour
             return true;
         }
 
+        Meelee:
         var range = GridManager.i.tools.MeeleeRange(origin);
         if (range.Contains(position) && currentStats.actionPoints > 0) {
             currentStats.actionPoints -= 1;

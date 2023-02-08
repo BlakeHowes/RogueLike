@@ -15,7 +15,7 @@ public class PullMod : ItemAbstract
         //if(PartyManager.i.state != PartyManager.State.Combat) { return false; }
         if (target == null) return false;
         var faction = target.GetComponent<Stats>().faction;
-        if (faction == PartyManager.Faction.Wall || faction == PartyManager.Faction.Breakable) { return false; }
+        if (faction == PartyManager.Faction.Wall || faction == PartyManager.Faction.Interactable) { return false; }
         if (!GridManager.i.tools.InRange(position, origin, range)) { return false; }
         if (GridManager.i.tools.InMeeleeRange(position, origin)) { return false; }
         return true;

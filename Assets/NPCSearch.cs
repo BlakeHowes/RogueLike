@@ -11,18 +11,20 @@ public class NPCSearch : MonoBehaviour
     public void Search() {
         var origin = gameObject.position();
         var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(stats.enemyAlertRangeTemp, origin, PartyManager.Faction.Enemy);
-        if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) { 
+        if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) {
             stats.state = PartyManager.State.Idle;
             var partyTurns = PartyManager.i.partyMemberTurnTaken;
             if (partyTurns.Contains(gameObject)) {
                 partyTurns.Remove(gameObject);
             }
-            return;  
+            return;
         }
-        foreach (var enemy in enemies) {
-            if (enemy == null) { continue; }
-            PartyManager.i.AddEnemy(enemy);
+        if (enemies.Count >= 1) {
+            foreach (var enemy in enemies) {
+                if (enemy == null) { continue; }
+                PartyManager.i.AddEnemy(enemy);
+            }
+            stats.state = PartyManager.State.Combat;
         }
-        stats.state = PartyManager.State.Combat;
     }
 }

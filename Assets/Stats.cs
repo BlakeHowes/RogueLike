@@ -9,12 +9,10 @@ using static ItemAbstract;
 
 public class Stats : MonoBehaviour {
     public TileBase tile;
-    public Sprite baseSprite;
-    public Sprite baseHair;
-    public Sprite baseFace;
     public PartyManager.Faction faction = PartyManager.Faction.Enemy;
     public PartyManager.State state = PartyManager.State.Idle;
     public List<ItemAbstract> deathAction;
+    public bool blocksLight;
 
     [Header("Base Stats")]
     public int maxHealthBase;
@@ -49,10 +47,9 @@ public class Stats : MonoBehaviour {
         if(faction == PartyManager.Faction.Party) {
             DontDestroyOnLoad(this);
         }
-        if (faction != PartyManager.Faction.Wall && faction != PartyManager.Faction.Breakable) {
+        if (faction != PartyManager.Faction.Wall && faction != PartyManager.Faction.Interactable) {
             var inventory = GetComponent<Inventory>();
-            InventoryManager.i.UpdateEquipmentSprites(inventory);
-            InventoryManager.i.CreateCharacterSprite(gameObject);
+            InventoryManager.i.UpdateSpriteFromItems(inventory);
         }
         if (maxHealthTemp == 0) {
             maxHealthTemp = maxHealthBase;
@@ -93,7 +90,7 @@ public class Stats : MonoBehaviour {
         if (damage < 1) { damage = 1; }
         health -= damage;
         //Create hit number
-        if (faction != PartyManager.Faction.Breakable) {
+        if (faction != PartyManager.Faction.Interactable) {
             if (damage == 0) { SpawnHitNumber("Dodge", Color.yellow, 1); }
             SpawnHitNumber(damage.ToString(),Color.red,1);
         }
