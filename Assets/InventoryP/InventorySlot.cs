@@ -10,6 +10,7 @@ public class InventorySlot : MonoBehaviour
     public Sprite defaultImage;
     public void AddItem(ItemAbstract itemToAdd) {
         item = itemToAdd;
+        GetComponent<Image>().sprite = item.tile.sprite;
     }
 
     public void SelectItem() {

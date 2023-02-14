@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Shields Up
   m_EditorClassIdentifier: 
   type: 0
-  tile: {fileID: 0}
-  particles: {fileID: 0}
+  tile: {fileID: 11400000, guid: 14144dd66cc91604084ad8414e7d407d, type: 2}
+  particles: {fileID: 8288408381700605430, guid: a747a05aa971582499869f1eed8e5eb4, type: 3}
   Modifiers:
   - {fileID: 11400000, guid: 2255328d829695643934d82083a3ee13, type: 2}
-  range: 3
-  actionPointCost: 4
+  range: 4
+  actionPointCost: 3
   coolDown: 6

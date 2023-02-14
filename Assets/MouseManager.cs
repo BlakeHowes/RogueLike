@@ -37,8 +37,11 @@ public class MouseManager : MonoBehaviour
             }
         }
 
-     
 
+        if (Input.GetMouseButtonDown(1)) {
+            itemSelected = null;
+            GameUIManager.i.groundUI.ClearAllTiles();
+        }
 
         
 
@@ -52,10 +55,10 @@ public class MouseManager : MonoBehaviour
             var origin = currentCharacter.position();
             var currentStats =currentCharacter.GetComponent<Stats>();
             var inventory = currentCharacter.GetComponent<Inventory>();
-            var state = currentStats.state;
+            state = currentStats.state;
             //Update the stats of the character whos turn it is currently based on their equipment
             currentStats.ResetTempStats();
-            currentCharacter.GetComponent<Inventory>().CallEquipment(origin, origin, ItemAbstract.Signal.CalculateStats);
+            inventory.CallEquipment(position, origin, ItemAbstract.Signal.CalculateStats);
             if (UseItem(position, origin,currentStats, inventory)) { EndOfAction(); return; };
             if(position == origin) { WaitOrPickUpItem(position,origin,gameobjectundermouse,currentStats,currentCharacter); }
             if(Attack(position, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(); return; };
@@ -253,7 +256,7 @@ public class MouseManager : MonoBehaviour
         if (newpos == position || newpos == origin) {
             walked = false;
         }
-       
+        if(currentStats.state == State.Combat && state == State.Idle) { walked = false; }
         EndOfAction();
     }
 

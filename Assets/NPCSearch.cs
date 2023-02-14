@@ -10,7 +10,9 @@ public class NPCSearch : MonoBehaviour
     }
     public void Search() {
         var origin = gameObject.position();
-        var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(stats.enemyAlertRangeTemp, origin, PartyManager.Faction.Enemy);
+        var range = stats.enemyAlertRangeTemp;
+        if(stats.state == PartyManager.State.Combat) { range = stats.enemyAlertRangeBase; }
+        var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(range, origin, PartyManager.Faction.Enemy);
         if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) {
             stats.state = PartyManager.State.Idle;
             var partyTurns = PartyManager.i.partyMemberTurnTaken;

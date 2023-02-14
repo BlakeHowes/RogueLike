@@ -31,6 +31,7 @@ public class ItemToolTip : MonoBehaviour
         else {
             description = "Missing Description";
         }
+        if(image.sprite)
         image.sprite = item.tile.sprite;
     }
 

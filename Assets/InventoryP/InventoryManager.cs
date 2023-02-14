@@ -235,19 +235,11 @@ public class InventoryManager : MonoBehaviour
         }
         var character = PartyManager.i.currentCharacter;
         var inventory = character.GetComponent<Inventory>();
-        //Main Hand
-        var mainHandItem = inventory.mainHand;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform,mainHandSprite,mainHandItem,ItemAbstract.Type.Weapon);
-        //Off Hand
-        var offHandItem = inventory.offHand;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, offHandSprite, offHandItem, ItemAbstract.Type.OffHand);
-        //Armour
-        var helmet = inventory.helmet;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, helmetSprite, helmet, ItemAbstract.Type.Helmet);
-        //Trinket 1
-        var armour = inventory.armour;
-        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, armour, ItemAbstract.Type.Armour);
-        //Trinket 1
+
+        CreateButton(equipmentButtonPrefab, equipmentLayout.transform,mainHandSprite, inventory.mainHand, ItemAbstract.Type.Weapon);
+        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, offHandSprite, inventory.offHand, ItemAbstract.Type.OffHand);
+        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, helmetSprite, inventory.helmet, ItemAbstract.Type.Helmet);
+        CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, inventory.armour, ItemAbstract.Type.Armour);
 
         int trinkettotal = 4;
         ItemAbstract trinket = null;
@@ -266,24 +258,10 @@ public class InventoryManager : MonoBehaviour
         foreach (Transform child in inventoryLayout.transform) {
             Destroy(child.gameObject);
         }
-        var items = character.GetComponent<Inventory>().items;      
-        int i = 0;
-        int totalItems = items.Count;
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                if (i == totalItems) {
-                    return;
-                }
-                if (!items[i]) { items.RemoveAt(i); return; }
-                var buttonclone =Instantiate(inventoryButtonPrefab);
-                buttonclone.transform.SetParent(inventoryLayout.transform, false);
-                buttonclone.GetComponent<InventorySlot>().AddItem(items[i]);
-                buttonclone.GetComponent<Image>().sprite = items[i].tile.sprite;
-                buttonclone.GetComponent<Image>().color = items[i].tile.color;
-                i++;
-            }
+        foreach(var item in inventory.items) {
+            var buttonclone = Instantiate(inventoryButtonPrefab,inventoryLayout.transform);
+            buttonclone.GetComponent<InventorySlot>().AddItem(item);
         }
-        
     }
 
     public ItemAbstract GetWeaponOrSkill(Vector3Int position) {

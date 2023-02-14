@@ -8,10 +8,10 @@ using static UnityEngine.UI.Image;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ItemAbstract> items = new List<ItemAbstract>();
-    public List<ItemAbstract> skills = new List<ItemAbstract>();
+    public HashSet<ItemAbstract> items = new HashSet<ItemAbstract>();
+    public HashSet<ItemAbstract> skills = new HashSet<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
-    public List<ItemAbstract> traitsToRemove = new List<ItemAbstract>();
+    public HashSet<ItemAbstract> traitsToRemove = new HashSet<ItemAbstract>();
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
     public ItemAbstract helmet;
@@ -44,13 +44,15 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
+        if (signal == Signal.CalculateStats) { gameObject.GetComponent<Stats>().ResetTempStats(); }
+        if (mainHand) { mainHand.Call(position, origin, signal); }
+        foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
         foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
         foreach (var item in trinkets) { if (item) item.Call(position, origin, signal); }
-        foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
         if (helmet) { helmet.Call(position, origin, signal); }
         if (armour) { armour.Call(position, origin, signal); }
         if (offHand) { offHand.Call(position, origin, signal); }
-        if (mainHand) { mainHand.Call(position, origin, signal); }
+    
 
         if (traitsToRemove.Count > 0) {
             foreach (var item in traitsToRemove) {
@@ -58,10 +60,16 @@ public class Inventory : MonoBehaviour
         }
     }
     public void CallTraits(Vector3Int position, Vector3Int origin, Signal signal) {
+        if(traits.Count == 0) { return; }
         foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
+
         if (traitsToRemove.Count > 0) {
             foreach (var item in traitsToRemove) {
-            if (traits.Contains(item)) { traits.Remove(item); }}
+                if (traits.Contains(item)) {
+                    traits.Remove(item);
+                }
+
+            }
         }
     }
 

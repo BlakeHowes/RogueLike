@@ -109,6 +109,14 @@ public class PathingManager : MonoBehaviour
         }
     }
 
+    public bool IsPathable(Vector3Int position, Vector3Int origin) {
+        var path = algorithm.AStarSearch(origin, position, false);
+        if (path != null) {
+            return true;
+        }
+        return false;
+    }
+
     public bool EnemyMoveup(Vector3Int position, Vector3Int origin) {
         var character = origin.gameobjectSpawn();
         if (origin == GridManager.i.NullValue) {

@@ -11,7 +11,10 @@ public class SkillSlot : MonoBehaviour
         MouseManager.i.itemSelected = skill;
         var currentCharacter = PartyManager.i.currentCharacter;
         var postion = currentCharacter.position();
-        currentCharacter.GetComponent<Stats>().RecalculateStats();
+        var stats = currentCharacter.GetComponent<Stats>();
+        stats.RecalculateStats();
+        var genericSkill = skill as GenericSkill;
+        if(genericSkill.actionPointCost > stats.actionPoints) { MouseManager.i.itemSelected = null; return; }
         GameUIManager.i.ShowRange(postion, currentCharacter.GetComponent<Stats>().skillRangeTemp);
     }
 

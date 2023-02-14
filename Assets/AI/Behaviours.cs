@@ -14,14 +14,23 @@ public class Behaviours : MonoBehaviour
     public int sightRange;
     public State state = State.Idle;
     Vector3 offset = new Vector3(0.5f, 0.5f, 0.5f);
+    public List<ItemAbstract> itemActions = new List<ItemAbstract>();
     public enum State {
         Attacking,
         Idle
     }
 
     public void OnEnable() {
-        GridManager.i.NPCBehaviours.Add(GetComponent<Behaviours>());
+        GridManager.i.NPCBehavioursPool.Add(GetComponent<Behaviours>());
         //GetComponent<InventoryManager>().UpdateInventory();
+    }
+
+    [Task]
+    public void CallAttackItems() {
+        foreach (ItemAbstract item in itemActions) {
+            item.Call(origin, origin, ItemAbstract.Signal.Attack);
+        }
+        ThisTask.Succeed();
     }
 
     [Task]

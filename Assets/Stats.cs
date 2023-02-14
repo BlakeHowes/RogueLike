@@ -31,8 +31,8 @@ public class Stats : MonoBehaviour {
     [NonSerialized] public int throwingRangeTemp;
     [NonSerialized] public int fistDamageTemp;
     [NonSerialized] public int walkCostTemp;
-    [NonSerialized] public int enemyAlertRangeTemp;
-    [NonSerialized] public int skillRangeTemp;
+    public int enemyAlertRangeTemp;
+    public int skillRangeTemp;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -83,7 +83,7 @@ public class Stats : MonoBehaviour {
         var position = gameObject.position();
         var inventory = GetComponent<Inventory>();
 
-        inventory.CallEquipment(position, position, Signal.CalculateStats);
+        RecalculateStats();
         inventory.CallEquipment(position, position, Signal.TakeDamage);
 
         if (infiniteHealth) {
@@ -91,7 +91,13 @@ public class Stats : MonoBehaviour {
             SpawnHitNumber(damage.ToString(), Color.red, 1);
             return; 
         }
-
+        if(faction == PartyManager.Faction.Enemy) {
+            if(state != PartyManager.State.Combat) {
+                state = PartyManager.State.Combat;
+                PartyManager.i.enemyParty.Add(gameObject);
+            }
+            origin.gameobjectGO().GetComponent<Stats>().state = PartyManager.State.Combat;
+        }
         if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); Actions.i.FlashAnimation(gameObject, origin,Color.white); return;}
         damage -= armourTemp;
         if (damage < 1) { damage = 1; }

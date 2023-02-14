@@ -5,6 +5,7 @@ using UnityEngine;
 public class StatEffectGeneric : ItemAbstract {
     [Header("Options")]
     public int durationTotal;
+    public Signal onSignal;
     int counter = 0;
     [Header("Stats")]
     public int damage;
@@ -33,7 +34,7 @@ public class StatEffectGeneric : ItemAbstract {
             target.GetComponent<Inventory>().traitsToRemove.Add(this);
         }
 
-        if (signal != Signal.StartOfTurnOrTickOutOfCombat) { return; }
+        if (signal != onSignal) { return; }
         if (!target) { return; }
         counter++;
         health += healthChangeAddition;

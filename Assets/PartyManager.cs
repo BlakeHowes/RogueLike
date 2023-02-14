@@ -2,8 +2,6 @@ using Panda;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using static UnityEditor.PlayerSettings;
 
 public class PartyManager : MonoBehaviour {
     public static PartyManager i;

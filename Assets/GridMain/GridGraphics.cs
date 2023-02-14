@@ -116,13 +116,13 @@ public class GridGraphics
             character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
         renderer.material = hitMaterial;
         yield return new WaitForSeconds(0.15f);
-        if (renderer == null) { yield return null; }
-        renderer.material = spriteMaterial;
+        if (renderer) { renderer.material = spriteMaterial; }
         character.transform.position = startPosition;
         yield return new WaitForSeconds(0.15f);
-        renderer.material = hitMaterial;
+        if (renderer) { renderer.material = hitMaterial; }
         yield return new WaitForSeconds(0.15f);
-        renderer.material = spriteMaterial;
+        if (renderer) { renderer.material = spriteMaterial; }
+       
         if (character == PartyManager.i.currentCharacter) {
             renderer.material = GameUIManager.i.outlineMaterial;
         }

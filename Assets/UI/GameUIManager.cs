@@ -56,6 +56,7 @@ public class GameUIManager : MonoBehaviour {
                     uiTilemap.SetColor(position, Color.red);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
                     inventory.CallEquipment(origin, origin, Signal.CalculateStats);
+                    if (MouseManager.i.itemSelected) { return; }
                     var weapon = inventory.mainHand as Weapon;
                     if (!weapon) { ShowRange(origin, 1); }
                     else { ShowRange(origin, weapon.rangeTemp); }

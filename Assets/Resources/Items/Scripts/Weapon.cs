@@ -24,7 +24,7 @@ public class Weapon : ItemAbstract
     [NonSerialized] public int accuracyTemp;
     [NonSerialized] public int damageTemp;
     [NonSerialized] public int damageMaxTemp;
-    [NonSerialized] public int damageMultipleTemp;
+    public int damageMultipleTemp;
     [NonSerialized] public int damage;
     public void ResetTempStats() {
         rangeTemp = rangeBase;
@@ -35,7 +35,9 @@ public class Weapon : ItemAbstract
     }
 
     public void SetDamage(Vector3Int position) {
-        var stats = position.gameobjectGO().GetComponent<Stats>();
+        var target = position.gameobjectGO();
+        if (!target) { goto SkipAccuracy;}
+        var stats = target.GetComponent<Stats>();
 
         //Chance of hitting a zero on characters
         if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
@@ -44,8 +46,10 @@ public class Weapon : ItemAbstract
                 damage = 0;
             }
         }
+        SkipAccuracy:
         damage = Random.Range(damageTemp, damageTemp + damageMaxBase);
         damage *= damageMultipleTemp;
+        Debug.Log("Damage Calculation"+damage);
     }
 
     public override bool Condition(Vector3Int position, Vector3Int origin) {
@@ -79,22 +83,22 @@ public class Weapon : ItemAbstract
             SetDamage(position);
         }
 
+        if (signal != Signal.Attack) { return; }
+        if (ConditionsMet == false) { return; }
+        //if (target == null) { return; }
+
+        Debug.Log("Damage Attack" + damage);
+
+
+        Debug.Log("Weapon Range " + rangeTemp);
+        Debug.Log("position " + position + "origin " + origin);
+        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
+
         foreach (ItemAbstract mod in Modifiers) {
             mod.Call(position, origin, signal);
         }
-        
-        if (signal != Signal.Attack) { return; }
-        if (ConditionsMet == false) { return; }
-        if (target == null) { return; }
-
-        
-
-
-
-        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
-
-
         //Remove health from target
+        if(target)
         target.GetComponent<Stats>().TakeDamage(damage, origin);
 
         EffectManager.i.CreateLineEffect(position, origin, linePrefab);

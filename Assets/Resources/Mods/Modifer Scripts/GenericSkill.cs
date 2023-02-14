@@ -7,15 +7,8 @@ public class GenericSkill : ItemAbstract {
     public int range;
     public int actionPointCost;
     public int coolDown;
-    [NonSerialized]public int coolDownTimer;
+    [NonSerialized]public int coolDownTimer = 0;
 
-    public void Awake() {
-        coolDownTimer = 0;
-    }
-
-    public void OnEnable() {
-        coolDownTimer = 0;
-    }
     public override bool Condition(Vector3Int position, Vector3Int origin) {
         if (MouseManager.i.itemSelected == this) { return true; }
         return false;
@@ -26,6 +19,8 @@ public class GenericSkill : ItemAbstract {
             GameUIManager.i.AddSkill(this);
             return;
         }
+
+
 
         if (signal == Signal.StartOfTurnOrTickOutOfCombat) {
             if (coolDownTimer > 0)
@@ -40,20 +35,28 @@ public class GenericSkill : ItemAbstract {
             }
             return;
         }
-
+        if (MouseManager.i.itemSelected != this) { return; }
         if (signal == Signal.CalculateStats) {
             var character = origin.gameobjectGO();
             character.GetComponent<Stats>().skillRangeTemp += range;
+            foreach(var mod in Modifiers) {
+                mod.Call(position, origin, Signal.CalculateStats);
+            }
         }
 
         if (signal != Signal.Attack) { return; } 
-        if (MouseManager.i.itemSelected != this) { return; }
+        
         coolDownTimer = coolDown;
         foreach (var mod in Modifiers) {
+            if(mod is Weapon) {
+                var weapon = mod as Weapon;
+                weapon.rangeTemp = range;
+                mod.ConditionsMet = true;
+                mod.Call(position, origin, Signal.WeaponDamageCalculate);
+            }
             mod.Call(position, origin, Signal.SetTarget);
             mod.Call(position, origin, Signal.Attack);
         }
-        
     }
     public override string Description() {
         string description = "";

@@ -30,6 +30,7 @@ public class GridManager : MonoBehaviour {
     [NonSerialized] public GoMethod goMethods;
 
     //NPC tick
+    public List<Behaviours> NPCBehavioursPool = new List<Behaviours>();
     public List<Behaviours> NPCBehaviours = new List<Behaviours>();
 
     // Tilemaps
@@ -237,7 +238,7 @@ public class GridManager : MonoBehaviour {
     }
 
     public void InstantiateGosAroundCharacters() {
-        int size = 23;
+        int size = 15;
         var party = PartyManager.i.party;
         foreach (GameObject member in party) {
             var pos = member.position();
@@ -267,13 +268,16 @@ public class GridManager : MonoBehaviour {
             var position = player.transform.position.FloorToInt();
             player.GetComponent<Inventory>().CallTraits(position, position, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
         }
-
+        foreach(Behaviours behaviour in NPCBehavioursPool) {
+            NPCBehaviours.Add(behaviour);
+        }
+        NPCBehavioursPool.Clear();
         foreach (Behaviours behaviour in NPCBehaviours) {
             if (!behaviour) { continue; }
             if (PartyManager.i.enemyParty.Contains(behaviour.gameObject)) { continue; }
             var position = behaviour.gameObject.transform.position.FloorToInt();
             behaviour.GetComponent<Inventory>().CallTraits(position, position, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
-            behaviour.IdleBehaviour();
+            behaviour.GetComponent<PandaBehaviour>().Tick();
         }
         mechFloorTick();
         UpdateGame();

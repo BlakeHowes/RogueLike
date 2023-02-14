@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   tile: {fileID: 0}
-  particles: {fileID: 0}
+  particles: {fileID: 8288408381700605430, guid: a747a05aa971582499869f1eed8e5eb4, type: 3}
   Modifiers:
   - {fileID: 11400000, guid: 140e277ed138cac4fbe28b8c2a515316, type: 2}
   - {fileID: 11400000, guid: 24bb45c9fa389cc4b8cc7e2ed2730fc9, type: 2}
