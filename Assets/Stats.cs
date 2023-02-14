@@ -22,18 +22,21 @@ public class Stats : MonoBehaviour {
     public int fistDamageBase;
     public int walkCostBase;
     public int enemyAlertRangeBase;
+    public int skillRangeBase;
 
     [Header("Temporary Stats")]
     [NonSerialized] public int maxHealthTemp;
     [NonSerialized] public int armourTemp;
+    [NonSerialized] public int actionPointsTemp;
     [NonSerialized] public int throwingRangeTemp;
     [NonSerialized] public int fistDamageTemp;
     [NonSerialized] public int walkCostTemp;
     [NonSerialized] public int enemyAlertRangeTemp;
+    [NonSerialized] public int skillRangeTemp;
 
     [Header("Dynamic Stats")]
     public int health;
-    public int actionPoints;
+    public float actionPoints;
     public int actionPointsSum;
 
     [Header("Options")]
@@ -43,10 +46,24 @@ public class Stats : MonoBehaviour {
     [Header("Resources")]
     public GameObject healthbar;
     private Slider healthbarSlider;
+
+    public void ResetTempStats() {
+        actionPointsSum = 0;
+        actionPointsTemp = actionPointsBase;
+        maxHealthTemp = maxHealthBase;
+        armourTemp = armourBase;
+        throwingRangeTemp = throwingRangeBase;
+        fistDamageTemp = fistDamageBase;
+        walkCostTemp = walkCostBase;
+        enemyAlertRangeTemp = enemyAlertRangeBase;
+        skillRangeTemp = skillRangeBase;
+    }
+
     public void OnEnable() {
         if(faction == PartyManager.Faction.Party) {
             DontDestroyOnLoad(this);
         }
+
         if (faction != PartyManager.Faction.Wall && faction != PartyManager.Faction.Interactable) {
             var inventory = GetComponent<Inventory>();
             InventoryManager.i.UpdateSpriteFromItems(inventory);
@@ -56,20 +73,10 @@ public class Stats : MonoBehaviour {
             health = maxHealthTemp;
         }
         if (!GridManager.i) return;
-        
+        ResetTempStats();
         ResetActionPoints();
         CreateHealthBar();
         ResetTempStats();
-    }
-
-    public void ResetTempStats() {
-        actionPointsSum = 0;
-        maxHealthTemp = maxHealthBase;
-        armourTemp = armourBase;
-        throwingRangeTemp = throwingRangeBase;
-        fistDamageTemp = fistDamageBase;
-        walkCostTemp = walkCostBase;
-        enemyAlertRangeTemp = enemyAlertRangeBase;
     }
 
     public void TakeDamage(int damage,Vector3Int origin) {
@@ -141,7 +148,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void ResetActionPoints() {
-        actionPoints = actionPointsBase;
+        actionPoints = actionPointsTemp;
     }
 
     public void RecalculateStats() {

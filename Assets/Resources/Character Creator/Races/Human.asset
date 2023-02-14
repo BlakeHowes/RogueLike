@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76d8c5e9f7195d4eaa2a8968bc62cba, type: 3}
   m_Name: Human
   m_EditorClassIdentifier: 
-  skinColours:
+  bodyPalettes:
   - {fileID: 11400000, guid: 59bfa559bb80de749a2990c62bb72ef7, type: 2}
+  - {fileID: 11400000, guid: 1cdce3670ac066347a547e032a0b1131, type: 2}
   - {fileID: 11400000, guid: 907a2c4c613d31d42906e5914f406f54, type: 2}
+  - {fileID: 11400000, guid: e891c082b2fe76b40a2c78dcfc89aed4, type: 2}
   features: []
-  abilities: []
+  featurePalettes: []
+  permanentTraits: []
+  extraPartHead: {fileID: 0}
+  extraPartBody: {fileID: 0}

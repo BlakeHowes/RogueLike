@@ -30,13 +30,16 @@ public class GameUIManager : MonoBehaviour {
     public Tilemap groundUI;
     public Sprite defaultSkillSprite;
     public Texture2D boarderEffectTexture;
+    public GameObject enemyInCombatUI;
     public void Awake() {
         i = this;
     }
 
     public void HighlightMouseTile(Vector3Int position) {
+        if (!MouseManager.i.itemSelected) {
+            groundUI.ClearAllTiles();
+        }
         uiTilemap.ClearAllTiles();
-        groundUI.ClearAllTiles();
         var origin = PartyManager.i.GetCurrentTurnCharacter().position();
         uiTilemap.SetTile(position, mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
@@ -87,6 +90,7 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void AddSkill(ItemAbstract skill) {
+        if (PartyManager.i.currentCharacter.GetComponent<Inventory>().skills.Contains(skill)){ return; }
         var clone = Instantiate(skillSlotPrefab, skillLayout.transform);
         clone.GetComponent<SkillSlot>().AddSkill(skill);
     }
@@ -118,6 +122,7 @@ public class GameUIManager : MonoBehaviour {
             Destroy(child.gameObject);
         }
         foreach(GameObject member in party) {
+            if(member == null) continue;
             var clone = Instantiate(iconPrefab,iconLayout.transform);
             var partyicon = clone.gameObject.GetComponent<PartyIcon>();
             var state = member.GetComponent<Stats>().state;

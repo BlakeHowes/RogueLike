@@ -84,7 +84,7 @@ public class GridManager : MonoBehaviour {
         }
     }
 
-    public void Tick() {
+    public void mechFloorTick() {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 Vector3Int position = new Vector3Int(x, y);
@@ -258,13 +258,13 @@ public class GridManager : MonoBehaviour {
     }
 
     public void TickGame() {
-        Tick();
         foreach (Behaviours behaviour in NPCBehaviours) {
             if (!behaviour) { continue; }
             if (PartyManager.i.enemyParty.Contains(behaviour.gameObject)) { continue; }
             behaviour.IdleBehaviour();
 
         }
+        mechFloorTick();
         UpdateGame();
     }
 

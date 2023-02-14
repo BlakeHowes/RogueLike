@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   race: {fileID: 11400000, guid: 0e06e039699fcd5498c53a73d8e02fe0, type: 2}
-  body: {fileID: 21300000, guid: 272d7308256d92945af30130b5a74d0a, type: 3}
+  body: {fileID: 21300000, guid: 5221153a3be5c254cb032f45c05d32b5, type: 3}
   bodyPalette: {fileID: 11400000, guid: 59bfa559bb80de749a2990c62bb72ef7, type: 2}
   hair: {fileID: 21300000, guid: 7a8c85db1c16f184d910023f58689985, type: 3}
   hairPalette: {fileID: 11400000, guid: d21502aac5b87974a9d37e77c8d8e92d, type: 2}
@@ -105,7 +105,7 @@ MonoBehaviour:
   showArmour: 1
   items: []
   skills: []
-  misc: []
+  permanentTraits: []
   mainHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 11400000, guid: 13b4bceec1561d94c95903ce2e18c39d, type: 2}

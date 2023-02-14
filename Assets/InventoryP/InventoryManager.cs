@@ -25,7 +25,7 @@ public class InventoryManager : MonoBehaviour
     public Sprite armourSprite;
     public Sprite trinketSprite;
 
-    public Vector3 mainHandOffset = new Vector3(0.6f,0.499f,0);
+    public Vector3Int characterOffset;
     public void Awake() {
         i = this;
     }
@@ -80,6 +80,21 @@ public class InventoryManager : MonoBehaviour
         return target;
     }
 
+    public Texture2D PasteSpriteMask(Texture2D source, Texture2D target,Texture2D mask, Vector3Int offset) {
+        var targetWidth = target.width;
+        var targetHeight = target.height;
+        for (int x = 0; x < source.width; x++) {
+            for (int y = 0; y < source.height; y++) {
+                if (x > targetWidth || y > targetHeight || x < 0 || y < 0) { continue; }
+                if (mask.GetPixel(x + offset.x, y + offset.y).a == 0) { continue; }
+                var colour = source.GetPixel(x, y);
+                if (colour.a >= 1.0f) { target.SetPixel(x + offset.x, y + offset.y, colour); }
+            }
+        }
+        target.Apply();
+        return target;
+    }
+
     public void CreateCharacterSprite(GameObject character) {
         character.TryGetComponent(out CCOptions options);
         if (!options) { return; }
@@ -89,58 +104,97 @@ public class InventoryManager : MonoBehaviour
         var helmet = inventory.helmet;
         if (options.body == null) return;
         var colouredBody = ColourReplacer.i.ColourizeSprite(options.body, options.bodyPalette);
-        Debug.Log("After Colourizer");
         Texture2D baseTexture = duplicateTexture(colouredBody.texture);
-        
+
+        if (options.race.extraPartHead) {
+            var colouredPart = ColourReplacer.i.ColourizeSprite(options.race.extraPartHead, options.bodyPalette);
+            baseTexture = PasteSprite(colouredPart, baseTexture, options.headOffset + characterOffset);
+        }
+
+        if (options.race.extraPartBody) {
+            var colouredPart = ColourReplacer.i.ColourizeSprite(options.race.extraPartBody, options.bodyPalette);
+            baseTexture = PasteSprite(colouredPart, baseTexture, Vector3Int.zero);
+        }
+
         if (options.face) {
             var colouredFace = ColourReplacer.i.ColourizeSprite(options.face, options.facePalette);
-            baseTexture = PasteSprite(colouredFace, baseTexture, options.headOffset); 
+            baseTexture = PasteSprite(colouredFace, baseTexture, options.headOffset+ characterOffset); 
         }
         if (helmet) {
             var helmetEqupment = helmet as Equipment;
-            if (helmetEqupment.hideHair) { goto skipHair; }
-        }
-        if (options.hair != null) {
-            var colouredHair = ColourReplacer.i.ColourizeSprite(options.hair, options.hairPalette);
-            baseTexture = PasteSprite(colouredHair, baseTexture, options.headOffset);
-        }
-        skipHair:
-        if (armour) {
-            Equipment armourItem = armour as Equipment;
-            baseTexture = PasteSprite(armourItem.wornSprite, baseTexture, Vector3Int.zero);
-        }
-        if (helmet != null) {
-            baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset);
+            if (helmetEqupment.hideHair) {
+                if (options.feature) {
+                    var colouredFeature = ColourReplacer.i.ColourizeSprite(options.feature, options.featurePalette);
+                    PasteSpriteMask(colouredFeature.texture, baseTexture, options.body.texture, options.headOffset + characterOffset);
+                }
+                if (options.hair) {
+                    var colouredHair = ColourReplacer.i.ColourizeSprite(options.hair, options.hairPalette);
+                    PasteSpriteMask(colouredHair.texture, baseTexture, options.body.texture, options.headOffset + characterOffset);
+                    goto skipHairAndFeatureWithoutMask;
+                }
+            }
         }
 
-        var sprite = Sprite.Create(baseTexture, new Rect(0, 0, baseTexture.width, baseTexture.height), new Vector2(0.5f, 0.125f), 16);
+        if (options.feature) {
+            var colouredFeature = ColourReplacer.i.ColourizeSprite(options.feature, options.featurePalette);
+            PasteSprite(colouredFeature, baseTexture, options.headOffset + characterOffset);
+        }
+
+        if (options.hair != null) {
+            var colouredHair = ColourReplacer.i.ColourizeSprite(options.hair, options.hairPalette);
+            baseTexture = PasteSprite(colouredHair, baseTexture, options.headOffset+ characterOffset);
+        }
+        skipHairAndFeatureWithoutMask:
+        if (armour) {
+            Equipment armourItem = armour as Equipment;
+            baseTexture = PasteSprite(armourItem.wornSprite, baseTexture, characterOffset);
+        }
+        if (helmet != null) {
+            baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset+ characterOffset);
+        }
+        if (inventory.mainHand) {
+            var weapon = inventory.mainHand as Weapon;
+            baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, weapon.heldOffset+ characterOffset);
+            var offset = weapon.heldOffset - new Vector3Int(10, 0, 0);
+            if (weapon.duelWield) { baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, offset + characterOffset); }
+        }
+        if (inventory.offHand) {
+            Equipment offHandItem = inventory.offHand as Equipment;
+            baseTexture = PasteSprite(offHandItem.tile.sprite, baseTexture, offHandItem.wornOffset + characterOffset);
+        }
+
+        var sprite = Sprite.Create(baseTexture, new Rect(0, 0, baseTexture.width, baseTexture.height), new Vector2(0.5f, 0.3125f), 16);
         sprite.name = character.name + " Generated";
         character.GetComponent<SpriteRenderer>().sprite = sprite;
     }
-
-    private void CreateEquipmentSprite(string slotName,GameObject character,Vector3 offset) {
+    /*
+    private void CreateEquipmentSprite(string slotName,GameObject character) {
         var clone = new GameObject(slotName);
         var rend = clone.AddComponent<SpriteRenderer>();
         clone.transform.SetParent(character.transform);
-        clone.transform.position = character.transform.position + offset;
     }
 
     private void UpdateEquipmentSprites(Inventory inventory) {
         if(inventory.transform.childCount == 0) {
-            CreateEquipmentSprite("MainHandSprite", inventory.gameObject, mainHandOffset);
-            CreateEquipmentSprite("OffHandSprite", inventory.gameObject, new Vector3(-0.42f, 0.35f, 0));
+            CreateEquipmentSprite("MainHandSprite", inventory.gameObject);
+            CreateEquipmentSprite("OffHandSprite", inventory.gameObject);
         }
         if (inventory.gameObject.transform.childCount <= 0) { return; }
         var mainhandgameobject = inventory.transform.Find("MainHandSprite");
         var offHandGameObject = inventory.transform.Find("OffHandSprite");
         UpdateEquipmentGO(mainhandgameobject.gameObject, inventory.mainHand);
+        if (inventory.offHand) {
+            var offHand = inventory.offHand as Equipment;
+            offHandGameObject.transform.position = inventory.gameObject.transform.position + offHand.wornOffset;
+        }
         if (inventory.mainHand) {
             var weapon = inventory.mainHand as Weapon;
+            mainhandgameobject.transform.position = inventory.gameObject.transform.position + weapon.heldOffset;
             if (weapon.duelWield) { UpdateEquipmentGO(offHandGameObject.gameObject, inventory.mainHand); return; }
         }
         UpdateEquipmentGO(offHandGameObject.gameObject, inventory.offHand);
     }
-
+    */
     public void UpdateEquipmentGO(GameObject go,ItemAbstract item) {
         if (!go) { return; }
         if (item) { go.GetComponent<SpriteRenderer>().sprite = item.tile.sprite;return; }
@@ -170,8 +224,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     public void UpdateSpriteFromItems(Inventory inventory) {
-        if (inventory.showWeapons) { UpdateEquipmentSprites(inventory); };
-        if (inventory.showArmour) { CreateCharacterSprite(inventory.gameObject); };
+        CreateCharacterSprite(inventory.gameObject);
     }
 
     public void UpdateInventory() {
@@ -231,5 +284,12 @@ public class InventoryManager : MonoBehaviour
             }
         }
         
+    }
+
+    public ItemAbstract GetWeaponOrSkill(Vector3Int position) {
+        ItemAbstract item = null;
+        if (MouseManager.i.itemSelected) { return MouseManager.i.itemSelected; }
+        item = position.gameobjectGO().GetComponent<Inventory>().mainHand;
+        return item;
     }
 }

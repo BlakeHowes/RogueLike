@@ -15,6 +15,14 @@ public class DevHotkeys : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.C)) {
+            InventoryManager.i.CreateCharacterSprite(PartyManager.i.currentCharacter);
+        }
+
+        if (Input.GetKeyDown(KeyCode.V)) {
+            PartyManager.i.EndTurn();
+        }
+
         if (Input.GetKeyDown(KeyCode.X)) {
             GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.position());
         }

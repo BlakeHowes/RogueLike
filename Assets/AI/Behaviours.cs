@@ -39,11 +39,13 @@ public class Behaviours : MonoBehaviour
         origin = gameObject.position();
         stats = gameObject.GetComponent<Stats>();
         target = GridManager.i.goMethods.FindClosestGameObject(sightRange, origin, PartyManager.Faction.Party, false);
+        GetComponent<Inventory>().CallEquipment(origin, origin, ItemAbstract.Signal.CalculateStats);
         Debug.Log("target " + target);
         if (!target) { 
             state = State.Idle;
             PartyManager.i.RemoveEnemy(gameObject);
             if (GridManager.i.fogTilemap.GetTile(origin) == null) { ChangeColour(Color.white); }
+            if (transform.childCount > 0) { Destroy(transform.GetChild(0).gameObject); }
         }
 
         if (target) {
@@ -121,7 +123,6 @@ public class Behaviours : MonoBehaviour
     void Attack() {
         if (!target) { ThisTask.Fail(); return; }
         gameObject.GetComponent<Stats>().ResetTempStats();
-        GetComponent<Inventory>().CallEquipment(origin, origin, ItemAbstract.Signal.CalculateStats);
         if (MouseManager.i.Attack(targetPosition, origin, target, gameObject)){
             ThisTask.Succeed();
             return;

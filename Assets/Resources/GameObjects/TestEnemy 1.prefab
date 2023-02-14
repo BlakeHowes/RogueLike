@@ -101,6 +101,7 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
+  skillRangeBase: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
@@ -123,7 +124,8 @@ MonoBehaviour:
   showArmour: 0
   items: []
   skills: []
-  misc: []
+  traits: []
+  traitsToRemove: []
   mainHand: {fileID: 11400000, guid: 2f79edaa7aa946144bc88353e9e0cf52, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

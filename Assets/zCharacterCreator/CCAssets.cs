@@ -17,11 +17,11 @@ public class CCAssets : MonoBehaviour
         foreach (CCLoadout loadout in loadoutResources) { loadouts.Add(loadout); }
         var hairResources = Resources.LoadAll<Sprite>("Character Creator/Hair");
         foreach (Sprite sprite in hairResources) { hairs.Add(sprite); }
-        var hairPaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Palettes/Hair");
+        var hairPaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Hair");
         foreach (CCPalette palette in hairPaletteResources) { hairPalettes.Add(palette); }
         var faceResources = Resources.LoadAll<Sprite>("Character Creator/Faces");
         foreach (Sprite sprite in faceResources) { faces.Add(sprite); }
-        var facePaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Palettes/Faces");
+        var facePaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Faces");
         foreach (CCPalette palette in facePaletteResources) { facePalettes.Add(palette); }
     }
 

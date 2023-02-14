@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76d8c5e9f7195d4eaa2a8968bc62cba, type: 3}
   m_Name: Orc
   m_EditorClassIdentifier: 
-  skinColours:
-  - {fileID: 11400000, guid: 632369aca9ba19040a8095cb5dc19a5f, type: 2}
+  bodyPalettes:
   - {fileID: 11400000, guid: 4dee66191625d444eaa1d4d98c9d9b1a, type: 2}
   - {fileID: 11400000, guid: 7698aa981dbbfb7479de61bd05937ae0, type: 2}
+  - {fileID: 11400000, guid: 632369aca9ba19040a8095cb5dc19a5f, type: 2}
   features: []
+  featurePalettes: []
   permanentTraits:
-  - {fileID: 11400000, guid: a0cdd5e8dba38954180b8196d7608da4, type: 2}
+  - {fileID: 11400000, guid: 6609d456f3cc555449bc3709969da741, type: 2}

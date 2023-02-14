@@ -43,50 +43,13 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 102900000, guid: fe8a216616d7469408a4a660ef90502f, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: 21300000, guid: f45921200ac2c60469d10c5751b5ebcd, type: 3}
-  - {fileID: 21300000, guid: 26bb03820e436b24f8521ca1b6634b08, type: 3}
-  - {fileID: 21300000, guid: 1fea22929c2845946a9df4cf00a8cf36, type: 3}
-  - {fileID: 21300000, guid: a6b17df3f73d39a41b8b13642fcbf5c7, type: 3}
-  - {fileID: 21300000, guid: b80391943b560e0499aeebb571b2c0d4, type: 3}
-  - {fileID: 21300000, guid: 8849ef94a41759f40aff9e96efd0fde7, type: 3}
-  - {fileID: 21300000, guid: 52e6d4d471b4d1f47866164745f37344, type: 3}
-  - {fileID: 21300000, guid: 735d7b76948026644bc6de6c72c70d75, type: 3}
-  - {fileID: 21300000, guid: 96651fb662f5f8f4abcc668566ef0493, type: 3}
-  - {fileID: 21300000, guid: 4be6a728f1912904c99badba6d85eb56, type: 3}
-  - {fileID: 21300000, guid: 7d6528d8cea56e04f801951954aba704, type: 3}
-  - {fileID: 21300000, guid: edddfa79f4142e04d8b22c70fc6fbda2, type: 3}
-  - {fileID: 21300000, guid: 534732c92e6642848bffc02b3fe5e133, type: 3}
-  - {fileID: 21300000, guid: 7d68a2ba07c0e5e4e8a2c909039d55ac, type: 3}
-  - {fileID: 21300000, guid: b05691ab29aba59408f1dd3dfb52f355, type: 3}
-  - {fileID: 21300000, guid: 25bce7fb9b615ec4685bc7ae91ba5970, type: 3}
-  - {fileID: 21300000, guid: 397e31eddfe199e41b8b2ae37779e5c2, type: 3}
-  - {fileID: 21300000, guid: 4b0c539e0303e534996dbd850d3e7fd3, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - Ring2
-  - Shield2
-  - Ring3
-  - Orb1
-  - Potion1
-  - Dagger3
-  - Shield3
-  - Dagger2
-  - Orb2
-  - Orb3
-  - OPSword
-  - Shield
-  - Ring1
-  - Dagger1
-  - WoodenSword
-  - wand1
-  - Ring4
-  - Sword3
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
   m_Tag: 1ItemAtlas
   m_IsVariant: 0

@@ -16,9 +16,9 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 200519ea1fc08094aa4c889c0304e572, type: 2}
   particles: {fileID: 0}
   Modifiers: []
-  PreviewIcon: {fileID: 0}
   wornSprite: {fileID: 0}
   hideHair: 0
+  wornOffset: {x: -5, y: 4, z: 0}
   damageBase: 0
   maxHealthBase: 0
   armourBase: 1

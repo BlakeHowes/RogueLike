@@ -24,3 +24,4 @@ MonoBehaviour:
   accuracyBase: 8
   rangeBase: 1
   damageMultipleBase: 1
+  heldOffset: {x: 11, y: 6, z: 0}

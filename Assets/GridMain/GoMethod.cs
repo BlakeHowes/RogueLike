@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using static UnityEngine.GraphicsBuffer;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine.UIElements;
+using static PartyManager;
+using UnityEngine.TextCore.Text;
 
 public class GoMethod
 {
@@ -154,6 +156,16 @@ public class GoMethod
             }
         }
         return characters;
+    }
+
+    public bool IsGameObjectInRange(int range, Vector3Int position,GameObject target) {
+        var seenGos = GridManager.i.tools.Circle(range, position);
+        foreach (var positionInCircle in seenGos) {
+            if(target == goGrid[positionInCircle.x, positionInCircle.y]) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public GameObject FindClosestGameObject(int range, Vector3Int position, PartyManager.Faction faction, bool inSight) {

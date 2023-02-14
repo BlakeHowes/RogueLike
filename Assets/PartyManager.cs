@@ -1,9 +1,9 @@
 using Panda;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Tilemaps;
+using UnityEngine.TextCore.Text;
+using static UnityEditor.PlayerSettings;
 
 public class PartyManager : MonoBehaviour {
     public static PartyManager i;
@@ -129,6 +129,7 @@ public class PartyManager : MonoBehaviour {
             nextCharacterIndex = 0;
         }
         SetCurrentCharacter(party[nextCharacterIndex]);
+
         GridManager.i.UpdateGame();
         GameUIManager.i.UpdatePartyIcons(party);
     }
@@ -150,9 +151,12 @@ public class PartyManager : MonoBehaviour {
         MouseManager.i.disableMouse = true;
         foreach(GameObject enemy in enemyParty) {
             enemy.GetComponent<Stats>().ResetActionPoints();
+            StartOfPartyTurnCall(enemy);
         }
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
+        var pos = enemyParty[0].position();  //Expensive call
+        enemyParty[0].GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
         enemyParty[0].GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
     }
 
@@ -162,10 +166,17 @@ public class PartyManager : MonoBehaviour {
         foreach(GameObject enemyCharacter in enemyParty) {
             if (enemyTurnTaken.Contains(enemyCharacter)) { continue;}
             SetCurrentCharacter(enemyCharacter);
+            var pos = enemyCharacter.position();  //Expensive call
+            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
             enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
             return;
         }
         PartyStartTurn();
+    }
+
+    public void StartOfPartyTurnCall(GameObject character) {
+        var pos = character.position();  //Expensive call
+        character.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.StartOfPartyTurn);
     }
 
 
@@ -176,6 +187,7 @@ public class PartyManager : MonoBehaviour {
             if(player != null)
             player.GetComponent<Stats>().ResetActionPoints();
             player.GetComponent<NPCSearch>().Search();
+            StartOfPartyTurnCall(player);
         }
         SetCurrentCharacter(party[0]);
         partyMemberTurnTaken.Clear();
@@ -193,6 +205,8 @@ public class PartyManager : MonoBehaviour {
         stats.SpawnHitNumber("!", Color.red, 2);
         stats.state = State.Combat;
         enemy.GetComponent<Behaviours>().ChangeColour(Color.white);
+        var clone = Instantiate(GameUIManager.i.enemyInCombatUI, enemy.transform);
+        clone.transform.localPosition = Vector3.zero;
     }
 
     public void RemoveEnemy(GameObject enemy) {

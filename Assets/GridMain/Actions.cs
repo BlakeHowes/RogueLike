@@ -14,12 +14,14 @@ public class Actions : MonoBehaviour
         i = this;
     }
 
-    public void PickUpItem(Vector3Int position) {
+    public bool PickUpItem(Vector3Int position) {
         var inventory = position.gameobjectSpawn().GetComponent<Inventory>();
         if (inventory.items.Count < inventory.MaxInventory) {
             var item = GridManager.i.itemMethods.RemoveItem(position);
             inventory.AddItem(item);
+            return true;
         }
+        return false;
     }
 
     public void Die(Vector3Int position) {

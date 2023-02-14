@@ -6,11 +6,10 @@ using static ItemAbstract;
 
 public class Inventory : MonoBehaviour
 {
-    public bool showWeapons;
-    public bool showArmour;
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> skills = new List<ItemAbstract>();
-    public List<ItemAbstract> permanentTraits = new List<ItemAbstract>();
+    public List<ItemAbstract> traits = new List<ItemAbstract>();
+    public List<ItemAbstract> traitsToRemove = new List<ItemAbstract>();
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
     public ItemAbstract helmet;
@@ -43,19 +42,25 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
-        foreach (var item in permanentTraits) { if (item) item.Call(position, origin, signal); }
+        foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
         foreach (var item in trinkets) { if (item) item.Call(position, origin, signal); }
-
+        foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
         if (helmet) { helmet.Call(position, origin, signal); }
         if (armour) { armour.Call(position, origin, signal); }
         if (offHand) { offHand.Call(position, origin, signal); }
         if (mainHand) { mainHand.Call(position, origin, signal); }
+
+        if(traitsToRemove.Count > 0) {
+            foreach (var item in traitsToRemove) {
+                if (traits.Contains(item)) { traits.Remove(item); }
+            }
+        }
     }
 
     public void CheckEquipment(Vector3Int position, Vector3Int origin) {
-        foreach (var item in permanentTraits) { if (item) item.CheckConditions(position, origin); }
-        foreach (var item in trinkets) { item.CheckConditions(position, origin); }
-
+        foreach (var item in traits) { if (item) item.CheckConditions(position, origin); }
+        foreach (var item in trinkets) { if (item) item.CheckConditions(position, origin); }
+        foreach (var item in skills) { if (item) item.CheckConditions(position, origin); }
         if (offHand) { offHand.CheckConditions(position, origin); }
         if (helmet) { helmet.CheckConditions(position, origin); }
         if (armour) { armour.CheckConditions(position, origin); }

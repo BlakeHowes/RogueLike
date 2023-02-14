@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   tile: {fileID: 11400000, guid: ecd8ca0c5f6dfab4f8df11ef120ae9d4, type: 2}
-  particles: {fileID: 8288408381700605430, guid: b4449ad1c19fde34d9fd314218fc3c46, type: 3}
+  particles: {fileID: 6375196592243838218, guid: 864d4fd45943c524c99213928a26a468, type: 3}
   Modifiers:
-  - {fileID: 11400000, guid: 4c4dad41bd1d8d243817e49d394a63f0, type: 2}
+  - {fileID: 11400000, guid: 41445ebff0956a94aa0ddca60490f782, type: 2}
   linePrefab: {fileID: 0}
   duelWield: 0
   actionPointCost: 1
@@ -25,3 +25,4 @@ MonoBehaviour:
   accuracyBase: 8
   rangeBase: 5
   damageMultipleBase: 1
+  heldOffset: {x: 11, y: 6, z: 0}

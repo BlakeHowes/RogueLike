@@ -11,13 +11,13 @@ public class EffectManager : MonoBehaviour
         i = this;
     }
 
-    public void LineEffect(Vector3 position,Vector3 origin,GameObject linePrefab) {
+    public void CreateLineEffect(Vector3 position,Vector3 origin,GameObject linePrefab) {
         if (linePrefab == null) { return; }
         var clone =Instantiate(linePrefab);
         clone.GetComponent<LineEffect>().SetLine(position+ offset, origin+ offset+ weaponOriginOffset);
     }
 
-    public void PartEffect(Vector3 position, Vector3 origin, GameObject partPrefab) {
+    public void CreateSingleParticleEffect(Vector3 position, Vector3 origin, GameObject partPrefab) {
         if(partPrefab == null) { return;}
         var clone = Instantiate(partPrefab);
         clone.transform.position = position+ offset;

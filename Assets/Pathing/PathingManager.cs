@@ -21,28 +21,9 @@ public class PathingManager : MonoBehaviour
         algorithm = new Algorithm(grid);
     }
 
-    public void FlipCharacter(GameObject character,bool left) {
-        var invertInt = 1;
-        if(left == true) {
-            invertInt = -1;
-        }
-        var mainHandOffset = InventoryManager.i.mainHandOffset;
-
-        character.GetComponent<SpriteRenderer>().flipX = left;
-        if (character.transform.childCount > 0) {
-            var mainHandGameObject = character.transform.Find("MainHandSprite");
-            if (mainHandGameObject != null) {
-                mainHandOffset.x = mainHandOffset.x * invertInt;
-                mainHandGameObject.localPosition = mainHandOffset;
-                mainHandGameObject.GetComponent<SpriteRenderer>().flipX = left;
-            }
-
-            var offHandGameObject = character.transform.Find("OffHandSprite");
-            if (offHandGameObject != null) {
-                offHandGameObject.localPosition = new Vector3(-0.42f * invertInt, 0.35f, 0);
-                offHandGameObject.GetComponent<SpriteRenderer>().flipX = left;
-            }
-        }
+    public void FlipCharacter(GameObject character,Vector3Int position,Vector3Int origin) {
+        if(position.x > origin.x) { character.GetComponent<SpriteRenderer>().flipX = false; return; }
+        character.GetComponent<SpriteRenderer>().flipX = true;
     }
 
     public void SwapPlaces(Vector3Int position, Vector3Int origin) {
@@ -76,14 +57,7 @@ public class PathingManager : MonoBehaviour
                 StartCoroutine(GridManager.i.graphics.LerpPosition(origin, nextStep, walkSpeed, GridManager.i.goTilemap));
                 GridManager.i.goMethods.RemoveGameObject(origin);
                 GridManager.i.goMethods.SetGameObject(nextStep, character);
-
-                if(nextStep.x > origin.x) {
-                    FlipCharacter(character, false);
-                }
-                else {
-                    FlipCharacter(character, true);
-                }
-
+                FlipCharacter(character,nextStep, origin);
                 return true;
             }
         }
@@ -92,7 +66,7 @@ public class PathingManager : MonoBehaviour
 
     public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin) {
         var character = origin.gameobjectSpawn();
-
+        if (character == null) { return true; }
         if (origin == GridManager.i.NullValue) {
             Debug.LogError("MoveOneStep returned, origin not found");
             return false;
@@ -108,24 +82,12 @@ public class PathingManager : MonoBehaviour
                 StartCoroutine(GridManager.i.graphics.LerpPosition(origin, nextStep, walkSpeed, GridManager.i.goTilemap));
                 GridManager.i.goMethods.RemoveGameObject(origin);
                 GridManager.i.goMethods.SetGameObject(nextStep, character);
-
-                if (nextStep.x > origin.x) {
-                    FlipCharacter(character, false);
-                }
-                else {
-                    FlipCharacter(character, true);
-                }
-
+                FlipCharacter(character, nextStep, origin);
                 return true;
             }
             if (target.GetComponent<Stats>().faction == character.GetComponent<Stats>().faction) {
                 SwapPlaces(nextStep, origin);
-                if (nextStep.x > origin.x) {
-                    FlipCharacter(character, false);
-                }
-                else {
-                    FlipCharacter(character, true);
-                }
+                FlipCharacter(character, nextStep, origin);
                 return true;
             }
         }
@@ -143,13 +105,7 @@ public class PathingManager : MonoBehaviour
             StartCoroutine(GridManager.i.graphics.LerpPosition(origin, position, speed, GridManager.i.goTilemap));
             GridManager.i.goMethods.RemoveGameObject(origin);
             GridManager.i.goMethods.SetGameObject(position, character);
-
-            if (position.x > origin.x) {
-                FlipCharacter(character, false);
-            }
-            else {
-                FlipCharacter(character, true);
-            }
+            FlipCharacter(character, position, origin);
         }
     }
 
@@ -169,14 +125,7 @@ public class PathingManager : MonoBehaviour
                 StartCoroutine(GridManager.i.graphics.LerpPosition(origin, nextStep, walkSpeed, GridManager.i.goTilemap));
                 GridManager.i.goMethods.RemoveGameObject(origin);
                 GridManager.i.goMethods.SetGameObject(nextStep, character);
-
-                if (nextStep.x > origin.x) {
-                    FlipCharacter(character, false);
-                }
-                else {
-                    FlipCharacter(character, true);
-                }
-
+                FlipCharacter(character, nextStep, origin);
                 return true;
             }
         }

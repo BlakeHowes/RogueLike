@@ -27,6 +27,9 @@ public class PaletteButton : MonoBehaviour
         if (type == CharacterCreator.PaletteButtonType.Face) {
             options.facePalette = palette;
         }
+        if (type == CharacterCreator.PaletteButtonType.Feature) {
+            options.featurePalette = palette;
+        }
         InventoryManager.i.UpdateSpriteFromItems(currentCharacter.GetComponent<Inventory>());
     }
 }

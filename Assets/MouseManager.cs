@@ -57,7 +57,7 @@ public class MouseManager : MonoBehaviour
             currentStats.ResetTempStats();
             currentCharacter.GetComponent<Inventory>().CallEquipment(origin, origin, ItemAbstract.Signal.CalculateStats);
             if (UseItem(position, origin,currentStats, inventory)) { EndOfAction(); return; };
-            if(position == origin) { Wait(position,origin,gameobjectundermouse,currentStats,currentCharacter); }
+            if(position == origin) { WaitOrPickUpItem(position,origin,gameobjectundermouse,currentStats,currentCharacter); }
             if(Attack(position, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(); return; };
 
             //If its an enemy and its out of range, cancel the action
@@ -66,7 +66,12 @@ public class MouseManager : MonoBehaviour
                 if(state == State.Combat) {
                     if (faction == Faction.Enemy) { return; }
                     if (GridManager.i.tools.InMeeleeRange(position, origin)) {
-                        if (faction == Faction.Party) { PathingManager.i.SwapPlaces(position, origin); EndOfAction(); return; }
+                        if(currentStats.actionPoints >= currentStats.walkCostTemp) {
+                            if (faction == Faction.Party) { PathingManager.i.SwapPlaces(position, origin);
+                                currentStats.actionPoints -= currentStats.walkCostTemp;
+                                EndOfAction(); 
+                                return; }
+                        }
                     }
                 }
             }
@@ -82,12 +87,8 @@ public class MouseManager : MonoBehaviour
 
 
             //Pick Up Item
+           
             var newpos = PartyManager.i.currentCharacter.position();
-            var item = newpos.item();
-            if (item != null && position == newpos) {
-                Actions.i.PickUpItem(newpos);
-            }
-
             if (newpos == position || newpos == origin) {
                 walked = false;
             }
@@ -105,7 +106,7 @@ public class MouseManager : MonoBehaviour
             currentStats.actionPoints -= currentStats.actionPointsSum;
         }
         if (!itemCanBeUsed && inventory.items.Contains(itemSelected)) { Actions.i.ThrowItem(position, origin, itemSelected); }
-
+        PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         itemSelected = null;
         return true;
     }
@@ -125,7 +126,8 @@ public class MouseManager : MonoBehaviour
             if (CheckActionPoints(origin, inventory, currentStats) == false) { return false; };
             if (inventory.mainHand) { inventory.mainHand.Call(position, origin, ItemAbstract.Signal.WeaponDamageCalculate); }
             inventory.CallEquipment(position, origin, ItemAbstract.Signal.Attack);
-            if(inventory.mainHand)
+            PathingManager.i.FlipCharacter(currentCharacter,position,origin);
+            if (inventory.mainHand)
             return true;
         }
 
@@ -134,18 +136,22 @@ public class MouseManager : MonoBehaviour
         if (range.Contains(position) && currentStats.actionPoints > 0) {
             currentStats.actionPoints -= 1;
             target.GetComponent<Stats>().TakeDamage(currentStats.fistDamageTemp, origin);
+            PathingManager.i.FlipCharacter(currentCharacter,position, origin);
             return true;
         }
         return false;
     }
 
-    public void Wait(Vector3Int position, Vector3Int origin, GameObject target, Stats currentStats, GameObject currentCharacter) {
-        if (target == currentCharacter && position.item() == null) {
+    public void WaitOrPickUpItem(Vector3Int position, Vector3Int origin, GameObject target, Stats currentStats, GameObject currentCharacter) {
+        if(target != currentCharacter) { return; }
+        if (position.item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
             currentStats.actionPoints -= 1;
             EndOfAction();
             return;
         }
+        Actions.i.PickUpItem(position);
+        currentStats.actionPoints -= 1;
     }
 
     public bool WalkLeader(Vector3Int position, Vector3Int origin, Stats stats) {
@@ -200,8 +206,9 @@ public class MouseManager : MonoBehaviour
             }
             
         }
-        
-        if (partyManager.currentCharacter.GetComponent<Stats>().actionPoints <= 0) {
+        var stats = partyManager.currentCharacter.GetComponent<Stats>();
+        //state = stats.state;
+        if (stats.actionPoints <= 0) {
             partyManager.EndTurn();
             walked = false;
         }
@@ -239,17 +246,14 @@ public class MouseManager : MonoBehaviour
         //Walk
         PartyManager.i.characterFollowPosition = currentCharacter.position();
         WalkLeader(position, origin, currentStats);
-        
-        //Pick Up Item
-        var newpos = PartyManager.i.currentCharacter.position();
 
-        var item = newpos.item();
-        if (item != null && position == newpos) {
-            Actions.i.PickUpItem(newpos);
-        }
+        //Pick Up Item
+  
+        var newpos = PartyManager.i.currentCharacter.position();
         if (newpos == position || newpos == origin) {
             walked = false;
         }
+       
         EndOfAction();
     }
 

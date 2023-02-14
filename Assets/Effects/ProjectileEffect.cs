@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
-using static UnityEngine.UI.Image;
 
 public class ProjectileEffect : MonoBehaviour
 {
     public void Fire(Vector3Int position, Vector3Int origin) {
         var offset = new Vector3(0.5f, 1f, 0);
-        TryMoveToWeapon(origin);
         var pos = new Vector3(position.x + offset.x, position.y+ offset.y,0);
-        transform.position = origin + offset;
+        transform.position = origin + new Vector3(0.5f,1.2f);
         Vector3 Direction = pos - transform.position;
         float angle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -20,15 +18,6 @@ public class ProjectileEffect : MonoBehaviour
         particleMain.startLifetime = life;
         particle.Emit(1);
         StartCoroutine(WaitThenDie(life + 10f));
-    }
-
-    public void TryMoveToWeapon(Vector3Int origin) {
-        var character = origin.gameobjectGO();
-        if (character) {
-            if (character.transform.childCount > 0) {
-                transform.position =character.transform.GetChild(0).transform.position;
-            }
-        }
     }
 
     public IEnumerator WaitThenDie(float waitTime) {

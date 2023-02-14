@@ -16,17 +16,12 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 18b969edb2c9df448bbb1d37fa8b438d, type: 2}
   particles: {fileID: 0}
   Modifiers: []
-  PreviewIcon: {fileID: 0}
   linePrefab: {fileID: 0}
+  duelWield: 0
   actionPointCost: 1
   damageBase: 5
   damageMaxBase: 10
   accuracyBase: 8
   rangeBase: 1
   damageMultipleBase: 1
-  rangeTemp: 1
-  accuracyTemp: 8
-  damageTemp: 8
-  damageMaxTemp: 10
-  damageMultipleTemp: 1
-  damage: 10
+  heldOffset: {x: 11, y: 6, z: 0}

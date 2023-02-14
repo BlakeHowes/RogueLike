@@ -38,7 +38,6 @@ public class ColourReplacer : MonoBehaviour
                 }
             }
         }
-        Debug.Log("End Of Colour");
         texture.Apply();
         return Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), sprite.pivot,16);
     }

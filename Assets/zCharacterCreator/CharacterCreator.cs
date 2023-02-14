@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 
 public class CharacterCreator : MonoBehaviour {
@@ -18,7 +19,8 @@ public class CharacterCreator : MonoBehaviour {
     public enum PaletteButtonType {
         Body,
         Hair,
-        Face
+        Face,
+        Feature
     }
 
     public void Awake() {
@@ -52,36 +54,55 @@ public class CharacterCreator : MonoBehaviour {
         character.transform.position = editPosition;
         editLayout.gameObject.SetActive(true);
         selectLayout.gameObject.SetActive(false);
+        var paletteFeatureButtons = editLayout.Find("Feature").Find("PaletteLayout");
+        CreatePaletteButtons(paletteFeatureButtons, character.GetComponent<CCOptions>().race.featurePalettes, PaletteButtonType.Feature);
+        UpdateLabels();
+        ShowDescriptionForTraits(character);
     }
 
     public void RandomizeCharacter(GameObject character) {
-        options = character.GetComponent<CCOptions>();
-        RandomAppearence();
+        RandomAppearence(character);
         InventoryManager.i.CreateCharacterSprite(character);
     }
 
-    public void RandomAppearence() {
+    public void RandomAppearence(GameObject character) {
         var assets = CCAssets.i;
+        options = character.GetComponent<CCOptions>();
         options.race = assets.races[Random.Range(0, assets.races.Count)];
-        options.bodyPalette = options.race.skinColours[Random.Range(0,options.race.skinColours.Count)];
+        options.bodyPalette = options.race.bodyPalettes[Random.Range(0,options.race.bodyPalettes.Count)];
+
+        var traits = character.GetComponent<Inventory>().traits;
+        traits.Clear();
+        foreach (ItemAbstract item in options.race.permanentTraits) {
+            traits.Add(item);
+        }
+        ShowDescriptionForTraits(character);
+
         options.hair = assets.hairs[Random.Range(0, assets.hairs.Count)];
         options.hairPalette = assets.hairPalettes[Random.Range(0, assets.hairPalettes.Count)];
         options.face = assets.faces[Random.Range(0, assets.faces.Count)];
         options.facePalette = assets.facePalettes[Random.Range(0, assets.facePalettes.Count)];
         options.body = assets.bodies[Random.Range(0, assets.bodies.Count)];
-        CreatePaletteButtons(editLayout.Find("Race").Find("PaletteLayout"), currentCharacter.GetComponent<CCOptions>().race.skinColours, PaletteButtonType.Body);
+        CreatePaletteButtons(editLayout.Find("Race").Find("PaletteLayout"), character.GetComponent<CCOptions>().race.bodyPalettes, PaletteButtonType.Body);
+        if(options.race.features.Count > 0) {
+            options.feature = options.race.features[Random.Range(0, options.race.features.Count)];
+            options.featurePalette = options.race.featurePalettes[Random.Range(0, options.race.featurePalettes.Count)];
+        }
+        else {
+            options.feature = null;
+            options.featurePalette = null;
+        }
+
         UpdateLabels();
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+        InventoryManager.i.CreateCharacterSprite(character);
     }
 
     public void Start() {
-        options = currentCharacter.GetComponent<CCOptions>();
-        options.hairPalette = FirstPaletteInLayout("Hair", PaletteButtonType.Hair, CCAssets.i.hairPalettes);
-        options.facePalette = FirstPaletteInLayout("Face", PaletteButtonType.Face, CCAssets.i.facePalettes);
-        foreach(GameObject character in characters) {
+        foreach (GameObject character in characters) {
             options = character.GetComponent<CCOptions>();
             options.hairPalette = FirstPaletteInLayout("Hair", PaletteButtonType.Hair, CCAssets.i.hairPalettes);
             options.facePalette = FirstPaletteInLayout("Face", PaletteButtonType.Face, CCAssets.i.facePalettes);
+            options.featurePalette = FirstPaletteInLayout("Feature", PaletteButtonType.Feature, options.race.featurePalettes);
             RefreshContent(character);
         }
     }
@@ -92,6 +113,15 @@ public class CharacterCreator : MonoBehaviour {
         editLayout.Find("Race").Find("Label").GetComponent<TextMeshProUGUI>().text = options.race.name;
         editLayout.Find("Loadout").Find("Label").GetComponent<TextMeshProUGUI>().text = options.loadout.name;
         editLayout.Find("Gender").Find("Label").GetComponent<TextMeshProUGUI>().text = options.body.name;
+
+        var layout = editLayout.Find("Feature");
+        if (options.feature) {
+            layout.gameObject.SetActive(true);
+            layout.Find("Label").GetComponent<TextMeshProUGUI>().text = options.feature.name; }
+        else {
+            layout.gameObject.SetActive(false);
+        }
+
     }
 
     public CCPalette FirstPaletteInLayout(string contentName,PaletteButtonType type,List<CCPalette> palettes) {
@@ -102,7 +132,7 @@ public class CharacterCreator : MonoBehaviour {
 
     public void NextRace(int direction) {
         options.race = CCAssets.i.NextOption(direction,CCAssets.i.races, options.race);
-        var traits = currentCharacter.GetComponent<Inventory>().permanentTraits;
+        var traits = currentCharacter.GetComponent<Inventory>().traits;
         traits.Clear();
         foreach (ItemAbstract item in options.race.permanentTraits) { 
             traits.Add(item);
@@ -110,9 +140,9 @@ public class CharacterCreator : MonoBehaviour {
         RefreshContent(currentCharacter);
     }
 
-    public void ShowDescriptionForTraits() {
+    public void ShowDescriptionForTraits(GameObject character) {
         traitDescription.text = "";
-        foreach(ItemAbstract item in currentCharacter.GetComponent<Inventory>().permanentTraits) {
+        foreach(ItemAbstract item in character.GetComponent<Inventory>().traits) {
             traitDescription.text += item.Description() + "\n";
         }
     }
@@ -144,6 +174,13 @@ public class CharacterCreator : MonoBehaviour {
         InventoryManager.i.CreateCharacterSprite(currentCharacter);
     }
 
+    public void NextFeatures(int direction) {
+        if(options.race.features.Count <= 0) { return; }
+        options.feature = CCAssets.i.NextOption(direction, options.race.features, options.feature);
+        UpdateLabels();
+        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+    }
+
     public void NextHair(int direction) {
         options.hair = CCAssets.i.NextOption(direction, CCAssets.i.hairs, options.hair);
         UpdateLabels();
@@ -151,12 +188,24 @@ public class CharacterCreator : MonoBehaviour {
     }
 
     public void RefreshContent(GameObject character) {
-        ShowDescriptionForTraits();
+        ShowDescriptionForTraits(character);
         var paletteButtonsInLayout = editLayout.Find("Race").Find("PaletteLayout");
-        CreatePaletteButtons(paletteButtonsInLayout, character.GetComponent<CCOptions>().race.skinColours,PaletteButtonType.Body);
+        CreatePaletteButtons(paletteButtonsInLayout, character.GetComponent<CCOptions>().race.bodyPalettes,PaletteButtonType.Body);
         options.bodyPalette = paletteButtonsInLayout.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
-        InventoryManager.i.CreateCharacterSprite(character);
 
+        if(options.race.features.Count > 0) {
+            options.feature = options.race.features[0];
+            options.featurePalette = FirstPaletteInLayout("Feature", PaletteButtonType.Feature, options.race.featurePalettes);
+            var paletteFeatureButtons = editLayout.Find("Feature").Find("PaletteLayout");
+            CreatePaletteButtons(paletteFeatureButtons, character.GetComponent<CCOptions>().race.featurePalettes, PaletteButtonType.Feature);
+            options.featurePalette = paletteFeatureButtons.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
+        }
+        else {
+            options.feature = null;
+            options.featurePalette = null;
+        }
+
+        InventoryManager.i.CreateCharacterSprite(character);
         UpdateLabels();
     }
 
