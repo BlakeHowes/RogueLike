@@ -100,4 +100,31 @@ public class GridGraphics
         }
         if (particleEffect != null) { EffectManager.i.CreateSingleParticleEffect(endlocation, startlocation, particleEffect); }
     }
+
+    public IEnumerator FlashAnimation(GameObject character, Vector3Int origin,Color colour) {
+        if (character == null) yield return null;
+        //var position = character.position();
+        var renderer = character.GetComponent<SpriteRenderer>();
+        var startPosition = character.transform.position;
+        var hitMaterial = GameUIManager.i.hitMaterial;
+        var spriteMaterial = GameUIManager.i.normalMaterial;
+        hitMaterial.color = colour;
+        //GridManager.i.goTilemap.SetColor(position, Color.clear);
+
+        if (renderer == null) { yield return null; }
+        if (character.GetComponent<Stats>().faction != PartyManager.Faction.Wall)
+            character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
+        renderer.material = hitMaterial;
+        yield return new WaitForSeconds(0.15f);
+        if (renderer == null) { yield return null; }
+        renderer.material = spriteMaterial;
+        character.transform.position = startPosition;
+        yield return new WaitForSeconds(0.15f);
+        renderer.material = hitMaterial;
+        yield return new WaitForSeconds(0.15f);
+        renderer.material = spriteMaterial;
+        if (character == PartyManager.i.currentCharacter) {
+            renderer.material = GameUIManager.i.outlineMaterial;
+        }
+    }
 }

@@ -3,8 +3,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class GridManager : MonoBehaviour {
     public static GridManager i;
@@ -258,11 +260,20 @@ public class GridManager : MonoBehaviour {
     }
 
     public void TickGame() {
+
+        foreach(var player in PartyManager.i.party) {
+            if (!player) { continue; }
+            if(player.GetComponent<Stats>().state == PartyManager.State.Combat) { continue; }
+            var position = player.transform.position.FloorToInt();
+            player.GetComponent<Inventory>().CallTraits(position, position, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
+        }
+
         foreach (Behaviours behaviour in NPCBehaviours) {
             if (!behaviour) { continue; }
             if (PartyManager.i.enemyParty.Contains(behaviour.gameObject)) { continue; }
+            var position = behaviour.gameObject.transform.position.FloorToInt();
+            behaviour.GetComponent<Inventory>().CallTraits(position, position, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
             behaviour.IdleBehaviour();
-
         }
         mechFloorTick();
         UpdateGame();

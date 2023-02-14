@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "Taunt", menuName = "Mods/Taunt")]
+[CreateAssetMenu(fileName = "Taunt", menuName = "Status Effects/Taunt")]
 public class TauntMod : ItemAbstract {
     public int durationTotal;
     public GameObject target;
@@ -20,7 +20,7 @@ public class TauntMod : ItemAbstract {
             stats.gameObject.GetComponent<Inventory>().traitsToRemove.Add(this);
             stats.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
-        if (signal == Signal.StartOfPartyTurn) { counter--; return; }
+        if (signal == Signal.StartOfTurnOrTickOutOfCombat) { counter--; return; }
         if(signal == Signal.FirstEnemyMove) { stats.SpawnHitNumber("TAUNT", Color.red, 2);
             stats.gameObject.GetComponent<SpriteRenderer>().color = tauntedColour; }
         if(signal == Signal.CalculateStats) {

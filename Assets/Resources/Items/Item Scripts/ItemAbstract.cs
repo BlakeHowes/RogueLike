@@ -48,7 +48,7 @@ public abstract class ItemAbstract : ScriptableObject
         Heal,
         TakeDamage,
         Death,
-        StartOfPartyTurn,
+        StartOfTurnOrTickOutOfCombat,
         FirstEnemyMove,
         SetTarget
     }

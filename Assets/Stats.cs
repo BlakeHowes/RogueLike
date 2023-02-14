@@ -26,7 +26,7 @@ public class Stats : MonoBehaviour {
 
     [Header("Temporary Stats")]
     [NonSerialized] public int maxHealthTemp;
-    [NonSerialized] public int armourTemp;
+    public int armourTemp;
     [NonSerialized] public int actionPointsTemp;
     [NonSerialized] public int throwingRangeTemp;
     [NonSerialized] public int fistDamageTemp;
@@ -86,13 +86,13 @@ public class Stats : MonoBehaviour {
         inventory.CallEquipment(position, position, Signal.CalculateStats);
         inventory.CallEquipment(position, position, Signal.TakeDamage);
 
-        if (infiniteHealth) { StartCoroutine(
-            PartyManager.i.TakeDamageAnimation(gameObject, origin));
+        if (infiniteHealth) {
+            Actions.i.FlashAnimation(gameObject, origin, Color.white);
             SpawnHitNumber(damage.ToString(), Color.red, 1);
             return; 
         }
 
-        if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); StartCoroutine(PartyManager.i.TakeDamageAnimation(gameObject, origin)); return;}
+        if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); Actions.i.FlashAnimation(gameObject, origin,Color.white); return;}
         damage -= armourTemp;
         if (damage < 1) { damage = 1; }
         health -= damage;
@@ -102,9 +102,10 @@ public class Stats : MonoBehaviour {
             SpawnHitNumber(damage.ToString(),Color.red,1);
         }
         UpdateHealthBar();
-        StartCoroutine(PartyManager.i.TakeDamageAnimation(gameObject, origin));
-
-        if (health > 0) { return; }
+        if(health > 0) {
+            Actions.i.FlashAnimation(gameObject, origin, Color.white);
+            return;
+        }
         inventory.CallEquipment(position, position, Signal.Death);
         foreach (var item in deathAction) {
             item.Call(position, position, Signal.Death);

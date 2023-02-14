@@ -103,8 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 1
-  showArmour: 1
   items:
   - {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   - {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
@@ -113,6 +111,7 @@ MonoBehaviour:
   skills: []
   traits:
   - {fileID: 11400000, guid: 141158ae12bf87d4e8622fae3e6faeb7, type: 2}
+  - {fileID: 11400000, guid: 1ac81ddcca6b8b846a84991e7e99a7c5, type: 2}
   traitsToRemove: []
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 0}

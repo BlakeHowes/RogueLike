@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d847d7a828a023948bf1de7efbc01e82, type: 3}
-  m_Name: TauntAOEMod
+  m_Name: TraitAOEShield
   m_EditorClassIdentifier: 
   type: 0
-  tile: {fileID: 11400000, guid: 55780b933111f9541b7ce5dc6f856069, type: 2}
-  particles: {fileID: 8288408381700605430, guid: 8efa1630ca34eaa40a55575c68d0301e, type: 3}
+  tile: {fileID: 0}
+  particles: {fileID: 0}
   Modifiers:
-  - {fileID: 11400000, guid: 90f92d911975efb46b74c177eb05edc5, type: 2}
-  range: 5
-  actionPointCost: 2
+  - {fileID: 11400000, guid: 140e277ed138cac4fbe28b8c2a515316, type: 2}
+  - {fileID: 11400000, guid: 24bb45c9fa389cc4b8cc7e2ed2730fc9, type: 2}
+  faction: 0

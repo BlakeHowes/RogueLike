@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
-
 [InitializeOnLoad]
-public static class RaceEditor
-{
-    static RaceEditor() {
-        EditorApplication.playModeStateChanged += RefreshRaces;
+public static class AssetsOnLaunchUpdater {
+    static AssetsOnLaunchUpdater() {
+        EditorApplication.playModeStateChanged += UpdateAssets;
     }
 
-    private static void RefreshRaces(PlayModeStateChange state) {
+    private static void UpdateAssets(PlayModeStateChange state) {
         var races = Resources.LoadAll<CCRace>("Character Creator/Races");
         foreach (var race in races) {
             string path = "Character Creator/Races/" + race.name;

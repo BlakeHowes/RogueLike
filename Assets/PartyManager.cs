@@ -176,7 +176,7 @@ public class PartyManager : MonoBehaviour {
 
     public void StartOfPartyTurnCall(GameObject character) {
         var pos = character.position();  //Expensive call
-        character.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.StartOfPartyTurn);
+        character.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
     }
 
 

@@ -63,4 +63,8 @@ public class Actions : MonoBehaviour
 
         StartCoroutine(GridManager.i.graphics.TileLerp(targetTile, startlocation, endlocation, lerpduration, tilemap, particleEffect));
     }
+
+    public void FlashAnimation(GameObject character, Vector3Int origin, Color colour) {
+        StartCoroutine(GridManager.i.graphics.FlashAnimation(character, origin, colour));
+    }
 }

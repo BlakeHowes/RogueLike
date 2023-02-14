@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static ItemAbstract;
+using static UnityEngine.UI.Image;
 
 public class Inventory : MonoBehaviour
 {
@@ -50,10 +52,16 @@ public class Inventory : MonoBehaviour
         if (offHand) { offHand.Call(position, origin, signal); }
         if (mainHand) { mainHand.Call(position, origin, signal); }
 
-        if(traitsToRemove.Count > 0) {
+        if (traitsToRemove.Count > 0) {
             foreach (var item in traitsToRemove) {
-                if (traits.Contains(item)) { traits.Remove(item); }
-            }
+            if (traits.Contains(item)) { traits.Remove(item); }}
+        }
+    }
+    public void CallTraits(Vector3Int position, Vector3Int origin, Signal signal) {
+        foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
+        if (traitsToRemove.Count > 0) {
+            foreach (var item in traitsToRemove) {
+            if (traits.Contains(item)) { traits.Remove(item); }}
         }
     }
 

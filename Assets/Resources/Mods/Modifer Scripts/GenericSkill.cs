@@ -27,7 +27,7 @@ public class GenericSkill : ItemAbstract {
             return;
         }
 
-        if (signal == Signal.StartOfPartyTurn) {
+        if (signal == Signal.StartOfTurnOrTickOutOfCombat) {
             if (coolDownTimer > 0)
                 coolDownTimer--;
             return;
@@ -47,10 +47,10 @@ public class GenericSkill : ItemAbstract {
         }
 
         if (signal != Signal.Attack) { return; } 
-        coolDownTimer = coolDown;
-        Debug.Log(MouseManager.i.itemSelected);
         if (MouseManager.i.itemSelected != this) { return; }
-        foreach(var mod in Modifiers) {
+        coolDownTimer = coolDown;
+        foreach (var mod in Modifiers) {
+            mod.Call(position, origin, Signal.SetTarget);
             mod.Call(position, origin, Signal.Attack);
         }
         
