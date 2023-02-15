@@ -50,6 +50,7 @@ public class InventoryManager : MonoBehaviour
         equipmentclone.GetComponent<InventorySlot>().defaultImage = sprite;
         if (item != null) {
             equipmentclone.GetComponent<InventorySlot>().item = item;
+            if(item.tile)
             equipmentclone.GetComponent<Image>().sprite = item.tile.sprite;
         }
     }

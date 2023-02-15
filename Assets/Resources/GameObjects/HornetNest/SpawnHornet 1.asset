@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f17871f4feafc5c4780646cd9a4bd33e, type: 3}
-  m_Name: SpawnHornet
+  m_Name: SpawnHornet 1
   m_EditorClassIdentifier: 
   type: 0
   tile: {fileID: 0}
   particles: {fileID: 0}
   Modifiers: []
   Gos:
-  - {fileID: 3243932232630802507, guid: 9f7f0ead9cdb30b43b7ff5cfc1af27d4, type: 3}
-  onSignal: 8
+  - {fileID: 3243932232630802507, guid: 450ea1abe3b26124e872b00e3b15808b, type: 3}
+  onSignal: 4

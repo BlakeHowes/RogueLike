@@ -13,14 +13,10 @@ tree("Combat")
 			sequence
 				Wait(0.1)
 				CheckInformation()
-				tree("Actions")	
+				CallAttackItems()
 				Wait(0.2)
+				SetActionPoints(0)
 				checkEndTurn()
-tree("Actions")
-	fallback
-		CallAttackItems()
-
-
 tree("Lost Target")
 	sequence
 		not isInCombat

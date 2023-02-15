@@ -78,7 +78,7 @@ MonoBehaviour:
   sightRange: 12
   state: 1
   itemActions:
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
+  - {fileID: 11400000, guid: 4fc5470fb9e53e74894b215be679ba88, type: 2}
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
