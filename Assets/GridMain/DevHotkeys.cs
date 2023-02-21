@@ -10,8 +10,8 @@ public class DevHotkeys : MonoBehaviour
                 var stats = go.GetComponent<Stats>();
                 stats.health = 99;
                 stats.maxHealthBase = 99;
-                stats.actionPoints = 99;
-                stats.actionPointsBase = 99;
+                stats.actionPoints = 10;
+                stats.actionPointsBase = 10;
             }
         }
 
@@ -25,6 +25,9 @@ public class DevHotkeys : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X)) {
             GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.position());
+        }
+        if (Input.GetKeyDown(KeyCode.B)) {
+            Debug.Log(MouseManager.i.MousePositionOnGrid().gameobjectGO());
         }
     }
 }

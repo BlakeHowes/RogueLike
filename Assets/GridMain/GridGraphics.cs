@@ -68,6 +68,7 @@ public class GridGraphics
         float time = 0;
         Vector3 offset = new Vector3(0.5f, 0.5f);
         var gameobject = startPosition.gameobjectSpawn();
+        if (!gameobject) { yield return null; }
         var healthbar =gameobject.GetComponent<Stats>().healthbar;
         gameobject.transform.position = startPosition + offset;
         healthbar.transform.position = gameobject.transform.position;
@@ -105,19 +106,18 @@ public class GridGraphics
         if (character == null) yield return null;
         //var position = character.position();
         var renderer = character.GetComponent<SpriteRenderer>();
-        var startPosition = character.transform.position;
+        //var startPosition = character.transform.position;
         var hitMaterial = GameUIManager.i.hitMaterial;
         var spriteMaterial = GameUIManager.i.normalMaterial;
         hitMaterial.color = colour;
         //GridManager.i.goTilemap.SetColor(position, Color.clear);
 
         if (renderer == null) { yield return null; }
-        if (character.GetComponent<Stats>().faction != PartyManager.Faction.Wall)
-            character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
+        //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
         renderer.material = hitMaterial;
         yield return new WaitForSeconds(0.15f);
         if (renderer) { renderer.material = spriteMaterial; }
-        character.transform.position = startPosition;
+        //character.transform.position = startPosition;
         yield return new WaitForSeconds(0.15f);
         if (renderer) { renderer.material = hitMaterial; }
         yield return new WaitForSeconds(0.15f);

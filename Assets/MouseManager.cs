@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 using static PartyManager;
 
 public class MouseManager : MonoBehaviour
@@ -17,19 +18,23 @@ public class MouseManager : MonoBehaviour
     public bool walked = false;
     public Vector3Int clickPosition;
     public float repeatSpeed;
+    public Tilemap walkableTilemap;
     public void Awake() {
         i = this;
+    }
+    public void Start() {
+        walkableTilemap = GridManager.i.walkableTilemap;
     }
     public void Update() {
         var position = MousePositionOnGrid();
         if (!position.inbounds()) { GameUIManager.i.HideHighlight(); return; }
         if (disableToggle && disableMouse == false) { GameUIManager.i.EnableUI(); disableMouse = false; }
         if (disableMouse) { GameUIManager.i.DisableUI(); disableToggle = true; return; }
-
+       
         if (position != lastMousePosition) {
             lastMousePosition = position;
             if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
-            if (GridManager.i.FogTile(position)) {
+            if (GridManager.i.FogTile(position)|| !walkableTilemap.GetTile(position)) {
                 GameUIManager.i.HideHighlight();
             }
             else {
@@ -49,6 +54,7 @@ public class MouseManager : MonoBehaviour
             clickPosition = position;
             if (walked) { return; }
             if (EventSystem.current.IsPointerOverGameObject()) { return; }
+            if (!walkableTilemap.GetTile(position)) { return; }
             var gameobjectundermouse = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
             var currentCharacter = PartyManager.i.currentCharacter;
             if (currentCharacter == null) { return; }
@@ -95,6 +101,7 @@ public class MouseManager : MonoBehaviour
             if (newpos == position || newpos == origin) {
                 walked = false;
             }
+            if(newpos != origin)
             EndOfAction();
         }
     }
@@ -149,12 +156,13 @@ public class MouseManager : MonoBehaviour
         if(target != currentCharacter) { return; }
         if (position.item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
-            currentStats.actionPoints -= 1;
+            //currentStats.actionPoints -= 1;
             EndOfAction();
             return;
         }
         Actions.i.PickUpItem(position);
         currentStats.actionPoints -= 1;
+        EndOfAction();
     }
 
     public bool WalkLeader(Vector3Int position, Vector3Int origin, Stats stats) {
@@ -189,13 +197,11 @@ public class MouseManager : MonoBehaviour
     }
 
     public void EndOfAction() {
+        GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
         var partyManager = PartyManager.i;
         var currentCharacter = PartyManager.i.currentCharacter;
         var currentStats = currentCharacter.GetComponent<Stats>();
         GridManager.i.ClearSemiFog();
-        foreach(GameObject member in partyManager.party) {
-            member.GetComponent<NPCSearch>().Search();
-        }
 
         partyManager.Follow();
         
@@ -211,15 +217,16 @@ public class MouseManager : MonoBehaviour
         }
         var stats = partyManager.currentCharacter.GetComponent<Stats>();
         //state = stats.state;
-        if (stats.actionPoints <= 0) {
-            partyManager.EndTurn();
-            walked = false;
-        }
-        
+
+        if(state == State.Combat) { walked = false; }
         GridManager.i.TickGame();
 
         if (Input.GetMouseButtonDown(0)) {
             StartCoroutine(RepeatInput(clickPosition));
+        }
+        if (stats.actionPoints <= 0) {
+            partyManager.EndTurn();
+            walked = false;
         }
     }
 
@@ -249,8 +256,6 @@ public class MouseManager : MonoBehaviour
         //Walk
         PartyManager.i.characterFollowPosition = currentCharacter.position();
         WalkLeader(position, origin, currentStats);
-
-        //Pick Up Item
   
         var newpos = PartyManager.i.currentCharacter.position();
         if (newpos == position || newpos == origin) {

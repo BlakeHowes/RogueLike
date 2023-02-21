@@ -4,15 +4,19 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class AssetManager {
-    List<ItemAbstract> mechs = new List<ItemAbstract>();
+    List<SurfaceAbstract> mechs = new List<SurfaceAbstract>();
+    List<SurfaceAbstract> surfaces = new List<SurfaceAbstract>();
     List<ItemAbstract> items = new List<ItemAbstract>();
     List<GameObject> gos = new List<GameObject>();
     List<GameObject> characters = new List<GameObject>();
     List<GameObject> walls = new List<GameObject>();
     public AssetManager() {
         //LOAD RESOURCES
-        var mechResources = Resources.LoadAll<ItemAbstract>("Mechs");
-        foreach (ItemAbstract mech in mechResources) { mechs.Add(mech); }
+        var mechResources = Resources.LoadAll<SurfaceAbstract>("Mechs");
+        foreach (SurfaceAbstract mech in mechResources) { mechs.Add(mech); }
+
+        var surfaceResources = Resources.LoadAll<SurfaceAbstract>("Surfaces");
+        foreach (SurfaceAbstract surface in surfaceResources) { surfaces.Add(surface); }
 
         var itemResources = Resources.LoadAll<ItemAbstract>("Items");
         foreach (ItemAbstract item in itemResources) { items.Add(item); }
@@ -29,11 +33,20 @@ public class AssetManager {
                 walls.Add(go);
         }
     }
-    public ItemAbstract TiletoMech(Tile tile) {
-        foreach (ItemAbstract item in mechs) {
+
+    public SurfaceAbstract TiletoSurface(Tile tile) {
+        foreach (SurfaceAbstract item in surfaces) {
+            if (item.tile == tile) return item;
+        }
+
+        Debug.LogError("Cant find Surface corrosponding with " + tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
+        return null;
+    }
+    public SurfaceAbstract TiletoMech(Tile tile) {
+        foreach (SurfaceAbstract item in mechs) {
             if (item.tile == tile) return item; }
 
-        Debug.LogError("Cant find Mech corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
+        //Debug.LogError("Cant find Mech corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
     public ItemAbstract TiletoItem(Tile tile) {

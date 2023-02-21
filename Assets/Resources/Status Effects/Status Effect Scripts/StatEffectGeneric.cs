@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "StatusEffectGeneric", menuName = "Status Effects/Generic")]
+[CreateAssetMenu(fileName = "Stat Change", menuName = "Status Effects/Stat Change Status Effect")]
 public class StatEffectGeneric : ItemAbstract {
     [Header("Options")]
     public int durationTotal;
@@ -27,16 +27,21 @@ public class StatEffectGeneric : ItemAbstract {
         return false;
     }
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-
         if(signal == Signal.SetTarget) { target = position.gameobjectGO();return; }
 
-        if (counter > durationTotal) {
-            target.GetComponent<Inventory>().traitsToRemove.Add(this);
-        }
 
         if (signal != onSignal) { return; }
-        if (!target) { return; }
+        if (!target) { Debug.LogError("No target set for Status Effect " + this.name); return; }
         counter++;
+
+        if (counter > durationTotal) {
+            if (target) {
+                Debug.Log(target);
+                target.GetComponent<Inventory>().statusEffectsToRemove.Add(this);
+            }
+
+            return;
+        }
         health += healthChangeAddition;
         var item = target.GetComponent<Inventory>().mainHand;
         var weapon = item as Weapon;
@@ -56,7 +61,10 @@ public class StatEffectGeneric : ItemAbstract {
         if (walkCost != 0) { stats.walkCostTemp += walkCost; }
         if (enemyAlertRange != 0) { stats.enemyAlertRangeTemp += enemyAlertRange; }
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
-        if (health != 0) { stats.health += health; }
+        if (health < 0) { stats.TakeDamage(health * -1,position); }
+        if (health > 0) { stats.Heal(health); }
+
+        if (particles) { EffectManager.i.CreateSingleParticleEffect(position,origin,particles); }
     }
     public override string Description() {
         string description = name + ":\n";

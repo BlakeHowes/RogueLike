@@ -19,4 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66980ccd237851045a384598c015fa80, type: 2}
   range: 5
   actionPointCost: 2
+  actionPointCostTemp: 2
   coolDown: 4
+  customDescription: 
+  coolDownTimer: 1

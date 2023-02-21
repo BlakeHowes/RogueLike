@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class Weapon : ItemAbstract
 {
     public GameObject linePrefab;
-    public bool duelWield = false;
+    public bool duelWield,twoHanded = false;
     [Header("Base Stats")]
     public int actionPointCost;
     public int damageBase = 5;
@@ -100,15 +100,14 @@ public class Weapon : ItemAbstract
         //Remove health from target
         if(target)
         target.GetComponent<Stats>().TakeDamage(damage, origin);
-
+        originCharacter.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
         EffectManager.i.CreateLineEffect(position, origin, linePrefab);
     }
 
     public override string Description() {
-        var currentCharacter = PartyManager.i.currentCharacter;
-        var position = currentCharacter.position();
-        string description = "This " + name + " does "+ damageTemp +"-"+ (damageTemp+damageMaxTemp) +" damage";
-        description += " with an accuracy of " + accuracyTemp;
+        ResetTempStats();
+        string description = "This " + name + " does "+ damageBase +"-"+ (damageBase+damageMaxBase);
+        description += " with an accuracy of " + accuracyBase;
         return description;
     }
 

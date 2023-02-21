@@ -18,3 +18,4 @@ MonoBehaviour:
   Modifiers:
   - {fileID: 11400000, guid: 90f92d911975efb46b74c177eb05edc5, type: 2}
   faction: 1
+  targetSelf: 1

@@ -17,6 +17,7 @@ MonoBehaviour:
   particles: {fileID: 0}
   Modifiers: []
   durationTotal: 3
+  onSignal: 10
   damage: 0
   damageMultiple: 0
   rangedWeaponRange: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f2d3a5295d9d64da102b4f59aaf560, type: 3}
+  m_Name: Battle Cry
+  m_EditorClassIdentifier: 
+  type: 0
+  tile: {fileID: 0}
+  particles: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+  Modifiers:
+  - {fileID: 11400000, guid: bcffb7a4c984f5344a63b5463b1a8734, type: 2}
+  range: 2
+  actionPointCost: 1
+  actionPointCostTemp: 0
+  coolDown: 5
+  customDescription: 

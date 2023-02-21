@@ -76,7 +76,6 @@ MonoBehaviour:
   target: {fileID: 0}
   stats: {fileID: 0}
   sightRange: 12
-  state: 1
   itemActions:
   - {fileID: 11400000, guid: 4fc5470fb9e53e74894b215be679ba88, type: 2}
 --- !u!114 &3243932232630802517
@@ -94,17 +93,11 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 6565ad6488c3daf4ab2d7d895326d2eb, type: 2}
   faction: 1
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
+  deathAction: []
   blocksLight: 1
   maxHealthBase: 20
   armourBase: 0
-  actionPointsBase: 3
+  actionPointsBase: 1
   throwingRangeBase: 1
   fistDamageBase: 1
   walkCostBase: 1

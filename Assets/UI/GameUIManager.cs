@@ -31,6 +31,7 @@ public class GameUIManager : MonoBehaviour {
     public Sprite defaultSkillSprite;
     public Texture2D boarderEffectTexture;
     public GameObject enemyInCombatUI;
+    public Color notInRangeColour;
     public void Awake() {
         i = this;
     }
@@ -43,7 +44,7 @@ public class GameUIManager : MonoBehaviour {
         var origin = PartyManager.i.GetCurrentTurnCharacter().position();
         uiTilemap.SetTile(position, mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
-       
+        SetEnemyColourToWhite();
 
         if (character != null) {
             uiTilemap.SetTileFlags(position, TileFlags.None);
@@ -68,14 +69,33 @@ public class GameUIManager : MonoBehaviour {
         }
     }
 
+    public void SetEnemyColourToFade() {
+        foreach (var go in GridManager.i.NPCBehaviours) {
+            if (go)
+                go.gameObject.GetComponent<SpriteRenderer>().color = notInRangeColour;
+        }
+    }
+
+    public void SetEnemyColourToWhite() {
+        foreach (var go in GridManager.i.NPCBehaviours) {
+            if (go)
+                go.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
+
     public void ShowRange(Vector3Int position,int range) {
         groundUI.ClearAllTiles();
         var cells =CreateRange(position, range);
         var goMethods = GridManager.i.goMethods;
+        SetEnemyColourToFade();
         foreach (Vector3Int cell in cells) {
             var hit =goMethods.FirstGameObjectInSight(cell,position );
-            if(cell == hit)
-            groundUI.SetTile(cell, rangeTile);
+            if(cell == hit) {
+                groundUI.SetTile(cell, rangeTile);
+                var go = cell.gameobjectGO();
+
+                if (go) go.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 

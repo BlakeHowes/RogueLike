@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 41445ebff0956a94aa0ddca60490f782, type: 2}
   linePrefab: {fileID: 0}
   duelWield: 0
+  twoHanded: 1
   actionPointCost: 1
   damageBase: 5
   damageMaxBase: 3
@@ -26,3 +27,4 @@ MonoBehaviour:
   rangeBase: 8
   damageMultipleBase: 1
   heldOffset: {x: 6, y: 4, z: 0}
+  damageMultipleTemp: 1

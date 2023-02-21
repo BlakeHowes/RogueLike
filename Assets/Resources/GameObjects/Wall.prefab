@@ -46,10 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 3af8b95ed3161214eb325e1c0119ee3e, type: 2}
-  baseSprite: {fileID: 0}
-  baseHair: {fileID: 0}
-  baseFace: {fileID: 0}
+  tile: {fileID: 0}
   faction: 3
   state: 0
   deathAction:
@@ -62,6 +59,10 @@ MonoBehaviour:
   fistDamageBase: 0
   walkCostBase: 0
   enemyAlertRangeBase: 0
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -80,9 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
-  skills: []
-  misc: []
+  traits: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

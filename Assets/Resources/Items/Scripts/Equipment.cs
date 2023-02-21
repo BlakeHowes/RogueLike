@@ -53,7 +53,7 @@ public class Equipment : ItemAbstract
 
     public override string Description() {
         var description = "";
-
+        ResetTempStats();
         if (armourTemp > 0) { description += " Armour: +"+ armourTemp; }
         if (maxHealthTemp > 0) { description +=" Max Health: +"+ maxHealthTemp; }
         if (damageTemp > 0) { description += "Damage: +"+ damageTemp; }

@@ -7,12 +7,12 @@ public class Algorithm {
 
     private List<Cell> openList;
     private List<Cell> closedList;
-
+    public Tilemap walkableTilemap;
     private Algorithm() { }
 
     public Algorithm(Grid2D grid) {
         this.grid = grid;
-
+        walkableTilemap = GridManager.i.walkableTilemap;
         openList = new List<Cell>();
         closedList = new List<Cell>();
     }
@@ -39,6 +39,10 @@ public class Algorithm {
                     if (gameobjectcell == startpos) {
                         continue;
                     }
+                    if (!walkableTilemap.GetTile(gameobjectcell)) {
+                        grid.FindCellByPosition(gameobjectcell).walkable = false;
+                        continue;
+                    }
                     if (goTilemap.GetTile(gameobjectcell) != null || goGrid[gameobjectcell.x, gameobjectcell.y] != null) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                     }
@@ -54,6 +58,10 @@ public class Algorithm {
                     gameobjectcell.x = x;
                     gameobjectcell.y = y;
                     if (gameobjectcell == startpos) {
+                        continue;
+                    }
+                    if (!walkableTilemap.GetTile(gameobjectcell)) {
+                        grid.FindCellByPosition(gameobjectcell).walkable = false;
                         continue;
                     }
                     if (goTilemap.GetTile(gameobjectcell) != null) {

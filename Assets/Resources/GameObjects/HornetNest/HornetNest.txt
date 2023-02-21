@@ -1,0 +1,31 @@
+tree("Root")
+	fallback
+		tree("Idle")
+		not isCurrentTurnCharacter
+		tree("Combat")
+		tree("Lost Target")
+tree("Combat")
+	while 
+		isInCombat
+		repeat
+			sequence
+				Wait(0.3)
+				CheckInformation()
+				CallAttackItems()
+				Wait(0.3)
+				SetActionPoints(0)
+				checkEndTurn()
+
+tree("Lost Target")
+	sequence
+		not isInCombat
+		Wait(0.1)
+		MakeQuestionMark()
+		SetActionPoints(0)
+		Wait(0.5)
+		checkEndTurn()
+
+tree("Idle")
+	sequence
+		not isInCombat
+		ManualTickMode()

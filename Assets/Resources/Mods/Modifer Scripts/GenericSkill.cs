@@ -6,8 +6,11 @@ using UnityEngine;
 public class GenericSkill : ItemAbstract {
     public int range;
     public int actionPointCost;
+    public int actionPointCostTemp;
     public int coolDown;
-    [NonSerialized]public int coolDownTimer = 0;
+
+    public string customDescription;
+    public int coolDownTimer = 0;
 
     public override bool Condition(Vector3Int position, Vector3Int origin) {
         if (MouseManager.i.itemSelected == this) { return true; }
@@ -22,7 +25,7 @@ public class GenericSkill : ItemAbstract {
 
 
 
-        if (signal == Signal.StartOfTurnOrTickOutOfCombat) {
+        if (signal == Signal.StartOfTurn) {
             if (coolDownTimer > 0)
                 coolDownTimer--;
             return;
@@ -31,7 +34,7 @@ public class GenericSkill : ItemAbstract {
 
         if (signal == Signal.ActionPointSum) {
             if (MouseManager.i.itemSelected == this) {
-                origin.gameobjectGO().GetComponent<Stats>().actionPointsSum += actionPointCost;
+                origin.gameobjectGO().GetComponent<Stats>().actionPointsSum += actionPointCostTemp;
             }
             return;
         }
@@ -59,9 +62,12 @@ public class GenericSkill : ItemAbstract {
         }
     }
     public override string Description() {
-        string description = "";
-        foreach (var item in Modifiers) {
-            description += item.Description();
+        string description = name + ": ";
+        description += customDescription;
+        if (customDescription == "") {
+            foreach (var item in Modifiers) {
+                description += item.Description();
+            }
         }
         description += " (" + actionPointCost + " AP)";
         return description;

@@ -238,7 +238,20 @@ public class InventoryManager : MonoBehaviour
         var inventory = character.GetComponent<Inventory>();
 
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform,mainHandSprite, inventory.mainHand, ItemAbstract.Type.Weapon);
+
+        //Two handed item hack
+        if (inventory.mainHand) {
+            var weapon = inventory.mainHand as Weapon;
+            if (weapon.duelWield || weapon.twoHanded) {
+                if (inventory.offHand) {
+                    inventory.AddItem(inventory.offHand);
+                    inventory.offHand = null;
+                }
+                goto SkipOffhand;
+            }
+        }
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, offHandSprite, inventory.offHand, ItemAbstract.Type.OffHand);
+        SkipOffhand:
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, helmetSprite, inventory.helmet, ItemAbstract.Type.Helmet);
         CreateButton(equipmentButtonPrefab, equipmentLayout.transform, armourSprite, inventory.armour, ItemAbstract.Type.Armour);
 
@@ -268,7 +281,9 @@ public class InventoryManager : MonoBehaviour
     public ItemAbstract GetWeaponOrSkill(Vector3Int position) {
         ItemAbstract item = null;
         if (MouseManager.i.itemSelected) { return MouseManager.i.itemSelected; }
-        item = position.gameobjectGO().GetComponent<Inventory>().mainHand;
+        var go = position.gameobjectGO();
+        if (!go) { return null; }
+        item = go.GetComponent<Inventory>().mainHand;
         return item;
     }
 }

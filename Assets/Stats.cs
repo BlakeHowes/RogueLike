@@ -33,6 +33,7 @@ public class Stats : MonoBehaviour {
     [NonSerialized] public int walkCostTemp;
     public int enemyAlertRangeTemp;
     public int skillRangeTemp;
+    public int directDamage;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -57,17 +58,14 @@ public class Stats : MonoBehaviour {
         walkCostTemp = walkCostBase;
         enemyAlertRangeTemp = enemyAlertRangeBase;
         skillRangeTemp = skillRangeBase;
+        directDamage = 0;
     }
 
     public void OnEnable() {
         if(faction == PartyManager.Faction.Party) {
             DontDestroyOnLoad(this);
         }
-
-        if (faction != PartyManager.Faction.Wall && faction != PartyManager.Faction.Interactable) {
-            var inventory = GetComponent<Inventory>();
-            InventoryManager.i.UpdateSpriteFromItems(inventory);
-        }
+        InventoryManager.i.UpdateSpriteFromItems(GetComponent<Inventory>());
         if (maxHealthTemp == 0) {
             maxHealthTemp = maxHealthBase;
             health = maxHealthTemp;
@@ -80,6 +78,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void TakeDamage(int damage,Vector3Int origin) {
+        Debug.Log("Take damage");
         var position = gameObject.position();
         var inventory = GetComponent<Inventory>();
 
@@ -91,17 +90,30 @@ public class Stats : MonoBehaviour {
             SpawnHitNumber(damage.ToString(), Color.red, 1);
             return; 
         }
-        if(faction == PartyManager.Faction.Enemy) {
-            if(state != PartyManager.State.Combat) {
-                state = PartyManager.State.Combat;
-                PartyManager.i.enemyParty.Add(gameObject);
-            }
-            origin.gameobjectGO().GetComponent<Stats>().state = PartyManager.State.Combat;
-        }
+
         if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); Actions.i.FlashAnimation(gameObject, origin,Color.white); return;}
         damage -= armourTemp;
         if (damage < 1) { damage = 1; }
         health -= damage;
+
+        if (faction == PartyManager.Faction.Enemy) {
+
+ 
+
+            if (state != PartyManager.State.Combat) {
+                state = PartyManager.State.Combat;
+                PartyManager.i.enemyParty.Add(gameObject);
+            }
+            var originCharacter = origin.gameobjectGO();
+
+            if (originCharacter) {
+                var stats = originCharacter.GetComponent<Stats>();
+                stats.state = PartyManager.State.Combat;
+                if (origin != position) {
+                    stats.directDamage += damage;
+                }
+            }
+        }
         //Create hit number
         if (faction != PartyManager.Faction.Interactable) {
             if (damage == 0) { SpawnHitNumber("Dodge", Color.yellow, 1); }
@@ -114,6 +126,7 @@ public class Stats : MonoBehaviour {
         }
         inventory.CallEquipment(position, position, Signal.Death);
         foreach (var item in deathAction) {
+            if(item)
             item.Call(position, position, Signal.Death);
         }
         Actions.i.Die(gameObject.position());

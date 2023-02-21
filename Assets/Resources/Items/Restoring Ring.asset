@@ -15,15 +15,12 @@ MonoBehaviour:
   type: 5
   tile: {fileID: 11400000, guid: c39318b2bf8cfdb4c9e122282fa981e5, type: 2}
   particles: {fileID: 0}
-  destroyOnUse: 0
-  Modifiers: []
-  stack: 1
-  range: 0
+  Modifiers:
+  - {fileID: 11400000, guid: a501853c8a1781548b4004b151de963c, type: 2}
   wornSprite: {fileID: 0}
-  attack: 0
-  maxHealth: 0
-  armour: 0
-  maxHealthBonus: 0
-  mainHandMods: []
-  skills:
-  - {fileID: 11400000, guid: b2caf15cb896d1e428f32ff85de40563, type: 2}
+  hideHair: 0
+  wornOffset: {x: 0, y: 0, z: 0}
+  damageBase: 0
+  maxHealthBase: 0
+  armourBase: 0
+  armourTemp: 0

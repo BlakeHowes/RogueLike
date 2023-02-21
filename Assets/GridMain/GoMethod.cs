@@ -1,20 +1,23 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
+using UnityEngine.UIElements;
 
 public class GoMethod
 {
     private GameObject[,] goGrid;
     private AssetManager assets;
     private Tilemap goTilemap;
-    public GoMethod(GameObject[,] goGrid, AssetManager assets,Tilemap goTilemap) {
+    private Tilemap walkableTilemap;
+    public GoMethod(GameObject[,] goGrid, AssetManager assets,Tilemap goTilemap,Tilemap walkableTilemap) {
         this.goGrid = goGrid;
         this.assets = assets;
         this.goTilemap = goTilemap;
+        this.walkableTilemap = walkableTilemap;
     }
 
     public GameObject GetGameObjectOrSpawnFromTile(Vector3Int position) {
-        if (!position.inbounds()) { return null; }
+        if (!position.inbounds() || !walkableTilemap.GetTile(position)) { return null; }
         var gameobject = goGrid[position.x, position.y];
         if (gameobject != null) {return gameobject;}
 
@@ -27,12 +30,6 @@ public class GoMethod
         var clone = GridManager.i.InstantiateGameObject(prefab);
         clone.GetComponent<SpriteRenderer>().sprite = goTilemap.GetSprite(position);
         SetGameObject(position, clone);
-
-        if (assets.IsWall(tile)) {
-            SetGameObject(position + new Vector3Int(0, 1), clone);
-            SetGameObject(position + new Vector3Int(0, 2), clone);
-        }
-
         clone.transform.position = position + new Vector3(0.5f, 0.5f);
         goTilemap.SetTileFlags(position, TileFlags.None);
         goTilemap.SetColor(position, Color.clear);
@@ -40,7 +37,7 @@ public class GoMethod
     }
 
     public GameObject Spawn(Vector3Int position,GameObject prefab) {
-        if (prefab == null) {
+        if (prefab == null || !walkableTilemap.GetTile(position)) {
             return null;
         }
         var clone = GridManager.i.InstantiateGameObject(prefab);
@@ -53,11 +50,12 @@ public class GoMethod
     }
 
     public void SetGameObject(Vector3Int position, GameObject gameobject) {
+        if (!walkableTilemap.GetTile(position)) { return; }
         goGrid[position.x, position.y] = gameobject;
     }
 
     public GameObject GetGameObject(Vector3Int position) {
-        if (position.inbounds()) {
+        if (position.inbounds() && walkableTilemap.GetTile(position)) {
             return goGrid[position.x, position.y];
         }
         return null;
@@ -65,14 +63,19 @@ public class GoMethod
 
     public Vector3Int FirstGameObjectInSightIncludingAllies(Vector3Int Position,Vector3Int Origin) {
         var cells =GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        var previousPos = Vector3Int.zero;
         if (cells.Count == 0) {
             return Position;
         }
-        foreach (var cell in cells) { 
-            if(goTilemap.GetTile(cell)!= null || GetGameObject(cell) != null) {
+        foreach (var cell in cells) {
+            if (!walkableTilemap.GetTile(cell)) {
+                return previousPos;
+            }
+            if (goTilemap.GetTile(cell)!= null || GetGameObject(cell) != null || walkableTilemap.GetTile(cell)) {
                 GetGameObjectOrSpawnFromTile(cell);
                 return cell;
             }
+            previousPos = cell;
         }
         return Position;
     }
@@ -80,32 +83,45 @@ public class GoMethod
     public Vector3Int FirstGameObjectInSight(Vector3Int Position, Vector3Int Origin) {
         var faction = Origin.gameobjectSpawn().GetComponent<Stats>().faction; 
         var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        var previousPos = Vector3Int.zero;
         if (cells.Count == 0) {
             return Position;
         }
         foreach (var cell in cells) {
-            if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {
-                GetGameObjectOrSpawnFromTile(cell);
-                var cellFaction = cell.gameobjectGO().GetComponent<Stats>().faction;
+            if (!walkableTilemap.GetTile(cell)) {
+                return previousPos;
+            }
+            if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null || walkableTilemap.GetTile(cell)) {
+                 var character =GetGameObjectOrSpawnFromTile(cell);
+                if(character == null) { continue; }
+                var cellFaction = character.GetComponent<Stats>().faction;
                 if (cellFaction == faction) { continue; }
                 return cell;
             }
+            previousPos = cell;
         }
         return Position;
     }
 
     public Vector3Int FirstLightBlockingThingInSight(Vector3Int Position, Vector3Int Origin) {
         var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        var previousPos = Vector3Int.zero;
+        GameObject go = null;
         if (cells.Count == 0) {
             return Position;
         }
         foreach (var cell in cells) {
-            if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {
+            if (!walkableTilemap.GetTile(cell)) {
+                return previousPos;
+            }
+            go = cell.gameobjectGO();
+            if (go) {
                 GetGameObjectOrSpawnFromTile(cell);
                 var blocksLight = cell.gameobjectGO().GetComponent<Stats>().blocksLight;
                 if (!blocksLight) { continue; }
                 return cell;
             }
+            previousPos = cell;
         }
         return Position;
     }
@@ -130,6 +146,7 @@ public class GoMethod
         List<GameObject> characters = new List<GameObject>();
         var seenGos =GridManager.i.tools.Circle(range, position);
         foreach(var positionInCircle in seenGos) {
+            if (!walkableTilemap.GetTile(positionInCircle)) { continue; }
             var character = goGrid[positionInCircle.x, positionInCircle.y];
             if (character == null) { continue; }
             if(character.GetComponent<Stats>().faction == faction) {
@@ -144,7 +161,7 @@ public class GoMethod
         var seenGos = GridManager.i.tools.Circle(range, position);
         foreach (var positionInCircle in seenGos) {
             var character = goGrid[positionInCircle.x, positionInCircle.y];
-            if (character == null) { continue; }
+            if (character == null || !walkableTilemap.GetTile(position)) { continue; }
             if (!IsBehindLightBlocker(position, positionInCircle)) { continue; }
             if (character.GetComponent<Stats>().faction == faction) {
                 characters.Add(character);
@@ -169,7 +186,7 @@ public class GoMethod
         GameObject closestTarget = null;
         foreach (Vector3Int pos in visibility) {
             var target = GetGameObject(pos);
-            if (target == null) { continue; }
+            if (target == null || !walkableTilemap.GetTile(position)) { continue; }
             if (inSight) { if (!IsInSight(position, pos)) { continue; } }
             if (target.GetComponent<Stats>().faction != faction) { continue; }
             var distance = Vector3Int.Distance(position, pos);
@@ -183,7 +200,7 @@ public class GoMethod
 
     public GameObject RemoveGameObject(Vector3Int position) {
         var gameobject = GetGameObject(position);
-        if(gameobject != null) {
+        if(gameobject != null || !walkableTilemap.GetTile(position)) {
             SetGameObject(position, null);
             goTilemap.SetTile(position, null);
             return gameobject;
@@ -225,7 +242,7 @@ public class GoMethod
             for (int x = checkpos.x - 1; x <= checkpos.x + 1; x++) {
                 for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
                     Vector3Int pos = new Vector3Int(x, y);
-                    if (tools.InBounds(pos)) {
+                    if (tools.InBounds(pos) || walkableTilemap.GetTile(position)) {
                         if (x == checkpos.x && y == checkpos.y) {
                             continue;
                         }

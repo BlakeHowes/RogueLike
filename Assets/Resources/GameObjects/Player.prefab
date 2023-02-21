@@ -86,7 +86,9 @@ MonoBehaviour:
   enemyAlertRangeBase: 10
   skillRangeBase: 0
   armourTemp: 0
+  enemyAlertRangeTemp: 0
   skillRangeTemp: 0
+  directDamage: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -105,17 +107,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
-  - {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
-  - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
-  - {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
-  skills: []
   traits:
   - {fileID: 11400000, guid: 141158ae12bf87d4e8622fae3e6faeb7, type: 2}
   - {fileID: 11400000, guid: 1ac81ddcca6b8b846a84991e7e99a7c5, type: 2}
   - {fileID: 11400000, guid: 8f33a41d0c32d41458762e5bc8faf54d, type: 2}
-  traitsToRemove: []
+  - {fileID: 11400000, guid: 6d4fe8ccfaea8504da5e0fd9fcd91968, type: 2}
+  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
+  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
+  statusEffects: []
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

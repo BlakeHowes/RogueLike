@@ -57,6 +57,8 @@ MonoBehaviour:
   loadout: {fileID: 11400000, guid: 0d507749a8acf8640b02ea5a081c0f67, type: 2}
   face: {fileID: 21300000, guid: 44c4ec38c9638cb4abca01be68f6f9bd, type: 3}
   facePalette: {fileID: 11400000, guid: 63107ec92c4bed64eb7d2dacf0027eda, type: 2}
+  feature: {fileID: 0}
+  featurePalette: {fileID: 0}
   headOffset: {x: 1, y: 18, z: 0}
   male: 0
 --- !u!114 &6780645703283991166
@@ -83,6 +85,10 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -101,11 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 1
-  showArmour: 1
-  items: []
-  skills: []
-  permanentTraits: []
+  traits:
+  - {fileID: 11400000, guid: a501853c8a1781548b4004b151de963c, type: 2}
+  - {fileID: 11400000, guid: 1200679cd67c02b41a7c461e2cdb5a0c, type: 2}
+  statusEffects: []
   mainHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 11400000, guid: 13b4bceec1561d94c95903ce2e18c39d, type: 2}
@@ -196,5 +201,7 @@ MonoBehaviour:
   loadout: {fileID: 11400000, guid: 0d507749a8acf8640b02ea5a081c0f67, type: 2}
   face: {fileID: 21300000, guid: 17d8c00bc137ccf44885b4ea614ecff8, type: 3}
   facePalette: {fileID: 11400000, guid: a9690c5de50602f48815b14c0925e043, type: 2}
+  feature: {fileID: 0}
+  featurePalette: {fileID: 0}
   headOffset: {x: 1, y: 18, z: 0}
   male: 0

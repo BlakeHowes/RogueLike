@@ -25,6 +25,8 @@ public abstract class ItemAbstract : ScriptableObject
         }
     }
 
+    //public abstract IEnumerator Action();
+
     public abstract bool Condition(Vector3Int position, Vector3Int origin);
     public abstract string Description();
 
@@ -48,8 +50,10 @@ public abstract class ItemAbstract : ScriptableObject
         Heal,
         TakeDamage,
         Death,
-        StartOfTurnOrTickOutOfCombat,
+        StartOfTurn,
+        Tick,
         FirstEnemyMove,
-        SetTarget
+        SetTarget,
+        DirectDamage
     }
 }

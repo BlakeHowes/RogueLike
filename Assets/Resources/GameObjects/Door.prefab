@@ -47,9 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 2359fc7b2ff2b0a499a78b491657aea4, type: 2}
-  baseSprite: {fileID: 0}
-  baseHair: {fileID: 0}
-  baseFace: {fileID: 0}
   faction: 2
   state: 0
   deathAction:
@@ -62,6 +59,11 @@ MonoBehaviour:
   fistDamageBase: 0
   walkCostBase: 0
   enemyAlertRangeBase: 0
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -81,8 +83,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  skills: []
-  misc: []
+  traits: []
+  statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
@@ -130,12 +132,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 692982184, guid: 721af00762cb90f4fad2d78000febc11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dbcb91ab594562642a362f0a95550f67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

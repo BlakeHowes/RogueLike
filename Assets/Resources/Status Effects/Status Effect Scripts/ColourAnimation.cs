@@ -11,7 +11,7 @@ public class ColourAnimation : ItemAbstract
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         var character = position.gameobjectGO();
         Actions.i.FlashAnimation(character, origin, colour);
-        position.gameobjectGO().GetComponent<Inventory>().traits.Remove(this);
+        position.gameobjectGO().GetComponent<Inventory>().statusEffectsToRemove.Add(this);
     }
 
     public override string Description() {

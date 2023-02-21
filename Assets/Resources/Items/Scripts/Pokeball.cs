@@ -15,26 +15,18 @@ public class Pokeball : ItemAbstract
         var character = position.gameobjectSpawn();
         var originCharacter = origin.gameobjectSpawn();
 
-        if (caughtCharacter != null) {
-            GridManager.i.SpawnCharacter(caughtCharacter,position,Color.white);
-            var stats = position.gameobjectSpawn().GetComponent<Stats>();
-            stats.faction = PartyManager.Faction.Party;
-            PartyManager.i.AddPartyMember(position.gameobjectSpawn());
-            caughtCharacter = null;
-            Debug.Log("character is here");
+        if (caughtCharacter) {
+
             return;
         }
 
-        if (character != null) {
-            var stats = character.GetComponent<Stats>();
-            if (stats.faction != PartyManager.Faction.Party && stats.faction != PartyManager.Faction.Wall) {
-                stats.faction = PartyManager.Faction.Party;
-                PartyManager.i.AddPartyMember(position.gameobjectSpawn());
-            }
-        }
-        return;
-    }
 
+    }
+    /*
+    public override IEnumerator Action() {
+        yield return null;
+    }
+    */
     public override string Description() {
         return "Throw at weak enemies to convert them lol";
     }

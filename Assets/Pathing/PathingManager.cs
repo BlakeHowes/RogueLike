@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class PathingManager : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class PathingManager : MonoBehaviour
     public void Start() {
         grid = new Grid2D(GridManager.i.width, GridManager.i.height);
         algorithm = new Algorithm(grid);
+
     }
 
     public void FlipCharacter(GameObject character,Vector3Int position,Vector3Int origin) {

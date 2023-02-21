@@ -26,6 +26,11 @@ public class Actions : MonoBehaviour
 
     public void Die(Vector3Int position) {
         var character = position.gameobjectSpawn();
+        if(character == null) {
+            Debug.LogError("Character is missing before death");
+            GridManager.i.graphics.UpdateEverything();
+            return;
+        }
         PartyManager.i.RemoveDeadEnemy(character);
         GridManager.i.goMethods.RemoveGameObject(position);
         character.GetComponent<Inventory>().DropItems(position);
@@ -60,7 +65,6 @@ public class Actions : MonoBehaviour
     }
 
     public void TileLerpPosition(Vector3Int targetTile, Vector3Int startlocation, Vector3Int endlocation, float lerpduration, Tilemap tilemap, GameObject particleEffect) {
-
         StartCoroutine(GridManager.i.graphics.TileLerp(targetTile, startlocation, endlocation, lerpduration, tilemap, particleEffect));
     }
 

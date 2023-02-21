@@ -48,24 +48,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: dc7d2f87f2981c044834c59d01b75e3d, type: 2}
-  baseSprite: {fileID: 0}
-  baseHair: {fileID: 0}
   faction: 2
   state: 0
   deathAction: []
+  blocksLight: 0
   maxHealthBase: 0
   armourBase: 0
   actionPointsBase: 0
   throwingRangeBase: 0
   fistDamageBase: 0
   walkCostBase: 0
+  enemyAlertRangeBase: 0
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   healthbar: {fileID: 0}
-  ai: {fileID: 0}
 --- !u!114 &2354247380013042047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,12 +87,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
   - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
   - {fileID: 11400000, guid: ad38df0155f101c498f8c0d19b792ac3, type: 2}
+  traits: []
+  statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
   trinkets: []
-  MaxInventory: 10
+  MaxInventory: 50
 --- !u!212 &1773118153572415346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -166,3 +172,18 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 693577d97e642d045bb2f1d42677fa24, type: 2}
     rarity: 1
     pool: 4
+  - item: {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
+    rarity: 1
+    pool: 5
+  - item: {fileID: 11400000, guid: a0cdd5e8dba38954180b8196d7608da4, type: 2}
+    rarity: 1
+    pool: 6
+  - item: {fileID: 11400000, guid: a2c57c278a8ca024aa3cc65b033a4da4, type: 2}
+    rarity: 1
+    pool: 7
+  - item: {fileID: 11400000, guid: 2f79edaa7aa946144bc88353e9e0cf52, type: 2}
+    rarity: 1
+    pool: 8
+  - item: {fileID: 11400000, guid: 53b8eaf1ffbaaf7418db0d5b5aae198c, type: 2}
+    rarity: 1
+    pool: 9

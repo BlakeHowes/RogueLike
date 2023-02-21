@@ -12,7 +12,6 @@ public class AdvancedRuleTile : RuleTile<AdvancedRuleTile.Neighbor> {
     [Space]
     [Tooltip("Check itseft when the mode is set to \"any\"")]
     public bool checkSelf = true;
-
     public class Neighbor : RuleTile.TilingRule.Neighbor {
         public const int Any = 3;
         public const int Specified = 4;

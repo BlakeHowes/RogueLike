@@ -1,6 +1,8 @@
+using Mono.Cecil;
 using Panda;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PartyManager : MonoBehaviour {
@@ -14,6 +16,8 @@ public class PartyManager : MonoBehaviour {
     public List<GameObject> partyMemberTurnTaken = new List<GameObject>();
     public List<GameObject> enemyTurnTaken = new List<GameObject>();
     public bool follow = true;
+
+    Faction currentFaction;
     public enum State {
         Idle,
         Combat
@@ -70,7 +74,8 @@ public class PartyManager : MonoBehaviour {
 
     public void Update() {
         if (currentCharacter == null) {
-            SwitchToNextCharacter();
+            if (currentFaction == Faction.Party) { SwitchToNextCharacter(); }
+            if (currentFaction == Faction.Enemy) { NextEnemy(null); }
         }
     }
 
@@ -79,6 +84,7 @@ public class PartyManager : MonoBehaviour {
             currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
         }
         currentCharacter = character;
+        currentFaction = character.GetComponent<Stats>().faction;
         if (party.Contains(character)) {
             character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial;
         }
@@ -113,6 +119,7 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void SwitchToNextCharacter() {
+        Debug.Log("Switch");
         RemoveNullCharacters(party);
         int i = 0;
         int currentCharacterIndex = 0;
@@ -147,22 +154,29 @@ public class PartyManager : MonoBehaviour {
 
     public void EnemyPartyStartTurn() {
         MouseManager.i.disableMouse = true;
-        foreach(GameObject enemy in enemyParty) {
+        GameUIManager.i.SetEnemyColourToWhite();
+        List<GameObject> PartyCopy = new List<GameObject>();
+        foreach(GameObject member in enemyParty) {
+            PartyCopy.Add(member);
+        }
+        foreach (GameObject enemy in PartyCopy) {
+            if (!enemy) { continue; }
             enemy.GetComponent<Stats>().ResetActionPoints();
             StartOfPartyTurnCall(enemy);
         }
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
-        var pos = enemyParty[0].position();  //Expensive call
-        enemyParty[0].GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
-        enemyParty[0].GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+        var pos = currentCharacter.position();  //Expensive call
+        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
+        currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
     }
 
     public void NextEnemy(GameObject enemy) {
+        if(enemy)
         enemyTurnTaken.Add(enemy);
         Debug.Log("Next Enemy");
-        foreach(GameObject enemyCharacter in enemyParty) {
-            if (enemyTurnTaken.Contains(enemyCharacter)) { continue;}
+        foreach (GameObject enemyCharacter in enemyParty) {
+            if (enemyTurnTaken.Contains(enemyCharacter) || !enemyCharacter) { continue; }
             SetCurrentCharacter(enemyCharacter);
             var pos = enemyCharacter.position();  //Expensive call
             enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
@@ -174,7 +188,7 @@ public class PartyManager : MonoBehaviour {
 
     public void StartOfPartyTurnCall(GameObject character) {
         var pos = character.position();  //Expensive call
-        character.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
+        character.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.StartOfTurn);
     }
 
 
@@ -189,7 +203,7 @@ public class PartyManager : MonoBehaviour {
         }
         SetCurrentCharacter(party[0]);
         partyMemberTurnTaken.Clear();
-        enemyTurnTaken.Clear();
+        //enemyTurnTaken.Clear();
     }
 
     public void TakeEnemyTurn(IEnumerator enumerator, GameObject enemy) {
@@ -197,7 +211,7 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void AddEnemy(GameObject enemy) {
-        if (enemyParty.Contains(enemy)) return;
+        if (enemyParty.Contains(enemy)) { return; }
         enemyParty.Add(enemy);
         var stats = enemy.GetComponent<Stats>();
         stats.SpawnHitNumber("!", Color.red, 2);
@@ -222,9 +236,7 @@ public class PartyManager : MonoBehaviour {
         GridManager.i.goTilemap.SetColor(position, Color.clear);
 
         if (renderer == null) { yield return null; }
-        if (character.GetComponent<Stats>().faction != Faction.Wall)
-            character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -animationDistance);
-
+        character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -animationDistance);
         renderer.material = hitMaterial;
         yield return new WaitForSeconds(0.15f);
         renderer.material = spriteMaterial;

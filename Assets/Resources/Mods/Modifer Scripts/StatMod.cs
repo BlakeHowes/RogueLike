@@ -14,41 +14,48 @@ public class StatMod : ItemAbstract {
     public int walkCost;
     public int enemyAlertRange;
     public int skillRange;
+    public int health;
 
     public bool onlyActivateOutOfCombat;
+    public Signal onSignal = Signal.CalculateStats;
+    public bool originBecomesPosition;
     public override bool Condition(Vector3Int position, Vector3Int origin) {
         return false;
     }
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if (signal != Signal.CalculateStats) { return; }
-        var stats = origin.gameobjectGO().GetComponent<Stats>();
+        if (signal != onSignal) { return; }
         if (onlyActivateOutOfCombat) {
             var target = position.gameobjectGO();
             if (!target) { return; }
             if (position.gameobjectGO().GetComponent<Stats>().faction != PartyManager.Faction.Enemy) { return; }
-            if (stats.state == PartyManager.State.Combat) { return; }
+            var statsCharacter = origin.gameobjectGO().GetComponent<Stats>();
+            if (statsCharacter.state == PartyManager.State.Combat) { return; }
         }
+        if (originBecomesPosition) {
+            origin = position;
+        }
+        var stats = origin.gameobjectGO().GetComponent<Stats>();
+       
 
-        Debug.Log("past state check");
         var item = origin.gameobjectGO().GetComponent<Inventory>().mainHand;
         var weapon = item as Weapon;
         if (weapon == null) { goto Stats; }
         weapon.damageTemp += damage;
         weapon.damageMultipleTemp += damageMultiple;
-        Debug.Log("Weapon Multiple "+weapon.damageMultipleTemp);
         if(weapon.rangeBase > 1) {
             weapon.rangeTemp += rangedWeaponRange;
         }
 
     Stats:
         if (armour != 0) { stats.armourTemp += armour; }
-        if (actionPoints != 0) { stats.actionPointsTemp += actionPoints; }
+        if (actionPoints != 0) { stats.actionPoints += actionPoints; }
         if (throwingRange != 0) { stats.throwingRangeTemp += throwingRange; }
         if (fistDamage != 0) { stats.fistDamageTemp += fistDamage; }
         if (walkCost != 0) { stats.walkCostTemp += walkCost; }
         if (enemyAlertRange != 0) { stats.enemyAlertRangeTemp += enemyAlertRange; }
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
-
+        if (health < 0) { stats.TakeDamage(health * -1, position); }
+        if (health > 0) { stats.Heal(health); }
     }
     public override string Description() {
         string description = name +":\n";
@@ -63,6 +70,7 @@ public class StatMod : ItemAbstract {
         if (walkCost != 0) { description += walkCost + " Walk Cost\n"; }
         if (enemyAlertRange != 0) { description += enemyAlertRange + " Enemy Alert Range\n"; }
         if (skillRange != 0) { description += skillRange + " Skill Range\n"; }
+        if (health != 0) { description += health + " Health\n"; }
         return description;
     }
 }

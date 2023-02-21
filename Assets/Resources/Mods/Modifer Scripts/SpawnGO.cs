@@ -22,6 +22,6 @@ public class SpawnGO : ItemAbstract {
         foreach (GameObject go in Gos) {
             description += go.name + "\n";
         }
-        throw new System.NotImplementedException();
+        return description;
     }
 }

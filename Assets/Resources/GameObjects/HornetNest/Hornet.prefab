@@ -52,7 +52,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 4900000, guid: 2e75fb225ce22e24abbc22d3cea94150, type: 3}
   autoReset: 1
-  tickOn: 0
+  tickOn: 3
   sourceInfos:
   - isFoldout: 1
     breakPoints: 
@@ -76,7 +76,6 @@ MonoBehaviour:
   target: {fileID: 0}
   stats: {fileID: 0}
   sightRange: 12
-  state: 1
   itemActions: []
 --- !u!114 &3243932232630802517
 MonoBehaviour:
@@ -92,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 836a1ca2fa34b7d4cafa7c031ef94633, type: 2}
   faction: 1
-  state: 1
+  state: 0
   deathAction: []
   blocksLight: 1
   maxHealthBase: 20

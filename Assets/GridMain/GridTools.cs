@@ -131,6 +131,7 @@ public class GridTools
         List<Vector3Int> WallsToClear = new List<Vector3Int>();
         List<Vector3Int> checkedCells = new List<Vector3Int>();
         int breaker = 0;
+        var walkableTilemap = GridManager.i.walkableTilemap;
         var checkpos = position;
         while(cellstocheck.TryDequeue(out checkpos)) {
             breaker++;
@@ -152,7 +153,7 @@ public class GridTools
                     }
                     checkedCells.Add(pos);
                     //goTilemap.SetColor(pos, Color.white);
-                    if (pos.gameobjectGO()) {
+                    if (pos.gameobjectGO() || goTilemap.GetTile(pos) || !walkableTilemap.GetTile(pos)) {
                         WallsToClear.Add(pos);
                     }
                     else {
@@ -170,9 +171,9 @@ public class GridTools
             fogTilemap.SetTile(pos, tile);
             var posOffset = pos + offset1;
             var posOffset2 = pos + offset2;
-            if (!posOffset.gameobjectGO()) { continue; }
+            //if (!posOffset.gameobjectGO()) { continue; }
             fogTilemap.SetTile(posOffset, tile);
-            if (!posOffset2.gameobjectGO()) { continue; }
+            //if (!posOffset2.gameobjectGO()) { continue; }
             fogTilemap.SetTile(pos + offset2, tile);
         }
     }

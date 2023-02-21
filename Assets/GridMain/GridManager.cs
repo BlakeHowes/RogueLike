@@ -3,10 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 
 public class GridManager : MonoBehaviour {
     public static GridManager i;
@@ -30,8 +27,7 @@ public class GridManager : MonoBehaviour {
     [NonSerialized] public GoMethod goMethods;
 
     //NPC tick
-    public List<Behaviours> NPCBehavioursPool = new List<Behaviours>();
-    public List<Behaviours> NPCBehaviours = new List<Behaviours>();
+    public List<PandaBehaviour> NPCBehaviours = new List<PandaBehaviour>();
 
     // Tilemaps
     public Tilemap mechTilemap;
@@ -40,6 +36,7 @@ public class GridManager : MonoBehaviour {
     public Tilemap goTilemap;
     public Tilemap fogTilemap;
     public Tilemap miniTilemap;
+    public Tilemap walkableTilemap;
     public Vector3Int NullValue = new Vector3Int(-1, -1, 0);
 
     //TEST OBJECTS
@@ -59,6 +56,22 @@ public class GridManager : MonoBehaviour {
     public float fogDistance;
     public float outerFogDistance;
 
+    public List<ItemAbstract> itemsInActionStack = new List<ItemAbstract>();
+
+    public void StartStack() {
+        MouseManager.i.disableMouse = true;
+    }
+    public IEnumerator Stack() {
+        foreach(ItemAbstract item in itemsInActionStack) {
+            //yield return StartCoroutine(item.Action);
+        }
+       yield return null;
+    }
+
+    public void EndStack() {
+        MouseManager.i.disableMouse = false;
+    }
+
     public void Awake() {
         i = this;
        
@@ -67,7 +80,7 @@ public class GridManager : MonoBehaviour {
         Initialize();
         //mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
         itemMethods = new itemMethods(itemGrid, assets, itemTilemap);
-        goMethods = new GoMethod(goGrid,assets,goTilemap);
+        goMethods = new GoMethod(goGrid,assets,goTilemap,walkableTilemap);
         graphics = new GridGraphics(width, height, mechGrid, surfaceGrid, goGrid, itemGrid, goTilemap, itemTilemap, mechTilemap, surfaceTilemap, goTile);
     }
 
@@ -88,9 +101,10 @@ public class GridManager : MonoBehaviour {
     }
 
     public void mechFloorTick() {
+        Vector3Int position = Vector3Int.zero;
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
-                Vector3Int position = new Vector3Int(x, y);
+                position.x = x; position.y = y;
                 if (mechGrid[x, y]) mechGrid[x, y].Call(position);
                 if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
             }
@@ -123,6 +137,12 @@ public class GridManager : MonoBehaviour {
             var clone = goMethods.SpawnFloodFill(position, character);
             PartyManager.i.AddPartyMember(clone);  
         }
+    }
+
+    void OnDrawGizmosSelected() {
+        // Draw a semitransparent red cube at the transforms position
+        Gizmos.color = new Color(1, 1, 1, 0.2f);
+        Gizmos.DrawCube(new Vector3(width/2, height/2), new Vector3(width, height));
     }
 
     public Vector3Int FindEntrance() {
@@ -187,23 +207,23 @@ public class GridManager : MonoBehaviour {
         }
     }
     public void ClearFogDoor(Vector3Int position) {
-
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                var pos = new Vector3Int(x, y);
-                if (!fogTilemap.GetTile(pos))
-                    fogTilemap.SetTile(pos, fogSemi);
-            }
-        }
-
-
         /*
-        foreach (GameObject member in party) {
-            if(member == null) { continue; }
-            var position = member.position();
-            tools.FloodFill(position, goTilemap, fogTilemap, outerFogFill, fogWall,outerFogDistance);
-        }
-        */
+   for (int x = 0; x < width; x++) {
+       for (int y = 0; y < height; y++) {
+           var pos = new Vector3Int(x, y);
+           if (!fogTilemap.GetTile(pos))
+               fogTilemap.SetTile(pos, fogSemi);
+       }
+   }
+
+
+
+   foreach (GameObject member in party) {
+       if(member == null) { continue; }
+       var position = member.position();
+       tools.FloodFill(position, goTilemap, fogTilemap, outerFogFill, fogWall,outerFogDistance);
+   }
+   */
         tools.FloodFill(position, goTilemap, fogTilemap, 1000, fogSemi, 1000);
     }
 
@@ -237,15 +257,45 @@ public class GridManager : MonoBehaviour {
         return goGrid;
     }
 
-    public void InstantiateGosAroundCharacters() {
-        int size = 15;
+    public SurfaceAbstract GetOrSpawnSurface(Vector3Int position) {
+        var item = surfaceGrid[position.x, position.y];
+        if (item) { return item; }
+        var tile = surfaceTilemap.GetTile<Tile>(position);
+        if (!tile) { return null; }
+        var prefab = Instantiate(assets.TiletoSurface(tile));
+        if (!prefab) { return null; }
+        surfaceGrid[position.x, position.y] = prefab;
+        return prefab;
+    }
+
+    public void RemoveSurface(Vector3Int position) {
+        surfaceGrid[position.x, position.y] = null;
+        surfaceTilemap.SetTile(position, null);
+    }
+
+    public SurfaceAbstract GetOrSpawnMech(Vector3Int position) {
+        var item = mechGrid[position.x, position.y];
+        if (item) { return item; }
+        var tile = mechTilemap.GetTile<Tile>(position);
+        if (!tile) { return null; }
+        var prefab = assets.TiletoMech(tile);
+        if (!prefab) { return null; }
+        mechGrid[position.x, position.y] = prefab;
+        return prefab;
+    }
+
+    public void InstantiateGosMechsSurfacesAroundCharacters() {
+        int size = 12;
         var party = PartyManager.i.party;
+        var checkPos = Vector3Int.zero;
         foreach (GameObject member in party) {
             var pos = member.position();
             for (int x = pos.x - size; x < pos.x + size; x++) {
                 for (int y = pos.y + size; y >= pos.y - size; y--) {
-                    var checkPos = new Vector3Int(x, y);
-                    if (checkPos.inbounds()) {
+                    checkPos.x = x;checkPos.y = y;
+                    if (walkableTilemap.GetTile(checkPos)) {
+                        GetOrSpawnSurface(checkPos);
+                        GetOrSpawnMech(checkPos);
                         goMethods.GetGameObjectOrSpawnFromTile(checkPos);
                     }
                 }
@@ -254,30 +304,42 @@ public class GridManager : MonoBehaviour {
     }
 
     public void UpdateGame() {
-        InstantiateGosAroundCharacters();
+        InstantiateGosMechsSurfacesAroundCharacters();
         graphics.UpdateEverything();
         GameUIManager.i.actionPointsText.text = PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints.ToString();
         InventoryManager.i.UpdateInventory();
     }
 
     public void TickGame() {
-
-        foreach(var player in PartyManager.i.party) {
+        var currentCharacter = PartyManager.i.currentCharacter;
+        foreach (GameObject member in PartyManager.i.party) {
+            if(member)
+            member.GetComponent<NPCSearch>().Search();
+        }
+        foreach (var player in PartyManager.i.party) {
             if (!player) { continue; }
-            if(player.GetComponent<Stats>().state == PartyManager.State.Combat) { continue; }
-            var position = player.transform.position.FloorToInt();
-            player.GetComponent<Inventory>().CallTraits(position, position, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
+            var position = player.position(); //CHANGE THIS TO NOT BE SUPER SLOW
+            if (player.GetComponent<Stats>().state == PartyManager.State.Combat) { 
+                if(player == currentCharacter) {
+                    player.GetComponent<Inventory>().CallTraitsAndStatusEffects(position, position, ItemAbstract.Signal.Tick);
+                }
+                continue; 
+            }
+            player.GetComponent<Inventory>().CallTraitsAndStatusEffects(position, position, ItemAbstract.Signal.Tick);
+            player.GetComponent<Inventory>().CallTraitsAndStatusEffects(position, position, ItemAbstract.Signal.StartOfTurn);
         }
-        foreach(Behaviours behaviour in NPCBehavioursPool) {
-            NPCBehaviours.Add(behaviour);
-        }
-        NPCBehavioursPool.Clear();
-        foreach (Behaviours behaviour in NPCBehaviours) {
+        foreach (PandaBehaviour behaviour in NPCBehaviours) {
             if (!behaviour) { continue; }
-            if (PartyManager.i.enemyParty.Contains(behaviour.gameObject)) { continue; }
-            var position = behaviour.gameObject.transform.position.FloorToInt();
-            behaviour.GetComponent<Inventory>().CallTraits(position, position, ItemAbstract.Signal.StartOfTurnOrTickOutOfCombat);
-            behaviour.GetComponent<PandaBehaviour>().Tick();
+            var position = behaviour.gameObject.position(); //CHANGE THIS TO NOT BE SUPER SLOW
+            if (PartyManager.i.enemyParty.Contains(behaviour.gameObject)) {
+                if (behaviour.gameObject == currentCharacter) {
+                    behaviour.GetComponent<Inventory>().CallTraitsAndStatusEffects(position, position, ItemAbstract.Signal.Tick);
+                }
+                continue; 
+            }
+            behaviour.GetComponent<Inventory>().CallTraitsAndStatusEffects(position, position, ItemAbstract.Signal.Tick);
+            behaviour.GetComponent<Inventory>().CallTraitsAndStatusEffects(position, position, ItemAbstract.Signal.StartOfTurn);
+            behaviour.tickOn = BehaviourTree.UpdateOrder.Update;
         }
         mechFloorTick();
         UpdateGame();
