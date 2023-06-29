@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
+  m_Name: Smoke
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: e6a5573b4ee0e714bbdda5c40d01eabb, type: 2}
+  combinations: []
+  items: []
+  StatusEffect: {fileID: 0}
+  duration: {x: 6, y: 12}
+  effectPrefab: {fileID: 8194992990867289339, guid: 6ce58395fb3e0e149807cf164cc00fb7, type: 3}
+  dryUp: 1
+  dryUpSurface: {fileID: 0}
+  fireSpread: 0

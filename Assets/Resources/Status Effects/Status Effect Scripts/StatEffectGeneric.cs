@@ -23,7 +23,7 @@ public class StatEffectGeneric : ItemAbstract {
     public int skillRange;
     public int health;
     public int healthChangeAddition;
-
+    public List<ItemAbstract> items = new List<ItemAbstract>();
     public GameObject target;
     public override IEnumerator Action() {
         var stats = target.GetComponent<Stats>();
@@ -37,7 +37,9 @@ public class StatEffectGeneric : ItemAbstract {
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
         if (health < 0) { stats.TakeDamage(health * -1, position); }
         if (health > 0) { stats.Heal(health); }
-
+        foreach (var item in items) {
+            item.Call(position, origin, Signal.Attack);
+        }
         if (particles) { EffectManager.i.AttachSingleToGO(position, particles);}
         yield return new WaitForSeconds(0f);
     }

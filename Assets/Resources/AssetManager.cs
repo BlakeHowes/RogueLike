@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class AssetManager {
     List<SurfaceAbstract> mechs = new List<SurfaceAbstract>();
-    List<SurfaceAbstract> surfaces = new List<SurfaceAbstract>();
+    List<Surface> surfaces = new List<Surface>();
     List<ItemAbstract> items = new List<ItemAbstract>();
     List<GameObject> gos = new List<GameObject>();
     List<GameObject> characters = new List<GameObject>();
@@ -15,8 +15,8 @@ public class AssetManager {
         var mechResources = Resources.LoadAll<SurfaceAbstract>("Mechs");
         foreach (SurfaceAbstract mech in mechResources) { mechs.Add(mech); }
 
-        var surfaceResources = Resources.LoadAll<SurfaceAbstract>("Surfaces");
-        foreach (SurfaceAbstract surface in surfaceResources) { surfaces.Add(surface); }
+        var surfaceResources = Resources.LoadAll<Surface>("Surfaces");
+        foreach (Surface surface in surfaceResources) { surfaces.Add(surface); }
 
         var itemResources = Resources.LoadAll<ItemAbstract>("Items");
         foreach (ItemAbstract item in itemResources) { items.Add(item); }
@@ -39,8 +39,8 @@ public class AssetManager {
         }
     }
 
-    public SurfaceAbstract TiletoSurface(TileBase tile) {
-        foreach (SurfaceAbstract item in surfaces) {
+    public Surface TiletoSurface(TileBase tile) {
+        foreach (Surface item in surfaces) {
             if (item.tile == tile) return item;
         }
 

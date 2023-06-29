@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ddb7d6ee0fc6c654db69fe57c1783047, type: 2}
   - {fileID: 11400000, guid: 81e745a6c21899744beca520ac9f7326, type: 2}
   - {fileID: 11400000, guid: 53a10d3be35627345a9d7032e7bdfe0c, type: 2}
+  - {fileID: 11400000, guid: bc50b55615db8b241b3dd21f042b52bf, type: 2}
   - {fileID: 11400000, guid: ddb7d6ee0fc6c654db69fe57c1783047, type: 2}
   blocksLight: 0
   maxHealthBase: 1

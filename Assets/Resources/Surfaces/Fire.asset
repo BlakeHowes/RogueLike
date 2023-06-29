@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
+  m_Name: Fire
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 17afce58a28caa8469f70839026af993, type: 2}
+  combinations:
+  - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
+    resultingSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
+  items: []
+  StatusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}
+  duration: {x: 5, y: 10}
+  effectPrefab: {fileID: 8288408381700605430, guid: d1b165fb7b5d55d4aa239abdff2cd54f, type: 3}
+  dryUp: 1
+  dryUpSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
+  fireSpread: 1

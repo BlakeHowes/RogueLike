@@ -31,4 +31,6 @@ MonoBehaviour:
   skillRange: 0
   health: -3
   healthChangeAddition: 0
+  items:
+  - {fileID: 11400000, guid: c31924ea2acfbaf49b32f7af767fab85, type: 2}
   target: {fileID: 0}

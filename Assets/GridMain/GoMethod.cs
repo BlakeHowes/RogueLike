@@ -72,7 +72,6 @@ public class GoMethod
             return Origin;
         }
         foreach (var cell in cells) {
-            Debug.Log("cell" + cell);
             if (!floorTilemap.GetTile(cell) || cell.gameobjectGO()) { return previousPos; }
             
             previousPos = cell;

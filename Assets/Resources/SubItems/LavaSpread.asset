@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4014f0da84220694d922043f763dfd0b, type: 3}
   m_Name: LavaSpread
   m_EditorClassIdentifier: 
-  type: 0
   tile: {fileID: 0}
   particles: {fileID: 0}
-  Modifiers: []
-  surface: {fileID: 11400000, guid: a0613052e024d4249a90c152dca9d6ba, type: 2}
-  radius: 2
+  position: {x: 22, y: 32, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+  radius: 1
   onSignal: 4

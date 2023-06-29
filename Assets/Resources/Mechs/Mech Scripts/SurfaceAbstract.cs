@@ -7,4 +7,8 @@ public abstract class SurfaceAbstract : ScriptableObject
 {
     public TileBase tile;
     public abstract void Call(Vector3Int position);
+    public void Combine(SurfaceAbstract surface) {
+
+    }
+
 }

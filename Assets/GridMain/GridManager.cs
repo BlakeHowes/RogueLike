@@ -21,7 +21,7 @@ public class GridManager : MonoBehaviour {
 
     //Grid data
     private SurfaceAbstract[,] mechGrid;
-    private SurfaceAbstract[,] surfaceGrid;
+    private Surface[,] surfaceGrid;
     private ItemAbstract[,] itemGrid;
     private GameObject[,] goGrid;
 
@@ -226,7 +226,7 @@ public class GridManager : MonoBehaviour {
     public void Initialize() {
         //Initialize grids
         mechGrid = new SurfaceAbstract[width, height];
-        surfaceGrid = new SurfaceAbstract[width, height];
+        surfaceGrid = new Surface[width, height];
         itemGrid = new ItemAbstract[width, height];
         goGrid = new GameObject[width, height];
         for (int x = 0; x < width; x++) {
@@ -374,7 +374,7 @@ public class GridManager : MonoBehaviour {
         return goGrid;
     }
 
-    public SurfaceAbstract GetOrSpawnSurface(Vector3Int position) {
+    public Surface GetOrSpawnSurface(Vector3Int position) {
         var item = surfaceGrid[position.x, position.y];
         if (item) { return item; }
         var tile = surfaceTilemap.GetTile(position);
@@ -385,7 +385,35 @@ public class GridManager : MonoBehaviour {
         return prefab;
     }
 
+    public void CombineOrSetSurface(Vector3Int position, Surface surface) {
+        var surfaceFound = surfaceGrid[position.x, position.y];
+        if (surfaceFound) {
+            var combined = surfaceFound.Combine(position, surface);
+            if (combined) { Debug.Log("Combined true"); return; }
+        }
+        surfaceTilemap.SetTile(position, surface.tile);
+        var surfaceOnGround = GetOrSpawnSurface(position);
+        surfaceOnGround.Call(position);
+    }
+
+    public void CombineSurface(Vector3Int position, Surface surface) {
+        var surfaceFound = surfaceGrid[position.x, position.y];
+        if (surfaceFound) {
+            var combined = surfaceFound.Combine(position, surface);
+            if (combined) { Debug.Log("Combined true"); return; }
+        }
+    }
+
+    public void SetSurface(Vector3Int position,Surface surface) {
+        RemoveSurface(position);
+        surfaceTilemap.SetTile(position, surface.tile);
+        var surfaceOnGround = GetOrSpawnSurface(position);
+        surfaceOnGround.Call(position);
+    }
+
     public void RemoveSurface(Vector3Int position) {
+        if(surfaceGrid[position.x, position.y]) { surfaceGrid[position.x, position.y].KillSurface(position); }
+      
         surfaceGrid[position.x, position.y] = null;
         surfaceTilemap.SetTile(position, null);
     }

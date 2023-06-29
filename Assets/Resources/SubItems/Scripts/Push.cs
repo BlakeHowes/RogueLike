@@ -84,7 +84,7 @@ public class Push : ItemAbstract {
     }
 
     public override string Description() {
-        throw new System.NotImplementedException();
+        return "Pushes " + numberOfSteps;
     }
 }
 

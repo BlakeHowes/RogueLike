@@ -23,12 +23,19 @@ public class DevHotkeys : MonoBehaviour
             PartyManager.i.EndTurn();
         }
 
+
+        if (Input.GetKeyDown(KeyCode.W)) {
+            PartyManager.i.currentCharacter.GetComponent<Stats>().SpawnHitNumber("Wait", Color.blue, 1);
+            //currentStats.actionPoints -= 1;
+            MouseManager.i.EndOfAction();
+        }
+
         if (Input.GetKeyDown(KeyCode.X)) {
             GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.position());
         }
         if (Input.GetKeyDown(KeyCode.B)) {
             var mousePos = MouseManager.i.MousePositionOnGrid();
-            Debug.Log("Position: "+ mousePos +" GameObject: "+ mousePos.gameobjectGO() + " Item: "+ mousePos.item());
+            Debug.Log("Position: "+ mousePos +" GameObject: "+ mousePos.gameobjectGO() + " Item: "+ mousePos.item() + " Surface: " + GridManager.i.GetOrSpawnSurface(mousePos));
         }
         if (Input.GetKeyDown(KeyCode.N)) {
             var pos = MouseManager.i.MousePositionOnGrid();
