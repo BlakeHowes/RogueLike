@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static ItemStatic;
 [CreateAssetMenu(fileName = "Stat Change", menuName = "Status Effects/Stat Change Status Effect")]
 public class StatEffectGeneric : ItemAbstract {
     [Header("Options")]
     public int durationTotal;
-    public Signal onSignal;
+    [Tooltip("Calculate stats for any stat modification, tick for health ect")]
+    public Signal onSignal = Signal.CalculateStats;
     int counter = 0;
     [Header("Stats")]
     public int damage;
@@ -22,38 +24,10 @@ public class StatEffectGeneric : ItemAbstract {
     public int health;
     public int healthChangeAddition;
 
-    GameObject target;
-    public override bool Condition(Vector3Int position, Vector3Int origin) {
-        return false;
-    }
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if(signal == Signal.SetTarget) { target = position.gameobjectGO();return; }
-
-
-        if (signal != onSignal) { return; }
-        if (!target) { Debug.LogError("No target set for Status Effect " + this.name); return; }
-        counter++;
-
-        if (counter > durationTotal) {
-            if (target) {
-                Debug.Log(target);
-                target.GetComponent<Inventory>().statusEffectsToRemove.Add(this);
-            }
-
-            return;
-        }
-        health += healthChangeAddition;
-        var item = target.GetComponent<Inventory>().mainHand;
-        var weapon = item as Weapon;
-        if (weapon == null) { goto Stats; }
-        weapon.damageTemp += damage;
-        weapon.damageMultipleTemp += damageMultiple;
-        if (weapon.rangeBase > 1) {
-            weapon.rangeTemp += rangedWeaponRange;
-        }
-
-    Stats:
-        var stats =target.GetComponent<Stats>();
+    public GameObject target;
+    public override IEnumerator Action() {
+        var stats = target.GetComponent<Stats>();
+        if (!stats.gameObject.activeSelf) { yield break; }
         if (armour != 0) { stats.armourTemp += armour; }
         if (actionPoints != 0) { stats.actionPointsTemp += actionPoints; }
         if (throwingRange != 0) { stats.throwingRangeTemp += throwingRange; }
@@ -61,10 +35,44 @@ public class StatEffectGeneric : ItemAbstract {
         if (walkCost != 0) { stats.walkCostTemp += walkCost; }
         if (enemyAlertRange != 0) { stats.enemyAlertRangeTemp += enemyAlertRange; }
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
-        if (health < 0) { stats.TakeDamage(health * -1,position); }
+        if (health < 0) { stats.TakeDamage(health * -1, position); }
         if (health > 0) { stats.Heal(health); }
 
-        if (particles) { EffectManager.i.CreateSingleParticleEffect(position,origin,particles); }
+        if (particles) { EffectManager.i.AttachSingleToGO(position, particles);}
+        yield return new WaitForSeconds(0f);
+    }
+
+    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+        if(signal == Signal.SetTarget) { target = position.gameobjectGO();return; }
+        if(signal == Signal.StartOfTurn) {
+            counter++;
+            if (counter > durationTotal) {
+                if (target) {
+                    Debug.Log(target);
+                    target.GetComponent<Inventory>().statusEffectsToRemove.Add(this);
+                }
+
+                return;
+            }
+        }
+        if (signal != onSignal) { return; }
+        Debug.Log("Status Effect Call");
+        if (!target) { Debug.LogError("No target set for Status Effect " + this.name); return; }
+        health += healthChangeAddition;
+        var item = target.GetComponent<Inventory>().mainHand;
+        var weapon = item as Weapon;
+        if (weapon == null) { goto Stats; }
+        weapon.damageTemp += damage;
+        Debug.Log(weapon + " " + weapon.damageMultipleTemp);
+        weapon.damageMultipleTemp += damageMultiple;
+        if (weapon.rangeBase > 1) {
+            weapon.rangeTemp += rangedWeaponRange;
+        }
+
+    Stats:
+        this.position = position;
+        this.origin = origin;
+        GridManager.i.InsertToStack(this);
     }
     public override string Description() {
         string description = name + ":\n";

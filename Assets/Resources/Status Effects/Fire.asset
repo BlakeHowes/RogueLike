@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee403b2a7d5e9ba43944c7eda1415ecf, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  type: 0
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: 817d97830cf39d343879c32989054cd7, type: 2}
   particles: {fileID: 8288408381700605430, guid: 16bd81cb08d797b4da482c048b69ebd9, type: 3}
-  Modifiers: []
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
   durationTotal: 5
   onSignal: 11
   damage: 100
@@ -31,3 +31,4 @@ MonoBehaviour:
   skillRange: 0
   health: -3
   healthChangeAddition: 0
+  target: {fileID: 0}

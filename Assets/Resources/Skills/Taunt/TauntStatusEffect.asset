@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c396f7a37021d014e9487a9bf2813071, type: 3}
+  m_Name: TauntStatusEffect
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 5fe26befb9e08f74b9571a1d012dbbd2, type: 2}
+  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  durationTotal: 2
+  subItems:
+  - {fileID: 11400000, guid: 8bd97cdf045e16842acd9d97f88e2a97, type: 2}

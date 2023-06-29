@@ -12,7 +12,7 @@ public class Algorithm {
 
     public Algorithm(Grid2D grid) {
         this.grid = grid;
-        walkableTilemap = GridManager.i.walkableTilemap;
+        walkableTilemap = GridManager.i.floorTilemap;
         openList = new List<Cell>();
         closedList = new List<Cell>();
     }
@@ -74,9 +74,7 @@ public class Algorithm {
                     if (go != null) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                         var faction = go.GetComponent<Stats>().faction;
-                        if (faction == PartyManager.Faction.Enemy|| faction == PartyManager.Faction.Party) {
-                            grid.FindCellByPosition(gameobjectcell).walkable = true;
-                        }
+                        grid.FindCellByPosition(gameobjectcell).walkable = true;
 
                     }
                     else {

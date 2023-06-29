@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17871f4feafc5c4780646cd9a4bd33e, type: 3}
   m_Name: KingDeathSpawn
   m_EditorClassIdentifier: 
-  type: 0
   tile: {fileID: 0}
   particles: {fileID: 0}
-  Modifiers: []
   Gos:
   - {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6, type: 3}
   - {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6, type: 3}

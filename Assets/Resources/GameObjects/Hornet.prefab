@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3243932232630802516}
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
+  - component: {fileID: -240951869525227899}
   m_Layer: 0
   m_Name: Hornet
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 4900000, guid: 2e75fb225ce22e24abbc22d3cea94150, type: 3}
   autoReset: 1
-  tickOn: 0
+  tickOn: 3
   sourceInfos:
   - isFoldout: 1
     breakPoints: 
@@ -76,7 +77,7 @@ MonoBehaviour:
   target: {fileID: 0}
   stats: {fileID: 0}
   sightRange: 12
-  state: 1
+  itemActions: []
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,12 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 836a1ca2fa34b7d4cafa7c031ef94633, type: 2}
-  baseSprite: {fileID: 0}
-  baseHair: {fileID: 0}
-  baseFace: {fileID: 0}
   faction: 1
   state: 0
-  deathAction: []
+  deathAction:
+  - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
   blocksLight: 1
   maxHealthBase: 20
   armourBase: 0
@@ -104,6 +103,11 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
@@ -122,17 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 0
-  showArmour: 0
   items: []
-  skills: []
-  misc: []
+  traits: []
+  statusEffects: []
   mainHand: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -201,3 +206,17 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
     rarity: 1
     pool: 0
+--- !u!114 &-240951869525227899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e58bac0b67faf241b89753e760d929a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: 15
+  Stiffness: 1000

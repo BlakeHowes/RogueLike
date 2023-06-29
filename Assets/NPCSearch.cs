@@ -26,7 +26,11 @@ public class NPCSearch : MonoBehaviour
                 if (enemy == null) { continue; }
                 PartyManager.i.AddEnemy(enemy);
             }
+            if (stats.state == PartyManager.State.Idle) { MouseManager.i.walked = false; Debug.Log("Walked Disabled by NPC Search"); }
             stats.state = PartyManager.State.Combat;
+
+          
+            
         }
     }
 }

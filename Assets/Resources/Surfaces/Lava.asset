@@ -16,3 +16,5 @@ MonoBehaviour:
   StatusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}
   duration: {x: 55, y: 68}
   dryUp: 1
+  spread: 0
+  spreadAmount: 0

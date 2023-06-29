@@ -1,44 +1,35 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public abstract class ItemAbstract : ScriptableObject
 {
-    [Header("Main")]
-    public Type type;
     public Tile tile;
     public GameObject particles;
-    public List<ItemAbstract> Modifiers = new List<ItemAbstract>();
-    [NonSerialized]public bool ConditionsMet;
-    public abstract void Call(Vector3Int position,Vector3Int origin,Signal signal);
-
-    public void CheckConditions(Vector3Int position, Vector3Int origin) {
-        ConditionsMet = false;
-        foreach (ItemAbstract item in Modifiers) {
-            item.CheckConditions(position, origin);
-        }
-        if (Condition(position, origin)) {
-            MouseManager.i.itemCanBeUsed = true;
-            ConditionsMet = true;
-        }
-    }
-
-    //public abstract IEnumerator Action();
-
-    public abstract bool Condition(Vector3Int position, Vector3Int origin);
+    [HideInInspector] public Vector3Int position;
+    [HideInInspector] public Vector3Int origin;
+    public abstract void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal);
+    public abstract IEnumerator Action();
     public abstract string Description();
+}
 
-    public enum Type {
-        Consumable,
-        Weapon,
-        OffHand,
-        Armour,
-        Helmet,
-        Trinket,
-        Skill
+public static class ItemStatic {
+    public enum EquipmentType {
+        mainHand,
+        offHand,
+        helmet,
+        armour,
+        trinket
     }
+
+    public enum SkillDescriptionForAI {
+        BuffSelf,
+        BuffAllies,
+        AttackSingle,
+        AttackAOE
+    }
+
     public enum Signal {
         CalculateStats,
         ActionPointSum,

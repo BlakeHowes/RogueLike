@@ -1,23 +1,28 @@
+using LlamAcademy.Spring;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class GridGraphics 
 {
     int width;
     int height;
     Tile goTile;
+    Tile shadowTile;
     Tilemap mechTilemap;
     Tilemap itemTilemap;
     Tilemap goTilemap;
     Tilemap surfaceTilemap;
+    Tilemap shadowTilemap;
     SurfaceAbstract[,] mechGrid;
     SurfaceAbstract[,] surfaceGrid;
     ItemAbstract[,] itemGrid;
     GameObject[,] goGrid;
-    public GridGraphics(int width, int height, SurfaceAbstract[,] mechGrid, SurfaceAbstract[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tile goTile) {
+
+    public bool lerping;
+    public GridGraphics(int width, int height, SurfaceAbstract[,] mechGrid, SurfaceAbstract[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tilemap shadowTilemap,Tile shadowTile) {
         this.width = width;
         this.height = height;
         this.mechTilemap = mechTilemap;
@@ -28,26 +33,20 @@ public class GridGraphics
         this.mechGrid = mechGrid;
         this.surfaceGrid = surfaceGrid;
         this.itemGrid = itemGrid;
-        this.goTile = goTile;
-    }
-    public void UpdateGameObjects(int width,int height, GameObject[,] goGrid,Tilemap tilemap) {
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                if (goGrid[x,y] != null) {
-                    var tile = goGrid[x, y].GetComponent<Stats>().tile;
-                    if (tile != null) {
-                        tilemap.SetTile(new Vector3Int(x, y, 0), tile);
-                    }
-                }
-            }
-        }
+        this.shadowTilemap = shadowTilemap;
+        this.shadowTile = shadowTile;
     }
 
     public void UpdateEverything() {
+        shadowTilemap.ClearAllTiles();
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 var position = new Vector3Int(x, y);
-                if (itemGrid[x, y] != null) itemTilemap.SetTile(position, itemGrid[x, y].tile);
+                if (itemGrid[x, y] != null) {
+                    itemTilemap.SetTile(position, itemGrid[x, y].tile);
+                    shadowTilemap.SetTile(position, shadowTile);
+                }
+
                 if (mechGrid[x, y] != null) mechTilemap.SetTile(position, mechGrid[x, y].tile);
                 if (surfaceGrid[x, y] != null) surfaceTilemap.SetTile(position, surfaceGrid[x, y].tile);
             }
@@ -64,31 +63,111 @@ public class GridGraphics
         }
     }
 
-    public IEnumerator LerpPosition(Vector3Int startPosition, Vector3Int targetPosition, float duration, Tilemap tilemap) {
+    public IEnumerator LerpPosition(Vector3Int startPosition, Vector3Int targetPosition,GameObject character, float duration) {
         float time = 0;
         Vector3 offset = new Vector3(0.5f, 0.5f);
-        var gameobject = startPosition.gameobjectSpawn();
-        if (!gameobject) { yield return null; }
-        var healthbar =gameobject.GetComponent<Stats>().healthbar;
-        gameobject.transform.position = startPosition + offset;
-        healthbar.transform.position = gameobject.transform.position;
+        if (!character) { yield return null; }
+        var healthbar =character.GetComponent<Stats>().healthbar;
+        character.transform.position = startPosition + offset;
+        if(healthbar)healthbar.transform.position = character.transform.position;
         var distance = Vector3.Distance(startPosition, targetPosition);
         duration *= distance;
+       
         while (time < duration) {
             {
-                gameobject.transform.position = Vector3.Lerp(startPosition + offset, targetPosition + offset, time / duration);
-                healthbar.transform.position = gameobject.transform.position;
-                time += Time.deltaTime;
-                yield return null;
+                lerping = true;
+                if (character) {
+                    character.transform.position = Vector3.Lerp(startPosition + offset, targetPosition + offset, time / duration);
+                    if (healthbar) healthbar.transform.position = character.transform.position;
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                else {
+                    break;
+                }
+
             }
-            gameobject.transform.position = targetPosition + offset;
-            healthbar.transform.position = gameobject.transform.position;
+            if (character) {
+                character.transform.position = targetPosition + offset;
+                if (healthbar) healthbar.transform.position = character.transform.position;
+            }
+            else {
+                break;
+            }
+
+        }
+        lerping = false;
+    }
+
+    public IEnumerator NudgeSpring(Vector3Int position,Vector3Int origin,float amount,GameObject go) {
+        Vector3 cellOffsetPosition = new Vector3(0.5f, 1) + (Vector3)position;
+        Vector3 cellOffsetOrigin = new Vector3(0.5f, 1) + (Vector3)origin;
+        Vector3 direction = Vector3.Normalize(cellOffsetPosition - cellOffsetOrigin);
+        Vector3 offset = cellOffsetOrigin + direction * (amount * -1);
+        var spring = new SpringVector2() { StartValue = go.transform.position, EndValue = go.transform.position };
+        spring.Damping = 15;
+        spring.Stiffness = 1000;
+        spring.StartValue = go.transform.position;
+        spring.EndValue = go.transform.position;
+        spring.InitialVelocity = new Vector2(go.transform.position.x - offset.x,go.transform.position.y - offset.y);
+        Vector3 targetPosition = go.transform.position;
+        go.transform.position = spring.Evaluate(Time.deltaTime);
+        float timeLimit = 0;
+        var positionUpdate = go.transform.position;
+        while (!Mathf.Approximately(0, Vector2.SqrMagnitude(targetPosition - positionUpdate))) {
+            if(timeLimit > 1) { break; }
+            timeLimit += Time.deltaTime;
+            if (!go) { break; }
+            positionUpdate = go.transform.position;
+            go.transform.position = spring.Evaluate(Time.deltaTime);
+            yield return null;
         }
     }
 
-    public IEnumerator TileLerp(Vector3Int targetTile,Vector3Int startlocation, Vector3Int endlocation, float lerpduration,Tilemap tilemap,GameObject particleEffect) {
+    public IEnumerator LerpPositionSpring(Vector3Int startPosition, Vector3Int targetPosition, GameObject character, float duration) {
+        float time = 0;
+        Vector3 offset = new Vector3(0.5f, 0.5f);
+        if (!character) { yield return null; }
+        var healthbar = character.GetComponent<Stats>().healthbar;
+        if (healthbar) healthbar.transform.position = character.transform.position;
+        var distance = Vector3.Distance(startPosition, targetPosition);
+        duration *= distance;
+        var spring = new SpringVector2() { StartValue = startPosition + offset,EndValue = targetPosition + offset };
+        while (time < duration) {
+            {
+                if (character) {
+                    character.transform.position = spring.Evaluate(Time.deltaTime);
+                    if (healthbar) healthbar.transform.position = character.transform.position;
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                else {
+                    break;
+                }
+
+            }
+            if (character) {
+                character.transform.position = targetPosition + offset;
+                if (healthbar) healthbar.transform.position = character.transform.position;
+            }
+            else {
+                break;
+            }
+
+        }
+
+    }
+
+    public float TimeFromSpeed(Vector3 position, Vector3 origin,float speed) {
+        var distance = Vector3.Distance(position, origin);
+        return distance * speed;
+    }
+
+    public IEnumerator TileLerp(Vector3Int targetTile,Vector3 startlocation, Vector3 endlocation, float lerpduration,Tilemap tilemap) {
+        Debug.Log("Lerp Start, Start Location:" + startlocation+ ", End Location: " + endlocation + ", Target Tile: " + targetTile);
         Vector3 start = startlocation - targetTile;
         Vector3 end = endlocation - targetTile;
+        Debug.Log("start:" + start + ", end:" + end);
         Vector3 lerpPos = start;
         float TimeElapsed = 0;
         while (TimeElapsed < lerpduration) {
@@ -99,11 +178,11 @@ public class GridGraphics
             TimeElapsed += Time.deltaTime;
             yield return null;
         }
-        if (particleEffect != null) { EffectManager.i.CreateSingleParticleEffect(endlocation, startlocation, particleEffect); }
+        Debug.Log("Lerp End");
     }
 
     public IEnumerator FlashAnimation(GameObject character, Vector3Int origin,Color colour) {
-        if (character == null) yield return null;
+        if (character == null) yield break;
         //var position = character.position();
         var renderer = character.GetComponent<SpriteRenderer>();
         //var startPosition = character.transform.position;
@@ -112,7 +191,7 @@ public class GridGraphics
         hitMaterial.color = colour;
         //GridManager.i.goTilemap.SetColor(position, Color.clear);
 
-        if (renderer == null) { yield return null; }
+        if (renderer == null) { yield break; }
         //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
         renderer.material = hitMaterial;
         yield return new WaitForSeconds(0.15f);
@@ -124,7 +203,7 @@ public class GridGraphics
         if (renderer) { renderer.material = spriteMaterial; }
        
         if (character == PartyManager.i.currentCharacter) {
-            renderer.material = GameUIManager.i.outlineMaterial;
+            if (renderer) renderer.material = GameUIManager.i.outlineMaterial;
         }
     }
 }

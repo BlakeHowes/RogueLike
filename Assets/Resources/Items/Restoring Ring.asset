@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ca28875b5f1a41ba8a37d35748b11, type: 3}
   m_Name: Restoring Ring
   m_EditorClassIdentifier: 
-  type: 5
   tile: {fileID: 11400000, guid: c39318b2bf8cfdb4c9e122282fa981e5, type: 2}
   particles: {fileID: 0}
-  Modifiers:
-  - {fileID: 11400000, guid: a501853c8a1781548b4004b151de963c, type: 2}
+  equipmentType: 4
+  subItems: []
   wornSprite: {fileID: 0}
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}
-  damageBase: 0
   maxHealthBase: 0
   armourBase: 0
-  armourTemp: 0

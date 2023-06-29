@@ -12,17 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
   m_Name: HornetWand
   m_EditorClassIdentifier: 
-  type: 1
   tile: {fileID: 11400000, guid: 23ea02ed19402474d99957d7b9c90fb0, type: 2}
   particles: {fileID: 6375196592243838218, guid: 3e9ed6ff900aa924d83e410fcc671e66, type: 3}
-  Modifiers:
-  - {fileID: 11400000, guid: 41445ebff0956a94aa0ddca60490f782, type: 2}
-  linePrefab: {fileID: 0}
+  subItems:
+  - {fileID: 11400000, guid: b0e2a331b9b93094082fd4c1ef54b0c6, type: 2}
   duelWield: 0
+  twoHanded: 0
   actionPointCost: 1
   damageBase: 5
   damageMaxBase: 3
   accuracyBase: 8
   rangeBase: 5
   damageMultipleBase: 1
+  delayAfterApplyingDamage: 0
   heldOffset: {x: 15, y: 10, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}

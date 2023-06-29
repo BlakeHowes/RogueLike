@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+using static ItemStatic;
+using System.Collections;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
 public class Weapon : ItemAbstract
 {
-    public GameObject linePrefab;
+    public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public bool duelWield,twoHanded = false;
     [Header("Base Stats")]
     public int actionPointCost;
@@ -17,6 +18,7 @@ public class Weapon : ItemAbstract
     public int accuracyBase = 8;
     public int rangeBase = 1;
     public int damageMultipleBase = 1;
+    public float delayAfterApplyingDamage;
     public Vector3Int heldOffset;
 
     [Header("Temporary Stats")]
@@ -24,8 +26,10 @@ public class Weapon : ItemAbstract
     [NonSerialized] public int accuracyTemp;
     [NonSerialized] public int damageTemp;
     [NonSerialized] public int damageMaxTemp;
-    public int damageMultipleTemp;
+    [NonSerialized] public int damageMultipleTemp;
     [NonSerialized] public int damage;
+    [HideInInspector] public GameObject originCharacter;
+    [HideInInspector] public GameObject target;
     public void ResetTempStats() {
         rangeTemp = rangeBase;
         accuracyTemp = accuracyBase;
@@ -52,29 +56,21 @@ public class Weapon : ItemAbstract
         Debug.Log("Damage Calculation"+damage);
     }
 
-    public override bool Condition(Vector3Int position, Vector3Int origin) {
-        if (GridManager.i.tools.InRange(position, origin, rangeTemp)) { return true; }
-        return false;
-    }
-
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        var target = position.gameobjectSpawn();
-        var originCharacter = origin.gameobjectSpawn();
-
-        if (signal == Signal.ActionPointSum) {
-            if (!ConditionsMet) { return; }
-            if (MouseManager.i.itemSelected == null)
-                originCharacter.GetComponent<Stats>().actionPointsSum += actionPointCost;
-            foreach (ItemAbstract mod in Modifiers) {
-                mod.Call(position, origin, Signal.CalculateStats);
+        originCharacter = origin.gameobjectSpawn();
+        if (signal == Signal.CalculateStats) {
+            ResetTempStats();
+            foreach (ItemAbstract item in subItems) {
+                item.Call(position, origin, Signal.CalculateStats);
             }
             return;
         }
 
-        if (signal == Signal.CalculateStats) {
-            ResetTempStats();           
-            foreach (ItemAbstract mod in Modifiers) {
-                mod.Call(position, origin, Signal.CalculateStats);
+        if (signal == Signal.ActionPointSum) {
+            if (MouseManager.i.itemSelected == null)
+                originCharacter.GetComponent<Stats>().actionPointsSum += actionPointCost;
+            foreach (ItemAbstract item in subItems) {
+                item.Call(position, origin, signal);
             }
             return;
         }
@@ -84,34 +80,50 @@ public class Weapon : ItemAbstract
         }
 
         if (signal != Signal.Attack) { return; }
-        if (ConditionsMet == false) { return; }
-        //if (target == null) { return; }
+        this.origin = origin;
+        this.position = position;
+        target = this.position.gameobjectSpawn();
+     
+        if (MouseManager.i.itemSelected != null) { return; }
 
-        Debug.Log("Damage Attack" + damage);
-
-
-        Debug.Log("Weapon Range " + rangeTemp);
-        Debug.Log("position " + position + "origin " + origin);
-        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
-
-        foreach (ItemAbstract mod in Modifiers) {
-            mod.Call(position, origin, signal);
+        foreach (ItemAbstract item in subItems) {
+            item.Call(position, origin, signal);
         }
-        //Remove health from target
-        if(target)
-        target.GetComponent<Stats>().TakeDamage(damage, origin);
-        originCharacter.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
-        EffectManager.i.CreateLineEffect(position, origin, linePrefab);
+        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { 
+            if(GridManager.i.itemsInActionStack.Count == 0) {
+                return;
+            }
+        }
+        GridManager.i.itemsInActionStack.Add(this);
+    }
+
+    public override IEnumerator Action() {
+        origin = originCharacter.position();
+        position = target.position();
+        Debug.Log("Weapon Call: Position: " + position + " Origin: " + origin);
+        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { yield break; }
+        if (target) {
+            if(damage > 0) { target.GetComponent<Stats>().TakeDamage(damage, origin); }
+            if(originCharacter)originCharacter.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
+            var character = PartyManager.i.currentCharacter;
+            float enemyWaitTime = 0;
+            if (character) { 
+                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+                    enemyWaitTime = 0.2f;
+                } 
+            }
+            yield return new WaitForSeconds(delayAfterApplyingDamage+enemyWaitTime);
+        }
     }
 
     public override string Description() {
         ResetTempStats();
         string description = "This " + name + " does "+ damageBase +"-"+ (damageBase+damageMaxBase);
         description += " with an accuracy of " + accuracyBase;
+        description += ". ";
+        foreach (ItemAbstract item in subItems) {
+            description += item.Description();
+        }
         return description;
-    }
-
-    public void OnEnable() {
-        type = Type.Weapon;
     }
 }

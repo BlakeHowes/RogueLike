@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class PaletteButton : MonoBehaviour
 {
     public CCPalette palette;
-    public CharacterCreator.PaletteButtonType type;
+    public string paletteOptionName;
     
-    public void SetPalette(CCPalette palette, CharacterCreator.PaletteButtonType type) {
+    public void SetPalette(CCPalette palette) {
         this.palette = palette;
-        this.type = type;
         GetComponent<Image>().color = palette.midColour;
     }
 
@@ -18,18 +17,9 @@ public class PaletteButton : MonoBehaviour
         var currentCharacter = CharacterCreator.i.currentCharacter;
         var options = currentCharacter.GetComponent<CCOptions>();
 
-        if (type == CharacterCreator.PaletteButtonType.Body) {
-            options.bodyPalette = palette;
-        }
-        if (type == CharacterCreator.PaletteButtonType.Hair) {
-            options.hairPalette = palette;
-        }
-        if (type == CharacterCreator.PaletteButtonType.Face) {
-            options.facePalette = palette;
-        }
-        if (type == CharacterCreator.PaletteButtonType.Feature) {
-            options.featurePalette = palette;
-        }
-        InventoryManager.i.UpdateSpriteFromItems(currentCharacter.GetComponent<Inventory>());
+        var field = options.GetType().GetField(paletteOptionName);
+        field.SetValue(options, palette);
+
+        InventoryManager.i.CreateCharacterSprite(currentCharacter);
     }
 }

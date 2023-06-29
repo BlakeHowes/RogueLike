@@ -22,9 +22,14 @@ public class AssetManager {
         foreach (ItemAbstract item in itemResources) { items.Add(item); }
 
         var goResources = Resources.LoadAll<GameObject>("GameObjects");
-        foreach (GameObject go in goResources) { gos.Add(go); }
-
         foreach (GameObject go in goResources) {
+            Stats stats;
+            go.TryGetComponent<Stats>(out stats);
+            if (!stats) { continue; }
+            gos.Add(go); 
+        }
+
+        foreach (GameObject go in gos) {
             var faction = go.GetComponent<Stats>().faction;
             if (faction == PartyManager.Faction.Enemy|| faction==PartyManager.Faction.Party)
                 characters.Add(go);
@@ -34,7 +39,7 @@ public class AssetManager {
         }
     }
 
-    public SurfaceAbstract TiletoSurface(Tile tile) {
+    public SurfaceAbstract TiletoSurface(TileBase tile) {
         foreach (SurfaceAbstract item in surfaces) {
             if (item.tile == tile) return item;
         }
@@ -42,14 +47,14 @@ public class AssetManager {
         Debug.LogError("Cant find Surface corrosponding with " + tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
-    public SurfaceAbstract TiletoMech(Tile tile) {
+    public SurfaceAbstract TiletoMech(TileBase tile) {
         foreach (SurfaceAbstract item in mechs) {
             if (item.tile == tile) return item; }
 
         //Debug.LogError("Cant find Mech corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
-    public ItemAbstract TiletoItem(Tile tile) {
+    public ItemAbstract TiletoItem(TileBase tile) {
         foreach (ItemAbstract item in items) {
             if (item.tile == tile) return item; }
 
@@ -71,6 +76,7 @@ public class AssetManager {
 
     public GameObject SearchTileSpriteInstead(TileBase tilebase) {
         var tile = tilebase as Tile;
+        if (!tile) { return null; }
         var sprite = tile.sprite;
         foreach (GameObject go in gos) {
             if (go.GetComponent<SpriteRenderer>()) {

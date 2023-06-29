@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f7590faa8e58c448b9c530b0b47626, type: 3}
+  m_Name: DeathParticleSubItem
+  m_EditorClassIdentifier: 
+  tile: {fileID: 0}
+  particles: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+  position: {x: 28, y: 31, z: 0}
+  origin: {x: 28, y: 31, z: 0}
+  delay: 0
+  targetSelf: 0
+  offset: {x: 0, y: 0.21, z: 0}
+  material: {fileID: 2100000, guid: 9ed0b8e220bbf0647996148ba57b0030, type: 2}
+  sprite: {fileID: 21300000, guid: 8154a7071afdc5f4b9f90f99f3737e53, type: 3}
+  scaleFactor: 0.35

@@ -27,7 +27,13 @@ public class DevHotkeys : MonoBehaviour
             GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.position());
         }
         if (Input.GetKeyDown(KeyCode.B)) {
-            Debug.Log(MouseManager.i.MousePositionOnGrid().gameobjectGO());
+            var mousePos = MouseManager.i.MousePositionOnGrid();
+            Debug.Log("Position: "+ mousePos +" GameObject: "+ mousePos.gameobjectGO() + " Item: "+ mousePos.item());
+        }
+        if (Input.GetKeyDown(KeyCode.N)) {
+            var pos = MouseManager.i.MousePositionOnGrid();
+            var character = pos.gameobjectGO();
+            if (character) { character.GetComponent<Stats>().TakeDamage(1000000, pos); }
         }
     }
 }

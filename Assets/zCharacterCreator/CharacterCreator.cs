@@ -158,11 +158,15 @@ public class CharacterCreator : MonoBehaviour {
         inventory.offHand = options.loadout.offHand;
         inventory.helmet = options.loadout.helmet;
         inventory.armour = options.loadout.armour;
-        inventory.trinkets.Clear();
-        foreach(ItemAbstract trinket in options.loadout.trinkets) {
-            inventory.trinkets.Add(trinket);
+
+        int i = 1;
+        foreach(var item in options.loadout.trinkets) {
+            var trinket = inventory.GetType().GetField("trinket" + i);
+            trinket.SetValue(inventory, item);
+            i++;
         }
-        InventoryManager.i.UpdateSpriteFromItems(inventory);
+      
+        InventoryManager.i.CreateCharacterSprite(currentCharacter);
         UpdateLabels();
     }
 
@@ -208,7 +212,6 @@ public class CharacterCreator : MonoBehaviour {
     }
 
     public void CreatePaletteButtons(Transform paletteButtonsInLayout, List<CCPalette> palettes,PaletteButtonType type) {
-        
         foreach (Transform palette in paletteButtonsInLayout) {
             palette.gameObject.SetActive(false);
         }
@@ -216,8 +219,7 @@ public class CharacterCreator : MonoBehaviour {
             foreach (Transform paletteButton in paletteButtonsInLayout) {
                 if (!paletteButton.gameObject.activeSelf) {
                     paletteButton.gameObject.SetActive(true);
-                    var button = paletteButton.gameObject.GetComponent<PaletteButton>();
-                    button.SetPalette(palette,type);
+                    paletteButton.gameObject.GetComponent<PaletteButton>().SetPalette(palette);
                     break;
                 }
             }

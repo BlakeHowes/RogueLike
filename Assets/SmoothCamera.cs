@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 
 public class SmoothCamera : MonoBehaviour {
     [Range(0.001f, 1f)]
@@ -16,9 +14,13 @@ public class SmoothCamera : MonoBehaviour {
     private Vector3 Diference;
     private bool Drag = false;
     bool following = true;
+    public static SmoothCamera i;
+    public bool useTargetPos = false;
+    public Vector3 targetPosition;
     public void Awake() {
         mCamera = Camera.main;
         size = mCamera.orthographicSize;
+        i = this;
     }
 
     void LateUpdate() {
@@ -41,25 +43,48 @@ public class SmoothCamera : MonoBehaviour {
         mCamera.orthographicSize = Mathf.Clamp(sizeLerp, minZoom, maxZoom);
     }
 
+    public void ActionZoomIn(Vector3 position,float duration, float speed) {
+        StartCoroutine(IActionZoomIn(position, duration, speed));
+    }
+
+    private IEnumerator IActionZoomIn(Vector3 position, float duration,float speed) {
+        targetPosition = position;
+        useTargetPos = true;
+        var sizeTemp = size;
+        var smoothspeedTemp = SmoothSpeed;
+        SmoothSpeed = speed;
+        size = 5;
+        yield return new WaitForSeconds(duration);
+        useTargetPos = false;
+        size = sizeTemp;
+        SmoothSpeed = smoothspeedTemp;
+        resetFollow();
+    }
+
     public void resetFollow() {
         following = true;
     }
+
+    public void Update() {
+        if (Input.GetKeyDown(KeyCode.O)) {
+            ActionZoomIn(new Vector3(30, 30, 0), 2,SmoothSpeed);
+        }
+    }
     void FixedUpdate() {
+
+
         if (Input.GetMouseButton(1)) { resetFollow(); }
         if (!Input.GetMouseButton(2)) {
+
             if (!following) { return; }
             var currentCharacter = PartyManager.i.currentCharacter; //Change this eventually
             if (currentCharacter == null) {
                 return;
             }
-
-            Vector3 position = Vector3.Lerp(transform.position, currentCharacter.transform.position, SmoothSpeed);
+            if (!useTargetPos) { targetPosition = currentCharacter.transform.position; }
+            Vector3 position = Vector3.Lerp(transform.position, targetPosition, SmoothSpeed);
             position.z = -10;
             transform.position = position;
-            
         }
-
-
-   
     }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: FloorRemade1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: f31dcb88e5dbd444d9017552c1bfb0f1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b39506805286e674fbce79bd900677ae, type: 3}
+  m_Color: {r: 0.740566, g: 0.9719531, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0

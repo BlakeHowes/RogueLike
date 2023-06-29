@@ -12,9 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e48ec68403634346983155bc83e2da4, type: 3}
   m_Name: Exit
   m_EditorClassIdentifier: 
-  type: 0
-  tile: {fileID: 11400000, guid: 80de18f9d83944549b644ec3d04786c7, type: 2}
-  particles: {fileID: 0}
-  destroyOnUse: 0
-  ranged: 0
-  stack: 1
+  tile: {fileID: 11400000, guid: b573824b252fd8d49b8f003979644187, type: 2}

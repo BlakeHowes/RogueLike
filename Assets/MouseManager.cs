@@ -1,8 +1,8 @@
-
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
+using static ItemStatic;
 using static PartyManager;
 
 public class MouseManager : MonoBehaviour
@@ -14,27 +14,40 @@ public class MouseManager : MonoBehaviour
     State state;
     public GameObject highlightedGameObject = null;
     public Vector3Int lastMousePosition;
-    public bool itemCanBeUsed = false;
     public bool walked = false;
     public Vector3Int clickPosition;
     public float repeatSpeed;
-    public Tilemap walkableTilemap;
+    public Tilemap floorTilemap;
     public void Awake() {
         i = this;
     }
-    public void Start() {
-        walkableTilemap = GridManager.i.walkableTilemap;
+
+    public void SelectItem(ItemAbstract item) {
+        itemSelected = item;
+        if (!item) { InventoryManager.i.DeselectItems(); }
     }
+    public void Start() {
+        floorTilemap = GridManager.i.floorTilemap;
+    }
+
+
+
     public void Update() {
+        if (walked) { return; }
+        if (GridManager.i.graphics.lerping) { return; }
         var position = MousePositionOnGrid();
-        if (!position.inbounds()) { GameUIManager.i.HideHighlight(); return; }
-        if (disableToggle && disableMouse == false) { GameUIManager.i.EnableUI(); disableMouse = false; }
-        if (disableMouse) { GameUIManager.i.DisableUI(); disableToggle = true; return; }
-       
+        if (disableToggle && disableMouse == false) { 
+            GameUIManager.i.EnableUI(); disableMouse = false; 
+        }
+        if (disableMouse) { 
+            GameUIManager.i.DisableUI(); 
+            disableToggle = true; 
+            return; 
+        }
         if (position != lastMousePosition) {
             lastMousePosition = position;
             if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
-            if (GridManager.i.FogTile(position)|| !walkableTilemap.GetTile(position)) {
+            if (GridManager.i.FogTile(position)|| !floorTilemap.GetTile(position)) {
                 GameUIManager.i.HideHighlight();
             }
             else {
@@ -44,17 +57,14 @@ public class MouseManager : MonoBehaviour
 
 
         if (Input.GetMouseButtonDown(1)) {
-            itemSelected = null;
+            SelectItem(null);
             GameUIManager.i.groundUI.ClearAllTiles();
         }
 
-        
-
         if (Input.GetMouseButtonDown(0)) {
             clickPosition = position;
-            if (walked) { return; }
             if (EventSystem.current.IsPointerOverGameObject()) { return; }
-            if (!walkableTilemap.GetTile(position)) { return; }
+            if (!floorTilemap.GetTile(position)) { return; }
             var gameobjectundermouse = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
             var currentCharacter = PartyManager.i.currentCharacter;
             if (currentCharacter == null) { return; }
@@ -64,7 +74,7 @@ public class MouseManager : MonoBehaviour
             state = currentStats.state;
             //Update the stats of the character whos turn it is currently based on their equipment
             currentStats.ResetTempStats();
-            inventory.CallEquipment(position, origin, ItemAbstract.Signal.CalculateStats);
+            inventory.CallEquipment(position, origin, Signal.CalculateStats);
             if (UseItem(position, origin,currentStats, inventory)) { EndOfAction(); return; };
             if(position == origin) { WaitOrPickUpItem(position,origin,gameobjectundermouse,currentStats,currentCharacter); }
             if(Attack(position, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(); return; };
@@ -93,7 +103,7 @@ public class MouseManager : MonoBehaviour
             else {
                 walked = WalkLeader(position, origin, currentStats);
             }
-
+            
 
             //Pick Up Item
            
@@ -101,46 +111,45 @@ public class MouseManager : MonoBehaviour
             if (newpos == position || newpos == origin) {
                 walked = false;
             }
-            if(newpos != origin)
+
+            if (newpos != origin)
             EndOfAction();
         }
     }
 
     public bool UseItem(Vector3Int position,Vector3Int origin,Stats currentStats,Inventory inventory) {
-        itemCanBeUsed = false;
         if (itemSelected == null) { return false; }
-        itemSelected.CheckConditions(position, origin);
-        itemSelected.Call(position, origin, ItemAbstract.Signal.ActionPointSum);
-        if (itemCanBeUsed && currentStats.actionPoints >= currentStats.actionPointsSum) {
-            itemSelected.Call(position, origin, ItemAbstract.Signal.Attack);
+        itemSelected.Call(position, origin, Signal.ActionPointSum);
+        if (currentStats.actionPoints >= currentStats.actionPointsSum) {
+            itemSelected.Call(position, origin, Signal.Attack);
             currentStats.actionPoints -= currentStats.actionPointsSum;
         }
-        if (!itemCanBeUsed && inventory.items.Contains(itemSelected)) { Actions.i.ThrowItem(position, origin, itemSelected); }
+        if (inventory.items.Contains(itemSelected)) { 
+            Actions.i.ThrowItem(position, origin, itemSelected,inventory);
+            currentStats.actionPoints -= 1;
+        }
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
-        itemSelected = null;
+        SelectItem(null);
         return true;
     }
 
     public bool Attack(Vector3Int position, Vector3Int origin,GameObject target,GameObject currentCharacter) {
-        itemCanBeUsed = false;
         if (target == null) { return false; }
         var currentStats = currentCharacter.GetComponent<Stats>();
         var targetStats = target.GetComponent<Stats>();
-        
+        Debug.Log("ATTACK");
         if (targetStats.faction == currentStats.faction) { return false; }
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
         if(currentStats.state == State.Idle && targetStats.faction == Faction.Interactable) { goto Meelee; }
-        inventory.CheckEquipment(position, origin);
-        if (itemCanBeUsed == true) {
-            if (CheckActionPoints(origin, inventory, currentStats) == false) { return false; };
-            if (inventory.mainHand) { inventory.mainHand.Call(position, origin, ItemAbstract.Signal.WeaponDamageCalculate); }
-            inventory.CallEquipment(position, origin, ItemAbstract.Signal.Attack);
-            PathingManager.i.FlipCharacter(currentCharacter,position,origin);
-            if (inventory.mainHand)
-            return true;
-        }
-
+        if (CheckActionPoints(position, origin, inventory, currentStats) == false) { return false; };
+        if (inventory.mainHand) { inventory.mainHand.Call(position, origin, Signal.WeaponDamageCalculate); }
+        if (inventory.offHand) { inventory.offHand.Call(position, origin, Signal.WeaponDamageCalculate); }
+        inventory.CallEquipment(position, origin, Signal.Attack);
+        if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
+        PathingManager.i.FlipCharacter(currentCharacter, position, origin);
+        if (inventory.mainHand) { return true; }
+            
         Meelee:
         var range = GridManager.i.tools.MeeleeRange(origin);
         if (range.Contains(position) && currentStats.actionPoints > 0) {
@@ -177,6 +186,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public bool Walk(Vector3Int position, Vector3Int origin, Stats stats) {
+        if (!GridManager.i.floorTilemap.GetTile(position)) { return false; }
         var walkCost = stats.walkCostTemp;
         if (walkCost > stats.actionPoints) { return false; }
         var walked = PathingManager.i.MoveOneStep(position, origin);
@@ -187,24 +197,19 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
-    public bool CheckActionPoints(Vector3Int origin,Inventory inventory,Stats stats) {
+    public bool CheckActionPoints(Vector3Int position,Vector3Int origin,Inventory inventory,Stats stats) {
         if(stats.state == State.Idle) { return true; }
         stats.actionPointsSum = 0;
-        inventory.CallEquipment(origin, origin,ItemAbstract.Signal.ActionPointSum);
+        inventory.CallEquipment(position, origin, Signal.ActionPointSum);
         var sum = stats.actionPointsSum;
         if(sum <= stats.actionPoints) { stats.actionPoints -= sum; return true; }
         return false;
     }
 
     public void EndOfAction() {
-        GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
         var partyManager = PartyManager.i;
         var currentCharacter = PartyManager.i.currentCharacter;
         var currentStats = currentCharacter.GetComponent<Stats>();
-        GridManager.i.ClearSemiFog();
-
-        partyManager.Follow();
-        
         if (currentStats.state == State.Idle) {
             foreach (GameObject member in partyManager.party) {
                 member.GetComponent<Stats>().ResetActionPoints();
@@ -213,55 +218,56 @@ public class MouseManager : MonoBehaviour
                 partyManager.partyMemberTurnTaken.Clear();
                 partyManager.SetCurrentCharacter(PartyManager.i.party[0]);
             }
-            
         }
+        GridManager.i.TickGame();
+    }
+
+    public void EndOfActionFinal() {
+        Debug.Log("end of action final call");
+        var partyManager = PartyManager.i;
+
+        partyManager.Follow();
+
+
         var stats = partyManager.currentCharacter.GetComponent<Stats>();
         //state = stats.state;
 
-        if(state == State.Combat) { walked = false; }
-        GridManager.i.TickGame();
-
-        if (Input.GetMouseButtonDown(0)) {
-            StartCoroutine(RepeatInput(clickPosition));
-        }
+        if (state == State.Combat) { walked = false; }
+        
         if (stats.actionPoints <= 0) {
             partyManager.EndTurn();
             walked = false;
         }
+        if (walked) { StartCoroutine(RepeatDelay());  }
     }
 
-    public IEnumerator RepeatInput(Vector3Int position) {
-        var repeatSpeedPathing = PathingManager.i.repeatSpeed;
-        while (walked) {
-            yield return new WaitForSeconds(repeatSpeedPathing);
-            Repeat(position);
-        }
-        yield return null;
+    public IEnumerator RepeatDelay() {
+        yield return new WaitForSeconds(0.1f);
+        Repeat();
     }
 
-    public void Repeat(Vector3Int position) {
+
+    public void Repeat() {
+        if (!walked) { EndOfAction(); return; }
         var currentCharacter = PartyManager.i.currentCharacter;
         if (currentCharacter == null) { return; }
         var origin = currentCharacter.position();
         var currentStats = currentCharacter.GetComponent<Stats>();
         var inventory = currentCharacter.GetComponent<Inventory>();
-        var target = position.gameobjectSpawn();
-        //Update the stats of the character whos turn it is currently based on their equipment
+        var target = clickPosition.gameobjectSpawn();
         currentStats.ResetTempStats();
-        //currentStats.GetComponent<Inventory>().CallEquipment(position, origin, ItemAbstract.Signal.CalculateStats);
-
-        if (UseItem(position, origin, currentStats, inventory)) { walked = false; EndOfAction(); return; };
-        if (Attack(position, origin, target, currentCharacter)) { walked = false; EndOfAction(); return; };
+        if (UseItem(clickPosition, origin, currentStats, inventory)) { walked = false; EndOfAction(); return; };
+        if (Attack(clickPosition, origin, target, currentCharacter)) { walked = false; EndOfAction(); return; };
 
         //Walk
         PartyManager.i.characterFollowPosition = currentCharacter.position();
-        WalkLeader(position, origin, currentStats);
+        WalkLeader(clickPosition, origin, currentStats);
   
         var newpos = PartyManager.i.currentCharacter.position();
-        if (newpos == position || newpos == origin) {
+        if (newpos == clickPosition || newpos == origin) {
             walked = false;
         }
-        if(currentStats.state == State.Combat && state == State.Idle) { walked = false; }
+        if(currentStats.state == State.Combat) { walked = false; }
         EndOfAction();
     }
 

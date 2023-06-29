@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ca28875b5f1a41ba8a37d35748b11, type: 3}
   m_Name: WitchOutfit
   m_EditorClassIdentifier: 
-  type: 3
   tile: {fileID: 11400000, guid: d9d809c1919796047ba23f783da6bee6, type: 2}
   particles: {fileID: 0}
-  Modifiers: []
-  PreviewIcon: {fileID: 0}
+  equipmentType: 3
+  subItems: []
   wornSprite: {fileID: 21300000, guid: 9ca9483f03816b64b91727bc6acc7149, type: 3}
-  damageBase: 0
+  hideHair: 0
+  wornOffset: {x: 0, y: 0, z: 0}
   maxHealthBase: 0
   armourBase: 1
-  armourTemp: 1

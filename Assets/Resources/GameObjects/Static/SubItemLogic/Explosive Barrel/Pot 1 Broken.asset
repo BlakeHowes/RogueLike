@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d362c3fbb0dcd4b80e68d7bd3951ed, type: 3}
+  m_Name: Pot 1 Broken
+  m_EditorClassIdentifier: 
+  tile: {fileID: 0}
+  particles: {fileID: 8288408381700605430, guid: 34140b1ba67f82c42a5bd4120d96203b, type: 3}
+  position: {x: 31, y: 34, z: 0}
+  origin: {x: 31, y: 34, z: 0}
+  delay: 0
+  targetSelf: 0
+  offset: {x: 0, y: 0.75, z: 0}

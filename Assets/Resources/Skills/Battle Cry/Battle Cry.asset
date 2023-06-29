@@ -9,16 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f2d3a5295d9d64da102b4f59aaf560, type: 3}
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
   m_Name: Battle Cry
   m_EditorClassIdentifier: 
-  type: 0
-  tile: {fileID: 0}
-  particles: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
-  Modifiers:
-  - {fileID: 11400000, guid: bcffb7a4c984f5344a63b5463b1a8734, type: 2}
-  range: 2
-  actionPointCost: 1
-  actionPointCostTemp: 0
-  coolDown: 5
+  tile: {fileID: 11400000, guid: 77e1d95bc328d59419b5f950071b844c, type: 2}
+  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  range: 4
+  actionPointCost: 2
   customDescription: 
+  coolDownTimer: 0
+  subItems:
+  - {fileID: 11400000, guid: 08c111b19d54d9a43a2c73dd96581242, type: 2}
+  skillDescriptionForAI: 0
+  CameraZoomDuration: 1

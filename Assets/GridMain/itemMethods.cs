@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+
 public class itemMethods {
     private ItemAbstract[,] itemGrid;
     private AssetManager assets;
@@ -37,34 +39,8 @@ public class itemMethods {
             itemGrid[position.x, position.y] = null;
             return null;
         }
-        return itemGrid[position.x, position.y] = GridManager.i.InstantiateItem(item);
-    }
-
-    public void DropItem(ItemAbstract item, Vector3Int position) {
-        if (item == null) { return; }
-        if (IsThisCellEmpty(position)) {  
-            SetItem(item, position);
-            return;
-        }
-        var pos = SearchForFreeCell(position);
-        SetItem(item, pos);
-        Actions.i.TileLerpPosition(pos, position, pos,0.1f, itemTilemap, null);
-    }
-
-    public Vector3Int SpawnThrownItem(ItemAbstract item, Vector3Int position) {
-        if (IsThisCellEmpty(position)) {
-            SetItem(item, position);
-            return position;
-        }
-        var characterpos = PartyManager.i.currentCharacter.position();
-        var line = GridManager.i.tools.BresenhamLine(position.x,position.y, characterpos.x, characterpos.y);
-        if (IsThisCellEmpty(line[0])) {
-            SetItem(item, line[0]);
-            itemTilemap.SetTile(line[0], item.tile);
-            return line[0];
-        }
-        SetItem(item, SearchForFreeCell(line[0]));
-        return GridManager.i.NullValue;
+        itemTilemap.SetTile(position, item.tile);
+        return itemGrid[position.x, position.y] = item;
     }
 
     public ItemAbstract RemoveItem(Vector3Int position) {
@@ -76,17 +52,6 @@ public class itemMethods {
         }
         Debug.LogError("Could not remove item from " + position);
         return null;
-    }
-
-    public bool IsThisCellEmpty(Vector3Int position) {
-        if (position.inbounds()) {
-            if (position.gameobjectSpawn() == null && position.item() == null) {
-                if (GridManager.i.goTilemap.GetTile(position) == null && GridManager.i.itemTilemap.GetTile(position) == null) {
-                    return true;
-                }
-            }
-        }
-        return false;
     }
 
     public Vector3Int FindItemOnGrid(ItemAbstract item) {
@@ -101,18 +66,81 @@ public class itemMethods {
         return Vector3Int.zero;
     }
 
-    public Vector3Int SearchForFreeCell(Vector3Int position) {
-        for (int i = 0; i < 4; i++) {
-            for (int x = position.x - 1-i; x < position.x + 2 + i; x++) {
-                for (int y = position.y - 1-i; y < position.y + 2 + i; y++) {
-                    var checkpos = new Vector3Int(x, y, 0);
-                    if (IsThisCellEmpty(checkpos)) {
-                        return checkpos;
-                    }
+    public float FloodFillDropItems(Vector3Int position, Vector3Int origin, List<ItemAbstract> items) {
+        var actions = Actions.i;
+        var timeTaken = 0.1f;
+        var gridManager = GridManager.i;
+        if (items.Count == 0) { return timeTaken; }
+        Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
+        List<Vector3Int> checkedCells = new List<Vector3Int>();
+        if (!GetItemOrSpawnFromTile(position)){ 
+            SetItem(items[0], position);  
+            items.Remove(items[0]);
+            gridManager.StartCoroutine(gridManager.graphics.TileLerp(position, origin, position, 0.1f, itemTilemap));
+        }
+        cellstocheck.Enqueue(position);
+        int breaker = 0;
+        var checkpos = position;
+        var offsetPosition = position;
+        var goTilemap = GridManager.i.goTilemap;
+        var floor = GridManager.i.floorTilemap;
+        while (cellstocheck.TryDequeue(out checkpos)) {
+            breaker++; if (breaker > 100) { Debug.LogError("Flood fill item drop hit max loops"); break; }
+            for (int x = checkpos.x - 1; x <= checkpos.x + 1; x++) {
+            for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
+            offsetPosition.x = x;
+            offsetPosition.y = y;
+
+            if (!floor.GetTile(offsetPosition)) { continue; }
+            if (offsetPosition == checkpos) { continue; }
+            if (items.Count <= 0) { return timeTaken; }
+            if (!GetItemOrSpawnFromTile(offsetPosition)) {
+            gridManager.StartCoroutine(gridManager.graphics.TileLerp(offsetPosition, origin, offsetPosition, 0.1f, itemTilemap));
+            SetItem(items[0], offsetPosition);
+             items.Remove(items[0]);
+            }
+           
+            if (!checkedCells.Contains(offsetPosition)) { cellstocheck.Enqueue(offsetPosition); }
+                    checkedCells.Add(offsetPosition);
                 }
             }
         }
-        Debug.LogError("Could not find free spot to place Item at "+position);
-        return Vector3Int.zero;
+        return timeTaken;
+    }
+
+    public Vector3Int FloodFillDropSingle(Vector3Int position,ItemAbstract item) {
+        var actions = Actions.i;
+        Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
+        List<Vector3Int> checkedCells = new List<Vector3Int>();
+        if (!GetItemOrSpawnFromTile(position)) {
+            SetItem(item, position);
+            return position;
+        }
+        cellstocheck.Enqueue(position);
+        int breaker = 0;
+        var checkpos = position;
+        var offsetPosition = position;
+        var goTilemap = GridManager.i.goTilemap;
+        var isFloor = GridManager.i.floorTilemap;
+        while (cellstocheck.TryDequeue(out checkpos)) {
+            breaker++; if (breaker > 100) { Debug.LogError("Flood fill item drop hit max loops"); break; }
+            for (int x = checkpos.x - 1; x <= checkpos.x + 1; x++) {
+                for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
+                    offsetPosition.x = x;
+                    offsetPosition.y = y;
+
+                    if (!isFloor.GetTile(offsetPosition)) { continue; }
+                    if (offsetPosition == checkpos) { continue; }
+                    if (!GetItemOrSpawnFromTile(offsetPosition)) {
+                        SetItem(item, offsetPosition);
+                        return offsetPosition;
+                    }
+
+                    if (!checkedCells.Contains(offsetPosition)) { cellstocheck.Enqueue(offsetPosition); }
+                    checkedCells.Add(offsetPosition);
+                }
+            }
+        }
+        return GridManager.i.NullValue;
     }
 }

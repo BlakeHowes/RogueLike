@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3243932232630802516}
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
+  - component: {fileID: 6717019821424419616}
   m_Layer: 0
   m_Name: Hornet
   m_TagString: Untagged
@@ -105,6 +106,7 @@ MonoBehaviour:
   armourTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
+  directDamage: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
@@ -123,13 +125,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
   traits: []
+  statusEffects: []
   mainHand: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -198,3 +205,17 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
     rarity: 1
     pool: 0
+--- !u!114 &6717019821424419616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e58bac0b67faf241b89753e760d929a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: 15
+  Stiffness: 1000

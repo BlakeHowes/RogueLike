@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
   m_Name: Wooden Bow
   m_EditorClassIdentifier: 
-  type: 1
   tile: {fileID: 11400000, guid: 730000d08a114a644be5072c58fc6fe1, type: 2}
   particles: {fileID: 6375196592243838218, guid: 33be32fc41bc10542b0982aef2d903e7, type: 3}
-  Modifiers:
-  - {fileID: 11400000, guid: 41445ebff0956a94aa0ddca60490f782, type: 2}
-  linePrefab: {fileID: 0}
+  subItems:
+  - {fileID: 11400000, guid: 481a8023d42bec443bc75c057812855d, type: 2}
   duelWield: 0
   twoHanded: 1
   actionPointCost: 1
@@ -26,5 +24,7 @@ MonoBehaviour:
   accuracyBase: 8
   rangeBase: 8
   damageMultipleBase: 1
+  delayAfterApplyingDamage: 0
   heldOffset: {x: 6, y: 4, z: 0}
-  damageMultipleTemp: 1
+  origin: {x: 28, y: 31, z: 0}
+  position: {x: 28, y: 31, z: 0}

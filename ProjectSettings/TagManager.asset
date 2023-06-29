@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Minimap
-  - 
+  - Glow Post Effect
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - name: Floor
     uniqueID: 1518081105
     locked: 0
+  - name: Floor Decoration
+    uniqueID: 1022325251
+    locked: 0
   - name: GroundUI
     uniqueID: 3806445279
     locked: 0
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Mechanisms
     uniqueID: 1354975459
+    locked: 0
+  - name: Shadows
+    uniqueID: 217603207
     locked: 0
   - name: Items
     uniqueID: 553094673

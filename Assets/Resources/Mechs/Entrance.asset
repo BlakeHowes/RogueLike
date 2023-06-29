@@ -12,7 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e48ec68403634346983155bc83e2da4, type: 3}
   m_Name: Entrance
   m_EditorClassIdentifier: 
-  type: 0
-  tile: {fileID: 0}
-  particles: {fileID: 0}
-  Modifiers: []
+  tile: {fileID: 11400000, guid: cf47b8e215c556e4bbb31222ee4d65ee, type: 2}

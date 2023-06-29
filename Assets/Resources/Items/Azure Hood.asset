@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ca28875b5f1a41ba8a37d35748b11, type: 3}
   m_Name: Azure Hood
   m_EditorClassIdentifier: 
-  type: 4
   tile: {fileID: 11400000, guid: 3571e5dd034e6df479d9e52730f9a8a2, type: 2}
   particles: {fileID: 0}
-  Modifiers: []
-  PreviewIcon: {fileID: 0}
+  equipmentType: 2
+  subItems: []
   wornSprite: {fileID: 0}
   hideHair: 1
-  damageBase: 0
+  wornOffset: {x: 0, y: 0, z: 0}
   maxHealthBase: 0
   armourBase: 2
-  armourTemp: 2

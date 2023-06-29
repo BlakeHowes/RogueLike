@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ca28875b5f1a41ba8a37d35748b11, type: 3}
   m_Name: Charging Ring
   m_EditorClassIdentifier: 
-  type: 5
   tile: {fileID: 11400000, guid: 71e81790533591548a86c2a6cb35aa68, type: 2}
   particles: {fileID: 0}
-  Modifiers:
-  - {fileID: 11400000, guid: 5242faba32ab8294a9363c08069b1c9c, type: 2}
-  PreviewIcon: {fileID: 2800000, guid: d130aa119262c1d47ac0e85ea0bff660, type: 3}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  equipmentType: 4
+  subItems:
+  - {fileID: 11400000, guid: 3c4d5ad23594edb408729c1b1e40d17e, type: 2}
   wornSprite: {fileID: 0}
-  damageBase: 0
+  hideHair: 0
+  wornOffset: {x: 0, y: 0, z: 0}
   maxHealthBase: 0
   armourBase: 0

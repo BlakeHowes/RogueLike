@@ -1,18 +1,16 @@
-using Mono.Cecil;
 using Panda;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static ItemStatic;
 
 public class PartyManager : MonoBehaviour {
     public static PartyManager i;
     public GameObject currentCharacter;
     public List<GameObject> party = new List<GameObject>();
     public List<GameObject> enemyParty = new List<GameObject>();
-    public int enemyRange;
     public Vector3Int characterFollowPosition;
-    public float animationDistance;
     public List<GameObject> partyMemberTurnTaken = new List<GameObject>();
     public List<GameObject> enemyTurnTaken = new List<GameObject>();
     public bool follow = true;
@@ -73,27 +71,28 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void Update() {
-        if (currentCharacter == null) {
+        if (!currentCharacter) {
             if (currentFaction == Faction.Party) { SwitchToNextCharacter(); }
             if (currentFaction == Faction.Enemy) { NextEnemy(null); }
         }
+        if (currentCharacter.activeSelf) { return; }
+        if (currentFaction == Faction.Party) { SwitchToNextCharacter(); }
+        if (currentFaction == Faction.Enemy) { NextEnemy(null); }
+
     }
 
     public void SetCurrentCharacter(GameObject character) {
-        if (currentCharacter != null) {
-            currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial;
-        }
+        if (currentCharacter) { currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial; }
+
         currentCharacter = character;
         currentFaction = character.GetComponent<Stats>().faction;
-        if (party.Contains(character)) {
-            character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial;
-        }
-        else {
-            character.GetComponent<SpriteRenderer>().material = GameUIManager.i.enemyoutlineMaterial;
-        }
+        var stats = character.GetComponent<Stats>();
+
+        if ( party.Contains(character)) { character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial; }
+        else { character.GetComponent<SpriteRenderer>().material = GameUIManager.i.enemyoutlineMaterial; }
         GameUIManager.i.UpdatePartyIcons(party);
 
-        var stats = character.GetComponent<Stats>();
+
         stats.ResetTempStats();
         stats.RecalculateStats();
         GameUIManager.i.actionPointsText.text = stats.actionPoints.ToString();
@@ -112,6 +111,7 @@ public class PartyManager : MonoBehaviour {
                 missingcharacters.Add(character);
                 continue;
             }
+            if (!character.activeSelf) { missingcharacters.Add(character); }
         }
         foreach (GameObject character in missingcharacters) {
             listOfCharacters.Remove(character);
@@ -121,6 +121,16 @@ public class PartyManager : MonoBehaviour {
     public void SwitchToNextCharacter() {
         Debug.Log("Switch");
         RemoveNullCharacters(party);
+        if (currentCharacter == null) {
+            if(party.Count == 0) {
+                GameUIManager.i.ShowGameOverUI();
+                return;
+            }
+            SetCurrentCharacter(party[0]);
+            GridManager.i.UpdateGame();
+            GameUIManager.i.UpdatePartyIcons(party);
+            return;
+        }
         int i = 0;
         int currentCharacterIndex = 0;
         foreach (GameObject character in party) {
@@ -133,8 +143,9 @@ public class PartyManager : MonoBehaviour {
         if (currentCharacterIndex == party.Count - 1) {
             nextCharacterIndex = 0;
         }
+        if (party.Count == 0) { Debug.LogError("No party member found, check floor tilemap"); return; }
         SetCurrentCharacter(party[nextCharacterIndex]);
-
+        Debug.Log("Set current character " + party[nextCharacterIndex]);
         GridManager.i.UpdateGame();
         GameUIManager.i.UpdatePartyIcons(party);
     }
@@ -155,20 +166,50 @@ public class PartyManager : MonoBehaviour {
     public void EnemyPartyStartTurn() {
         MouseManager.i.disableMouse = true;
         GameUIManager.i.SetEnemyColourToWhite();
-        List<GameObject> PartyCopy = new List<GameObject>();
-        foreach(GameObject member in enemyParty) {
-            PartyCopy.Add(member);
-        }
-        foreach (GameObject enemy in PartyCopy) {
+        RemoveNullCharacters(enemyParty);
+        if(enemyParty.Count == 0) {PartyStartTurn();return; }
+        var partyCopy =ArrangeEnemyPartyBasedOnPath();
+        foreach (GameObject enemy in partyCopy) {
             if (!enemy) { continue; }
             enemy.GetComponent<Stats>().ResetActionPoints();
             StartOfPartyTurnCall(enemy);
         }
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
-        var pos = currentCharacter.position();  //Expensive call
-        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
+        var pos = currentCharacter.position();
+        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
         currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+    }
+
+    public List<GameObject> ArrangeEnemyPartyBasedOnPath() {
+        List<GameObject> partyCopy = new List<GameObject>();
+        Dictionary<GameObject,int> partyOrder = new Dictionary<GameObject,int>();
+        var pathingInstance = PathingManager.i;
+        foreach (GameObject member in enemyParty) {
+            if (!member.activeSelf) { continue; }
+            if (!member) { continue; }
+            partyCopy.Add(member);
+            var behaviour = member.GetComponent<Behaviours>();
+            behaviour.GetTarget();
+            var target = behaviour.target;
+            if (!target) { continue; }
+            if (pathingInstance.IsPathable(target.transform.position.FloorToInt(), member.transform.position.FloorToInt())) {
+                partyOrder.Add(member, 0);
+                continue;
+            }
+            partyOrder.Add(member, pathingInstance.PathDistance(target.transform.position.FloorToInt(), member.transform.position.FloorToInt()));
+        }
+
+        foreach(var member in partyOrder) {
+            Debug.Log(member);
+        }
+        if(partyOrder.Count > 4) {
+            partyCopy.Sort((p1, p2) => partyOrder.SingleOrDefault(s => s.Key == p1).Value.CompareTo(partyOrder.SingleOrDefault(s => s.Key == p2).Value));
+        }
+        
+        enemyParty.Clear();
+        foreach (GameObject enemy in partyCopy) { enemyParty.Add(enemy); }
+        return partyCopy;
     }
 
     public void NextEnemy(GameObject enemy) {
@@ -179,7 +220,7 @@ public class PartyManager : MonoBehaviour {
             if (enemyTurnTaken.Contains(enemyCharacter) || !enemyCharacter) { continue; }
             SetCurrentCharacter(enemyCharacter);
             var pos = enemyCharacter.position();  //Expensive call
-            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.FirstEnemyMove);
+            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
             enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
             return;
         }
@@ -188,7 +229,7 @@ public class PartyManager : MonoBehaviour {
 
     public void StartOfPartyTurnCall(GameObject character) {
         var pos = character.position();  //Expensive call
-        character.GetComponent<Inventory>().CallEquipment(pos, pos, ItemAbstract.Signal.StartOfTurn);
+        character.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfTurn);
     }
 
 
@@ -201,6 +242,7 @@ public class PartyManager : MonoBehaviour {
             player.GetComponent<NPCSearch>().Search();
             StartOfPartyTurnCall(player);
         }
+        if(party.Count == 0) { GameUIManager.i.ShowGameOverUI(); return; }
         SetCurrentCharacter(party[0]);
         partyMemberTurnTaken.Clear();
         //enemyTurnTaken.Clear();
@@ -224,29 +266,5 @@ public class PartyManager : MonoBehaviour {
     public void RemoveEnemy(GameObject enemy) {
         if (!enemyParty.Contains(enemy)) return;
         enemyParty.Remove(enemy);
-    }
-
-    public IEnumerator TakeDamageAnimation(GameObject character, Vector3Int origin) {
-        if (character == null) yield return null;
-        var position = character.position();
-        var renderer = character.GetComponent<SpriteRenderer>();
-        var startPosition = character.transform.position;
-        var hitMaterial = GameUIManager.i.hitMaterial;
-        var spriteMaterial = GameUIManager.i.normalMaterial;
-        GridManager.i.goTilemap.SetColor(position, Color.clear);
-
-        if (renderer == null) { yield return null; }
-        character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -animationDistance);
-        renderer.material = hitMaterial;
-        yield return new WaitForSeconds(0.15f);
-        renderer.material = spriteMaterial;
-        character.transform.position = startPosition;
-        yield return new WaitForSeconds(0.15f);
-        renderer.material = hitMaterial;
-        yield return new WaitForSeconds(0.15f);
-        renderer.material = spriteMaterial;
-        if (character == currentCharacter) {
-            renderer.material = GameUIManager.i.outlineMaterial;
-        }
     }
 }

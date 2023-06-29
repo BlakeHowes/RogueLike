@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed09450605e9b94d8f7810312cce63e, type: 3}
+  m_Name: Push
+  m_EditorClassIdentifier: 
+  tile: {fileID: 0}
+  particles: {fileID: 0}
+  position: {x: 38, y: 34, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  direction: 1
+  numberOfSteps: 2
+  speed: 0.03
+  target: 1
+  areaSize: 4
+  endPos: {x: 38, y: 34, z: 0}
+  damage: 10
+  onSignal: 9
+  doDamage: {fileID: 11400000, guid: eb433dd975068184c95c7cf849c9aeb9, type: 2}
+  time: 0

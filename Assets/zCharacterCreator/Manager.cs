@@ -10,4 +10,9 @@ public class Manager : MonoBehaviour {
 
         SceneManager.LoadScene("TestLevel 4", LoadSceneMode.Single);
     }
+
+    public void LoadCharacterCreator() {
+
+        SceneManager.LoadScene("CharacterCreator", LoadSceneMode.Single);
+    }
 }

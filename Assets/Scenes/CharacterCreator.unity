@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &43268740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &126519109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &156831029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &172423545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   faction: 0
   state: 0
   deathAction: []
@@ -1295,6 +1295,11 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 100
   actionPoints: 4
   actionPointsSum: 0
@@ -1313,17 +1318,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 1
-  showArmour: 1
   items: []
-  skills: []
   traits: []
+  statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!114 &194031404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2270,7 +2276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &321926057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2406,7 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   faction: 0
   state: 0
   deathAction: []
@@ -2418,6 +2424,11 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 100
   actionPoints: 4
   actionPointsSum: 0
@@ -2436,17 +2447,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 1
-  showArmour: 1
   items: []
-  skills: []
   traits: []
+  statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!114 &333065408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3002,7 +3014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &417510625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3150,7 +3162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &420690463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3298,7 +3310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &422658244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3721,7 +3733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &460497861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4239,7 +4251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &534518628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4387,7 +4399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &536882723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4535,7 +4547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &541487569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4952,7 +4964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &604805388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5239,7 +5251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &609205372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5802,7 +5814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &656370399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6775,7 +6787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &758527263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6923,7 +6935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &766274231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7071,7 +7083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &820301579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7219,7 +7231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &849061357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7367,7 +7379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &849790661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7781,7 +7793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &970736470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8076,7 +8088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &1019483703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8224,7 +8236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1038869778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8505,7 +8517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &1071678349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8653,7 +8665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &1119787409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9432,7 +9444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1248861343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9580,7 +9592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &1253841478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10039,7 +10051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1302334455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10321,7 +10333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1346041465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10469,7 +10481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &1380027485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10617,7 +10629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1382970623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11420,7 +11432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1502264253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11702,7 +11714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &1522370134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11985,7 +11997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1551531240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12133,7 +12145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1553217828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12281,7 +12293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &1564268727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12478,7 +12490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &1580332508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12626,7 +12638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1585739687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12908,7 +12920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1635990657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13056,7 +13068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1654145539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13204,7 +13216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: hairPalette
 --- !u!114 &1661022782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13295,10 +13307,8 @@ MonoBehaviour:
   inventoryTilemap: {fileID: 0}
   width: 10
   height: 1
-  inventoryButtonPrefab: {fileID: 1474342103420427144, guid: bc0a1efd23545bc4dbeadf635d3448e2, type: 3}
   inventoryLayout: {fileID: 0}
   equipmentLayout: {fileID: 0}
-  equipmentButtonPrefab: {fileID: 3437816549520519924, guid: 371ada21d0b9c314290c2ea3b7674135, type: 3}
   mainHandSprite: {fileID: 1734035599, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
   offHandSprite: {fileID: -139916494, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
   helmetSprite: {fileID: -1009179194, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
@@ -13694,7 +13704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   faction: 0
   state: 0
   deathAction: []
@@ -13706,6 +13716,11 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 100
   actionPoints: 4
   actionPointsSum: 0
@@ -13724,17 +13739,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 1
-  showArmour: 1
   items: []
-  skills: []
   traits: []
+  statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!114 &1698828628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14287,7 +14303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &1762043455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15330,7 +15346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &1849915649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15478,7 +15494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1855054329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15837,7 +15853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: facePalette
 --- !u!114 &1900094765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16654,7 +16670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: bodyPalette
 --- !u!114 &2049195059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17351,7 +17367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &2095802571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17636,7 +17652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   palette: {fileID: 0}
-  type: 0
+  paletteOptionName: featurePalette
 --- !u!114 &2122145030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17909,7 +17925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   faction: 0
   state: 0
   deathAction: []
@@ -17921,6 +17937,11 @@ MonoBehaviour:
   fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
+  skillRangeBase: 0
+  armourTemp: 0
+  enemyAlertRangeTemp: 0
+  skillRangeTemp: 0
+  directDamage: 0
   health: 100
   actionPoints: 4
   actionPointsSum: 0
@@ -17939,17 +17960,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showWeapons: 1
-  showArmour: 1
   items: []
-  skills: []
   traits: []
+  statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!114 &7361458235940114577
 MonoBehaviour:
   m_ObjectHideFlags: 0

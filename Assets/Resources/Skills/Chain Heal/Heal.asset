@@ -12,10 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d4bb05dd98dce4b96887cf5859e10b, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
-  type: 0
   tile: {fileID: 0}
   particles: {fileID: 0}
-  Modifiers: []
   damage: 0
   damageMultiple: 0
   rangedWeaponRange: 0
@@ -28,6 +26,7 @@ MonoBehaviour:
   enemyAlertRange: 0
   skillRange: 0
   health: 5
+  target: {fileID: 0}
   onlyActivateOutOfCombat: 0
   onSignal: 4
   originBecomesPosition: 1

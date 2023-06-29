@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3243932232630802516}
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
+  - component: {fileID: -876628501165001776}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3243932232630802507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.5, y: 12.5, z: 0}
+  m_LocalPosition: {x: 10.5, y: 46.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52,7 +53,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 4900000, guid: 2e75fb225ce22e24abbc22d3cea94150, type: 3}
   autoReset: 1
-  tickOn: 0
+  tickOn: 3
   sourceInfos:
   - isFoldout: 1
     breakPoints: 
@@ -94,10 +95,8 @@ MonoBehaviour:
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 232ace9f440d8c447a2e25623a0a48df, type: 2}
-  - {fileID: 11400000, guid: 232ace9f440d8c447a2e25623a0a48df, type: 2}
-  - {fileID: 11400000, guid: 232ace9f440d8c447a2e25623a0a48df, type: 2}
   blocksLight: 0
-  maxHealthBase: 50
+  maxHealthBase: 10
   armourBase: 0
   actionPointsBase: 2
   throwingRangeBase: 1
@@ -114,6 +113,7 @@ MonoBehaviour:
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -127,14 +127,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
   traits: []
   statusEffects: []
-  mainHand: {fileID: 0}
+  mainHand: {fileID: 11400000, guid: 6ae166ef8018be148bff8f74285239f2, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -200,3 +204,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+--- !u!114 &-876628501165001776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e58bac0b67faf241b89753e760d929a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: 15
+  Stiffness: 1000

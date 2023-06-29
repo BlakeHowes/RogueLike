@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f2d3a5295d9d64da102b4f59aaf560, type: 3}
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
   m_Name: Taunt
   m_EditorClassIdentifier: 
-  type: 6
-  tile: {fileID: 11400000, guid: 55780b933111f9541b7ce5dc6f856069, type: 2}
-  particles: {fileID: 0}
-  Modifiers:
-  - {fileID: 11400000, guid: 66980ccd237851045a384598c015fa80, type: 2}
-  range: 5
+  tile: {fileID: 11400000, guid: b5de583306bea234fa883b218266313a, type: 2}
+  particles: {fileID: 8288408381700605430, guid: 8efa1630ca34eaa40a55575c68d0301e, type: 3}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  range: 4
   actionPointCost: 2
-  actionPointCostTemp: 2
-  coolDown: 4
-  customDescription: 
-  coolDownTimer: 1
+  customDescription: 'Taunt: Enemies target this character for 2 turns'
+  coolDownTimer: 0
+  subItems:
+  - {fileID: 11400000, guid: 243e572d083e9f84e9a5a2fe9d6ba408, type: 2}
+  skillDescriptionForAI: 3
+  CameraZoomDuration: 0

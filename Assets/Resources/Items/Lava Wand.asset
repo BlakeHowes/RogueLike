@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
   m_Name: Lava Wand
   m_EditorClassIdentifier: 
-  type: 1
   tile: {fileID: 11400000, guid: 7b2ee97b7ce1afc4c9c924af11da282b, type: 2}
   particles: {fileID: 6375196592243838218, guid: 5c041fdf2d8fbf04cb840c482ad124a6, type: 3}
-  Modifiers:
+  subItems:
+  - {fileID: 11400000, guid: 779a663f86b6158428a72f2155e2fa33, type: 2}
   - {fileID: 11400000, guid: 161144ccea9e26b42bbad6d6e998d951, type: 2}
-  - {fileID: 11400000, guid: 41445ebff0956a94aa0ddca60490f782, type: 2}
-  linePrefab: {fileID: 0}
   duelWield: 0
   twoHanded: 0
   actionPointCost: 1
   damageBase: 1
   damageMaxBase: 0
   accuracyBase: 8
-  rangeBase: 5
+  rangeBase: 7
   damageMultipleBase: 1
+  delayAfterApplyingDamage: 0
   heldOffset: {x: 11, y: 6, z: 0}
-  damageMultipleTemp: 1
+  origin: {x: 27, y: 32, z: 0}
+  position: {x: 27, y: 32, z: 0}

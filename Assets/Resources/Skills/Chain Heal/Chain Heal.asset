@@ -9,17 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f2d3a5295d9d64da102b4f59aaf560, type: 3}
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
   m_Name: Chain Heal
   m_EditorClassIdentifier: 
-  type: 0
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: 60bfe3cd9d6071a4386f5926fc3408dc, type: 2}
   particles: {fileID: 0}
-  Modifiers:
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  range: 5
+  actionPointCost: 2
+  customDescription: Heals 5. Has a 50% chance to not consume AP.
+  coolDownTimer: 0
+  subItems:
   - {fileID: 11400000, guid: 5ac6351f891f7724ea87472bb1d4d66b, type: 2}
   - {fileID: 11400000, guid: c59de9c50cb64284eb2927b6d9e4beb8, type: 2}
-  range: 10
-  actionPointCost: 2
-  actionPointCostTemp: 2
-  coolDown: 0
-  customDescription: Heal 4HP, has a 50% chance of not using AP,
+  skillDescriptionForAI: 0
+  CameraZoomDuration: 0

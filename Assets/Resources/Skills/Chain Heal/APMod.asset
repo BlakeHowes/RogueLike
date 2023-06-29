@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4920449ad6570d34aa27751265570e92, type: 3}
   m_Name: APMod
   m_EditorClassIdentifier: 
-  type: 0
   tile: {fileID: 0}
   particles: {fileID: 0}
-  Modifiers: []
   aP: 0
-  chance: {x: 0, y: 2}
-  chanceThreshold: 1
+  chance: {x: 1, y: 3}
+  chanceThreshold: 2
   onSignal: 4

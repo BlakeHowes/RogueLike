@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static ItemStatic;
 [CreateAssetMenu(fileName = "Heal From Damage Delt", menuName = "Mods/Heal From Damage Delt")]
 public class HealFromDamage : ItemAbstract {
     public float percentage =100;
@@ -11,8 +11,8 @@ public class HealFromDamage : ItemAbstract {
         stats.Heal(Mathf.RoundToInt(((float)stats.directDamage /100f)*percentage));
     }
 
-    public override bool Condition(Vector3Int position, Vector3Int origin) {
-        return false;
+    public override IEnumerator Action() {
+        yield return null;
     }
 
     public override string Description() {

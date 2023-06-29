@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ca28875b5f1a41ba8a37d35748b11, type: 3}
   m_Name: Firebreath's Shield
   m_EditorClassIdentifier: 
-  type: 2
   tile: {fileID: 11400000, guid: 618960fecb30cc34cad6ba51dca2f844, type: 2}
   particles: {fileID: 0}
-  Modifiers: []
+  equipmentType: 1
+  subItems: []
   wornSprite: {fileID: 0}
   hideHair: 0
   wornOffset: {x: -5, y: 4, z: 0}
-  damageBase: 0
   maxHealthBase: 0
   armourBase: 3
-  armourTemp: 0

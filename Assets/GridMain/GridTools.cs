@@ -131,7 +131,7 @@ public class GridTools
         List<Vector3Int> WallsToClear = new List<Vector3Int>();
         List<Vector3Int> checkedCells = new List<Vector3Int>();
         int breaker = 0;
-        var walkableTilemap = GridManager.i.walkableTilemap;
+        var walkableTilemap = GridManager.i.floorTilemap;
         var checkpos = position;
         while(cellstocheck.TryDequeue(out checkpos)) {
             breaker++;
@@ -153,7 +153,13 @@ public class GridTools
                     }
                     checkedCells.Add(pos);
                     //goTilemap.SetColor(pos, Color.white);
-                    if (pos.gameobjectGO() || goTilemap.GetTile(pos) || !walkableTilemap.GetTile(pos)) {
+                    if (goTilemap.GetTile(pos) || pos.gameobjectGO()) {
+                        var go = pos.gameobjectGO();
+                        if (go) {
+                            if (go.GetComponent<Stats>().blocksLight) { WallsToClear.Add(pos); continue; }
+                        }
+                    }
+                    if (!walkableTilemap.GetTile(pos)) {
                         WallsToClear.Add(pos);
                     }
                     else {
@@ -186,52 +192,5 @@ public class GridTools
             }
         }
         return cells;
-    }
-
-    public void FloodFillMini(Vector3Int position, Tilemap goTilemap, Tilemap fogTilemap, int fillTotal, TileBase tile, float maxDistance,Tilemap miniTilemap,Tile miniSpace,Tile miniWall,Tile miniDoor,Tile miniParty, GameObject[,] goGrid) {
-        Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
-        cellstocheck.Enqueue(position);
-        List<Vector3Int> WallsToClear = new List<Vector3Int>();
-        List<Vector3Int> checkedCells = new List<Vector3Int>();
-        int breaker = 0;
-        var checkpos = position;
-        while (cellstocheck.TryDequeue(out checkpos)) {
-            breaker++;
-            if (breaker > fillTotal) {
-                Debug.Log("Flood fill break");
-                break;
-            }
-
-            for (int x = checkpos.x - 1; x <= checkpos.x + 1; x++) {
-                for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
-                    Vector3Int pos = new Vector3Int(x, y);
-                    if (InBounds(pos)) {
-                        if (x == checkpos.x && y == checkpos.y) {
-                            continue;
-                        }
-                    }
-                    if (checkedCells.Contains(pos)) {
-                        continue;
-                    }
-                    checkedCells.Add(pos);
-                    //goTilemap.SetColor(pos, Color.white);
-                    if (goTilemap.GetTile(pos)) {
-                        WallsToClear.Add(pos);
-                    }
-                    else {
-                        if (Vector3.Distance(pos, position) < maxDistance) {
-                            fogTilemap.SetTile(pos, tile);
-                            miniTilemap.SetTile(pos, miniSpace);
-                            cellstocheck.Enqueue(pos);
-                        }
-                    }
-                }
-            }
-        }
-        foreach (Vector3Int pos in WallsToClear) {
-            fogTilemap.SetTile(pos, tile);
-            miniTilemap.SetTile(pos, miniWall);
-        }
-        miniTilemap.SetTile(position, miniParty);
     }
 }

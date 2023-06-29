@@ -9,17 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f2d3a5295d9d64da102b4f59aaf560, type: 3}
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
   m_Name: Vamperic Blessing
   m_EditorClassIdentifier: 
-  type: 0
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: fedcf1dfae35bba4ca37348814e79103, type: 2}
   particles: {fileID: 0}
-  Modifiers:
-  - {fileID: 11400000, guid: 8dbc5f053f3527f49a6fb5a9569b2e58, type: 2}
-  range: 0
-  actionPointCost: 0
-  actionPointCostTemp: 0
-  coolDown: 0
-  customDescription: Target will gain 50% of their damage dealt back as health
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  range: 5
+  actionPointCost: 2
+  customDescription: Targeted character will heal 50% of the damage they inflict
+    for 3 turns
   coolDownTimer: 0
+  subItems:
+  - {fileID: 11400000, guid: 8dbc5f053f3527f49a6fb5a9569b2e58, type: 2}
+  skillDescriptionForAI: 1
+  CameraZoomDuration: 0

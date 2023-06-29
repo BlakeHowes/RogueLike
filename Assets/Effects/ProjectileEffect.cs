@@ -5,7 +5,7 @@ using static UnityEngine.ParticleSystem;
 
 public class ProjectileEffect : MonoBehaviour
 {
-    public void Fire(Vector3Int position, Vector3Int origin) {
+    public float Fire(Vector3Int position, Vector3Int origin) {
         var offset = new Vector3(0.5f, 1f, 0);
         var pos = new Vector3(position.x + offset.x, position.y+ offset.y,0);
         transform.position = origin + new Vector3(0.5f,1.2f);
@@ -18,6 +18,7 @@ public class ProjectileEffect : MonoBehaviour
         particleMain.startLifetime = life;
         particle.Emit(1);
         StartCoroutine(WaitThenDie(life + 10f));
+        return life;
     }
 
     public IEnumerator WaitThenDie(float waitTime) {

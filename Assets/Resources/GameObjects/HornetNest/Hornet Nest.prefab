@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3243932232630802516}
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
+  - component: {fileID: -6458167198531556051}
   m_Layer: 0
   m_Name: Hornet Nest
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   scripts:
   - {fileID: 4900000, guid: d6536cc7bdebd3c478c28f000c339bb4, type: 3}
   autoReset: 1
-  tickOn: 0
+  tickOn: 3
   sourceInfos:
   - isFoldout: 1
     breakPoints: 
@@ -106,6 +107,7 @@ MonoBehaviour:
   armourTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
+  directDamage: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
@@ -124,14 +126,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
   traits: []
-  mainHand: {fileID: 11400000, guid: 2f79edaa7aa946144bc88353e9e0cf52, type: 2}
+  statusEffects: []
+  mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets:
-  - {fileID: 11400000, guid: 7f25952f020d21b49af7d04e59288e59, type: 2}
-  MaxInventory: 10
+  trinket1: {fileID: 0}
+  trinket2: {fileID: 0}
+  trinket3: {fileID: 0}
+  trinket4: {fileID: 0}
+  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -197,3 +203,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+--- !u!114 &-6458167198531556051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e58bac0b67faf241b89753e760d929a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damping: 15
+  Stiffness: 1000

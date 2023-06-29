@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811ca28875b5f1a41ba8a37d35748b11, type: 3}
   m_Name: Hidden Ring
   m_EditorClassIdentifier: 
-  type: 5
   tile: {fileID: 11400000, guid: ff8ceb188a637a04caa4c044360bd498, type: 2}
   particles: {fileID: 0}
-  Modifiers:
-  - {fileID: 11400000, guid: fee2579d6f2b1474d9f89934cf342dee, type: 2}
+  equipmentType: 4
+  subItems: []
   wornSprite: {fileID: 0}
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}
-  damageBase: 0
   maxHealthBase: 0
   armourBase: 0
-  armourTemp: 0
