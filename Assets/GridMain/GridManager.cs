@@ -75,7 +75,7 @@ public class GridManager : MonoBehaviour {
         */
         foreach(Transform child in transform) {
             var go = child.gameObject;
-            var pos = go.position();
+            var pos = go.Position();
             if(pos == NullValue) { continue; }
             CallTickAndStartOfTurn(pos, go.GetComponent<Inventory>(), currentCharacter, go.GetComponent<Stats>().state);
         }
@@ -88,7 +88,7 @@ public class GridManager : MonoBehaviour {
             var behaviour = NPCBehaviourPool[0];
             //if (!behaviour.gameObject.activeSelf) { continue; }
             if (!behaviour) { NPCBehaviourPool.Remove(behaviour); continue; }
-            var position = behaviour.gameObject.position();
+            var position = behaviour.gameObject.Position();
             if (position == NullValue) { Destroy(behaviour.gameObject); continue; }
             var state = behaviour.GetComponent<Stats>().state;
             //CallTickAndStartOfTurn(position, behaviour.GetComponent<Inventory>(), currentCharacter, state);
@@ -333,7 +333,7 @@ public class GridManager : MonoBehaviour {
         var party = PartyManager.i.party;
         foreach (GameObject member in party) {
             if (member == null) { continue; }
-            var position = member.position();
+            var position = member.Position();
             tools.FloodFill(position, goTilemap, fogTilemap,1000 ,fogSemi,1000);
         }
     }
@@ -354,7 +354,7 @@ public class GridManager : MonoBehaviour {
         int i = 0;
         foreach (GameObject member in party) {
             if (member == null) { continue; }
-            var position = member.position();
+            var position = member.Position();
             if(position == NullValue) { continue; }
             tools.FloodFill(position, goTilemap, fogTilemap, fogFill, null, fogDistance);
             i++;
@@ -396,12 +396,13 @@ public class GridManager : MonoBehaviour {
         surfaceOnGround.Call(position);
     }
 
-    public void CombineSurface(Vector3Int position, Surface surface) {
+    public bool CombineSurface(Vector3Int position, Surface surface) {
         var surfaceFound = surfaceGrid[position.x, position.y];
         if (surfaceFound) {
             var combined = surfaceFound.Combine(position, surface);
-            if (combined) { Debug.Log("Combined true"); return; }
+            if (combined) { return true; }
         }
+        return false;
     }
 
     public void SetSurface(Vector3Int position,Surface surface) {
@@ -434,7 +435,7 @@ public class GridManager : MonoBehaviour {
         var party = PartyManager.i.party;
         var checkPos = Vector3Int.zero;
         foreach (GameObject member in party) {
-            var pos = member.position();
+            var pos = member.Position();
             for (int x = pos.x - size; x < pos.x + size; x++) {
                 for (int y = pos.y + size; y >= pos.y - size; y--) {
                     checkPos.x = x;checkPos.y = y;

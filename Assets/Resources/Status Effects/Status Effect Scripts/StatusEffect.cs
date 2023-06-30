@@ -11,7 +11,7 @@ public class StatusEffect : ItemAbstract {
 
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if (signal == Signal.SetTarget) { 
-            target = position.gameobjectGO();
+            target = position.GameObjectGo();
             foreach (var item in subItems) {
                 item.Call(position, origin, signal);
             }
@@ -26,7 +26,7 @@ public class StatusEffect : ItemAbstract {
                 return;
             }
         }
-        position = target.position();
+        position = target.Position();
         foreach(var item in subItems) {
             item.Call(position, origin, signal);
         }

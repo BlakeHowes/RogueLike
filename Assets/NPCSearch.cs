@@ -9,7 +9,7 @@ public class NPCSearch : MonoBehaviour
         stats = GetComponent<Stats>();
     }
     public void Search() {
-        var origin = gameObject.position();
+        var origin = gameObject.Position();
         var range = stats.enemyAlertRangeTemp;
         if(stats.state == PartyManager.State.Combat) { range = stats.enemyAlertRangeBase; }
         var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(range, origin, PartyManager.Faction.Enemy);

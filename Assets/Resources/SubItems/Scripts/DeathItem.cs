@@ -8,7 +8,7 @@ public class DeathItem : ItemAbstract {
     public GameObject gameobject;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if(signal == Signal.Death) {
-            gameobject = position.gameobjectGO();
+            gameobject = position.GameObjectGo();
             GridManager.i.AddToStack(this);
         }
     }

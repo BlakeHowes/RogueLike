@@ -10,7 +10,7 @@ public class SkillSlot : MonoBehaviour
     public void SelectSkill() {
         MouseManager.i.itemSelected = skill;
         var currentCharacter = PartyManager.i.currentCharacter;
-        var postion = currentCharacter.position();
+        var postion = currentCharacter.Position();
         var stats = currentCharacter.GetComponent<Stats>();
         stats.RecalculateStats();
         var genericSkill = skill as Skill;

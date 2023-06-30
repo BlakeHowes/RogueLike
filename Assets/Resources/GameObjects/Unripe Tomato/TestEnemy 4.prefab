@@ -95,7 +95,6 @@ MonoBehaviour:
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 864fa7a5ed7c8564797ea55f73ca15a8, type: 2}
-  - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
   blocksLight: 0
   maxHealthBase: 1
   armourBase: 0
@@ -114,6 +113,7 @@ MonoBehaviour:
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:

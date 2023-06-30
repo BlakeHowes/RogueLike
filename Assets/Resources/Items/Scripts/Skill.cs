@@ -29,7 +29,7 @@ public class Skill : ItemAbstract {
 
         if (signal == Signal.ActionPointSum) {
             if (MouseManager.i.itemSelected != this) { return; }
-            origin.gameobjectGO().GetComponent<Stats>().actionPointsSum += actionPointCostTemp;
+            origin.GameObjectGo().GetComponent<Stats>().actionPointsSum += actionPointCostTemp;
             return;
         }
 
@@ -52,7 +52,7 @@ public class Skill : ItemAbstract {
     }
 
     public void CalculateStats(Vector3Int position, Vector3Int origin) {
-        var character = origin.gameobjectGO();
+        var character = origin.GameObjectGo();
         character.GetComponent<Stats>().skillRangeTemp += range;
         foreach (var item in subItems) {
             item.Call(position, origin, Signal.CalculateStats);

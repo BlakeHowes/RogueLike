@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
   particles: {fileID: 0}
-  position: {x: 41, y: 31, z: 0}
+  position: {x: 36, y: 34, z: 0}
   origin: {x: 0, y: 0, z: 0}
   surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
-  radius: 2
+  radius: 1
   onSignal: 9

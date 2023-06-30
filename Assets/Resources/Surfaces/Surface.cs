@@ -12,7 +12,7 @@ public class Surface : ScriptableObject
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public ItemAbstract StatusEffect;
     public Vector2 duration;
-    int counter = 0;
+    [HideInInspector]public int counter = 0;
     public GameObject effectPrefab;
     GameObject effectClone;
     public bool dryUp = true;
@@ -20,17 +20,25 @@ public class Surface : ScriptableObject
     public bool fireSpread;
 
     public void Spread(Vector3Int position) {
-        if (counter == 0) { return; }
+        if (counter < 2) { return; }
         var walkableTilemap = GridManager.i.floorTilemap;
-        var circle = position.circle(1);
+        var circle = position.Circle(1);
         Debug.Log("Spread");
         foreach (var cell in circle) {
             if (!walkableTilemap.GetTile(cell)) { continue; }
-            GridManager.i.CombineSurface(cell, this);
-            var targetGo = cell.gameobjectGO();
+            if(GridManager.i.CombineSurface(cell, this)) {
+                if(cell.x > position.x || cell.y > position.y) {
+                    GridManager.i.GetOrSpawnSurface(cell).counter--;
+                }
+                continue;
+            }
+            var targetGo = cell.GameObjectGo();
             if (targetGo) {
                 if (targetGo.GetComponent<Stats>().faction == PartyManager.Faction.Passive) {
                     GridManager.i.SetSurface(cell, this);
+                    if (cell.x > position.x || cell.y > position.y) {
+                        GridManager.i.GetOrSpawnSurface(cell).counter--;
+                    }
                 }
             }
         }
@@ -73,8 +81,8 @@ public class Surface : ScriptableObject
 
 
 
-        if (!position.gameobjectGO()) { return; }
-        var character = position.gameobjectGO();
+        if (!position.GameObjectGo()) { return; }
+        var character = position.GameObjectGo();
         if (StatusEffect) {
             character.GetComponent<Inventory>().AddStatusEffect(StatusEffect, position);
         }

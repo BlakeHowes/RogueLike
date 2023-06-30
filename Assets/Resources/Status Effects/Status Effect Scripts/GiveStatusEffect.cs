@@ -24,8 +24,8 @@ public class GiveStatusEffect : ItemAbstract {
 
     public void SingleTarget(Vector3Int position, Vector3Int origin) {
         foreach (var item in statusEffects) {
-            if (statusEffectTargetIsThisCharacter) { position.gameobjectGO().GetComponent<Inventory>().AddStatusEffect(item, origin); continue; }
-            position.gameobjectGO().GetComponent<Inventory>().AddStatusEffect(item, position);
+            if (statusEffectTargetIsThisCharacter) { position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(item, origin); continue; }
+            position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(item, position);
         }
         foreach (var item in subItems) {
             item.Call(position, origin, Signal.Attack);
@@ -33,9 +33,9 @@ public class GiveStatusEffect : ItemAbstract {
     }
 
     public void MultiTarget(Vector3Int position, Vector3Int origin) {
-        var circle = GridManager.i.tools.Circle(origin.gameobjectGO().GetComponent<Stats>().skillRangeTemp, position);
+        var circle = GridManager.i.tools.Circle(origin.GameObjectGo().GetComponent<Stats>().skillRangeTemp, position);
         foreach (var pos in circle) {
-            var target = pos.gameobjectGO();
+            var target = pos.GameObjectGo();
             if (target == null) { continue; }
             var factionFound = target.GetComponent<Stats>().faction;
             if (targetFaction != factionFound) { continue; }

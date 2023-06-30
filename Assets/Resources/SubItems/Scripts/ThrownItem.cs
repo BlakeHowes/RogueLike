@@ -15,7 +15,7 @@ public class ThrownItem : ItemAbstract {
         position = gridManager.goMethods.FirstGameObjectInSight(position, origin);
         var landPosTarget = gridManager.goMethods.ThrownItemLocation(position, origin);
         var landedPosition = item.Drop(landPosTarget);
-        var character = position.gameobjectGO();
+        var character = position.GameObjectGo();
         var timeTaken = gridManager.graphics.TimeFromSpeed(position, origin, 0.027f);
         Vector3 offset = new Vector3(0, 0.5f);
         gridManager.StartCoroutine(gridManager.graphics.TileLerp(landedPosition, origin + offset, position, timeTaken, gridManager.itemTilemap));

@@ -7,11 +7,11 @@ using static ItemStatic;
 public class Taunt : ItemAbstract {
     GameObject target;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if (signal == Signal.SetTarget) { target = origin.gameobjectGO();return; }
+        if (signal == Signal.SetTarget) { target = origin.GameObjectGo();return; }
         Debug.Log("taunt");
 
         if (target == null) { return; }
-        var character = origin.gameobjectGO();
+        var character = origin.GameObjectGo();
         if (signal == Signal.StartOfTurn) { character.GetComponent<Stats>().SpawnHitNumber("Taunt", Color.red, 1.5f); }
     
         

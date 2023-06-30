@@ -91,7 +91,7 @@ public class Stats : MonoBehaviour {
 
     public void TakeDamage(int damage,Vector3Int origin) {
      
-        var position = gameObject.position();
+        var position = gameObject.Position();
 
         RecalculateStats();
         inventory.CallEquipment(position, position, Signal.TakeDamage);
@@ -112,7 +112,7 @@ public class Stats : MonoBehaviour {
                 state = PartyManager.State.Combat;
                 PartyManager.i.enemyParty.Add(gameObject);
             }
-            var originCharacter = origin.gameobjectGO();
+            var originCharacter = origin.GameObjectGo();
 
             if (originCharacter) {
                 var stats = originCharacter.GetComponent<Stats>();
@@ -168,7 +168,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void Heal(int amount) {
-        var position = gameObject.position();
+        var position = gameObject.Position();
 
         inventory.CallEquipment(position, position, Signal.Heal);
 
@@ -203,7 +203,7 @@ public class Stats : MonoBehaviour {
 
     public void RecalculateStats() {
         ResetTempStats();
-        var position = gameObject.position();
+        var position = gameObject.Position();
         inventory.CallEquipment(position,position, Signal.CalculateStats);
         if (health < maxHealthTemp) { 
             UpdateHealthBar();

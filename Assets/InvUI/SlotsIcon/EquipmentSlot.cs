@@ -34,7 +34,7 @@ public class EquipmentSlot : MonoBehaviour {
     public void RemoveItem(Inventory inventory) {
         ChangeCharacterInventory(inventory, equipmentType, null);
         if (inventory.items.Count >= inventory.maxItems) {
-            item.Drop(inventory.gameObject.position());
+            item.Drop(inventory.gameObject.Position());
         }
         else { inventory.AddItem(item); }
 

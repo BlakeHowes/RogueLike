@@ -31,11 +31,11 @@ public class Charge : ItemAbstract {
         var enemy = gridManager.goMethods.FirstGameObjectInSight(position, origin);
         if (gridManager.tools.InMeeleeRange(position, origin)) { yield break; }
         if (enemy == null) { yield break; }
-        var character = origin.gameobjectGO();
+        var character = origin.GameObjectGo();
         if (character == null) { yield break; }
-        var originCharacter = origin.gameobjectGO();
+        var originCharacter = origin.GameObjectGo();
         var line = gridManager.tools.BresenhamLine(position.x, position.y, origin.x, origin.y);
-        if (line[0].gameobjectGO() || !gridManager.floorTilemap.GetTile(line[0])) { yield break; }
+        if (line[0].GameObjectGo() || !gridManager.floorTilemap.GetTile(line[0])) { yield break; }
 
         gridManager.goMethods.RemoveGameObject(origin);
         var targetPos = line[0];

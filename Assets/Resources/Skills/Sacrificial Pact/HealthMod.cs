@@ -9,7 +9,7 @@ public class HealthMod : ItemAbstract {
     public Signal onSignal;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if(signal != onSignal) { return; }
-        var stats = position.gameobjectGO().GetComponent<Stats>();
+        var stats = position.GameObjectGo().GetComponent<Stats>();
         int health = Mathf.RoundToInt((((float)stats.health)/100) * healthPercentage);
         if(health <= 0) { health = 1; }
         var damage =Mathf.Abs(health -stats.health);

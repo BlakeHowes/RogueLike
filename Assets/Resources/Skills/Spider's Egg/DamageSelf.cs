@@ -16,7 +16,7 @@ public class DamageSelf : ItemAbstract {
     }
 
     public override IEnumerator Action() {
-        origin.gameobjectGO().GetComponent<Stats>().TakeDamage(damage,origin);
+        origin.GameObjectGo().GetComponent<Stats>().TakeDamage(damage,origin);
         yield return new WaitForSeconds(0.3f);
     }
 }

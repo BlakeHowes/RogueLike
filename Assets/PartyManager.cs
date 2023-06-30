@@ -44,7 +44,7 @@ public class PartyManager : MonoBehaviour {
         foreach (GameObject member in party) {
             if (member == null) { RemoveNullCharacters(party); continue; }
             if (member == currentCharacter) {  continue; }
-            var memberpos = member.position();
+            var memberpos = member.Position();
             var moved = PathingManager.i.MoveOneStep(playerpos, memberpos);
             if (moved == false && !Actions.i.InMeleeRange(playerpos, memberpos)) {
                 PathingManager.i.MoveOneStepLeader(playerpos, memberpos);
@@ -176,7 +176,7 @@ public class PartyManager : MonoBehaviour {
         }
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
-        var pos = currentCharacter.position();
+        var pos = currentCharacter.Position();
         currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
         currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
     }
@@ -219,7 +219,7 @@ public class PartyManager : MonoBehaviour {
         foreach (GameObject enemyCharacter in enemyParty) {
             if (enemyTurnTaken.Contains(enemyCharacter) || !enemyCharacter) { continue; }
             SetCurrentCharacter(enemyCharacter);
-            var pos = enemyCharacter.position();  //Expensive call
+            var pos = enemyCharacter.Position();  //Expensive call
             enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
             enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
             return;
@@ -228,7 +228,7 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void StartOfPartyTurnCall(GameObject character) {
-        var pos = character.position();  //Expensive call
+        var pos = character.Position();  //Expensive call
         character.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfTurn);
     }
 

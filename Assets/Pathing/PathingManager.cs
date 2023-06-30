@@ -33,11 +33,11 @@ public class PathingManager : MonoBehaviour
     }
 
     public void SwapPlaces(Vector3Int position, Vector3Int origin) {
-        var targetGO = position.gameobjectGO();
+        var targetGO = position.GameObjectGo();
         if(targetGO == PartyManager.i.currentCharacter) {
             return;
         }
-        var originGO=origin.gameobjectGO();
+        var originGO=origin.GameObjectGo();
         StartCoroutine(GridManager.i.graphics.LerpPosition(origin, position, originGO, walkSpeed));
         StartCoroutine(GridManager.i.graphics.LerpPosition(position, origin, targetGO, walkSpeed));
         FlipCharacter(originGO, position, origin);
@@ -48,12 +48,12 @@ public class PathingManager : MonoBehaviour
     }
 
     public void SwapPlacesInstant(Vector3Int position, Vector3Int origin) {
-        var targetGO = position.gameobjectGO();
+        var targetGO = position.GameObjectGo();
         if (targetGO == PartyManager.i.currentCharacter) {
             return;
         }
-        var originGO = origin.gameobjectGO();
-        var positionGO = position.gameobjectGO();
+        var originGO = origin.GameObjectGo();
+        var positionGO = position.GameObjectGo();
         originGO.transform.position = position + new Vector3(0.5f, 0.5f);
         positionGO.transform.position = origin + new Vector3(0.5f, 0.5f);
         FlipCharacter(originGO, position, origin);
@@ -64,12 +64,12 @@ public class PathingManager : MonoBehaviour
     }
 
     public void SwapPlacesSpring(Vector3Int position, Vector3Int origin) {
-        var targetGO = position.gameobjectGO();
+        var targetGO = position.GameObjectGo();
         if (targetGO == PartyManager.i.currentCharacter) {
             return;
         }
-        var originGO = origin.gameobjectGO();
-        var positionGO = position.gameobjectGO();
+        var originGO = origin.GameObjectGo();
+        var positionGO = position.GameObjectGo();
         FlipCharacter(originGO, position, origin);
         FlipCharacter(positionGO, origin, position);
         originGO.GetComponent<SpringToTarget3D>().SpringTo(position, Dampening, Hardness);
@@ -81,7 +81,7 @@ public class PathingManager : MonoBehaviour
     }
 
     public bool MoveOneStep(Vector3Int position, Vector3Int origin) {
-        var character = origin.gameobjectSpawn();
+        var character = origin.GameObjectSpawn();
 
         if (origin == GridManager.i.NullValue) {
             Debug.LogError("MoveOneStep returned, origin not found. Dude probably died lol");
@@ -105,7 +105,7 @@ public class PathingManager : MonoBehaviour
     }
 
     public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin) {
-        var character = origin.gameobjectSpawn();
+        var character = origin.GameObjectSpawn();
         if (character == null) { return true; }
         if (origin == GridManager.i.NullValue) {
             Debug.LogError("MoveOneStep returned, origin not found");
@@ -135,8 +135,8 @@ public class PathingManager : MonoBehaviour
     }
 
     public void Jump(Vector3Int endPosition, Vector3Int startPosition,float speed) {
-        if (endPosition.gameobjectSpawn() == null) {
-            var character = startPosition.gameobjectSpawn();
+        if (endPosition.GameObjectSpawn() == null) {
+            var character = startPosition.GameObjectSpawn();
             if(character == null) {
                 return;
             }
@@ -164,11 +164,13 @@ public class PathingManager : MonoBehaviour
     }
 
     public int PathDistance(Vector3Int position, Vector3Int origin) {
-        return algorithm.AStarSearch(origin, position, true).Length;
+        var path = algorithm.AStarSearch(origin, position, true);
+        if (path != null) { return path.Length; }
+        return 10;
     }
 
     public bool EnemyMoveup(Vector3Int position, Vector3Int origin) {
-        var character = origin.gameobjectSpawn();
+        var character = origin.GameObjectSpawn();
         if (origin == GridManager.i.NullValue) {
             Debug.LogError("MoveOneStep returned, origin not found");
             return false;

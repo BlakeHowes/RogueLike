@@ -84,7 +84,7 @@ public class Behaviours : MonoBehaviour
 
     public void UpdateInformation() {
         Debug.Log("Update Info");
-        origin = gameObject.position();
+        origin = gameObject.Position();
         stats = gameObject.GetComponent<Stats>();
         stats.ResetTempStats();
         GetTarget();
@@ -98,7 +98,7 @@ public class Behaviours : MonoBehaviour
         }
 
         if (target) {
-            targetPosition = target.position();
+            targetPosition = target.Position();
             Debug.Log("target position " + targetPosition);
         }
        
@@ -163,17 +163,17 @@ public class Behaviours : MonoBehaviour
     [Task]
     void WalkRandomly() {
         var position = gameObject.transform.position.FloorToInt();
-        if (position.gameobjectGO() != gameObject) {
-            position = gameObject.position();
+        if (position.GameObjectGo() != gameObject) {
+            position = gameObject.Position();
 
         }
 
-        if (position.gameobjectGO() != gameObject && !gotilemap.GetTile(position)) {
+        if (position.GameObjectGo() != gameObject && !gotilemap.GetTile(position)) {
             ThisTask.Succeed(); return ;
         }
         var pos = new Vector3Int(position.x + Random.Range(-1, 2), position.y + Random.Range(-1, 2));
-        if (!GridManager.i.floorTilemap.GetTile(pos)) { ThisTask.Succeed(); return; }
-        if (pos.gameobjectSpawn()) { ThisTask.Succeed(); return; }
+        if (!pos.IsWalkable()) { ThisTask.Succeed(); return; }
+        if (pos.GameObjectSpawn()) { ThisTask.Succeed(); return; }
         GridManager.i.goMethods.RemoveGameObject(position);
         GridManager.i.goMethods.SetGameObject(pos, gameObject);
         gameObject.transform.position = pos + offset;
@@ -184,17 +184,17 @@ public class Behaviours : MonoBehaviour
 
     public void IdleBehaviour() {
         var position = gameObject.transform.position.FloorToInt();
-        if(position.gameobjectGO() != gameObject) {
-            position = gameObject.position();
+        if(position.GameObjectGo() != gameObject) {
+            position = gameObject.Position();
           
         }
 
-        if(position.gameobjectGO() != gameObject && !gotilemap.GetTile(position)) {
+        if(position.GameObjectGo() != gameObject && !gotilemap.GetTile(position)) {
             return;
         }
         var pos =new Vector3Int(position.x + Random.Range(-1, 2), position.y + Random.Range(-1, 2));
         if (!GridManager.i.floorTilemap.GetTile(pos)) { return; }
-        if (pos.gameobjectSpawn()) { return; }
+        if (pos.GameObjectSpawn()) { return; }
         GridManager.i.goMethods.RemoveGameObject(position);
         GridManager.i.goMethods.SetGameObject(pos, gameObject);
         gameObject.transform.position = pos + offset;

@@ -45,7 +45,7 @@ public class StatEffectGeneric : ItemAbstract {
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if(signal == Signal.SetTarget) { target = position.gameobjectGO();return; }
+        if(signal == Signal.SetTarget) { target = position.GameObjectGo();return; }
         if(signal == Signal.StartOfTurn) {
             counter++;
             if (counter > durationTotal) {

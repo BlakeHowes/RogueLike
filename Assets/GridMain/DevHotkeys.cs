@@ -31,15 +31,15 @@ public class DevHotkeys : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.X)) {
-            GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.position());
+            GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.Position());
         }
         if (Input.GetKeyDown(KeyCode.B)) {
             var mousePos = MouseManager.i.MousePositionOnGrid();
-            Debug.Log("Position: "+ mousePos +" GameObject: "+ mousePos.gameobjectGO() + " Item: "+ mousePos.item() + " Surface: " + GridManager.i.GetOrSpawnSurface(mousePos));
+            Debug.Log("Position: "+ mousePos +" GameObject: "+ mousePos.GameObjectGo() + " Item: "+ mousePos.Item() + " Surface: " + GridManager.i.GetOrSpawnSurface(mousePos));
         }
         if (Input.GetKeyDown(KeyCode.N)) {
             var pos = MouseManager.i.MousePositionOnGrid();
-            var character = pos.gameobjectGO();
+            var character = pos.GameObjectGo();
             if (character) { character.GetComponent<Stats>().TakeDamage(1000000, pos); }
         }
     }

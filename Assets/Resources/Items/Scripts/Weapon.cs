@@ -39,7 +39,7 @@ public class Weapon : ItemAbstract
     }
 
     public void SetDamage(Vector3Int position) {
-        var target = position.gameobjectGO();
+        var target = position.GameObjectGo();
         if (!target) { goto SkipAccuracy;}
         var stats = target.GetComponent<Stats>();
 
@@ -57,7 +57,7 @@ public class Weapon : ItemAbstract
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        originCharacter = origin.gameobjectSpawn();
+        originCharacter = origin.GameObjectSpawn();
         if (signal == Signal.CalculateStats) {
             ResetTempStats();
             foreach (ItemAbstract item in subItems) {
@@ -65,6 +65,9 @@ public class Weapon : ItemAbstract
             }
             return;
         }
+
+        //Range Check!
+        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
 
         if (signal == Signal.ActionPointSum) {
             if (MouseManager.i.itemSelected == null)
@@ -82,7 +85,7 @@ public class Weapon : ItemAbstract
         if (signal != Signal.Attack) { return; }
         this.origin = origin;
         this.position = position;
-        target = this.position.gameobjectSpawn();
+        target = this.position.GameObjectSpawn();
      
         if (MouseManager.i.itemSelected != null) { return; }
 
@@ -98,8 +101,8 @@ public class Weapon : ItemAbstract
     }
 
     public override IEnumerator Action() {
-        origin = originCharacter.position();
-        position = target.position();
+        origin = originCharacter.Position();
+        position = target.Position();
         Debug.Log("Weapon Call: Position: " + position + " Origin: " + origin);
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { yield break; }
         if (target) {

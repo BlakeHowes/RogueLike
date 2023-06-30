@@ -38,7 +38,7 @@ public class Liquid : SurfaceAbstract {
             var surfaceTilemap = GridManager.i.surfaceTilemap;
          
             if(spreadAmount <= 0) { spread = false; }
-            var circle = position.circle(1);
+            var circle = position.Circle(1);
             foreach (var cell in circle) {
                 if (!walkableTilemap.GetTile(cell)) { continue; }
                 if (surfaceTilemap.GetTile(cell)) { continue; }
@@ -46,8 +46,8 @@ public class Liquid : SurfaceAbstract {
             }
         } 
   
-        if (!position.gameobjectGO()) { return; }
-        var character = position.gameobjectGO();
+        if (!position.GameObjectGo()) { return; }
+        var character = position.GameObjectGo();
         //character.GetComponent<Stats>().TakeDamage(damage,position);
         if (StatusEffect) {
             character.GetComponent<Inventory>().AddStatusEffect(StatusEffect, position);

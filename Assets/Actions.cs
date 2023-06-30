@@ -16,7 +16,7 @@ public class Actions : MonoBehaviour
     }
 
     public bool PickUpItem(Vector3Int position) {
-        var inventory = position.gameobjectSpawn().GetComponent<Inventory>();
+        var inventory = position.GameObjectSpawn().GetComponent<Inventory>();
         if (inventory.items.Count < inventory.maxItems) {
             var item = GridManager.i.itemMethods.RemoveItem(position);
             inventory.AddItem(item);
@@ -26,7 +26,7 @@ public class Actions : MonoBehaviour
     }
 
     public void Die(Vector3Int position) {
-        var character = position.gameobjectSpawn();
+        var character = position.GameObjectSpawn();
         if(character == null) {
             Debug.LogError("Character is missing before death");
             GridManager.i.graphics.UpdateEverything();

@@ -31,7 +31,7 @@ public class Item : ItemAbstract {
         yield return new WaitForSeconds(timeTaken);
         foreach (var item in subItems) { item.Call(position, origin, Signal.Attack); }
 
-        if (position.gameobjectGO()) {
+        if (position.GameObjectGo()) {
             if(!endlessUses)timesUsed++;
             EffectManager.i.CreateSingleParticleEffect(position, particles);
             if (timesUsed >= totalUses) {

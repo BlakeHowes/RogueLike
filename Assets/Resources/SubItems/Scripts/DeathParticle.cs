@@ -15,7 +15,7 @@ public class DeathParticle : ItemAbstract {
         this.position = position;
         this.origin = origin;
         if (targetSelf) { this.position = origin; }
-        sprite =origin.gameobjectGO().GetComponent<SpriteRenderer>().sprite;
+        sprite =origin.GameObjectGo().GetComponent<SpriteRenderer>().sprite;
         GridManager.i.AddToStack(this);
     }
     public override IEnumerator Action() {

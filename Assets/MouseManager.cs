@@ -47,7 +47,7 @@ public class MouseManager : MonoBehaviour
         if (position != lastMousePosition) {
             lastMousePosition = position;
             if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
-            if (GridManager.i.FogTile(position)|| !floorTilemap.GetTile(position)) {
+            if (GridManager.i.FogTile(position)|| !position.IsWalkable()) {
                 GameUIManager.i.HideHighlight();
             }
             else {
@@ -64,11 +64,11 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             clickPosition = position;
             if (EventSystem.current.IsPointerOverGameObject()) { return; }
-            if (!floorTilemap.GetTile(position)) { return; }
+            if (!position.IsWalkable()) { return; }
             var gameobjectundermouse = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
             var currentCharacter = PartyManager.i.currentCharacter;
             if (currentCharacter == null) { return; }
-            var origin = currentCharacter.position();
+            var origin = currentCharacter.Position();
             var currentStats =currentCharacter.GetComponent<Stats>();
             var inventory = currentCharacter.GetComponent<Inventory>();
             state = currentStats.state;
@@ -96,7 +96,7 @@ public class MouseManager : MonoBehaviour
             }
 
             //Walk
-            PartyManager.i.characterFollowPosition = currentCharacter.position();
+            PartyManager.i.characterFollowPosition = currentCharacter.Position();
             if(state == State.Combat) {
                 walked = Walk(position, origin, currentStats);
             }
@@ -107,7 +107,7 @@ public class MouseManager : MonoBehaviour
 
             //Pick Up Item
            
-            var newpos = PartyManager.i.currentCharacter.position();
+            var newpos = PartyManager.i.currentCharacter.Position();
             if (newpos == position || newpos == origin) {
                 walked = false;
             }
@@ -163,7 +163,7 @@ public class MouseManager : MonoBehaviour
 
     public void WaitOrPickUpItem(Vector3Int position, Vector3Int origin, GameObject target, Stats currentStats, GameObject currentCharacter) {
         if(target != currentCharacter) { return; }
-        if (position.item() == null) {
+        if (position.Item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
             //currentStats.actionPoints -= 1;
             EndOfAction();
@@ -186,7 +186,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public bool Walk(Vector3Int position, Vector3Int origin, Stats stats) {
-        if (!GridManager.i.floorTilemap.GetTile(position)) { return false; }
+        if (!position.IsWalkable()) { return false; }
         var walkCost = stats.walkCostTemp;
         if (walkCost > stats.actionPoints) { return false; }
         var walked = PathingManager.i.MoveOneStep(position, origin);
@@ -251,19 +251,19 @@ public class MouseManager : MonoBehaviour
         if (!walked) { EndOfAction(); return; }
         var currentCharacter = PartyManager.i.currentCharacter;
         if (currentCharacter == null) { return; }
-        var origin = currentCharacter.position();
+        var origin = currentCharacter.Position();
         var currentStats = currentCharacter.GetComponent<Stats>();
         var inventory = currentCharacter.GetComponent<Inventory>();
-        var target = clickPosition.gameobjectSpawn();
+        var target = clickPosition.GameObjectSpawn();
         currentStats.ResetTempStats();
         if (UseItem(clickPosition, origin, currentStats, inventory)) { walked = false; EndOfAction(); return; };
         if (Attack(clickPosition, origin, target, currentCharacter)) { walked = false; EndOfAction(); return; };
 
         //Walk
-        PartyManager.i.characterFollowPosition = currentCharacter.position();
+        PartyManager.i.characterFollowPosition = currentCharacter.Position();
         WalkLeader(clickPosition, origin, currentStats);
   
-        var newpos = PartyManager.i.currentCharacter.position();
+        var newpos = PartyManager.i.currentCharacter.Position();
         if (newpos == clickPosition || newpos == origin) {
             walked = false;
         }

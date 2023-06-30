@@ -9,7 +9,6 @@ public class SpawnGO : ItemAbstract {
     public List<GameObject> Gos = new List<GameObject>();
     public Signal onSignal;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        Debug.LogError("Death Spawn Call");
         if(signal != onSignal) { return; }
         this.position = position;
         GridManager.i.InsertToStack(this);

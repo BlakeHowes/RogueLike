@@ -11,7 +11,7 @@ public class ColourAnimation : ItemAbstract
     public bool waitForFlashToEnd;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         this.origin = origin;
-        var characterFound = position.gameobjectGO();
+        var characterFound = position.GameObjectGo();
         characters.Add(characterFound);
         GridManager.i.AddToStack(this);
     }

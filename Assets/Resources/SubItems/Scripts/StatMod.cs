@@ -23,7 +23,7 @@ public class StatMod : ItemAbstract {
     public bool originBecomesPosition;
     public bool targetSelf;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if (signal == Signal.SetTarget) { target = position.gameobjectGO(); return; }
+        if (signal == Signal.SetTarget) { target = position.GameObjectGo(); return; }
         if (signal != onSignal) { return; }
 
         if (onlyActivateOutOfCombat) {
@@ -33,10 +33,10 @@ public class StatMod : ItemAbstract {
         if (originBecomesPosition) {
             origin = position;
         }
-        var character = origin.gameobjectGO();
+        var character = origin.GameObjectGo();
         if (!character) { return; }
-        var stats = origin.gameobjectGO().GetComponent<Stats>();
-        var item = origin.gameobjectGO().GetComponent<Inventory>().mainHand;
+        var stats = origin.GameObjectGo().GetComponent<Stats>();
+        var item = origin.GameObjectGo().GetComponent<Inventory>().mainHand;
         var weapon = item as Weapon;
 
         if (weapon) { ModifyWeaponStats(weapon); }
@@ -44,10 +44,10 @@ public class StatMod : ItemAbstract {
     }
 
     public bool IsSneakAttack(Vector3Int position, Vector3Int origin) {
-        var ememy = position.gameobjectGO();
+        var ememy = position.GameObjectGo();
         if (!ememy) { return false; }
         if (ememy.GetComponent<Stats>().faction != PartyManager.Faction.Enemy) { return false; }
-        var statsCharacter = origin.gameobjectGO().GetComponent<Stats>();
+        var statsCharacter = origin.GameObjectGo().GetComponent<Stats>();
         if (statsCharacter.state == PartyManager.State.Combat) { return false;}
         return true;
     }

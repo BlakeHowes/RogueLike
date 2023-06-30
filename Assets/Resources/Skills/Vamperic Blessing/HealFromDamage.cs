@@ -7,7 +7,7 @@ public class HealFromDamage : ItemAbstract {
     public float percentage =100;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if(signal != Signal.DirectDamage) { return; }
-        var stats = origin.gameobjectGO().GetComponent<Stats>();
+        var stats = origin.GameObjectGo().GetComponent<Stats>();
         stats.Heal(Mathf.RoundToInt(((float)stats.directDamage /100f)*percentage));
     }
 

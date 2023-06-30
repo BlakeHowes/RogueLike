@@ -20,7 +20,7 @@ public class mechMethods
             for (int y = 0; y < GridManager.i.height; y++) {
                 if (mechGrid[x, y] != null) {
                     var position = new Vector3Int(x, y, 0);
-                    if (position.gameobjectSpawn() != null) {
+                    if (position.GameObjectSpawn() != null) {
                         //mechGrid[x, y].Call(new Vector3Int(x, y, 0));
                     }
                 }

@@ -9,12 +9,14 @@ static class ExtensionMethods
     static GridTools tools;
     static GridGraphics graphics;
     static GridManager gridManager;
+    static FloorManager floorManager;
     public static void SetReferences() {
         goMethods = GridManager.i.goMethods;
         itemMethods = GridManager.i.itemMethods;
         tools = GridManager.i.tools;
         graphics = GridManager.i.graphics;
         gridManager = GridManager.i;
+        floorManager = FloorManager.i;
     }
      public static Vector3 Round(this Vector3 vector3, int decimalPlaces = 2)
      {
@@ -30,36 +32,44 @@ static class ExtensionMethods
         return new Vector3Int(Mathf.FloorToInt(vector3.x), Mathf.FloorToInt(vector3.y), 0);
     }
 
-    public static GameObject gameobjectSpawn(this Vector3Int position) {
+    public static GameObject GameObjectSpawn(this Vector3Int position) {
         return goMethods.GetGameObjectOrSpawnFromTile(position);
     }
 
-    public static GameObject gameobjectGO(this Vector3Int position) {
+    public static GameObject GameObjectGo(this Vector3Int position) {
         return goMethods.GetGameObject(position);
     }
 
-    public static void lerp(this GameObject go, Vector3Int startPos, Vector3Int endPos,float duration) {
+    public static bool IsWalkable(this Vector3Int position) {
+        return floorManager.IsWalkable(position);
+    }
+
+    public static bool IsWall(this Vector3Int position) {
+        return floorManager.IsWall(position);
+    }
+
+    public static void Lerp(this GameObject go, Vector3Int startPos, Vector3Int endPos,float duration) {
         gridManager.StartCoroutine(graphics.LerpPosition(startPos, endPos, go, duration));
     }
 
-    public static Vector3Int position(this ItemAbstract item) {
+    public static Vector3Int Position(this ItemAbstract item) {
         return itemMethods.FindItemOnGrid(item);
     }
 
-    public static Vector3Int position(this GameObject gameobject) {
+    public static Vector3Int Position(this GameObject gameobject) {
         return goMethods.FindGameObjectOnGrid(gameobject);
     }
 
 
-    public static List<Vector3Int> circle(this Vector3Int position,int radius) {
+    public static List<Vector3Int> Circle(this Vector3Int position,int radius) {
         return tools.Circle(radius, position);
     }
 
-    public static ItemAbstract mech(this Vector3Int position) {
+    public static ItemAbstract Mech(this Vector3Int position) {
         return GridManager.i.mechMethods.GetMechanism(position);
     }
 
-    public static ItemAbstract item(this Vector3Int position) {
+    public static ItemAbstract Item(this Vector3Int position) {
         return itemMethods.GetItemOrSpawnFromTile(position);
     }
 
@@ -75,7 +85,7 @@ static class ExtensionMethods
         return goMethods.FirstGameObjectInSight(position, origin);
     }
 
-    public static bool inbounds(this Vector3Int position) {
+    public static bool InBounds(this Vector3Int position) {
         return GridManager.i.tools.InBounds(position);
     }
 }

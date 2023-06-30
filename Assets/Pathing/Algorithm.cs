@@ -39,11 +39,11 @@ public class Algorithm {
                     if (gameobjectcell == startpos) {
                         continue;
                     }
-                    if (!walkableTilemap.GetTile(gameobjectcell)) {
+                    if (!gameobjectcell.IsWalkable()) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                         continue;
                     }
-                    if (goTilemap.GetTile(gameobjectcell) != null || goGrid[gameobjectcell.x, gameobjectcell.y] != null) {
+                    if (gameobjectcell.GameObjectGo()) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                     }
                     else {
@@ -60,22 +60,12 @@ public class Algorithm {
                     if (gameobjectcell == startpos) {
                         continue;
                     }
-                    if (!walkableTilemap.GetTile(gameobjectcell)) {
+                    if (!gameobjectcell.IsWalkable()) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                         continue;
                     }
-                    if (goTilemap.GetTile(gameobjectcell) != null) {
+                    if (gameobjectcell.GameObjectGo()) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
-                    }
-                    else {
-                        grid.FindCellByPosition(gameobjectcell).walkable = true;
-                    }
-                    var go = goGrid[gameobjectcell.x, gameobjectcell.y];
-                    if (go != null) {
-                        grid.FindCellByPosition(gameobjectcell).walkable = false;
-                        var faction = go.GetComponent<Stats>().faction;
-                        grid.FindCellByPosition(gameobjectcell).walkable = true;
-
                     }
                     else {
                         grid.FindCellByPosition(gameobjectcell).walkable = true;

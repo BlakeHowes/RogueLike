@@ -9,7 +9,7 @@ public class SpriteChanger : ItemAbstract {
     public List<ChangeSpritePercentage> changeSprites;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if(signal == Signal.TakeDamage) {
-            var go = position.gameobjectGO();
+            var go = position.GameObjectGo();
             if (!go) { return; }
             var stats = go.GetComponent<Stats>();
             var healthPercentage = stats.health/stats.maxHealthBase * 100;

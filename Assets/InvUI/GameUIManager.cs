@@ -42,7 +42,7 @@ public class GameUIManager : MonoBehaviour {
             groundUI.ClearAllTiles();
         }
         uiTilemap.ClearAllTiles();
-        var origin = PartyManager.i.GetCurrentTurnCharacter().position();
+        var origin = PartyManager.i.GetCurrentTurnCharacter().Position();
         uiTilemap.SetTile(position, mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
         SetEnemyColourToWhite();
@@ -93,7 +93,7 @@ public class GameUIManager : MonoBehaviour {
             var hit =goMethods.FirstLightBlockingThingInSight(cell,position );
             if(cell == hit) {
                 groundUI.SetTile(cell, rangeTile);
-                var go = cell.gameobjectGO();
+                var go = cell.GameObjectGo();
 
                 if (go) go.GetComponent<SpriteRenderer>().color = Color.white;
             }
@@ -123,7 +123,7 @@ public class GameUIManager : MonoBehaviour {
         }
         var currentCharacter = PartyManager.i.currentCharacter;
         if (!currentCharacter) { return; }
-        var position = currentCharacter.position();
+        var position = currentCharacter.Position();
         var inventory = currentCharacter.GetComponent<Inventory>();
         foreach (ItemAbstract skill in inventory.skills) {
             AddSkill(skill);
@@ -173,7 +173,7 @@ public class GameUIManager : MonoBehaviour {
         uiTilemap.ClearAllTiles();
 
         List<Vector3Int> cells = new List<Vector3Int>();
-        Vector3Int playerpos = PartyManager.i.currentCharacter.position();
+        Vector3Int playerpos = PartyManager.i.currentCharacter.Position();
         position =GridManager.i.goMethods.FirstGameObjectInSight(position, playerpos);
         cells = GridManager.i.tools.BresenhamLine(playerpos.x, playerpos.y, position.x, position.y);
         foreach (Vector3Int cell in cells) {

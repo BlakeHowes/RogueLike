@@ -25,12 +25,12 @@ public class DoDamage : ItemAbstract {
         if(signal != onSignal) { return; }
         this.position = position;
         this.origin = origin;
-        if (useOriginWeapon) { weapon = origin.gameobjectGO().GetComponent<Inventory>().mainHand as Weapon; }
+        if (useOriginWeapon) { weapon = origin.GameObjectGo().GetComponent<Inventory>().mainHand as Weapon; }
         GridManager.i.AddToStack(this);
     }
     public override IEnumerator Action() {
         switch (method) {
-            case Method.Damage: position.gameobjectGO().GetComponent<Stats>().TakeDamage(damage, origin); break;
+            case Method.Damage: position.GameObjectGo().GetComponent<Stats>().TakeDamage(damage, origin); break;
         }
         yield return new WaitForSeconds(time);
     }

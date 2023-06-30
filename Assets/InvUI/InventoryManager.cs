@@ -185,7 +185,7 @@ public class InventoryManager : MonoBehaviour
     public ItemAbstract GetWeaponOrSkill(Vector3Int position) {
         ItemAbstract item = null;
         if (MouseManager.i.itemSelected) { return MouseManager.i.itemSelected; }
-        var go = position.gameobjectGO();
+        var go = position.GameObjectGo();
         if (!go) { return null; }
         item = go.GetComponent<Inventory>().mainHand;
         return item;

@@ -9,8 +9,8 @@ public class Pokeball : ItemAbstract
     [NonSerialized] GameObject caughtCharacter;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if (signal != Signal.Attack) { return; }
-        var character = position.gameobjectSpawn();
-        var originCharacter = origin.gameobjectSpawn();
+        var character = position.GameObjectSpawn();
+        var originCharacter = origin.GameObjectSpawn();
 
         if (caughtCharacter) {
 

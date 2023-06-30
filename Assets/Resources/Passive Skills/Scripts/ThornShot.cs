@@ -29,7 +29,7 @@ public class ThornShot : ItemAbstract {
     }
 
     public override IEnumerator Action() {
-        var target = position.gameobjectGO();
+        var target = position.GameObjectGo();
         if(origin == position) { yield break; }
         if(target)target.GetComponent<Stats>().TakeDamage(damage,origin);
         yield return new WaitForSeconds(0f);

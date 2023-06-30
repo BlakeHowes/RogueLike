@@ -29,7 +29,7 @@ public class Inventory : MonoBehaviour
             items.Add(item);
             return;
         }
-        var pos = gameObject.position();
+        var pos = gameObject.Position();
         item.Drop(pos);
         GridManager.i.UpdateGame();
     }

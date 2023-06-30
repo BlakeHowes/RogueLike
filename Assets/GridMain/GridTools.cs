@@ -39,7 +39,7 @@ public class GridTools
             for (int x = -radius; x <= radius; x++) {
                 if (x * x + y * y <= radius * radius) {
                     var cell = new Vector3Int(position.x +x, position.y+y, 0);
-                    if (cell.inbounds()) {
+                    if (cell.InBounds()) {
                         cellsInsideShape.Add(cell);
                     }
                 }
@@ -66,7 +66,7 @@ public class GridTools
 
         for (; n > 0; --n) {
             var cell = new Vector3Int(x, y, 0);
-            if (cell.inbounds()) {
+            if (cell.InBounds()) {
                 cellsInsideShape.Add((cell));
 
             }
@@ -153,13 +153,13 @@ public class GridTools
                     }
                     checkedCells.Add(pos);
                     //goTilemap.SetColor(pos, Color.white);
-                    if (goTilemap.GetTile(pos) || pos.gameobjectGO()) {
-                        var go = pos.gameobjectGO();
+                    if (goTilemap.GetTile(pos) || pos.GameObjectGo()) {
+                        var go = pos.GameObjectGo();
                         if (go) {
                             if (go.GetComponent<Stats>().blocksLight) { WallsToClear.Add(pos); continue; }
                         }
                     }
-                    if (!walkableTilemap.GetTile(pos)) {
+                    if (pos.IsWall()) {
                         WallsToClear.Add(pos);
                     }
                     else {

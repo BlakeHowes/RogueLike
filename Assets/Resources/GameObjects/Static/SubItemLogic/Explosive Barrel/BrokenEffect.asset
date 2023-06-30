@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5d362c3fbb0dcd4b80e68d7bd3951ed, type: 3}
-  m_Name: Pot 1 Broken
+  m_Name: BrokenEffect
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
   particles: {fileID: 8288408381700605430, guid: 34140b1ba67f82c42a5bd4120d96203b, type: 3}

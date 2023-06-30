@@ -40,7 +40,7 @@ public class EffectManager : MonoBehaviour
         Debug.Log("attach particles");
         var clone = Instantiate(partPrefab);
         clone.transform.position = position + offset;
-        var target = position.FloorToInt().gameobjectGO();
+        var target = position.FloorToInt().GameObjectGo();
         if (target) { 
             clone.transform.SetParent(target.transform);
             clone.transform.localPosition = Vector3.zero;

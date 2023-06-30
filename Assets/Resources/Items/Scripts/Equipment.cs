@@ -17,7 +17,7 @@ public class Equipment : ItemAbstract {
     public int armourBase;
 
     public override void Call(Vector3Int position, Vector3Int origin,Signal signal) {
-        var originCharacter = origin.gameobjectSpawn();
+        var originCharacter = origin.GameObjectSpawn();
         if (originCharacter == null) { return; }
         if(signal == Signal.CreateSkill) {
         }

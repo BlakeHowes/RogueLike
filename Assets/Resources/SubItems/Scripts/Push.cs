@@ -35,7 +35,7 @@ public class Push : ItemAbstract {
         }
 
         this.position = position;
-        if (!position.gameobjectGO()) { return; }
+        if (!position.GameObjectGo()) { return; }
         var line = GridManager.i.tools.BresenhamLineLength(position.x, position.y, origin.x, origin.y, numberOfSteps);
         var targetPos = line[line.Count-1];
 
