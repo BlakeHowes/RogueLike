@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e48ec68403634346983155bc83e2da4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c1fd3a68fbed6d418f2419b656fec97, type: 3}
   m_Name: Entrance
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: cf47b8e215c556e4bbb31222ee4d65ee, type: 2}

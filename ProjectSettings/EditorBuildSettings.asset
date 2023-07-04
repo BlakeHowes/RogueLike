@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterCreator.unity
     guid: 899ed009c24a9724b99fa8dc0d0c6a5f
   - enabled: 1
-    path: Assets/Scenes/TestLevel 4.unity
-    guid: 1a975c25c2d875a48be74f3129243e8d
+    path: Assets/Scenes/TestLevel 8.unity
+    guid: 3aaccc1cd5eee11428a659768ec87e04
   - enabled: 1
     path: Assets/Scenes/TestLevel 7.unity
     guid: 5e11e181583eac841ae6fb2bd557e442

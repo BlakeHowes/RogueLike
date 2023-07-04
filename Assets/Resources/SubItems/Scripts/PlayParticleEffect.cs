@@ -5,6 +5,7 @@ using static ItemStatic;
 
 [CreateAssetMenu(fileName = "Particle Effect", menuName = "Mods/Particle Effect")]
 public class PlayParticleEffect : ItemAbstract {
+    public GameObject particles;
     public float delay;
     public bool targetSelf;
     public Vector3 offset;

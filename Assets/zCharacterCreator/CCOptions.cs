@@ -16,4 +16,8 @@ public class CCOptions : MonoBehaviour
     public CCPalette featurePalette;
     public Vector3Int headOffset = new Vector3Int(1, 19);
     public bool male;
+
+    public void SaveCharacterSpriteToFile() {
+        Debug.Log("Called save");
+    }
 }

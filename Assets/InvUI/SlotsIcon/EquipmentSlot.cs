@@ -44,7 +44,12 @@ public class EquipmentSlot : MonoBehaviour {
 
     public void SetItem(ItemAbstract item) {
         this.item = item;
-        if (item) { image.sprite = item.tile.sprite;return; }
+        if (item) {
+            if (item.tile) {
+                image.sprite = item.tile.sprite; return;
+            }
+
+        }
         image.sprite = defaultSprite;
     }
 

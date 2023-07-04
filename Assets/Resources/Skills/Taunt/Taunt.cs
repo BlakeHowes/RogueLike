@@ -8,7 +8,7 @@ public class Taunt : ItemAbstract {
     GameObject target;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if (signal == Signal.SetTarget) { target = origin.GameObjectGo();return; }
-        Debug.Log("taunt");
+        
 
         if (target == null) { return; }
         var character = origin.GameObjectGo();
@@ -21,10 +21,10 @@ public class Taunt : ItemAbstract {
         if (!character) { return; }
         character.TryGetComponent(out Behaviours behaviour);
         if (!behaviour) { return; }
+
         if (GridManager.i.goMethods.IsGameObjectInRange(behaviour.sightRange, origin, target)) {
             if (PathingManager.i.IsPathable(target.transform.position.FloorToInt(), origin)) {
                 behaviour.target = target;
-                
             }
         }
     }

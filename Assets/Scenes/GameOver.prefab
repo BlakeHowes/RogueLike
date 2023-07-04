@@ -113,7 +113,6 @@ GameObject:
   - component: {fileID: 1658703207202676230}
   - component: {fileID: 1658703207202676231}
   - component: {fileID: 1658703207202676228}
-  - component: {fileID: 1658703207202676229}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -224,7 +223,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1658703207202676229}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
         m_MethodName: LoadCharacterCreator
         m_Mode: 1
@@ -236,18 +235,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1658703207202676229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658703207202676227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb9d0b21ad4b7f44afd206aecc99142, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1658703207669952884
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Smoke
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: e6a5573b4ee0e714bbdda5c40d01eabb, type: 2}
+  iconColour: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
   combinations: []
   items: []
   StatusEffect: {fileID: 0}
   duration: {x: 6, y: 12}
+  counter: 0
   effectPrefab: {fileID: 8194992990867289339, guid: 6ce58395fb3e0e149807cf164cc00fb7, type: 3}
   dryUp: 1
   dryUpSurface: {fileID: 0}

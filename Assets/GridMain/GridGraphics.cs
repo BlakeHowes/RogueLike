@@ -16,13 +16,13 @@ public class GridGraphics
     Tilemap goTilemap;
     Tilemap surfaceTilemap;
     Tilemap shadowTilemap;
-    SurfaceAbstract[,] mechGrid;
+    MechAbstract[,] mechGrid;
     Surface[,] surfaceGrid;
     ItemAbstract[,] itemGrid;
     GameObject[,] goGrid;
 
     public bool lerping;
-    public GridGraphics(int width, int height, SurfaceAbstract[,] mechGrid, Surface[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tilemap shadowTilemap,Tile shadowTile) {
+    public GridGraphics(int width, int height, MechAbstract[,] mechGrid, Surface[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tilemap shadowTilemap,Tile shadowTile) {
         this.width = width;
         this.height = height;
         this.mechTilemap = mechTilemap;

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Charging Ring
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 71e81790533591548a86c2a6cb35aa68, type: 2}
-  particles: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  shopValue: 20
   equipmentType: 4
   subItems:
   - {fileID: 11400000, guid: 3c4d5ad23594edb408729c1b1e40d17e, type: 2}

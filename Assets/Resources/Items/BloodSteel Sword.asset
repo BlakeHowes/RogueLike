@@ -12,16 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
   m_Name: BloodSteel Sword
   m_EditorClassIdentifier: 
-  type: 1
   tile: {fileID: 11400000, guid: 339c6045817cd774ba3c598375c0f7b3, type: 2}
-  particles: {fileID: 0}
-  Modifiers: []
-  linePrefab: {fileID: 0}
-  duelWield: 0
+  position: {x: 35, y: 37, z: 0}
+  origin: {x: 36, y: 38, z: 0}
+  shopValue: 30
+  subItems: []
+  twoHanded: 0
   actionPointCost: 1
   damageBase: 12
   damageMaxBase: 32
-  accuracyBase: 8
+  accuracyBase: 100
   rangeBase: 1
-  damageMultipleBase: 1
   heldOffset: {x: 11, y: 6, z: 0}
+  rangeTemp: 1
+  accuracyTemp: 100
+  damageTemp: 12
+  damageMaxTemp: 32
+  damageMultipleTemp: 1
+  damage: 36
+  originCharacter: {fileID: 0}
+  target: {fileID: 0}

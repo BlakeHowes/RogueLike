@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Orcish Armour
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 6387862c94f23e14994b84e2da1dca9e, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 15
   equipmentType: 3
   subItems: []
   wornSprite: {fileID: 21300000, guid: 369e3bc3cae08ef41be530669119df49, type: 3}

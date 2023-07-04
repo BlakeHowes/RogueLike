@@ -43,6 +43,12 @@ public class Charge : ItemAbstract {
         character.GetComponent<SpringToTarget3D>().SpringTo(targetPos, 40, 800);
         PathingManager.i.FlipCharacter(character, position, origin);
         originCharacter.GetComponent<Stats>().SpawnHitNumber("CHARGE", Color.yellow, 2);
+        var item = PartyManager.i.currentCharacter.GetComponent<Inventory>().mainHand;
+        if (item) {
+            var weapon = item as Weapon;
+            weapon.Call(position, line[0], Signal.Attack);
+            Debug.Log("Call weapon during charge");
+        }
         yield return new WaitForSeconds(0f);
     }
 }

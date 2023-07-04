@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Wooden Shield
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 200519ea1fc08094aa4c889c0304e572, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 5
   equipmentType: 1
   subItems: []
   wornSprite: {fileID: 0}

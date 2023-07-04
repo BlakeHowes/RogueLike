@@ -107,7 +107,7 @@ public class GoMethod
             return Origin;
         }
         foreach (var cell in cells) {
-            if (!floorTilemap.GetTile(cell)) { return previousPos; }
+            if (!FloorManager.i.IsWalkable(Position)) { return previousPos; }
 
             if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {
                 var character = GetGameObjectOrSpawnFromTile(cell);
@@ -247,7 +247,7 @@ public class GoMethod
                 }
             }
         }
-        Debug.LogError("Could not find "+gameobject+" on goGrid cell ");
+        //Debug.LogError("Could not find "+gameobject+" on goGrid cell ");
         return GridManager.i.NullValue;
     }
 

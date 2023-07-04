@@ -5,10 +5,10 @@ using UnityEngine.Tilemaps;
 
 public class mechMethods
 {
-    private ItemAbstract[,] mechGrid;
+    private MechAbstract[,] mechGrid;
     private AssetManager assets;
     private Tilemap mechTilemap;
-    public mechMethods(ItemAbstract[,] mechGrid, AssetManager assets, Tilemap mechTilemap) {
+    public mechMethods(MechAbstract[,] mechGrid, AssetManager assets, Tilemap mechTilemap) {
         this.mechGrid = mechGrid;
         this.assets = assets;
         this.mechTilemap = mechTilemap;
@@ -28,7 +28,7 @@ public class mechMethods
         }
     }
 
-    public ItemAbstract GetMechanism(Vector3Int position) {
+    public MechAbstract GetMechanism(Vector3Int position) {
         return mechGrid[position.x, position.y];
     }
 }

@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Health Potion
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 5b3d967ba9432754b85872061b80d7b7, type: 2}
-  particles: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210, type: 3}
+  position: {x: 34, y: 41, z: 0}
+  origin: {x: 35, y: 41, z: 0}
+  shopValue: 5
   subItems:
   - {fileID: 11400000, guid: 5ac6351f891f7724ea87472bb1d4d66b, type: 2}
   - {fileID: 11400000, guid: eb208c504e1ab3e4c98279daee45932f, type: 2}
-  totalUses: 1
+  totalUses: 3
   timesUsed: 0

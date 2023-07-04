@@ -66,11 +66,14 @@ public class Push : ItemAbstract {
         }
     }
     public override IEnumerator Action() {
+        
         PathingManager.i.Jump(endPos,position, speed);
 
         if (doDamage) {
+            
             doDamage.position = endPos;
             doDamage.origin = origin;
+            doDamage.targetGo = endPos.GameObjectGo();
             GridManager.i.AddToStack(doDamage);
 
         }

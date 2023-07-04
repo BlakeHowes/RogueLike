@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class AssetManager {
-    List<SurfaceAbstract> mechs = new List<SurfaceAbstract>();
+    List<MechAbstract> mechs = new List<MechAbstract>();
     List<Surface> surfaces = new List<Surface>();
     List<ItemAbstract> items = new List<ItemAbstract>();
     List<GameObject> gos = new List<GameObject>();
@@ -12,8 +12,8 @@ public class AssetManager {
     List<GameObject> walls = new List<GameObject>();
     public AssetManager() {
         //LOAD RESOURCES
-        var mechResources = Resources.LoadAll<SurfaceAbstract>("Mechs");
-        foreach (SurfaceAbstract mech in mechResources) { mechs.Add(mech); }
+        var mechResources = Resources.LoadAll<MechAbstract>("Mechs");
+        foreach (MechAbstract mech in mechResources) { mechs.Add(mech); }
 
         var surfaceResources = Resources.LoadAll<Surface>("Surfaces");
         foreach (Surface surface in surfaceResources) { surfaces.Add(surface); }
@@ -47,8 +47,8 @@ public class AssetManager {
         Debug.LogError("Cant find Surface corrosponding with " + tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
         return null;
     }
-    public SurfaceAbstract TiletoMech(TileBase tile) {
-        foreach (SurfaceAbstract item in mechs) {
+    public MechAbstract TiletoMech(TileBase tile) {
+        foreach (MechAbstract item in mechs) {
             if (item.tile == tile) return item; }
 
         //Debug.LogError("Cant find Mech corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");

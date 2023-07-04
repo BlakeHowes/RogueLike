@@ -60,7 +60,7 @@ public class CharacterCreator : MonoBehaviour {
 
     public void RandomizeCharacter(GameObject character) {
         RandomAppearence(character);
-        InventoryManager.i.CreateCharacterSprite(character);
+        CharacterSpriteGenerator.CreateCharacterSprite(character);
     }
 
     public void RandomAppearence(GameObject character) {
@@ -92,7 +92,7 @@ public class CharacterCreator : MonoBehaviour {
         }
 
         UpdateLabels();
-        InventoryManager.i.CreateCharacterSprite(character);
+        CharacterSpriteGenerator.CreateCharacterSprite(character);
     }
 
     public void Start() {
@@ -148,7 +148,7 @@ public class CharacterCreator : MonoBehaviour {
     public void NextFace(int direction) {
         options.face = CCAssets.i.NextOption(direction, CCAssets.i.faces, options.face);
         UpdateLabels();
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 
     public void NextLoadout(int direction) {
@@ -165,28 +165,28 @@ public class CharacterCreator : MonoBehaviour {
             trinket.SetValue(inventory, item);
             i++;
         }
-      
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
         UpdateLabels();
     }
 
     public void NextGender(int direction) {
         options.body = CCAssets.i.NextOption(direction, CCAssets.i.bodies, options.body);
         UpdateLabels();
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 
     public void NextFeatures(int direction) {
         if(options.race.features.Count <= 0) { return; }
         options.feature = CCAssets.i.NextOption(direction, options.race.features, options.feature);
         UpdateLabels();
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 
     public void NextHair(int direction) {
         options.hair = CCAssets.i.NextOption(direction, CCAssets.i.hairs, options.hair);
         UpdateLabels();
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 
     public void RefreshContent(GameObject character) {
@@ -207,7 +207,7 @@ public class CharacterCreator : MonoBehaviour {
             options.featurePalette = null;
         }
 
-        InventoryManager.i.CreateCharacterSprite(character);
+        CharacterSpriteGenerator.CreateCharacterSprite(character);
         UpdateLabels();
     }
 

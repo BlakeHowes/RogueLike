@@ -6,7 +6,7 @@ namespace LlamAcademy.Spring.Runtime
     public class SpringToTarget3D : BaseSpringBehaviour
     {
         private SpringVector3 spring;
-        GameObject healthbar;
+        [HideInInspector]public GameObject healthbar;
         private void Awake()
         {
             spring = new SpringVector3()

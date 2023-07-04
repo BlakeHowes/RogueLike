@@ -4,30 +4,30 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using static ItemStatic;
 using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
 public class Weapon : ItemAbstract
 {
+    public int shopValue;
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
-    public bool duelWield,twoHanded = false;
+    public bool twoHanded = false;
     [Header("Base Stats")]
     public int actionPointCost;
     public int damageBase = 5;
     public int damageMaxBase;
-    public int accuracyBase = 8;
+    [Range(0,100)]public int accuracyBase = 90;
     public int rangeBase = 1;
-    public int damageMultipleBase = 1;
-    public float delayAfterApplyingDamage;
     public Vector3Int heldOffset;
 
     [Header("Temporary Stats")]
-    [NonSerialized] public int rangeTemp;
-    [NonSerialized] public int accuracyTemp;
-    [NonSerialized] public int damageTemp;
-    [NonSerialized] public int damageMaxTemp;
-    [NonSerialized] public int damageMultipleTemp;
-    [NonSerialized] public int damage;
+    [HideInInspector] public int rangeTemp;
+    [HideInInspector] public int accuracyTemp;
+    [HideInInspector] public int damageTemp;
+    [HideInInspector] public int damageMaxTemp;
+    [HideInInspector] public int damageMultipleTemp;
+    [HideInInspector] public int damage;
     [HideInInspector] public GameObject originCharacter;
     [HideInInspector] public GameObject target;
     public void ResetTempStats() {
@@ -35,25 +35,30 @@ public class Weapon : ItemAbstract
         accuracyTemp = accuracyBase;
         damageTemp = damageBase;
         damageMaxTemp = damageMaxBase;
-        damageMultipleTemp = damageMultipleBase;
+        damageMultipleTemp = 1;
     }
 
     public void SetDamage(Vector3Int position) {
         var target = position.GameObjectGo();
         if (!target) { goto SkipAccuracy;}
         var stats = target.GetComponent<Stats>();
-
-        //Chance of hitting a zero on characters
-        if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
-            var accuracyRoll = Random.Range(0.0f, 10.0f);
-            if (accuracyTemp < accuracyRoll) {
-                damage = 0;
-            }
-        }
+        if (isAttackAMiss(stats)) { damage = 0; return; }
         SkipAccuracy:
         damage = Random.Range(damageTemp, damageTemp + damageMaxBase);
         damage *= damageMultipleTemp;
         Debug.Log("Damage Calculation"+damage);
+    }
+
+    private bool isAttackAMiss(Stats stats) {
+        //Chance of hitting a zero on characters
+        if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
+            Debug.Log("Accuracy test");
+            var accuracyRoll = Random.Range(0.0f, 100.0f);
+            if (accuracyTemp < accuracyRoll) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
@@ -106,7 +111,7 @@ public class Weapon : ItemAbstract
         Debug.Log("Weapon Call: Position: " + position + " Origin: " + origin);
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { yield break; }
         if (target) {
-            if(damage > 0) { target.GetComponent<Stats>().TakeDamage(damage, origin); }
+            target.GetComponent<Stats>().TakeDamage(damage, origin);
             if(originCharacter)originCharacter.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
             var character = PartyManager.i.currentCharacter;
             float enemyWaitTime = 0;
@@ -115,7 +120,7 @@ public class Weapon : ItemAbstract
                     enemyWaitTime = 0.2f;
                 } 
             }
-            yield return new WaitForSeconds(delayAfterApplyingDamage+enemyWaitTime);
+            yield return new WaitForSeconds(enemyWaitTime);
         }
     }
 

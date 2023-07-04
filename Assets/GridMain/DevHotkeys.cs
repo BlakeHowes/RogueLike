@@ -16,7 +16,7 @@ public class DevHotkeys : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.C)) {
-            InventoryManager.i.CreateCharacterSprite(PartyManager.i.currentCharacter);
+            CharacterSpriteGenerator.CreateCharacterSprite(PartyManager.i.currentCharacter);
         }
 
         if (Input.GetKeyDown(KeyCode.V)) {

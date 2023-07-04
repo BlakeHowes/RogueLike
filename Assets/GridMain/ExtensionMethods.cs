@@ -61,11 +61,12 @@ static class ExtensionMethods
     }
 
 
+
     public static List<Vector3Int> Circle(this Vector3Int position,int radius) {
         return tools.Circle(radius, position);
     }
 
-    public static ItemAbstract Mech(this Vector3Int position) {
+    public static MechAbstract Mech(this Vector3Int position) {
         return GridManager.i.mechMethods.GetMechanism(position);
     }
 
@@ -87,5 +88,9 @@ static class ExtensionMethods
 
     public static bool InBounds(this Vector3Int position) {
         return GridManager.i.tools.InBounds(position);
+    }
+
+    public static bool InMeleeRange(this Vector3Int position,Vector3Int origin) {
+        return GridManager.i.tools.InMeeleeRange(position,origin);
     }
 }

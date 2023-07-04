@@ -20,6 +20,6 @@ public class PaletteButton : MonoBehaviour
         var field = options.GetType().GetField(paletteOptionName);
         field.SetValue(options, palette);
 
-        InventoryManager.i.CreateCharacterSprite(currentCharacter);
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 }

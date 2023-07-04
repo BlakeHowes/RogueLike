@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
-  combinations:
-  - inputSurface: {fileID: 0}
-    resultingSurface: {fileID: 0}
+  tile: {fileID: 11400000, guid: 3fb3f729d36941a478a6a055e3b2a3e4, type: 2}
+  iconColour: {r: 0.25111246, g: 0.4316184, b: 0.5377358, a: 1}
+  combinations: []
+  items: []
   StatusEffect: {fileID: 0}
-  duration: {x: 0, y: 0}
+  duration: {x: 19.59, y: 40.48}
+  counter: 0
+  effectPrefab: {fileID: 0}
+  dryUp: 1
+  dryUpSurface: {fileID: 0}
+  tryToSpread: 1

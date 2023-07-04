@@ -5,12 +5,14 @@ using static ItemStatic;
 
 [CreateAssetMenu(fileName = "Death Particle", menuName = "Mods/Death Particle")]
 public class DeathParticle : ItemAbstract {
+    public GameObject particles;
     public float delay;
     public bool targetSelf;
     public Vector3 offset;
     public Material material;
     public Sprite sprite;
     public float scaleFactor;
+
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         this.position = position;
         this.origin = origin;

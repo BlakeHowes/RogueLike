@@ -1,11 +1,9 @@
 using Panda;
-using Panda.Examples.PlayTag;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 using static ItemStatic;
 
 public class GridManager : MonoBehaviour {
@@ -20,7 +18,7 @@ public class GridManager : MonoBehaviour {
     public int height;
 
     //Grid data
-    private SurfaceAbstract[,] mechGrid;
+    private MechAbstract[,] mechGrid;
     private Surface[,] surfaceGrid;
     private ItemAbstract[,] itemGrid;
     private GameObject[,] goGrid;
@@ -57,7 +55,6 @@ public class GridManager : MonoBehaviour {
     public float outerFogDistance;
 
     public List<ItemAbstract> itemsInActionStack = new List<ItemAbstract>();
-    public DeathItem deathItem;
     public bool enumeratingStack;
 
     public void TickGame() {
@@ -66,13 +63,13 @@ public class GridManager : MonoBehaviour {
             if (member)
                 member.GetComponent<NPCSearch>().Search();
         }
-        /*
+        
         foreach (var player in PartyManager.i.party) {
             if (!player) { continue; }
-            var position = player.position();
+            var position = player.Position();
             CallTickAndStartOfTurn(position, player.GetComponent<Inventory>(), currentCharacter, player.GetComponent<Stats>().state);
         }
-        */
+        
         foreach(Transform child in transform) {
             var go = child.gameObject;
             var pos = go.Position();
@@ -118,17 +115,16 @@ public class GridManager : MonoBehaviour {
         StartCoroutine(Stack());
     }
 
-    //I Cannot find this bug so I am making a hack
-    List<ItemAbstract> itemsChecked = new List<ItemAbstract> ();
-
+    //After 4 hours I cannot find this bug so I am making a terrible hack
+    //For some reason some items are being called multiple times
+    List<ItemAbstract> itemsCheckedHack = new List<ItemAbstract> ();
     public IEnumerator Stack() {
-        itemsChecked.Clear();
+        itemsCheckedHack.Clear();
         while (itemsInActionStack.Count > 0) {
             var item = itemsInActionStack[0];
-            if (itemsChecked.Contains(item)) { itemsInActionStack.Remove(item); continue; }
-            itemsChecked.Add(item);
+            if (itemsCheckedHack.Contains(item)) { itemsInActionStack.Remove(item); continue; }
+            itemsCheckedHack.Add(item);
             yield return StartCoroutine(item.Action());
-            Debug.Log(item.ToString());
             itemsInActionStack.Remove(item);
         }
         EndStack();
@@ -154,26 +150,17 @@ public class GridManager : MonoBehaviour {
     public void UpdateGame() {
         var currentCharacter = PartyManager.i.currentCharacter;
         if (!currentCharacter) { return; }
-       
-        if (currentCharacter.activeSelf) {
 
+        if (currentCharacter.activeSelf) {
             if (PartyManager.i.party.Contains(currentCharacter)) {
                 InstantiateGosMechsSurfacesAroundCharacters();
                 GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
             }
-
-
             InventoryManager.i.UpdateInventory();
-
         }
+
         ClearSemiFog();
         graphics.UpdateEverything();
-    }
-
-    public void AddDeathItem(GameObject gameobject) {
-        var deathItemClone = Instantiate(deathItem);
-        deathItemClone.gameobject = gameobject;
-        itemsInActionStack.Add(deathItemClone);
     }
 
     public void AddToStack(ItemAbstract item) {
@@ -216,7 +203,7 @@ public class GridManager : MonoBehaviour {
         assets = new AssetManager();
         tools = new GridTools();
         Initialize();
-        //mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
+        mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
         itemMethods = new itemMethods(itemGrid, assets, itemTilemap);
         goMethods = new GoMethod(goGrid,assets,goTilemap,floorTilemap);
         graphics = new GridGraphics(width, height, mechGrid, surfaceGrid, goGrid, itemGrid, goTilemap, itemTilemap, mechTilemap, surfaceTilemap, shadowTilemap,shadowTile);
@@ -225,7 +212,7 @@ public class GridManager : MonoBehaviour {
 
     public void Initialize() {
         //Initialize grids
-        mechGrid = new SurfaceAbstract[width, height];
+        mechGrid = new MechAbstract[width, height];
         surfaceGrid = new Surface[width, height];
         itemGrid = new ItemAbstract[width, height];
         goGrid = new GameObject[width, height];
@@ -244,7 +231,7 @@ public class GridManager : MonoBehaviour {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 position.x = x; position.y = y;
-                if (mechGrid[x, y]) mechGrid[x, y].Call(position);
+                if (mechGrid[x, y]) mechGrid[x, y].Call(position,MechStatic.Signal.Tick);
                 if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
             }
         }
@@ -271,7 +258,8 @@ public class GridManager : MonoBehaviour {
         DebugSpawn:
         foreach (GameObject character in partyPrefabs) {
             var clone = goMethods.SpawnFloodFill(position, character);
-            PartyManager.i.AddPartyMember(clone);  
+            PartyManager.i.AddPartyMember(clone);
+            clone.transform.parent = null;
         }
     }
 
@@ -367,7 +355,7 @@ public class GridManager : MonoBehaviour {
         clone.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
         PartyManager.i.AddPartyMember(clone);
         clone.GetComponent<SpriteRenderer>().color = colour;
-        InventoryManager.i.CreateCharacterSprite(clone);
+        CharacterSpriteGenerator.CreateCharacterSprite(clone);
     }
 
     public GameObject[,] GetGoGrid() {
@@ -419,7 +407,7 @@ public class GridManager : MonoBehaviour {
         surfaceTilemap.SetTile(position, null);
     }
 
-    public SurfaceAbstract GetOrSpawnMech(Vector3Int position) {
+    public MechAbstract GetOrSpawnMech(Vector3Int position) {
         var item = mechGrid[position.x, position.y];
         if (item) { return item; }
         var tile = mechTilemap.GetTile(position);

@@ -6,19 +6,27 @@ using static PartyManager;
 
 [CreateAssetMenu(fileName = "GiveStatusEffect", menuName = "Status Effects/Give Status Effect")]
 public class GiveStatusEffect : ItemAbstract {
+    public GameObject particles;
     public Signal onSignal = Signal.Attack;
     public Faction targetFaction;
+    public Type type;
+    public bool statusEffectTargetIsThisCharacter = false;
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
-    public bool statusEffectTargetIsThisCharacter = false;
-    public bool areaOfEffect = true;
-    public bool positionIsThisCharacter = true;
+
+
+    public enum Type {
+        SingleGOUnderMouse,
+        AreaUnderMouse,
+        JustTheUserGO,
+        AreaAroundUser
+    }
 
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if (signal != onSignal) { return; }
         this.position = position;
         this.origin = origin;
-        if (positionIsThisCharacter) { this.position = origin; }
+        if (type == Type.AreaAroundUser || type == Type.JustTheUserGO) { this.position = origin; }
         GridManager.i.AddToStack(this);
     }
 
@@ -50,14 +58,14 @@ public class GiveStatusEffect : ItemAbstract {
         }
     }
     public override IEnumerator Action() {
-        if (!areaOfEffect) { SingleTarget(position, origin); }
-        if (areaOfEffect) { MultiTarget(position, origin); }
+        if (type == Type.SingleGOUnderMouse || type == Type.JustTheUserGO) { SingleTarget(position, origin); }
+        if (type == Type.AreaUnderMouse || type == Type.AreaAroundUser) { MultiTarget(position, origin); }
         yield return new WaitForSeconds(0.2f);
     }
 
     public override string Description() {
         string description = "";
-        if (areaOfEffect) { description += "All Enemies in range \n"; }
+        if (type == Type.AreaUnderMouse || type == Type.AreaAroundUser) { description += "All Enemies in range \n"; }
         foreach (var item in statusEffects) {
             description += item.Description();
         }

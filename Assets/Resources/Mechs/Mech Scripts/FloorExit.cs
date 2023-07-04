@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "Exit", menuName = "Surfaces/Exit")]
-public class FloorExit : SurfaceAbstract
-{
-    public override void Call(Vector3Int position) {
-        if(MouseManager.i.MousePositionOnGrid() == position) {
-            Debug.Log("Next Floor");
+using static MechStatic;
+[CreateAssetMenu(fileName = "Exit", menuName = "Mechs/Exit")]
+public class FloorExit : MechAbstract {
+    public override void Call(Vector3Int position, Signal signal) {
+        if (signal == Signal.ClickOnWhileStandingOntopOf) {
+            GridManager.i.StartCoroutine(Wait());
         }
-        return;
+    }
+
+public IEnumerator Wait() {
+        yield return new WaitForSeconds(0.2f);
+        Manager.LoadNextScene();
     }
 }

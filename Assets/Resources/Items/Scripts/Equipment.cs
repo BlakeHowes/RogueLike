@@ -5,6 +5,7 @@ using UnityEngine;
 using static ItemStatic;
 [CreateAssetMenu(fileName = "Equipment", menuName = "Items/Equipment")]
 public class Equipment : ItemAbstract {
+    public int shopValue;
     public EquipmentType equipmentType;
     //Optional sprite for overlying onto character model
     public List<ItemAbstract> subItems = new List<ItemAbstract>();

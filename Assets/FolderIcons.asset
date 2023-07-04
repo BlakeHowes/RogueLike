@@ -40,10 +40,10 @@ MonoBehaviour:
     folderIcon: {fileID: 2800000, guid: 1e0d50b5eb503e945b9e995ac7051816, type: 3}
     overlayIcon: {fileID: 0}
   - folder: {fileID: 102900000, guid: 11dd0ee080abf6d4b8cc4544ae35f72b, type: 3}
-    folderIcon: {fileID: 2800000, guid: 9cd745b4803b6ac498dcdae4f047cfc0, type: 3}
-    overlayIcon: {fileID: 2800000, guid: ed05e4dd48add8a4aa97f93595dd8668, type: 3}
+    folderIcon: {fileID: 2800000, guid: d1508e1dc42abb745b24c8891a614d2a, type: 3}
+    overlayIcon: {fileID: 0}
   - folder: {fileID: 102900000, guid: 19080686976ab8c448510853440618fd, type: 3}
-    folderIcon: {fileID: 2800000, guid: dc069b3b37b2e214d9ee3b562bb3b32a, type: 3}
+    folderIcon: {fileID: 2800000, guid: 8d386ec6df97fab4387fd314b1523733, type: 3}
     overlayIcon: {fileID: 0}
   - folder: {fileID: 102900000, guid: 01adbd6350c528443b39142fcfc825bb, type: 3}
     folderIcon: {fileID: 2800000, guid: 04581c56ee64f094e99debb60bfc8ba9, type: 3}

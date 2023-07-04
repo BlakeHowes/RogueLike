@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public abstract class ItemAbstract : ScriptableObject
 {
     public Tile tile;
-    public GameObject particles;
+    //public GameObject particles;
     [HideInInspector] public Vector3Int position;
     [HideInInspector] public Vector3Int origin;
     public abstract void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal);

@@ -6,6 +6,7 @@ using static ItemStatic;
 public class StatEffectGeneric : ItemAbstract {
     [Header("Options")]
     public int durationTotal;
+    public GameObject particles;
     [Tooltip("Calculate stats for any stat modification, tick for health ect")]
     public Signal onSignal = Signal.CalculateStats;
     int counter = 0;

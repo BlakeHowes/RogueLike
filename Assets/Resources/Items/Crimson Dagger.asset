@@ -12,16 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
   m_Name: Crimson Dagger
   m_EditorClassIdentifier: 
-  type: 1
   tile: {fileID: 11400000, guid: 5ccf666f093e8bb46b919e52c63babfb, type: 2}
-  particles: {fileID: 0}
-  Modifiers: []
-  linePrefab: {fileID: 0}
-  duelWield: 1
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  subItems: []
+  twoHanded: 0
   actionPointCost: 1
   damageBase: 6
   damageMaxBase: 16
-  accuracyBase: 8
+  accuracyBase: 100
   rangeBase: 1
-  damageMultipleBase: 1
   heldOffset: {x: 11, y: 6, z: 0}
+  rangeTemp: 0
+  accuracyTemp: 0
+  damageTemp: 0
+  damageMaxTemp: 0
+  damageMultipleTemp: 0
+  damage: 0
+  originCharacter: {fileID: 0}
+  target: {fileID: 0}

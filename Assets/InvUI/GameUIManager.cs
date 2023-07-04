@@ -7,6 +7,8 @@ using static ItemStatic;
 using static UnityEngine.UI.Image;
 
 public class GameUIManager : MonoBehaviour {
+    public int coins;
+    public Text coinsText;
     public static GameUIManager i;
     public Tile mouseHighlight;
     public Tilemap uiTilemap;
@@ -35,6 +37,14 @@ public class GameUIManager : MonoBehaviour {
     public GameObject gameOverLayout;
     public void Awake() {
         i = this;
+        coinsText.text = coins.ToString();
+    }
+
+    public bool ChangeCoinsValue(int amount) {
+        if (coins + amount < 0) { return false; }
+        coins += amount;
+        coinsText.text = coins.ToString();
+        return true;
     }
 
     public void HighlightMouseTile(Vector3Int position) {

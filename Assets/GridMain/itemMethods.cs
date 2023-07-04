@@ -39,6 +39,7 @@ public class itemMethods {
             itemGrid[position.x, position.y] = null;
             return null;
         }
+        Debug.Log("Set Item " + position);
         itemTilemap.SetTile(position, item.tile);
         return itemGrid[position.x, position.y] = item;
     }

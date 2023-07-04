@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Leather Armour
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 1b61fe6ba1e35bd47b7a951f86d1aa7b, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 10
   equipmentType: 3
   subItems: []
   wornSprite: {fileID: 21300000, guid: 80c48e3691dc54b44bc0b465bd636ea8, type: 3}

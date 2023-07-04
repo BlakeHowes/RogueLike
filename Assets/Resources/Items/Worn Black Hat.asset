@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Worn Black Hat
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 131123f368579e14796ff12614c70296, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 2
   equipmentType: 2
   subItems: []
   wornSprite: {fileID: 0}

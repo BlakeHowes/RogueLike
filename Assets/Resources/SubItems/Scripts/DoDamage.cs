@@ -11,6 +11,7 @@ public class DoDamage : ItemAbstract {
     public Signal onSignal;
     public float time;
     public Method method;
+    [HideInInspector] public GameObject targetGo;
     public enum Target {
         Others,
         Self
@@ -30,9 +31,13 @@ public class DoDamage : ItemAbstract {
     }
     public override IEnumerator Action() {
         switch (method) {
-            case Method.Damage: position.GameObjectGo().GetComponent<Stats>().TakeDamage(damage, origin); break;
+            case Method.Damage: Damage(targetGo, origin); break;
         }
         yield return new WaitForSeconds(time);
+    }
+
+    public void Damage(GameObject go,Vector3Int origin) {
+        if(go)go.GetComponent<Stats>().TakeDamage(damage, origin);
     }
 
     public override string Description() {

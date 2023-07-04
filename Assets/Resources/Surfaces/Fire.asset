@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 17afce58a28caa8469f70839026af993, type: 2}
+  iconColour: {r: 0.5, g: 0.20518869, b: 0.22231618, a: 1}
   combinations:
   - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
     resultingSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
   items: []
   StatusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}
   duration: {x: 5, y: 10}
+  counter: 0
   effectPrefab: {fileID: 8288408381700605430, guid: d1b165fb7b5d55d4aa239abdff2cd54f, type: 3}
   dryUp: 1
   dryUpSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
-  fireSpread: 1
+  tryToSpread: 1

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Manager : MonoBehaviour {
-
+public static class Manager {
     public static List<GameObject> party = new List<GameObject>();
-    public void LoadFirstScene() {
 
-        SceneManager.LoadScene("TestLevel 4", LoadSceneMode.Single);
+    public static void LoadNextScene() {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 
-    public void LoadCharacterCreator() {
+    public static void LoadCharacterCreator() {
 
         SceneManager.LoadScene("CharacterCreator", LoadSceneMode.Single);
     }

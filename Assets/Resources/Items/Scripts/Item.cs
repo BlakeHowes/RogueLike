@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 using static ItemStatic;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Items/Item")]
 
 public class Item : ItemAbstract {
+    public int shopValue;
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public int totalUses;
     public int timesUsed = 0;
@@ -30,10 +28,13 @@ public class Item : ItemAbstract {
         gridManager.StartCoroutine(gridManager.graphics.TileLerp(landedPosition, origin+ new Vector3(0, 0.5f), position, timeTaken, gridManager.itemTilemap));
         yield return new WaitForSeconds(timeTaken);
         foreach (var item in subItems) { item.Call(position, origin, Signal.Attack); }
-
+        var mech = position.Mech();
+        if (mech) {
+            if (timesUsed == 0) mech.Call(landedPosition, MechStatic.Signal.ItemThrownOnto);
+        }
         if (position.GameObjectGo()) {
             if(!endlessUses)timesUsed++;
-            EffectManager.i.CreateSingleParticleEffect(position, particles);
+            //EffectManager.i.CreateSingleParticleEffect(position, particles);
             if (timesUsed >= totalUses) {
                 timesUsed = 0;
                 gridManager.itemMethods.RemoveItem(landedPosition);
@@ -44,7 +45,6 @@ public class Item : ItemAbstract {
                 yield return new WaitForSeconds(timeTaken2);
             }
         }
-
     }
     public override string Description() {
         var description = name + ":\n";

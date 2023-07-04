@@ -5,6 +5,7 @@ using static ItemStatic;
 
 [CreateAssetMenu(fileName = "StatMod", menuName = "Mods/StatMod")]
 public class StatMod : ItemAbstract {
+    public GameObject particles;
     public int damage;
     public int damageMultiple;
     public int rangedWeaponRange;
@@ -40,6 +41,7 @@ public class StatMod : ItemAbstract {
         var weapon = item as Weapon;
 
         if (weapon) { ModifyWeaponStats(weapon); }
+        if (particles) { EffectManager.i.CreateSingleParticleEffect(position,particles);}
         ModifyPlayerStats(position,stats);
     }
 

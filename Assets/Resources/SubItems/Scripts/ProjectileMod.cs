@@ -6,6 +6,7 @@ using static ItemStatic;
 [CreateAssetMenu(fileName = "Projectile", menuName = "Mods/Projectile Effect")]
 public class ProjectileMod : ItemAbstract {
     public bool waitForProjectile = true;
+    public GameObject particles;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         this.position = position;
         this.origin = origin;

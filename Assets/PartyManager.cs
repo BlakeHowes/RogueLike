@@ -46,7 +46,7 @@ public class PartyManager : MonoBehaviour {
             if (member == currentCharacter) {  continue; }
             var memberpos = member.Position();
             var moved = PathingManager.i.MoveOneStep(playerpos, memberpos);
-            if (moved == false && !Actions.i.InMeleeRange(playerpos, memberpos)) {
+            if (moved == false && !playerpos.InMeleeRange(memberpos)) {
                 PathingManager.i.MoveOneStepLeader(playerpos, memberpos);
             }
             playerpos = memberpos;

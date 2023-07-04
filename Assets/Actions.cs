@@ -15,16 +15,6 @@ public class Actions : MonoBehaviour
         i = this;
     }
 
-    public bool PickUpItem(Vector3Int position) {
-        var inventory = position.GameObjectSpawn().GetComponent<Inventory>();
-        if (inventory.items.Count < inventory.maxItems) {
-            var item = GridManager.i.itemMethods.RemoveItem(position);
-            inventory.AddItem(item);
-            return true;
-        }
-        return false;
-    }
-
     public void Die(Vector3Int position) {
         var character = position.GameObjectSpawn();
         if(character == null) {
@@ -45,14 +35,6 @@ public class Actions : MonoBehaviour
     public void RangedAttack(Vector3Int position, Vector3Int origin,ItemAbstract item) {
         position = GridManager.i.goMethods.FirstGameObjectInSight(position, origin);
         item.Call(position, origin,Signal.Attack);
-    }
-
-    public bool InMeleeRange(Vector3Int target,Vector3Int origin) {
-        if (Mathf.Abs(target.x - origin.x) > 1 ||
-            Mathf.Abs(target.y - origin.y) > 1) {
-            return false;
-        }
-        return true;
     }
 
     public void ThrowItem(Vector3Int position,Vector3Int origin,ItemAbstract item,Inventory inventory) {

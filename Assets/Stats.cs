@@ -1,10 +1,6 @@
 using LlamAcademy.Spring.Runtime;
-using Mono.Cecil.Cil;
-using Panda;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -76,7 +72,7 @@ public class Stats : MonoBehaviour {
 
     public void InitializeCharacter() {
         inventory = GetComponent<Inventory>();
-        InventoryManager.i.CreateCharacterSprite(gameObject);
+        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
         if (maxHealthTemp == 0) {
             maxHealthTemp = maxHealthBase;
             health = maxHealthTemp;
@@ -102,9 +98,7 @@ public class Stats : MonoBehaviour {
             return; 
         }
 
-        if(damage < 0) { damage = 0; SpawnHitNumber(damage.ToString(), Color.red, 1); GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(gameObject, origin, Color.white)); ; return;}
         damage -= armourTemp;
-        if (damage < 1) { damage = 1; }
         health -= damage;
 
         if (faction == PartyManager.Faction.Enemy) {
@@ -131,14 +125,11 @@ public class Stats : MonoBehaviour {
             Vector3 amount = gameObject.transform.position - offset;
             if(!GridManager.i.graphics.lerping)spring.Nudge(amount,24,1000);
         }
-
-
-        //EffectManager.i.HitParticleEffect(position);
-
-        //Create hit number
         if (faction != PartyManager.Faction.Interactable) {
-            if (damage == 0) { SpawnHitNumber("Dodge", Color.yellow, 1); }
-            SpawnHitNumber(damage.ToString(),Color.red,1);
+            if (damage == 0) { SpawnHitNumber("Miss", Color.yellow, 1); } else {
+                SpawnHitNumber(damage.ToString(), Color.red, 1);
+            }
+
         }
         UpdateHealthBar();
         if(health > 0) {
@@ -222,6 +213,7 @@ public class Stats : MonoBehaviour {
         healthbarSlider = healthbar.transform.GetChild(0).GetComponent<Slider>();
         statusEffectUI = healthbar.transform.GetChild(1);
         healthbar.SetActive(false);
+        GetComponent<SpringToTarget3D>().healthbar = healthbar;
         UpdateHealthBar();
     }
 

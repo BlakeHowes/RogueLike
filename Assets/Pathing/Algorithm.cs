@@ -30,6 +30,7 @@ public class Algorithm {
         closedList.Clear();
         var goTilemap = GridManager.i.goTilemap;
         var goGrid = GridManager.i.GetGoGrid();
+        var faction = startpos.GameObjectGo().GetComponent<Stats>().faction;
         Vector3Int gameobjectcell = Vector3Int.zero;
         if (!ignoreEnemies) {
             for (int x = 0; x < grid.width; x++) {
@@ -64,7 +65,8 @@ public class Algorithm {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                         continue;
                     }
-                    if (gameobjectcell.GameObjectGo()) {
+                    var target = gameobjectcell.GameObjectGo();
+                    if (target && target.GetComponent<Stats>().faction != faction) {
                         grid.FindCellByPosition(gameobjectcell).walkable = false;
                     }
                     else {
