@@ -124,7 +124,7 @@ public class Behaviours : MonoBehaviour
             if (rend) { rend.color = colour; }
         }
         var stats = gameObject.GetComponent<Stats>();
-        var healthBar = stats.healthbar;
+        var healthBar = stats.healthbarGameObject;
         if (healthBar && colour == Color.clear) { healthBar.SetActive(false); return; }
         else {if(healthBar) healthBar.SetActive(true); }
         stats.UpdateHealthBar();

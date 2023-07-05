@@ -19,15 +19,14 @@ MonoBehaviour:
   subItems: []
   twoHanded: 0
   actionPointCost: 1
-  damageBase: 10
-  damageMaxBase: 15
+  damageRange: {x: 10, y: 14}
   accuracyBase: 100
   rangeBase: 1
   heldOffset: {x: 11, y: 6, z: 0}
   rangeTemp: 1
   accuracyTemp: 100
   damageTemp: 10
-  damageMaxTemp: 15
+  damageMaxTemp: 14
   damageMultipleTemp: 1
   damage: 13
   originCharacter: {fileID: 0}

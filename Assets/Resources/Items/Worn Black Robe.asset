@@ -17,6 +17,7 @@ MonoBehaviour:
   origin: {x: 0, y: 0, z: 0}
   shopValue: 2
   equipmentType: 3
+  weight: 1
   subItems: []
   wornSprite: {fileID: 21300000, guid: 57d43cec6d4f2614b9df0b949dc06d41, type: 3}
   hideHair: 0

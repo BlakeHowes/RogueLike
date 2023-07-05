@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UI;
 using static ItemStatic;
 
 public class Stats : MonoBehaviour {
@@ -33,6 +32,7 @@ public class Stats : MonoBehaviour {
     public int enemyAlertRangeTemp;
     public int skillRangeTemp;
     public int directDamage;
+    public int armour;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -45,9 +45,8 @@ public class Stats : MonoBehaviour {
     public bool setInactiveOnDeath = true;
 
     [Header("Resources")]
-    public GameObject healthbar;
-    private Slider healthbarSlider;
-    private Transform statusEffectUI;
+    public GameObject healthbarGameObject;
+    public HealthBar healthbar;
     private Inventory inventory;
 
     public void ResetTempStats() {
@@ -70,6 +69,21 @@ public class Stats : MonoBehaviour {
         InitializeCharacter();
     }
 
+    public void OnStartOfCombat() {
+
+    }
+
+    //Hack to set armour too armour temp, I cant figure out a better way
+    private bool armourChecked = false;
+    public void OnIdleTick() {
+        if (!armourChecked) { 
+            RecalculateStats();
+            armour = armourTemp; armourChecked = true; 
+        }
+        armour++;
+        if (armour > armourTemp) { armour = armourTemp; }
+    }
+
     public void InitializeCharacter() {
         inventory = GetComponent<Inventory>();
         CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
@@ -81,8 +95,9 @@ public class Stats : MonoBehaviour {
         
         ResetTempStats();
         ResetActionPoints();
-        CreateHealthBar();
-        ResetTempStats();
+        healthbarGameObject = Instantiate(GameUIManager.i.healthBarPrefab, GameUIManager.i.canvasWorld);
+        healthbar = healthbarGameObject.GetComponent<HealthBar>();
+        healthbar.InitializeHealthbar(this, inventory);
     }
 
     public void TakeDamage(int damage,Vector3Int origin) {
@@ -97,8 +112,11 @@ public class Stats : MonoBehaviour {
             SpawnHitNumber(damage.ToString(), Color.red, 1);
             return; 
         }
-
-        damage -= armourTemp;
+        var damageTotal = damage;
+        var armourLeft = armour - damage;
+        damage -= armour;
+        armour = armourLeft;
+        if(armourLeft < 0) { armour = 0; }
         health -= damage;
 
         if (faction == PartyManager.Faction.Enemy) {
@@ -126,8 +144,8 @@ public class Stats : MonoBehaviour {
             if(!GridManager.i.graphics.lerping)spring.Nudge(amount,24,1000);
         }
         if (faction != PartyManager.Faction.Interactable) {
-            if (damage == 0) { SpawnHitNumber("Miss", Color.yellow, 1); } else {
-                SpawnHitNumber(damage.ToString(), Color.red, 1);
+            if (damageTotal == 0) { SpawnHitNumber("Miss", Color.yellow, 1); } else {
+                SpawnHitNumber(damageTotal.ToString(), Color.red, 1);
             }
 
         }
@@ -147,7 +165,7 @@ public class Stats : MonoBehaviour {
         inventory.items.Drop(position, position);
         GridManager.i.graphics.UpdateEverything();
         if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
-        healthbar.SetActive(false);
+        healthbarGameObject.SetActive(false);
         if(setInactiveOnDeath) gameObject.SetActive(false);
     }
 
@@ -174,18 +192,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void UpdateHealthBar() {
-        if (!showHealthBar) { return; }
-        if (healthbar == null) { Debug.LogError("Health Bar UI Missing"); return; }
-        if (health < maxHealthTemp) {
-            healthbar.SetActive(true);
-            healthbarSlider.maxValue = maxHealthTemp;
-            healthbarSlider.value = health;
-            healthbar.transform.position = transform.position;
-        }
-        else {
-            healthbar.SetActive(false);
-        }
-        UpdateStatusEffectUI();
+        healthbar.UpdateHealthBar();
     }
 
     public void ResetActionPoints() {
@@ -196,48 +203,13 @@ public class Stats : MonoBehaviour {
         ResetTempStats();
         var position = gameObject.Position();
         inventory.CallEquipment(position,position, Signal.CalculateStats);
-        if (health < maxHealthTemp) { 
-            UpdateHealthBar();
-        }
-    }
-
-    public void OnDestroy() {
-        Destroy(healthbar.gameObject);
-    }
-
-    public void CreateHealthBar() {
-        if (!showHealthBar) { return; }
-
-        healthbar = Instantiate(GameUIManager.i.healthBarPrefab,GameUIManager.i.canvasWorld);
-        healthbar.transform.position = transform.position;
-        healthbarSlider = healthbar.transform.GetChild(0).GetComponent<Slider>();
-        statusEffectUI = healthbar.transform.GetChild(1);
-        healthbar.SetActive(false);
-        GetComponent<SpringToTarget3D>().healthbar = healthbar;
+        if (!armourChecked) { armour = armourTemp; }
+        Debug.Log(armour +" "+ armourTemp + "Status Effects " + inventory.statusEffects.Count);
+        if (armour > armourTemp) { armour = armourTemp; }
         UpdateHealthBar();
     }
 
-    public void UpdateStatusEffectUI() {
-        if (statusEffectUI == null) { Debug.LogError("Status Effect UI Missing"); return; }
-        foreach(Transform child in statusEffectUI.transform) {
-            child.gameObject.SetActive(false);
-        }
-        int i = 0;
-        int statusEffectsTotal = inventory.statusEffects.Count;
-        if (statusEffectsTotal > 0) { 
-            healthbar.SetActive(true);
-            if(statusEffectsTotal > 6) {
-                Debug.LogError("Improve the status effect UI, its trying to show more than 6 :(");
-            }
-        }
-        foreach(var statusEffect in inventory.statusEffects) {
-            if (!statusEffect) { continue; }
-            var child = statusEffectUI.GetChild(i);
-            var tile = statusEffect.tile;
-            if(tile == null) { Debug.LogError("Tile missing for " + statusEffect);continue; }
-            child.GetComponent<Image>().sprite = tile.sprite;
-            child.gameObject.SetActive(true);
-            i++;
-        }
+    public void OnDestroy() {
+        Destroy(healthbarGameObject.gameObject);
     }
 }

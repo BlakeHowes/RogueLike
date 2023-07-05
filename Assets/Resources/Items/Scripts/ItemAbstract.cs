@@ -23,6 +23,14 @@ public static class ItemStatic {
         trinket
     }
 
+    public enum Weight { //This determins if its good for ranged or melee characters
+        None,
+        Light,
+        Medium,
+        Heavy,
+        Giant,
+    }
+
     public enum SkillDescriptionForAI {
         BuffSelf,
         BuffAllies,

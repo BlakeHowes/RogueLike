@@ -17,7 +17,7 @@ namespace LlamAcademy.Spring.Runtime
                 Stiffness = Stiffness
             };
             TryGetComponent<Stats>(out Stats stats);
-            if (stats) { healthbar = stats.healthbar; }
+            if (stats) { healthbar = stats.healthbarGameObject; }
         }
 
         public void SpringTo(Vector3 targetPosition,float damping, float stiffness)

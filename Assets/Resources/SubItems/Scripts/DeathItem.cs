@@ -18,7 +18,7 @@ public class DeathItem : ItemAbstract {
 
     public override IEnumerator Action() {
         if (gameobject == null) { Debug.LogError("Death item is missing gameobject"); yield break; }
-        var healthbar = gameobject.GetComponent<Stats>().healthbar;
+        var healthbar = gameobject.GetComponent<Stats>().healthbarGameObject;
         if (healthbar) { healthbar.SetActive(false); } else {
             Debug.LogError("Healthbar is missing during death action?");
         }

@@ -67,7 +67,7 @@ public class GridGraphics
         float time = 0;
         Vector3 offset = new Vector3(0.5f, 0.5f);
         if (!character) { yield return null; }
-        var healthbar =character.GetComponent<Stats>().healthbar;
+        var healthbar =character.GetComponent<Stats>().healthbarGameObject;
         character.transform.position = startPosition + offset;
         if(healthbar)healthbar.transform.position = character.transform.position;
         var distance = Vector3.Distance(startPosition, targetPosition);
@@ -128,7 +128,7 @@ public class GridGraphics
         float time = 0;
         Vector3 offset = new Vector3(0.5f, 0.5f);
         if (!character) { yield return null; }
-        var healthbar = character.GetComponent<Stats>().healthbar;
+        var healthbar = character.GetComponent<Stats>().healthbarGameObject;
         if (healthbar) healthbar.transform.position = character.transform.position;
         var distance = Vector3.Distance(startPosition, targetPosition);
         duration *= distance;

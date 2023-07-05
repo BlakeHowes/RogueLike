@@ -15,15 +15,14 @@ public class Weapon : ItemAbstract
     public bool twoHanded = false;
     [Header("Base Stats")]
     public int actionPointCost;
-    public int damageBase = 5;
-    public int damageMaxBase;
-    [Range(0,100)]public int accuracyBase = 90;
+    public Vector2Int damageRange = new Vector2Int(5,8);
+    [Range(0,100)]public float accuracyBase = 90;
     public int rangeBase = 1;
     public Vector3Int heldOffset;
 
     [Header("Temporary Stats")]
     [HideInInspector] public int rangeTemp;
-    [HideInInspector] public int accuracyTemp;
+    [HideInInspector] public float accuracyTemp;
     [HideInInspector] public int damageTemp;
     [HideInInspector] public int damageMaxTemp;
     [HideInInspector] public int damageMultipleTemp;
@@ -33,8 +32,8 @@ public class Weapon : ItemAbstract
     public void ResetTempStats() {
         rangeTemp = rangeBase;
         accuracyTemp = accuracyBase;
-        damageTemp = damageBase;
-        damageMaxTemp = damageMaxBase;
+        damageTemp = damageRange.x;
+        damageMaxTemp = damageRange.y;
         damageMultipleTemp = 1;
     }
 
@@ -44,13 +43,14 @@ public class Weapon : ItemAbstract
         var stats = target.GetComponent<Stats>();
         if (isAttackAMiss(stats)) { damage = 0; return; }
         SkipAccuracy:
-        damage = Random.Range(damageTemp, damageTemp + damageMaxBase);
+        damage = Random.Range(damageTemp, damageMaxTemp +1);
         damage *= damageMultipleTemp;
         Debug.Log("Damage Calculation"+damage);
     }
 
     private bool isAttackAMiss(Stats stats) {
         //Chance of hitting a zero on characters
+        /*
         if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
             Debug.Log("Accuracy test");
             var accuracyRoll = Random.Range(0.0f, 100.0f);
@@ -58,6 +58,14 @@ public class Weapon : ItemAbstract
                 return true;
             }
         }
+        */
+        Debug.Log("Accuracy test");
+        Debug.Log(accuracyTemp);
+        var accuracyRoll = Random.Range(0.0f, 100.0f);
+        if (accuracyTemp < accuracyRoll) {
+            return true;
+        }
+      
         return false;
     }
 
@@ -126,7 +134,7 @@ public class Weapon : ItemAbstract
 
     public override string Description() {
         ResetTempStats();
-        string description = "This " + name + " does "+ damageBase +"-"+ (damageBase+damageMaxBase);
+        string description = "This " + name + " does "+ damageRange.x +"-"+ (damageRange.y);
         description += " with an accuracy of " + accuracyBase;
         description += ". ";
         foreach (ItemAbstract item in subItems) {

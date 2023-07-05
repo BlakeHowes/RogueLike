@@ -28,7 +28,7 @@ public class Actions : MonoBehaviour
         GridManager.i.graphics.UpdateEverything();
         if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
         //GridManager.i.ClearFog();
-        character.GetComponent<Stats>().healthbar.SetActive(false);
+        character.GetComponent<Stats>().healthbarGameObject.SetActive(false);
         character.SetActive(false);
     }
 

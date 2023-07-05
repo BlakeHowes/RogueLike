@@ -22,6 +22,7 @@ public class EquipmentSlot : MonoBehaviour {
         InventoryManager.i.UpdateInventory();
         MouseManager.i.itemSelected = null;
         InventoryManager.i.DeselectItems();
+        PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats();
     }
 
     public void ChangeCharacterInventory(Inventory inventory, EquipmentType type, ItemAbstract itemReplace) {

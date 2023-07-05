@@ -23,6 +23,11 @@ public class Inventory : MonoBehaviour
 
     public void Start() {
         stats = GetComponent<Stats>();
+        
+    }
+
+    public void OnEnable() {
+        CloneInventory();
     }
     public void AddItem(ItemAbstract item) {
         if(items.Count < maxItems) {
@@ -43,7 +48,7 @@ public class Inventory : MonoBehaviour
         clone.name = item.name;
         statusEffects.Add(clone);
         clone.Call(target, target, Signal.SetTarget);
-        stats.UpdateHealthBar();
+        //clone.Call(target, target, Signal.CalculateStats);
     }
 
     public void RemoveItem(ItemAbstract item) {
@@ -54,20 +59,32 @@ public class Inventory : MonoBehaviour
         Debug.LogError("Item to be removed not found in inventory");
     }
 
+    public void CloneInventory() {
+        if (mainHand) { mainHand = Instantiate(mainHand); }
+        if (offHand) { offHand = Instantiate(offHand); }
+        if (helmet) { helmet = Instantiate(helmet); }
+        if (armour) { armour = Instantiate(armour); }
+        if (trinket1) { trinket1 = Instantiate(trinket1); }
+        if (trinket2) { trinket2 = Instantiate(trinket2); }
+        if (trinket3) { trinket3 = Instantiate(trinket3); }
+        if (trinket4) { trinket4 = Instantiate(trinket4); }
+    }
+
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
         if (!stats) { stats =GetComponent<Stats>(); }
         if (signal == Signal.CalculateStats) { stats.ResetTempStats(); }
+        if (offHand) { offHand.Call(position, origin, signal); }
+        if (mainHand) { mainHand.Call(position, origin, signal); }
         foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
         foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
         foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal); }
         if (helmet) { helmet.Call(position, origin, signal); }
         if (armour) { armour.Call(position, origin, signal); }
-        if (offHand) { offHand.Call(position, origin, signal); }
+
         if (trinket1) { trinket1.Call(position, origin, signal); }
         if (trinket2) { trinket2.Call(position, origin, signal); }
         if (trinket3) { trinket3.Call(position, origin, signal); }
         if (trinket4) { trinket4.Call(position, origin, signal); }
-        if (mainHand) { mainHand.Call(position, origin, signal); }
         if (statusEffectsToRemove.Count > 0) {
             foreach (var item in statusEffectsToRemove) {
             if (statusEffects.Contains(item)) { statusEffects.Remove(item); }}

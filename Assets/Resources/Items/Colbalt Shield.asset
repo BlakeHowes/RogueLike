@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Colbalt Shield
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 2f304fb0f04795641aaeb2c0db363b25, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   equipmentType: 1
-  subItems: []
+  subItems:
+  - {fileID: 11400000, guid: da0c3b59fc35a9a42bd3e5e8a70fb103, type: 2}
   wornSprite: {fileID: 0}
   hideHair: 0
   wornOffset: {x: -5, y: 4, z: 0}

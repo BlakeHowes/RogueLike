@@ -15,6 +15,7 @@ public class NPCSearch : MonoBehaviour
         var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(range, origin, PartyManager.Faction.Enemy);
         if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) {
             stats.state = PartyManager.State.Idle;
+            stats.OnIdleTick();
             var partyTurns = PartyManager.i.partyMemberTurnTaken;
             if (partyTurns.Contains(gameObject)) {
                 partyTurns.Remove(gameObject);
@@ -26,7 +27,10 @@ public class NPCSearch : MonoBehaviour
                 if (enemy == null) { continue; }
                 PartyManager.i.AddEnemy(enemy);
             }
-            if (stats.state == PartyManager.State.Idle) { MouseManager.i.isRepeatingActionsOutsideCombat = false; Debug.Log("Walked Disabled by NPC Search"); }
+            if (stats.state == PartyManager.State.Idle) { 
+                MouseManager.i.isRepeatingActionsOutsideCombat = false; Debug.Log("Walked Disabled by NPC Search");
+                stats.OnStartOfCombat();
+            }
             stats.state = PartyManager.State.Combat;
 
           

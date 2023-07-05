@@ -59,10 +59,6 @@ public class GridManager : MonoBehaviour {
 
     public void TickGame() {
         var currentCharacter = PartyManager.i.currentCharacter;
-        foreach (GameObject member in PartyManager.i.party) {
-            if (member)
-                member.GetComponent<NPCSearch>().Search();
-        }
         
         foreach (var player in PartyManager.i.party) {
             if (!player) { continue; }
@@ -139,8 +135,7 @@ public class GridManager : MonoBehaviour {
             return;
         }
         foreach (var party in PartyManager.i.party) {
-            if (party)
-                party.GetComponent<NPCSearch>().Search();
+            if (party) { party.GetComponent<NPCSearch>().Search(); }
         }
         MouseManager.i.disableMouse = false;
         MouseManager.i.EndOfActionFinal();
@@ -250,7 +245,6 @@ public class GridManager : MonoBehaviour {
                     goMethods.SetGameObject(pos, character);
                     character.transform.position = pos + new Vector3(0.5f,0.5f);
                     PartyManager.i.AddPartyMember(character);
-                    stats.InitializeCharacter();
                 }
             }
             return;

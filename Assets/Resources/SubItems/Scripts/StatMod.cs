@@ -10,6 +10,7 @@ public class StatMod : ItemAbstract {
     public int damageMultiple;
     public int rangedWeaponRange;
     public int maxHealth;
+    public int armourMax;
     public int armour;
     public int actionPoints;
     public int throwingRange;
@@ -21,7 +22,7 @@ public class StatMod : ItemAbstract {
     public GameObject target;
     public bool onlyActivateOutOfCombat;
     public Signal onSignal = Signal.CalculateStats;
-    public bool originBecomesPosition;
+    public bool originBecomesPosition = true;
     public bool targetSelf;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if (signal == Signal.SetTarget) { target = position.GameObjectGo(); return; }
@@ -67,7 +68,8 @@ public class StatMod : ItemAbstract {
     }
 
     public void ModifyPlayerStats(Vector3Int position,Stats stats) {
-        if (armour != 0) { stats.armourTemp += armour; }
+        if (armourMax != 0) { stats.armourTemp += armourMax; }
+        if (armour != 0) { stats.armour += armour; }
         if (actionPoints != 0) { stats.actionPoints += actionPoints; }
         if (throwingRange != 0) { stats.throwingRangeTemp += throwingRange; }
         if (fistDamage != 0) { stats.fistDamageTemp += fistDamage; }
@@ -79,11 +81,12 @@ public class StatMod : ItemAbstract {
     }
 
     public override string Description() {
-        string description = name +":\n";
+        string description = "";
         if (onlyActivateOutOfCombat) { description += "While Unseen By Enemies "; }
         if (damage != 0) { description += damage + " Weapon Damage\n"; }
         if (damageMultiple != 0) { description += damageMultiple +1 + " Times Weapon Damage\n"; }
         if (rangedWeaponRange != 0) { description += rangedWeaponRange + " Weapon Range\n"; }
+        if (armourMax != 0) { description += armourMax + " Max Armour\n"; }
         if (armour != 0) { description += armour + " Armour\n"; }
         if (actionPoints != 0) { description += actionPoints + " Base AP\n"; }
         if (throwingRange != 0) { description += throwingRange + " Throwing Range\n"; }

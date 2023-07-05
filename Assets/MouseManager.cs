@@ -59,7 +59,7 @@ public class MouseManager : MonoBehaviour
 
         //1 Prepare character
         currentStats.ResetTempStats();
-        inventory.CallEquipment(mousePosition, origin, Signal.CalculateStats); //This calls all their equipment to add values to Stats
+        currentStats.RecalculateStats(); //This calls all their equipment to add values to Stats
 
         //2 If and item is selected, use that item
         if (UseItem(mousePosition, origin, currentStats, inventory)) { EndOfAction(); return; };
@@ -126,12 +126,12 @@ public class MouseManager : MonoBehaviour
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
         if(currentStats.state == State.Idle && targetStats.faction == Faction.Interactable) { goto Meelee; }
-        if (IsthereEnoughActionPointsToSpend(position, origin, inventory, currentStats) == false) { return false; };
         if (inventory.mainHand) { inventory.mainHand.Call(position, origin, Signal.WeaponDamageCalculate); }
         if (inventory.offHand) { inventory.offHand.Call(position, origin, Signal.WeaponDamageCalculate); }
         inventory.CallEquipment(position, origin, Signal.Attack);
         if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
         PathingManager.i.FlipCharacter(currentCharacter, position, origin);
+        currentStats.actionPoints--;
         if (inventory.mainHand) { return true; }
             
         Meelee:
@@ -232,6 +232,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public void EndOfActionFinal() {
+        
         var partyManager = PartyManager.i;
         partyManager.Follow();
         if (state == State.Combat) { isRepeatingActionsOutsideCombat = false; }
@@ -240,6 +241,8 @@ public class MouseManager : MonoBehaviour
             isRepeatingActionsOutsideCombat = false;
         }
         if (isRepeatingActionsOutsideCombat) { StartCoroutine(RepeatDelay());  }
+
+        GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
     }
 
     public IEnumerator RepeatDelay() {
@@ -256,7 +259,7 @@ public class MouseManager : MonoBehaviour
         var currentStats = currentCharacter.GetComponent<Stats>();
         var inventory = currentCharacter.GetComponent<Inventory>();
         var target = clickPosition.GameObjectSpawn();
-        currentStats.ResetTempStats();
+        currentStats.RecalculateStats();
         if (UseItem(clickPosition, origin, currentStats, inventory)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
         if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
 
@@ -292,15 +295,13 @@ public class MouseManager : MonoBehaviour
         return true;
     }
 
-    public void UpdateHightlight(Vector3Int mousePosition) {
+    public void UpdateHightlight(Vector3Int mousePosition) { 
         if (mousePosition != lastMousePosition) {
+            GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
             lastMousePosition = mousePosition;
             if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
             if (GridManager.i.FogTile(mousePosition) || !mousePosition.IsWalkable()) {
                 GameUIManager.i.HideHighlight();
-            }
-            else {
-                GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
             }
         }
     }

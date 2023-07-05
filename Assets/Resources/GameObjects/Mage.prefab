@@ -177,12 +177,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &6780645703283991167
 MonoBehaviour:
@@ -200,7 +202,7 @@ MonoBehaviour:
   traits: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}
-  offHand: {fileID: 0}
+  offHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}
   helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: b50da0dfd62a2fb4683db18744192196, type: 2}
   trinket1: {fileID: 11400000, guid: 551f455710f5386409803361a15350f7, type: 2}

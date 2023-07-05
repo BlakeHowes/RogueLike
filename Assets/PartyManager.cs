@@ -165,7 +165,6 @@ public class PartyManager : MonoBehaviour {
 
     public void EnemyPartyStartTurn() {
         MouseManager.i.disableMouse = true;
-        GameUIManager.i.SetEnemyColourToWhite();
         RemoveNullCharacters(enemyParty);
         if(enemyParty.Count == 0) {PartyStartTurn();return; }
         var partyCopy =ArrangeEnemyPartyBasedOnPath();

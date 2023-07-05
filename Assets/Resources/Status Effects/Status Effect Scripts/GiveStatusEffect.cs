@@ -1,8 +1,10 @@
+using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 using static PartyManager;
+using static UnityEditor.PlayerSettings;
 
 [CreateAssetMenu(fileName = "GiveStatusEffect", menuName = "Status Effects/Give Status Effect")]
 public class GiveStatusEffect : ItemAbstract {
@@ -31,6 +33,8 @@ public class GiveStatusEffect : ItemAbstract {
     }
 
     public void SingleTarget(Vector3Int position, Vector3Int origin) {
+        var target = position.GameObjectGo();
+        if (!target) { return; }
         foreach (var item in statusEffects) {
             if (statusEffectTargetIsThisCharacter) { position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(item, origin); continue; }
             position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(item, position);
@@ -38,6 +42,8 @@ public class GiveStatusEffect : ItemAbstract {
         foreach (var item in subItems) {
             item.Call(position, origin, Signal.Attack);
         }
+        target.GetComponent<Stats>().RecalculateStats();
+        if (particles) { EffectManager.i.CreateSingleParticleEffect(position, particles); }
     }
 
     public void MultiTarget(Vector3Int position, Vector3Int origin) {
@@ -50,10 +56,12 @@ public class GiveStatusEffect : ItemAbstract {
             foreach (var item in statusEffects) {
                 if (statusEffectTargetIsThisCharacter) { target.GetComponent<Inventory>().AddStatusEffect(item, origin); continue; }
                 target.GetComponent<Inventory>().AddStatusEffect(item, pos);
+
             }
             foreach (var item in subItems) {
                 item.Call(pos, origin, Signal.Attack);
             }
+            target.GetComponent<Stats>().RecalculateStats();
             if (particles) { EffectManager.i.CreateSingleParticleEffect(pos, particles); }
         }
     }
@@ -65,8 +73,11 @@ public class GiveStatusEffect : ItemAbstract {
 
     public override string Description() {
         string description = "";
-        if (type == Type.AreaUnderMouse || type == Type.AreaAroundUser) { description += "All Enemies in range \n"; }
+        if (type == Type.AreaUnderMouse || type == Type.AreaAroundUser) { description += "AOE \n"; }
         foreach (var item in statusEffects) {
+            description += item.Description();
+        }
+        foreach (var item in subItems) {
             description += item.Description();
         }
         return description;

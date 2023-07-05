@@ -15,6 +15,7 @@ public class StatEffectGeneric : ItemAbstract {
     public int damageMultiple;
     public int rangedWeaponRange;
     public int maxHealth;
+    public int armourMax;
     public int armour;
     public int actionPoints;
     public int throwingRange;
@@ -26,10 +27,12 @@ public class StatEffectGeneric : ItemAbstract {
     public int healthChangeAddition;
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public GameObject target;
-    public override IEnumerator Action() {
+
+    public void DoStatusEffect() {
         var stats = target.GetComponent<Stats>();
-        if (!stats.gameObject.activeSelf) { yield break; }
-        if (armour != 0) { stats.armourTemp += armour; }
+        if (!stats.gameObject.activeSelf) { return; }
+        if (armourMax != 0) { stats.armourTemp += armourMax; }
+        if (armour != 0) { stats.armour += armour; }
         if (actionPoints != 0) { stats.actionPointsTemp += actionPoints; }
         if (throwingRange != 0) { stats.throwingRangeTemp += throwingRange; }
         if (fistDamage != 0) { stats.fistDamageTemp += fistDamage; }
@@ -41,7 +44,10 @@ public class StatEffectGeneric : ItemAbstract {
         foreach (var item in items) {
             item.Call(position, origin, Signal.Attack);
         }
-        if (particles) { EffectManager.i.AttachSingleToGO(position, particles);}
+        if (particles) { EffectManager.i.AttachSingleToGO(position, particles); }
+    }
+    public override IEnumerator Action() {
+
         yield return new WaitForSeconds(0f);
     }
 
@@ -49,7 +55,7 @@ public class StatEffectGeneric : ItemAbstract {
         if(signal == Signal.SetTarget) { target = position.GameObjectGo();return; }
         if(signal == Signal.StartOfTurn) {
             counter++;
-            if (counter > durationTotal) {
+            if (counter >= durationTotal) {
                 if (target) {
                     Debug.Log(target);
                     target.GetComponent<Inventory>().statusEffectsToRemove.Add(this);
@@ -75,13 +81,14 @@ public class StatEffectGeneric : ItemAbstract {
     Stats:
         this.position = position;
         this.origin = origin;
-        GridManager.i.InsertToStack(this);
+        DoStatusEffect();
     }
     public override string Description() {
-        string description = name + ":\n";
+        string description = "";
         if (damage != 0) { description += damage + " Weapon Damage\n"; }
         if (damageMultiple != 0) { description += damageMultiple + " Times Weapon Damage\n"; }
         if (rangedWeaponRange != 0) { description += rangedWeaponRange + " Weapon Range\n"; }
+        if (armourMax != 0) { description += armourMax + " Max Armour\n"; }
         if (armour != 0) { description += armour + " Armour\n"; }
         if (actionPoints != 0) { description += actionPoints + " Base AP\n"; }
         if (throwingRange != 0) { description += throwingRange + " Throwing Range\n"; }
@@ -91,6 +98,7 @@ public class StatEffectGeneric : ItemAbstract {
         if (skillRange != 0) { description += skillRange + " Skill Range\n"; }
         if (health != 0) { description += health + " Health\n"; }
         if (healthChangeAddition != 0) { description += healthChangeAddition + " Added Each Turn\n"; }
+        description += "for " + durationTotal + " turns.\n";
         return description;
     }
 }
