@@ -12,6 +12,7 @@ public static class MechStatic {
     public enum Signal {
         Tick,
         ClickOnWhileStandingOntopOf,
+        OnEnable,
         ItemThrownOnto
     }
 }

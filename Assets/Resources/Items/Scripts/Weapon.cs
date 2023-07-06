@@ -14,7 +14,6 @@ public class Weapon : ItemAbstract
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public bool twoHanded = false;
     [Header("Base Stats")]
-    public int actionPointCost;
     public Vector2Int damageRange = new Vector2Int(5,8);
     [Range(0,100)]public float accuracyBase = 90;
     public int rangeBase = 1;
@@ -72,29 +71,16 @@ public class Weapon : ItemAbstract
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         originCharacter = origin.GameObjectSpawn();
         if (signal == Signal.CalculateStats) {
-            ResetTempStats();
             foreach (ItemAbstract item in subItems) {
                 item.Call(position, origin, Signal.CalculateStats);
             }
             return;
         }
+        if(signal == Signal.ResetStatsToBase) { ResetTempStats(); }
 
         //Range Check!
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
-
-        if (signal == Signal.ActionPointSum) {
-            if (MouseManager.i.itemSelected == null)
-                originCharacter.GetComponent<Stats>().actionPointsSum += actionPointCost;
-            foreach (ItemAbstract item in subItems) {
-                item.Call(position, origin, signal);
-            }
-            return;
-        }
-
-        if(signal == Signal.WeaponDamageCalculate) {
-            SetDamage(position);
-        }
-
+        SetDamage(position);
         if (signal != Signal.Attack) { return; }
         this.origin = origin;
         this.position = position;
@@ -103,6 +89,7 @@ public class Weapon : ItemAbstract
         if (MouseManager.i.itemSelected != null) { return; }
 
         foreach (ItemAbstract item in subItems) {
+            if(item is Weapon) { var weapon = item as Weapon;weapon.accuracyTemp = accuracyTemp; }
             item.Call(position, origin, signal);
         }
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { 

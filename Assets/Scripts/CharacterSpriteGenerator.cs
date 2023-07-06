@@ -3,14 +3,13 @@ using UnityEditor;
 using UnityEditor.Presets;
 using UnityEngine;
 public static class CharacterSpriteGenerator {
-    public static Vector3Int characterOffset = new Vector3Int(31, 15, 0);
     public static Texture2D PasteSpriteMask(Texture2D source, Texture2D target, Texture2D mask, Vector3Int offset) {
         var targetWidth = target.width;
         var targetHeight = target.height;
         for (int x = 0; x < source.width; x++) {
             for (int y = 0; y < source.height; y++) {
                 if (x > targetWidth || y > targetHeight || x < 0 || y < 0) { continue; }
-                if (mask.GetPixel(x + offset.x, y + offset.y).a == 0) { continue; }
+                if (mask.GetPixel(x + offset.x, y + offset.y).a < 1) { continue; }
                 var colour = source.GetPixel(x, y);
                 if (colour.a >= 1.0f) { target.SetPixel(x + offset.x, y + offset.y, colour); }
             }
@@ -35,7 +34,7 @@ public static class CharacterSpriteGenerator {
     }
 
     private static void AddSpriteMasked(Sprite sprite, CCPalette palette, Texture2D baseTexture, Vector3Int offset, bool mask) {
-        if (mask) { PasteSpriteMask(ColourReplacer.i.ColourizeSprite(sprite, palette).texture, baseTexture, baseTexture, offset); return; }
+        if (mask) { PasteSpriteMask(ColourizeSprite(sprite, palette).texture, baseTexture, baseTexture, offset); return; }
         PasteSprite(ColourizeSprite(sprite, palette), baseTexture, offset);
     }
 
@@ -71,16 +70,21 @@ public static class CharacterSpriteGenerator {
         if (!options) { return null; }
         var armour = inventory.armour;
         var helmet = inventory.helmet;
-        if (options.body == null) options.body = character.GetComponent<SpriteRenderer>().sprite;
+        var characterOffset = options.characterOffset;
+        if (options.body == null) { return null; }
         var colouredBody = ColourizeSprite(options.body, options.bodyPalette);
         Texture2D baseTexture = duplicateTexture(colouredBody.texture);
         Vector3Int headOffset = options.headOffset + characterOffset;
-        if (options.race.extraPartHead) { AddSprite(options.race.extraPartHead, options.bodyPalette, baseTexture, headOffset); }
-        if (options.race.extraPartBody) { AddSprite(options.race.extraPartBody, options.bodyPalette, baseTexture, Vector3Int.zero); }
-        if (options.face) { AddSprite(options.face, options.facePalette, baseTexture, headOffset); }
 
         var hide = false;
-        if (helmet) { var helmetEqupment = helmet as Equipment; hide = helmetEqupment.hideHair; }
+        if (helmet && !options.hideHelmet) { var helmetEqupment = helmet as Equipment; hide = helmetEqupment.hideHair; }
+
+        if (options.race) {
+            if (options.race.extraPartHead) { AddSpriteMasked(options.race.extraPartHead, options.bodyPalette, baseTexture, headOffset,hide); }
+            if (options.race.extraPartBody) { AddSprite(options.race.extraPartBody, options.bodyPalette, baseTexture, Vector3Int.zero); }
+            if (options.face) { AddSprite(options.face, options.facePalette, baseTexture, headOffset); }
+        }
+
         if (options.feature) { AddSpriteMasked(options.feature, options.featurePalette, baseTexture, headOffset, hide); }
         if (options.hair) { AddSpriteMasked(options.hair, options.hairPalette, baseTexture, headOffset, hide); }
 
@@ -88,28 +92,41 @@ public static class CharacterSpriteGenerator {
             Equipment armourItem = armour as Equipment;
             baseTexture = PasteSprite(armourItem.wornSprite, baseTexture, characterOffset);
         }
-        if (helmet != null) { baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset + characterOffset); }
+        if (helmet && !options.hideHelmet) { baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset + characterOffset); }
 
         if (inventory.mainHand) {
             var weapon = inventory.mainHand as Weapon;
-            baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, weapon.heldOffset + characterOffset);
+            baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, weapon.heldOffset + characterOffset + options.mainHandOffset);
         }
+        
         if (inventory.offHand) {
             Vector3Int offset = new Vector3Int(-10, 0);
             if (inventory.offHand is Equipment) {
                 Equipment equipment = inventory.offHand as Equipment;
-                baseTexture = PasteSprite(equipment.tile.sprite, baseTexture, equipment.wornOffset + characterOffset);
+                baseTexture = PasteSprite(equipment.tile.sprite, baseTexture, equipment.wornOffset + characterOffset +options.offHandOffset);
             }
             if (inventory.offHand is Weapon) {
                 Weapon weapon = inventory.offHand as Weapon;
-                baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, weapon.heldOffset + characterOffset + offset);
+                baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, weapon.heldOffset + characterOffset + offset + options.offHandOffset);
             }
         }
-        var sprite = Sprite.Create(baseTexture, new Rect(0, 0, baseTexture.width, baseTexture.height), new Vector2(0.5f, 0.3125f), 16);
+        
+        var sprite = Sprite.Create(baseTexture, new Rect(0, 0, baseTexture.width, baseTexture.height), GetPivot(options.body), 16);
         sprite.name = inventory.gameObject.name + " Generated";
-        if(sprite)character.GetComponent<SpriteRenderer>().sprite = sprite;
+        if (sprite) {
+            Debug.Log("Sprite Created for " + character.name + sprite.name);
+            character.GetComponent<SpriteRenderer>().sprite = sprite;
+        }
+
         return sprite;
     }
+
+    public static Vector2 GetPivot(Sprite sprite) {
+        var pivotX = sprite.pivot.x / sprite.rect.size.x;
+        var pivotY = sprite.pivot.y / sprite.rect.size.y;
+        return new Vector2(pivotX, pivotY);
+    }
+
     public static Sprite CreateCharacterIconTexture(CCOptions options, Inventory inventory) {
         if (!options) { return null; }
         var armour = inventory.armour;
@@ -141,13 +158,13 @@ public static class CharacterSpriteGenerator {
         return sprite;
     }
 
-    public static void SaveTextureToFolder(Texture2D texture) {
+    public static string SaveTextureToFolder(Texture2D texture,string name) {
         byte[] bytes = texture.EncodeToPNG();
         var seed = Random.Range(1.11111f, 1000f);
-        System.Random psudoRandom = new System.Random(seed.GetHashCode());
-        string filenameandlocation = "/Resources/GameObjects/2 Sprites/"+ seed.ToString() + ".png";
+        string filenameandlocation = "/Resources/GameObjects/Character Sprites/"+ name + seed.ToString() + ".png";
         System.IO.File.WriteAllBytes(Application.dataPath + filenameandlocation, bytes);
         AssetDatabase.Refresh();
+        return "GameObjects/Character Sprites/" + name + seed.ToString();
     }
 
     public static Sprite ColourizeSprite(Sprite sprite, CCPalette palette) {

@@ -67,6 +67,7 @@ public class Stats : MonoBehaviour {
             DontDestroyOnLoad(this);
         }
         InitializeCharacter();
+        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
     }
 
     public void OnStartOfCombat() {
@@ -77,25 +78,32 @@ public class Stats : MonoBehaviour {
     private bool armourChecked = false;
     public void OnIdleTick() {
         if (!armourChecked) { 
-            RecalculateStats();
-            armour = armourTemp; armourChecked = true; 
+            RecalculateStats(gameObject.Position());
+            armour = armourTemp; 
+            armourChecked = true; 
         }
         armour++;
         if (armour > armourTemp) { armour = armourTemp; }
+        if (state == PartyManager.State.Idle) {
+            ResetActionPoints();
+        }
     }
 
     public void InitializeCharacter() {
         inventory = GetComponent<Inventory>();
-        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
+       
+        
+
         if (maxHealthTemp == 0) {
             maxHealthTemp = maxHealthBase;
             health = maxHealthTemp;
         }
         if (!GridManager.i) return;
-        
-        ResetTempStats();
+
+      
         ResetActionPoints();
-        healthbarGameObject = Instantiate(GameUIManager.i.healthBarPrefab, GameUIManager.i.canvasWorld);
+
+        healthbarGameObject = Instantiate(GridManager.i.globalValues.healthBarPrefab, GameUIManager.i.canvasWorld);
         healthbar = healthbarGameObject.GetComponent<HealthBar>();
         healthbar.InitializeHealthbar(this, inventory);
     }
@@ -104,7 +112,7 @@ public class Stats : MonoBehaviour {
      
         var position = gameObject.Position();
 
-        RecalculateStats();
+        RecalculateStats(position);
         inventory.CallEquipment(position, position, Signal.TakeDamage);
         Debug.Log("Take damage");
         if (infiniteHealth) {
@@ -117,6 +125,7 @@ public class Stats : MonoBehaviour {
         damage -= armour;
         armour = armourLeft;
         if(armourLeft < 0) { armour = 0; }
+        if(damage < 0) { damage = 0; }
         health -= damage;
 
         if (faction == PartyManager.Faction.Enemy) {
@@ -171,7 +180,7 @@ public class Stats : MonoBehaviour {
 
     public void SpawnHitNumber(string value,Color colour,float scale) {
         string text = value.ToString();
-        var hitNumber = Instantiate(GameUIManager.i.hitNumberPrefab, GameUIManager.i.canvasWorld);
+        var hitNumber = Instantiate(GameUIManager.i.globalValues.hitNumberPrefab, GameUIManager.i.canvasWorld);
         hitNumber.transform.position = gameObject.transform.position + new Vector3(0, 0.5f, 0);
         hitNumber.GetComponent<HitNumber>().Set(text, colour, scale);
     }
@@ -192,18 +201,20 @@ public class Stats : MonoBehaviour {
     }
 
     public void UpdateHealthBar() {
-        healthbar.UpdateHealthBar();
+        if(healthbar)healthbar.UpdateHealthBar();
     }
 
     public void ResetActionPoints() {
         actionPoints = actionPointsTemp;
     }
 
-    public void RecalculateStats() {
+    public void RecalculateStats(Vector3Int position) {
         ResetTempStats();
-        var position = gameObject.Position();
+
+        inventory.CallEquipment(position, position, Signal.ResetStatsToBase);
         inventory.CallEquipment(position,position, Signal.CalculateStats);
-        if (!armourChecked) { armour = armourTemp; }
+
+        if (!armourChecked) { armour = armourTemp; armourChecked = true; }
         Debug.Log(armour +" "+ armourTemp + "Status Effects " + inventory.statusEffects.Count);
         if (armour > armourTemp) { armour = armourTemp; }
         UpdateHealthBar();

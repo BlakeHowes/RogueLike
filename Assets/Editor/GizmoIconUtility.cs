@@ -1,11 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEditor.Callbacks;
-using UnityEngine.UIElements;
-using static UnityEditor.Progress;
-using UnityEditor.Sprites;
-using System;
 using Unity.VisualScripting;
 
 namespace FolderIcons {

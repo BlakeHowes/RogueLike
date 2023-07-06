@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3243932232630802518}
   - component: {fileID: -2240532148203776075}
   - component: {fileID: 1262311618455749982}
+  - component: {fileID: 6199056170967616042}
   - component: {fileID: 3243932232630802517}
   - component: {fileID: 3243932232630802516}
   - component: {fileID: 1527939879136044633}
@@ -55,7 +56,7 @@ MonoBehaviour:
   autoReset: 1
   tickOn: 3
   sourceInfos:
-  - isFoldout: 1
+  - isFoldout: 0
     breakPoints: 
     breakPointStatuses: 
     collapsedLines: 
@@ -72,12 +73,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
   itemActions: []
+--- !u!114 &6199056170967616042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5610c26518ed66428e968e72df3dce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  race: {fileID: 0}
+  body: {fileID: 21300000, guid: 529f27a2baced53489fdb549c02ddd12, type: 3}
+  bodyPalette: {fileID: 0}
+  hair: {fileID: 0}
+  hairPalette: {fileID: 0}
+  loadout: {fileID: 0}
+  face: {fileID: 0}
+  facePalette: {fileID: 0}
+  feature: {fileID: 0}
+  featurePalette: {fileID: 0}
+  headOffset: {x: 0, y: 6, z: 0}
+  mainHandOffset: {x: 2, y: 0, z: 0}
+  offHandOffset: {x: -3, y: 0, z: 0}
+  characterOffset: {x: 16, y: -4, z: 0}
+  male: 0
+  hideHelmet: 0
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +122,7 @@ MonoBehaviour:
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
   blocksLight: 1
-  maxHealthBase: 12
+  maxHealthBase: 85
   armourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
@@ -108,11 +134,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
-  health: 20
+  armour: 0
+  health: 70
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -129,7 +158,7 @@ MonoBehaviour:
   items: []
   traits: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 2f79edaa7aa946144bc88353e9e0cf52, type: 2}
+  mainHand: {fileID: 11400000, guid: e15f871269c69144e9c57400aa9f8166, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
@@ -137,7 +166,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -206,6 +234,7 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
     rarity: 1
     pool: 0
+  worldLootScriptable: {fileID: 0}
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +249,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}

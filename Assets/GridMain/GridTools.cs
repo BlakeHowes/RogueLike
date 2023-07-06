@@ -7,8 +7,14 @@ using UnityEngine.UIElements;
 
 public class GridTools
 {
+    public GlobalValues globalValues;
+
+    public GridTools(GlobalValues globalValues) {
+        this.globalValues = globalValues;
+    }
+
     public bool InBounds(Vector3Int position) {
-        if (position.x < 0 || position.x >= GridManager.i.width || position.y < 0 || position.y >= GridManager.i.height) {
+        if (position.x < 0 || position.x >= globalValues.width || position.y < 0 || position.y >= globalValues.height) {
             return false;
         }
         return true;

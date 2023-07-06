@@ -12,7 +12,7 @@ public class SkillSlot : MonoBehaviour
         var currentCharacter = PartyManager.i.currentCharacter;
         var postion = currentCharacter.Position();
         var stats = currentCharacter.GetComponent<Stats>();
-        stats.RecalculateStats();
+        stats.RecalculateStats(postion);
         var genericSkill = skill as Skill;
         if(genericSkill.actionPointCost > stats.actionPoints) { MouseManager.i.itemSelected = null; return; }
         GameUIManager.i.ShowRange(postion, currentCharacter.GetComponent<Stats>().skillRangeTemp);
@@ -24,7 +24,7 @@ public class SkillSlot : MonoBehaviour
         var image = GetComponent<Image>().sprite;
         if (skill.tile != null) { 
             GetComponent<Image>().sprite = skill.tile.sprite; }
-        else { GetComponent<Image>().sprite = GameUIManager.i.defaultSkillSprite; }
+        else { GetComponent<Image>().sprite = GameUIManager.i.globalValues.defaultSkillSprite; }
 
         var genericSkill = skill as Skill;
         var coolDownNumber = transform.Find("coolDownNumber");

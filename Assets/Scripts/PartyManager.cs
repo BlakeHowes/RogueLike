@@ -1,7 +1,9 @@
 using Panda;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static ItemStatic;
 
@@ -10,11 +12,11 @@ public class PartyManager : MonoBehaviour {
     public GameObject currentCharacter;
     public List<GameObject> party = new List<GameObject>();
     public List<GameObject> enemyParty = new List<GameObject>();
-    public Vector3Int characterFollowPosition;
+    [HideInInspector]public Vector3Int characterFollowPosition;
     public List<GameObject> partyMemberTurnTaken = new List<GameObject>();
     public List<GameObject> enemyTurnTaken = new List<GameObject>();
     public bool follow = true;
-
+    public GlobalValues globalValues;
     Faction currentFaction;
     public enum State {
         Idle,
@@ -82,20 +84,23 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void SetCurrentCharacter(GameObject character) {
-        if (currentCharacter) { currentCharacter.GetComponent<SpriteRenderer>().material = GameUIManager.i.normalMaterial; }
+        if (currentCharacter) { currentCharacter.GetComponent<SpriteRenderer>().material = globalValues.normalMaterial; }
 
         currentCharacter = character;
         currentFaction = character.GetComponent<Stats>().faction;
         var stats = character.GetComponent<Stats>();
 
-        if ( party.Contains(character)) { character.GetComponent<SpriteRenderer>().material = GameUIManager.i.outlineMaterial; }
-        else { character.GetComponent<SpriteRenderer>().material = GameUIManager.i.enemyoutlineMaterial; }
+        if ( party.Contains(character)) { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial; }
+        else { character.GetComponent<SpriteRenderer>().material = globalValues.enemyoutlineMaterial; }
         GameUIManager.i.UpdatePartyIcons(party);
 
 
         stats.ResetTempStats();
-        stats.RecalculateStats();
+        stats.RecalculateStats(character.Position());
         GameUIManager.i.actionPointsText.text = stats.actionPoints.ToString();
+        if(stats.state == State.Idle) {
+            stats.ResetActionPoints();
+        }
         GridManager.i.UpdateGame();
     }
 
@@ -188,9 +193,13 @@ public class PartyManager : MonoBehaviour {
             if (!member.activeSelf) { continue; }
             if (!member) { continue; }
             partyCopy.Add(member);
-            var behaviour = member.GetComponent<Behaviours>();
-            behaviour.GetTarget();
-            var target = behaviour.target;
+            member.TryGetComponent(out Behaviours behaviours);
+            GameObject target = null;
+            if (behaviours) {
+                behaviours.GetTarget();
+                target = behaviours.target;
+            }
+
             if (!target) { continue; }
             if (pathingInstance.IsPathable(target.transform.position.FloorToInt(), member.transform.position.FloorToInt())) {
                 partyOrder.Add(member, 0);
@@ -257,7 +266,6 @@ public class PartyManager : MonoBehaviour {
         var stats = enemy.GetComponent<Stats>();
         stats.SpawnHitNumber("!", Color.red, 2);
         stats.state = State.Combat;
-        enemy.GetComponent<Behaviours>().ChangeColour(Color.white);
         var clone = Instantiate(GameUIManager.i.enemyInCombatUI, enemy.transform);
         clone.transform.localPosition = Vector3.zero;
     }

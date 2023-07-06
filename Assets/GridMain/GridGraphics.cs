@@ -9,8 +9,6 @@ public class GridGraphics
 {
     int width;
     int height;
-    Tile goTile;
-    Tile shadowTile;
     Tilemap mechTilemap;
     Tilemap itemTilemap;
     Tilemap goTilemap;
@@ -20,9 +18,9 @@ public class GridGraphics
     Surface[,] surfaceGrid;
     ItemAbstract[,] itemGrid;
     GameObject[,] goGrid;
-
+    GlobalValues globalValues;
     public bool lerping;
-    public GridGraphics(int width, int height, MechAbstract[,] mechGrid, Surface[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tilemap shadowTilemap,Tile shadowTile) {
+    public GridGraphics(int width, int height, MechAbstract[,] mechGrid, Surface[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tilemap shadowTilemap, GlobalValues globalValues) {
         this.width = width;
         this.height = height;
         this.mechTilemap = mechTilemap;
@@ -34,7 +32,7 @@ public class GridGraphics
         this.surfaceGrid = surfaceGrid;
         this.itemGrid = itemGrid;
         this.shadowTilemap = shadowTilemap;
-        this.shadowTile = shadowTile;
+        this.globalValues = globalValues;
     }
 
     public void UpdateEverything() {
@@ -44,7 +42,7 @@ public class GridGraphics
                 var position = new Vector3Int(x, y);
                 if (itemGrid[x, y] != null) {
                     itemTilemap.SetTile(position, itemGrid[x, y].tile);
-                    shadowTilemap.SetTile(position, shadowTile);
+                    shadowTilemap.SetTile(position, globalValues.shadowTile);
                 }
 
                 if (mechGrid[x, y] != null) mechTilemap.SetTile(position, mechGrid[x, y].tile);
@@ -186,24 +184,21 @@ public class GridGraphics
         //var position = character.position();
         var renderer = character.GetComponent<SpriteRenderer>();
         //var startPosition = character.transform.position;
-        var hitMaterial = GameUIManager.i.hitMaterial;
-        var spriteMaterial = GameUIManager.i.normalMaterial;
-        hitMaterial.color = colour;
         //GridManager.i.goTilemap.SetColor(position, Color.clear);
 
         if (renderer == null) { yield break; }
         //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
-        renderer.material = hitMaterial;
+        renderer.material = globalValues.hitMaterial;
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = spriteMaterial; }
+        if (renderer) { renderer.material = globalValues.normalMaterial; }
         //character.transform.position = startPosition;
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = hitMaterial; }
+        if (renderer) { renderer.material = globalValues.hitMaterial; }
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = spriteMaterial; }
+        if (renderer) { renderer.material = globalValues.normalMaterial; }
        
         if (character == PartyManager.i.currentCharacter) {
-            if (renderer) renderer.material = GameUIManager.i.outlineMaterial;
+            if (renderer) renderer.material = globalValues.outlineMaterial;
         }
     }
 }

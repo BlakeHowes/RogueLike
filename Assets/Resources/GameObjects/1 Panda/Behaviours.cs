@@ -8,11 +8,11 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 public class Behaviours : MonoBehaviour
 {
-    public Vector3Int origin;
-    public Vector3Int targetPosition;
+    private Vector3Int origin;
+    private Vector3Int targetPosition;
     public GameObject target;
-    public Stats stats;
-    public int sightRange;
+    private Stats stats;
+    public int sightRange = 12;
     Vector3 offset = new Vector3(0.5f, 0.5f, 0.5f);
     public List<ItemAbstract> itemActions = new List<ItemAbstract>();
     Tilemap gotilemap;

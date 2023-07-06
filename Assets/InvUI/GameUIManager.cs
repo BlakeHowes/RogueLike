@@ -4,37 +4,25 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using static ItemStatic;
-using static UnityEngine.UI.Image;
 
 public class GameUIManager : MonoBehaviour {
     public int coins;
     public Text coinsText;
     public static GameUIManager i;
-    public Tile mouseHighlight;
     public Tilemap uiTilemap;
-    public GameObject healthBarPrefab;
-    public GameObject hitNumberPrefab;
     public Transform canvasOverlay;
     public Transform canvasWorld;
     public ItemToolTip itemtooltip;
     public GameObject tooltipGameObject;
     public Text actionPointsText;
     public GameObject PartyIconLayout;
-    public Material outlineMaterial;
-    public Material enemyoutlineMaterial;
-    public Material normalMaterial;
-    public Material hitMaterial;
-    public GameObject skillSlotPrefab;
     public GameObject skillLayout;
     public GameObject iconLayout;
-    public GameObject iconPrefab;
-    public TileBase rangeTile;
     public Tilemap groundUI;
-    public Sprite defaultSkillSprite;
     public Texture2D boarderEffectTexture;
     public GameObject enemyInCombatUI;
     public Color notInRangeColour;
-    public GameObject gameOverLayout;
+    public GlobalValues globalValues;
     public void Awake() {
         i = this;
         coinsText.text = coins.ToString();
@@ -54,18 +42,19 @@ public class GameUIManager : MonoBehaviour {
         uiTilemap.ClearAllTiles();
         if (!FloorManager.i.IsWalkable(position)) { HideHighlight(); return; }
         var origin = PartyManager.i.GetCurrentTurnCharacter().Position();
-        uiTilemap.SetTile(position, mouseHighlight);
+        uiTilemap.SetTile(position, globalValues.mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
 
         if (character != null) {
             uiTilemap.SetTileFlags(position, TileFlags.None);
             if (PartyManager.i.party.Contains(character)) {
-                uiTilemap.SetColor(position, Color.green);
+                uiTilemap.SetColor(position, globalValues.partyHightlightColour);
             }
             else {
-                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Interactable) { uiTilemap.SetColor(position, Color.yellow); }
+                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Interactable) { uiTilemap.SetColor(position, globalValues.interactableHightlightColour); }
+                if (character.GetComponent<Stats>().faction == PartyManager.Faction.Passive) { uiTilemap.SetColor(position, globalValues.passiveHightlightColour); }
                 if (character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
-                    uiTilemap.SetColor(position, Color.red);
+                    uiTilemap.SetColor(position, globalValues.enemyHightlightColour);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
                     inventory.CallEquipment(origin, origin, Signal.CalculateStats);
                     if (MouseManager.i.itemSelected) { return; }
@@ -87,7 +76,7 @@ public class GameUIManager : MonoBehaviour {
         foreach (Vector3Int cell in cells) {
             var hit =goMethods.FirstLightBlockingThingInSight(cell,position );
             if(cell == hit) {
-                groundUI.SetTile(cell, rangeTile);
+                groundUI.SetTile(cell, globalValues.rangeTile);
                 var go = cell.GameObjectGo();
 
                 if (go) go.GetComponent<SpriteRenderer>().color = Color.white;
@@ -108,7 +97,7 @@ public class GameUIManager : MonoBehaviour {
 
     public void AddSkill(ItemAbstract skill) {
         if (PartyManager.i.currentCharacter.GetComponent<Inventory>().skills.Contains(skill)){ return; }
-        var clone = Instantiate(skillSlotPrefab, skillLayout.transform);
+        var clone = Instantiate(globalValues.skillSlotPrefab, skillLayout.transform);
         clone.GetComponent<SkillSlot>().AddSkill(skill);
     }
 
@@ -127,7 +116,7 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void ShowGameOverUI() {
-        gameOverLayout.SetActive(true);
+        globalValues.gameOverLayout.SetActive(true);
         uiTilemap.ClearAllTiles();
         canvasOverlay.gameObject.SetActive(false);
         MouseManager.i.disableMouse = true;
@@ -143,12 +132,14 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void UpdatePartyIcons(List<GameObject> party) {
+        if (!globalValues.partyIconPrefab) { Debug.LogError("Party Icon not set"); return; }
         foreach (Transform child in iconLayout.transform) {
             Destroy(child.gameObject);
         }
         foreach(GameObject member in party) {
             if(member == null) continue;
-            var clone = Instantiate(iconPrefab,iconLayout.transform);
+            
+            var clone = Instantiate(globalValues.partyIconPrefab,iconLayout.transform);
             var partyicon = clone.gameObject.GetComponent<PartyIcon>();
             var state = member.GetComponent<Stats>().state;
             var colour = Color.black;
@@ -172,7 +163,7 @@ public class GameUIManager : MonoBehaviour {
         position =GridManager.i.goMethods.FirstGameObjectInSight(position, playerpos);
         cells = GridManager.i.tools.BresenhamLine(playerpos.x, playerpos.y, position.x, position.y);
         foreach (Vector3Int cell in cells) {
-            uiTilemap.SetTile(cell, mouseHighlight);
+            uiTilemap.SetTile(cell, globalValues.mouseHighlight);
         }
     }
 

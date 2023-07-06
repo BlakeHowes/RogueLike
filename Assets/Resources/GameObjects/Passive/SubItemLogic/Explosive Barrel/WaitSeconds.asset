@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaitSeconds
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
   time: 0.15
+  onSignal: 9

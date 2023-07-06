@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d634f73c8c7d348a1ccf60c5d20757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 19652850ce04e8847b0b544c026632be, type: 2}
+  tile: {fileID: 11400000, guid: 8ea108921f16cf14e9e26893ea315acd, type: 2}
   faction: 4
   state: 0
   deathAction:
@@ -108,12 +108,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:

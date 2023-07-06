@@ -41,7 +41,7 @@ public static class ItemStatic {
     public enum Signal {
         CalculateStats,
         ActionPointSum,
-        WeaponDamageCalculate,
+        ResetStatsToBase,
         SelectItem,
         Attack,
         CreateSkill,

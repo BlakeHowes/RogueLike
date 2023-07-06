@@ -6,10 +6,12 @@ public class itemMethods {
     private ItemAbstract[,] itemGrid;
     private AssetManager assets;
     private Tilemap itemTilemap;
-    public itemMethods(ItemAbstract[,] itemGrid,AssetManager assets,Tilemap itemTilemap) {
+    private GlobalValues globalValues;
+    public itemMethods(ItemAbstract[,] itemGrid,AssetManager assets, Tilemap itemTilemap, GlobalValues globalValues) {
         this.itemGrid = itemGrid;
         this.assets = assets;
         this.itemTilemap = itemTilemap;
+        this.globalValues = globalValues;
     }
 
     public ItemAbstract GetItemOrSpawnFromTile(Vector3Int position) {
@@ -56,8 +58,8 @@ public class itemMethods {
     }
 
     public Vector3Int FindItemOnGrid(ItemAbstract item) {
-        for (int x = 0; x <GridManager.i.width; x++) {
-            for (int y = 0; y < GridManager.i.height; y++) {
+        for (int x = 0; x <globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 if (itemGrid[x, y] == item) {
                     return new Vector3Int(x, y, 0);
                 }
@@ -142,6 +144,6 @@ public class itemMethods {
                 }
             }
         }
-        return GridManager.i.NullValue;
+        return globalValues.NullValue;
     }
 }

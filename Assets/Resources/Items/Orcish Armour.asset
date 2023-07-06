@@ -23,4 +23,4 @@ MonoBehaviour:
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}
   maxHealthBase: 0
-  armourBase: 30
+  armourBase: 20

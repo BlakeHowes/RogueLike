@@ -16,8 +16,8 @@ public class MouseManager : MonoBehaviour
     public Vector3Int lastMousePosition;
     public bool isRepeatingActionsOutsideCombat = false;
     public Vector3Int clickPosition;
-    public float repeatSpeed;
     public Tilemap floorTilemap;
+    public GlobalValues globalValues;
     public void Awake() {
         i = this;
     }
@@ -59,7 +59,7 @@ public class MouseManager : MonoBehaviour
 
         //1 Prepare character
         currentStats.ResetTempStats();
-        currentStats.RecalculateStats(); //This calls all their equipment to add values to Stats
+        currentStats.RecalculateStats(origin); //This calls all their equipment to add values to Stats
 
         //2 If and item is selected, use that item
         if (UseItem(mousePosition, origin, currentStats, inventory)) { EndOfAction(); return; };
@@ -126,8 +126,6 @@ public class MouseManager : MonoBehaviour
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
         if(currentStats.state == State.Idle && targetStats.faction == Faction.Interactable) { goto Meelee; }
-        if (inventory.mainHand) { inventory.mainHand.Call(position, origin, Signal.WeaponDamageCalculate); }
-        if (inventory.offHand) { inventory.offHand.Call(position, origin, Signal.WeaponDamageCalculate); }
         inventory.CallEquipment(position, origin, Signal.Attack);
         if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
         PathingManager.i.FlipCharacter(currentCharacter, position, origin);
@@ -170,7 +168,7 @@ public class MouseManager : MonoBehaviour
             //Coins hack, better this concept if needed
             if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction();return; }
 
-            if (inventory.items.Count < inventory.maxItems) {
+            if (inventory.items.Count < globalValues.maxItems) {
                 GridManager.i.itemMethods.RemoveItem(position);
                 inventory.AddItem(item);
             }
@@ -259,7 +257,7 @@ public class MouseManager : MonoBehaviour
         var currentStats = currentCharacter.GetComponent<Stats>();
         var inventory = currentCharacter.GetComponent<Inventory>();
         var target = clickPosition.GameObjectSpawn();
-        currentStats.RecalculateStats();
+        currentStats.RecalculateStats(origin);
         if (UseItem(clickPosition, origin, currentStats, inventory)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
         if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
 

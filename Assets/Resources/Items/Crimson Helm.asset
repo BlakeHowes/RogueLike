@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Crimson Helm
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: fe1b1fb5870fd2b47bd33fd2de5bffc3, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   equipmentType: 2
+  weight: 4
   subItems: []
   wornSprite: {fileID: 0}
   hideHair: 1

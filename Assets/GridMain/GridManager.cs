@@ -14,8 +14,7 @@ public class GridManager : MonoBehaviour {
     public GridTools tools;
 
     [Header("Dimentions")]
-    public int width;
-    public int height;
+    public GlobalValues globalValues;
 
     //Grid data
     private MechAbstract[,] mechGrid;
@@ -39,23 +38,38 @@ public class GridManager : MonoBehaviour {
     public Tilemap fogTilemap;
     public Tilemap floorTilemap;
     public Tilemap shadowTilemap;
-  
-    [NonSerialized]public Vector3Int NullValue = new Vector3Int(-1, -1, 0);
-    [Header("Test Objects")]
-    public List<GameObject> partyPrefabs = new List<GameObject>();
-    public Tile shadowTile;
-    public TileBase fog;
-    public TileBase bigFog;
-    public TileBase fogWall;
-    public TileBase fogSemi;
-    public TileBase entrance;
-    public int fogFill;
-    public int outerFogFill;
-    public float fogDistance;
-    public float outerFogDistance;
 
     public List<ItemAbstract> itemsInActionStack = new List<ItemAbstract>();
     public bool enumeratingStack;
+
+    public void Awake() {
+        i = this;
+
+        assets = new AssetManager();
+        tools = new GridTools(globalValues);
+        Initialize();
+        mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
+        itemMethods = new itemMethods(itemGrid, assets, itemTilemap,globalValues);
+        goMethods = new GoMethod(goGrid, assets, goTilemap, floorTilemap, globalValues);
+        graphics = new GridGraphics(globalValues.width, globalValues.height, mechGrid, surfaceGrid, goGrid, itemGrid, goTilemap, itemTilemap, mechTilemap, surfaceTilemap, shadowTilemap, globalValues);
+        ExtensionMethods.SetReferences();
+    }
+
+    public void Initialize() {
+        //Initialize grids
+        mechGrid = new MechAbstract[globalValues.width, globalValues.height];
+        surfaceGrid = new Surface[globalValues.width, globalValues.height];
+        itemGrid = new ItemAbstract[globalValues.width, globalValues.height];
+        goGrid = new GameObject[globalValues.width, globalValues.height];
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
+                mechGrid[x, y] = null;
+                surfaceGrid[x, y] = null;
+                itemGrid[x, y] = null;
+                goGrid[x, y] = null;
+            }
+        }
+    }
 
     public void TickGame() {
         var currentCharacter = PartyManager.i.currentCharacter;
@@ -69,7 +83,7 @@ public class GridManager : MonoBehaviour {
         foreach(Transform child in transform) {
             var go = child.gameObject;
             var pos = go.Position();
-            if(pos == NullValue) { continue; }
+            if(pos == globalValues.NullValue) { continue; }
             CallTickAndStartOfTurn(pos, go.GetComponent<Inventory>(), currentCharacter, go.GetComponent<Stats>().state);
         }
         
@@ -82,7 +96,7 @@ public class GridManager : MonoBehaviour {
             //if (!behaviour.gameObject.activeSelf) { continue; }
             if (!behaviour) { NPCBehaviourPool.Remove(behaviour); continue; }
             var position = behaviour.gameObject.Position();
-            if (position == NullValue) { Destroy(behaviour.gameObject); continue; }
+            if (position == globalValues.NullValue) { Destroy(behaviour.gameObject); continue; }
             var state = behaviour.GetComponent<Stats>().state;
             //CallTickAndStartOfTurn(position, behaviour.GetComponent<Inventory>(), currentCharacter, state);
             if (state == PartyManager.State.Idle)
@@ -190,41 +204,10 @@ public class GridManager : MonoBehaviour {
 
     }
 
-
-
-    public void Awake() {
-        i = this;
-       
-        assets = new AssetManager();
-        tools = new GridTools();
-        Initialize();
-        mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
-        itemMethods = new itemMethods(itemGrid, assets, itemTilemap);
-        goMethods = new GoMethod(goGrid,assets,goTilemap,floorTilemap);
-        graphics = new GridGraphics(width, height, mechGrid, surfaceGrid, goGrid, itemGrid, goTilemap, itemTilemap, mechTilemap, surfaceTilemap, shadowTilemap,shadowTile);
-        ExtensionMethods.SetReferences();
-    }
-
-    public void Initialize() {
-        //Initialize grids
-        mechGrid = new MechAbstract[width, height];
-        surfaceGrid = new Surface[width, height];
-        itemGrid = new ItemAbstract[width, height];
-        goGrid = new GameObject[width, height];
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
-                mechGrid[x, y] = null;
-                surfaceGrid[x, y] = null;
-                itemGrid[x, y] = null;
-                goGrid[x, y] = null;
-            }
-        }
-    }
-
     public void mechFloorTick() {
         Vector3Int position = Vector3Int.zero;
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 position.x = x; position.y = y;
                 if (mechGrid[x, y]) mechGrid[x, y].Call(position,MechStatic.Signal.Tick);
                 if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
@@ -250,7 +233,7 @@ public class GridManager : MonoBehaviour {
             return;
         }
         DebugSpawn:
-        foreach (GameObject character in partyPrefabs) {
+        foreach (GameObject character in globalValues.partyPrefabs) {
             var clone = goMethods.SpawnFloodFill(position, character);
             PartyManager.i.AddPartyMember(clone);
             clone.transform.parent = null;
@@ -260,14 +243,14 @@ public class GridManager : MonoBehaviour {
     void OnDrawGizmosSelected() {
         // Draw a semitransparent red cube at the transforms position
         Gizmos.color = new Color(1, 0.2f, 0.2f, 0.3f);
-        Gizmos.DrawCube(new Vector3(width/2, height/2), new Vector3(width, height));
+        Gizmos.DrawCube(new Vector3(globalValues.width /2, globalValues.height /2), new Vector3(globalValues.width, globalValues.height));
     }
 
     public Vector3Int FindEntrance() {
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 var pos = new Vector3Int(x, y);
-                if(mechTilemap.GetTile(pos) == entrance) {
+                if(mechTilemap.GetTile(pos) == globalValues.entrance) {
                     return pos;
                 }
             }
@@ -281,7 +264,7 @@ public class GridManager : MonoBehaviour {
         CreateFog();
         SpawnParty();
         UpdateGame();
-        GameUIManager.i.actionPointsText.text = partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
+        GameUIManager.i.actionPointsText.text = globalValues.partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
         ClearFog();
         ClearSemiFog();
        
@@ -294,21 +277,21 @@ public class GridManager : MonoBehaviour {
     }
 
     public void CreateFog() {
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 var pos = new Vector3Int(x, y);
-                fogTilemap.SetTile(pos, bigFog);
+                fogTilemap.SetTile(pos, globalValues.bigFog);
             }
         }
     }
 
     public void ClearFog() {
        
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 var pos = new Vector3Int(x, y);
                 if (!fogTilemap.GetTile(pos)) 
-                    fogTilemap.SetTile(pos, fogSemi);
+                    fogTilemap.SetTile(pos, globalValues.fogSemi);
             } 
         }
 
@@ -316,20 +299,20 @@ public class GridManager : MonoBehaviour {
         foreach (GameObject member in party) {
             if (member == null) { continue; }
             var position = member.Position();
-            tools.FloodFill(position, goTilemap, fogTilemap,1000 ,fogSemi,1000);
+            tools.FloodFill(position, goTilemap, fogTilemap,1000 , globalValues.fogSemi,1000);
         }
     }
     public void ClearFogDoor(Vector3Int position) {
-        tools.FloodFill(position, goTilemap, fogTilemap, 1000, fogSemi, 1000);
+        tools.FloodFill(position, goTilemap, fogTilemap, 1000, globalValues.fogSemi, 1000);
         ClearSemiFog();
     }
 
     public void ClearSemiFog() {
-        for (int x = 0; x < width; x++) {
-            for (int y = 0; y < height; y++) {
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 var pos = new Vector3Int(x, y);
                 if (!fogTilemap.GetTile(pos))
-                    fogTilemap.SetTile(pos, fogSemi);
+                    fogTilemap.SetTile(pos, globalValues.fogSemi);
             }
         }
         var party = PartyManager.i.party;
@@ -337,18 +320,17 @@ public class GridManager : MonoBehaviour {
         foreach (GameObject member in party) {
             if (member == null) { continue; }
             var position = member.Position();
-            if(position == NullValue) { continue; }
-            tools.FloodFill(position, goTilemap, fogTilemap, fogFill, null, fogDistance);
+            if(position == globalValues.NullValue) { continue; }
+            tools.FloodFill(position, goTilemap, fogTilemap, globalValues.fogFill, null, globalValues.fogDistance);
             i++;
         }
     }
 
-    public void SpawnCharacter(GameObject character, Vector3Int position, Color colour) {
+    public void SpawnCharacter(GameObject character, Vector3Int position) {
         var clone = Instantiate(character);
         goGrid[position.x, position.y] = clone;
         clone.transform.position = new Vector3(position.x + 0.5f, position.y + 0.5f, 0);
         PartyManager.i.AddPartyMember(clone);
-        clone.GetComponent<SpriteRenderer>().color = colour;
         CharacterSpriteGenerator.CreateCharacterSprite(clone);
     }
 
@@ -409,6 +391,7 @@ public class GridManager : MonoBehaviour {
         var prefab = assets.TiletoMech(tile);
         if (!prefab) { return null; }
         mechGrid[position.x, position.y] = prefab;
+        prefab.Call(position, MechStatic.Signal.OnEnable);
         return prefab;
     }
 
@@ -433,7 +416,7 @@ public class GridManager : MonoBehaviour {
 
 
 public bool FogTile(Vector3Int position) {
-    if(fogTilemap.GetTile(position) == fog) {
+    if(fogTilemap.GetTile(position) == globalValues.fog) {
         return true;
     }
         return false;

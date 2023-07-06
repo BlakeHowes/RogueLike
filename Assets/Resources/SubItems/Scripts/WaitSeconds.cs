@@ -5,7 +5,9 @@ using static ItemStatic;
 [CreateAssetMenu(fileName = "WaitSeconds", menuName = "Mods/WaitSeconds")]
 public class WaitSeconds : ItemAbstract {
     public float time;
+    public Signal onSignal;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+        if(signal == onSignal)
         GridManager.i.AddToStack(this);
     }
     public override IEnumerator Action() {
@@ -13,6 +15,6 @@ public class WaitSeconds : ItemAbstract {
     }
 
     public override string Description() {
-        throw new System.NotImplementedException();
+        return "";
     }
 }

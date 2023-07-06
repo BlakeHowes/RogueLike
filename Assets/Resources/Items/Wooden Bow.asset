@@ -19,7 +19,6 @@ MonoBehaviour:
   subItems:
   - {fileID: 11400000, guid: 481a8023d42bec443bc75c057812855d, type: 2}
   twoHanded: 1
-  actionPointCost: 1
   damageRange: {x: 10, y: 15}
   accuracyBase: 100
   rangeBase: 8

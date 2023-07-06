@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
     public ItemAbstract trinket2;
     public ItemAbstract trinket3;
     public ItemAbstract trinket4;
-    public int maxItems = 10;
+    private GlobalValues globalValues;
     private Stats stats;
 
     public void Start() {
@@ -27,10 +27,11 @@ public class Inventory : MonoBehaviour
     }
 
     public void OnEnable() {
+        globalValues = GridManager.i.globalValues;
         CloneInventory();
     }
     public void AddItem(ItemAbstract item) {
-        if(items.Count < maxItems) {
+        if(items.Count < globalValues.maxItems) {
             items.Add(item);
             return;
         }
@@ -73,8 +74,6 @@ public class Inventory : MonoBehaviour
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
         if (!stats) { stats =GetComponent<Stats>(); }
         if (signal == Signal.CalculateStats) { stats.ResetTempStats(); }
-        if (offHand) { offHand.Call(position, origin, signal); }
-        if (mainHand) { mainHand.Call(position, origin, signal); }
         foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
         foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
         foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal); }
@@ -89,6 +88,9 @@ public class Inventory : MonoBehaviour
             foreach (var item in statusEffectsToRemove) {
             if (statusEffects.Contains(item)) { statusEffects.Remove(item); }}
         }
+
+        if (offHand) { offHand.Call(position, origin, signal); }
+        if (mainHand) { mainHand.Call(position, origin, signal); }
     }
     public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, Signal signal) {
         stats.UpdateHealthBar();

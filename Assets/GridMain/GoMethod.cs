@@ -9,21 +9,21 @@ public class GoMethod
     private AssetManager assets;
     private Tilemap goTilemap;
     private Tilemap floorTilemap;
-    public GoMethod(GameObject[,] goGrid, AssetManager assets,Tilemap goTilemap,Tilemap floorTilemap) {
+    private GlobalValues globalValues;
+    public GoMethod(GameObject[,] goGrid, AssetManager assets,Tilemap goTilemap,Tilemap floorTilemap,GlobalValues globalValues) {
         this.goGrid = goGrid;
         this.assets = assets;
         this.goTilemap = goTilemap;
         this.floorTilemap = floorTilemap;
+        this.globalValues = globalValues;
     }
 
     public GameObject GetGameObjectOrSpawnFromTile(Vector3Int position) {
         if (!position.InBounds() || !position.IsWalkable()) { return null; }
         var gameobject = goGrid[position.x, position.y];
         if (gameobject != null) {return gameobject;}
-
         var tile = goTilemap.GetTile(position);
         if (tile == null) { return null; }
-
         var prefab = assets.TiletoGameObject(tile);
         if (prefab == null) {
             goTilemap.SetTileFlags(position, TileFlags.None);
@@ -31,11 +31,12 @@ public class GoMethod
             return null;}
 
         var clone = GridManager.i.InstantiateGo(prefab);
-        clone.GetComponent<SpriteRenderer>().sprite = goTilemap.GetSprite(position);
+        //clone.GetComponent<SpriteRenderer>().sprite = goTilemap.GetSprite(position);
         SetGameObject(position, clone);
+        clone.GetComponent<Stats>().RecalculateStats(position);
         clone.transform.position = position + new Vector3(0.5f, 0.5f);
-        goTilemap.SetTileFlags(position, TileFlags.None);
-        goTilemap.SetColor(position, Color.clear);
+        goTilemap.SetTile(position, null);
+
         return clone;
     }
 
@@ -240,15 +241,15 @@ public class GoMethod
     }
 
     public Vector3Int FindGameObjectOnGrid(GameObject gameobject) {
-        for (int x = 0; x < GridManager.i.width; x++) {
-            for (int y = 0; y < GridManager.i.height; y++) {
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
                 if (goGrid[x, y] == gameobject) {
                     return new Vector3Int(x, y, 0);
                 }
             }
         }
         //Debug.LogError("Could not find "+gameobject+" on goGrid cell ");
-        return GridManager.i.NullValue;
+        return globalValues.NullValue;
     }
 
     public GameObject SpawnFloodFill(Vector3Int position,GameObject prefab) {
@@ -318,6 +319,6 @@ public class GoMethod
                 }
             }
         }
-        return GridManager.i.NullValue;
+        return globalValues.NullValue;
     }
 }

@@ -42,7 +42,7 @@ public class GiveStatusEffect : ItemAbstract {
         foreach (var item in subItems) {
             item.Call(position, origin, Signal.Attack);
         }
-        target.GetComponent<Stats>().RecalculateStats();
+        target.GetComponent<Stats>().RecalculateStats(position);
         if (particles) { EffectManager.i.CreateSingleParticleEffect(position, particles); }
     }
 
@@ -61,7 +61,7 @@ public class GiveStatusEffect : ItemAbstract {
             foreach (var item in subItems) {
                 item.Call(pos, origin, Signal.Attack);
             }
-            target.GetComponent<Stats>().RecalculateStats();
+            target.GetComponent<Stats>().RecalculateStats(pos);
             if (particles) { EffectManager.i.CreateSingleParticleEffect(pos, particles); }
         }
     }

@@ -7,18 +7,18 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager i;
-    public Tilemap inventoryTilemap;
     public GameObject inventoryLayout;
     public GameObject equipmentLayout;
 
-    public Sprite mainHandSprite;
-    public Sprite offHandSprite;
-    public Sprite helmetSprite;
-    public Sprite armourSprite;
-    public Sprite trinketSprite;
-
     public void Awake() {
         i = this;
+    }
+
+    public void ToggleHideHelmet() {
+        var currentCharacter = PartyManager.i.currentCharacter;
+        var options = currentCharacter.GetComponent<CCOptions>();
+        options.hideHelmet =!options.hideHelmet;
+        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 
     public void DeselectItems() {

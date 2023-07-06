@@ -43,7 +43,6 @@ public class Skill : ItemAbstract {
             if (item is Weapon) {
                 var weapon = item as Weapon;
                 weapon.rangeTemp = range;
-                item.Call(position, origin, Signal.WeaponDamageCalculate);
             }
             item.Call(position, origin, Signal.SetTarget);
             item.Call(position, origin, Signal.Attack);

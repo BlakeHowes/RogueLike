@@ -72,12 +72,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
-  itemActions: []
+  itemActions:
+  - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,11 +105,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -136,7 +137,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
     rarity: 1
     pool: 0
+  worldLootScriptable: {fileID: 0}
 --- !u!114 &6717019821424419616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,3 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}

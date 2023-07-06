@@ -96,7 +96,7 @@ MonoBehaviour:
   deathAction:
   - {fileID: 11400000, guid: 864fa7a5ed7c8564797ea55f73ca15a8, type: 2}
   blocksLight: 0
-  maxHealthBase: 1
+  maxHealthBase: 20
   armourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
@@ -108,12 +108,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -130,7 +132,7 @@ MonoBehaviour:
   items: []
   traits: []
   statusEffects: []
-  mainHand: {fileID: 0}
+  mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
@@ -138,7 +140,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -204,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  worldLootScriptable: {fileID: 0}
 --- !u!114 &-4090891272774170844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +220,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}

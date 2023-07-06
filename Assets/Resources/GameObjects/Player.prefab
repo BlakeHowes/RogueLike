@@ -145,7 +145,11 @@ MonoBehaviour:
   feature: {fileID: 0}
   featurePalette: {fileID: 0}
   headOffset: {x: 1, y: 18, z: 0}
+  mainHandOffset: {x: 0, y: 0, z: 0}
+  offHandOffset: {x: 0, y: 0, z: 0}
+  characterOffset: {x: 31, y: 15, z: 0}
   male: 0
+  hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,12 +180,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &6780645703283991167
 MonoBehaviour:
@@ -211,7 +217,6 @@ MonoBehaviour:
   trinket2: {fileID: 11400000, guid: 693577d97e642d045bb2f1d42677fa24, type: 2}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 9
 --- !u!114 &7475694374052512725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,12 +270,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce19fdcd0fb4167459debef4bf39ffb6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ab3aeb06c1288f44a4ea828b9af5265, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.18, y: 0.34}
+  m_Size: {x: 1.1875, y: 2.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -290,3 +295,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}

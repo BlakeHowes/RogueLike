@@ -14,20 +14,6 @@ public class mechMethods
         this.mechTilemap = mechTilemap;
     }
 
-    //Change this to be just around Player character
-    public void ActivateMechanisms() {
-        for (int x = 0; x < GridManager.i.width; x++) {
-            for (int y = 0; y < GridManager.i.height; y++) {
-                if (mechGrid[x, y] != null) {
-                    var position = new Vector3Int(x, y, 0);
-                    if (position.GameObjectSpawn() != null) {
-                        //mechGrid[x, y].Call(new Vector3Int(x, y, 0));
-                    }
-                }
-            }
-        }
-    }
-
     public MechAbstract GetMechanism(Vector3Int position) {
         return mechGrid[position.x, position.y];
     }

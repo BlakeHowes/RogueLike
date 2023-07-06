@@ -76,6 +76,7 @@ public class Equipment : ItemAbstract {
 
     public override string Description() {
         var description = "";
+        if(weight != Weight.None) { description += "Weight: "+weight + "\n"; }
         if(armourBase > 0) { description += "+" + armourBase + " Armour\n"; }
         foreach (ItemAbstract item in subItems) {
             description += item.Description();

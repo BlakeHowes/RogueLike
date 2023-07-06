@@ -14,12 +14,12 @@ public class NPCSearch : MonoBehaviour
         if(stats.state == PartyManager.State.Combat) { range = stats.enemyAlertRangeBase; }
         var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(range, origin, PartyManager.Faction.Enemy);
         if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) {
-            stats.state = PartyManager.State.Idle;
-            stats.OnIdleTick();
             var partyTurns = PartyManager.i.partyMemberTurnTaken;
             if (partyTurns.Contains(gameObject)) {
                 partyTurns.Remove(gameObject);
             }
+            stats.state = PartyManager.State.Idle;
+            stats.OnIdleTick();
             return;
         }
         if (enemies.Count >= 1) {
