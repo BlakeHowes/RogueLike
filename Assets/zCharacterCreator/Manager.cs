@@ -12,7 +12,7 @@ public static class Manager {
     }
 
     public static void LoadCharacterCreator() {
-
+        Debug.Log("Restart");
         SceneManager.LoadScene("CharacterCreator", LoadSceneMode.Single);
     }
 }

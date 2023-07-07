@@ -13,13 +13,19 @@ MonoBehaviour:
   m_Name: Shields Up
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: ea6bfd8b165c6424cb063658a62e0483, type: 2}
-  position: {x: 0, y: 0, z: 0}
-  origin: {x: 0, y: 0, z: 0}
+  position: {x: 27, y: 32, z: 0}
+  origin: {x: 27, y: 32, z: 0}
+  type: 3
+  targetFaction: 0
   range: 2
   actionPointCost: 2
-  customDescription: 
-  coolDownTimer: 0
-  subItems:
-  - {fileID: 11400000, guid: e7a22e1dcc87e254d91c5eec944d7872, type: 2}
-  skillDescriptionForAI: 1
+  coolDown: 0
   CameraZoomDuration: 1
+  particles: {fileID: 8288408381700605430, guid: bae04605f089029449e0d28ffc32a63d, type: 3}
+  subItems:
+  - {fileID: 11400000, guid: 016d4359aed291a43873d4661bf87bf4, type: 2}
+  - {fileID: 11400000, guid: 52155e18f6a8e1e48b7ce05048012ff0, type: 2}
+  statusEffects:
+  - {fileID: 11400000, guid: 0e335e50b4b94e74493aae35ec94a69e, type: 2}
+  skillDescriptionForAI: 1
+  customDescription: 

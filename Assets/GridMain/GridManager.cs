@@ -1,9 +1,12 @@
 using Panda;
+using Panda.Examples.PlayTag;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 using static ItemStatic;
 
 public class GridManager : MonoBehaviour {
@@ -25,10 +28,6 @@ public class GridManager : MonoBehaviour {
     [NonSerialized] public mechMethods mechMethods;
     [NonSerialized] public itemMethods itemMethods;
     [NonSerialized] public GoMethod goMethods;
-
-    [Header("NPC Tick")]
-    public List<PandaBehaviour> NPCBehaviours = new List<PandaBehaviour>();
-    public List<PandaBehaviour> NPCBehaviourPool = new List<PandaBehaviour>();
 
     [Header("Tilemaps")]
     public Tilemap mechTilemap;
@@ -73,38 +72,39 @@ public class GridManager : MonoBehaviour {
 
     public void TickGame() {
         var currentCharacter = PartyManager.i.currentCharacter;
-        
-        foreach (var player in PartyManager.i.party) {
-            if (!player) { continue; }
-            var position = player.Position();
-            CallTickAndStartOfTurn(position, player.GetComponent<Inventory>(), currentCharacter, player.GetComponent<Stats>().state);
+        Vector3Int position = Vector3Int.zero;
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
+                position.x = x;
+                position.y = y;
+                GameObject character = goGrid[x, y];
+                if (character) {
+                    character.TryGetComponent<PandaBehaviour>(out PandaBehaviour behaviour);
+                    if (behaviour) {
+                        var state = behaviour.GetComponent<Stats>().state;
+                        if (state == PartyManager.State.Idle)
+                            behaviour.tickOn = BehaviourTree.UpdateOrder.Update;
+                    }
+                    CallTickAndStartOfTurn(position, character.GetComponent<Inventory>(), currentCharacter, character.GetComponent<Stats>().state);
+                }
+
+                if (mechGrid[x, y]) mechGrid[x, y].Call(position, MechStatic.Signal.Tick);
+                if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
+            }
         }
-        
-        foreach(Transform child in transform) {
-            var go = child.gameObject;
-            var pos = go.Position();
-            if(pos == globalValues.NullValue) { continue; }
-            CallTickAndStartOfTurn(pos, go.GetComponent<Inventory>(), currentCharacter, go.GetComponent<Stats>().state);
-        }
-        
-        int breaker = 0;
-        NPCBehaviourPool.Clear();
-        foreach (PandaBehaviour behaviour in NPCBehaviours) { NPCBehaviourPool.Add(behaviour); }
-        while (NPCBehaviourPool.Count > 0) {
-            breaker++; if (breaker > 100) { break; }
-            var behaviour = NPCBehaviourPool[0];
-            //if (!behaviour.gameObject.activeSelf) { continue; }
-            if (!behaviour) { NPCBehaviourPool.Remove(behaviour); continue; }
-            var position = behaviour.gameObject.Position();
-            if (position == globalValues.NullValue) { Destroy(behaviour.gameObject); continue; }
-            var state = behaviour.GetComponent<Stats>().state;
-            //CallTickAndStartOfTurn(position, behaviour.GetComponent<Inventory>(), currentCharacter, state);
-            if (state == PartyManager.State.Idle)
-                behaviour.tickOn = BehaviourTree.UpdateOrder.Update;
-            NPCBehaviourPool.Remove(behaviour);
-        }
-        mechFloorTick();
         StartStack();
+
+        int meezie = 0;
+        while(meezie < 10) {
+            MeezieCall(meezie);
+            meezie++;
+        }
+    }
+
+    public void MeezieCall(int meezie) {
+        if(meezie == 6) {
+            Debug.Log("beezie");
+        }
     }
 
     public void CallTickAndStartOfTurn(Vector3Int position, Inventory invetory, GameObject currentCharacter, PartyManager.State state) {
@@ -195,24 +195,12 @@ public class GridManager : MonoBehaviour {
         foreach (Transform child in transform) {
             if (!child.gameObject.activeSelf) { gosToRemove.Add(child.gameObject); }
         }
-
         while (gosToRemove.Count > 0) {
             var go = gosToRemove[0];
             gosToRemove.Remove(go);
             Destroy(go);
         }
 
-    }
-
-    public void mechFloorTick() {
-        Vector3Int position = Vector3Int.zero;
-        for (int x = 0; x < globalValues.width; x++) {
-            for (int y = 0; y < globalValues.height; y++) {
-                position.x = x; position.y = y;
-                if (mechGrid[x, y]) mechGrid[x, y].Call(position,MechStatic.Signal.Tick);
-                if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
-            }
-        }
     }
 
     public void SpawnParty() {

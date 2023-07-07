@@ -18,6 +18,7 @@ public class GameUIManager : MonoBehaviour {
     public GameObject PartyIconLayout;
     public GameObject skillLayout;
     public GameObject iconLayout;
+    public GameObject gameOverLayout;
     public Tilemap groundUI;
     public Texture2D boarderEffectTexture;
     public GameObject enemyInCombatUI;
@@ -116,7 +117,7 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void ShowGameOverUI() {
-        globalValues.gameOverLayout.SetActive(true);
+        gameOverLayout.SetActive(true);
         uiTilemap.ClearAllTiles();
         canvasOverlay.gameObject.SetActive(false);
         MouseManager.i.disableMouse = true;

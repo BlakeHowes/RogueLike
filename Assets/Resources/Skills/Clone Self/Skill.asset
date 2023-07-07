@@ -9,13 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c396f7a37021d014e9487a9bf2813071, type: 3}
-  m_Name: TauntStatusEffect
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
+  m_Name: Skill
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 5fe26befb9e08f74b9571a1d012dbbd2, type: 2}
-  particles: {fileID: 0}
+  tile: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
-  durationTotal: 2
-  subItems:
-  - {fileID: 11400000, guid: 8bd97cdf045e16842acd9d97f88e2a97, type: 2}
+  range: 5
+  actionPointCost: 2
+  coolDown: 0
+  subItems: []
+  customDescription: 
+  skillDescriptionForAI: 0
+  CameraZoomDuration: 0

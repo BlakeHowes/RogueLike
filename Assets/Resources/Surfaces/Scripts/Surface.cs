@@ -74,6 +74,7 @@ public class Surface : ScriptableObject
             effectClone = GridManager.i.InstantiateGo(effectPrefab);
             effectClone.transform.position = position + new Vector3(0.5f,0.5f);
             effectClone.transform.parent = null;
+            GridManager.i.surfaceTilemap.SetColor(position,Color.clear);
         }
         if (tryToSpread) { Spread(position); }
         DryUp(position);
@@ -84,7 +85,7 @@ public class Surface : ScriptableObject
         if (!position.GameObjectGo()) { return; }
         var character = position.GameObjectGo();
         if (StatusEffect) {
-            character.GetComponent<Inventory>().AddStatusEffect(StatusEffect, position);
+            character.GetComponent<Inventory>().AddStatusEffect(position, position, StatusEffect);
         }
     }
 

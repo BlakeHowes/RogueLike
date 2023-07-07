@@ -145,8 +145,11 @@ MonoBehaviour:
   feature: {fileID: 21300000, guid: ef53c3f8ba2ca2a459a83137dc168502, type: 3}
   featurePalette: {fileID: 11400000, guid: d36ce050bbf40df4b87cbd8073c951f5, type: 2}
   headOffset: {x: 1, y: 18, z: 0}
+  mainHandOffset: {x: 0, y: 0, z: 0}
+  offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
   male: 0
+  hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: 141158ae12bf87d4e8622fae3e6faeb7, type: 2}
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 11400000, guid: aee2f5531d570e044af6e36d4c522d53, type: 2}

@@ -23,7 +23,9 @@ public class DeathParticle : ItemAbstract {
     public override IEnumerator Action() {
         var materialClone = Instantiate(material);
         materialClone.mainTexture = sprite.texture;
-        var size = (sprite.texture.width + sprite.texture.height) /10;
+        var width = sprite.texture.width / sprite.texture.height;
+        var size = ((sprite.texture.width * width) + sprite.texture.height) /10; 
+
 
         particles.GetComponent<ParticleSystemRenderer>().material = materialClone;
         EffectManager.i.CreateSingleParticleEffectScaled(position + offset, particles,size*scaleFactor);

@@ -5,16 +5,15 @@ using static ItemStatic;
 
 [CreateAssetMenu(fileName = "Taunt", menuName = "Status Effects/Taunt")]
 public class Taunt : ItemAbstract {
-    GameObject target;
+    [HideInInspector]public GameObject target;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if (signal == Signal.SetTarget) { target = origin.GameObjectGo();return; }
-        
+        if (signal == Signal.SetTarget) {
+            target = origin.GameObjectGo();
+        }
 
         if (target == null) { return; }
-        var character = origin.GameObjectGo();
+        var character = position.GameObjectGo();
         if (signal == Signal.StartOfTurn) { character.GetComponent<Stats>().SpawnHitNumber("Taunt", Color.red, 1.5f); }
-    
-        
 
         if (signal != Signal.CalculateStats) { return; }
         

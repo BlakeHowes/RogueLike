@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
-[CreateAssetMenu(fileName = "Stat Change", menuName = "Status Effects/Stat Change Status Effect")]
+[CreateAssetMenu(fileName = "Stat Change", menuName = "Status Effects/Status Effect Main")]
 public class StatEffectGeneric : ItemAbstract {
     [Header("Options")]
     public int durationTotal;
@@ -25,7 +25,7 @@ public class StatEffectGeneric : ItemAbstract {
     public int skillRange;
     public int health;
     public int healthChangeAddition;
-    public List<ItemAbstract> items = new List<ItemAbstract>();
+    public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public GameObject target;
 
     public void DoStatusEffect() {
@@ -41,7 +41,7 @@ public class StatEffectGeneric : ItemAbstract {
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
         if (health < 0) { stats.TakeDamage(health * -1, position); }
         if (health > 0) { stats.Heal(health); }
-        foreach (var item in items) {
+        foreach (var item in subItems) {
             item.Call(position, origin, Signal.Attack);
         }
         if (particles) { EffectManager.i.AttachSingleToGO(position, particles); }
@@ -52,7 +52,13 @@ public class StatEffectGeneric : ItemAbstract {
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        if(signal == Signal.SetTarget) { target = position.GameObjectGo();return; }
+        if(signal == Signal.SetTarget) { 
+            target = position.GameObjectGo();
+            foreach(var subItem in subItems) {
+                subItem.Call(position, origin, signal);
+            }
+            return;
+        }
         if(signal == Signal.StartOfTurn) {
             counter++;
             if (counter >= durationTotal) {
@@ -64,6 +70,13 @@ public class StatEffectGeneric : ItemAbstract {
                 return;
             }
         }
+        if(signal != Signal.Attack) {
+            foreach (var subItem in subItems) {
+                subItem.Call(position, origin, signal);
+            }
+        }
+
+
         if (signal != onSignal) { return; }
         Debug.Log("Status Effect Call");
         if (!target) { Debug.LogError("No target set for Status Effect " + this.name); return; }

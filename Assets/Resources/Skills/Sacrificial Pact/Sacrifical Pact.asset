@@ -13,14 +13,18 @@ MonoBehaviour:
   m_Name: Sacrifical Pact
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: ad4c1ea9ddc4e934ca911f06427dcb01, type: 2}
-  particles: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  type: 2
+  targetFaction: 0
   range: 0
   actionPointCost: 0
-  customDescription: Half health, gain 4 action points
-  coolDownTimer: 0
-  subItems:
-  - {fileID: 11400000, guid: d60a7520af2a9da418546d1057db56a3, type: 2}
-  skillDescriptionForAI: 0
+  coolDown: 2
   CameraZoomDuration: 0
+  particles: {fileID: 0}
+  subItems:
+  - {fileID: 11400000, guid: ec768ba59023d614d87202b0a54eaace, type: 2}
+  - {fileID: 11400000, guid: aba8188f719bec944ab214f0d14cf9bf, type: 2}
+  statusEffects: []
+  skillDescriptionForAI: 0
+  customDescription: Half health, gain 4 action points

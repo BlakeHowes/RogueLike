@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
   - component: {fileID: 752585418151326076}
+  - component: {fileID: 37223220958698016}
   m_Layer: 0
   m_Name: King Tomato
   m_TagString: Untagged
@@ -72,10 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
   itemActions: []
 --- !u!114 &3243932232630802517
@@ -109,11 +107,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 50
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -127,18 +128,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 11400000, guid: 985e17ddf19ed31419533fcf17e18a89, type: 2}
+  - {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
   traits: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 6ae166ef8018be148bff8f74285239f2, type: 2}
+  mainHand: {fileID: 11400000, guid: 985e17ddf19ed31419533fcf17e18a89, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 0}
+  helmet: {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
   armour: {fileID: 0}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -180,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a3b0911a4a98a9d4180311ff6eac8235, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64449778d45a1184f9c6bb57214a8b1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -204,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  worldLootScriptable: {fileID: 0}
 --- !u!114 &752585418151326076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +221,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}
+--- !u!114 &37223220958698016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5610c26518ed66428e968e72df3dce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  race: {fileID: 0}
+  body: {fileID: 21300000, guid: 64449778d45a1184f9c6bb57214a8b1d, type: 3}
+  bodyPalette: {fileID: 0}
+  hair: {fileID: 0}
+  hairPalette: {fileID: 0}
+  loadout: {fileID: 0}
+  face: {fileID: 0}
+  facePalette: {fileID: 0}
+  feature: {fileID: 0}
+  featurePalette: {fileID: 0}
+  headOffset: {x: 2, y: 14, z: 0}
+  mainHandOffset: {x: 12, y: 0, z: 0}
+  offHandOffset: {x: 0, y: 0, z: 0}
+  characterOffset: {x: 32, y: 4, z: 0}
+  male: 0
+  hideHelmet: 0

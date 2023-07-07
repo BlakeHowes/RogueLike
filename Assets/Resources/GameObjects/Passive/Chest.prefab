@@ -66,11 +66,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &2354247380013042047
 MonoBehaviour:
@@ -84,15 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: 2b9834b6aef3172488fcdd02c8fd650f, type: 2}
-  - {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
-  - {fileID: 11400000, guid: ae22b995dc2554c4081b156090f8e694, type: 2}
-  - {fileID: 11400000, guid: 081fc32cb5129d047bd8abff80d7d1af, type: 2}
-  - {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
-  - {fileID: 11400000, guid: c4530269956af8d42b4bae83d61fba75, type: 2}
-  - {fileID: 11400000, guid: 4383d0d4d12f2be4f806ad22e2d666bd, type: 2}
-  - {fileID: 11400000, guid: de9db2f2929764b48b63870a185da204, type: 2}
+  items: []
   traits: []
   statusEffects: []
   mainHand: {fileID: 0}
@@ -103,7 +98,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1773118153572415346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -169,16 +163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot:
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
     rarity: 1
     pool: 1
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: abfac50f1dc37064ebdd5b3902cb5afb, type: 2}
     rarity: 1
     pool: 2
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: a6c5ceb45ee122745918142666f37ff5, type: 2}
     rarity: 1
     pool: 4
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: ac0238c8b9c98444db9df119545cfe8f, type: 2}
     rarity: 1
     pool: 5
   - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
@@ -190,6 +184,7 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
     rarity: 1
     pool: 9
+  worldLootScriptable: {fileID: 0}
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +199,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}

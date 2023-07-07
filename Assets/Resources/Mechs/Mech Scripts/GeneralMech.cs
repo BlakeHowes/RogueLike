@@ -23,7 +23,7 @@ public class GeneralMech : MechAbstract
         if(signal == MechStatic.Signal.Tick) {
             var go = position.GameObjectGo();
             if (!go) { return; }
-            if (statusEffect) { go.GetComponent<Inventory>().AddStatusEffect(statusEffect, position); }
+            if (statusEffect) { go.GetComponent<Inventory>().AddStatusEffect(position, position, statusEffect); }
         }
 
     }

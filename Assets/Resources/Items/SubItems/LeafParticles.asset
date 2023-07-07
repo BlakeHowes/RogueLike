@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LeafParticles
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  position: {x: 35, y: 37, z: 0}
-  origin: {x: 35, y: 37, z: 0}
+  position: {x: 26, y: 32, z: 0}
+  origin: {x: 26, y: 32, z: 0}
   waitForProjectile: 1
   particles: {fileID: 6375196592243838218, guid: bcbd58969a0ce484a9b09746dda832bc, type: 3}

@@ -124,7 +124,6 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void SwitchToNextCharacter() {
-        Debug.Log("Switch");
         RemoveNullCharacters(party);
         if (currentCharacter == null) {
             if(party.Count == 0) {
@@ -148,7 +147,7 @@ public class PartyManager : MonoBehaviour {
         if (currentCharacterIndex == party.Count - 1) {
             nextCharacterIndex = 0;
         }
-        if (party.Count == 0) { Debug.LogError("No party member found, check floor tilemap"); return; }
+        if (party.Count == 0) { GameUIManager.i.ShowGameOverUI(); return; }
         SetCurrentCharacter(party[nextCharacterIndex]);
         Debug.Log("Set current character " + party[nextCharacterIndex]);
         GridManager.i.UpdateGame();

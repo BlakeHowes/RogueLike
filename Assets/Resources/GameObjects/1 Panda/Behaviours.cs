@@ -17,10 +17,7 @@ public class Behaviours : MonoBehaviour
     public List<ItemAbstract> itemActions = new List<ItemAbstract>();
     Tilemap gotilemap;
     public void OnEnable() {
-        GridManager.i.NPCBehaviours.Add(GetComponent<PandaBehaviour>());
-        GridManager.i.NPCBehaviourPool.Add(GetComponent<PandaBehaviour>());
         gotilemap = GridManager.i.goTilemap;
-        //GetComponent<InventoryManager>().UpdateInventory();
     }
 
     [Task]

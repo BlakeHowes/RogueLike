@@ -40,16 +40,14 @@ public class Inventory : MonoBehaviour
         GridManager.i.UpdateGame();
     }
 
-    public void AddStatusEffect(ItemAbstract item,Vector3Int target) {
-        Debug.Log("Status effect " + item + " added to " + gameObject.name + " with target " + target);
+    public void AddStatusEffect(Vector3Int position,Vector3Int origin,ItemAbstract statusEffect) {
         foreach(var effect in statusEffects) {
-            if(effect.name == item.name) { return; }
+            if(effect.name == statusEffect.name) { return; }
         }
-        var clone = Instantiate(item);
-        clone.name = item.name;
+        var clone = Instantiate(statusEffect);
+        clone.name = statusEffect.name;
         statusEffects.Add(clone);
-        clone.Call(target, target, Signal.SetTarget);
-        //clone.Call(target, target, Signal.CalculateStats);
+        clone.Call(position, origin, Signal.SetTarget);
     }
 
     public void RemoveItem(ItemAbstract item) {
@@ -69,6 +67,27 @@ public class Inventory : MonoBehaviour
         if (trinket2) { trinket2 = Instantiate(trinket2); }
         if (trinket3) { trinket3 = Instantiate(trinket3); }
         if (trinket4) { trinket4 = Instantiate(trinket4); }
+
+        if (items.Count > 0) {
+            List<ItemAbstract> itemTemp = new List<ItemAbstract>();
+            foreach (var item in items) {
+                itemTemp.Add(Instantiate(item));
+            }
+            items.Clear();
+            foreach (var item in itemTemp) {
+                items.Add(item);
+            }
+        }
+        if (traits.Count > 0) {
+            List<ItemAbstract> itemTemp = new List<ItemAbstract>();
+            foreach (var item in traits) {
+                itemTemp.Add(Instantiate(item));
+            }
+            traits.Clear();
+            foreach (var item in itemTemp) {
+                traits.Add(item);
+            }
+        }
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {

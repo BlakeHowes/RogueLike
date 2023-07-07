@@ -6,13 +6,12 @@ using static ItemStatic;
 using static PartyManager;
 using static UnityEditor.PlayerSettings;
 
-[CreateAssetMenu(fileName = "GiveStatusEffect", menuName = "Status Effects/Give Status Effect")]
+[CreateAssetMenu(fileName = "GiveStatusEffect", menuName = "Mods/Give Status Effect")]
 public class GiveStatusEffect : ItemAbstract {
     public GameObject particles;
     public Signal onSignal = Signal.Attack;
     public Faction targetFaction;
     public Type type;
-    public bool statusEffectTargetIsThisCharacter = false;
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
 
@@ -36,8 +35,7 @@ public class GiveStatusEffect : ItemAbstract {
         var target = position.GameObjectGo();
         if (!target) { return; }
         foreach (var item in statusEffects) {
-            if (statusEffectTargetIsThisCharacter) { position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(item, origin); continue; }
-            position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(item, position);
+            position.GameObjectGo().GetComponent<Inventory>().AddStatusEffect(position, origin, item);
         }
         foreach (var item in subItems) {
             item.Call(position, origin, Signal.Attack);
@@ -54,8 +52,7 @@ public class GiveStatusEffect : ItemAbstract {
             var factionFound = target.GetComponent<Stats>().faction;
             if (targetFaction != factionFound) { continue; }
             foreach (var item in statusEffects) {
-                if (statusEffectTargetIsThisCharacter) { target.GetComponent<Inventory>().AddStatusEffect(item, origin); continue; }
-                target.GetComponent<Inventory>().AddStatusEffect(item, pos);
+                target.GetComponent<Inventory>().AddStatusEffect(pos, origin, item);
 
             }
             foreach (var item in subItems) {
