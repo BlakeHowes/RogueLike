@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void OnEnable() {
-        globalValues = GridManager.i.globalValues;
+        globalValues = Manager.GetGlobalValues();
         CloneInventory();
     }
     public void AddItem(ItemAbstract item) {
@@ -70,23 +70,16 @@ public class Inventory : MonoBehaviour
 
         if (items.Count > 0) {
             List<ItemAbstract> itemTemp = new List<ItemAbstract>();
-            foreach (var item in items) {
-                itemTemp.Add(Instantiate(item));
-            }
+            foreach (var item in items) {itemTemp.Add(Instantiate(item));}
             items.Clear();
-            foreach (var item in itemTemp) {
-                items.Add(item);
-            }
+            foreach (var item in itemTemp) { items.Add(item); }
         }
+
         if (traits.Count > 0) {
             List<ItemAbstract> itemTemp = new List<ItemAbstract>();
-            foreach (var item in traits) {
-                itemTemp.Add(Instantiate(item));
-            }
+            foreach (var item in traits) {itemTemp.Add(Instantiate(item));}
             traits.Clear();
-            foreach (var item in itemTemp) {
-                traits.Add(item);
-            }
+            foreach (var item in itemTemp) {traits.Add(item);}
         }
     }
 

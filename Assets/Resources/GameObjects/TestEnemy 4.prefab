@@ -98,7 +98,7 @@ MonoBehaviour:
   facePalette: {fileID: 0}
   feature: {fileID: 0}
   featurePalette: {fileID: 0}
-  headOffset: {x: 0, y: 6, z: 0}
+  headOffset: {x: 0, y: 4, z: 0}
   mainHandOffset: {x: 2, y: 0, z: 0}
   offHandOffset: {x: -3, y: 0, z: 0}
   characterOffset: {x: 16, y: -4, z: 0}
@@ -160,7 +160,7 @@ MonoBehaviour:
   statusEffects: []
   mainHand: {fileID: 11400000, guid: e15f871269c69144e9c57400aa9f8166, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 0}
+  helmet: {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
   armour: {fileID: 0}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}

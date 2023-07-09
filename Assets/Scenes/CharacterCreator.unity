@@ -13056,14 +13056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea24c880f2309f48ba7e0c0246cbb09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryTilemap: {fileID: 0}
   inventoryLayout: {fileID: 0}
   equipmentLayout: {fileID: 0}
-  mainHandSprite: {fileID: 1734035599, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
-  offHandSprite: {fileID: -139916494, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
-  helmetSprite: {fileID: -1009179194, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
-  armourSprite: {fileID: -305195151, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
-  trinketSprite: {fileID: -1883661829, guid: 1a801acf08b69b942a5d289ec1ffa2a7, type: 3}
 --- !u!114 &1677353857
 MonoBehaviour:
   m_ObjectHideFlags: 0

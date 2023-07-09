@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   race: {fileID: 11400000, guid: ffdf1ac4dcaa206438ed35d2161bfeba, type: 2}
   body: {fileID: 21300000, guid: 5221153a3be5c254cb032f45c05d32b5, type: 3}
-  bodyPalette: {fileID: 11400000, guid: 7698aa981dbbfb7479de61bd05937ae0, type: 2}
-  hair: {fileID: 21300000, guid: 51f856458de01d540b3baf3d7bca5bd3, type: 3}
+  bodyPalette: {fileID: 11400000, guid: 7bb5fc3bc9b69bc46a9d065f2a7343d6, type: 2}
+  hair: {fileID: 21300000, guid: 4d1bfdcd7af66a54fbb1e9549be5ab58, type: 3}
   hairPalette: {fileID: 11400000, guid: f0007dee24b3f28468d58a1c891ca099, type: 2}
   loadout: {fileID: 11400000, guid: 0d507749a8acf8640b02ea5a081c0f67, type: 2}
   face: {fileID: 21300000, guid: 44c4ec38c9638cb4abca01be68f6f9bd, type: 3}
@@ -122,7 +122,7 @@ MonoBehaviour:
   statusEffects: []
   mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 0}
+  helmet: {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
   armour: {fileID: 11400000, guid: a32c5a68722a8b641af8048adb1de0bc, type: 2}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e9f8203c4a1f4548a7acd1f939a5dc3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11cad4d94e4bb844d8b23c3b14214bc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

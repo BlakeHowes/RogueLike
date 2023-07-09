@@ -16,8 +16,7 @@ public class GridManager : MonoBehaviour {
     public AssetManager assets;
     public GridTools tools;
 
-    [Header("Dimentions")]
-    public GlobalValues globalValues;
+    private GlobalValues globalValues;
 
     //Grid data
     private MechAbstract[,] mechGrid;
@@ -43,7 +42,7 @@ public class GridManager : MonoBehaviour {
 
     public void Awake() {
         i = this;
-
+        globalValues = Manager.GetGlobalValues();
         assets = new AssetManager();
         tools = new GridTools(globalValues);
         Initialize();
@@ -93,18 +92,6 @@ public class GridManager : MonoBehaviour {
             }
         }
         StartStack();
-
-        int meezie = 0;
-        while(meezie < 10) {
-            MeezieCall(meezie);
-            meezie++;
-        }
-    }
-
-    public void MeezieCall(int meezie) {
-        if(meezie == 6) {
-            Debug.Log("beezie");
-        }
     }
 
     public void CallTickAndStartOfTurn(Vector3Int position, Inventory invetory, GameObject currentCharacter, PartyManager.State state) {

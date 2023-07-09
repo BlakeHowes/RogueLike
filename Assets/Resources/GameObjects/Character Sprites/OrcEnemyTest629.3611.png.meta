@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ab3aeb06c1288f44a4ea828b9af5265
+guid: 11cad4d94e4bb844d8b23c3b14214bc8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +45,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.125}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -116,43 +116,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DaimCharacterExamples_0
+      name: ItemSheet1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 16
         width: 16
-        height: 32
+        height: 15
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.46666667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdb8e0024a6222e458a69d14c194d5b4
-      internalID: -1895891435
+      spriteID: c684afec02d8c9847abe5cb77036cf13
+      internalID: -720020728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DaimCharacterExamples_1
+      name: ItemSheet1_1
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 16
         width: 16
-        height: 32
+        height: 15
       alignment: 9
-      pivot: {x: 0.5, y: 0.125}
+      pivot: {x: 0.5, y: 0.46666667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78bbcf54eb9f92146ae50ff6608306e0
-      internalID: 533792605
+      spriteID: b8a5f7f86bb9d604ba5ca9aedc19d966
+      internalID: -1908249669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemSheet1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d8887a12295cb47826de732a8fd85b
+      internalID: 741202186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemSheet1_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a680659d99b3cd14dbfa30bf9e8bda95
+      internalID: -590216077
       vertices: []
       indices: 
       edges: []
@@ -168,8 +210,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DaimCharacterExamples_1: 533792605
-      DaimCharacterExamples_0: -1895891435
+      ItemSheet1_0: -720020728
+      ItemSheet1_3: -590216077
+      ItemSheet1_1: -1908249669
+      ItemSheet1_2: 741202186
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

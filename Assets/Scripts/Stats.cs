@@ -48,7 +48,7 @@ public class Stats : MonoBehaviour {
     public GameObject healthbarGameObject;
     public HealthBar healthbar;
     private Inventory inventory;
-
+    private GlobalValues globalValues;
     public void ResetTempStats() {
         actionPointsSum = 0;
         actionPointsTemp = actionPointsBase;
@@ -63,6 +63,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void OnEnable() {
+        globalValues = Manager.GetGlobalValues();
         if(faction == PartyManager.Faction.Party) {
             DontDestroyOnLoad(this);
         }
@@ -103,7 +104,7 @@ public class Stats : MonoBehaviour {
       
         ResetActionPoints();
 
-        healthbarGameObject = Instantiate(GridManager.i.globalValues.healthBarPrefab, GameUIManager.i.canvasWorld);
+        healthbarGameObject = Instantiate(globalValues.healthBarPrefab, GameUIManager.i.canvasWorld);
         healthbar = healthbarGameObject.GetComponent<HealthBar>();
         healthbar.InitializeHealthbar(this, inventory);
     }
@@ -180,7 +181,7 @@ public class Stats : MonoBehaviour {
 
     public void SpawnHitNumber(string value,Color colour,float scale) {
         string text = value.ToString();
-        var hitNumber = Instantiate(GameUIManager.i.globalValues.hitNumberPrefab, GameUIManager.i.canvasWorld);
+        var hitNumber = Instantiate(globalValues.hitNumberPrefab, GameUIManager.i.canvasWorld);
         hitNumber.transform.position = gameObject.transform.position + new Vector3(0, 0.5f, 0);
         hitNumber.GetComponent<HitNumber>().Set(text, colour, scale);
     }
