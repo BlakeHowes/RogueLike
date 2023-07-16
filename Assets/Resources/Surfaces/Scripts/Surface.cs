@@ -34,7 +34,7 @@ public class Surface : ScriptableObject
             }
             var targetGo = cell.GameObjectGo();
             if (targetGo) {
-                if (targetGo.GetComponent<Stats>().faction == PartyManager.Faction.Passive) {
+                if (targetGo.tag == "Passive") {
                     GridManager.i.SetSurface(cell, this);
                     if (cell.x > position.x || cell.y > position.y) {
                         GridManager.i.GetOrSpawnSurface(cell).counter--;

@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEditor.Callbacks;
 using Unity.VisualScripting;
+using static UnityEditor.Progress;
 
 namespace FolderIcons {
     public class GizmoIconUtility {
@@ -11,6 +12,25 @@ namespace FolderIcons {
             EditorApplication.projectWindowItemOnGUI += ItemOnGUI;
             EditorApplication.projectWindowItemOnGUI += RaceOnGUI;
             EditorApplication.projectWindowItemOnGUI += SurfaceOnGUI;
+            EditorApplication.projectWindowItemOnGUI += GameObjectOnGUI;
+        }
+
+        static void GameObjectOnGUI(string guid, Rect rect) {
+            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+            GameObject gameObject = AssetDatabase.LoadAssetAtPath(assetPath, typeof(GameObject)) as GameObject;
+            if (gameObject != null && gameObject is GameObject) {
+                gameObject.TryGetComponent<IconOverride>(out IconOverride iconOverride);
+                if (!iconOverride) { return; }
+                if (!iconOverride.sprite) { return; }
+                //var texture = item.tile.sprite.texture;
+                Rect rbase = rect;
+                if (rbase.height >= rbase.width) {
+                    rbase.height -= 14;
+                }
+                else { rbase.width = 20; }
+
+                DrawGUIRoundedBasicTexture(rbase, iconOverride.sprite.texture);
+            }
         }
 
         static void RaceOnGUI(string guid, Rect rect) {

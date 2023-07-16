@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
   - component: {fileID: -1371616870617058851}
+  - component: {fileID: 6647052929000740087}
   m_Layer: 0
   m_Name: ShopKeeper
-  m_TagString: Untagged
+  m_TagString: Passive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,12 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
   itemActions: []
+  targetsTags: 17
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,11 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 8ea108921f16cf14e9e26893ea315acd, type: 2}
-  faction: 4
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
-  blocksLight: 1
   maxHealthBase: 500
   armourBase: 0
   actionPointsBase: 12
@@ -131,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
   offHand: {fileID: 0}
@@ -140,7 +138,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -206,7 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  deathActions: []
   worldLootScriptable: {fileID: 0}
+  useGridCounter: 0
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +221,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &6647052929000740087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: bb36f0efd0e5ebe429b24d3fc6931932, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

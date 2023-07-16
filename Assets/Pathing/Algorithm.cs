@@ -30,7 +30,9 @@ public class Algorithm {
         closedList.Clear();
         var goTilemap = GridManager.i.goTilemap;
         var goGrid = GridManager.i.GetGoGrid();
-        var faction = startpos.GameObjectGo().GetComponent<Stats>().faction;
+        var go = startpos.GameObjectGo();
+        if (!go) { return null; }
+        var startPosTag = startpos.GameObjectGo().tag;
         Vector3Int gameobjectcell = Vector3Int.zero;
         if (!ignoreEnemies) {
             for (int x = 0; x < grid.width; x++) {
@@ -66,8 +68,10 @@ public class Algorithm {
                         continue;
                     }
                     var target = gameobjectcell.GameObjectGo();
-                    if (target && target.GetComponent<Stats>().faction != faction) {
-                        grid.FindCellByPosition(gameobjectcell).walkable = false;
+                    if (target) {
+                        if(target.tag != startPosTag) {
+                            grid.FindCellByPosition(gameobjectcell).walkable = false;
+                        }
                     }
                     else {
                         grid.FindCellByPosition(gameobjectcell).walkable = true;

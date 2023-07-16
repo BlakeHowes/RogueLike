@@ -1,3 +1,4 @@
+using LlamAcademy.Spring.Runtime;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -17,8 +18,9 @@ public class MouseManager : MonoBehaviour
     public bool isRepeatingActionsOutsideCombat = false;
     public Vector3Int clickPosition;
     public Tilemap floorTilemap;
-    public GlobalValues globalValues;
+    private GlobalValues globalValues;
     public void Awake() {
+        globalValues = Manager.GetGlobalValues();
         i = this;
     }
 
@@ -59,7 +61,7 @@ public class MouseManager : MonoBehaviour
 
         //1 Prepare character
         currentStats.ResetTempStats();
-        currentStats.RecalculateStats(origin); //This calls all their equipment to add values to Stats
+        currentStats.RefreshCharacter(origin); //This calls all their equipment to add values to Stats
 
         //2 If and item is selected, use that item
         if (UseItem(mousePosition, origin, currentStats, inventory)) { EndOfAction(); return; };
@@ -84,14 +86,13 @@ public class MouseManager : MonoBehaviour
 
     public bool SwapPositionWithAllyDuringCombat(Vector3Int mousePosition, Vector3Int origin,GameObject gameobjectundermouse,Stats currentStats) {
         if (gameobjectundermouse != null) {
-            var factionUnderMouse = gameobjectundermouse.GetComponent<Stats>().faction;
 
             if (state != State.Combat) { return false; }
-            if (factionUnderMouse == Faction.Enemy) { return false; }
+            if (gameobjectundermouse.tag == "Enemy") { return false; }
             if (!GridManager.i.tools.InMeeleeRange(mousePosition, origin)) { return false; }
 
             if (currentStats.actionPoints >= currentStats.walkCostTemp) {
-                if (factionUnderMouse == Faction.Party) {
+                if (gameobjectundermouse.tag == "Party") {
                     PathingManager.i.SwapPlaces(mousePosition, origin);
                     currentStats.actionPoints -= currentStats.walkCostTemp;
                     EndOfAction();
@@ -104,15 +105,17 @@ public class MouseManager : MonoBehaviour
 
     public bool UseItem(Vector3Int position,Vector3Int origin,Stats currentStats,Inventory inventory) {
         if (itemSelected == null) { return false; }
-        itemSelected.Call(position, origin, Signal.ActionPointSum);
-        if (currentStats.actionPoints >= currentStats.actionPointsSum) {
-            itemSelected.Call(position, origin, Signal.Attack);
-            currentStats.actionPoints -= currentStats.actionPointsSum;
-        }
+
         if (inventory.items.Contains(itemSelected)) { 
             Actions.i.ThrowItem(position, origin, itemSelected,inventory);
-            currentStats.actionPoints -= 1;
+            ChangeActionPoints(position,origin,inventory, currentStats, 1);
         }
+        else {
+            var skill = itemSelected as Skill;
+            if(ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
+            itemSelected.Call(position, origin, Signal.Attack);
+        }
+        currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);
         return true;
@@ -121,15 +124,16 @@ public class MouseManager : MonoBehaviour
     public bool Attack(Vector3Int position, Vector3Int origin,GameObject target,GameObject currentCharacter) {
         if (target == null) { return false; }
         var currentStats = currentCharacter.GetComponent<Stats>();
-        var targetStats = target.GetComponent<Stats>();
-        if (targetStats.faction == currentStats.faction) { return false; }
+        if (target.tag == currentCharacter.tag) { return false; }
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
-        if(currentStats.state == State.Idle && targetStats.faction == Faction.Interactable) { goto Meelee; }
+        if(currentStats.state == State.Idle && target.tag == "Interactable") { goto Meelee; }
         inventory.CallEquipment(position, origin, Signal.Attack);
         if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
         PathingManager.i.FlipCharacter(currentCharacter, position, origin);
         currentStats.actionPoints--;
+
+        currentCharacter.GetComponent<SpringToTarget3D>().Nudge(transform.position + new Vector3(0,globalValues.onAttackNudgeAmount), 24, 1000);
         if (inventory.mainHand) { return true; }
             
         Meelee:
@@ -201,13 +205,9 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
-    public bool IsthereEnoughActionPointsToSpend(Vector3Int position,Vector3Int origin,Inventory inventory,Stats stats) {
+    public bool ChangeActionPoints(Vector3Int position,Vector3Int origin,Inventory inventory,Stats stats,int actionPoints) {
         if(stats.state == State.Idle) { return true; }   //If outside of combat dont use action points 
-
-        stats.actionPointsSum = 0;
-        inventory.CallEquipment(position, origin, Signal.ActionPointSum);
-        var sum = stats.actionPointsSum;
-        if(sum <= stats.actionPoints) { stats.actionPoints -= sum; return true; }
+        if(actionPoints <= stats.actionPoints) { stats.actionPoints -= actionPoints; return true; }
         return false;
     }
 
@@ -244,7 +244,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public IEnumerator RepeatDelay() {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(globalValues.repeatSpeed);
         Repeat();
     }
 
@@ -257,7 +257,7 @@ public class MouseManager : MonoBehaviour
         var currentStats = currentCharacter.GetComponent<Stats>();
         var inventory = currentCharacter.GetComponent<Inventory>();
         var target = clickPosition.GameObjectSpawn();
-        currentStats.RecalculateStats(origin);
+        currentStats.RefreshCharacter(origin);
         if (UseItem(clickPosition, origin, currentStats, inventory)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
         if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
 

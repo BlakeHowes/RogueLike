@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2354247380013042047}
   - component: {fileID: -6281585937373113798}
   - component: {fileID: 5489671670705153384}
+  - component: {fileID: -1712389032874754349}
   m_Layer: 0
   m_Name: Pot 2
-  m_TagString: Untagged
+  m_TagString: Passive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,12 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 72c919d4a79fb3446a12ba5675c6e5a8, type: 2}
-  faction: 4
   state: 0
   deathAction:
   - {fileID: 11400000, guid: c2a3250779f65bc49a616055fbf8ae70, type: 2}
   - {fileID: 11400000, guid: 484bbb9bb499a1b44a8f4b983362db4b, type: 2}
-  blocksLight: 0
   maxHealthBase: 12
   armourBase: 0
   actionPointsBase: 0
@@ -67,12 +66,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 0
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!212 &1773118153572415346
 SpriteRenderer:
@@ -140,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
@@ -149,7 +151,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!114 &-6281585937373113798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,15 +165,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loot:
   - item: {fileID: 11400000, guid: d5d93365186e3a34bb95b93d42dbd29a, type: 2}
-    rarity: 0.123
+    rarity: 0.641
     pool: 1
+  - item: {fileID: 11400000, guid: 47bc7f35f961f4040bb8d57bdb146c5d, type: 2}
+    rarity: 0.38
+    pool: 4
+  - item: {fileID: 11400000, guid: 3aa6f710be90c54438de26889c3007d2, type: 2}
+    rarity: 0.32
+    pool: 5
+  - item: {fileID: 11400000, guid: 25eef886e554ab842b4ac24f52abfe3a, type: 2}
+    rarity: 0.32
+    pool: 6
   - item: {fileID: 11400000, guid: b269883fab5f18949b1840a8a8e3dd06, type: 2}
-    rarity: 0.664
+    rarity: 1
     pool: 2
+  - item: {fileID: 11400000, guid: b269883fab5f18949b1840a8a8e3dd06, type: 2}
+    rarity: 1
+    pool: 7
   - item: {fileID: 11400000, guid: f824e5aff374d0c49aa960bfcee84337, type: 2}
-    rarity: 0.255
+    rarity: 0.66
     pool: 3
+  - item: {fileID: 11400000, guid: f824e5aff374d0c49aa960bfcee84337, type: 2}
+    rarity: 1
+    pool: 8
+  deathActions: []
   worldLootScriptable: {fileID: 0}
+  useGridCounter: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +206,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &-1712389032874754349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354247380013042016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: c79be7fe95d105944baf9b8c3fba8200, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

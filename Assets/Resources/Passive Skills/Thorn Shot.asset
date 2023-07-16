@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Thorn Shot
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
   position: {x: 33, y: 28, z: 0}
-  origin: {x: 33, y: 31, z: 0}
+  origin: {x: 33, y: 32, z: 0}
   damage: 2
   range: 10
   projectile: {fileID: 11400000, guid: c5b69bed0134f054d8399bb805ad5777, type: 2}

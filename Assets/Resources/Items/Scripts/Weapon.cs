@@ -89,7 +89,14 @@ public class Weapon : ItemAbstract
         if (MouseManager.i.itemSelected != null) { return; }
 
         foreach (ItemAbstract item in subItems) {
-            if(item is Weapon) { var weapon = item as Weapon;weapon.accuracyTemp = accuracyTemp; }
+            if(item is Weapon) { 
+                var weapon = item as Weapon;
+                weapon.accuracyTemp = accuracyTemp; 
+                weapon.rangeTemp = rangeTemp;
+                weapon.damageMaxTemp = damageMaxTemp;
+                weapon.damageTemp = damageTemp;
+                weapon.damageMultipleTemp = damageMultipleTemp;
+            }
             item.Call(position, origin, signal);
         }
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { 
@@ -97,7 +104,7 @@ public class Weapon : ItemAbstract
                 return;
             }
         }
-        GridManager.i.itemsInActionStack.Add(this);
+        GridManager.i.AddToStack(this);
     }
 
     public override IEnumerator Action() {
@@ -110,8 +117,8 @@ public class Weapon : ItemAbstract
             if(originCharacter)originCharacter.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
             var character = PartyManager.i.currentCharacter;
             float enemyWaitTime = 0;
-            if (character) { 
-                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+            if (character) {
+                if (character.tag == "Enemy" || character.tag == "Summon") {
                     enemyWaitTime = 0.2f;
                 } 
             }

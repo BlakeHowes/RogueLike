@@ -8,9 +8,10 @@ public class EquipmentSlot : MonoBehaviour {
     public ItemAbstract item;
     Image image;
     Sprite defaultSprite;
-    public GlobalValues globalValues;
+    private GlobalValues globalValues;
     public string trinketNumber;
     public void Awake() {
+        globalValues = Manager.GetGlobalValues();
         image = GetComponent<Image>();
         defaultSprite = image.sprite;
 
@@ -20,10 +21,11 @@ public class EquipmentSlot : MonoBehaviour {
         var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
         if (item) { RemoveItem(inventory); }
         if (itemSelected) { EquipItemSelected(inventory,itemSelected); }
-        InventoryManager.i.UpdateInventory();
         MouseManager.i.itemSelected = null;
         InventoryManager.i.DeselectItems();
-        PartyManager.i.currentCharacter.GetComponent<Stats>().RecalculateStats(inventory.gameObject.Position());
+        var position = inventory.gameObject.Position();
+        PartyManager.i.currentCharacter.GetComponent<Stats>().RefreshCharacter(position);
+        InventoryManager.i.UpdateInventory(position);
     }
 
     public void ChangeCharacterInventory(Inventory inventory, EquipmentType type, ItemAbstract itemReplace) {

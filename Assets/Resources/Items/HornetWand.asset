@@ -12,23 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
   m_Name: HornetWand
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 23ea02ed19402474d99957d7b9c90fb0, type: 2}
-  position: {x: 23, y: 35, z: 0}
-  origin: {x: 23, y: 36, z: 0}
+  tile: {fileID: 11400000, guid: e6eb007fdf62b5149a54f5a9dbf37a6c, type: 2}
+  position: {x: 28, y: 31, z: 0}
+  origin: {x: 25, y: 32, z: 0}
   shopValue: 0
   subItems:
   - {fileID: 11400000, guid: b0e2a331b9b93094082fd4c1ef54b0c6, type: 2}
   twoHanded: 0
-  actionPointCost: 1
-  damageRange: {x: 14, y: 19}
+  damageRange: {x: 12, y: 19}
   accuracyBase: 77
   rangeBase: 5
   heldOffset: {x: 15, y: 10, z: 0}
   rangeTemp: 5
-  accuracyTemp: 77
+  accuracyTemp: 38.1638
   damageTemp: 14
   damageMaxTemp: 19
   damageMultipleTemp: 1
-  damage: 16
+  damage: 0
   originCharacter: {fileID: 0}
   target: {fileID: 0}

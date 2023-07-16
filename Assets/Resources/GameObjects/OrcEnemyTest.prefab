@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 7629002255616256650}
   - component: {fileID: -8396399736578433637}
   - component: {fileID: -3746751994804727915}
+  - component: {fileID: -715668562703010896}
   m_Layer: 0
   m_Name: OrcEnemyTest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +65,6 @@ MonoBehaviour:
   mainHandOffset: {x: 0, y: 0, z: 0}
   offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
-  male: 0
   hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
@@ -79,12 +79,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: eac208a24e851094a93ec17906acc342, type: 2}
-  faction: 1
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
-  blocksLight: 0
-  maxHealthBase: 100
+  maxHealthBase: 60
   armourBase: 0
   actionPointsBase: 4
   throwingRangeBase: 5
@@ -119,10 +117,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
-  offHand: {fileID: 0}
-  helmet: {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
+  mainHand: {fileID: 11400000, guid: e15f871269c69144e9c57400aa9f8166, type: 2}
+  offHand: {fileID: 11400000, guid: e15f871269c69144e9c57400aa9f8166, type: 2}
+  helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: a32c5a68722a8b641af8048adb1de0bc, type: 2}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
@@ -169,7 +168,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11cad4d94e4bb844d8b23c3b14214bc8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 192729eb0707c1644a56f1c039e695a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -210,6 +209,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   itemActions: []
+  targetsTags: 17
 --- !u!114 &-3746751994804727915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,3 +232,19 @@ MonoBehaviour:
     breakPointStatuses: 
     collapsedLines: 
     btScript: 
+--- !u!114 &-715668562703010896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780645703283991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: b0f6f682eee439e4faeae06aa5658831, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 50
   height: 55
+  onHitNudgeAmount: 1.5
+  onAttackNudgeAmount: 0.8
   partyPrefabs:
   - {fileID: 6780645703283991136, guid: 6aca3e01ca5bfed439be2acdf33cf7ca, type: 3}
   - {fileID: 6780645703283991136, guid: 2573f0b0d7e4a81468e329d89d1e7570, type: 3}
@@ -30,10 +32,12 @@ MonoBehaviour:
   outerFogDistance: 1000
   maxItems: 9
   maxPathLength: 22
+  stepAnimationHeight: 6
+  stepAnimationSpeed: 0.2
   walkSpeed: 0.0672
-  repeatSpeed: 0.105
-  Hardness: 962
-  Dampening: 50
+  repeatSpeed: 0.1
+  Hardness: 841
+  Dampening: 50.8
   healthBarPrefab: {fileID: 2981452813050143931, guid: e4ee793ba6c964a4c90a641802906cde, type: 3}
   hitNumberPrefab: {fileID: 5578361876964675343, guid: 3f47214e8ba56ce4a8a3d0848e08e7ff, type: 3}
   mouseHighlight: {fileID: 11400000, guid: 22086ff9f2e4cae4386722b11fc3ee12, type: 2}
@@ -41,7 +45,9 @@ MonoBehaviour:
   enemyHightlightColour: {r: 1, g: 0, b: 0, a: 1}
   passiveHightlightColour: {r: 1, g: 0.7045615, b: 0, a: 1}
   interactableHightlightColour: {r: 1, g: 0.9456895, b: 0, a: 1}
+  fadedColour: {r: 1, g: 1, b: 1, a: 0.49803922}
   outlineMaterial: {fileID: 2100000, guid: 63f90299b0acce349a3819d53cca9ec1, type: 2}
+  summonMaterial: {fileID: 2100000, guid: 9384d6beb91992545a0c70af37853f0a, type: 2}
   enemyoutlineMaterial: {fileID: 2100000, guid: 7ed846eec062237448c6e4d8555c8e46, type: 2}
   normalMaterial: {fileID: 2100000, guid: bf4d15c5ff40392488453ba33fa882c2, type: 2}
   hitMaterial: {fileID: 2100000, guid: 38acd3acbd101ad4380fb61887b259d8, type: 2}

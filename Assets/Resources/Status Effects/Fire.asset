@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 817d97830cf39d343879c32989054cd7, type: 2}
-  particles: {fileID: 8288408381700605430, guid: 16bd81cb08d797b4da482c048b69ebd9, type: 3}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
   durationTotal: 5
+  particles: {fileID: 8288408381700605430, guid: 16bd81cb08d797b4da482c048b69ebd9, type: 3}
   onSignal: 11
   damage: 100
   damageMultiple: 0
   rangedWeaponRange: 0
   maxHealth: 0
+  armourMax: 0
   armour: 0
   actionPoints: 0
   throwingRange: 0
@@ -31,6 +32,6 @@ MonoBehaviour:
   skillRange: 0
   health: -3
   healthChangeAddition: 0
-  items:
+  subItems:
   - {fileID: 11400000, guid: c31924ea2acfbaf49b32f7af767fab85, type: 2}
   target: {fileID: 0}

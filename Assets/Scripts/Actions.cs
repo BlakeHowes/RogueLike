@@ -39,7 +39,7 @@ public class Actions : MonoBehaviour
 
     public void ThrowItem(Vector3Int position,Vector3Int origin,ItemAbstract item,Inventory inventory) {
         if (item is Item) {
-            inventory.CallEquipment(position, origin, Signal.Attack);
+            item.Call(position, origin, Signal.Attack);
         }
         else {
             var thrownClone = Instantiate(thrownItem);

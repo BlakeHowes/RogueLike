@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1773118153572415346}
   - component: {fileID: -6281585937373113798}
   - component: {fileID: 5489671670705153384}
+  - component: {fileID: 1709145793699424466}
   m_Layer: 0
   m_Name: Barrel 1
-  m_TagString: Untagged
+  m_TagString: Passive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 6e19525265b9931409be3996379e7db0, type: 2}
-  faction: 4
   state: 0
   deathAction:
   - {fileID: 11400000, guid: c2a3250779f65bc49a616055fbf8ae70, type: 2}
@@ -59,7 +59,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 81e745a6c21899744beca520ac9f7326, type: 2}
   - {fileID: 11400000, guid: 53a10d3be35627345a9d7032e7bdfe0c, type: 2}
   - {fileID: 11400000, guid: bc50b55615db8b241b3dd21f042b52bf, type: 2}
-  blocksLight: 0
   maxHealthBase: 1
   armourBase: 0
   actionPointsBase: 0
@@ -72,12 +71,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 0
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &2354247380013042047
 MonoBehaviour:
@@ -93,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
@@ -102,7 +104,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1773118153572415346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -168,7 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  deathActions: []
   worldLootScriptable: {fileID: 0}
+  useGridCounter: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,3 +187,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &1709145793699424466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354247380013042016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: fc0967159bea53b4aa8be9ac97b465f0, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

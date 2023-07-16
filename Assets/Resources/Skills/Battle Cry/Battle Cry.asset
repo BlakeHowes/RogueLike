@@ -19,12 +19,13 @@ MonoBehaviour:
   targetFaction: 0
   range: 4
   actionPointCost: 2
-  coolDown: 0
+  coolDown: 4
   CameraZoomDuration: 0
   particles: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+  coolDownTimer: 0
   subItems:
   - {fileID: 11400000, guid: eb208c504e1ab3e4c98279daee45932f, type: 2}
   statusEffects:
   - {fileID: 11400000, guid: 170711fa72156ab489e293084a233eea, type: 2}
   skillDescriptionForAI: 0
-  customDescription: 
+  customDescription: Increase in range allie's damage by 5 for 4 turns

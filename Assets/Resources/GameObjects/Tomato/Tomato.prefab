@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
   - component: {fileID: -876628501165001776}
+  - component: {fileID: -2204530397417996730}
   m_Layer: 0
   m_Name: Tomato
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,12 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
   itemActions: []
+  targetsTags: 17
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,12 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 39babad063c3a7c459593e0a7cf35758, type: 2}
-  faction: 1
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 232ace9f440d8c447a2e25623a0a48df, type: 2}
-  blocksLight: 0
-  maxHealthBase: 10
+  maxHealthBase: 50
   armourBase: 0
   actionPointsBase: 2
   throwingRangeBase: 1
@@ -108,12 +105,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 50
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
   setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -129,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 6ae166ef8018be148bff8f74285239f2, type: 2}
   offHand: {fileID: 0}
@@ -138,7 +138,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -204,6 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  deathActions: []
+  worldLootScriptable: {fileID: 0}
+  useGridCounter: 0
 --- !u!114 &-876628501165001776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,3 +220,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}
+--- !u!114 &-2204530397417996730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 65d2e9ea7a4c88b4a9bc106f4a235cae, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

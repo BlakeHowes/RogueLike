@@ -19,7 +19,7 @@ MonoBehaviour:
   subItems:
   - {fileID: 11400000, guid: 17025b3578a4cb54b9140eca8ec6009c, type: 2}
   twoHanded: 0
-  damageRange: {x: 12, y: 20}
+  damageRange: {x: 12, y: 25}
   accuracyBase: 100
   rangeBase: 7
   heldOffset: {x: 11, y: 9, z: 0}

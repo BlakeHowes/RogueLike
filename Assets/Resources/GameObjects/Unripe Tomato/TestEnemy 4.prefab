@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
   - component: {fileID: -4090891272774170844}
+  - component: {fileID: 7566461236336046222}
   m_Layer: 0
   m_Name: TestEnemy 4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,12 +73,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
   itemActions: []
+  targetsTags: 17
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,11 +90,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 7a398625be9daf649a2ab7ca01325058, type: 2}
-  faction: 1
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 864fa7a5ed7c8564797ea55f73ca15a8, type: 2}
-  blocksLight: 0
   maxHealthBase: 20
   armourBase: 0
   actionPointsBase: 3
@@ -131,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 0}
@@ -205,7 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  deathActions: []
   worldLootScriptable: {fileID: 0}
+  useGridCounter: 0
 --- !u!114 &-4090891272774170844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,3 +221,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &7566461236336046222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 784b47cc6af127f48803c3f29e0b0e90, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

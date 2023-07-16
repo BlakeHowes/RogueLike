@@ -4,8 +4,7 @@ using UnityEngine;
 using Panda;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
-
+using static PartyManager;
 public class Behaviours : MonoBehaviour
 {
     private Vector3Int origin;
@@ -16,8 +15,12 @@ public class Behaviours : MonoBehaviour
     Vector3 offset = new Vector3(0.5f, 0.5f, 0.5f);
     public List<ItemAbstract> itemActions = new List<ItemAbstract>();
     Tilemap gotilemap;
+    private List<string> targetStrings = new List<string>();
+    public Tags targetsTags;
+
     public void OnEnable() {
         gotilemap = GridManager.i.goTilemap;
+        targetStrings = ConvertFlagsEnumToStringList(targetsTags);
     }
 
     [Task]
@@ -35,7 +38,7 @@ public class Behaviours : MonoBehaviour
     }
 
     public void GetTarget() {
-        target = GridManager.i.goMethods.FindClosestGameObject(sightRange, origin, PartyManager.Faction.Party, false);
+        target = GridManager.i.goMethods.FindClosestGameObject(sightRange, origin, targetStrings);
     }
     [Task]
     public bool isHealthAboveZero() {
@@ -46,14 +49,6 @@ public class Behaviours : MonoBehaviour
     public List<Skill> AvailableSkills() {
         var inventory = GetComponent<Inventory>();
         List<Skill> skills = new List<Skill>();
-        foreach(var item in inventory.skills) {
-            if (!item) { continue; }
-            var skill = item as Skill;
-            if (skill.coolDownTimer != 0) { continue; }
-            if(skill.actionPointCostTemp > stats.actionPoints) { continue; }
-            if (!GridManager.i.tools.InRange(targetPosition, origin, skill.range)) { continue; }
-            skills.Add(skill);
-        }
         return skills;
     }
 
@@ -65,14 +60,14 @@ public class Behaviours : MonoBehaviour
                 weight = 2;
                 break;
             case SkillDescriptionForAI.BuffAllies:
-                var allies = GridManager.i.goMethods.GameObjectsInRange(skill.range, origin, stats.faction).Count;
+                var allies = GridManager.i.goMethods.GameObjectsInRange(skill.range, origin, targetStrings).Count;
                 weight = allies;
                 break;
             case SkillDescriptionForAI.AttackSingle:
                 weight = 2;
                 break;
             case SkillDescriptionForAI.AttackAOE:
-                var enemies = GridManager.i.goMethods.GameObjectsInRange(skill.range, targetPosition, stats.faction).Count;
+                var enemies = GridManager.i.goMethods.GameObjectsInRange(skill.range, targetPosition, targetStrings).Count;
                 weight = enemies;
                 break;
         }
@@ -88,7 +83,7 @@ public class Behaviours : MonoBehaviour
         GetComponent<Inventory>().CallEquipment(origin, origin, Signal.CalculateStats);
         Debug.Log("target " + target);
         if (!target) {
-            stats.state = PartyManager.State.Idle;
+            stats.state = State.Idle;
             PartyManager.i.RemoveEnemy(gameObject);
             if (GridManager.i.fogTilemap.GetTile(origin) == null) { ChangeColour(Color.white); }
             if (transform.childCount > 0) { Destroy(transform.GetChild(0).gameObject); }
@@ -146,6 +141,17 @@ public class Behaviours : MonoBehaviour
     }
 
     [Task]
+    void checkEndTurnAlly() {
+        GridManager.i.TickGame();
+        if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
+        GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
+        PartyManager.i.NextEnemy(gameObject);
+
+        ThisTask.Succeed();
+        //PartyManager.i.EndEnemyTurn(gameObject);
+    }
+
+    [Task]
     void ManualTickMode() {
         GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
         ThisTask.Succeed();
@@ -168,7 +174,7 @@ public class Behaviours : MonoBehaviour
         if (position.GameObjectGo() != gameObject && !gotilemap.GetTile(position)) {
             ThisTask.Succeed(); return ;
         }
-        var pos = new Vector3Int(position.x + Random.Range(-1, 2), position.y + Random.Range(-1, 2));
+        var pos = new Vector3Int(position.x + UnityEngine.Random.Range(-1, 2), position.y + UnityEngine.Random.Range(-1, 2));
         if (!pos.IsWalkable()) { ThisTask.Succeed(); return; }
         if (pos.GameObjectSpawn()) { ThisTask.Succeed(); return; }
         GridManager.i.goMethods.RemoveGameObject(position);
@@ -189,7 +195,7 @@ public class Behaviours : MonoBehaviour
         if(position.GameObjectGo() != gameObject && !gotilemap.GetTile(position)) {
             return;
         }
-        var pos =new Vector3Int(position.x + Random.Range(-1, 2), position.y + Random.Range(-1, 2));
+        var pos =new Vector3Int(position.x + UnityEngine.Random.Range(-1, 2), position.y + UnityEngine.Random.Range(-1, 2));
         if (!GridManager.i.floorTilemap.GetTile(pos)) { return; }
         if (pos.GameObjectSpawn()) { return; }
         GridManager.i.goMethods.RemoveGameObject(position);

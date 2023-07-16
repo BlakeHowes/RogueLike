@@ -14,19 +14,6 @@ public class APMod : ItemAbstract {
     }
 
     public override IEnumerator Action() {
-        ItemAbstract item = GridManager.i.ParentInStack(this);
-        if (Random.Range(chance.x, chance.y) > chanceThreshold) {
-            var skill = item as Skill;
-            if (skill) {
-                skill.actionPointCostTemp = aP;
-            }
-        }
-        else {
-            var skill = item as Skill;
-            if (skill) {
-                skill.actionPointCostTemp = skill.actionPointCost;
-            }
-        }
         yield return null;
     }
 

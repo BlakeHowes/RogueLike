@@ -24,6 +24,7 @@ public class StatMod : ItemAbstract {
     public Signal onSignal = Signal.CalculateStats;
     public bool originBecomesPosition = true;
     public bool targetSelf;
+    public string customDescription;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if (signal == Signal.SetTarget) { target = position.GameObjectGo(); return; }
         if (signal != onSignal) { return; }
@@ -38,10 +39,18 @@ public class StatMod : ItemAbstract {
         var character = origin.GameObjectGo();
         if (!character) { return; }
         var stats = origin.GameObjectGo().GetComponent<Stats>();
-        var item = origin.GameObjectGo().GetComponent<Inventory>().mainHand;
-        var weapon = item as Weapon;
+        var mainHand = origin.GameObjectGo().GetComponent<Inventory>().mainHand;
+        Weapon mainHandWeapon = null;
+        if (mainHand) { mainHandWeapon = mainHand as Weapon; }
+        var offHand = origin.GameObjectGo().GetComponent<Inventory>().offHand;
+        Weapon offHandWeapon = null;
+        if (offHand) { 
+            if(offHand is Weapon) {
+                offHandWeapon = offHand as Weapon;
+            }
 
-        if (weapon) { ModifyWeaponStats(weapon); }
+        }
+        ModifyWeaponStats(mainHandWeapon,offHandWeapon);
         if (particles) { EffectManager.i.CreateSingleParticleEffect(position,particles);}
         ModifyPlayerStats(position,stats);
     }
@@ -49,17 +58,27 @@ public class StatMod : ItemAbstract {
     public bool IsSneakAttack(Vector3Int position, Vector3Int origin) {
         var ememy = position.GameObjectGo();
         if (!ememy) { return false; }
-        if (ememy.GetComponent<Stats>().faction != PartyManager.Faction.Enemy) { return false; }
+        if (ememy.tag != "Enemy") { return false; }
         var statsCharacter = origin.GameObjectGo().GetComponent<Stats>();
         if (statsCharacter.state == PartyManager.State.Combat) { return false;}
         return true;
     }
 
-    public void ModifyWeaponStats(Weapon weapon) {
-        weapon.damageTemp += damage;
-        weapon.damageMultipleTemp += damageMultiple;
-        if (weapon.rangeBase > 1) {
-            weapon.rangeTemp += rangedWeaponRange;
+    public void ModifyWeaponStats(Weapon weapon,Weapon offHand) {
+        if (weapon) {
+            weapon.damageTemp += damage;
+            weapon.damageMultipleTemp += damageMultiple;
+            if (weapon.rangeBase > 1) {
+                weapon.rangeTemp += rangedWeaponRange;
+            }
+        }
+
+        if (offHand) {
+            offHand.damageTemp += damage;
+            offHand.damageMultipleTemp += damageMultiple;
+            if (offHand.rangeBase > 1) {
+                offHand.rangeTemp += rangedWeaponRange;
+            }
         }
     }
 
@@ -82,6 +101,7 @@ public class StatMod : ItemAbstract {
 
     public override string Description() {
         string description = "";
+        if(customDescription != "") { description += customDescription += "\n"; }
         if (onlyActivateOutOfCombat) { description += "While Unseen By Enemies "; }
         if (damage != 0) { description += damage + " Weapon Damage\n"; }
         if (damageMultiple != 0) { description += damageMultiple +1 + " Times Weapon Damage\n"; }

@@ -6,8 +6,8 @@ using static ItemStatic;
 public class Inventory : MonoBehaviour
 {
     public List<ItemAbstract> items = new List<ItemAbstract>();
-    public HashSet<ItemAbstract> skills = new HashSet<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
+    public List<ItemAbstract> skills = new List<ItemAbstract>();
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public HashSet<ItemAbstract> statusEffectsToRemove = new HashSet<ItemAbstract>();
     public ItemAbstract mainHand;
@@ -86,7 +86,6 @@ public class Inventory : MonoBehaviour
     public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
         if (!stats) { stats =GetComponent<Stats>(); }
         if (signal == Signal.CalculateStats) { stats.ResetTempStats(); }
-        foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
         foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
         foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal); }
         if (helmet) { helmet.Call(position, origin, signal); }
@@ -104,10 +103,11 @@ public class Inventory : MonoBehaviour
         if (offHand) { offHand.Call(position, origin, signal); }
         if (mainHand) { mainHand.Call(position, origin, signal); }
     }
+
     public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, Signal signal) {
         stats.UpdateHealthBar();
         if (statusEffects.Count == 0) { goto traits; }
-        foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal);Debug.Log(signal); }
+        foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal); }
         if (statusEffectsToRemove.Count > 0) {
             Debug.Log("Remove Effects");
             foreach (var item in statusEffectsToRemove) {
@@ -116,6 +116,6 @@ public class Inventory : MonoBehaviour
         }
         traits:
         if (traits.Count == 0) { return; }
-        foreach (var item in traits) { if (item) item.Call(position, origin, signal); }
+        foreach (var item in skills) { if (item) item.Call(position, origin, signal); }
     }
 }

@@ -17,18 +17,19 @@ public class DeathParticle : ItemAbstract {
         this.position = position;
         this.origin = origin;
         if (targetSelf) { this.position = origin; }
-        sprite =origin.GameObjectGo().GetComponent<SpriteRenderer>().sprite;
+        var go = origin.GameObjectGo();
+        if (go) {
+            go.TryGetComponent(out SpriteRenderer rend);
+            sprite = rend.sprite;
+        }
+        
         GridManager.i.AddToStack(this);
     }
     public override IEnumerator Action() {
-        var materialClone = Instantiate(material);
-        materialClone.mainTexture = sprite.texture;
-        var width = sprite.texture.width / sprite.texture.height;
-        var size = ((sprite.texture.width * width) + sprite.texture.height) /10; 
+        if (!sprite) { yield break; }
+        particles.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+        var clone = EffectManager.i.CreateSingleParticleEffect(position + offset, particles);
 
-
-        particles.GetComponent<ParticleSystemRenderer>().material = materialClone;
-        EffectManager.i.CreateSingleParticleEffectScaled(position + offset, particles,size*scaleFactor);
         yield return new WaitForSeconds(delay);
     }
 

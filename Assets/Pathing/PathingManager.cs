@@ -8,8 +8,9 @@ public class PathingManager : MonoBehaviour
     public static PathingManager i;
     private Grid2D grid;
     private Algorithm algorithm;
-    public GlobalValues globalValues;
+    private GlobalValues globalValues;
     public void Awake() {
+        globalValues = Manager.GetGlobalValues();
         i = this;
     }
     public void Start() {
@@ -85,7 +86,7 @@ public class PathingManager : MonoBehaviour
             }
             var nextStep = path[1].FloorToInt();
             if (GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(nextStep) == null) {
-                character.GetComponent<SpringToTarget3D>().SpringTo(nextStep, globalValues.Dampening, globalValues.Hardness);
+                StartCoroutine(WalkAnimation(character, nextStep));
                 GridManager.i.goMethods.RemoveGameObject(origin);
                 GridManager.i.goMethods.SetGameObject(nextStep, character);
                 FlipCharacter(character,nextStep, origin);
@@ -93,6 +94,13 @@ public class PathingManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public IEnumerator WalkAnimation(GameObject character,Vector3 position) {
+
+        character.GetComponent<SpringToTarget3D>().SpringTo(position + new Vector3(0, globalValues.stepAnimationHeight/10), globalValues.Dampening, globalValues.Hardness);
+        yield return new WaitForSeconds(globalValues.stepAnimationSpeed / 10);
+        character.GetComponent<SpringToTarget3D>().SpringTo(position, globalValues.Dampening, globalValues.Hardness);
     }
 
     public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin) {
@@ -110,13 +118,13 @@ public class PathingManager : MonoBehaviour
             var nextStep = path[1].FloorToInt();
             var target = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(nextStep);
             if (target == null) {
-                character.GetComponent<SpringToTarget3D>().SpringTo(nextStep, globalValues.Dampening, globalValues.Hardness);
+                StartCoroutine(WalkAnimation(character, nextStep));
                 GridManager.i.goMethods.RemoveGameObject(origin);
                 GridManager.i.goMethods.SetGameObject(nextStep, character);
                 FlipCharacter(character, nextStep, origin);
                 return true;
             }
-            if (target.GetComponent<Stats>().faction == character.GetComponent<Stats>().faction) {
+            if (target.tag == character.tag) {
                 SwapPlaces(nextStep, origin);
                 FlipCharacter(character, nextStep, origin);
                 return true;

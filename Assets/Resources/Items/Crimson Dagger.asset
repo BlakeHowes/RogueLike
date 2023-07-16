@@ -15,11 +15,10 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 5ccf666f093e8bb46b919e52c63babfb, type: 2}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   subItems: []
   twoHanded: 0
-  actionPointCost: 1
-  damageBase: 6
-  damageMaxBase: 16
+  damageRange: {x: 12, y: 17}
   accuracyBase: 100
   rangeBase: 1
   heldOffset: {x: 11, y: 6, z: 0}

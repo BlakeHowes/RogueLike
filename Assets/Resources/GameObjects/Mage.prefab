@@ -99,9 +99,10 @@ GameObject:
   - component: {fileID: 7475694374052512725}
   - component: {fileID: 7361458235895569522}
   - component: {fileID: 7629002255616256650}
+  - component: {fileID: -6543744060070535467}
   m_Layer: 0
   m_Name: Mage
-  m_TagString: Untagged
+  m_TagString: Party
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,18 +136,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   race: {fileID: 11400000, guid: 1feaa947bc82317438d24dfe2151b6b8, type: 2}
-  body: {fileID: 21300000, guid: 8523def5d15397440b62e7785a1c18ab, type: 3}
-  bodyPalette: {fileID: 11400000, guid: 0bb927ea9b588f2439588c8bc21835aa, type: 2}
-  hair: {fileID: 21300000, guid: 38667c2fd024e244db3522254f355162, type: 3}
+  body: {fileID: 21300000, guid: f646bea0288c6ab4ca8bfb598fdaa51d, type: 3}
+  bodyPalette: {fileID: 11400000, guid: 9df5c8b90f175034388e4e6142969734, type: 2}
+  hair: {fileID: 21300000, guid: 097f287b14418ab4dbed3a14b06c1b01, type: 3}
   hairPalette: {fileID: 11400000, guid: 350f2a8084929eb4280d34d24c73c66a, type: 2}
   loadout: {fileID: 11400000, guid: 0d507749a8acf8640b02ea5a081c0f67, type: 2}
-  face: {fileID: 21300000, guid: 44c4ec38c9638cb4abca01be68f6f9bd, type: 3}
-  facePalette: {fileID: 11400000, guid: 2ab0704dc7eab8440b8ffc98d50c04e6, type: 2}
-  feature: {fileID: 21300000, guid: 81c1c05d2717cd0419864b0f3d30b914, type: 3}
-  featurePalette: {fileID: 11400000, guid: 44140395f03977645aa15ae18ae4ba36, type: 2}
+  face: {fileID: 21300000, guid: 0713137dcfc414748b44eeb67faf2f4b, type: 3}
+  facePalette: {fileID: 11400000, guid: a9690c5de50602f48815b14c0925e043, type: 2}
+  feature: {fileID: 21300000, guid: 9145ed1e85cbd994c9375fcf0cd987d4, type: 3}
+  featurePalette: {fileID: 11400000, guid: 322494b5ad964584784f0f6b5ecaf717, type: 2}
   headOffset: {x: 1, y: 18, z: 0}
+  mainHandOffset: {x: 0, y: 0, z: 0}
+  offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
-  male: 1
+  hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,11 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
-  faction: 0
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
-  blocksLight: 0
   maxHealthBase: 100
   armourBase: 0
   actionPointsBase: 4
@@ -199,10 +200,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: f773b7fec30eb2f4eb30425057da19b1, type: 2}
+  skills: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}
-  offHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}
+  offHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
   helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: b50da0dfd62a2fb4683db18744192196, type: 2}
   trinket1: {fileID: 11400000, guid: 551f455710f5386409803361a15350f7, type: 2}
@@ -221,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bd0686b0e88ed47b6f3f58e6160a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetsTags: 2
 --- !u!212 &7361458235895569522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -262,7 +266,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5409458818fb4a04095ad4733c19ed46, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a2f09c868286584c84bf70bb7a24407, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -288,3 +292,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &-6543744060070535467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780645703283991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: b0f6f682eee439e4faeae06aa5658831, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6375196592243838219}
   - component: {fileID: 6375196592243838228}
   - component: {fileID: -7566298744851503710}
+  - component: {fileID: 9066156523827729744}
   m_Layer: 0
   m_Name: Stinger
   m_TagString: Untagged
@@ -4847,3 +4848,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faca5fcf8a96298469e0b03bf956327b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9066156523827729744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6375196592243838218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca165316dd3a04598ae4409b9821b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 5c63a5942fc72d946915c6baa8c88c33, type: 3}

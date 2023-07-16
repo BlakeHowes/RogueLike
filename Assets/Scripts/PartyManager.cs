@@ -16,8 +16,8 @@ public class PartyManager : MonoBehaviour {
     public List<GameObject> partyMemberTurnTaken = new List<GameObject>();
     public List<GameObject> enemyTurnTaken = new List<GameObject>();
     public bool follow = true;
-    public GlobalValues globalValues;
-    Faction currentFaction;
+    private GlobalValues globalValues;
+    string currentTag;
     public enum State {
         Idle,
         Combat
@@ -43,8 +43,8 @@ public class PartyManager : MonoBehaviour {
             }
         }
         var playerpos = characterFollowPosition;
+        RemoveNullCharacters(party);
         foreach (GameObject member in party) {
-            if (member == null) { RemoveNullCharacters(party); continue; }
             if (member == currentCharacter) {  continue; }
             var memberpos = member.Position();
             var moved = PathingManager.i.MoveOneStep(playerpos, memberpos);
@@ -55,9 +55,30 @@ public class PartyManager : MonoBehaviour {
         }
     }
     public void Awake() {
+        globalValues = Manager.GetGlobalValues();
         i = this;
     }
 
+    [System.Flags]
+    public enum Tags {
+        None = 0x00,
+        Party = 0x01,
+        Enemy = 0x02,
+        Interactable = 0x04,
+        Passive = 0x08,
+        Summon = 0x10
+    }
+
+    public static List<string> ConvertFlagsEnumToStringList(Tags tags) {
+        List<string> tagsString = new List<string>();
+        if (tags.HasFlag(Tags.Party)) { tagsString.Add("Party"); }
+        if (tags.HasFlag(Tags.Enemy)) { tagsString.Add("Enemy"); }
+        if (tags.HasFlag(Tags.Interactable)) { tagsString.Add("Interactable"); }
+        if (tags.HasFlag(Tags.Passive)) { tagsString.Add("Passive"); }
+        if (tags.HasFlag(Tags.Summon)) { tagsString.Add("Summon"); }
+        return tagsString;
+    }
+    /*
     public enum Faction {
         Party,
         Enemy,
@@ -65,7 +86,7 @@ public class PartyManager : MonoBehaviour {
         Wall,
         Passive
     }
-
+    */
     public void AddPartyMember(GameObject character) {
         party.Add(character);
         currentCharacter = character;
@@ -74,29 +95,32 @@ public class PartyManager : MonoBehaviour {
 
     public void Update() {
         if (!currentCharacter) {
-            if (currentFaction == Faction.Party) { SwitchToNextCharacter(); }
-            if (currentFaction == Faction.Enemy) { NextEnemy(null); }
+            if (currentTag == "Party") { SwitchToNextCharacter(); }
+            if (currentTag == "Enemy") { NextEnemy(null); }
         }
-        if (currentCharacter.activeSelf) { return; }
-        if (currentFaction == Faction.Party) { SwitchToNextCharacter(); }
-        if (currentFaction == Faction.Enemy) { NextEnemy(null); }
-
+        if (currentCharacter) {
+            if (currentCharacter.activeSelf) { return; }
+            if (currentTag == "Party") { SwitchToNextCharacter(); }
+            if (currentTag == "Enemy") { NextEnemy(null); }
+        }
     }
 
     public void SetCurrentCharacter(GameObject character) {
         if (currentCharacter) { currentCharacter.GetComponent<SpriteRenderer>().material = globalValues.normalMaterial; }
 
         currentCharacter = character;
-        currentFaction = character.GetComponent<Stats>().faction;
+        currentTag = character.tag;
         var stats = character.GetComponent<Stats>();
-
-        if ( party.Contains(character)) { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial; }
-        else { character.GetComponent<SpriteRenderer>().material = globalValues.enemyoutlineMaterial; }
+        if(currentCharacter.tag == "Summon") { character.GetComponent<SpriteRenderer>().material = globalValues.summonMaterial; }
+        if(currentCharacter.tag == "Party") { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial; }
+        if(currentCharacter.tag == "Enemy") { character.GetComponent<SpriteRenderer>().material = globalValues.enemyoutlineMaterial; }
         GameUIManager.i.UpdatePartyIcons(party);
 
-
+        if (currentCharacter.tag == "Summon") { MouseManager.i.disableMouse = true; }
         stats.ResetTempStats();
-        stats.RecalculateStats(character.Position());
+        var position = character.Position();
+        stats.RefreshCharacter(position);
+        InventoryManager.i.UpdateInventory(position);
         GameUIManager.i.actionPointsText.text = stats.actionPoints.ToString();
         if(stats.state == State.Idle) {
             stats.ResetActionPoints();
@@ -150,6 +174,12 @@ public class PartyManager : MonoBehaviour {
         if (party.Count == 0) { GameUIManager.i.ShowGameOverUI(); return; }
         SetCurrentCharacter(party[nextCharacterIndex]);
         Debug.Log("Set current character " + party[nextCharacterIndex]);
+        currentCharacter.TryGetComponent(out PandaBehaviour panda);
+        if (panda) {
+            var pos = currentCharacter.Position();  //Expensive call
+            currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
+            currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+        }
         GridManager.i.UpdateGame();
         GameUIManager.i.UpdatePartyIcons(party);
     }
@@ -159,7 +189,6 @@ public class PartyManager : MonoBehaviour {
             partyMemberTurnTaken.Add(currentCharacter);
         }
         SwitchToNextCharacter();        
-        InventoryManager.i.UpdateInventory();
 
         if (partyMemberTurnTaken.Count >= party.Count) {
             EnemyPartyStartTurn();
@@ -244,7 +273,7 @@ public class PartyManager : MonoBehaviour {
         MouseManager.i.disableMouse = false;
         RemoveNullCharacters(party);
         foreach (var player in party) {
-            if(player != null)
+            if (!player) { continue; }
             player.GetComponent<Stats>().ResetActionPoints();
             player.GetComponent<NPCSearch>().Search();
             StartOfPartyTurnCall(player);

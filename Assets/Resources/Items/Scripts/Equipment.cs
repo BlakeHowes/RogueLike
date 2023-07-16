@@ -13,19 +13,19 @@ public class Equipment : ItemAbstract {
     public Sprite wornSprite;
     public bool hideHair;
     public Vector3Int wornOffset;
+    public string customDescription;
 
     [Header("Stats")]
     public int maxHealthBase;
     public int armourBase;
 
     public override void Call(Vector3Int position, Vector3Int origin,Signal signal) {
-        var originCharacter = origin.GameObjectSpawn();
-        if (originCharacter == null) { return; }
-        if(signal == Signal.CreateSkill) {
-        }
         foreach (ItemAbstract item in subItems) {
             item.Call(position, origin, signal);
         }
+        var originCharacter = origin.GameObjectSpawn();
+        if (originCharacter == null) { return; }
+
 
         if (signal != Signal.CalculateStats) { return; }
         var stats = originCharacter.GetComponent<Stats>();
@@ -77,7 +77,9 @@ public class Equipment : ItemAbstract {
     public override string Description() {
         var description = "";
         if(weight != Weight.None) { description += "Weight: "+weight + "\n"; }
+        description += customDescription;
         if(armourBase > 0) { description += "+" + armourBase + " Armour\n"; }
+        if (maxHealthBase > 0) { description += "+" + maxHealthBase + " Max Health\n"; }
         foreach (ItemAbstract item in subItems) {
             description += item.Description();
         }

@@ -159,14 +159,16 @@ public class GridTools
                     }
                     checkedCells.Add(pos);
                     //goTilemap.SetColor(pos, Color.white);
-                    if (goTilemap.GetTile(pos) || pos.GameObjectGo()) {
-                        var go = pos.GameObjectGo();
-                        if (go) {
-                            if (go.GetComponent<Stats>().blocksLight) { WallsToClear.Add(pos); continue; }
+                    var go = pos.GameObjectGo();
+                    if (go) {
+                        if(go.tag == "Door") {
+                            WallsToClear.Add(pos);
+                            continue;
                         }
                     }
                     if (pos.IsWall()) {
                         WallsToClear.Add(pos);
+                        continue;
                     }
                     else {
                         if(Vector3.Distance(pos,position) < maxDistance) {

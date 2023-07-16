@@ -30,9 +30,6 @@ public class DevHotkeys : MonoBehaviour
             MouseManager.i.EndOfAction();
         }
 
-        if (Input.GetKeyDown(KeyCode.X)) {
-            GameUIManager.i.ShowSight(PartyManager.i.currentCharacter.Position());
-        }
         if (Input.GetKeyDown(KeyCode.B)) {
             var mousePos = MouseManager.i.MousePositionOnGrid();
             Debug.Log("Position: "+ mousePos +" GameObject: "+ mousePos.GameObjectGo() + " Item: "+ mousePos.Item() + " Surface: " + GridManager.i.GetOrSpawnSurface(mousePos));

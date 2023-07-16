@@ -8,10 +8,16 @@ using static ItemStatic;
 public class SpawnGO : ItemAbstract {
     public List<GameObject> Gos = new List<GameObject>();
     public Signal onSignal;
+    public AddToParty addToParty;
+    public enum AddToParty {
+        None,
+        Enemy,
+        Party
+    }
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
         if(signal != onSignal) { return; }
         this.position = position;
-        GridManager.i.InsertToStack(this);
+        GridManager.i.AddToStack(this);
     }
 
     public override IEnumerator Action() {
@@ -23,7 +29,14 @@ public class SpawnGO : ItemAbstract {
             clone.transform.position = position;
             clone.GetComponent<SpringToTarget3D>().SpringTo(pos, 30, 1000);
             //clone.lerp(position, clone.transform.position.FloorToInt(), 0.1f);
+            if (addToParty == AddToParty.Party) { 
+                PartyManager.i.party.Add(clone);
+            }
+            if (addToParty == AddToParty.Enemy) {
+                PartyManager.i.enemyParty.Add(clone);
+            }
         }
+       
         Debug.Log("Spawned " + Gos.Count);
         yield return new WaitForSeconds(0.2f);
     }

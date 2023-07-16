@@ -7,10 +7,8 @@ using static ItemStatic;
 
 public class Stats : MonoBehaviour {
     public TileBase tile;
-    public PartyManager.Faction faction = PartyManager.Faction.Enemy;
     public PartyManager.State state = PartyManager.State.Idle;
     public List<ItemAbstract> deathAction;
-    public bool blocksLight;
 
     [Header("Base Stats")]
     public int maxHealthBase;
@@ -64,11 +62,11 @@ public class Stats : MonoBehaviour {
 
     public void OnEnable() {
         globalValues = Manager.GetGlobalValues();
-        if(faction == PartyManager.Faction.Party) {
+        if(gameObject.tag == "Party") {
             DontDestroyOnLoad(this);
         }
         InitializeCharacter();
-        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
+
     }
 
     public void OnStartOfCombat() {
@@ -79,7 +77,7 @@ public class Stats : MonoBehaviour {
     private bool armourChecked = false;
     public void OnIdleTick() {
         if (!armourChecked) { 
-            RecalculateStats(gameObject.Position());
+            RefreshCharacter(gameObject.Position());
             armour = armourTemp; 
             armourChecked = true; 
         }
@@ -88,12 +86,16 @@ public class Stats : MonoBehaviour {
         if (state == PartyManager.State.Idle) {
             ResetActionPoints();
         }
+        if(gameObject.tag == "Summon") {
+            PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
+            Die(gameObject.Position());
+        }
     }
 
     public void InitializeCharacter() {
         inventory = GetComponent<Inventory>();
-       
-        
+        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
+
 
         if (maxHealthTemp == 0) {
             maxHealthTemp = maxHealthBase;
@@ -113,7 +115,7 @@ public class Stats : MonoBehaviour {
      
         var position = gameObject.Position();
 
-        RecalculateStats(position);
+        RefreshCharacter(position);
         inventory.CallEquipment(position, position, Signal.TakeDamage);
         Debug.Log("Take damage");
         if (infiniteHealth) {
@@ -129,7 +131,7 @@ public class Stats : MonoBehaviour {
         if(damage < 0) { damage = 0; }
         health -= damage;
 
-        if (faction == PartyManager.Faction.Enemy) {
+        if (gameObject.tag == "Enemy") {
             if (state != PartyManager.State.Combat) {
                 state = PartyManager.State.Combat;
                 PartyManager.i.enemyParty.Add(gameObject);
@@ -148,12 +150,12 @@ public class Stats : MonoBehaviour {
         if (spring && position != origin) {
             Vector3 cellOffsetPosition = new Vector3(0.5f, 1) + (Vector3)position;
             Vector3 cellOffsetOrigin = new Vector3(0.5f, 1) + (Vector3)origin;
-            Vector3 direction = Vector3.Normalize(cellOffsetPosition - cellOffsetOrigin);
+            Vector3 direction = Vector3.Normalize(cellOffsetPosition - cellOffsetOrigin) * globalValues.onHitNudgeAmount;
             Vector3 offset = cellOffsetOrigin + direction * -6;
             Vector3 amount = gameObject.transform.position - offset;
             if(!GridManager.i.graphics.lerping)spring.Nudge(amount,24,1000);
         }
-        if (faction != PartyManager.Faction.Interactable) {
+        if (gameObject.tag == "Interactable") {
             if (damageTotal == 0) { SpawnHitNumber("Miss", Color.yellow, 1); } else {
                 SpawnHitNumber(damageTotal.ToString(), Color.red, 1);
             }
@@ -164,19 +166,24 @@ public class Stats : MonoBehaviour {
             GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(gameObject, origin, Color.white));
             return;
         }
+        Die(position);
+
+    }
+
+    public void Die(Vector3Int position) {
         inventory.CallEquipment(position, position, Signal.Death);
         foreach (var item in deathAction) {
-            if(item)
-            item.Call(position, position, Signal.Death);
+            if (item)
+                item.Call(position, position, Signal.Death);
         }
 
         PartyManager.i.RemoveDeadEnemy(gameObject);
         GridManager.i.goMethods.RemoveGameObject(position);
         inventory.items.Drop(position, position);
         GridManager.i.graphics.UpdateEverything();
-        if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
+        //if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
         healthbarGameObject.SetActive(false);
-        if(setInactiveOnDeath) gameObject.SetActive(false);
+        if (setInactiveOnDeath) gameObject.SetActive(false);
     }
 
     public void SpawnHitNumber(string value,Color colour,float scale) {
@@ -209,14 +216,12 @@ public class Stats : MonoBehaviour {
         actionPoints = actionPointsTemp;
     }
 
-    public void RecalculateStats(Vector3Int position) {
+    public void RefreshCharacter(Vector3Int position) {
         ResetTempStats();
-
         inventory.CallEquipment(position, position, Signal.ResetStatsToBase);
         inventory.CallEquipment(position,position, Signal.CalculateStats);
-
         if (!armourChecked) { armour = armourTemp; armourChecked = true; }
-        Debug.Log(armour +" "+ armourTemp + "Status Effects " + inventory.statusEffects.Count);
+        //Debug.Log(armour +" "+ armourTemp + "Status Effects " + inventory.statusEffects.Count);
         if (armour > armourTemp) { armour = armourTemp; }
         UpdateHealthBar();
     }

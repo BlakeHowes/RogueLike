@@ -1,6 +1,4 @@
-using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.Presets;
 using UnityEngine;
 public static class CharacterSpriteGenerator {
     public static Texture2D PasteSpriteMask(Texture2D source, Texture2D target, Texture2D mask, Vector3Int offset) {
@@ -19,7 +17,7 @@ public static class CharacterSpriteGenerator {
     }
 
     public static Texture2D CropTexture(Texture2D texture, Sprite sprite) {
-        if(sprite.rect.size == texture.Size()) { return sprite.texture; }
+        if(sprite.rect.size.x == texture.width) { return sprite.texture; }
         var rect = sprite.textureRect;
         Color[] colours = texture.GetPixels(Mathf.FloorToInt(rect.xMin), Mathf.FloorToInt(rect.yMin), Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));
         Texture2D croppedTexture = new Texture2D(Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));
@@ -163,7 +161,7 @@ public static class CharacterSpriteGenerator {
         var seed = Random.Range(1.11111f, 1000f);
         string filenameandlocation = "/Resources/GameObjects/Character Sprites/"+ name + seed.ToString() + ".png";
         System.IO.File.WriteAllBytes(Application.dataPath + filenameandlocation, bytes);
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
         return "GameObjects/Character Sprites/" + name + seed.ToString();
     }
 

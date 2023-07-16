@@ -1,24 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static PartyManager;
 public class NPCSearch : MonoBehaviour
 {
     Stats stats;
+    private List<string> targetStrings = new List<string>();
+    public Tags targetsTags;
     public void OnEnable() {
+        targetStrings =ConvertFlagsEnumToStringList(targetsTags);
         stats = GetComponent<Stats>();
     }
     public void Search() {
         var origin = gameObject.Position();
         var range = stats.enemyAlertRangeTemp;
-        if(stats.state == PartyManager.State.Combat) { range = stats.enemyAlertRangeBase; }
-        var enemies = GridManager.i.goMethods.GameObjectsInSightExcludingAllies(range, origin, PartyManager.Faction.Enemy);
+        if(stats.state == State.Combat) { range = stats.enemyAlertRangeBase; }
+        var enemies = GridManager.i.goMethods.GameObjectsInRange(range, origin, targetStrings);
         if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) {
             var partyTurns = PartyManager.i.partyMemberTurnTaken;
             if (partyTurns.Contains(gameObject)) {
                 partyTurns.Remove(gameObject);
             }
-            stats.state = PartyManager.State.Idle;
+            stats.state = State.Idle;
             stats.OnIdleTick();
             return;
         }
@@ -27,11 +30,11 @@ public class NPCSearch : MonoBehaviour
                 if (enemy == null) { continue; }
                 PartyManager.i.AddEnemy(enemy);
             }
-            if (stats.state == PartyManager.State.Idle) { 
+            if (stats.state == State.Idle) { 
                 MouseManager.i.isRepeatingActionsOutsideCombat = false; Debug.Log("Walked Disabled by NPC Search");
                 stats.OnStartOfCombat();
             }
-            stats.state = PartyManager.State.Combat;
+            stats.state = State.Combat;
 
           
             

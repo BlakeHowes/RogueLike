@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "Taunt", menuName = "Status Effects/Taunt")]
 public class Taunt : ItemAbstract {
     [HideInInspector]public GameObject target;
     public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {

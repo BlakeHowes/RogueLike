@@ -22,7 +22,7 @@ MonoBehaviour:
   damageRange: {x: 10, y: 15}
   accuracyBase: 100
   rangeBase: 8
-  heldOffset: {x: 6, y: 4, z: 0}
+  heldOffset: {x: 6, y: 6, z: 0}
   rangeTemp: 11
   accuracyTemp: 25
   damageTemp: 10

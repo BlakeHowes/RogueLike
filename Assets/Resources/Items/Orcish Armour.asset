@@ -22,5 +22,6 @@ MonoBehaviour:
   wornSprite: {fileID: 21300000, guid: 369e3bc3cae08ef41be530669119df49, type: 3}
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}
+  customDescription: 
   maxHealthBase: 0
-  armourBase: 20
+  armourBase: 10

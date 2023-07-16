@@ -1274,7 +1274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &237659865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1294,10 +1294,10 @@ RectTransform:
   m_Father: {fileID: 429188630}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 685.35, y: -50}
+  m_SizeDelta: {x: 97.3, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &256275780
 GameObject:
@@ -3026,7 +3026,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 314, y: 25}
+  m_AnchoredPosition: {x: 404, y: 25}
   m_SizeDelta: {x: 809.1, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429188631
@@ -8058,13 +8058,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5542796673496099087, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.55
+      value: 4.6642723
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9521,7 +9525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.96
+      value: 0.15427238
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13058,6 +13062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryLayout: {fileID: 0}
   equipmentLayout: {fileID: 0}
+  skillLayout: {fileID: 0}
+  skills: []
 --- !u!114 &1677353857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13085,12 +13091,14 @@ MonoBehaviour:
   bodies:
   - {fileID: 21300000, guid: 8523def5d15397440b62e7785a1c18ab, type: 3}
   - {fileID: 21300000, guid: 5221153a3be5c254cb032f45c05d32b5, type: 3}
+  - {fileID: 21300000, guid: f646bea0288c6ab4ca8bfb598fdaa51d, type: 3}
   hairs: []
   faces: []
   races: []
   loadouts: []
   hairPalettes: []
   facePalettes: []
+  undeadPalettes: []
 --- !u!114 &1677353859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17400,7 +17408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.29
+      value: 2.4042723
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17457,7 +17465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.17
+      value: -2.0557277
       objectReference: {fileID: 0}
     - target: {fileID: 5542796673496099090, guid: 6eb8037d98e596b448cb2a310ff20402, type: 3}
       propertyPath: m_LocalPosition.y

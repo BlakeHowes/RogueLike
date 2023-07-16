@@ -9,6 +9,7 @@ public class CCAssets : MonoBehaviour
     public List<CCRace> races = new List<CCRace>();
     public List<CCLoadout> loadouts = new List<CCLoadout>();
     public List<CCPalette> hairPalettes,facePalettes = new List<CCPalette>();
+    public List<CCPalette> undeadPalettes = new List<CCPalette>();
     public void Awake() {
         i = this;
         var raceResources = Resources.LoadAll<CCRace>("Character Creator/Races");
@@ -23,6 +24,8 @@ public class CCAssets : MonoBehaviour
         foreach (Sprite sprite in faceResources) { faces.Add(sprite); }
         var facePaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Faces");
         foreach (CCPalette palette in facePaletteResources) { facePalettes.Add(palette); }
+        var undeadPaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Races/Undead");
+        foreach (CCPalette palette in undeadPaletteResources) { undeadPalettes.Add(palette); }
     }
 
     public T NextOption<T>(int direction, List<T> list, T current) {

@@ -19,5 +19,5 @@ MonoBehaviour:
   subItems:
   - {fileID: 11400000, guid: 5ac6351f891f7724ea87472bb1d4d66b, type: 2}
   - {fileID: 11400000, guid: eb208c504e1ab3e4c98279daee45932f, type: 2}
-  totalUses: 3
+  totalUses: 1
   timesUsed: 0

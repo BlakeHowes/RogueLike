@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1773118153572415346}
   - component: {fileID: -6281585937373113798}
   - component: {fileID: 5489671670705153384}
+  - component: {fileID: -3658060747447821813}
   m_Layer: 0
   m_Name: Chest
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,11 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f91be437cb3d3a04b8f6d51038d340ef, type: 2}
-  faction: 2
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 211d937a5709f4b4c8b715cabc664c73, type: 2}
-  blocksLight: 0
   maxHealthBase: 0
   armourBase: 0
   actionPointsBase: 0
@@ -89,6 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
@@ -163,28 +163,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot:
-  - item: {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
+  - item: {fileID: 11400000, guid: 73fc896a1d331d64db39350014b865cf, type: 2}
+    rarity: 1
+    pool: 0
+  - item: {fileID: 11400000, guid: 73fc896a1d331d64db39350014b865cf, type: 2}
+    rarity: 1
+    pool: 0
+  - item: {fileID: 11400000, guid: 2f79edaa7aa946144bc88353e9e0cf52, type: 2}
     rarity: 1
     pool: 1
-  - item: {fileID: 11400000, guid: abfac50f1dc37064ebdd5b3902cb5afb, type: 2}
+  - item: {fileID: 11400000, guid: ac0238c8b9c98444db9df119545cfe8f, type: 2}
     rarity: 1
     pool: 2
   - item: {fileID: 11400000, guid: a6c5ceb45ee122745918142666f37ff5, type: 2}
     rarity: 1
+    pool: 2
+  - item: {fileID: 11400000, guid: a2c57c278a8ca024aa3cc65b033a4da4, type: 2}
+    rarity: 1
+    pool: 3
+  - item: {fileID: 11400000, guid: abfac50f1dc37064ebdd5b3902cb5afb, type: 2}
+    rarity: 1
     pool: 4
-  - item: {fileID: 11400000, guid: ac0238c8b9c98444db9df119545cfe8f, type: 2}
+  - item: {fileID: 11400000, guid: 13b4bceec1561d94c95903ce2e18c39d, type: 2}
     rarity: 1
     pool: 5
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: 8d1ee927282434d4e8820da7941d45d1, type: 2}
+    rarity: 1
+    pool: 5
+  - item: {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
+    rarity: 1
+    pool: 6
+  - item: {fileID: 11400000, guid: 4383d0d4d12f2be4f806ad22e2d666bd, type: 2}
     rarity: 1
     pool: 7
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: 4383d0d4d12f2be4f806ad22e2d666bd, type: 2}
+    rarity: 1
+    pool: 7
+  - item: {fileID: 11400000, guid: 8464b4b94a14667479b60ea7b22507fc, type: 2}
+    rarity: 1
+    pool: 7
+  - item: {fileID: 11400000, guid: de9db2f2929764b48b63870a185da204, type: 2}
     rarity: 1
     pool: 8
-  - item: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
+  - item: {fileID: 11400000, guid: f03fa77f8a8296640ab425f2a6c39886, type: 2}
     rarity: 1
-    pool: 9
+    pool: 8
+  deathActions: []
   worldLootScriptable: {fileID: 0}
+  useGridCounter: 1
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +226,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &-3658060747447821813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354247380013042016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: a7bc68557744d3f48a8fc16f18b39aed, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

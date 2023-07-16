@@ -44,12 +44,12 @@ public class Push : ItemAbstract {
             targetPos = oppositeTarget;
         }
 
-        this.endPos = GridManager.i.goMethods.FirstGameObjectInSightIncludingAllies(targetPos, position);
+        this.endPos = GridManager.i.goMethods.FirstGameObjectInSight(targetPos, position);
         GridManager.i.AddToStack(this);
     }
 
     public void AreaEffect(Vector3Int position, Vector3Int origin) {
-        var positions = GridManager.i.goMethods.GameObjectsInAreaAccountingForWalls(areaSize, position);
+        var positions = GridManager.i.goMethods.PositionsInSight(areaSize, position);
         foreach(Vector3Int pos in positions) {
             if(pos == origin) { continue; }
             var line = GridManager.i.tools.BresenhamLineLength(pos.x, pos.y, origin.x, origin.y, numberOfSteps);
@@ -60,7 +60,7 @@ public class Push : ItemAbstract {
                 targetPos = oppositeTarget;
             }
 
-            this.endPos = GridManager.i.goMethods.FirstGameObjectInSightIncludingAllies(targetPos, pos);
+            this.endPos = GridManager.i.goMethods.FirstGameObjectInSight(targetPos, pos);
             this.position = pos;
             GridManager.i.AddToStack(this);
         }

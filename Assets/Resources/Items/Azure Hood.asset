@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Azure Hood
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 3571e5dd034e6df479d9e52730f9a8a2, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   equipmentType: 2
+  weight: 3
   subItems: []
   wornSprite: {fileID: 0}
   hideHair: 1
   wornOffset: {x: 0, y: 0, z: 0}
+  customDescription: 
   maxHealthBase: 0
-  armourBase: 2
+  armourBase: 20

@@ -19,9 +19,10 @@ MonoBehaviour:
   targetFaction: 0
   range: 2
   actionPointCost: 2
-  coolDown: 0
+  coolDown: 3
   CameraZoomDuration: 1
   particles: {fileID: 8288408381700605430, guid: bae04605f089029449e0d28ffc32a63d, type: 3}
+  coolDownTimer: 0
   subItems:
   - {fileID: 11400000, guid: 016d4359aed291a43873d4661bf87bf4, type: 2}
   - {fileID: 11400000, guid: 52155e18f6a8e1e48b7ce05048012ff0, type: 2}

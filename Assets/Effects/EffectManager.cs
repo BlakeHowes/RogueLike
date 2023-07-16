@@ -22,17 +22,11 @@ public class EffectManager : MonoBehaviour
         clone.GetComponent<LineEffect>().SetLine(position+ offset, origin+ offset+ weaponOriginOffset);
     }
 
-    public void CreateSingleParticleEffect(Vector3 position, GameObject partPrefab) {
-        if(partPrefab == null) { return;}
+    public GameObject CreateSingleParticleEffect(Vector3 position, GameObject partPrefab) {
+        if(partPrefab == null) { return null;}
         var clone = Instantiate(partPrefab);
         clone.transform.position = position+ offset;
-    }
-
-    public void CreateSingleParticleEffectScaled(Vector3 position, GameObject partPrefab,float scale) {
-        if (partPrefab == null) { return; }
-        var clone = Instantiate(partPrefab);
-        clone.transform.position = position + offset;
-        clone.transform.localScale = new Vector3(scale, scale, 1);
+        return clone;
     }
 
     public void AttachSingleToGO(Vector3 position, GameObject partPrefab) {

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3381531369335737433}
   - component: {fileID: 7784706712300013749}
   - component: {fileID: -4423380373258034374}
+  - component: {fileID: 3011359740961232716}
   m_Layer: 0
   m_Name: Door 1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,11 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: d1dc7f953531e9746aca94ef8997cf25, type: 2}
-  faction: 2
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 62f84d7b5400df441974c00adf260c81, type: 2}
-  blocksLight: 1
   maxHealthBase: 0
   armourBase: 0
   actionPointsBase: 0
@@ -88,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
@@ -164,3 +164,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &3011359740961232716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381531369335737414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: cf3d01958aa19014596a80d896335ca8, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

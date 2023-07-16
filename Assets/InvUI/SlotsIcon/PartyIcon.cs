@@ -29,7 +29,6 @@ public class PartyIcon : MonoBehaviour
         */
         if (!PartyManager.i.partyMemberTurnTaken.Contains(character)) {
             PartyManager.i.SetCurrentCharacter(character);
-            InventoryManager.i.UpdateInventory();
         }
     }
 

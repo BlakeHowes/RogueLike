@@ -18,7 +18,6 @@ public class CCOptions : MonoBehaviour
     public Vector3Int mainHandOffset = new Vector3Int(0, 0);
     public Vector3Int offHandOffset = new Vector3Int(0, 0);
     public Vector3Int characterOffset = new Vector3Int(31, 15, 0);
-    [HideInInspector] public bool male;
     [HideInInspector] public bool hideHelmet;
     public void SaveCharacterSpriteToFile() {
         Debug.Log("Called save");

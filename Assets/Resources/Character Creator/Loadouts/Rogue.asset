@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 11400000, guid: 3aa6f710be90c54438de26889c3007d2, type: 2}
+  helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: a32c5a68722a8b641af8048adb1de0bc, type: 2}
-  trinkets:
-  - {fileID: 11400000, guid: 551f455710f5386409803361a15350f7, type: 2}
+  trinkets: []

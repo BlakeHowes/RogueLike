@@ -9,6 +9,8 @@ public class GlobalValues : ScriptableObject
     [Header("Main")]
     public int width;
     public int height;
+    public float onHitNudgeAmount =1;
+    public float onAttackNudgeAmount =1;
 
     [Header("Test Objects")]
     public List<GameObject> partyPrefabs = new List<GameObject>();
@@ -29,8 +31,10 @@ public class GlobalValues : ScriptableObject
 
     [Header("Pathing")]
     public int maxPathLength;
+    public float stepAnimationHeight;
+    public float stepAnimationSpeed;
     [Range(0, 0.5f)] public float walkSpeed;
-    [Range(0, 0.5f)] public float repeatSpeed;
+    [Range(0, 1f)] public float repeatSpeed;
     [Range(0, 5000f)] public float Hardness;
     [Range(0, 100)] public float Dampening;
 
@@ -42,7 +46,9 @@ public class GlobalValues : ScriptableObject
     public Color enemyHightlightColour = Color.white;
     public Color passiveHightlightColour = Color.white;
     public Color interactableHightlightColour = Color.white;
+    public Color fadedColour = Color.white;
     public Material outlineMaterial;
+    public Material summonMaterial;
     public Material enemyoutlineMaterial;
     public Material normalMaterial;
     public Material hitMaterial;

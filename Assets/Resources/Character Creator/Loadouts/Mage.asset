@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39da24aab86c72740b1f20b5f61239ac, type: 3}
   m_Name: Mage
   m_EditorClassIdentifier: 
-  mainHand: {fileID: 11400000, guid: 90b09de2065fd32478312e67aee54341, type: 2}
-  offHand: {fileID: 0}
-  helmet: {fileID: 11400000, guid: 47bc7f35f961f4040bb8d57bdb146c5d, type: 2}
+  mainHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}
+  offHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}
+  helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: b50da0dfd62a2fb4683db18744192196, type: 2}
   trinkets: []

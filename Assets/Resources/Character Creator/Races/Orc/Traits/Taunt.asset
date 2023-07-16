@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
+  m_Name: Taunt
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: b5de583306bea234fa883b218266313a, type: 2}
+  position: {x: 30, y: 32, z: 0}
+  origin: {x: 30, y: 32, z: 0}
+  type: 3
+  targetFaction: 1
+  range: 4
+  actionPointCost: 2
+  coolDown: 6
+  CameraZoomDuration: 0
+  particles: {fileID: 8288408381700605430, guid: 8efa1630ca34eaa40a55575c68d0301e, type: 3}
+  subItems: []
+  statusEffects:
+  - {fileID: 11400000, guid: e51809e30cbb8ea4e8607a54fa3a374e, type: 2}
+  skillDescriptionForAI: 3
+  customDescription: 'Taunt: Enemies target this character for 2 turns'

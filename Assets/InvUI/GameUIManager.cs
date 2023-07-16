@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using static ItemStatic;
@@ -23,9 +25,10 @@ public class GameUIManager : MonoBehaviour {
     public Texture2D boarderEffectTexture;
     public GameObject enemyInCombatUI;
     public Color notInRangeColour;
-    public GlobalValues globalValues;
+    private GlobalValues globalValues;
     public void Awake() {
         i = this;
+        globalValues = Manager.GetGlobalValues();
         coinsText.text = coins.ToString();
     }
 
@@ -40,6 +43,7 @@ public class GameUIManager : MonoBehaviour {
         if (!MouseManager.i.itemSelected) {
             groundUI.ClearAllTiles();
         }
+        ResetGos();
         uiTilemap.ClearAllTiles();
         if (!FloorManager.i.IsWalkable(position)) { HideHighlight(); return; }
         var origin = PartyManager.i.GetCurrentTurnCharacter().Position();
@@ -52,9 +56,9 @@ public class GameUIManager : MonoBehaviour {
                 uiTilemap.SetColor(position, globalValues.partyHightlightColour);
             }
             else {
-                if(character.GetComponent<Stats>().faction == PartyManager.Faction.Interactable) { uiTilemap.SetColor(position, globalValues.interactableHightlightColour); }
-                if (character.GetComponent<Stats>().faction == PartyManager.Faction.Passive) { uiTilemap.SetColor(position, globalValues.passiveHightlightColour); }
-                if (character.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+                if(character.tag == "Interactable") { uiTilemap.SetColor(position, globalValues.interactableHightlightColour); }
+                if (character.tag == "Passive") { uiTilemap.SetColor(position, globalValues.passiveHightlightColour); }
+                if (character.tag == "Enemy") {
                     uiTilemap.SetColor(position, globalValues.enemyHightlightColour);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
                     inventory.CallEquipment(origin, origin, Signal.CalculateStats);
@@ -70,13 +74,26 @@ public class GameUIManager : MonoBehaviour {
         }
     }
 
+    public void ResetGos() {
+        foreach(Transform go in GridManager.i.gameObject.transform) {
+            go.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+    }
+
     public void ShowRange(Vector3Int position,int range) {
         groundUI.ClearAllTiles();
         var cells =CreateRange(position, range);
         var goMethods = GridManager.i.goMethods;
+        //FadeGos();
         foreach (Vector3Int cell in cells) {
-            var hit =goMethods.FirstLightBlockingThingInSight(cell,position );
-            if(cell == hit) {
+            var gameobject = cell.GameObjectGo();
+            if (gameobject) {
+                if (gameobject.tag == "Enemy") {
+                    gameobject.GetComponent<SpriteRenderer>().color = globalValues.fadedColour;
+                }
+
+            }
+            if(goMethods.IsInSight(cell,position)) {
                 groundUI.SetTile(cell, globalValues.rangeTile);
                 var go = cell.GameObjectGo();
 
@@ -94,26 +111,6 @@ public class GameUIManager : MonoBehaviour {
             cells = GridManager.i.tools.Circle(range, position);
         }
         return cells;
-    }
-
-    public void AddSkill(ItemAbstract skill) {
-        if (PartyManager.i.currentCharacter.GetComponent<Inventory>().skills.Contains(skill)){ return; }
-        var clone = Instantiate(globalValues.skillSlotPrefab, skillLayout.transform);
-        clone.GetComponent<SkillSlot>().AddSkill(skill);
-    }
-
-    public void CreateSkills() {
-        foreach(Transform child in skillLayout.transform) {
-            Destroy(child.gameObject);
-        }
-        var currentCharacter = PartyManager.i.currentCharacter;
-        if (!currentCharacter) { return; }
-        var position = currentCharacter.Position();
-        var inventory = currentCharacter.GetComponent<Inventory>();
-        foreach (ItemAbstract skill in inventory.skills) {
-            AddSkill(skill);
-        }
-        inventory.CallEquipment(position, position, Signal.CreateSkill);
     }
 
     public void ShowGameOverUI() {
@@ -153,18 +150,6 @@ public class GameUIManager : MonoBehaviour {
             if (partyicon.GetCharacter() == PartyManager.i.currentCharacter) {
                 partyicon.EnableHighlight();
             }
-        }
-    }
-
-    public void ShowSight(Vector3Int position) {
-        uiTilemap.ClearAllTiles();
-
-        List<Vector3Int> cells = new List<Vector3Int>();
-        Vector3Int playerpos = PartyManager.i.currentCharacter.Position();
-        position =GridManager.i.goMethods.FirstGameObjectInSight(position, playerpos);
-        cells = GridManager.i.tools.BresenhamLine(playerpos.x, playerpos.y, position.x, position.y);
-        foreach (Vector3Int cell in cells) {
-            uiTilemap.SetTile(cell, globalValues.mouseHighlight);
         }
     }
 

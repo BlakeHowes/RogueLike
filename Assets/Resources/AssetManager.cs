@@ -9,7 +9,6 @@ public class AssetManager {
     List<ItemAbstract> items = new List<ItemAbstract>();
     List<GameObject> gos = new List<GameObject>();
     List<GameObject> characters = new List<GameObject>();
-    List<GameObject> walls = new List<GameObject>();
     public AssetManager() {
         //LOAD RESOURCES
         var mechResources = Resources.LoadAll<MechAbstract>("Mechs");
@@ -30,12 +29,8 @@ public class AssetManager {
         }
 
         foreach (GameObject go in gos) {
-            var faction = go.GetComponent<Stats>().faction;
-            if (faction == PartyManager.Faction.Enemy|| faction==PartyManager.Faction.Party)
+            if (go.tag == "Enemy"|| go.tag == "Party")
                 characters.Add(go);
-
-            if (faction == PartyManager.Faction.Wall)
-                walls.Add(go);
         }
     }
 
@@ -88,15 +83,6 @@ public class AssetManager {
     public bool IsCharacter(TileBase tile) {
         foreach(var character in characters) {
             if(character.GetComponent<Stats>().tile == tile) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public bool IsWall(TileBase tile) {
-        foreach (var character in walls) {
-            if (character.GetComponent<Stats>().tile == tile) {
                 return true;
             }
         }

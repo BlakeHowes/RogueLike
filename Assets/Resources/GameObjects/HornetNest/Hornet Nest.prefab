@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 1527939879136044633}
   - component: {fileID: 7725340996476457758}
   - component: {fileID: -6458167198531556051}
+  - component: {fileID: 3570489964518934826}
   m_Layer: 0
   m_Name: Hornet Nest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,13 +73,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01182c341ade22e42b593edbe453fc88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
-  stats: {fileID: 0}
   sightRange: 12
   itemActions:
   - {fileID: 11400000, guid: 4fc5470fb9e53e74894b215be679ba88, type: 2}
+  targetsTags: 0
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,10 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 6565ad6488c3daf4ab2d7d895326d2eb, type: 2}
-  faction: 1
   state: 0
   deathAction: []
-  blocksLight: 1
   maxHealthBase: 20
   armourBase: 0
   actionPointsBase: 1
@@ -108,11 +105,14 @@ MonoBehaviour:
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
+  armour: 0
   health: 20
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
+  setInactiveOnDeath: 1
+  healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &3243932232630802516
 MonoBehaviour:
@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   traits: []
+  skills: []
   statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}
@@ -137,7 +138,6 @@ MonoBehaviour:
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
-  maxItems: 10
 --- !u!212 &1527939879136044633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -203,6 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loot: []
+  deathActions: []
+  worldLootScriptable: {fileID: 0}
+  useGridCounter: 0
 --- !u!114 &-6458167198531556051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,3 +220,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damping: 15
   Stiffness: 1000
+  healthbar: {fileID: 0}
+--- !u!114 &3570489964518934826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243932232630802507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 7995a24dfce8bae42840af19a8d50dc2, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

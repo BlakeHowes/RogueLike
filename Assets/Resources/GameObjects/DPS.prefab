@@ -99,9 +99,10 @@ GameObject:
   - component: {fileID: 7475694374052512725}
   - component: {fileID: 7361458235895569522}
   - component: {fileID: 7629002255616256650}
+  - component: {fileID: 8332047225563349412}
   m_Layer: 0
   m_Name: DPS
-  m_TagString: Untagged
+  m_TagString: Party
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +138,7 @@ MonoBehaviour:
   race: {fileID: 11400000, guid: e05c2117d6427d54eafac946af553c90, type: 2}
   body: {fileID: 21300000, guid: 5221153a3be5c254cb032f45c05d32b5, type: 3}
   bodyPalette: {fileID: 11400000, guid: 98e785825e68b53428bb2bada0420695, type: 2}
-  hair: {fileID: 21300000, guid: f66c12cd7b9c8094da0117d061d31f3c, type: 3}
+  hair: {fileID: 21300000, guid: 3800d6c765ff7644686f6822c3f23089, type: 3}
   hairPalette: {fileID: 11400000, guid: 62dc1691ad3f43e4580df62feda76206, type: 2}
   loadout: {fileID: 11400000, guid: ac1d78cf39722fa4babe37acd6d4b399, type: 2}
   face: {fileID: 21300000, guid: 44c4ec38c9638cb4abca01be68f6f9bd, type: 3}
@@ -145,8 +146,10 @@ MonoBehaviour:
   feature: {fileID: 0}
   featurePalette: {fileID: 0}
   headOffset: {x: 1, y: 18, z: 0}
+  mainHandOffset: {x: 0, y: 0, z: 0}
+  offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
-  male: 0
+  hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,11 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
-  faction: 0
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
-  blocksLight: 0
   maxHealthBase: 100
   armourBase: 0
   actionPointsBase: 4
@@ -204,6 +205,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f773b7fec30eb2f4eb30425057da19b1, type: 2}
   - {fileID: 11400000, guid: da9f73165fad19d4cad4975ffbbcf2a5, type: 2}
   - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
+  skills: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
   offHand: {fileID: 0}
@@ -225,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bd0686b0e88ed47b6f3f58e6160a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetsTags: 2
 --- !u!212 &7361458235895569522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -266,7 +269,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 469cda545b30c564a862a3a02313e338, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce5d66527d8f35248bd8c25530d39b97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -292,3 +295,19 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+--- !u!114 &8332047225563349412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780645703283991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: b0f6f682eee439e4faeae06aa5658831, type: 3}
+  position: 0
+  direction: 0
+  tooltip: 

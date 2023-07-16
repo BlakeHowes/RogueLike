@@ -9,7 +9,9 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager i;
     public GameObject inventoryLayout;
     public GameObject equipmentLayout;
-
+    public GameObject skillLayout;
+    public List<ItemAbstract> skills = new List<ItemAbstract>();
+    Inventory currentInventory;
     public void Awake() {
         i = this;
     }
@@ -74,8 +76,23 @@ public class InventoryManager : MonoBehaviour
             i++;
         }
     }
+    public void UpdateSkillSlots(Inventory inventory) {
+        int i = 0;
+        int skillsLength = inventory.skills.Count;
+        foreach (Transform slot in skillLayout.transform) {
+            if (i < skillsLength) {
+                var skill = inventory.skills[i];
+                if (!skill) { continue; }
+                slot.GetComponent<SkillSlot>().AddSkill(skill);
+                slot.gameObject.SetActive(true);
+            }
+            else { slot.gameObject.SetActive(false); }
+            i++;
+        }
+    }
 
-    public void UpdateInventory() {
+
+    public void UpdateInventory(Vector3Int position) {
         var character = PartyManager.i.currentCharacter;
         var inventory = character.GetComponent<Inventory>();
         UpdateEquipmentSlots(inventory);
@@ -83,7 +100,22 @@ public class InventoryManager : MonoBehaviour
         UpdateInvetorySlots(inventory);
         CharacterSpriteGenerator.CreateCharacterSprite(character);
         GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
-        GameUIManager.i.CreateSkills();
+        CreateSkills(inventory,position);
+    }
+
+    public void AddSkill(ItemAbstract skill) {
+        currentInventory.skills.Add(skill);
+    }
+
+    public void CreateSkills(Inventory inventory, Vector3Int position) {
+        inventory.skills.Clear();
+        currentInventory = inventory;
+        inventory.CallEquipment(position, position, ItemStatic.Signal.CreateSkill);
+        UpdateSkillSlots(inventory);
+        foreach(var item in inventory.traits) {
+            if (inventory.skills.Contains(item)) { continue; }
+            inventory.skills.Add(item);
+        }
     }
 
     public ItemAbstract GetWeaponOrSkill(Vector3Int position) {

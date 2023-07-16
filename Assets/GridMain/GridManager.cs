@@ -39,7 +39,7 @@ public class GridManager : MonoBehaviour {
 
     public List<ItemAbstract> itemsInActionStack = new List<ItemAbstract>();
     public bool enumeratingStack;
-
+    public int lootCounter = 1;
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
@@ -78,11 +78,11 @@ public class GridManager : MonoBehaviour {
                 position.y = y;
                 GameObject character = goGrid[x, y];
                 if (character) {
-                    character.TryGetComponent<PandaBehaviour>(out PandaBehaviour behaviour);
-                    if (behaviour) {
-                        var state = behaviour.GetComponent<Stats>().state;
+                    character.TryGetComponent<PandaBehaviour>(out PandaBehaviour panda);
+                    if (panda) {
+                        var state = panda.GetComponent<Stats>().state;
                         if (state == PartyManager.State.Idle)
-                            behaviour.tickOn = BehaviourTree.UpdateOrder.Update;
+                            panda.tickOn = BehaviourTree.UpdateOrder.Update;
                     }
                     CallTickAndStartOfTurn(position, character.GetComponent<Inventory>(), currentCharacter, character.GetComponent<Stats>().state);
                 }
@@ -109,6 +109,7 @@ public class GridManager : MonoBehaviour {
         MouseManager.i.disableMouse = true;
         if (itemsInActionStack.Count == 0) { EndStack(); return; }
         enumeratingStack = true;
+        Debug.Log(itemsInActionStack.Count);
         StartCoroutine(Stack());
     }
 
@@ -132,13 +133,20 @@ public class GridManager : MonoBehaviour {
         var currentCharacter = PartyManager.i.currentCharacter;
         enumeratingStack = false;
         if (!currentCharacter) { return; }
-        if (currentCharacter.GetComponent<Stats>().faction == PartyManager.Faction.Enemy) {
+        if (!PartyManager.i.party.Contains(currentCharacter)) {
             return;
         }
         foreach (var party in PartyManager.i.party) {
             if (party) { party.GetComponent<NPCSearch>().Search(); }
         }
+        if (currentCharacter.tag == "Summon" && currentCharacter.activeSelf) {
+            MouseManager.i.EndOfActionFinal();
+            UpdateGame();
+            return;
+        }
         MouseManager.i.disableMouse = false;
+
+
         MouseManager.i.EndOfActionFinal();
         UpdateGame();
     }
@@ -151,8 +159,8 @@ public class GridManager : MonoBehaviour {
             if (PartyManager.i.party.Contains(currentCharacter)) {
                 InstantiateGosMechsSurfacesAroundCharacters();
                 GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
+                InventoryManager.i.UpdateInventory(currentCharacter.Position());
             }
-            InventoryManager.i.UpdateInventory();
         }
 
         ClearSemiFog();
@@ -160,21 +168,12 @@ public class GridManager : MonoBehaviour {
     }
 
     public void AddToStack(ItemAbstract item) {
+        Debug.Log(item.name + Time.deltaTime);
         itemsInActionStack.Add(Instantiate(item));
     }
 
     public void InsertToStack(ItemAbstract item) {
         itemsInActionStack.Insert(0, Instantiate(item));
-    }
-
-
-    public ItemAbstract ParentInStack(ItemAbstract item) {
-        bool found = false;
-        foreach (ItemAbstract itemInStack in itemsInActionStack) {
-            if (itemInStack == item) { found = true; continue; }
-            if (found) { if (itemInStack is Weapon || itemInStack is Skill || item is Item) return itemInStack; }
-        }
-        return null;
     }
 
     public void ClearInactiveGameObjects() {
@@ -201,6 +200,8 @@ public class GridManager : MonoBehaviour {
                     if (stats == null || character.activeSelf == false) { continue; }
                     var pos =goMethods.FindFloodFillCellForGo(position, character);
                     goMethods.SetGameObject(pos, character);
+                    stats.InitializeCharacter();
+                    stats.RefreshCharacter(pos);
                     character.transform.position = pos + new Vector3(0.5f,0.5f);
                     PartyManager.i.AddPartyMember(character);
                 }
@@ -210,6 +211,7 @@ public class GridManager : MonoBehaviour {
         DebugSpawn:
         foreach (GameObject character in globalValues.partyPrefabs) {
             var clone = goMethods.SpawnFloodFill(position, character);
+            clone.GetComponent<Stats>().RefreshCharacter(position);
             PartyManager.i.AddPartyMember(clone);
             clone.transform.parent = null;
         }

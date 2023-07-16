@@ -82,10 +82,6 @@ static class ExtensionMethods
         return itemMethods.FloodFillDropItems(position, origin, items);
     }
 
-    public static Vector3Int RayCast(this Vector3Int hit,Vector3Int position, Vector3Int origin) {
-        return goMethods.FirstGameObjectInSight(position, origin);
-    }
-
     public static bool InBounds(this Vector3Int position) {
         return GridManager.i.tools.InBounds(position);
     }
