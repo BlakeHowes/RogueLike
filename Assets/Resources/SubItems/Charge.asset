@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Charge
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
+  position: {x: 26, y: 33, z: 0}
+  origin: {x: 26, y: 33, z: 0}
   range: 5
   actionPointCost: 1
-  speed: 0.03
+  speed: 6
+  damageSubItem: {fileID: 11400000, guid: c66a473d65383104ab531d8850052038, type: 2}
+  parentGO: {fileID: 0}

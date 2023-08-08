@@ -60,8 +60,6 @@ static class ExtensionMethods
         return goMethods.FindGameObjectOnGrid(gameobject);
     }
 
-
-
     public static List<Vector3Int> Circle(this Vector3Int position,int radius) {
         return tools.Circle(radius, position);
     }
@@ -74,12 +72,12 @@ static class ExtensionMethods
         return itemMethods.GetItemOrSpawnFromTile(position);
     }
 
-    public static Vector3Int Drop(this ItemAbstract item,Vector3Int position) {
-        return itemMethods.FloodFillDropSingle(position,item);
+    public static Vector3Int Drop(this ItemAbstract item,Vector3Int position,bool setItem) {
+        return itemMethods.FloodFillDropItem(position,setItem,item);
     }
 
     public static float Drop(this List<ItemAbstract> items, Vector3Int position, Vector3Int origin) {
-        return itemMethods.FloodFillDropItems(position, origin, items);
+        return itemMethods.FloodFillDropItem(position, origin, items);
     }
 
     public static bool InBounds(this Vector3Int position) {
@@ -88,5 +86,11 @@ static class ExtensionMethods
 
     public static bool InMeleeRange(this Vector3Int position,Vector3Int origin) {
         return GridManager.i.tools.InMeeleeRange(position,origin);
+    }
+
+    public static bool InRange(this Vector3Int position, Vector3Int origin,int range) {
+        var positions =goMethods.PositionsInSight(range, origin);
+        if (positions.Contains(position)) { return true; }
+        return false;
     }
 }

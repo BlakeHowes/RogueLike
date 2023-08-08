@@ -20,6 +20,7 @@ MonoBehaviour:
   weight: 0
   subItems:
   - {fileID: 11400000, guid: 215f3b6ae55e6c545b04f38f4403822e, type: 2}
+  - {fileID: 11400000, guid: bad921f3c8bc0a642963f5830ca0e05a, type: 2}
   wornSprite: {fileID: 0}
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}

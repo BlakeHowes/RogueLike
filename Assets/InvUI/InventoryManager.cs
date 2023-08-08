@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryLayout;
     public GameObject equipmentLayout;
     public GameObject skillLayout;
+    public GameObject bagLayout;
     public List<ItemAbstract> skills = new List<ItemAbstract>();
     Inventory currentInventory;
     public void Awake() {
@@ -38,14 +39,15 @@ public class InventoryManager : MonoBehaviour
 
     public void CheckHideOffhand(Inventory inventory) {
         if (!inventory.mainHand) { equipmentLayout.transform.GetChild(1).gameObject.SetActive(true); return; }
-        if (inventory.mainHand) {
-            var weapon = inventory.mainHand as Weapon;
-            if (!weapon.twoHanded) {
+
+        var mainHand = inventory.GetMainHandAsWeapon();
+        if (mainHand) {   
+            if (!mainHand.twoHanded) {
                 equipmentLayout.transform.GetChild(1).gameObject.SetActive(true);
                 return;
             }
             if (inventory.offHand) { equipmentLayout.transform.GetChild(1).GetComponent<EquipmentSlot>().RemoveItem(inventory); }
-            equipmentLayout.transform.GetChild(1).gameObject.SetActive(false);
+            //equipmentLayout.transform.GetChild(1).gameObject.SetActive(false);
         }
     }
 
@@ -76,31 +78,41 @@ public class InventoryManager : MonoBehaviour
             i++;
         }
     }
-    public void UpdateSkillSlots(Inventory inventory) {
+
+    public void UpdateSkillSlotGraphics() {
+        foreach (Transform slot in skillLayout.transform) {
+            slot.gameObject.GetComponent<SkillSlot>().UpdateGraphic();
+        }
+    }
+
+    public void CreateSkillSlots(Inventory inventory) {
         int i = 0;
         int skillsLength = inventory.skills.Count;
+    
         foreach (Transform slot in skillLayout.transform) {
+            var skillSlot = slot.GetComponent<SkillSlot>();
             if (i < skillsLength) {
                 var skill = inventory.skills[i];
                 if (!skill) { continue; }
-                slot.GetComponent<SkillSlot>().AddSkill(skill);
+                skillSlot.AddSkill(skill as Skill);
                 slot.gameObject.SetActive(true);
             }
-            else { slot.gameObject.SetActive(false); }
+            else { skillSlot.ResetGraphic(); }
             i++;
         }
     }
 
 
-    public void UpdateInventory(Vector3Int position) {
+    public void UpdateInventory() { //THIS HAPPENS A LOT
         var character = PartyManager.i.currentCharacter;
         var inventory = character.GetComponent<Inventory>();
+        var position = character.Position();
         UpdateEquipmentSlots(inventory);
         CheckHideOffhand(inventory);
         UpdateInvetorySlots(inventory);
-        CharacterSpriteGenerator.CreateCharacterSprite(character);
+        //CharacterSpriteGenerator.CreateCharacterSprite(character);
         GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
-        CreateSkills(inventory,position);
+        CreateSkills(inventory,position); //THIS HAPPENS A LOT
     }
 
     public void AddSkill(ItemAbstract skill) {
@@ -111,18 +123,10 @@ public class InventoryManager : MonoBehaviour
         inventory.skills.Clear();
         currentInventory = inventory;
         inventory.CallEquipment(position, position, ItemStatic.Signal.CreateSkill);
-        UpdateSkillSlots(inventory);
+        CreateSkillSlots(inventory);
         foreach(var item in inventory.traits) {
             if (inventory.skills.Contains(item)) { continue; }
             inventory.skills.Add(item);
         }
-    }
-
-    public ItemAbstract GetWeaponOrSkill(Vector3Int position) {
-        if (MouseManager.i.itemSelected) { return MouseManager.i.itemSelected; }
-        var go = position.GameObjectGo();
-        if (!go) { return null; }
-        var item = go.GetComponent<Inventory>().mainHand;
-        return item;
     }
 }

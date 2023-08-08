@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Split
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: e362431f5c0a1654f83ab2966e5773e8, type: 2}
-  position: {x: 29, y: 32, z: 0}
-  origin: {x: 29, y: 32, z: 0}
-  type: 2
-  targetFaction: 0
-  range: 1
+  position: {x: 26, y: 33, z: 0}
+  origin: {x: 26, y: 33, z: 0}
+  type: 3
+  targetsTags: 1
+  range: 0
   actionPointCost: 2
-  coolDown: 11
+  coolDown: 10
   CameraZoomDuration: 0
   particles: {fileID: 0}
-  coolDownTimer: 0
   subItems:
   - {fileID: 11400000, guid: e7314bbe0ed94b3429d4c89bf226cf41, type: 2}
   statusEffects: []
-  skillDescriptionForAI: 0
   customDescription: Split off a clone during Combat
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

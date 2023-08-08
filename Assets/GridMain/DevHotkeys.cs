@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DevHotkeys : MonoBehaviour
 {
+    public bool suspendStack;
+    public static DevHotkeys i;
+    public void Awake() {
+        i = this;
+    }
+
     public void Update() {
         if (Input.GetKeyDown(KeyCode.Z)) {
             foreach(GameObject go in PartyManager.i.party) {
@@ -13,6 +19,12 @@ public class DevHotkeys : MonoBehaviour
                 stats.actionPoints = 10;
                 stats.actionPointsBase = 10;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.A)) {
+            Debug.Log("Toggle stack");
+            suspendStack = !suspendStack;
+            if(suspendStack == false) { GridManager.i.StartStack(); }
         }
 
         if (Input.GetKeyDown(KeyCode.C)) {

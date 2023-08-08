@@ -19,19 +19,18 @@ public class Equipment : ItemAbstract {
     public int maxHealthBase;
     public int armourBase;
 
-    public override void Call(Vector3Int position, Vector3Int origin,Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal, GameObject parentGO, ItemAbstract parentItem) {
         foreach (ItemAbstract item in subItems) {
-            item.Call(position, origin, signal);
+            item.Call(position, origin, signal, parentGO, this);
         }
-        var originCharacter = origin.GameObjectSpawn();
-        if (originCharacter == null) { return; }
+        if (parentGO == null) { return; }
 
 
         if (signal != Signal.CalculateStats) { return; }
-        var stats = originCharacter.GetComponent<Stats>();
+        var stats = parentGO.GetComponent<Stats>();
         stats.maxHealthTemp += maxHealthBase;
         stats.armourTemp += armourBase;
-        WeightClass( originCharacter);
+        WeightClass(parentGO);
     }
 
     public void WeightClass(GameObject originCharacter) {

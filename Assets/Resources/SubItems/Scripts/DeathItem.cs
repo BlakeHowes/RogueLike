@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "Death Item", menuName = "Mods/Death Item")]
+[CreateAssetMenu(fileName = "Death Item", menuName = "SubItems/Death Item")]
 public class DeathItem : ItemAbstract {
     public GameObject gameobject;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal == Signal.Death) {
             gameobject = position.GameObjectGo();
             GridManager.i.AddToStack(this);

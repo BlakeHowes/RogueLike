@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Shop
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 54d4edcf16da84f4994015ea3b27dbdb, type: 2}
+  priceUIPrefab: {fileID: 7035049863777682305, guid: 69c0a2faa8377b548a581dc8196c06ad, type: 3}

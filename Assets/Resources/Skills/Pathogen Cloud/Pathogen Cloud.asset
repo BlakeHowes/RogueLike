@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
+  m_Name: Pathogen Cloud
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 77e1d95bc328d59419b5f950071b844c, type: 2}
+  position: {x: 28, y: 33, z: 0}
+  origin: {x: 28, y: 33, z: 0}
+  type: 4
+  targetsTags: 3
+  range: 3
+  actionPointCost: 2
+  coolDown: 4
+  CameraZoomDuration: 1
+  particles: {fileID: 8288408381700605430, guid: eb80aba475370c247af190d39bf1bc79, type: 3}
+  useParticlesInWholeArea: 1
+  subItems:
+  - {fileID: 11400000, guid: fe6650429cf8cf14a9f61e44e25fa014, type: 2}
+  statusEffects:
+  - {fileID: 11400000, guid: 52151cbb5af8530409f22724562e48bc, type: 2}
+  customDescription: Spread Disease
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

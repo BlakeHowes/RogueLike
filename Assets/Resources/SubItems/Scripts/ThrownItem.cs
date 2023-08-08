@@ -6,7 +6,7 @@ using static ItemStatic;
 public class ThrownItem : ItemAbstract {
     public GameObject particles;
     public ItemAbstract item;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         this.position = position;
         this.origin = origin;
         GridManager.i.AddToStack(this);
@@ -14,7 +14,7 @@ public class ThrownItem : ItemAbstract {
     public override IEnumerator Action() {
         var gridManager = GridManager.i;
         var landPosTarget = gridManager.goMethods.ThrownItemLocation(position, origin);
-        var landedPosition = item.Drop(landPosTarget);
+        var landedPosition = item.Drop(landPosTarget, true);
         Debug.Log(landedPosition + "Landed");
         var character = position.GameObjectGo();
         var timeTaken = gridManager.graphics.TimeFromSpeed(position, origin, 0.027f);

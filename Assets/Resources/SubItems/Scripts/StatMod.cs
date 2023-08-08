@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "StatMod", menuName = "Mods/StatMod")]
+[CreateAssetMenu(fileName = "StatMod", menuName = "SubItems/StatMod")]
 public class StatMod : ItemAbstract {
     public GameObject particles;
     public int damage;
@@ -14,7 +14,6 @@ public class StatMod : ItemAbstract {
     public int armour;
     public int actionPoints;
     public int throwingRange;
-    public int fistDamage;
     public int walkCost;
     public int enemyAlertRange;
     public int skillRange;
@@ -25,7 +24,7 @@ public class StatMod : ItemAbstract {
     public bool originBecomesPosition = true;
     public bool targetSelf;
     public string customDescription;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if (signal == Signal.SetTarget) { target = position.GameObjectGo(); return; }
         if (signal != onSignal) { return; }
 
@@ -36,13 +35,12 @@ public class StatMod : ItemAbstract {
         if (originBecomesPosition) {
             origin = position;
         }
-        var character = origin.GameObjectGo();
-        if (!character) { return; }
-        var stats = origin.GameObjectGo().GetComponent<Stats>();
-        var mainHand = origin.GameObjectGo().GetComponent<Inventory>().mainHand;
+        if (!parentGO) { return; }
+        var stats = parentGO.GetComponent<Stats>();
+        var mainHand = parentGO.GetComponent<Inventory>().mainHand;
         Weapon mainHandWeapon = null;
         if (mainHand) { mainHandWeapon = mainHand as Weapon; }
-        var offHand = origin.GameObjectGo().GetComponent<Inventory>().offHand;
+        var offHand = parentGO.GetComponent<Inventory>().offHand;
         Weapon offHandWeapon = null;
         if (offHand) { 
             if(offHand is Weapon) {
@@ -91,7 +89,6 @@ public class StatMod : ItemAbstract {
         if (armour != 0) { stats.armour += armour; }
         if (actionPoints != 0) { stats.actionPoints += actionPoints; }
         if (throwingRange != 0) { stats.throwingRangeTemp += throwingRange; }
-        if (fistDamage != 0) { stats.fistDamageTemp += fistDamage; }
         if (walkCost != 0) { stats.walkCostTemp += walkCost; }
         if (enemyAlertRange != 0) { stats.enemyAlertRangeTemp += enemyAlertRange; }
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
@@ -110,7 +107,6 @@ public class StatMod : ItemAbstract {
         if (armour != 0) { description += armour + " Armour\n"; }
         if (actionPoints != 0) { description += actionPoints + " Base AP\n"; }
         if (throwingRange != 0) { description += throwingRange + " Throwing Range\n"; }
-        if (fistDamage != 0) { description += fistDamage + " Fist Damage\n"; }
         if (walkCost != 0) { description += walkCost + " Walk Cost\n"; }
         if (enemyAlertRange != 0) { description += enemyAlertRange + " Enemy Alert Range\n"; }
         if (skillRange != 0) { description += skillRange + " Skill Range\n"; }

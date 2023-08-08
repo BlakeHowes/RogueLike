@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Push
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
-  position: {x: 38, y: 34, z: 0}
-  origin: {x: 0, y: 0, z: 0}
+  position: {x: 28, y: 37, z: 0}
+  origin: {x: 28, y: 33, z: 0}
   direction: 1
   numberOfSteps: 2
-  speed: 0.03
+  speed: 7
   target: 1
   areaSize: 4
-  endPos: {x: 38, y: 34, z: 0}
+  endPos: {x: 28, y: 39, z: 0}
   damage: 10
   onSignal: 9
-  doDamage: {fileID: 11400000, guid: eb433dd975068184c95c7cf849c9aeb9, type: 2}
   time: 0
+  damageSubItem: {fileID: 11400000, guid: b65da306317014d4191ecbed2cba605d, type: 2}
+  parentGO: {fileID: 0}

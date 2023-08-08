@@ -41,18 +41,22 @@ public class PathingManager : MonoBehaviour
 
     public void SwapPlacesInstant(Vector3Int position, Vector3Int origin) {
         var targetGO = position.GameObjectGo();
-        if (targetGO == PartyManager.i.currentCharacter) {
-            return;
-        }
+        if(position == origin) { return; }
         var originGO = origin.GameObjectGo();
         var positionGO = position.GameObjectGo();
-        originGO.transform.position = position + new Vector3(0.5f, 0.5f);
-        positionGO.transform.position = origin + new Vector3(0.5f, 0.5f);
+        if (originGO == null || positionGO == null) { return; }
+
         FlipCharacter(originGO, position, origin);
         GridManager.i.goMethods.RemoveGameObject(origin);
         GridManager.i.goMethods.RemoveGameObject(position);
         GridManager.i.goMethods.SetGameObject(origin, targetGO);
         GridManager.i.goMethods.SetGameObject(position, originGO);
+        originGO.GetComponent<SpringToTarget3D>().StopAllCoroutines();
+        positionGO.GetComponent<SpringToTarget3D>().StopAllCoroutines();
+        originGO.transform.position = position + new Vector3(0.5f, 0.5f);
+        positionGO.transform.position = origin + new Vector3(0.5f, 0.5f);
+        originGO.GetComponent<SpringToTarget3D>().spring.Reset();
+        positionGO.GetComponent<SpringToTarget3D>().spring.Reset();
     }
 
     public void SwapPlacesSpring(Vector3Int position, Vector3Int origin) {
@@ -133,17 +137,43 @@ public class PathingManager : MonoBehaviour
         return false;
     }
 
-    public void Jump(Vector3Int endPosition, Vector3Int startPosition,float speed) {
+    public float Jump(Vector3Int endPosition, Vector3Int startPosition,float speed) {
+        if (endPosition.GameObjectSpawn() != null) { return 0; }
+        var character = startPosition.GameObjectSpawn();
+        if (character == null) { return 0; }
+
+        character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, speed * 100);
+        GridManager.i.goMethods.RemoveGameObject(startPosition);
+        GridManager.i.goMethods.SetGameObject(endPosition, character);
+        FlipCharacter(character, endPosition, startPosition);
+
+        var travelTime = Vector3.Distance(startPosition, endPosition) /14f;
+        return travelTime;
+    }
+
+    public void Roll(Vector3Int endPosition, Vector3Int startPosition, float speed) {
         if (endPosition.GameObjectSpawn() == null) {
             var character = startPosition.GameObjectSpawn();
-            if(character == null) {
-                return;
-            }
-            StartCoroutine(GridManager.i.graphics.LerpPosition(startPosition, endPosition, character, speed));
+            if (character == null) { return; }
+            character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
+            StartCoroutine(GridManager.i.graphics.RollToPosition(startPosition, endPosition, character, speed));
             GridManager.i.goMethods.RemoveGameObject(startPosition);
             GridManager.i.goMethods.SetGameObject(endPosition, character);
             FlipCharacter(character, endPosition, startPosition);
         }
+    }
+
+    public Vector3Int Teleport(Vector3Int endPosition, Vector3Int startPosition) {
+        var character = startPosition.GameObjectSpawn();
+
+        GridManager.i.goMethods.RemoveGameObject(startPosition);
+        var pos =GridManager.i.goMethods.FindFloodFillCellForGo(endPosition);
+        GridManager.i.goMethods.SetGameObject(pos, character);
+        if (!character) { return pos; }
+        FlipCharacter(character, pos, startPosition);
+        character.transform.position = endPosition + new Vector3(0.5f, 3f);
+        character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, 800);
+        return pos;
     }
 
     public bool IsPathable(Vector3Int position, Vector3Int origin) {

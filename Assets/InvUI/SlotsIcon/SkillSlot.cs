@@ -6,39 +6,66 @@ using UnityEngine.UI;
 
 public class SkillSlot : MonoBehaviour
 {
-    public ItemAbstract skill;
+    public Skill skill;
+    public Color defaultColour;
+    public Sprite defaultSprite;
+    private Image image;
+
+    public int coolDown() {
+        if (!skill) { return 0; }
+        return PartyManager.i.currentCharacter.GetComponent<Inventory>().GetCoolDown(skill);
+    }
     public void SelectSkill() {
+        if (!skill) { return; }
+        if(coolDown() > 0) { return; }
         MouseManager.i.itemSelected = skill;
         var currentCharacter = PartyManager.i.currentCharacter;
         var postion = currentCharacter.Position();
         var stats = currentCharacter.GetComponent<Stats>();
         stats.RefreshCharacter(postion);
-        var genericSkill = skill as Skill;
-        if(genericSkill.actionPointCost > stats.actionPoints) { MouseManager.i.itemSelected = null; return; }
+        if(skill.actionPointCost > stats.actionPoints) { MouseManager.i.itemSelected = null; return; }
         GameUIManager.i.ShowRange(postion, currentCharacter.GetComponent<Stats>().skillRangeTemp);
     }
 
-    public void AddSkill(ItemAbstract skill) {
-        this.skill = skill;
-        if (skill == null) { Debug.LogError("SKILL IS NULL"); return; }
-        var image = GetComponent<Image>().sprite;
-        if (skill.tile != null) { 
-            GetComponent<Image>().sprite = skill.tile.sprite; }
-        else { GetComponent<Image>().sprite = Manager.GetGlobalValues().defaultSkillSprite; }
+    public void OnEnable() {
+        image = GetComponent<Image>();  
+    }
 
-        var genericSkill = skill as Skill;
+    public void ResetGraphic() {
+        image.color = defaultColour;
+        image.sprite = defaultSprite;
         var coolDownNumber = transform.Find("coolDownNumber");
-        if(genericSkill.coolDownTimer > 0){
+        coolDownNumber.GetComponent<TextMeshProUGUI>().text = "";
+        skill = null;
+    }
+
+    public void UpdateGraphic() {
+        if (!skill) { return; }
+        if(coolDown() > 0) { image.color = defaultColour;}
+    }
+
+    public void AddSkill(Skill skill) {
+        if (skill == null) { Debug.LogError("SKILL IS NULL"); return; }
+        this.skill = skill;
+        if (skill.tile != null) {
+            image.sprite = skill.tile.sprite; }
+        else { image.sprite = Manager.GetGlobalValues().defaultSkillSprite; }
+
+        var coolDownNumber = transform.Find("coolDownNumber");
+        if(coolDown() > 0){
             coolDownNumber.gameObject.SetActive(true);
-            coolDownNumber.GetComponent<TextMeshProUGUI>().text = genericSkill.coolDownTimer.ToString();
+            coolDownNumber.GetComponent<TextMeshProUGUI>().text = coolDown().ToString();
+            UpdateGraphic();
             return;
         }
         coolDownNumber.gameObject.SetActive(false);
+        image.color = Color.white;
+        UpdateGraphic();
     }
 
     public void EnableToolTip() {
         GameUIManager.i.tooltipGameObject.SetActive(true);
-        GameUIManager.i.itemtooltip.UpdateToolTip(skill, true);
+        GameUIManager.i.itemtooltip.UpdateToolTip(skill, false);
     }
 
     public void DisableToolTip() {

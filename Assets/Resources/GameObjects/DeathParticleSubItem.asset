@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: DeathParticleSubItem
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  position: {x: 27, y: 32, z: 0}
-  origin: {x: 27, y: 32, z: 0}
+  position: {x: 25, y: 34, z: 0}
+  origin: {x: 25, y: 34, z: 0}
   particles: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
   delay: 0
   targetSelf: 0
   offset: {x: 0, y: 0.21, z: 0}
   material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   sprite: {fileID: 0}
-  scaleFactor: 0.35
+  scaleFactor: 0.3

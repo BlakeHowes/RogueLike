@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1c1de0cf8d5d94faced2ba18a1cb70, type: 3}
+  m_Name: GiveStatusEffect
+  m_EditorClassIdentifier: 
+  tile: {fileID: 0}
+  position: {x: 25, y: 33, z: 0}
+  origin: {x: 25, y: 33, z: 0}
+  particles: {fileID: 8288408381700605430, guid: eb80aba475370c247af190d39bf1bc79, type: 3}
+  onSignal: 10
+  targetsTags: 3
+  type: 3
+  range: 1
+  useParticlesInWholeArea: 1
+  statusEffects:
+  - {fileID: 11400000, guid: 52151cbb5af8530409f22724562e48bc, type: 2}
+  subItems: []
+  parentGO: {fileID: 0}

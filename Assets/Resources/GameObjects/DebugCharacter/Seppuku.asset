@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
+  m_Name: Seppuku
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 18b969edb2c9df448bbb1d37fa8b438d, type: 2}
+  position: {x: 26, y: 33, z: 0}
+  origin: {x: 27, y: 33, z: 0}
+  shopValue: 5
+  subItems:
+  - subItem: {fileID: 11400000, guid: bae65d61332a0aa4198ccda4283d5515, type: 2}
+    after: 0
+  twoHanded: 1
+  dontApplyDamage: 1
+  damageRange: {x: 0, y: 0}
+  accuracyBase: 100
+  rangeBase: 1
+  heldOffset: {x: 11, y: 6, z: 0}
+  rangeTemp: 1
+  accuracyTemp: 100
+  damageTemp: 0
+  damageMaxTemp: 0
+  damageMultipleTemp: 1
+  damage: 8
+  parentGO: {fileID: 0}
+  target: {fileID: 0}

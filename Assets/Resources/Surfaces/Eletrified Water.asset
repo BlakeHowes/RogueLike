@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
+  m_Name: Eletrified Water
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 2a8c011c7e2847b4bbd0fbf820c9786e, type: 2}
+  iconColour: {r: 0, g: 1, b: 0.7854166, a: 1}
+  combinations:
+  - inputSurface: {fileID: 11400000, guid: 5a18ec5232360c648afc4776236516e7, type: 2}
+    resultingSurface: {fileID: 11400000, guid: 5a18ec5232360c648afc4776236516e7, type: 2}
+    subItem: {fileID: 0}
+  - inputSurface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+    resultingSurface: {fileID: 11400000, guid: e8d088f09a687b34cb6a3e16181cf343, type: 2}
+    subItem: {fileID: 0}
+  - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
+    resultingSurface: {fileID: 11400000}
+    subItem: {fileID: 11400000, guid: 83ed88ca05a559c4d96a6f8657098d9f, type: 2}
+  subItems:
+  - {fileID: 11400000, guid: b313ebb87f3c48d4988f8ec723e8bdb0, type: 2}
+  StatusEffect: {fileID: 11400000, guid: 41fd14a9afc550844b03fbcce0caabe6, type: 2}
+  duration: {x: 19.59, y: 40.48}
+  counter: 0
+  effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c, type: 3}
+  dryUp: 1
+  dryUpSurface: {fileID: 0}
+  tryToSpread: 1

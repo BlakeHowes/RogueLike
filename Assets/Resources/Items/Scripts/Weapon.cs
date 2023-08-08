@@ -4,18 +4,20 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using static ItemStatic;
 using System.Collections;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
 public class Weapon : ItemAbstract
 {
     public int shopValue;
-    public List<ItemAbstract> subItems = new List<ItemAbstract>();
+    [SerializeField]public List<SubItemOptions> subItems = new List<SubItemOptions>();
+    //public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public bool twoHanded = false;
+
     [Header("Base Stats")]
+    public bool dontApplyDamage = false;
     public Vector2Int damageRange = new Vector2Int(5,8);
-    [Range(0,100)]public float accuracyBase = 90;
+    [Range(0,100)]public float accuracyBase = 100;
     public int rangeBase = 1;
     public Vector3Int heldOffset;
 
@@ -26,7 +28,7 @@ public class Weapon : ItemAbstract
     [HideInInspector] public int damageMaxTemp;
     [HideInInspector] public int damageMultipleTemp;
     [HideInInspector] public int damage;
-    [HideInInspector] public GameObject originCharacter;
+    [HideInInspector] public GameObject parentGO;
     [HideInInspector] public GameObject target;
     public void ResetTempStats() {
         rangeTemp = rangeBase;
@@ -36,8 +38,7 @@ public class Weapon : ItemAbstract
         damageMultipleTemp = 1;
     }
 
-    public void SetDamage(Vector3Int position) {
-        var target = position.GameObjectGo();
+    public void SetDamage(GameObject target) {
         if (!target) { goto SkipAccuracy;}
         var stats = target.GetComponent<Stats>();
         if (isAttackAMiss(stats)) { damage = 0; return; }
@@ -48,73 +49,70 @@ public class Weapon : ItemAbstract
     }
 
     private bool isAttackAMiss(Stats stats) {
-        //Chance of hitting a zero on characters
-        /*
-        if (stats.faction == PartyManager.Faction.Enemy || stats.faction == PartyManager.Faction.Party) {
-            Debug.Log("Accuracy test");
-            var accuracyRoll = Random.Range(0.0f, 100.0f);
-            if (accuracyTemp < accuracyRoll) {
-                return true;
-            }
-        }
-        */
-        Debug.Log("Accuracy test");
-        Debug.Log(accuracyTemp);
         var accuracyRoll = Random.Range(0.0f, 100.0f);
-        if (accuracyTemp < accuracyRoll) {
-            return true;
-        }
-      
+        if (accuracyTemp < accuracyRoll) {return true;}
         return false;
     }
 
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        originCharacter = origin.GameObjectSpawn();
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
+        this.parentGO = parentGO;
+
         if (signal == Signal.CalculateStats) {
-            foreach (ItemAbstract item in subItems) {
-                item.Call(position, origin, Signal.CalculateStats);
-            }
+            foreach (var item in subItems) {
+                item.subItem.Call(position, origin, Signal.CalculateStats, parentGO, this);}
             return;
         }
+
         if(signal == Signal.ResetStatsToBase) { ResetTempStats(); }
 
         //Range Check!
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { return; }
-        SetDamage(position);
         if (signal != Signal.Attack) { return; }
         this.origin = origin;
         this.position = position;
-        target = this.position.GameObjectSpawn();
      
         if (MouseManager.i.itemSelected != null) { return; }
 
-        foreach (ItemAbstract item in subItems) {
-            if(item is Weapon) { 
-                var weapon = item as Weapon;
+        foreach (var item in subItems) {
+            if(item.subItem is Weapon) { 
+                var weapon = item.subItem as Weapon;
                 weapon.accuracyTemp = accuracyTemp; 
                 weapon.rangeTemp = rangeTemp;
                 weapon.damageMaxTemp = damageMaxTemp;
                 weapon.damageTemp = damageTemp;
                 weapon.damageMultipleTemp = damageMultipleTemp;
             }
-            item.Call(position, origin, signal);
+            if(item.after == false)item.subItem.Call(position, origin, signal, parentGO, this);
         }
         if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { 
             if(GridManager.i.itemsInActionStack.Count == 0) {
                 return;
             }
         }
+        if (parentGO) {
+            var inventory = parentGO.GetComponent<Inventory>();
+            if (inventory.GetOffHandAsWeapon() == this && inventory.GetMainHandAsWeapon()) {
+                GridManager.i.AddToStack(Manager.GetGlobalValues().GetWaitSeconds(0.1f));
+            }
+        }
+
         GridManager.i.AddToStack(this);
+        foreach (var item in subItems) {
+            if (item.after == true) item.subItem.Call(position, origin, signal, parentGO, this);
+        }
     }
 
     public override IEnumerator Action() {
-        origin = originCharacter.Position();
+        target = position.GameObjectGo();
+        SetDamage(target);
+        
+        origin = parentGO.Position();
         position = target.Position();
         Debug.Log("Weapon Call: Position: " + position + " Origin: " + origin);
-        if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { yield break; }
+        //if (!GridManager.i.tools.InRange(position, origin, rangeTemp)) { yield break; }
         if (target) {
-            target.GetComponent<Stats>().TakeDamage(damage, origin);
-            if(originCharacter)originCharacter.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
+            if(!dontApplyDamage)target.GetComponent<Stats>().TakeDamage(damage, origin);
+            if(parentGO)parentGO.GetComponent<Inventory>().CallEquipment(position, origin, Signal.DirectDamage);
             var character = PartyManager.i.currentCharacter;
             float enemyWaitTime = 0;
             if (character) {
@@ -131,9 +129,17 @@ public class Weapon : ItemAbstract
         string description = "This " + name + " does "+ damageRange.x +"-"+ (damageRange.y);
         description += " with an accuracy of " + accuracyBase;
         description += ". ";
-        foreach (ItemAbstract item in subItems) {
-            description += item.Description();
+        foreach (var item in subItems) {
+            description += item.subItem.Description();
         }
         return description;
     }
+
+
+}
+
+[System.Serializable]
+public struct SubItemOptions {
+    public ItemAbstract subItem;
+    public bool after;
 }

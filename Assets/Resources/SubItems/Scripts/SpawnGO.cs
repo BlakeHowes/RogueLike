@@ -4,17 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static ItemStatic;
-[CreateAssetMenu(fileName = "Spawn", menuName = "Mods/Spawn")]
+[CreateAssetMenu(fileName = "Spawn", menuName = "SubItems/Spawn")]
 public class SpawnGO : ItemAbstract {
     public List<GameObject> Gos = new List<GameObject>();
     public Signal onSignal;
-    public AddToParty addToParty;
-    public enum AddToParty {
-        None,
-        Enemy,
-        Party
-    }
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public bool addToParty;
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal != onSignal) { return; }
         this.position = position;
         GridManager.i.AddToStack(this);
@@ -29,11 +24,8 @@ public class SpawnGO : ItemAbstract {
             clone.transform.position = position;
             clone.GetComponent<SpringToTarget3D>().SpringTo(pos, 30, 1000);
             //clone.lerp(position, clone.transform.position.FloorToInt(), 0.1f);
-            if (addToParty == AddToParty.Party) { 
+            if (addToParty) { 
                 PartyManager.i.party.Add(clone);
-            }
-            if (addToParty == AddToParty.Enemy) {
-                PartyManager.i.enemyParty.Add(clone);
             }
         }
        

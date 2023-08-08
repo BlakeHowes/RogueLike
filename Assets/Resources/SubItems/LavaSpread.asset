@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: LavaSpread
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
-  position: {x: 22, y: 32, z: 0}
+  position: {x: 22, y: 29, z: 0}
   origin: {x: 0, y: 0, z: 0}
   surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
   radius: 1
   onSignal: 4
+  justCombine: 0

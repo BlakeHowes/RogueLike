@@ -5,14 +5,15 @@ using static ItemStatic;
 
 public class Taunt : ItemAbstract {
     [HideInInspector]public GameObject target;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    bool sayTaunt;
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if (signal == Signal.SetTarget) {
             target = origin.GameObjectGo();
         }
 
         if (target == null) { return; }
         var character = position.GameObjectGo();
-        if (signal == Signal.StartOfTurn) { character.GetComponent<Stats>().SpawnHitNumber("Taunt", Color.red, 1.5f); }
+        if (signal == Signal.OnSwitchFactionTurn) { sayTaunt = true; }
 
         if (signal != Signal.CalculateStats) { return; }
         
@@ -23,6 +24,10 @@ public class Taunt : ItemAbstract {
         if (GridManager.i.goMethods.IsGameObjectInRange(behaviour.sightRange, origin, target)) {
             if (PathingManager.i.IsPathable(target.transform.position.FloorToInt(), origin)) {
                 behaviour.target = target;
+                if(sayTaunt) {
+                    character.GetComponent<Stats>().SpawnHitNumber("Taunt", Color.red, 1.5f);
+                    sayTaunt = false;
+                }
             }
         }
     }

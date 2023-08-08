@@ -3,9 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using static ItemStatic;
+using static UnityEditor.PlayerSettings;
 
 public class PartyManager : MonoBehaviour {
     public static PartyManager i;
@@ -62,31 +62,40 @@ public class PartyManager : MonoBehaviour {
     [System.Flags]
     public enum Tags {
         None = 0x00,
-        Party = 0x01,
-        Enemy = 0x02,
+        Allies = 0x01,
+        Enemies = 0x02,
         Interactable = 0x04,
         Passive = 0x08,
-        Summon = 0x10
+        Summon = 0x10,
+        Door = 0x20
     }
 
-    public static List<string> ConvertFlagsEnumToStringList(Tags tags) {
+    public static List<string> ConvertFlagsEnumToStringList(Tags tags,GameObject parentGO) {
         List<string> tagsString = new List<string>();
-        if (tags.HasFlag(Tags.Party)) { tagsString.Add("Party"); }
-        if (tags.HasFlag(Tags.Enemy)) { tagsString.Add("Enemy"); }
+        if(parentGO == null) {
+            tagsString.Add("Party");
+            tagsString.Add("Enemy");
+            tagsString.Add("Interactable");
+            tagsString.Add("Passive");
+            tagsString.Add("Summon");
+            tagsString.Add("Door");
+            return tagsString;
+        }
+        if (tags.HasFlag(Tags.Allies)) { tagsString.Add(parentGO.tag); }
+        if (tags.HasFlag(Tags.Enemies)) { 
+            if(parentGO.CompareTag("Party") || parentGO.CompareTag("Summon")) { tagsString.Add("Enemy"); }
+            if(parentGO.CompareTag("Enemy")) { tagsString.Add("Party"); }
+            if(!parentGO.CompareTag("Party") && !parentGO.CompareTag("Summon") && !parentGO.CompareTag("Enemy")) {
+                tagsString.Add("Party"); tagsString.Add("Summon"); tagsString.Add("Enemy");
+            }
+        }
         if (tags.HasFlag(Tags.Interactable)) { tagsString.Add("Interactable"); }
         if (tags.HasFlag(Tags.Passive)) { tagsString.Add("Passive"); }
         if (tags.HasFlag(Tags.Summon)) { tagsString.Add("Summon"); }
+        if (tags.HasFlag(Tags.Door)) { tagsString.Add("Door"); }
         return tagsString;
     }
-    /*
-    public enum Faction {
-        Party,
-        Enemy,
-        Interactable,
-        Wall,
-        Passive
-    }
-    */
+
     public void AddPartyMember(GameObject character) {
         party.Add(character);
         currentCharacter = character;
@@ -96,12 +105,12 @@ public class PartyManager : MonoBehaviour {
     public void Update() {
         if (!currentCharacter) {
             if (currentTag == "Party") { SwitchToNextCharacter(); }
-            if (currentTag == "Enemy") { NextEnemy(null); }
+            if (currentTag == "Enemy") { EndEnemyTurn(null); }
         }
         if (currentCharacter) {
             if (currentCharacter.activeSelf) { return; }
             if (currentTag == "Party") { SwitchToNextCharacter(); }
-            if (currentTag == "Enemy") { NextEnemy(null); }
+            if (currentTag == "Enemy") { EndEnemyTurn(null); }
         }
     }
 
@@ -120,7 +129,7 @@ public class PartyManager : MonoBehaviour {
         stats.ResetTempStats();
         var position = character.Position();
         stats.RefreshCharacter(position);
-        InventoryManager.i.UpdateInventory(position);
+        InventoryManager.i.UpdateInventory();
         GameUIManager.i.actionPointsText.text = stats.actionPoints.ToString();
         if(stats.state == State.Idle) {
             stats.ResetActionPoints();
@@ -177,7 +186,6 @@ public class PartyManager : MonoBehaviour {
         currentCharacter.TryGetComponent(out PandaBehaviour panda);
         if (panda) {
             var pos = currentCharacter.Position();  //Expensive call
-            currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
             currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
         }
         GridManager.i.UpdateGame();
@@ -188,10 +196,17 @@ public class PartyManager : MonoBehaviour {
         if (currentCharacter != null) {
             partyMemberTurnTaken.Add(currentCharacter);
         }
-        SwitchToNextCharacter();        
-
+        SwitchToNextCharacter();
+   
+     
+    
         if (partyMemberTurnTaken.Count >= party.Count) {
             EnemyPartyStartTurn();
+        }
+        else {
+            var pos = currentCharacter.Position();
+            currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
+            GridManager.i.StartStack();
         }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
     }
@@ -204,12 +219,12 @@ public class PartyManager : MonoBehaviour {
         foreach (GameObject enemy in partyCopy) {
             if (!enemy) { continue; }
             enemy.GetComponent<Stats>().ResetActionPoints();
-            StartOfPartyTurnCall(enemy);
+            OnSwitchFaction(enemy);
         }
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
         var pos = currentCharacter.Position();
-        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
+        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
         currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
     }
 
@@ -229,11 +244,11 @@ public class PartyManager : MonoBehaviour {
             }
 
             if (!target) { continue; }
-            if (pathingInstance.IsPathable(target.transform.position.FloorToInt(), member.transform.position.FloorToInt())) {
+            if (pathingInstance.IsPathable(target.Position(), member.Position())) {
                 partyOrder.Add(member, 0);
                 continue;
             }
-            partyOrder.Add(member, pathingInstance.PathDistance(target.transform.position.FloorToInt(), member.transform.position.FloorToInt()));
+            partyOrder.Add(member, pathingInstance.PathDistance(target.Position(), member.Position()));
         }
 
         foreach(var member in partyOrder) {
@@ -248,24 +263,26 @@ public class PartyManager : MonoBehaviour {
         return partyCopy;
     }
 
-    public void NextEnemy(GameObject enemy) {
+    public void EndEnemyTurn(GameObject enemy) {
         if(enemy)
         enemyTurnTaken.Add(enemy);
-        Debug.Log("Next Enemy");
+        var enemyPosition = enemy.Position();
         foreach (GameObject enemyCharacter in enemyParty) {
             if (enemyTurnTaken.Contains(enemyCharacter) || !enemyCharacter) { continue; }
             SetCurrentCharacter(enemyCharacter);
-            var pos = enemyCharacter.Position();  //Expensive call
-            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.FirstEnemyMove);
+            var pos = enemyCharacter.Position();
+            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
             enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
             return;
         }
         PartyStartTurn();
     }
 
-    public void StartOfPartyTurnCall(GameObject character) {
-        var pos = character.Position();  //Expensive call
-        character.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfTurn);
+    public void OnSwitchFaction(GameObject character) {
+        var pos = character.Position();
+        var inventory = character.GetComponent<Inventory>();
+        inventory.ReduceCoolDowns();
+        inventory.CallEquipment(pos, pos, Signal.OnSwitchFactionTurn);
     }
 
 
@@ -276,11 +293,15 @@ public class PartyManager : MonoBehaviour {
             if (!player) { continue; }
             player.GetComponent<Stats>().ResetActionPoints();
             player.GetComponent<NPCSearch>().Search();
-            StartOfPartyTurnCall(player);
+            OnSwitchFaction(player);
         }
         if(party.Count == 0) { GameUIManager.i.ShowGameOverUI(); return; }
         SetCurrentCharacter(party[0]);
         partyMemberTurnTaken.Clear();
+
+        var pos = currentCharacter.Position();
+        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
+        GridManager.i.StartStack();
         //enemyTurnTaken.Clear();
     }
 

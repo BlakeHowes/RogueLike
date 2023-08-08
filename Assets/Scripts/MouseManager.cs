@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
 using static PartyManager;
+using static UnityEngine.UI.Image;
 
 public class MouseManager : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class MouseManager : MonoBehaviour
     public Vector3Int lastMousePosition;
     public bool isRepeatingActionsOutsideCombat = false;
     public Vector3Int clickPosition;
-    public Tilemap floorTilemap;
     private GlobalValues globalValues;
+    public BagAnimation bagAnimation;
     public void Awake() {
         globalValues = Manager.GetGlobalValues();
         i = this;
@@ -26,18 +27,30 @@ public class MouseManager : MonoBehaviour
 
     public void SelectItem(ItemAbstract item) {
         itemSelected = item;
+        if(item is not Skill) {
+            var currentCharacter = PartyManager.i.currentCharacter;
+            var origin = currentCharacter.Position();
+            var currentStats = currentCharacter.GetComponent<Stats>();
+            currentStats.RefreshCharacter(origin);
+            GameUIManager.i.ShowRange(origin,currentCharacter.GetComponent<Stats>().throwingRangeTemp); 
+        }
         if (!item) { InventoryManager.i.DeselectItems(); }
-    }
-    public void Start() {
-        floorTilemap = GridManager.i.floorTilemap;
     }
 
     public void Update() {
         var mousePosition = MousePositionOnGrid();
         if (!CheckMouseValidity()) { return; }
+
         UpdateHightlight(mousePosition);
 
+
         if (Input.GetMouseButtonDown(1)) {
+            if (itemSelected) {
+                if (itemSelected is Skill) {
+                    var skill = itemSelected as Skill;
+                    skill.startPositionSet = false;
+                }
+            }
             SelectItem(null);
             GameUIManager.i.groundUI.ClearAllTiles();
         }
@@ -60,25 +73,31 @@ public class MouseManager : MonoBehaviour
         state = currentStats.state;
 
         //1 Prepare character
-        currentStats.ResetTempStats();
         currentStats.RefreshCharacter(origin); //This calls all their equipment to add values to Stats
 
         //2 If and item is selected, use that item
-        if (UseItem(mousePosition, origin, currentStats, inventory)) { EndOfAction(); return; };
+        if (UseItem(mousePosition, origin, currentStats, inventory)) { return; };
 
         //3 Try to pick up item under current character while mouse is over them, if no item wait one tick
         if (mousePosition == origin) { WaitOrPickUpItem(mousePosition, origin, gameobjectundermouse, currentStats, currentCharacter); }
 
         //4 Try to attack a gameobject in range
-        if (Attack(mousePosition, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(); return; };
+        if (gameobjectundermouse) {
+            if (!currentCharacter.CompareTag(gameobjectundermouse.tag)) {
+                if (Attack(mousePosition, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(); return; };
+            }
+        }
+
+        
 
         //5 if a clicked on ally is next to current character during combat, swap with them
         if (SwapPositionWithAllyDuringCombat(mousePosition, origin, gameobjectundermouse, currentStats)) { return; }
 
         //6 Walk if all else fails
         PartyManager.i.characterFollowPosition = currentCharacter.Position();
-        if (state == State.Combat) { isRepeatingActionsOutsideCombat = Walk(mousePosition, origin, currentStats); }
-        else { isRepeatingActionsOutsideCombat = WalkLeader(mousePosition, origin, currentStats); }
+        if (currentCharacter.CompareTag("Party")) { isRepeatingActionsOutsideCombat = WalkLeader(mousePosition, origin, currentStats); }
+        else { isRepeatingActionsOutsideCombat = Walk(mousePosition, origin, currentStats); }
+        
         var newpos = PartyManager.i.currentCharacter.Position();
         if (newpos == mousePosition || newpos == origin) { isRepeatingActionsOutsideCombat = false; }
         if (newpos != origin) { EndOfAction(); }
@@ -88,11 +107,11 @@ public class MouseManager : MonoBehaviour
         if (gameobjectundermouse != null) {
 
             if (state != State.Combat) { return false; }
-            if (gameobjectundermouse.tag == "Enemy") { return false; }
+            if (gameobjectundermouse.CompareTag("Enemy")) { return false; }
             if (!GridManager.i.tools.InMeeleeRange(mousePosition, origin)) { return false; }
 
             if (currentStats.actionPoints >= currentStats.walkCostTemp) {
-                if (gameobjectundermouse.tag == "Party") {
+                if (gameobjectundermouse.CompareTag("Party")) {
                     PathingManager.i.SwapPlaces(mousePosition, origin);
                     currentStats.actionPoints -= currentStats.walkCostTemp;
                     EndOfAction();
@@ -103,31 +122,48 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
-    public bool UseItem(Vector3Int position,Vector3Int origin,Stats currentStats,Inventory inventory) {
+    public bool UseItem(Vector3Int position, Vector3Int origin, Stats currentStats, Inventory inventory) {
         if (itemSelected == null) { return false; }
 
-        if (inventory.items.Contains(itemSelected)) { 
-            Actions.i.ThrowItem(position, origin, itemSelected,inventory);
-            ChangeActionPoints(position,origin,inventory, currentStats, 1);
+        if (inventory.items.Contains(itemSelected)) {
+            Actions.i.ThrowItem(position, origin, itemSelected, inventory);
+            ChangeActionPoints(position, origin, inventory, currentStats, 1);
         }
         else {
             var skill = itemSelected as Skill;
+            if(skill.type != Skill.Type.JustTheUserTile && skill.type != Skill.Type.AreaAroundUser) {
+                if (!position.InRange(origin, skill.range)) { skill.startPositionSet = false; SelectItem(null); return true; }
+            }
+            if (skill.type == Skill.Type.SelectTwoGOUnderMouse) {
+                if(skill.startPositionSet == false) {
+                    if (position == origin) { SelectItem(null); return true; }
+                    skill.targetedStartPosition = position;
+                    skill.startPositionSet = true;
+                    return true;
+                }
+
+            }
             if(ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
-            itemSelected.Call(position, origin, Signal.Attack);
+            itemSelected.Call(position, origin, Signal.Attack,inventory.gameObject,null);
+            skill.startPositionSet = false;
         }
-        currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
+        currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);
+
+        EndOfAction();
         return true;
     }
 
     public bool Attack(Vector3Int position, Vector3Int origin,GameObject target,GameObject currentCharacter) {
         if (target == null) { return false; }
         var currentStats = currentCharacter.GetComponent<Stats>();
-        if (target.tag == currentCharacter.tag) { return false; }
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
-        if(currentStats.state == State.Idle && target.tag == "Interactable") { goto Meelee; }
+        if(currentStats.state == State.Idle) {
+            if(target.CompareTag("Interactable") || target.CompareTag("Door"))
+            goto Meelee; 
+        }
         inventory.CallEquipment(position, origin, Signal.Attack);
         if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
         PathingManager.i.FlipCharacter(currentCharacter, position, origin);
@@ -140,7 +176,7 @@ public class MouseManager : MonoBehaviour
         var range = GridManager.i.tools.MeeleeRange(origin);
         if (range.Contains(position) && currentStats.actionPoints > 0) {
             currentStats.actionPoints -= 1;
-            target.GetComponent<Stats>().TakeDamage(currentStats.fistDamageTemp, origin);
+            target.GetComponent<Stats>().TakeDamage(1, origin);
             PathingManager.i.FlipCharacter(currentCharacter,position, origin);
             return true;
         }
@@ -167,7 +203,7 @@ public class MouseManager : MonoBehaviour
         var inventory = currentCharacter.GetComponent<Inventory>();
         var item = position.Item();
         if (item) {
-            item.Call(position, origin, Signal.Pickup);
+            item.Call(position, origin, Signal.Pickup,currentCharacter,null);
             if (blockPickup) { EndOfAction();return; }
             //Coins hack, better this concept if needed
             if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction();return; }
@@ -175,6 +211,8 @@ public class MouseManager : MonoBehaviour
             if (inventory.items.Count < globalValues.maxItems) {
                 GridManager.i.itemMethods.RemoveItem(position);
                 inventory.AddItem(item);
+                bagAnimation.PlayAnimation(item);
+
             }
         }
 
@@ -226,6 +264,7 @@ public class MouseManager : MonoBehaviour
                 partyManager.SetCurrentCharacter(PartyManager.i.party[0]);
             }
         }
+        InventoryManager.i.UpdateSkillSlotGraphics();
         GridManager.i.TickGame();
     }
 
@@ -295,11 +334,26 @@ public class MouseManager : MonoBehaviour
 
     public void UpdateHightlight(Vector3Int mousePosition) { 
         if (mousePosition != lastMousePosition) {
+
+
+
             GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
             lastMousePosition = mousePosition;
             if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
             if (GridManager.i.FogTile(mousePosition) || !mousePosition.IsWalkable()) {
                 GameUIManager.i.HideHighlight();
+            }
+
+            if (itemSelected is Skill) {
+                var skill = itemSelected as Skill;
+                if (skill.type == Skill.Type.AreaUnderMouse) {
+                    var currentCharacter = PartyManager.i.currentCharacter;
+                    var origin = currentCharacter.Position();
+                    var currentStats = currentCharacter.GetComponent<Stats>();
+                    currentStats.RefreshCharacter(origin);
+                    GameUIManager.i.ShowRange(origin, currentCharacter.GetComponent<Stats>().skillRangeTemp, true);
+                    GameUIManager.i.ShowRange(mousePosition, skill.AOE);
+                }
             }
         }
     }

@@ -13,24 +13,28 @@ MonoBehaviour:
   m_Name: Crystal Bow
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 63018fb83fc5b4e49804659331f94cbe, type: 2}
-  position: {x: 36, y: 29, z: 0}
-  origin: {x: 30, y: 32, z: 0}
+  position: {x: 37, y: 31, z: 0}
+  origin: {x: 32, y: 32, z: 0}
   shopValue: 20
   subItems:
-  - {fileID: 11400000, guid: e0ac6be8621c7ca458d18dea920a6e7d, type: 2}
-  - {fileID: 11400000, guid: 32a2487b57e606347949f9591bb03fc0, type: 2}
-  - {fileID: 11400000, guid: 0508160415db5c747885bc0992f69d9b, type: 2}
-  - {fileID: 11400000, guid: e0ac6be8621c7ca458d18dea920a6e7d, type: 2}
+  - subItem: {fileID: 11400000, guid: e0ac6be8621c7ca458d18dea920a6e7d, type: 2}
+    after: 0
+  - subItem: {fileID: 11400000, guid: e4d9208cd8211e94ba4736b6e3358adc, type: 2}
+    after: 0
+  - subItem: {fileID: 11400000, guid: 0508160415db5c747885bc0992f69d9b, type: 2}
+    after: 0
+  - subItem: {fileID: 11400000, guid: e0ac6be8621c7ca458d18dea920a6e7d, type: 2}
+    after: 0
   twoHanded: 1
   damageRange: {x: 10, y: 15}
   accuracyBase: 100
   rangeBase: 8
   heldOffset: {x: 6, y: 6, z: 0}
   rangeTemp: 8
-  accuracyTemp: 100
+  accuracyTemp: 43.83886
   damageTemp: 10
   damageMaxTemp: 15
   damageMultipleTemp: 1
   damage: 0
-  originCharacter: {fileID: 0}
+  parentGO: {fileID: 0}
   target: {fileID: 0}

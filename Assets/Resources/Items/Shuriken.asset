@@ -13,8 +13,13 @@ MonoBehaviour:
   m_Name: Shuriken
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: fbfc999b69d9a52439db024f6b3d13da, type: 2}
-  particles: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210, type: 3}
+  position: {x: 22, y: 30, z: 0}
+  origin: {x: 26, y: 28, z: 0}
+  shopValue: 0
   subItems:
-  - {fileID: 11400000, guid: 5ac6351f891f7724ea87472bb1d4d66b, type: 2}
-  totalUses: 1
+  - {fileID: 11400000, guid: dc7bb3f572a23504387fa0ba894de2bf, type: 2}
+  totalUses: 3
   timesUsed: 0
+  endlessUses: 0
+  parentGO: {fileID: 0}
+  thrownLocation: {x: 21, y: 29, z: 0}

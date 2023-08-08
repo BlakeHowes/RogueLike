@@ -77,7 +77,7 @@ MonoBehaviour:
   sightRange: 12
   itemActions:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
-  targetsTags: 0
+  targetsTags: 18
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +93,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 836a1ca2fa34b7d4cafa7c031ef94633, type: 2}
   state: 0
   deathAction: []
+  immunites: []
   maxHealthBase: 20
   armourBase: 0
   actionPointsBase: 3
@@ -129,8 +130,9 @@ MonoBehaviour:
   items: []
   traits: []
   skills: []
+  coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 0}
+  mainHand: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}

@@ -16,15 +16,15 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
   type: 0
-  targetFaction: 0
+  targetsTags: 1
   range: 5
   actionPointCost: 2
   coolDown: 2
   CameraZoomDuration: 0
   particles: {fileID: 0}
+  coolDownTimer: 0
   subItems: []
   statusEffects:
   - {fileID: 11400000, guid: 7f714a17c15a4c54993cec64c40766ce, type: 2}
-  skillDescriptionForAI: 1
   customDescription: Targeted character will heal 50% of the damage they inflict
     for 3 turns

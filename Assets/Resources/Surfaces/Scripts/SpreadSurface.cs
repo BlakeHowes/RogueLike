@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static ItemStatic;
-[CreateAssetMenu(fileName = "Spread Surface", menuName = "Mods/Spread Surface")]
+[CreateAssetMenu(fileName = "Spread Surface", menuName = "SubItems/Spread Surface")]
 public class SpreadSurface : ItemAbstract {
     public Surface surface;
-    public int radius;
-    public Signal onSignal;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public int radius = 1;
+    public Signal onSignal = Signal.Attack;
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal != onSignal) { return; }
         this.position = position;
         GridManager.i.AddToStack(this);

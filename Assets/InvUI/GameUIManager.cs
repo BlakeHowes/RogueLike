@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using static ItemStatic;
@@ -17,14 +15,11 @@ public class GameUIManager : MonoBehaviour {
     public ItemToolTip itemtooltip;
     public GameObject tooltipGameObject;
     public Text actionPointsText;
-    public GameObject PartyIconLayout;
-    public GameObject skillLayout;
-    public GameObject iconLayout;
+    public GameObject partyIconLayout;
     public GameObject gameOverLayout;
     public Tilemap groundUI;
     public Texture2D boarderEffectTexture;
     public GameObject enemyInCombatUI;
-    public Color notInRangeColour;
     private GlobalValues globalValues;
     public void Awake() {
         i = this;
@@ -46,7 +41,7 @@ public class GameUIManager : MonoBehaviour {
         ResetGos();
         uiTilemap.ClearAllTiles();
         if (!FloorManager.i.IsWalkable(position)) { HideHighlight(); return; }
-        var origin = PartyManager.i.GetCurrentTurnCharacter().Position();
+        //var origin = PartyManager.i.GetCurrentTurnCharacter().Position();
         uiTilemap.SetTile(position, globalValues.mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
 
@@ -61,9 +56,10 @@ public class GameUIManager : MonoBehaviour {
                 if (character.tag == "Enemy") {
                     uiTilemap.SetColor(position, globalValues.enemyHightlightColour);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
-                    inventory.CallEquipment(origin, origin, Signal.CalculateStats);
+                    //inventory.CallEquipment(origin, origin, Signal.CalculateStats);
                     if (MouseManager.i.itemSelected) { return; }
                     var weapon = inventory.mainHand as Weapon;
+                    var origin = inventory.gameObject.Position();
                     if (!weapon) { ShowRange(origin, 1); }
                     else { ShowRange(origin, weapon.rangeTemp); }
                 }
@@ -74,6 +70,10 @@ public class GameUIManager : MonoBehaviour {
         }
     }
 
+    public void ClearRange() {
+        groundUI.ClearAllTiles();
+    }
+
     public void ResetGos() {
         foreach(Transform go in GridManager.i.gameObject.transform) {
             go.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
@@ -81,10 +81,9 @@ public class GameUIManager : MonoBehaviour {
     }
 
     public void ShowRange(Vector3Int position,int range) {
-        groundUI.ClearAllTiles();
+        ClearRange();
         var cells =CreateRange(position, range);
         var goMethods = GridManager.i.goMethods;
-        //FadeGos();
         foreach (Vector3Int cell in cells) {
             var gameobject = cell.GameObjectGo();
             if (gameobject) {
@@ -98,6 +97,19 @@ public class GameUIManager : MonoBehaviour {
                 var go = cell.GameObjectGo();
 
                 if (go) go.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+        }
+    }
+
+    public void ShowRange(Vector3Int position, int range,bool useUITilemap) {
+        if (useUITilemap) {
+            uiTilemap.ClearAllTiles();
+        }
+        var cells = CreateRange(position, range);
+        var goMethods = GridManager.i.goMethods;
+        foreach (Vector3Int cell in cells) {
+            if (goMethods.IsInSight(cell, position)) {
+                uiTilemap.SetTile(cell, globalValues.rangeTile);
             }
         }
     }
@@ -131,13 +143,13 @@ public class GameUIManager : MonoBehaviour {
 
     public void UpdatePartyIcons(List<GameObject> party) {
         if (!globalValues.partyIconPrefab) { Debug.LogError("Party Icon not set"); return; }
-        foreach (Transform child in iconLayout.transform) {
+        foreach (Transform child in partyIconLayout.transform) {
             Destroy(child.gameObject);
         }
         foreach(GameObject member in party) {
             if(member == null) continue;
             
-            var clone = Instantiate(globalValues.partyIconPrefab,iconLayout.transform);
+            var clone = Instantiate(globalValues.partyIconPrefab,partyIconLayout.transform);
             var partyicon = clone.gameObject.GetComponent<PartyIcon>();
             var state = member.GetComponent<Stats>().state;
             var colour = Color.black;

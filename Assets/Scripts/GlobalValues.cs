@@ -13,7 +13,7 @@ public class GlobalValues : ScriptableObject
     public float onAttackNudgeAmount =1;
 
     [Header("Test Objects")]
-    public List<GameObject> partyPrefabs = new List<GameObject>();
+    //public List<GameObject> partyPrefabs = new List<GameObject>();
     public Tile shadowTile;
     public TileBase fog;
     public TileBase bigFog;
@@ -38,6 +38,9 @@ public class GlobalValues : ScriptableObject
     [Range(0, 5000f)] public float Hardness;
     [Range(0, 100)] public float Dampening;
 
+    [Header("SubItems")]
+    public WaitSeconds waitSeconds;
+
     [Header("UI")]
     public GameObject healthBarPrefab;
     public GameObject hitNumberPrefab;
@@ -57,4 +60,9 @@ public class GlobalValues : ScriptableObject
     public Sprite defaultSkillSprite;
     public GameObject gameOverLayout;
     public GameObject partyIconPrefab;
+
+    public ItemAbstract GetWaitSeconds(float time) {
+        waitSeconds.time = time;
+        return waitSeconds;
+    }
 }

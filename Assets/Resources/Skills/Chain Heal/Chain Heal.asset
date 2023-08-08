@@ -13,15 +13,21 @@ MonoBehaviour:
   m_Name: Chain Heal
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 60bfe3cd9d6071a4386f5926fc3408dc, type: 2}
-  particles: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  type: 0
+  targetsTags: 1
   range: 5
   actionPointCost: 2
-  customDescription: Heals 5. Has a 50% chance to not consume AP.
+  coolDown: 2
+  CameraZoomDuration: 0
+  particles: {fileID: 0}
   coolDownTimer: 0
   subItems:
   - {fileID: 11400000, guid: 5ac6351f891f7724ea87472bb1d4d66b, type: 2}
   - {fileID: 11400000, guid: c59de9c50cb64284eb2927b6d9e4beb8, type: 2}
-  skillDescriptionForAI: 0
-  CameraZoomDuration: 0
+  statusEffects: []
+  customDescription: Heals 5. Has a 50% chance to not consume AP.
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

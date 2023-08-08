@@ -76,7 +76,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   itemActions: []
-  targetsTags: 17
+  targetsTags: 18
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,10 +91,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 81066cab820d6be46af052203c89288b, type: 2}
   state: 0
-  deathAction: []
+  deathAction:
+  - {fileID: 11400000, guid: 00bf39bfceb55474286f141714d15453, type: 2}
+  immunites: []
   maxHealthBase: 20
   armourBase: 0
-  actionPointsBase: 2
+  actionPointsBase: 3
   throwingRangeBase: 1
   fistDamageBase: 1
   walkCostBase: 1

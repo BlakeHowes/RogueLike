@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lava
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 580a5482f13c8e449963416bb88c80d5, type: 2}
-  iconColour: {r: 0.49056602, g: 0.3758966, b: 0.25222498, a: 1}
+  iconColour: {r: 1, g: 0.5922127, b: 0.28627455, a: 1}
   combinations: []
   items: []
   StatusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}

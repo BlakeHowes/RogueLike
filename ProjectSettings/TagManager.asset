@@ -53,11 +53,11 @@ TagManager:
   - name: Floor Decoration
     uniqueID: 1022325251
     locked: 0
-  - name: GroundUI
-    uniqueID: 3806445279
-    locked: 0
   - name: Surface
     uniqueID: 220385189
+    locked: 0
+  - name: GroundUI
+    uniqueID: 3806445279
     locked: 0
   - name: Mechanisms
     uniqueID: 1354975459

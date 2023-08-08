@@ -19,47 +19,51 @@ public class StatEffectGeneric : ItemAbstract {
     public int armour;
     public int actionPoints;
     public int throwingRange;
-    public int fistDamage;
     public int walkCost;
     public int enemyAlertRange;
     public int skillRange;
     public int health;
     public int healthChangeAddition;
+    [HideInInspector] public int healthChangeTally;
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public GameObject target;
 
-    public void DoStatusEffect() {
+    public void DoStatusEffect(GameObject parentGO) {
         var stats = target.GetComponent<Stats>();
         if (!stats.gameObject.activeSelf) { return; }
+
         if (armourMax != 0) { stats.armourTemp += armourMax; }
         if (armour != 0) { stats.armour += armour; }
         if (actionPoints != 0) { stats.actionPointsTemp += actionPoints; }
         if (throwingRange != 0) { stats.throwingRangeTemp += throwingRange; }
-        if (fistDamage != 0) { stats.fistDamageTemp += fistDamage; }
         if (walkCost != 0) { stats.walkCostTemp += walkCost; }
         if (enemyAlertRange != 0) { stats.enemyAlertRangeTemp += enemyAlertRange; }
         if (skillRange != 0) { stats.skillRangeTemp += skillRange; }
-        if (health < 0) { stats.TakeDamage(health * -1, position); }
-        if (health > 0) { stats.Heal(health); }
+        if (health < 0) { stats.TakeDamage((health + healthChangeTally) * -1, position); }
+        if (health > 0) { stats.Heal(health + healthChangeTally); }
+
+        healthChangeTally += healthChangeAddition;
+
         foreach (var item in subItems) {
-            item.Call(position, origin, Signal.Attack);
+            item.Call(position, origin, Signal.Attack,parentGO, this);
         }
         if (particles) { EffectManager.i.AttachSingleToGO(position, particles); }
+
     }
     public override IEnumerator Action() {
 
         yield return new WaitForSeconds(0f);
     }
 
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal == Signal.SetTarget) { 
             target = position.GameObjectGo();
             foreach(var subItem in subItems) {
-                subItem.Call(position, origin, signal);
+                subItem.Call(position, origin, signal,parentGO, this);
             }
             return;
         }
-        if(signal == Signal.StartOfTurn) {
+        if(signal == Signal.OnSwitchFactionTurn) {
             counter++;
             if (counter >= durationTotal) {
                 if (target) {
@@ -72,7 +76,7 @@ public class StatEffectGeneric : ItemAbstract {
         }
         if(signal != Signal.Attack) {
             foreach (var subItem in subItems) {
-                subItem.Call(position, origin, signal);
+                subItem.Call(position, origin, signal,parentGO, this);
             }
         }
 
@@ -81,10 +85,10 @@ public class StatEffectGeneric : ItemAbstract {
         Debug.Log("Status Effect Call");
         if (!target) { Debug.LogError("No target set for Status Effect " + this.name); return; }
         health += healthChangeAddition;
-        var item = target.GetComponent<Inventory>().mainHand;
-        var weapon = item as Weapon;
+        var weapon = target.GetComponent<Inventory>().GetMainHandAsWeapon();
         if (weapon == null) { goto Stats; }
         weapon.damageTemp += damage;
+        weapon.damageMaxTemp += damage;
         Debug.Log(weapon + " " + weapon.damageMultipleTemp);
         weapon.damageMultipleTemp += damageMultiple;
         if (weapon.rangeBase > 1) {
@@ -94,7 +98,7 @@ public class StatEffectGeneric : ItemAbstract {
     Stats:
         this.position = position;
         this.origin = origin;
-        DoStatusEffect();
+        DoStatusEffect(parentGO);
     }
     public override string Description() {
         string description = "";
@@ -105,7 +109,6 @@ public class StatEffectGeneric : ItemAbstract {
         if (armour != 0) { description += armour + " Armour\n"; }
         if (actionPoints != 0) { description += actionPoints + " Base AP\n"; }
         if (throwingRange != 0) { description += throwingRange + " Throwing Range\n"; }
-        if (fistDamage != 0) { description += fistDamage + " Fist Damage\n"; }
         if (walkCost != 0) { description += walkCost + " Walk Cost\n"; }
         if (enemyAlertRange != 0) { description += enemyAlertRange + " Enemy Alert Range\n"; }
         if (skillRange != 0) { description += skillRange + " Skill Range\n"; }

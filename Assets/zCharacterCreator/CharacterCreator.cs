@@ -27,6 +27,17 @@ public class CharacterCreator : MonoBehaviour {
         i = this;
     }
 
+    public void QuickStart() {
+        int i = 1;
+        foreach(var character in characters) {
+            RandomAppearence(character);
+            currentCharacter = character;
+            options = character.GetComponent<CCOptions>();
+            NextLoadout(i);
+            i++;
+        }
+    }
+
     public void CharacterSelect() {
         currentCharacter.transform.position = origionalPosition;
         foreach (GameObject member in characters) {

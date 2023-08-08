@@ -25,7 +25,8 @@ public class EquipmentSlot : MonoBehaviour {
         InventoryManager.i.DeselectItems();
         var position = inventory.gameObject.Position();
         PartyManager.i.currentCharacter.GetComponent<Stats>().RefreshCharacter(position);
-        InventoryManager.i.UpdateInventory(position);
+        InventoryManager.i.UpdateInventory();
+        CharacterSpriteGenerator.CreateCharacterSprite(inventory.gameObject);
     }
 
     public void ChangeCharacterInventory(Inventory inventory, EquipmentType type, ItemAbstract itemReplace) {
@@ -38,7 +39,7 @@ public class EquipmentSlot : MonoBehaviour {
     public void RemoveItem(Inventory inventory) {
         ChangeCharacterInventory(inventory, equipmentType, null);
         if (inventory.items.Count >= globalValues.maxItems) {
-            item.Drop(inventory.gameObject.Position());
+            item.Drop(inventory.gameObject.Position(),true);
         }
         else { inventory.AddItem(item); }
 
@@ -48,25 +49,31 @@ public class EquipmentSlot : MonoBehaviour {
 
     public void SetItem(ItemAbstract item) {
         this.item = item;
+        if (!gameObject.transform.parent.transform.parent.gameObject.activeSelf){ return; }
         if (item) {
             if (item.tile) {
                 image.sprite = item.tile.sprite; return;
             }
 
         }
-        image.sprite = defaultSprite;
+        if(image)image.sprite = defaultSprite;
     }
 
     public void EquipItemSelected(Inventory inventory,ItemAbstract itemSelected) {
         
         if (!inventory.items.Contains(itemSelected)) { return; }
+        if(itemSelected is not Equipment && itemSelected is not Weapon) { return; }
         if(itemSelected is Equipment) {
             var equipment = itemSelected as Equipment;
             if(equipment.equipmentType != equipmentType) { return; }
             ChangeCharacterInventory(inventory, equipment.equipmentType, itemSelected);
+            SetItem(itemSelected);
+            inventory.RemoveItem(itemSelected);
+            return;
         }
 
         if (itemSelected is Weapon) {
+            if(equipmentType != EquipmentType.mainHand && equipmentType != EquipmentType.offHand) { return; }
             if (equipmentType == EquipmentType.mainHand) { ChangeCharacterInventory(inventory, EquipmentType.mainHand, itemSelected); }
             if (equipmentType == EquipmentType.offHand) { ChangeCharacterInventory(inventory, EquipmentType.offHand, itemSelected); }
         }

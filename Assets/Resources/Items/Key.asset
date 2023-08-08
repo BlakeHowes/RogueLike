@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c063f78c01be7146aa5d958ec00774c, type: 3}
+  m_Name: Key
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 9eec22cb6ac88f14482bb389bc101153, type: 2}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
+  subItems:
+  - {fileID: 11400000, guid: 863bbabd6a1a3a245857c212708a5a3f, type: 2}
+  totalUses: 1
+  timesUsed: 0
+  endlessUses: 1
+  parentGO: {fileID: 0}
+  thrownLocation: {x: 0, y: 0, z: 0}
+  useOnlyOnViableTargets: 1
+  destroyOnUse: 1
+  viableTargets:
+  - {fileID: 3381531369335737414, guid: 713a520ec170155448c7cc080373b158, type: 3}
+  - {fileID: 3381531369335737414, guid: 1f1601b96b85bd94f9f66c0dad56ef57, type: 3}

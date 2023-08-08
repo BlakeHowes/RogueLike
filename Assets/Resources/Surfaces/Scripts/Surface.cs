@@ -9,9 +9,9 @@ public class Surface : ScriptableObject
     public TileBase tile;
     public Color iconColour = Color.white;
     public List<Combination> combinations = new List<Combination>();
-    public List<ItemAbstract> items = new List<ItemAbstract>();
+    public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public ItemAbstract StatusEffect;
-    public Vector2 duration;
+    [Tooltip("If values are zero, surface will only combine not set on ground")]public Vector2 duration;
     [HideInInspector]public int counter = 0;
     public GameObject effectPrefab;
     GameObject effectClone;
@@ -35,7 +35,8 @@ public class Surface : ScriptableObject
             var targetGo = cell.GameObjectGo();
             if (targetGo) {
                 if (targetGo.tag == "Passive") {
-                    GridManager.i.SetSurface(cell, this);
+                    if(GridManager.i.GetOrSpawnSurface(cell) != this) { GridManager.i.SetSurface(cell, this); }
+                    
                     if (cell.x > position.x || cell.y > position.y) {
                         GridManager.i.GetOrSpawnSurface(cell).counter--;
                     }
@@ -53,11 +54,10 @@ public class Surface : ScriptableObject
         }
 
         if (dryUp) {
-            var floorTilemap = GridManager.i.floorTilemap;
             var surfaceTilemap = GridManager.i.surfaceTilemap;
             var circle = GridManager.i.tools.Circle(1, position);
             foreach (var cell in circle) {
-                if (!floorTilemap.GetTile(cell)) { continue; }
+                if (FloorManager.i.IsWall(cell)) { continue; }
                 if (surfaceTilemap.GetTile(cell) != tile) {
                     counter++;
                     break;
@@ -87,24 +87,21 @@ public class Surface : ScriptableObject
         if (StatusEffect) {
             character.GetComponent<Inventory>().AddStatusEffect(position, position, StatusEffect);
         }
+        foreach(var subItem in subItems) {
+            subItem.Call(position, position, ItemStatic.Signal.Attack, null, null);
+        }
     }
 
     public bool Combine(Vector3Int position,Surface surface) {
         foreach (var combination in combinations) {
             if(!combination.inputSurface || !combination.resultingSurface) { continue; }
-            if (combination.inputSurface.name+"(Clone)" == surface.name) {
+            if (combination.inputSurface.name+"(Clone)" == surface.name||
+                combination.inputSurface.name == surface.name + "(Clone)"||
+                combination.inputSurface.name == surface.name) {
                 GridManager.i.SetSurface(position, combination.resultingSurface);
+                if (combination.subItem) { combination.subItem.Call(position, position, ItemStatic.Signal.Attack, null, null); }
                 return true;
             }
-            if (combination.inputSurface.name == surface.name + "(Clone)") {
-                GridManager.i.SetSurface(position, combination.resultingSurface);
-                return true;
-            }
-            if (combination.inputSurface.name == surface.name) {
-                GridManager.i.SetSurface(position, combination.resultingSurface);
-                return true;
-            }
-
         }
         return false;
     }
@@ -113,4 +110,5 @@ public class Surface : ScriptableObject
 public struct Combination {
     public Surface inputSurface;
     public Surface resultingSurface;
+    public ItemAbstract subItem;
 }

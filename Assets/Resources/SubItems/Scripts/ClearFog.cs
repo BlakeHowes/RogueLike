@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "ClearFog", menuName = "Mods/ClearFog")]
+[CreateAssetMenu(fileName = "ClearFog", menuName = "SubItems/ClearFog")]
 public class ClearFog : ItemAbstract
 {
-    public override void Call(Vector3Int position, Vector3Int origin, ItemStatic.Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal, GameObject parentGO, ItemAbstract parentItem) {
         GridManager.i.ClearFogDoor(position);
     }
     public override string Description() {

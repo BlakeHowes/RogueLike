@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: DeathSpawn
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
-  position: {x: 23, y: 37, z: 0}
+  position: {x: 23, y: 31, z: 0}
   origin: {x: 0, y: 0, z: 0}
   Gos:
-  - {fileID: 3243932232630802507, guid: 8c22d30352a6ca24d8c8d112df9df55d, type: 3}
-  - {fileID: 3243932232630802507, guid: 8c22d30352a6ca24d8c8d112df9df55d, type: 3}
-  - {fileID: 3243932232630802507, guid: 8c22d30352a6ca24d8c8d112df9df55d, type: 3}
-  - {fileID: 3243932232630802507, guid: 8c22d30352a6ca24d8c8d112df9df55d, type: 3}
+  - {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
+  - {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
+  - {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
+  - {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
   onSignal: 9
+  addToParty: 0

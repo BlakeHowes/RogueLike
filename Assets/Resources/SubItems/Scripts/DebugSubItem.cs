@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "Debug", menuName = "Mods/Debug")]
+[CreateAssetMenu(fileName = "Debug", menuName = "SubItems/Debug")]
 public class DebugSubItem : ItemAbstract {
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
-        Debug.Log("Debug Call");
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
+        Debug.Log("Debug Call: Position: " +position+ " Origin: "+ origin +" Signal: " +signal + " ParentGo: " + parentGO +" ParentItem " + parentItem);
         GridManager.i.AddToStack(this);
     }
     public override string Description() {

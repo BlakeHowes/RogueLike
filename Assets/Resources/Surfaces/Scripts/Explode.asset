@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b21df5cdd212194bb09667f1c906cf4, type: 3}
+  m_Name: Explode
+  m_EditorClassIdentifier: 
+  tile: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  onSignal: 4
+  sendSignalToSubItems: 9
+  subItems:
+  - {fileID: 11400000, guid: 81e745a6c21899744beca520ac9f7326, type: 2}
+  - {fileID: 11400000, guid: 53a10d3be35627345a9d7032e7bdfe0c, type: 2}
+  - {fileID: 11400000, guid: bc50b55615db8b241b3dd21f042b52bf, type: 2}
+  targetStrings: []
+  targetsTags: 0

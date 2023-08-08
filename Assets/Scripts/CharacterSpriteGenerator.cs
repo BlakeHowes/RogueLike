@@ -92,12 +92,12 @@ public static class CharacterSpriteGenerator {
         }
         if (helmet && !options.hideHelmet) { baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset + characterOffset); }
 
-        if (inventory.mainHand) {
+        if (inventory.mainHand && !options.hideWeapons) {
             var weapon = inventory.mainHand as Weapon;
             baseTexture = PasteSprite(weapon.tile.sprite, baseTexture, weapon.heldOffset + characterOffset + options.mainHandOffset);
         }
         
-        if (inventory.offHand) {
+        if (inventory.offHand && !options.hideWeapons) {
             Vector3Int offset = new Vector3Int(-10, 0);
             if (inventory.offHand is Equipment) {
                 Equipment equipment = inventory.offHand as Equipment;

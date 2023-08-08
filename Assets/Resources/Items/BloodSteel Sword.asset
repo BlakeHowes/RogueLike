@@ -15,10 +15,10 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 339c6045817cd774ba3c598375c0f7b3, type: 2}
   position: {x: 37, y: 38, z: 0}
   origin: {x: 36, y: 39, z: 0}
+  parentItem: {fileID: 0}
   shopValue: 30
   subItems: []
   twoHanded: 0
-  actionPointCost: 1
   damageRange: {x: 15, y: 30}
   accuracyBase: 100
   rangeBase: 1

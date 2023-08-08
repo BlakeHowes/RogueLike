@@ -9,7 +9,7 @@ public abstract class ItemAbstract : ScriptableObject
     //public GameObject particles;
     [HideInInspector] public Vector3Int position;
     [HideInInspector] public Vector3Int origin;
-    public abstract void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal);
+    public abstract void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal, GameObject parentGO,ItemAbstract parentItem);
     public abstract IEnumerator Action();
     public abstract string Description();
 }
@@ -49,10 +49,11 @@ public static class ItemStatic {
         Heal,
         TakeDamage,
         Death,
-        StartOfTurn,
+        OnSwitchFactionTurn,
         Tick,
-        FirstEnemyMove,
+        StartOfIndividualTurn,
         SetTarget,
-        DirectDamage
+        DirectDamage,
+        EndOfIndividualTurn
     }
 }

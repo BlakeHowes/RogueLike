@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Swap
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 288012f9ee17ba1439754d646013be13, type: 2}
-  particles: {fileID: 0}
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  type: 0
+  targetsTags: 31
   range: 7
-  actionPointCost: 1
-  customDescription: Switch targets with ally
+  actionPointCost: 3
+  coolDown: 2
+  CameraZoomDuration: 0
+  particles: {fileID: 0}
   coolDownTimer: 0
   subItems:
   - {fileID: 11400000, guid: e8561091255c20042bf64f7ae178ba3c, type: 2}
   - {fileID: 11400000, guid: db17b3fe7f3b8ab45a71a1637d4d8557, type: 2}
   - {fileID: 11400000, guid: 351ca3041902e354287a8f038808f8f3, type: 2}
-  skillDescriptionForAI: 0
-  CameraZoomDuration: 0
+  statusEffects: []
+  customDescription: Switch targets with character
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

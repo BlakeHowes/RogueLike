@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: Battle Cry
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 77e1d95bc328d59419b5f950071b844c, type: 2}
-  position: {x: 0, y: 0, z: 0}
-  origin: {x: 0, y: 0, z: 0}
-  type: 3
-  targetFaction: 0
+  position: {x: 29, y: 35, z: 0}
+  origin: {x: 29, y: 35, z: 0}
+  type: 4
+  targetsTags: 1
   range: 4
   actionPointCost: 2
   coolDown: 4
-  CameraZoomDuration: 0
+  CameraZoomDuration: 1
   particles: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
-  coolDownTimer: 0
   subItems:
   - {fileID: 11400000, guid: eb208c504e1ab3e4c98279daee45932f, type: 2}
   statusEffects:
   - {fileID: 11400000, guid: 170711fa72156ab489e293084a233eea, type: 2}
-  skillDescriptionForAI: 0
   customDescription: Increase in range allie's damage by 5 for 4 turns
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Rusted Helm
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: b7230f4f50e40ce4eafa0bd57baec4ba, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   equipmentType: 2
+  weight: 2
   subItems: []
   wornSprite: {fileID: 0}
   hideHair: 1
   wornOffset: {x: 0, y: 0, z: 0}
+  customDescription: 
   maxHealthBase: 0
   armourBase: 1

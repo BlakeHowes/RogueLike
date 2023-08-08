@@ -53,9 +53,10 @@ MonoBehaviour:
   state: 0
   deathAction:
   - {fileID: 11400000, guid: 211d937a5709f4b4c8b715cabc664c73, type: 2}
+  immunites: []
   maxHealthBase: 0
   armourBase: 0
-  actionPointsBase: 0
+  actionPointsBase: 3
   throwingRangeBase: 0
   fistDamageBase: 0
   walkCostBase: 0

@@ -20,6 +20,7 @@ tree("Combat")
 				checkEndTurn()
 tree("Actions")
 	fallback
+		UseSkills()
 		Attack()
 		not isHealthAboveZero
 		tree("Move")

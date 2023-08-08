@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Grass
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c7b645e37f47f014882328ca1a42e076, type: 2}
-  iconColour: {r: 0.27903828, g: 0.4339623, b: 0.23540407, a: 1}
+  iconColour: {r: 0.2242791, g: 0.754717, b: 0.3139266, a: 1}
   combinations:
   - inputSurface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
     resultingSurface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+    subItem: {fileID: 0}
+  - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
+    resultingSurface: {fileID: 11400000}
+    subItem: {fileID: 11400000, guid: 3069977b89494f24781551614b8d32c3, type: 2}
   items: []
   StatusEffect: {fileID: 0}
   duration: {x: 0, y: 0}

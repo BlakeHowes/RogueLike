@@ -24,4 +24,4 @@ MonoBehaviour:
   wornOffset: {x: 0, y: 0, z: 0}
   customDescription: 
   maxHealthBase: 0
-  armourBase: 1
+  armourBase: 16

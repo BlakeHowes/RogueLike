@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.UI.Image;
-using UnityEngine.UIElements;
 
-[CreateAssetMenu(fileName = "Swap", menuName = "Mods/Swap")]
+[CreateAssetMenu(fileName = "Swap", menuName = "SubItems/Swap")]
 public class Swap : ItemAbstract {
-    public override void Call(Vector3Int position, Vector3Int origin, ItemStatic.Signal signal) {
+    public override void Call(Vector3Int position, Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO, ItemAbstract parentItem) {
+        if(signal != ItemStatic.Signal.Attack) { return; }
         this.position = position;
         this.origin = origin;
         GridManager.i.AddToStack(this);

@@ -5,6 +5,7 @@ using Panda;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
 using static PartyManager;
+using Random = UnityEngine.Random;
 public class Behaviours : MonoBehaviour
 {
     private Vector3Int origin;
@@ -20,15 +21,39 @@ public class Behaviours : MonoBehaviour
 
     public void OnEnable() {
         gotilemap = GridManager.i.goTilemap;
-        targetStrings = ConvertFlagsEnumToStringList(targetsTags);
+        targetStrings = ConvertFlagsEnumToStringList(targetsTags,gameObject);
     }
 
     [Task]
     public void CallAttackItems() {
         foreach (ItemAbstract item in itemActions) {
-            item.Call(origin, origin, Signal.Attack);
+            item.Call(origin, origin, Signal.Attack,gameObject,null);
         }
         ThisTask.Succeed();
+    }
+
+    [Task]
+    public void UseSkills() {
+        var inventory = GetComponent<Inventory>();
+        foreach (var item in inventory.skills) {
+            if(item is not Skill) {
+                Debug.LogError(item + " in " + gameObject.name +" skills");
+                continue; 
+            }
+            Skill skill = item as Skill;
+            if (skill.CheckValidity(targetPosition,origin,gameObject)) {
+                MouseManager.i.itemSelected = item;
+               
+                skill.CalculateStats(targetPosition,origin, gameObject);
+                GameUIManager.i.ShowRange(origin, skill.range);
+                GridManager.i.AddToStack(Manager.GetGlobalValues().GetWaitSeconds(0.4f));
+                skill.Call(targetPosition,origin,Signal.Attack,gameObject,null);
+                MouseManager.i.itemSelected = null;
+                ThisTask.Succeed();
+                break;
+            }
+        }
+        ThisTask.Fail();
     }
 
     [Task]
@@ -52,35 +77,12 @@ public class Behaviours : MonoBehaviour
         return skills;
     }
 
-    public float SkillWeight(Skill skill) {
-        float weight = 0f;
-        var description = skill.skillDescriptionForAI;
-        switch (description) {
-            case SkillDescriptionForAI.BuffSelf:
-                weight = 2;
-                break;
-            case SkillDescriptionForAI.BuffAllies:
-                var allies = GridManager.i.goMethods.GameObjectsInRange(skill.range, origin, targetStrings).Count;
-                weight = allies;
-                break;
-            case SkillDescriptionForAI.AttackSingle:
-                weight = 2;
-                break;
-            case SkillDescriptionForAI.AttackAOE:
-                var enemies = GridManager.i.goMethods.GameObjectsInRange(skill.range, targetPosition, targetStrings).Count;
-                weight = enemies;
-                break;
-        }
-        return weight;
-    }
-
     public void UpdateInformation() {
         Debug.Log("Update Info");
         origin = gameObject.Position();
         stats = gameObject.GetComponent<Stats>();
-        stats.ResetTempStats();
+        stats.RefreshCharacter(origin);
         GetTarget();
-        GetComponent<Inventory>().CallEquipment(origin, origin, Signal.CalculateStats);
         Debug.Log("target " + target);
         if (!target) {
             stats.state = State.Idle;
@@ -125,7 +127,7 @@ public class Behaviours : MonoBehaviour
     [Task]
     bool isInCombat() {
         if (PartyManager.i.enemyParty.Contains(gameObject)) { return true; }
-        if(stats) if(stats.state == PartyManager.State.Combat) { return true; }
+        if(stats) if(stats.state == State.Combat) { return true; }
         return false;
     }
 
@@ -134,7 +136,7 @@ public class Behaviours : MonoBehaviour
         GridManager.i.TickGame();
         if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
         GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
-        PartyManager.i.NextEnemy(gameObject);
+        PartyManager.i.EndEnemyTurn(gameObject);
         
         ThisTask.Succeed();
         //PartyManager.i.EndEnemyTurn(gameObject);
@@ -145,7 +147,7 @@ public class Behaviours : MonoBehaviour
         GridManager.i.TickGame();
         if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
         GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
-        PartyManager.i.NextEnemy(gameObject);
+        PartyManager.i.EndEnemyTurn(gameObject);
 
         ThisTask.Succeed();
         //PartyManager.i.EndEnemyTurn(gameObject);
@@ -174,7 +176,7 @@ public class Behaviours : MonoBehaviour
         if (position.GameObjectGo() != gameObject && !gotilemap.GetTile(position)) {
             ThisTask.Succeed(); return ;
         }
-        var pos = new Vector3Int(position.x + UnityEngine.Random.Range(-1, 2), position.y + UnityEngine.Random.Range(-1, 2));
+        var pos = new Vector3Int(position.x + Random.Range(-1, 2), position.y + Random.Range(-1, 2));
         if (!pos.IsWalkable()) { ThisTask.Succeed(); return; }
         if (pos.GameObjectSpawn()) { ThisTask.Succeed(); return; }
         GridManager.i.goMethods.RemoveGameObject(position);
@@ -195,7 +197,7 @@ public class Behaviours : MonoBehaviour
         if(position.GameObjectGo() != gameObject && !gotilemap.GetTile(position)) {
             return;
         }
-        var pos =new Vector3Int(position.x + UnityEngine.Random.Range(-1, 2), position.y + UnityEngine.Random.Range(-1, 2));
+        var pos =new Vector3Int(position.x + Random.Range(-1, 2), position.y + Random.Range(-1, 2));
         if (!GridManager.i.floorTilemap.GetTile(pos)) { return; }
         if (pos.GameObjectSpawn()) { return; }
         GridManager.i.goMethods.RemoveGameObject(position);

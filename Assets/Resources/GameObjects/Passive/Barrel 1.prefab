@@ -55,13 +55,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2a3250779f65bc49a616055fbf8ae70, type: 2}
   - {fileID: 11400000, guid: de6ce9d5d31c1784785f470385b44dea, type: 2}
   - {fileID: 11400000, guid: 68b8a510a71b5814e99dbba1d51eee5b, type: 2}
-  - {fileID: 11400000, guid: ddb7d6ee0fc6c654db69fe57c1783047, type: 2}
   - {fileID: 11400000, guid: 81e745a6c21899744beca520ac9f7326, type: 2}
   - {fileID: 11400000, guid: 53a10d3be35627345a9d7032e7bdfe0c, type: 2}
   - {fileID: 11400000, guid: bc50b55615db8b241b3dd21f042b52bf, type: 2}
+  immunites: []
   maxHealthBase: 1
   armourBase: 0
-  actionPointsBase: 0
+  actionPointsBase: 3
   throwingRangeBase: 0
   fistDamageBase: 0
   walkCostBase: 0

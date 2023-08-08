@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: Wooden Bow
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 730000d08a114a644be5072c58fc6fe1, type: 2}
-  position: {x: 28, y: 30, z: 0}
-  origin: {x: 26, y: 31, z: 0}
+  position: {x: 33, y: 30, z: 0}
+  origin: {x: 29, y: 32, z: 0}
   shopValue: 10
   subItems:
-  - {fileID: 11400000, guid: 481a8023d42bec443bc75c057812855d, type: 2}
+  - subItem: {fileID: 11400000, guid: 481a8023d42bec443bc75c057812855d, type: 2}
+    after: 0
   twoHanded: 1
   damageRange: {x: 10, y: 15}
   accuracyBase: 100
   rangeBase: 8
   heldOffset: {x: 6, y: 6, z: 0}
-  rangeTemp: 11
-  accuracyTemp: 25
+  rangeTemp: 8
+  accuracyTemp: 100
   damageTemp: 10
   damageMaxTemp: 15
   damageMultipleTemp: 1
   damage: 0
-  originCharacter: {fileID: 0}
+  parentGO: {fileID: 0}
   target: {fileID: 0}

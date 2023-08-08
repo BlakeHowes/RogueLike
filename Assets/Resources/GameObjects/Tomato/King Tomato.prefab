@@ -77,7 +77,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   itemActions: []
-  targetsTags: 17
+  targetsTags: 18
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,9 +95,10 @@ MonoBehaviour:
   deathAction:
   - {fileID: 11400000, guid: d2f95f491230dd848bf30969ad5adf5f, type: 2}
   - {fileID: 11400000, guid: d2f95f491230dd848bf30969ad5adf5f, type: 2}
+  immunites: []
   maxHealthBase: 70
   armourBase: 0
-  actionPointsBase: 2
+  actionPointsBase: 3
   throwingRangeBase: 1
   fistDamageBase: 1
   walkCostBase: 1

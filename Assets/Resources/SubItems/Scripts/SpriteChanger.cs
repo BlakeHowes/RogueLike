@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "Sprite Changer", menuName = "Mods/Sprite Changer")]
+[CreateAssetMenu(fileName = "Sprite Changer", menuName = "SubItems/Sprite Changer")]
 public class SpriteChanger : ItemAbstract {
     public GameObject gameobject;
     public List<ChangeSpritePercentage> changeSprites;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal == Signal.TakeDamage) {
             var go = position.GameObjectGo();
             if (!go) { return; }

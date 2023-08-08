@@ -166,6 +166,7 @@ MonoBehaviour:
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
+  immunites: []
   maxHealthBase: 100
   armourBase: 0
   actionPointsBase: 4
@@ -202,6 +203,7 @@ MonoBehaviour:
   items: []
   traits:
   - {fileID: 11400000, guid: f773b7fec30eb2f4eb30425057da19b1, type: 2}
+  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
   skills: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: b232f74e2038196449cd6be22f7c5507, type: 2}

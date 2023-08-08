@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "Death Particle", menuName = "Mods/Death Particle")]
+[CreateAssetMenu(fileName = "Death Particle", menuName = "SubItems/Death Particle")]
 public class DeathParticle : ItemAbstract {
     public GameObject particles;
     public float delay;
@@ -13,7 +13,7 @@ public class DeathParticle : ItemAbstract {
     public Sprite sprite;
     public float scaleFactor;
 
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         this.position = position;
         this.origin = origin;
         if (targetSelf) { this.position = origin; }
@@ -22,8 +22,11 @@ public class DeathParticle : ItemAbstract {
             go.TryGetComponent(out SpriteRenderer rend);
             sprite = rend.sprite;
         }
-        
-        GridManager.i.AddToStack(this);
+        if (!sprite) { return; }
+        particles.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+        var clone = EffectManager.i.CreateSingleParticleEffect(position + offset, particles);
+
+        //GridManager.i.AddToStack(this);
     }
     public override IEnumerator Action() {
         if (!sprite) { yield break; }

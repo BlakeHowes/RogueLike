@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using static ItemStatic;
+
 public class Actions : MonoBehaviour
 {
     public static Actions i;
@@ -10,43 +10,44 @@ public class Actions : MonoBehaviour
     public float pickupCost;
     public float handCost;
     public int throwRange;
-    public ItemAbstract thrownItem;
+    public SetItem setItem;
+    public ItemAbstract wait;
     public void Awake() {
         i = this;
     }
 
-    public void Die(Vector3Int position) {
-        var character = position.GameObjectSpawn();
-        if(character == null) {
-            Debug.LogError("Character is missing before death");
-            GridManager.i.graphics.UpdateEverything();
-            return;
-        }
-        PartyManager.i.RemoveDeadEnemy(character);
-        GridManager.i.goMethods.RemoveGameObject(position);
-        character.GetComponent<Inventory>().items.Drop(position,position);
-        GridManager.i.graphics.UpdateEverything();
-        if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
-        //GridManager.i.ClearFog();
-        character.GetComponent<Stats>().healthbarGameObject.SetActive(false);
-        character.SetActive(false);
-    }
-
-    public void RangedAttack(Vector3Int position, Vector3Int origin,ItemAbstract item) {
-        position = GridManager.i.goMethods.FirstGameObjectInSight(position, origin);
-        item.Call(position, origin,Signal.Attack);
-    }
-
     public void ThrowItem(Vector3Int position,Vector3Int origin,ItemAbstract item,Inventory inventory) {
-        if (item is Item) {
-            item.Call(position, origin, Signal.Attack);
+        if (!position.InRange(origin, inventory.GetComponent<Stats>().throwingRangeTemp)) { return; }
+        var landPos = GridManager.i.itemMethods.FloodFillDropItem(position,false,item);
+
+        EffectManager.i.ShootBasicProjectile(position, origin, item.tile.sprite, false);
+        bool itemOverTotalUses = false;
+        if (item is Item) { 
+            var item2 = item as Item;
+            item2.thrownLocation = landPos;
+            item.Call(position, origin, Signal.Attack, inventory.gameObject, null); 
+            if(item2.timesUsed >= item2.totalUses) { itemOverTotalUses = true; }
         }
-        else {
-            var thrownClone = Instantiate(thrownItem);
-            var thrownItemClone = thrownClone as ThrownItem;
-            thrownItemClone.item = item;
-            thrownItemClone.Call(position, origin, Signal.Attack);
+
+        item.position = position;
+        item.origin = origin;
+        if (position.GameObjectGo() && item is Weapon) {
+            var weapon = item as Weapon;
+            weapon.parentGO = inventory.gameObject;
+            GridManager.i.AddToStack(item);
         }
+       
+
+        if (landPos != position && !itemOverTotalUses) {
+            wait.Call(position, origin, Signal.Attack, inventory.gameObject, null);
+            EffectManager.i.ShootBasicProjectile(landPos, position, item.tile.sprite, false);
+        }
+
+
+        setItem.item = item;
+        setItem.position = landPos;
+        if (!itemOverTotalUses) { GridManager.i.AddToStack(setItem);  }
+        
 
         if (inventory.items.Contains(item)) {
             inventory.items.Remove(item);

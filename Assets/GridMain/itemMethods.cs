@@ -25,10 +25,9 @@ public class itemMethods {
         }
         else {
             var prefab = assets.TiletoItem(tile);
-            if (prefab == null) {
-                return null;
-            }
-            return SetItem(prefab, position);
+            if (prefab == null) { return null;}
+            var clone = GridManager.i.InstantiateItem(prefab);
+            return SetItem(clone, position);
         }
     }
 
@@ -69,7 +68,7 @@ public class itemMethods {
         return Vector3Int.zero;
     }
 
-    public float FloodFillDropItems(Vector3Int position, Vector3Int origin, List<ItemAbstract> items) {
+    public float FloodFillDropItem(Vector3Int position, Vector3Int origin, List<ItemAbstract> items) {
         var actions = Actions.i;
         var timeTaken = 0.1f;
         var gridManager = GridManager.i;
@@ -111,12 +110,12 @@ public class itemMethods {
         return timeTaken;
     }
 
-    public Vector3Int FloodFillDropSingle(Vector3Int position,ItemAbstract item) {
+    public Vector3Int FloodFillDropItem(Vector3Int position, bool setItem, ItemAbstract item) {
         var actions = Actions.i;
         Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
         List<Vector3Int> checkedCells = new List<Vector3Int>();
-        if (!GetItemOrSpawnFromTile(position)) {
-            SetItem(item, position);
+        if (!position.GameObjectGo() && !GetItem(position)) {
+            if(setItem)SetItem(item, position);
             return position;
         }
         cellstocheck.Enqueue(position);
@@ -134,8 +133,8 @@ public class itemMethods {
 
                     if (!isFloor.GetTile(offsetPosition)) { continue; }
                     if (offsetPosition == checkpos) { continue; }
-                    if (!GetItemOrSpawnFromTile(offsetPosition)) {
-                        SetItem(item, offsetPosition);
+                    if (offsetPosition.GameObjectGo() == null && GetItem(offsetPosition) == null) {
+                        if(setItem)SetItem(item, offsetPosition);
                         return offsetPosition;
                     }
 

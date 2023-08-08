@@ -149,6 +149,7 @@ MonoBehaviour:
   mainHandOffset: {x: 0, y: 0, z: 0}
   offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
+  hideWeapons: 0
   hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
@@ -166,19 +167,24 @@ MonoBehaviour:
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
+  immunites: []
   maxHealthBase: 100
   armourBase: 0
   actionPointsBase: 4
   throwingRangeBase: 5
-  fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
+  maxHealthTemp: 0
   armourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -201,11 +207,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - {fileID: 11400000, guid: d5d93365186e3a34bb95b93d42dbd29a, type: 2}
+  - {fileID: 11400000, guid: aa5792562fd4e9a4a8f9e5781aa1cb85, type: 2}
+  - {fileID: 11400000, guid: a43b37b5df943ae4fa90083b87cdcc89, type: 2}
+  - {fileID: 11400000, guid: ca08bbda313055d438ebcdfa5c4d97c9, type: 2}
+  - {fileID: 11400000, guid: 83121250017751e4da7a17cabd930c3c, type: 2}
+  - {fileID: 11400000, guid: 14d7bdc328220344bb44b702e6990a6a, type: 2}
   traits:
   - {fileID: 11400000, guid: f773b7fec30eb2f4eb30425057da19b1, type: 2}
   - {fileID: 11400000, guid: da9f73165fad19d4cad4975ffbbcf2a5, type: 2}
   - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
   skills: []
+  coolDowns: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
   offHand: {fileID: 0}

@@ -7,7 +7,7 @@ using static ItemStatic;
 public class Coins : ItemAbstract {
     public Vector2Int valueRange;
     int value;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if (signal == Signal.Pickup) {
             MouseManager.i.pickUpButNotAddToInventory = true;
             value = Random.Range(valueRange.x, valueRange.y+1);
@@ -15,7 +15,7 @@ public class Coins : ItemAbstract {
         }
     }
     public override string Description() {
-        throw new System.NotImplementedException();
+        return "FREEE MONNNEYYY";  
     }
 
     public override IEnumerator Action() {

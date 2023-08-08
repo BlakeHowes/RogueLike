@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using static PartyManager;
+using static UnityEngine.UI.Image;
 using UnityEngine.UIElements;
 
 public class GridTools

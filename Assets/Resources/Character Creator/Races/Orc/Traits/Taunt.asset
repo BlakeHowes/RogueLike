@@ -15,15 +15,18 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: b5de583306bea234fa883b218266313a, type: 2}
   position: {x: 30, y: 32, z: 0}
   origin: {x: 30, y: 32, z: 0}
-  type: 3
-  targetFaction: 1
+  type: 4
+  targetsTags: 2
   range: 4
   actionPointCost: 2
   coolDown: 6
   CameraZoomDuration: 0
   particles: {fileID: 8288408381700605430, guid: 8efa1630ca34eaa40a55575c68d0301e, type: 3}
+  coolDownTimer: 0
   subItems: []
   statusEffects:
   - {fileID: 11400000, guid: e51809e30cbb8ea4e8607a54fa3a374e, type: 2}
-  skillDescriptionForAI: 3
   customDescription: 'Taunt: Enemies target this character for 2 turns'
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

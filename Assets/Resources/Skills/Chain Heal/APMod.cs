@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
-[CreateAssetMenu(fileName = "APMod", menuName = "Mods/AP")]
+[CreateAssetMenu(fileName = "APMod", menuName = "SubItems/AP")]
 public class APMod : ItemAbstract {
     public int aP;
     public Vector2 chance;
     public int chanceThreshold;
     public Signal onSignal;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if (onSignal != signal) { return; }
         GridManager.i.AddToStack(this);
     }

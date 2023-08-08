@@ -15,9 +15,11 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: e6eb007fdf62b5149a54f5a9dbf37a6c, type: 2}
   position: {x: 28, y: 31, z: 0}
   origin: {x: 25, y: 32, z: 0}
+  parentItem: {fileID: 0}
   shopValue: 0
   subItems:
-  - {fileID: 11400000, guid: b0e2a331b9b93094082fd4c1ef54b0c6, type: 2}
+  - subItem: {fileID: 11400000, guid: b0e2a331b9b93094082fd4c1ef54b0c6, type: 2}
+    after: 0
   twoHanded: 0
   damageRange: {x: 12, y: 19}
   accuracyBase: 77

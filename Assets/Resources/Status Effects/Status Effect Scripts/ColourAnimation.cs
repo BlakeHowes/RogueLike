@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 
-[CreateAssetMenu(fileName = "ColourAnimation", menuName = "Mods/ColourAnimation")]
+[CreateAssetMenu(fileName = "ColourAnimation", menuName = "SubItems/ColourAnimation")]
 public class ColourAnimation : ItemAbstract
 {
     [HideInInspector]public GameObject character;
     public Color colour = Color.white;
     public bool waitForFlashToEnd;
     public Signal onSignal = Signal.Attack;
-    public override void Call(Vector3Int position, Vector3Int origin, Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal != onSignal) { return; }
         this.origin = origin;
         character = position.GameObjectGo();

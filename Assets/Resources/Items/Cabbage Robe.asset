@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: Cabbage Robe
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: bcd8fd8e71e632349aeb77df2d33c86e, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   equipmentType: 3
+  weight: 1
   subItems: []
   wornSprite: {fileID: 21300000, guid: b13eaf0b46609484ab505028c142ae84, type: 3}
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}
+  customDescription: 
   maxHealthBase: 0
   armourBase: 1

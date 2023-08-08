@@ -12,14 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f038314d241a9a48aa688b219b0e5ad, type: 3}
   m_Name: GlobalValues
   m_EditorClassIdentifier: 
-  width: 50
-  height: 55
+  width: 80
+  height: 85
   onHitNudgeAmount: 1.5
   onAttackNudgeAmount: 0.8
-  partyPrefabs:
-  - {fileID: 6780645703283991136, guid: 6aca3e01ca5bfed439be2acdf33cf7ca, type: 3}
-  - {fileID: 6780645703283991136, guid: 2573f0b0d7e4a81468e329d89d1e7570, type: 3}
-  - {fileID: 6780645703283991136, guid: 233dfa9892ecefd4481712f072a62075, type: 3}
   shadowTile: {fileID: 11400000, guid: 0369ba64565147a4b8256b16fd02b51a, type: 2}
   fog: {fileID: 11400000, guid: 2c396ea2d6ce5d949a0e70a8eba393a0, type: 2}
   bigFog: {fileID: 11400000, guid: 19e6a58cc88fe4c4f9141464049730be, type: 2}
@@ -31,13 +27,14 @@ MonoBehaviour:
   fogDistance: 7
   outerFogDistance: 1000
   maxItems: 9
-  maxPathLength: 22
+  maxPathLength: 40
   stepAnimationHeight: 6
   stepAnimationSpeed: 0.2
   walkSpeed: 0.0672
-  repeatSpeed: 0.1
+  repeatSpeed: 0.116
   Hardness: 841
   Dampening: 50.8
+  waitSeconds: {fileID: 11400000, guid: d9efe0b57f649a7499fb8cd9fe474109, type: 2}
   healthBarPrefab: {fileID: 2981452813050143931, guid: e4ee793ba6c964a4c90a641802906cde, type: 3}
   hitNumberPrefab: {fileID: 5578361876964675343, guid: 3f47214e8ba56ce4a8a3d0848e08e7ff, type: 3}
   mouseHighlight: {fileID: 11400000, guid: 22086ff9f2e4cae4386722b11fc3ee12, type: 2}

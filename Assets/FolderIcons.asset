@@ -189,3 +189,15 @@ MonoBehaviour:
   - folder: {fileID: 102900000, guid: 0cd280825007bf2468dadc12d13a7a07, type: 3}
     folderIcon: {fileID: 2800000, guid: cdceb21399ff2e54bbbde844e14001a8, type: 3}
     overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 45107d53306ca1d468e98f6c0911f4ea, type: 3}
+    folderIcon: {fileID: 2800000, guid: 9c9c234214b5be148858a85c15d73f9e, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: caccb82a3288a0048926788d0d2fb99a, type: 3}
+    folderIcon: {fileID: 2800000, guid: 8d386ec6df97fab4387fd314b1523733, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 20efb97baef99974b9e2774ceb66844d, type: 3}
+    folderIcon: {fileID: 2800000, guid: dbcb91ab594562642a362f0a95550f67, type: 3}
+    overlayIcon: {fileID: 0}
+  - folder: {fileID: 102900000, guid: 13b775e7d2ab3874e8c4079964d88ece, type: 3}
+    folderIcon: {fileID: 2800000, guid: 20de16c311169f445a5e25cb6a3f31bc, type: 3}
+    overlayIcon: {fileID: 0}

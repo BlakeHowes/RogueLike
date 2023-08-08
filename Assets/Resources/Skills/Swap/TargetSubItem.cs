@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Swap", menuName = "Mods/Swap")]
+[CreateAssetMenu(fileName = "Swap", menuName = "SubItems/Swap")]
 public class TargetSubItem : ItemAbstract {
     [HideInInspector] public GameObject originGo;
-    public override void Call(Vector3Int position, Vector3Int origin, ItemStatic.Signal signal) {
+    public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal, GameObject parentGO, ItemAbstract parentItem) {
         this.position = position;
         this.origin = origin;
         originGo = origin.GameObjectGo();

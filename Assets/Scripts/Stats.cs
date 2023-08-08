@@ -9,28 +9,28 @@ public class Stats : MonoBehaviour {
     public TileBase tile;
     public PartyManager.State state = PartyManager.State.Idle;
     public List<ItemAbstract> deathAction;
-
+    public List<ItemAbstract> immunites;
     [Header("Base Stats")]
     public int maxHealthBase;
     public int armourBase;
     public int actionPointsBase;
     public int throwingRangeBase;
-    public int fistDamageBase;
+
     public int walkCostBase;
     public int enemyAlertRangeBase;
     public int skillRangeBase;
 
     [Header("Temporary Stats")]
-    [NonSerialized] public int maxHealthTemp;
-    public int armourTemp;
-    [NonSerialized] public int actionPointsTemp;
-    [NonSerialized] public int throwingRangeTemp;
-    [NonSerialized] public int fistDamageTemp;
-    [NonSerialized] public int walkCostTemp;
-    public int enemyAlertRangeTemp;
-    public int skillRangeTemp;
-    public int directDamage;
-    public int armour;
+    [HideInInspector] public int maxHealthTemp;
+    [HideInInspector] public int armourTemp;
+    [HideInInspector] public int actionPointsTemp;
+    [HideInInspector] public int throwingRangeTemp;
+    [HideInInspector] public int walkCostTemp;
+    [HideInInspector] public int enemyAlertRangeTemp;
+    [HideInInspector] public int skillRangeTemp;
+    [HideInInspector] public int directDamage;
+    [HideInInspector] public int armour;
+    [HideInInspector] public int damageTaken;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -53,7 +53,6 @@ public class Stats : MonoBehaviour {
         maxHealthTemp = maxHealthBase;
         armourTemp = armourBase;
         throwingRangeTemp = throwingRangeBase;
-        fistDamageTemp = fistDamageBase;
         walkCostTemp = walkCostBase;
         enemyAlertRangeTemp = enemyAlertRangeBase;
         skillRangeTemp = skillRangeBase;
@@ -66,7 +65,14 @@ public class Stats : MonoBehaviour {
             DontDestroyOnLoad(this);
         }
         InitializeCharacter();
+        RefreshCharacter(gameObject.Position());
+    }
 
+    public bool IsImmune(ItemAbstract item) {
+        foreach(var immunity in immunites) {
+            if(immunity.GetType() == item.GetType()) { return true; }
+        }
+        return false;
     }
 
     public void OnStartOfCombat() {
@@ -101,35 +107,37 @@ public class Stats : MonoBehaviour {
             maxHealthTemp = maxHealthBase;
             health = maxHealthTemp;
         }
-        if (!GridManager.i) return;
-
-      
+        ResetTempStats();
         ResetActionPoints();
-
+        if (healthbar) { return; }
         healthbarGameObject = Instantiate(globalValues.healthBarPrefab, GameUIManager.i.canvasWorld);
         healthbar = healthbarGameObject.GetComponent<HealthBar>();
         healthbar.InitializeHealthbar(this, inventory);
     }
 
-    public void TakeDamage(int damage,Vector3Int origin) {
+    public void TakeDamage(int damage, Vector3Int origin) {
+        TakeDamage(damage, origin, false);
+    }
+
+    public void TakeDamage(int damage,Vector3Int origin,bool ignoreArmor) {
      
         var position = gameObject.Position();
 
         RefreshCharacter(position);
-        inventory.CallEquipment(position, position, Signal.TakeDamage);
-        Debug.Log("Take damage");
-        if (infiniteHealth) {
-            GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(gameObject, origin, Color.white));
-            SpawnHitNumber(damage.ToString(), Color.red, 1);
-            return; 
-        }
+        damageTaken = damage;
+        inventory.CallEquipment(position, origin, Signal.TakeDamage);
+        Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
+
         var damageTotal = damage;
-        var armourLeft = armour - damage;
-        damage -= armour;
-        armour = armourLeft;
-        if(armourLeft < 0) { armour = 0; }
-        if(damage < 0) { damage = 0; }
-        health -= damage;
+        if (!ignoreArmor) {
+            var armourLeft = armour - damage;
+            damage -= armour;
+            armour = armourLeft;
+            if (armourLeft < 0) { armour = 0; }
+            if (damage < 0) { damage = 0; }
+        }
+
+        if(!infiniteHealth)health -= damage;
 
         if (gameObject.tag == "Enemy") {
             if (state != PartyManager.State.Combat) {
@@ -155,7 +163,7 @@ public class Stats : MonoBehaviour {
             Vector3 amount = gameObject.transform.position - offset;
             if(!GridManager.i.graphics.lerping)spring.Nudge(amount,24,1000);
         }
-        if (gameObject.tag == "Interactable") {
+        if (gameObject.tag != "Interactable" && gameObject.tag != "Door") {
             if (damageTotal == 0) { SpawnHitNumber("Miss", Color.yellow, 1); } else {
                 SpawnHitNumber(damageTotal.ToString(), Color.red, 1);
             }
@@ -167,19 +175,18 @@ public class Stats : MonoBehaviour {
             return;
         }
         Die(position);
-
     }
 
     public void Die(Vector3Int position) {
         inventory.CallEquipment(position, position, Signal.Death);
         foreach (var item in deathAction) {
             if (item)
-                item.Call(position, position, Signal.Death);
+                item.Call(position, position, Signal.Death,gameObject,null);
         }
 
         PartyManager.i.RemoveDeadEnemy(gameObject);
         GridManager.i.goMethods.RemoveGameObject(position);
-        inventory.items.Drop(position, position);
+        if(gameObject.tag != "Summon")inventory.items.Drop(position, position);
         GridManager.i.graphics.UpdateEverything();
         //if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
         healthbarGameObject.SetActive(false);
@@ -217,6 +224,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void RefreshCharacter(Vector3Int position) {
+        Debug.Log("Refresh " + gameObject.name);
         ResetTempStats();
         inventory.CallEquipment(position, position, Signal.ResetStatsToBase);
         inventory.CallEquipment(position,position, Signal.CalculateStats);

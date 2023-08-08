@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
+  m_Name: Steam
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 0158c5086fcfe5e4394bef7fbb362318, type: 2}
+  iconColour: {r: 0.740566, g: 1, b: 0.98327, a: 1}
+  combinations: []
+  items: []
+  StatusEffect: {fileID: 0}
+  duration: {x: 5, y: 12}
+  counter: 0
+  effectPrefab: {fileID: 8194992990867289339, guid: 24a15c9d271cd27409780ad0756aaef9, type: 3}
+  dryUp: 1
+  dryUpSurface: {fileID: 0}
+  tryToSpread: 0

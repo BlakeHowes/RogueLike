@@ -5,7 +5,7 @@ namespace LlamAcademy.Spring.Runtime
 {
     public class SpringToTarget3D : BaseSpringBehaviour
     {
-        private SpringVector3 spring;
+        public SpringVector3 spring;
         [HideInInspector]public GameObject healthbar;
         private void Awake()
         {
@@ -99,7 +99,7 @@ namespace LlamAcademy.Spring.Runtime
                 if (healthbar) healthbar.transform.position = transform.position;
                 yield return null;
             }
-
+            transform.position = TargetPosition;
             spring.Reset();
         }
     }

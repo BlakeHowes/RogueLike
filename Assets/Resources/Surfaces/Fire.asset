@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Fire
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 17afce58a28caa8469f70839026af993, type: 2}
-  iconColour: {r: 0.5, g: 0.20518869, b: 0.22231618, a: 1}
+  iconColour: {r: 1, g: 0.42536378, b: 0.2688679, a: 1}
   combinations:
   - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
-    resultingSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
+    resultingSurface: {fileID: 11400000, guid: e8d088f09a687b34cb6a3e16181cf343, type: 2}
+    subItem: {fileID: 0}
+  - inputSurface: {fileID: 11400000, guid: 13360019c5a4cad409fb8d38e90bb243, type: 2}
+    resultingSurface: {fileID: 11400000}
+    subItem: {fileID: 11400000, guid: 99c16bbd4fcfa0649870e728e4ecea0d, type: 2}
   items: []
   StatusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}
   duration: {x: 5, y: 10}

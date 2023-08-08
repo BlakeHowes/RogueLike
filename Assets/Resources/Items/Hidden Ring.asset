@@ -13,11 +13,16 @@ MonoBehaviour:
   m_Name: Hidden Ring
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: ff8ceb188a637a04caa4c044360bd498, type: 2}
-  particles: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  origin: {x: 0, y: 0, z: 0}
+  shopValue: 0
   equipmentType: 4
-  subItems: []
+  weight: 0
+  subItems:
+  - {fileID: 11400000, guid: 86c49c20a57c1bb4eb6e48653a8b9ef4, type: 2}
   wornSprite: {fileID: 0}
   hideHair: 0
   wornOffset: {x: 0, y: 0, z: 0}
+  customDescription: 
   maxHealthBase: 0
   armourBase: 0

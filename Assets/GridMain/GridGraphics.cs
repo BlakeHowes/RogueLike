@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 
 public class GridGraphics 
 {
@@ -70,11 +69,12 @@ public class GridGraphics
         if(healthbar)healthbar.transform.position = character.transform.position;
         var distance = Vector3.Distance(startPosition, targetPosition);
         duration *= distance;
-       
+        
         while (time < duration) {
             {
                 lerping = true;
                 if (character) {
+                    
                     character.transform.position = Vector3.Lerp(startPosition + offset, targetPosition + offset, time / duration);
                     if (healthbar) healthbar.transform.position = character.transform.position;
                     time += Time.deltaTime;
@@ -94,6 +94,58 @@ public class GridGraphics
             }
 
         }
+        lerping = false;
+    }
+
+    public Sprite CreateSpriteWithPivot(Sprite existingSprite, Vector2 pivot) {
+        return Sprite.Create(existingSprite.texture, existingSprite.rect, pivot,16);
+    }
+
+    public IEnumerator RollToPosition(Vector3Int startPosition, Vector3Int targetPosition, GameObject character, float duration) {
+        float time = 0;
+        Vector3 offset = new Vector3(0.5f, 0.5f);
+        if (!character) { yield return null; }
+        var healthbar = character.GetComponent<Stats>().healthbarGameObject;
+        character.transform.position = startPosition + offset;
+        if (healthbar) healthbar.transform.position = character.transform.position;
+        var distance = Vector3.Distance(startPosition, targetPosition);
+        duration *= distance;
+
+
+        var rend = character.GetComponent<SpriteRenderer>();
+        var pivot = CharacterSpriteGenerator.GetPivot(rend.sprite);
+        rend.sprite = CreateSpriteWithPivot(rend.sprite, new Vector2(0.5f,0.5f));
+
+        offset.y += Mathf.Abs(pivot.y - 0.5f);
+        var direction = 1;
+        if (startPosition.x < targetPosition.x) { direction = -90; }
+        while (time < duration) {
+            {
+                lerping = true;
+                if (character) {
+                    character.transform.Rotate(Vector3.forward*direction,700 * Time.deltaTime);
+                    character.transform.position = Vector3.Lerp(startPosition + offset, targetPosition + offset, time / duration);
+                    if (healthbar) healthbar.transform.position = character.transform.position;
+                    time += Time.deltaTime;
+                    yield return null;
+                }
+                else {
+                    break;
+                }
+
+            }
+            if (character) {
+                character.transform.position = targetPosition + offset;
+                if (healthbar) healthbar.transform.position = character.transform.position;
+            }
+            else {
+                break;
+            }
+
+        }
+        character.transform.rotation = Quaternion.identity;
+        character.transform.position = new Vector3(character.transform.position.x, character.transform.position.y - (offset.y - 0.5f));
+        rend.sprite = CreateSpriteWithPivot(rend.sprite, pivot);
         lerping = false;
     }
 
