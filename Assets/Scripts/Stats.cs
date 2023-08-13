@@ -47,6 +47,7 @@ public class Stats : MonoBehaviour {
     public HealthBar healthbar;
     private Inventory inventory;
     private GlobalValues globalValues;
+
     public void ResetTempStats() {
         actionPointsSum = 0;
         actionPointsTemp = actionPointsBase;
@@ -64,8 +65,8 @@ public class Stats : MonoBehaviour {
         if(gameObject.tag == "Party") {
             DontDestroyOnLoad(this);
         }
-        InitializeCharacter();
-        RefreshCharacter(gameObject.Position());
+        inventory = GetComponent<Inventory>();
+        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
     }
 
     public bool IsImmune(ItemAbstract item) {
@@ -99,20 +100,16 @@ public class Stats : MonoBehaviour {
     }
 
     public void InitializeCharacter() {
-        inventory = GetComponent<Inventory>();
-        CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
-
-
         if (maxHealthTemp == 0) {
             maxHealthTemp = maxHealthBase;
             health = maxHealthTemp;
         }
-        ResetTempStats();
         ResetActionPoints();
         if (healthbar) { return; }
         healthbarGameObject = Instantiate(globalValues.healthBarPrefab, GameUIManager.i.canvasWorld);
         healthbar = healthbarGameObject.GetComponent<HealthBar>();
         healthbar.InitializeHealthbar(this, inventory);
+        RefreshCharacter(gameObject.Position());
     }
 
     public void TakeDamage(int damage, Vector3Int origin) {
@@ -224,7 +221,6 @@ public class Stats : MonoBehaviour {
     }
 
     public void RefreshCharacter(Vector3Int position) {
-        Debug.Log("Refresh " + gameObject.name);
         ResetTempStats();
         inventory.CallEquipment(position, position, Signal.ResetStatsToBase);
         inventory.CallEquipment(position,position, Signal.CalculateStats);

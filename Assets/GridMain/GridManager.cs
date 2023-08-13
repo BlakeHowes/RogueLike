@@ -2,9 +2,9 @@ using Panda;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
 using static ItemStatic;
 
 public class GridManager : MonoBehaviour {
@@ -21,6 +21,7 @@ public class GridManager : MonoBehaviour {
     private Surface[,] surfaceGrid;
     private ItemAbstract[,] itemGrid;
     private GameObject[,] goGrid;
+    private int[,] fogMap;
 
     [NonSerialized] public mechMethods mechMethods;
     [NonSerialized] public itemMethods itemMethods;
@@ -32,6 +33,7 @@ public class GridManager : MonoBehaviour {
     public Tilemap itemTilemap;
     public Tilemap goTilemap;
     public Tilemap fogTilemap;
+    public Tilemap fogDarkTilemap;
     public Tilemap floorTilemap;
     public Tilemap shadowTilemap;
 
@@ -153,13 +155,13 @@ public class GridManager : MonoBehaviour {
 
         if (currentCharacter.activeSelf) {
             if (PartyManager.i.party.Contains(currentCharacter)) {
-                InstantiateGosMechsSurfacesAroundCharacters();
+                //InstantiateGosMechsSurfacesAroundCharacters();
                 GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
                 InventoryManager.i.UpdateInventory();
             }
         }
 
-        //ClearSemiFog();
+        ClearSemiFog();
         graphics.UpdateEverything();
     }
 
@@ -221,7 +223,6 @@ public class GridManager : MonoBehaviour {
                     var pos =goMethods.FindFloodFillCellForGo(position);
                     goMethods.SetGameObject(pos, character);
                     stats.InitializeCharacter();
-                    stats.RefreshCharacter(pos);
                     character.transform.position = pos + new Vector3(0.5f,0.5f);
                     PartyManager.i.AddPartyMember(character);
                 }
@@ -232,17 +233,33 @@ public class GridManager : MonoBehaviour {
         foreach (GameObject character in partyPrefabs) {
             var clone = goMethods.SpawnFloodFill(position, character);
             var stats = clone.GetComponent<Stats>();
-            stats.RefreshCharacter(position);
+            stats.InitializeCharacter();
             PartyManager.i.AddPartyMember(clone);
             clone.transform.parent = null;
         }
     }
 
     void OnDrawGizmos() {
+        return;
         //Draw a semitransparent red cube at the transforms position
         if (!globalValues) { return; }
-       Gizmos.color = new Color(1, 0.2f, 0.2f, 0.3f);
-        Gizmos.DrawCube(new Vector3(globalValues.width /2, globalValues.height /2), new Vector3(globalValues.width, globalValues.height));
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
+                if (fogMap[x,y] == 0) {
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawCube(new Vector3(x+0.5f,y+0.5f),new Vector3(1,1));
+                }
+                if (fogMap[x, y] == 1) {
+                    Gizmos.color = Color.yellow;
+                    Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
+                }
+                if (fogMap[x, y] == 2) {
+                    Gizmos.color = Color.green;
+                    Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
+                }
+            }
+        }
+
     }
 
     public Vector3Int FindEntrance() {
@@ -265,12 +282,13 @@ public class GridManager : MonoBehaviour {
     }
 
     public void BeginGame() {
+        GenerateFogMap();
         CreateFog();
         SpawnParty();
         UpdateGame();
         GameUIManager.i.actionPointsText.text = partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
-        ClearFog();
-        ClearSemiFog();
+        //ClearFog();
+       
 
         foreach (var party in PartyManager.i.party) {
             if (party)
@@ -278,56 +296,105 @@ public class GridManager : MonoBehaviour {
         }
         if (PartyManager.i.currentCharacter == null) { fogTilemap.gameObject.SetActive(false); }
         GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
+        ClearFogDoor(PartyManager.i.party[0].Position());
+        ClearSemiFog();
     }
 
     public void CreateFog() {
         for (int x = 0; x < globalValues.width; x++) {
             for (int y = 0; y < globalValues.height; y++) {
                 var pos = new Vector3Int(x, y);
-                fogTilemap.SetTile(pos, globalValues.bigFog);
+                fogDarkTilemap.SetTile(pos, globalValues.bigFog);
+                fogTilemap.SetTile(pos, globalValues.fogSemi);
             }
         }
     }
 
-    public void ClearFog() {
-       
-        for (int x = 0; x < globalValues.width; x++) {
-            for (int y = 0; y < globalValues.height; y++) {
-                var pos = new Vector3Int(x, y);
-                if (!fogTilemap.GetTile(pos)) 
-                    fogTilemap.SetTile(pos, globalValues.fogSemi);
-            } 
-        }
-
-        var party = PartyManager.i.party;
-        foreach (GameObject member in party) {
-            if (member == null) { continue; }
-            var position = member.Position();
-            tools.FloodFill(position, goTilemap, fogTilemap,1000 , globalValues.fogSemi,1000);
-        }
-    }
     public void ClearFogDoor(Vector3Int position) {
-        tools.FloodFill(position, goTilemap, fogTilemap, 1000, globalValues.fogSemi, 1000);
-        ClearSemiFog();
+        tools.FloodFill(position, fogMap, 1000,null, fogDarkTilemap);
     }
 
-    public void ClearSemiFog() {
+    [BurstCompile]public void GenerateFogMap() {
+        fogMap = new int[globalValues.width, globalValues.height];
+        var offset =new Vector3Int(0, 1);
         for (int x = 0; x < globalValues.width; x++) {
-            for (int y = 0; y < globalValues.height; y++) {
+            for (int y = globalValues.height -1; y > 1; y--) {
                 var pos = new Vector3Int(x, y);
-                if (!fogTilemap.GetTile(pos))
-                    fogTilemap.SetTile(pos, globalValues.fogSemi);
+                fogMap[x,y] = 0;
+            
+                if (floorTilemap.GetTile(pos)) {
+
+                    fogMap[x, y] = 2;
+                    if (!floorTilemap.GetTile(pos + offset)) {
+                        fogMap[x, y + 1] = 2;
+                        fogMap[x, y + 2] = 2;
+                    }
+                }
             }
         }
+
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = globalValues.height - 1; y > 1; y--) {
+                var pos = new Vector3Int(x, y);
+                var tile = goTilemap.GetTile(pos);
+
+                if (floorTilemap.GetTile(pos)) {
+                    if (assets.IsDoor(tile)) {
+                        SetFogMapTile(pos, 1);
+                        SetFogMapTile(pos + new Vector3Int(0, 1), 1);
+                        SetFogMapTile(pos + new Vector3Int(0, 2), 1);
+                    }
+                }
+            }
+        }
+    }
+
+    public void SetFogMapTile(Vector3Int position, int value) {
+        fogMap[position.x, position.y] = value;
+    }
+    public HashSet<Vector3Int> tilesToFill = new HashSet<Vector3Int>();
+    public HashSet<Vector3Int> tilesToFill2 = new HashSet<Vector3Int>();
+    //This shit is 14 times faster now with the two hashsets!
+    public void ClearSemiFog() {
+        var fogTile = globalValues.fogSemi;
+        tilesToFill.Clear();
         var party = PartyManager.i.party;
         int i = 0;
         foreach (GameObject member in party) {
             if (member == null) { continue; }
             var position = member.Position();
             if(position == globalValues.NullValue) { continue; }
-            tools.FloodFill(position, goTilemap, fogTilemap, globalValues.fogFill, null, globalValues.fogDistance);
+            var circle = tools.Circle(6, position);
+            foreach (var cell in circle) {
+                if (!FogInSight(cell, position)) { continue; }
+                if (!tilesToFill.Contains(cell)) { tilesToFill.Add(cell); }
+            }
             i++;
         }
+        foreach(var cell in tilesToFill2) {
+            if (!tilesToFill.Contains(cell)) {
+                fogTilemap.SetTile(cell, fogTile);
+            }
+        }
+        tilesToFill2.Clear();
+
+        foreach (var tile in tilesToFill) {
+            if(fogTilemap.GetTile(tile))
+            fogTilemap.SetTile(tile, null); 
+        }
+        foreach(var item in tilesToFill) {
+            tilesToFill2.Add(item);
+        }
+    }
+
+    public bool FogInSight(Vector3Int position, Vector3Int origin) {
+        var line = tools.BresenhamLine(position.x, position.y, origin.x, origin.y);
+        foreach (var cell in line) {
+            if (fogMap[cell.x, cell.y] == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void SpawnCharacter(GameObject character, Vector3Int position) {
@@ -402,6 +469,16 @@ public class GridManager : MonoBehaviour {
         mechGrid[position.x, position.y] = clone;
         clone.Call(position, MechStatic.Signal.OnEnable);
         return clone;
+    }
+
+    public void InstantiateCell(Vector3Int checkPos) {
+        if (!tools.InBounds(checkPos)) { return; }
+        if (floorTilemap.GetTile(checkPos)) {
+            GetOrSpawnSurface(checkPos);
+            itemMethods.GetItemOrSpawnFromTile(checkPos);
+            GetOrSpawnMech(checkPos);
+            goMethods.GetGameObjectOrSpawnFromTile(checkPos);
+        }
     }
 
     public void InstantiateGosMechsSurfacesAroundCharacters() {

@@ -23,7 +23,6 @@ public class Surface : ScriptableObject
         if (counter < 2) { return; }
         var walkableTilemap = GridManager.i.floorTilemap;
         var circle = position.Circle(1);
-        Debug.Log("Spread");
         foreach (var cell in circle) {
             if (!walkableTilemap.GetTile(cell)) { continue; }
             if(GridManager.i.CombineSurface(cell, this)) {

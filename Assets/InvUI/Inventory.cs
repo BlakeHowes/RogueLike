@@ -152,7 +152,6 @@ public class Inventory : MonoBehaviour
         if (statusEffects.Count == 0) { goto traits; }
         foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal, parentGO,null); }
         if (statusEffectsToRemove.Count > 0) {
-            Debug.Log("Remove Effects");
             foreach (var item in statusEffectsToRemove) {
                 if (statusEffects.Contains(item)) { statusEffects.Remove(item); }
             }

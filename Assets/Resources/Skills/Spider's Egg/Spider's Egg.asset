@@ -13,14 +13,22 @@ MonoBehaviour:
   m_Name: Spider's Egg
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
-  position: {x: 0, y: 0, z: 0}
-  origin: {x: 0, y: 0, z: 0}
-  range: 0
+  position: {x: 29, y: 31, z: 0}
+  origin: {x: 26, y: 32, z: 0}
+  type: 0
+  targetsTags: 0
+  range: 5
+  AOE: 0
   actionPointCost: 0
-  customDescription: 
-  coolDownTimer: 0
+  coolDown: 2
+  CameraZoomDuration: 0
+  requireTarget: 0
+  particles: {fileID: 0}
+  useParticlesInWholeArea: 0
   subItems:
   - {fileID: 11400000, guid: e6fff7e7f82e009419ad363997b706a7, type: 2}
-  skillDescriptionForAI: 2
-  CameraZoomDuration: 0
+  statusEffects: []
+  customDescription: 
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  parentGO: {fileID: 0}

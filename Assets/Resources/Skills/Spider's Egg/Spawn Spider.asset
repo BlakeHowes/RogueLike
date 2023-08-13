@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f17871f4feafc5c4780646cd9a4bd33e, type: 3}
-  m_Name: SpawnSpiders
+  m_Name: Spawn Spider
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 28, y: 30, z: 0}
   origin: {x: 0, y: 0, z: 0}
   Gos:
-  - {fileID: 3243932232630802507, guid: ad1d0046a3be3bf40a4585b9a165c390, type: 3}
-  - {fileID: 3243932232630802507, guid: ad1d0046a3be3bf40a4585b9a165c390, type: 3}
-  onSignal: 0
+  - {fileID: 5542796673496099087, guid: db92c6f6bf3c6164b96d4ba284083118, type: 3}
+  - {fileID: 5542796673496099087, guid: db92c6f6bf3c6164b96d4ba284083118, type: 3}
+  - {fileID: 5542796673496099087, guid: db92c6f6bf3c6164b96d4ba284083118, type: 3}
+  onSignal: 9
+  addToParty: 1
+  inCombatOnly: 1

@@ -84,6 +84,10 @@ public class GameUIManager : MonoBehaviour {
         ClearRange();
         var cells =CreateRange(position, range);
         var goMethods = GridManager.i.goMethods;
+        var inSight = goMethods.PositionsInSight(range, position);
+        if (range == 1) {
+            inSight = GridManager.i.tools.MeeleeRange(position);
+        }
         foreach (Vector3Int cell in cells) {
             var gameobject = cell.GameObjectGo();
             if (gameobject) {
@@ -92,7 +96,10 @@ public class GameUIManager : MonoBehaviour {
                 }
 
             }
-            if(goMethods.IsInSight(cell,position)) {
+        }
+
+        foreach(Vector3Int cell in inSight) {
+            if (goMethods.IsInSight(cell, position)) {
                 groundUI.SetTile(cell, globalValues.rangeTile);
                 var go = cell.GameObjectGo();
 
@@ -107,6 +114,7 @@ public class GameUIManager : MonoBehaviour {
         }
         var cells = CreateRange(position, range);
         var goMethods = GridManager.i.goMethods;
+
         foreach (Vector3Int cell in cells) {
             if (goMethods.IsInSight(cell, position)) {
                 uiTilemap.SetTile(cell, globalValues.rangeTile);

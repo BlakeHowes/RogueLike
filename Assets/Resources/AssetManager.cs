@@ -80,6 +80,16 @@ public class AssetManager {
         return null;
     }
 
+    public bool IsDoor(TileBase tile) {
+        foreach (var go in gos) {
+            if (go.GetComponent<Stats>().tile == tile) {
+                if(go.CompareTag("Door"))
+                return true;
+            }
+        }
+        return false;
+    }
+
     public bool IsCharacter(TileBase tile) {
         foreach(var character in characters) {
             if(character.GetComponent<Stats>().tile == tile) {

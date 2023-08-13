@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System.Linq;
+using Unity.Burst;
+
 public class Algorithm {
     private Grid2D grid;
 
@@ -69,7 +71,7 @@ public class Algorithm {
                     }
                     var target = gameobjectcell.GameObjectGo();
                     if (target) {
-                        if(target.tag != startPosTag) {
+                        if(!target.CompareTag(startPosTag)) {
                             grid.FindCellByPosition(gameobjectcell).walkable = false;
                         }
                     }

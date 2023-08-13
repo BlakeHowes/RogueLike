@@ -89,10 +89,11 @@ public class PathingManager : MonoBehaviour
                 return false;
             }
             var nextStep = path[1].FloorToInt();
-            if (GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(nextStep) == null) {
+            var goMethods = GridManager.i.goMethods;
+            if (goMethods.GetGameObjectOrSpawnFromTile(nextStep) == null) {
                 StartCoroutine(WalkAnimation(character, nextStep));
-                GridManager.i.goMethods.RemoveGameObject(origin);
-                GridManager.i.goMethods.SetGameObject(nextStep, character);
+                goMethods.RemoveGameObject(origin);
+                goMethods.SetGameObject(nextStep, character);
                 FlipCharacter(character,nextStep, origin);
                 return true;
             }
@@ -101,10 +102,10 @@ public class PathingManager : MonoBehaviour
     }
 
     public IEnumerator WalkAnimation(GameObject character,Vector3 position) {
-
-        character.GetComponent<SpringToTarget3D>().SpringTo(position + new Vector3(0, globalValues.stepAnimationHeight/10), globalValues.Dampening, globalValues.Hardness);
+        var spring = character.GetComponent<SpringToTarget3D>();
+        spring.SpringTo(position + new Vector3(0, globalValues.stepAnimationHeight/10), globalValues.Dampening, globalValues.Hardness);
         yield return new WaitForSeconds(globalValues.stepAnimationSpeed / 10);
-        character.GetComponent<SpringToTarget3D>().SpringTo(position, globalValues.Dampening, globalValues.Hardness);
+        spring.SpringTo(position, globalValues.Dampening, globalValues.Hardness);
     }
 
     public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin) {

@@ -4,8 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using static ItemStatic;
-using static UnityEditor.PlayerSettings;
 
 public class PartyManager : MonoBehaviour {
     public static PartyManager i;
@@ -108,9 +108,13 @@ public class PartyManager : MonoBehaviour {
             if (currentTag == "Enemy") { EndEnemyTurn(null); }
         }
         if (currentCharacter) {
+            if (!GridManager.i.enumeratingStack && currentTag == "Party") {
+                MouseManager.i.disableMouse = false;
+            }
             if (currentCharacter.activeSelf) { return; }
             if (currentTag == "Party") { SwitchToNextCharacter(); }
             if (currentTag == "Enemy") { EndEnemyTurn(null); }
+
         }
     }
 
@@ -168,21 +172,12 @@ public class PartyManager : MonoBehaviour {
             GameUIManager.i.UpdatePartyIcons(party);
             return;
         }
-        int i = 0;
-        int currentCharacterIndex = 0;
         foreach (GameObject character in party) {
-            if (character == currentCharacter) {
-                currentCharacterIndex = i;
-            }
-            i++;
-        }
-        var nextCharacterIndex = currentCharacterIndex + 1;
-        if (currentCharacterIndex == party.Count - 1) {
-            nextCharacterIndex = 0;
+            if (partyMemberTurnTaken.Contains(character)) { continue; }
+            SetCurrentCharacter(character);
+            break;
         }
         if (party.Count == 0) { GameUIManager.i.ShowGameOverUI(); return; }
-        SetCurrentCharacter(party[nextCharacterIndex]);
-        Debug.Log("Set current character " + party[nextCharacterIndex]);
         currentCharacter.TryGetComponent(out PandaBehaviour panda);
         if (panda) {
             var pos = currentCharacter.Position();  //Expensive call
@@ -193,13 +188,9 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void EndTurn() {
-        if (currentCharacter != null) {
-            partyMemberTurnTaken.Add(currentCharacter);
-        }
+        partyMemberTurnTaken.Add(currentCharacter);
         SwitchToNextCharacter();
    
-     
-    
         if (partyMemberTurnTaken.Count >= party.Count) {
             EnemyPartyStartTurn();
         }

@@ -10,6 +10,7 @@ TagManager:
   - Passive
   - Door
   - Summon
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -82,6 +83,9 @@ TagManager:
     locked: 0
   - name: Fog
     uniqueID: 1428198613
+    locked: 0
+  - name: Fog Dark
+    uniqueID: 4236779495
     locked: 0
   - name: Temp
     uniqueID: 2471662159

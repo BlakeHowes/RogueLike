@@ -1,5 +1,6 @@
 using LlamAcademy.Spring.Runtime;
 using System.Collections;
+using Unity.Burst;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
@@ -60,7 +61,7 @@ public class MouseManager : MonoBehaviour
         }
     }
 
-    public void PlayerActionsOrder(Vector3Int mousePosition) {
+    [BurstCompile]public void PlayerActionsOrder(Vector3Int mousePosition) {
         clickPosition = mousePosition;
         if (EventSystem.current.IsPointerOverGameObject()) { return; }
         if (!mousePosition.IsWalkable()) { return; }
@@ -250,6 +251,7 @@ public class MouseManager : MonoBehaviour
     }
 
     public void EndOfAction() {
+
         pickUpButNotAddToInventory = false;
         blockPickup = false;
         var partyManager = PartyManager.i;
@@ -298,7 +300,12 @@ public class MouseManager : MonoBehaviour
         var target = clickPosition.GameObjectSpawn();
         currentStats.RefreshCharacter(origin);
         if (UseItem(clickPosition, origin, currentStats, inventory)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
-        if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
+
+        if (target) {
+            if (!currentCharacter.CompareTag(target.tag)) {
+                if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
+            }
+        }
 
         //Walk
         PartyManager.i.characterFollowPosition = currentCharacter.Position();

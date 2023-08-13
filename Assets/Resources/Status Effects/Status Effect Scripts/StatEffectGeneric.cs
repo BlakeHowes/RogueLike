@@ -67,7 +67,6 @@ public class StatEffectGeneric : ItemAbstract {
             counter++;
             if (counter >= durationTotal) {
                 if (target) {
-                    Debug.Log(target);
                     target.GetComponent<Inventory>().statusEffectsToRemove.Add(this);
                 }
 

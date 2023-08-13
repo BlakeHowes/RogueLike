@@ -56,19 +56,24 @@ MonoBehaviour:
   state: 0
   deathAction:
   - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
+  immunites: []
   maxHealthBase: 100
   armourBase: 0
   actionPointsBase: 4
   throwingRangeBase: 5
-  fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
+  maxHealthTemp: 0
   armourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -89,20 +94,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   traits:
-  - {fileID: 0}
-  skills:
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 247079f28c52d0d4c840e76041fdfab5, type: 2}
+  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
+  - {fileID: 11400000, guid: 141158ae12bf87d4e8622fae3e6faeb7, type: 2}
+  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
   - {fileID: 11400000, guid: da0c3b59fc35a9a42bd3e5e8a70fb103, type: 2}
+  - {fileID: 11400000, guid: 6d4fe8ccfaea8504da5e0fd9fcd91968, type: 2}
+  - {fileID: 11400000, guid: 247079f28c52d0d4c840e76041fdfab5, type: 2}
+  - {fileID: 11400000, guid: 86c49c20a57c1bb4eb6e48653a8b9ef4, type: 2}
+  skills:
+  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
+  - {fileID: 11400000, guid: 141158ae12bf87d4e8622fae3e6faeb7, type: 2}
+  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
+  - {fileID: 11400000, guid: da0c3b59fc35a9a42bd3e5e8a70fb103, type: 2}
+  - {fileID: 11400000, guid: 6d4fe8ccfaea8504da5e0fd9fcd91968, type: 2}
+  - {fileID: 11400000, guid: 247079f28c52d0d4c840e76041fdfab5, type: 2}
+  - {fileID: 11400000, guid: 86c49c20a57c1bb4eb6e48653a8b9ef4, type: 2}
+  - {fileID: 11400000, guid: 247079f28c52d0d4c840e76041fdfab5, type: 2}
+  coolDowns:
+  - coolDownTimer: 9
+    skill: {fileID: 11400000, guid: 247079f28c52d0d4c840e76041fdfab5, type: 2}
   statusEffects: []
-  mainHand: {fileID: 0}
+  mainHand: {fileID: 11400000, guid: 0db133fd77b576845b9e773c40dfc76a, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
-  armour: {fileID: 0}
-  trinket1: {fileID: 0}
-  trinket2: {fileID: 0}
+  armour: {fileID: 11400000, guid: a2c57c278a8ca024aa3cc65b033a4da4, type: 2}
+  trinket1: {fileID: 11400000, guid: 97018051861b14143a896ba93aa7620d, type: 2}
+  trinket2: {fileID: 11400000, guid: 693577d97e642d045bb2f1d42677fa24, type: 2}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
 --- !u!212 &8420445016691513117
@@ -169,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6bd0686b0e88ed47b6f3f58e6160a18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetsTags: 0
+  targetsTags: 2
 --- !u!114 &-568506143789610820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,20 +240,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5610c26518ed66428e968e72df3dce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  race: {fileID: 11400000, guid: ffdf1ac4dcaa206438ed35d2161bfeba, type: 2}
-  body: {fileID: 21300000, guid: 5221153a3be5c254cb032f45c05d32b5, type: 3}
-  bodyPalette: {fileID: 11400000, guid: 7698aa981dbbfb7479de61bd05937ae0, type: 2}
-  hair: {fileID: 21300000, guid: 51f856458de01d540b3baf3d7bca5bd3, type: 3}
-  hairPalette: {fileID: 11400000, guid: f0007dee24b3f28468d58a1c891ca099, type: 2}
+  race: {fileID: 11400000, guid: 0e06e039699fcd5498c53a73d8e02fe0, type: 2}
+  body: {fileID: 21300000, guid: 8523def5d15397440b62e7785a1c18ab, type: 3}
+  bodyPalette: {fileID: 11400000, guid: 59bfa559bb80de749a2990c62bb72ef7, type: 2}
+  hair: {fileID: 21300000, guid: 38667c2fd024e244db3522254f355162, type: 3}
+  hairPalette: {fileID: 11400000, guid: 4f0892ca02c175849826c40814e9029c, type: 2}
   loadout: {fileID: 11400000, guid: 0d507749a8acf8640b02ea5a081c0f67, type: 2}
-  face: {fileID: 21300000, guid: 44c4ec38c9638cb4abca01be68f6f9bd, type: 3}
-  facePalette: {fileID: 11400000, guid: 63107ec92c4bed64eb7d2dacf0027eda, type: 2}
-  feature: {fileID: 21300000, guid: ef53c3f8ba2ca2a459a83137dc168502, type: 3}
-  featurePalette: {fileID: 11400000, guid: d36ce050bbf40df4b87cbd8073c951f5, type: 2}
+  face: {fileID: 21300000, guid: 0713137dcfc414748b44eeb67faf2f4b, type: 3}
+  facePalette: {fileID: 11400000, guid: a9690c5de50602f48815b14c0925e043, type: 2}
+  feature: {fileID: 0}
+  featurePalette: {fileID: 0}
   headOffset: {x: 1, y: 18, z: 0}
   mainHandOffset: {x: 0, y: 0, z: 0}
   offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
+  hideWeapons: 0
   hideHelmet: 0
 --- !u!114 &488933889419030297
 MonoBehaviour:

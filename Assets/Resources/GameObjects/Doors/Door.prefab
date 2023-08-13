@@ -50,8 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 970c6f591604a3c40b7d03ce04a68357, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: 62f84d7b5400df441974c00adf260c81, type: 2}
+  deathAction: []
   immunites: []
   maxHealthBase: 0
   armourBase: 0
@@ -69,6 +68,7 @@ MonoBehaviour:
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinket1: {fileID: 0}
+  trinket1: {fileID: 11400000, guid: 62f84d7b5400df441974c00adf260c81, type: 2}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}

@@ -30,11 +30,11 @@ MonoBehaviour:
   - inputSurface: {fileID: 11400000, guid: d2cad24b7ba47774f8733efe637d00c4, type: 2}
     resultingSurface: {fileID: 11400000, guid: d2cad24b7ba47774f8733efe637d00c4, type: 2}
     subItem: {fileID: 0}
-  items: []
+  subItems: []
   StatusEffect: {fileID: 0}
   duration: {x: 19.59, y: 40.48}
   counter: 0
-  effectPrefab: {fileID: 0}
+  effectPrefab: {fileID: 8288408381700605430, guid: d1b165fb7b5d55d4aa239abdff2cd54f, type: 3}
   dryUp: 1
   dryUpSurface: {fileID: 0}
   tryToSpread: 0

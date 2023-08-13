@@ -33,7 +33,7 @@ public class GoMethod
 
         var clone = GridManager.i.InstantiateGo(prefab);
         SetGameObject(position, clone);
-        //clone.GetComponent<Stats>().RefreshCharacter(position);
+        clone.GetComponent<Stats>().InitializeCharacter();
         clone.transform.position = position + new Vector3(0.5f, 0.5f);
         goTilemap.SetTile(position, null);
 
@@ -57,7 +57,7 @@ public class GoMethod
         foreach (var cell in cells) {
             var go = cell.GameObjectGo();
             if (go) {
-                if(go.tag == "Door") {
+                if(go.CompareTag("Door")) {
                     if(cell != cells[cells.Count - 1]) {
                         return false;
                     }
@@ -274,9 +274,24 @@ public class GoMethod
         var clone = GridManager.i.InstantiateGo(prefab);
         SetGameObject(position, clone);
         clone.transform.position = position + new Vector3(0.5f, 0.5f, 0);
+        clone.GetComponent<Stats>().InitializeCharacter();
         return clone;
     }
 
+    Vector3Int[] checkPositions = new Vector3Int[]{
+            new Vector3Int(1, 1),
+            new Vector3Int(0, 1),
+            new Vector3Int(-1, 1),
+            new Vector3Int(1, 0),
+            new Vector3Int(-1, 0),
+            new Vector3Int(1, -1),
+            new Vector3Int(0, -1),
+            new Vector3Int(-1, -1),
+        };
+
+    public Vector3Int GetRandomOffset() {
+        return checkPositions[Random.Range(0, checkPositions.Length-1)];
+    }
 
     public GameObject SpawnFloodFill(Vector3Int position,GameObject prefab) {
         if(GetGameObjectOrSpawnFromTile(position) == null) {
@@ -286,10 +301,14 @@ public class GoMethod
         Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
         cellstocheck.Enqueue(position);
         int breaker = 0;
-        var checkpos = position;
-        var tools = GridManager.i.tools;
-        Vector3Int pos = Vector3Int.zero;
-        while (cellstocheck.TryDequeue(out checkpos)) {
+        Vector3Int pos = position + GetRandomOffset();
+
+        if (!pos.GameObjectSpawn() && pos.IsWalkable()) {
+            var clone = Spawn(pos, prefab);
+            return clone;
+        }
+
+        while (cellstocheck.TryDequeue(out var checkpos)) {
 
             breaker++;
             if (breaker > 1000) {
@@ -301,7 +320,7 @@ public class GoMethod
                 for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
                     pos.x = x;
                     pos.y = y;
-                    if (!floorTilemap.GetTile(pos)) { continue; }
+                    if (!pos.IsWalkable()) { continue; }
                     if (x == checkpos.x && y == checkpos.y) { continue; }
 
                     if (!pos.GameObjectSpawn()) {

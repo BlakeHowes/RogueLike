@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static PartyManager;
-using static UnityEngine.UI.Image;
-using UnityEngine.UIElements;
 
 public class GridTools
 {
@@ -41,7 +39,7 @@ public class GridTools
         return false;
     }
 
-    public List<Vector3Int> Circle(int radius,Vector3Int position) {
+    [BurstCompile]public List<Vector3Int> Circle(int radius,Vector3Int position) {
         List<Vector3Int> cellsInsideShape = new List<Vector3Int>();
         for (int y = -radius; y <= radius; y++) {
             for (int x = -radius; x <= radius; x++) {
@@ -98,7 +96,7 @@ public class GridTools
         return cellsInsideShape;
     }
 
-    public List<Vector3Int> BresenhamLine(int x0, int y0, int x1, int y1) {
+    [BurstCompile]public List<Vector3Int> BresenhamLine(int x0, int y0, int x1, int y1) {
         List<Vector3Int> cellsInsideShape = new List<Vector3Int>();
         int dx = Mathf.Abs(x1 - x0), sx = x0 < x1 ? 1 : -1;
         int dy = -Mathf.Abs(y1 - y0), sy = y0 < y1 ? 1 : -1;
@@ -133,15 +131,16 @@ public class GridTools
         return cellsInsideShape;
     }
 
-    public void FloodFill(Vector3Int position,Tilemap goTilemap,Tilemap fogTilemap,int fillTotal,TileBase tile,float maxDistance) {
+    [BurstCompile]public void FloodFill(Vector3Int position, int[,] fogMap,int fillTotal,TileBase tile,Tilemap tilemap) {
         Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
         cellstocheck.Enqueue(position);
         List<Vector3Int> WallsToClear = new List<Vector3Int>();
-        List<Vector3Int> checkedCells = new List<Vector3Int>();
+        HashSet<Vector3Int> checkedCells = new HashSet<Vector3Int>();
+        Vector3Int offset = new Vector3Int(0, -1);
+        Vector3Int offset2 = new Vector3Int(0, -2);
         int breaker = 0;
         var walkableTilemap = GridManager.i.floorTilemap;
-        var checkpos = position;
-        while(cellstocheck.TryDequeue(out checkpos)) {
+        while(cellstocheck.TryDequeue(out Vector3Int checkpos)) {
             breaker++;
             if(breaker > fillTotal) {
                 break;
@@ -159,38 +158,32 @@ public class GridTools
                     if (checkedCells.Contains(pos)) {
                         continue;
                     }
+                    GridManager.i.InstantiateCell(pos);
                     checkedCells.Add(pos);
-                    //goTilemap.SetColor(pos, Color.white);
-                    var go = pos.GameObjectGo();
-                    if (go) {
-                        if(go.tag == "Door") {
-                            WallsToClear.Add(pos);
-                            continue;
-                        }
-                    }
-                    if (pos.IsWall()) {
-                        WallsToClear.Add(pos);
+                    if(fogMap[x, y] == 0) {
+                        tilemap.SetTile(pos, tile);
                         continue;
                     }
-                    else {
-                        if(Vector3.Distance(pos,position) < maxDistance) {
-                            fogTilemap.SetTile(pos, tile);
-                            cellstocheck.Enqueue(pos);
+                    if (fogMap[x, y] == 1) {
+                        tilemap.SetTile(pos, tile);
+                        if(tilemap.GetTile(pos + offset)) {
+                            tilemap.SetTile(pos + offset, tile);
+                            tilemap.SetTile(pos + new Vector3Int(1,-1), tile);
+                            tilemap.SetTile(pos + new Vector3Int(-1,-1), tile);
+                            tilemap.SetTile(pos + new Vector3Int(1, -2), tile);
+                            tilemap.SetTile(pos + new Vector3Int(-1, -2), tile);
+                            tilemap.SetTile(pos + offset2, tile);
                         }
+
+                        continue;
+                    }
+                    if (fogMap[x,y] == 2) {
+                        tilemap.SetTile(pos, tile);
+                        cellstocheck.Enqueue(pos);
+                        continue;
                     }
                 }
             }
-        }
-        var offset1 = new Vector3Int(0, 1);
-        var offset2 = new Vector3Int(0, 2);
-        foreach (Vector3Int pos in WallsToClear) {
-            fogTilemap.SetTile(pos, tile);
-            var posOffset = pos + offset1;
-            var posOffset2 = pos + offset2;
-            //if (!posOffset.gameobjectGO()) { continue; }
-            fogTilemap.SetTile(posOffset, tile);
-            //if (!posOffset2.gameobjectGO()) { continue; }
-            fogTilemap.SetTile(pos + offset2, tile);
         }
     }
 

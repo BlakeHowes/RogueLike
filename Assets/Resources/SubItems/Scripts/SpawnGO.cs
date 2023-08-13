@@ -9,9 +9,11 @@ public class SpawnGO : ItemAbstract {
     public List<GameObject> Gos = new List<GameObject>();
     public Signal onSignal;
     public bool addToParty;
+    public bool inCombatOnly;
     public override void Call(Vector3Int position,Vector3Int origin, ItemStatic.Signal signal,GameObject parentGO,ItemAbstract parentItem) {
         if(signal != onSignal) { return; }
         this.position = position;
+        if (inCombatOnly) { if(parentGO.GetComponent<Stats>().state != PartyManager.State.Combat) { return; } }
         GridManager.i.AddToStack(this);
     }
 
@@ -23,6 +25,7 @@ public class SpawnGO : ItemAbstract {
             var pos = clone.transform.position - new Vector3(0.5f,0.5f);
             clone.transform.position = position;
             clone.GetComponent<SpringToTarget3D>().SpringTo(pos, 30, 1000);
+            clone.GetComponent<Stats>().InitializeCharacter();
             //clone.lerp(position, clone.transform.position.FloorToInt(), 0.1f);
             if (addToParty) { 
                 PartyManager.i.party.Add(clone);

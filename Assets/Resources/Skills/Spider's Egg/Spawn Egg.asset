@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Spawn Egg
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
-  particles: {fileID: 0}
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 29, y: 32, z: 0}
   origin: {x: 0, y: 0, z: 0}
-  Gos: []
-  onSignal: 0
+  Gos:
+  - {fileID: 5542796673496099087, guid: adea8e0aaafd6244dad444607f9b888d, type: 3}
+  onSignal: 4
+  addToParty: 1
+  inCombatOnly: 0

@@ -12,10 +12,11 @@ Material:
   m_ValidKeywords:
   - _ALPHABLEND_ON
   - _CFXR_HDR_BOOST
+  - _CFXR_LIGHTING_DIRECT
   - _CFXR_SINGLE_CHANNEL
+  - _EMISSION
   - _FADING_ON
   m_InvalidKeywords:
-  - _
   - _CFXR_DITHERED_SHADOWS_OFF
   - _CFXR_OVERLAYBLEND_RGBA
   - _CFXR_OVERLAYTEX_OFF
@@ -109,7 +110,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HdrBoost: 1
-    - _HdrMultiply: 4
+    - _HdrMultiply: 46.91
     - _IndirectLightingMix: 0.5
     - _InvertDissolveTex: 0
     - _LightingWorldPosStrength: 0.2
@@ -135,10 +136,10 @@ Material:
     - _UseDissolveOffsetUV: 0
     - _UseDissolveVertexColor: 0
     - _UseEF: 0
-    - _UseEmission: 0
+    - _UseEmission: 1
     - _UseFB: 0
     - _UseFontColor: 0
-    - _UseLighting: 0
+    - _UseLighting: 1
     - _UseLightingWorldPosOffset: 0
     - _UseNormalMap: 0
     - _UseSP: 1
@@ -152,5 +153,5 @@ Material:
     - _DistortScrolling: {r: 0, g: 0, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OverlayTex_Scroll: {r: 0.1, g: 0.1, b: 1, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor: {r: 0, g: 0.8571429, b: 1, a: 1}
   m_BuildTextureStacks: []

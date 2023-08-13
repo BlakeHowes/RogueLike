@@ -136,6 +136,7 @@ public class Behaviours : MonoBehaviour
         GridManager.i.TickGame();
         if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
         GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
+        if (gameObject.CompareTag("Summon")) { ThisTask.Succeed(); PartyManager.i.EndTurn(); return; }
         PartyManager.i.EndEnemyTurn(gameObject);
         
         ThisTask.Succeed();
