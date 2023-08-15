@@ -145,7 +145,7 @@ public class MouseManager : MonoBehaviour
 
             }
             if(ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
-            itemSelected.Call(position, origin, Signal.Attack,inventory.gameObject,null);
+            itemSelected.Call(position, origin,inventory.gameObject, CallType.Activate);
             skill.startPositionSet = false;
         }
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
@@ -165,7 +165,7 @@ public class MouseManager : MonoBehaviour
             if(target.CompareTag("Interactable") || target.CompareTag("Door"))
             goto Meelee; 
         }
-        inventory.CallEquipment(position, origin, Signal.Attack);
+        inventory.CallEquipment(position, origin, CallType.Activate);
         if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
         PathingManager.i.FlipCharacter(currentCharacter, position, origin);
         currentStats.actionPoints--;
@@ -204,7 +204,7 @@ public class MouseManager : MonoBehaviour
         var inventory = currentCharacter.GetComponent<Inventory>();
         var item = position.Item();
         if (item) {
-            item.Call(position, origin, Signal.Pickup,currentCharacter,null);
+            item.Call(position, origin,currentCharacter, CallType.Pickup);
             if (blockPickup) { EndOfAction();return; }
             //Coins hack, better this concept if needed
             if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction();return; }

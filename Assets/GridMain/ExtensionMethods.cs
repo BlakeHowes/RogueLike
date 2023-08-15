@@ -64,13 +64,22 @@ static class ExtensionMethods
         return tools.Circle(radius, position);
     }
 
+    public static List<Vector3Int> PositionsInSight(this Vector3Int position, int radius) {
+        return goMethods.PositionsInSight(radius, position);
+    }
+
     public static MechAbstract Mech(this Vector3Int position) {
-        return GridManager.i.mechMethods.GetMechanism(position);
+        return gridManager.mechMethods.GetMechanism(position);
     }
 
     public static ItemAbstract Item(this Vector3Int position) {
         return itemMethods.GetItemOrSpawnFromTile(position);
     }
+
+    public static void AddToStack(this Action action) {
+        gridManager.AddToStack(action);
+    }
+
 
     public static Vector3Int Drop(this ItemAbstract item,Vector3Int position,bool setItem) {
         return itemMethods.FloodFillDropItem(position,setItem,item);

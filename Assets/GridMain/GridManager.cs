@@ -29,7 +29,7 @@ public class GridManager : MonoBehaviour {
 
     [Header("Tilemaps")]
     public Tilemap mechTilemap;
-    public Tilemap surfaceTilemap; 
+    public Tilemap surfaceTilemap;
     public Tilemap itemTilemap;
     public Tilemap goTilemap;
     public Tilemap fogTilemap;
@@ -37,7 +37,7 @@ public class GridManager : MonoBehaviour {
     public Tilemap floorTilemap;
     public Tilemap shadowTilemap;
 
-    public List<ItemAbstract> itemsInActionStack = new List<ItemAbstract>();
+    public List<Action> itemsInActionStack = new List<Action>();
     public bool enumeratingStack;
     public int lootCounter = 1;
     public void Awake() {
@@ -47,7 +47,7 @@ public class GridManager : MonoBehaviour {
         tools = new GridTools(globalValues);
         Initialize();
         mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
-        itemMethods = new itemMethods(itemGrid, assets, itemTilemap,globalValues);
+        itemMethods = new itemMethods(itemGrid, assets, itemTilemap, globalValues);
         goMethods = new GoMethod(goGrid, assets, goTilemap, floorTilemap, globalValues);
         graphics = new GridGraphics(globalValues.width, globalValues.height, mechGrid, surfaceGrid, goGrid, itemGrid, goTilemap, itemTilemap, mechTilemap, surfaceTilemap, shadowTilemap, globalValues);
         ExtensionMethods.SetReferences();
@@ -97,17 +97,17 @@ public class GridManager : MonoBehaviour {
     public void CallTickAndStartOfTurn(Vector3Int position, Inventory invetory, GameObject currentCharacter, PartyManager.State state) {
         if (state == PartyManager.State.Combat) {
             if (invetory.gameObject == currentCharacter) {
-                invetory.CallTraitsAndStatusEffects(position, position, Signal.Tick,invetory.gameObject);
+                invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick, invetory.gameObject);
             }
             return;
         }
-        invetory.CallTraitsAndStatusEffects(position, position, Signal.Tick, invetory.gameObject);
-        invetory.CallTraitsAndStatusEffects(position, position, Signal.OnSwitchFactionTurn, invetory.gameObject);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick, invetory.gameObject);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnSwitchFactionTurn, invetory.gameObject);
         invetory.ReduceCoolDowns();
     }
 
     public void StartStack() {
-        if(DevHotkeys.i.suspendStack == true) { return; }
+        if (DevHotkeys.i.suspendStack == true) { return; }
 
         MouseManager.i.disableMouse = true;
         if (itemsInActionStack.Count == 0) { EndStack(); return; }
@@ -118,15 +118,15 @@ public class GridManager : MonoBehaviour {
 
     //After 4 hours I cannot find this bug so I am making a terrible hack
     //For some reason some items are being called multiple times
-    List<ItemAbstract> itemsCheckedHack = new List<ItemAbstract> ();
+    List<Action> itemsCheckedHack = new List<Action>();
     public IEnumerator Stack() {
         itemsCheckedHack.Clear();
         while (itemsInActionStack.Count > 0) {
-            var item = itemsInActionStack[0];
-            if (itemsCheckedHack.Contains(item)) { itemsInActionStack.Remove(item); continue; }
-            itemsCheckedHack.Add(item);
-            yield return StartCoroutine(item.Action());
-            itemsInActionStack.Remove(item);
+            Action action = itemsInActionStack[0];
+            if (itemsCheckedHack.Contains(action)) { itemsInActionStack.Remove(action); continue; }
+            itemsCheckedHack.Add(action);
+            yield return StartCoroutine(action.StackAction());
+            itemsInActionStack.Remove(action);
         }
         EndStack();
     }
@@ -136,7 +136,7 @@ public class GridManager : MonoBehaviour {
         var currentCharacter = PartyManager.i.currentCharacter;
         enumeratingStack = false;
         if (!currentCharacter) { return; }
-        if (currentCharacter.tag == "Party") { MouseManager.i.disableMouse = false; }  
+        if (currentCharacter.tag == "Party") { MouseManager.i.disableMouse = false; }
 
         if (currentCharacter.tag == "Enemy") {
             return;
@@ -165,36 +165,36 @@ public class GridManager : MonoBehaviour {
         graphics.UpdateEverything();
     }
 
-    public void AddToStack(ItemAbstract item) {
-        if (item == null) {
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
-            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
-            Debug.LogError("Missing item from "+ methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
-        }
-
-        Debug.Log(item.name + Time.deltaTime);
-        itemsInActionStack.Add(Instantiate(item));
-    }
-
-    public void AddToStack(ItemAbstract item, bool instantiate) {
-        if (item == null) {
+    public void AddToStack(Action action) {
+        if (action == null) {
             System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
             System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
             Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
         }
 
-        Debug.Log(item.name + Time.deltaTime);
-        if (instantiate) { itemsInActionStack.Add(Instantiate(item)); return; }
-        itemsInActionStack.Add(item);
+        Debug.Log(action.name + Time.deltaTime);
+        itemsInActionStack.Add(Instantiate(action));
     }
 
-    public void InsertToStack(ItemAbstract item) {
-        if (item == null) {
+    public void AddToStack(Action action, bool instantiate) {
+        if (action == null) {
             System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
             System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
             Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
         }
-        itemsInActionStack.Insert(0, Instantiate(item));
+
+        Debug.Log(action.name + Time.deltaTime);
+        if (instantiate) { itemsInActionStack.Add(Instantiate(action)); return; }
+        itemsInActionStack.Add(action);
+    }
+
+    public void InsertToStack(Action action) {
+        if (action == null) {
+            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
+            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
+            Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
+        }
+        itemsInActionStack.Insert(0, Instantiate(action));
     }
 
     public void ClearInactiveGameObjects() {
@@ -220,16 +220,16 @@ public class GridManager : MonoBehaviour {
             foreach (GameObject character in partyFromLastScene) {
                 if (character.TryGetComponent(out Stats stats)) {
                     if (stats == null || character.activeSelf == false) { continue; }
-                    var pos =goMethods.FindFloodFillCellForGo(position);
+                    var pos = goMethods.FindFloodFillCellForGo(position);
                     goMethods.SetGameObject(pos, character);
                     stats.InitializeCharacter();
-                    character.transform.position = pos + new Vector3(0.5f,0.5f);
+                    character.transform.position = pos + new Vector3(0.5f, 0.5f);
                     PartyManager.i.AddPartyMember(character);
                 }
             }
             return;
         }
-        DebugSpawn:
+    DebugSpawn:
         foreach (GameObject character in partyPrefabs) {
             var clone = goMethods.SpawnFloodFill(position, character);
             var stats = clone.GetComponent<Stats>();
@@ -245,9 +245,9 @@ public class GridManager : MonoBehaviour {
         if (!globalValues) { return; }
         for (int x = 0; x < globalValues.width; x++) {
             for (int y = 0; y < globalValues.height; y++) {
-                if (fogMap[x,y] == 0) {
+                if (fogMap[x, y] == 0) {
                     Gizmos.color = Color.red;
-                    Gizmos.DrawCube(new Vector3(x+0.5f,y+0.5f),new Vector3(1,1));
+                    Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
                 }
                 if (fogMap[x, y] == 1) {
                     Gizmos.color = Color.yellow;
@@ -266,7 +266,7 @@ public class GridManager : MonoBehaviour {
         for (int x = 0; x < globalValues.width; x++) {
             for (int y = 0; y < globalValues.height; y++) {
                 var pos = new Vector3Int(x, y);
-                if(mechTilemap.GetTile(pos) == globalValues.entrance) {
+                if (mechTilemap.GetTile(pos) == globalValues.entrance) {
                     return pos;
                 }
             }
@@ -288,7 +288,7 @@ public class GridManager : MonoBehaviour {
         UpdateGame();
         GameUIManager.i.actionPointsText.text = partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
         //ClearFog();
-       
+
 
         foreach (var party in PartyManager.i.party) {
             if (party)
@@ -311,17 +311,18 @@ public class GridManager : MonoBehaviour {
     }
 
     public void ClearFogDoor(Vector3Int position) {
-        tools.FloodFill(position, fogMap, 1000,null, fogDarkTilemap);
+        tools.FloodFill(position, fogMap, 1000, null, fogDarkTilemap);
     }
 
-    [BurstCompile]public void GenerateFogMap() {
+    [BurstCompile]
+    public void GenerateFogMap() {
         fogMap = new int[globalValues.width, globalValues.height];
-        var offset =new Vector3Int(0, 1);
+        var offset = new Vector3Int(0, 1);
         for (int x = 0; x < globalValues.width; x++) {
-            for (int y = globalValues.height -1; y > 1; y--) {
+            for (int y = globalValues.height - 1; y > 1; y--) {
                 var pos = new Vector3Int(x, y);
-                fogMap[x,y] = 0;
-            
+                fogMap[x, y] = 0;
+
                 if (floorTilemap.GetTile(pos)) {
 
                     fogMap[x, y] = 2;
@@ -363,7 +364,7 @@ public class GridManager : MonoBehaviour {
         foreach (GameObject member in party) {
             if (member == null) { continue; }
             var position = member.Position();
-            if(position == globalValues.NullValue) { continue; }
+            if (position == globalValues.NullValue) { continue; }
             var circle = tools.Circle(6, position);
             foreach (var cell in circle) {
                 if (!FogInSight(cell, position)) { continue; }
@@ -371,7 +372,7 @@ public class GridManager : MonoBehaviour {
             }
             i++;
         }
-        foreach(var cell in tilesToFill2) {
+        foreach (var cell in tilesToFill2) {
             if (!tilesToFill.Contains(cell)) {
                 fogTilemap.SetTile(cell, fogTile);
             }
@@ -379,10 +380,10 @@ public class GridManager : MonoBehaviour {
         tilesToFill2.Clear();
 
         foreach (var tile in tilesToFill) {
-            if(fogTilemap.GetTile(tile))
-            fogTilemap.SetTile(tile, null); 
+            if (fogTilemap.GetTile(tile))
+                fogTilemap.SetTile(tile, null);
         }
-        foreach(var item in tilesToFill) {
+        foreach (var item in tilesToFill) {
             tilesToFill2.Add(item);
         }
     }
@@ -426,7 +427,7 @@ public class GridManager : MonoBehaviour {
             surfaceFound.Combine(position, surface);
             return;
         }
-        if(surface.duration.y == 0) { return; }
+        if (surface.duration.y == 0) { return; }
         surfaceTilemap.SetTile(position, surface.tile);
         var surfaceOnGround = GetOrSpawnSurface(position);
         surfaceOnGround.Call(position);
@@ -441,19 +442,20 @@ public class GridManager : MonoBehaviour {
         return false;
     }
 
-    public void SetSurface(Vector3Int position,Surface surface) {
+    public void SetSurface(Vector3Int position, Surface surface) {
         RemoveSurface(position);
         if (surface == null) {
             surfaceTilemap.SetTile(position, null);
-            return; }
+            return;
+        }
         surfaceTilemap.SetTile(position, surface.tile);
         var surfaceOnGround = GetOrSpawnSurface(position);
         surfaceOnGround.Call(position);
     }
 
     public void RemoveSurface(Vector3Int position) {
-        if(surfaceGrid[position.x, position.y]) { surfaceGrid[position.x, position.y].KillSurface(position); }
-      
+        if (surfaceGrid[position.x, position.y]) { surfaceGrid[position.x, position.y].KillSurface(position); }
+
         surfaceGrid[position.x, position.y] = null;
         surfaceTilemap.SetTile(position, null);
     }
@@ -489,8 +491,8 @@ public class GridManager : MonoBehaviour {
             var pos = member.Position();
             for (int x = pos.x - size; x < pos.x + size; x++) {
                 for (int y = pos.y + size; y >= pos.y - size; y--) {
-                   
-                    checkPos.x = x;checkPos.y = y;
+
+                    checkPos.x = x; checkPos.y = y;
                     if (!tools.InBounds(checkPos)) { continue; }
                     if (floorTilemap.GetTile(checkPos)) {
                         GetOrSpawnSurface(checkPos);
@@ -504,10 +506,10 @@ public class GridManager : MonoBehaviour {
     }
 
 
-public bool FogTile(Vector3Int position) {
-    if(fogTilemap.GetTile(position) == globalValues.fog) {
-        return true;
-    }
+    public bool FogTile(Vector3Int position) {
+        if (fogTilemap.GetTile(position) == globalValues.fog) {
+            return true;
+        }
         return false;
     }
 
@@ -518,7 +520,7 @@ public bool FogTile(Vector3Int position) {
     }
 
     public GameObject InstantiateGo(GameObject go) {
-        var clone = Instantiate(go,transform);
+        var clone = Instantiate(go, transform);
         clone.name = go.name;
         return clone;
     }

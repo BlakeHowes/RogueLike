@@ -122,7 +122,7 @@ public class InventoryManager : MonoBehaviour
     public void CreateSkills(Inventory inventory, Vector3Int position) {
         inventory.skills.Clear();
         currentInventory = inventory;
-        inventory.CallEquipment(position, position, ItemStatic.Signal.CreateSkill);
+        inventory.CallEquipment(position, position, ItemStatic.CallType.AddSkillToHotbar);
         CreateSkillSlots(inventory);
         foreach(var item in inventory.traits) {
             if (inventory.skills.Contains(item)) { continue; }

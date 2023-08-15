@@ -10,7 +10,7 @@ public class Actions : MonoBehaviour
     public float pickupCost;
     public float handCost;
     public int throwRange;
-    public SetItem setItem;
+    //public SetItem setItem;
     public ItemAbstract wait;
     public void Awake() {
         i = this;
@@ -22,10 +22,11 @@ public class Actions : MonoBehaviour
 
         EffectManager.i.ShootBasicProjectile(position, origin, item.tile.sprite, false);
         bool itemOverTotalUses = false;
+        /*
         if (item is Item) { 
             var item2 = item as Item;
             item2.thrownLocation = landPos;
-            item.Call(position, origin, Signal.Attack, inventory.gameObject, null); 
+            item.Call(position, origin, CallType.Attack, inventory.gameObject, null); 
             if(item2.timesUsed >= item2.totalUses) { itemOverTotalUses = true; }
         }
 
@@ -39,7 +40,7 @@ public class Actions : MonoBehaviour
        
 
         if (landPos != position && !itemOverTotalUses) {
-            wait.Call(position, origin, Signal.Attack, inventory.gameObject, null);
+            wait.Call(position, origin, CallType.Attack, inventory.gameObject, null);
             EffectManager.i.ShootBasicProjectile(landPos, position, item.tile.sprite, false);
         }
 
@@ -52,5 +53,6 @@ public class Actions : MonoBehaviour
         if (inventory.items.Contains(item)) {
             inventory.items.Remove(item);
         }
+        */
     }
 }

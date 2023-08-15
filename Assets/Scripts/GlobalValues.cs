@@ -61,8 +61,8 @@ public class GlobalValues : ScriptableObject
     public GameObject gameOverLayout;
     public GameObject partyIconPrefab;
 
-    public ItemAbstract GetWaitSeconds(float time) {
-        waitSeconds.time = time;
+    public WaitSeconds GetWaitSeconds(float time) {
+        waitSeconds.waitTime = time;
         return waitSeconds;
     }
 }

@@ -13,21 +13,35 @@ MonoBehaviour:
   m_Name: BloodSteel Sword
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 339c6045817cd774ba3c598375c0f7b3, type: 2}
-  position: {x: 37, y: 38, z: 0}
-  origin: {x: 36, y: 39, z: 0}
-  parentItem: {fileID: 0}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 1b2d52aa3c467e34ea61b9be2a78287d, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+  - callType: 6
+    actionContainers:
+    - action: {fileID: 11400000, guid: 1b977a6d4b071ca4fa98440e003c5f21, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
   shopValue: 30
-  subItems: []
-  twoHanded: 0
+  weaponType: 0
   damageRange: {x: 15, y: 30}
   accuracyBase: 100
   rangeBase: 1
   heldOffset: {x: 11, y: 6, z: 0}
+  twoHanded: 0
   rangeTemp: 1
   accuracyTemp: 100
-  damageTemp: 15
-  damageMaxTemp: 30
   damageMultipleTemp: 1
-  damage: 8
-  originCharacter: {fileID: 0}
+  parentGO: {fileID: 0}
   target: {fileID: 0}

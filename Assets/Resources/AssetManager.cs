@@ -39,21 +39,21 @@ public class AssetManager {
             if (item.tile == tile) return item;
         }
 
-        Debug.LogError("Cant find Surface corrosponding with " + tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
+        Debug.LogError("Cant find Surface " + tile + " on surfaceTilemap, CHECK ACTIVE TILEMAP AND ASSET");
         return null;
     }
     public MechAbstract TiletoMech(TileBase tile) {
         foreach (MechAbstract item in mechs) {
             if (item.tile == tile) return item; }
 
-        //Debug.LogError("Cant find Mech corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
+        Debug.LogError("Cant find Mech " + tile + " on mechTilemap, CHECK ACTIVE TILEMAP AND ASSET");
         return null;
     }
     public ItemAbstract TiletoItem(TileBase tile) {
         foreach (ItemAbstract item in items) {
             if (item.tile == tile) return item; }
 
-        Debug.LogError("Cant find Item corrosponding with "+ tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
+        Debug.LogError("Cant find ItemAbstract " + tile + " on itemTilemap, CHECK ACTIVE TILEMAP AND ASSET");
         return null;
     }
     public GameObject TiletoGameObject(TileBase tile) {
@@ -65,7 +65,7 @@ public class AssetManager {
             Debug.Log("Found " + gameobject + " using sprite lookup :)");
             return gameobject; }
 
-        Debug.LogError("Cant find GameObject corrosponding with " + tile + " in AssetManager CHECK TILEMAP LAYER AND RESOURCE");
+        Debug.LogError("Cant find GameObject " + tile + " on goTilemap, CHECK ACTIVE TILEMAP AND ASSET");
         return null;
     }
 

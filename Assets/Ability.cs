@@ -1,46 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class ItemContainer : ScriptableObject {
-    public List<Ability> abilities = new List<Ability> ();
-    public void Call(Listener listener) {
+/*
+public class ItemAbstract : ScriptableObject {
+    public List<Ability> abilities = new();
+    public void Call(Vector3Int position, Vector3Int origin, GameObject gameObject, int value, ItemStatic.Signal signal) {
         foreach (var ability in abilities) {
-            if (ability.listener == listener) {
-                ability.Call();
+            if (ability.signal == signal) {
+                ability.Call(position, origin, gameObject, value);
             }
         } 
     }
     public void OnValidate() {
         //Call Listeners
     }
-}
-[System.Serializable]
-public class Ability : MonoBehaviour
-{
-    public Listener listener;
-    public List<Action> actions = new List<Action>();
 
-    public void Call() {
-        foreach (var action in actions) {
-            if (!action.Condition()) { break; }
-        }
-    }
+    public abstract string Description();
 }
 
-public class Action {
-    public bool Condition() {
-        //If False Return
-
-        //Add To Stack
-        return true;
-    }
-
-    public IEnumerator StackItem() {
-        yield return null;  
-    }
+[CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
+public class Weapon : ItemAbstract {
+    int damage;
+    int accuracy;
 }
+*/
 
 
-public class Listener : ScriptableObject {
 
-}

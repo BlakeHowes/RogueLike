@@ -81,7 +81,7 @@ public class Inventory : MonoBehaviour
         var clone = Instantiate(statusEffect);
         clone.name = statusEffect.name;
         statusEffects.Add(clone);
-        clone.Call(position, origin, Signal.SetTarget, gameObject,null);
+        clone.Call(position, origin, gameObject, CallType.SetTarget);
     }
 
     public void RemoveItem(ItemAbstract item) {
@@ -126,31 +126,31 @@ public class Inventory : MonoBehaviour
         */
     }
 
-    public void CallEquipment(Vector3Int position, Vector3Int origin, Signal signal) {
+    public void CallEquipment(Vector3Int position, Vector3Int origin, CallType signal) {
         if (!stats) { stats =GetComponent<Stats>(); }
-        if (signal == Signal.CalculateStats) { stats.ResetTempStats(); }
-        foreach (var item in traits) { if (item) item.Call(position, origin, signal,gameObject,null); }
-        foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal, gameObject, null); }
-        if (helmet) { helmet.Call(position, origin, signal, gameObject, null); }
-        if (armour) { armour.Call(position, origin, signal, gameObject, null); }
+        if (signal == CallType.CalculateStats) { stats.ResetTempStats(); }
+        foreach (var item in traits) { if (item) item.Call(position, origin,gameObject, signal); }
+        foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
+        if (helmet) { helmet.Call(position, origin, gameObject, signal); }
+        if (armour) { armour.Call(position, origin, gameObject, signal); }
 
-        if (trinket1) { trinket1.Call(position, origin, signal, gameObject, null); }
-        if (trinket2) { trinket2.Call(position, origin, signal, gameObject, null); }
-        if (trinket3) { trinket3.Call(position, origin, signal, gameObject, null); }
-        if (trinket4) { trinket4.Call(position, origin, signal, gameObject, null); }
+        if (trinket1) { trinket1.Call(position, origin, gameObject, signal); }
+        if (trinket2) { trinket2.Call(position, origin, gameObject, signal); }
+        if (trinket3) { trinket3.Call(position, origin, gameObject, signal); }
+        if (trinket4) { trinket4.Call(position, origin, gameObject, signal); }
         if (statusEffectsToRemove.Count > 0) {
             foreach (var item in statusEffectsToRemove) {
             if (statusEffects.Contains(item)) { statusEffects.Remove(item); }}
         }
-        if (mainHand) { mainHand.Call(position, origin, signal, gameObject, null); }
-        if (offHand) { offHand.Call(position, origin, signal, gameObject, null); }
+        if (mainHand) { mainHand.Call(position, origin, gameObject, signal); }
+        if (offHand) { offHand.Call(position, origin, gameObject, signal); }
 
     }
 
-    public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, Signal signal,GameObject parentGO) {
+    public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, CallType signal,GameObject parentGO) {
         stats.UpdateHealthBar();
         if (statusEffects.Count == 0) { goto traits; }
-        foreach (var item in statusEffects) { if (item) item.Call(position, origin, signal, parentGO,null); }
+        foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
         if (statusEffectsToRemove.Count > 0) {
             foreach (var item in statusEffectsToRemove) {
                 if (statusEffects.Contains(item)) { statusEffects.Remove(item); }
@@ -158,7 +158,7 @@ public class Inventory : MonoBehaviour
         }
         traits:
         if (traits.Count == 0) { return; }
-        foreach (var item in skills) { if (item) item.Call(position, origin, signal, parentGO, null); }
+        foreach (var item in skills) { if (item) item.Call(position, origin, gameObject, signal); }
     }
 
     public Weapon GetMainHandAsWeapon() {

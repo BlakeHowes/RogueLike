@@ -12,7 +12,7 @@ public class Stats : MonoBehaviour {
     public List<ItemAbstract> immunites;
     [Header("Base Stats")]
     public int maxHealthBase;
-    public int armourBase;
+    public int maxArmourBase;
     public int actionPointsBase;
     public int throwingRangeBase;
 
@@ -22,7 +22,7 @@ public class Stats : MonoBehaviour {
 
     [Header("Temporary Stats")]
     [HideInInspector] public int maxHealthTemp;
-    [HideInInspector] public int armourTemp;
+    [HideInInspector] public int maxArmourTemp;
     [HideInInspector] public int actionPointsTemp;
     [HideInInspector] public int throwingRangeTemp;
     [HideInInspector] public int walkCostTemp;
@@ -31,6 +31,7 @@ public class Stats : MonoBehaviour {
     [HideInInspector] public int directDamage;
     [HideInInspector] public int armour;
     [HideInInspector] public int damageTaken;
+     public int meleeDamage;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -52,12 +53,13 @@ public class Stats : MonoBehaviour {
         actionPointsSum = 0;
         actionPointsTemp = actionPointsBase;
         maxHealthTemp = maxHealthBase;
-        armourTemp = armourBase;
+        maxArmourTemp = maxArmourBase;
         throwingRangeTemp = throwingRangeBase;
         walkCostTemp = walkCostBase;
         enemyAlertRangeTemp = enemyAlertRangeBase;
         skillRangeTemp = skillRangeBase;
         directDamage = 0;
+        meleeDamage = 0;
     }
 
     public void OnEnable() {
@@ -85,11 +87,11 @@ public class Stats : MonoBehaviour {
     public void OnIdleTick() {
         if (!armourChecked) { 
             RefreshCharacter(gameObject.Position());
-            armour = armourTemp; 
+            armour = maxArmourTemp; 
             armourChecked = true; 
         }
         armour++;
-        if (armour > armourTemp) { armour = armourTemp; }
+        if (armour > maxArmourTemp) { armour = maxArmourTemp; }
         if (state == PartyManager.State.Idle) {
             ResetActionPoints();
         }
@@ -122,7 +124,7 @@ public class Stats : MonoBehaviour {
 
         RefreshCharacter(position);
         damageTaken = damage;
-        inventory.CallEquipment(position, origin, Signal.TakeDamage);
+        inventory.CallEquipment(position, origin, CallType.TakeDamage);
         Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
 
         var damageTotal = damage;
@@ -175,10 +177,10 @@ public class Stats : MonoBehaviour {
     }
 
     public void Die(Vector3Int position) {
-        inventory.CallEquipment(position, position, Signal.Death);
+        inventory.CallEquipment(position, position, CallType.Death);
         foreach (var item in deathAction) {
             if (item)
-                item.Call(position, position, Signal.Death,gameObject,null);
+                item.Call(position, position,gameObject, CallType.Death);
         }
 
         PartyManager.i.RemoveDeadEnemy(gameObject);
@@ -200,7 +202,7 @@ public class Stats : MonoBehaviour {
     public void Heal(int amount) {
         var position = gameObject.Position();
 
-        inventory.CallEquipment(position, position, Signal.Heal);
+        inventory.CallEquipment(position, position, CallType.Heal);
 
         var healthTemp = health;
         health += amount;
@@ -222,11 +224,11 @@ public class Stats : MonoBehaviour {
 
     public void RefreshCharacter(Vector3Int position) {
         ResetTempStats();
-        inventory.CallEquipment(position, position, Signal.ResetStatsToBase);
-        inventory.CallEquipment(position,position, Signal.CalculateStats);
-        if (!armourChecked) { armour = armourTemp; armourChecked = true; }
+        inventory.CallEquipment(position, position, CallType.ResetStatsToBase);
+        inventory.CallEquipment(position,position, CallType.CalculateStats);
+        if (!armourChecked) { armour = maxArmourTemp; armourChecked = true; }
         //Debug.Log(armour +" "+ armourTemp + "Status Effects " + inventory.statusEffects.Count);
-        if (armour > armourTemp) { armour = armourTemp; }
+        if (armour > maxArmourTemp) { armour = maxArmourTemp; }
         UpdateHealthBar();
     }
 

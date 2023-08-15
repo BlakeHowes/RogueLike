@@ -196,7 +196,7 @@ public class PartyManager : MonoBehaviour {
         }
         else {
             var pos = currentCharacter.Position();
-            currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
+            currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
             GridManager.i.StartStack();
         }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
@@ -215,7 +215,7 @@ public class PartyManager : MonoBehaviour {
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
         var pos = currentCharacter.Position();
-        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
+        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
         currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
     }
 
@@ -262,7 +262,7 @@ public class PartyManager : MonoBehaviour {
             if (enemyTurnTaken.Contains(enemyCharacter) || !enemyCharacter) { continue; }
             SetCurrentCharacter(enemyCharacter);
             var pos = enemyCharacter.Position();
-            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
+            enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
             enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
             return;
         }
@@ -273,7 +273,7 @@ public class PartyManager : MonoBehaviour {
         var pos = character.Position();
         var inventory = character.GetComponent<Inventory>();
         inventory.ReduceCoolDowns();
-        inventory.CallEquipment(pos, pos, Signal.OnSwitchFactionTurn);
+        inventory.CallEquipment(pos, pos, CallType.OnSwitchFactionTurn);
     }
 
 
@@ -291,7 +291,7 @@ public class PartyManager : MonoBehaviour {
         partyMemberTurnTaken.Clear();
 
         var pos = currentCharacter.Position();
-        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, Signal.StartOfIndividualTurn);
+        currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
         GridManager.i.StartStack();
         //enemyTurnTaken.Clear();
     }

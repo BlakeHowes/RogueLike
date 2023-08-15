@@ -9,24 +9,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83079d81b6d198341bb7adc4470de11c, type: 3}
+  m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
   m_Name: Battle Cry
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 77e1d95bc328d59419b5f950071b844c, type: 2}
-  position: {x: 29, y: 35, z: 0}
-  origin: {x: 29, y: 35, z: 0}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 07b63b36e780a6148b01fa29e44a67ff, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+    - action: {fileID: 11400000, guid: 568943927c191564f80dbb8ca8ac948e, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
   type: 4
   targetsTags: 1
   range: 4
+  AOE: 0
   actionPointCost: 2
-  coolDown: 4
-  CameraZoomDuration: 1
-  particles: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
-  subItems:
-  - {fileID: 11400000, guid: eb208c504e1ab3e4c98279daee45932f, type: 2}
-  statusEffects:
-  - {fileID: 11400000, guid: 170711fa72156ab489e293084a233eea, type: 2}
-  customDescription: Increase in range allie's damage by 5 for 4 turns
+  coolDown: 2
+  CameraZoomDuration: 0
+  requireTarget: 1
+  particles: {fileID: 0}
+  useParticlesInWholeArea: 0
+  subItems: []
+  statusEffects: []
+  customDescription: 
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
-  parentGO: {fileID: 0}
+  targets: []

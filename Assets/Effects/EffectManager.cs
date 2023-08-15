@@ -8,7 +8,7 @@ public class EffectManager : MonoBehaviour
     private Vector3 offset = new Vector3(0.5f, 0.5f, 0);
     public Vector3 weaponOriginOffset;
     public GameObject hitParticles;
-    public ProjectileMod projectileItem;
+    //public ProjectileMod projectileItem;
     public void Awake() {
         i = this;
     }
@@ -18,6 +18,7 @@ public class EffectManager : MonoBehaviour
     }
 
     public void ShootBasicProjectile(Vector3 position,Vector3 origin,Sprite sprite,bool insert) {
+        /*
         var particles = projectileItem.particles.GetComponent<ParticleSystem>();
         particles.textureSheetAnimation.SetSprite(0, sprite);
         projectileItem.endPos = position;
@@ -25,6 +26,7 @@ public class EffectManager : MonoBehaviour
 
         if (insert) { GridManager.i.InsertToStack(projectileItem); return; }
         GridManager.i.AddToStack(projectileItem);
+        */
     }
 
     public void CreateLineEffect(Vector3 position,Vector3 origin,GameObject linePrefab) {

@@ -87,7 +87,7 @@ public class Surface : ScriptableObject
             character.GetComponent<Inventory>().AddStatusEffect(position, position, StatusEffect);
         }
         foreach(var subItem in subItems) {
-            subItem.Call(position, position, ItemStatic.Signal.Attack, null, null);
+            subItem.Call(position, position ,null, ItemStatic.CallType.Activate);
         }
     }
 
@@ -98,7 +98,7 @@ public class Surface : ScriptableObject
                 combination.inputSurface.name == surface.name + "(Clone)"||
                 combination.inputSurface.name == surface.name) {
                 GridManager.i.SetSurface(position, combination.resultingSurface);
-                if (combination.subItem) { combination.subItem.Call(position, position, ItemStatic.Signal.Attack, null, null); }
+                if (combination.subItem) { combination.subItem.Call(position, position,null, ItemStatic.CallType.Activate); }
                 return true;
             }
         }

@@ -9,25 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee403b2a7d5e9ba43944c7eda1415ecf, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f2b025c248a48c42a842c8b4ed5fef5, type: 3}
   m_Name: Attack Up
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 1df84d4ac87efef44b3e6085a2f57181, type: 2}
-  particles: {fileID: 0}
-  position: {x: 0, y: 0, z: 0}
-  origin: {x: 0, y: 0, z: 0}
-  durationTotal: 4
-  onSignal: 0
-  damage: 5
-  damageMultiple: 0
-  rangedWeaponRange: 0
-  maxHealth: 0
-  armour: 0
-  actionPoints: 0
-  throwingRange: 0
-  fistDamage: 0
-  walkCost: 0
-  enemyAlertRange: 0
-  skillRange: 0
-  health: 0
-  healthChangeAddition: 0
+  abilities:
+  - callType: 7
+    actionContainers:
+    - action: {fileID: 11400000, guid: 916a0352afc66b5409fa8c4585a73d1d, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}

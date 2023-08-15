@@ -43,13 +43,13 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateHealthBar() {
         armourText.text = stats.armour.ToString();
-        if (stats.health < stats.maxHealthTemp || stats.armour < stats.armourTemp) {
+        if (stats.health < stats.maxHealthTemp || stats.armour < stats.maxArmourTemp) {
             entireUILayout.SetActive(true);
             healthSlider.maxValue = stats.maxHealthTemp;
             healthSlider.value = stats.health;
             transform.position = stats.gameObject.transform.position;
             
-            if(stats.armour < stats.armourTemp) {
+            if(stats.armour < stats.maxArmourTemp) {
                 armourLayout.SetActive(true);
             }
             else {

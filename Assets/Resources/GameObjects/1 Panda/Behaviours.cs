@@ -27,7 +27,7 @@ public class Behaviours : MonoBehaviour
     [Task]
     public void CallAttackItems() {
         foreach (ItemAbstract item in itemActions) {
-            item.Call(origin, origin, Signal.Attack,gameObject,null);
+            item.Call(origin, origin,gameObject, CallType.Activate);
         }
         ThisTask.Succeed();
     }
@@ -44,10 +44,10 @@ public class Behaviours : MonoBehaviour
             if (skill.CheckValidity(targetPosition,origin,gameObject)) {
                 MouseManager.i.itemSelected = item;
                
-                skill.CalculateStats(targetPosition,origin, gameObject);
+                skill.Call(targetPosition,origin, gameObject,CallType.CalculateStats);
                 GameUIManager.i.ShowRange(origin, skill.range);
                 GridManager.i.AddToStack(Manager.GetGlobalValues().GetWaitSeconds(0.4f));
-                skill.Call(targetPosition,origin,Signal.Attack,gameObject,null);
+                skill.Call(targetPosition,origin,gameObject, CallType.Activate);
                 MouseManager.i.itemSelected = null;
                 ThisTask.Succeed();
                 break;
@@ -140,7 +140,6 @@ public class Behaviours : MonoBehaviour
         PartyManager.i.EndEnemyTurn(gameObject);
         
         ThisTask.Succeed();
-        //PartyManager.i.EndEnemyTurn(gameObject);
     }
 
     [Task]
@@ -148,10 +147,9 @@ public class Behaviours : MonoBehaviour
         GridManager.i.TickGame();
         if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
         GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
-        PartyManager.i.EndEnemyTurn(gameObject);
+        PartyManager.i.EndTurn();
 
         ThisTask.Succeed();
-        //PartyManager.i.EndEnemyTurn(gameObject);
     }
 
     [Task]

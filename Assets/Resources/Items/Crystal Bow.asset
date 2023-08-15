@@ -13,28 +13,50 @@ MonoBehaviour:
   m_Name: Crystal Bow
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 63018fb83fc5b4e49804659331f94cbe, type: 2}
-  position: {x: 37, y: 31, z: 0}
-  origin: {x: 32, y: 32, z: 0}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 1b2d52aa3c467e34ea61b9be2a78287d, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6375196592243838218, guid: e1057407af1f00443a6b54fc2c9cfa00, type: 3}
+    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6375196592243838218, guid: e1057407af1f00443a6b54fc2c9cfa00, type: 3}
+    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+  - callType: 6
+    actionContainers:
+    - action: {fileID: 11400000, guid: 1b977a6d4b071ca4fa98440e003c5f21, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
   shopValue: 20
-  subItems:
-  - subItem: {fileID: 11400000, guid: e0ac6be8621c7ca458d18dea920a6e7d, type: 2}
-    after: 0
-  - subItem: {fileID: 11400000, guid: e4d9208cd8211e94ba4736b6e3358adc, type: 2}
-    after: 0
-  - subItem: {fileID: 11400000, guid: 0508160415db5c747885bc0992f69d9b, type: 2}
-    after: 0
-  - subItem: {fileID: 11400000, guid: e0ac6be8621c7ca458d18dea920a6e7d, type: 2}
-    after: 0
-  twoHanded: 1
+  weaponType: 0
   damageRange: {x: 10, y: 15}
   accuracyBase: 100
   rangeBase: 8
   heldOffset: {x: 6, y: 6, z: 0}
+  twoHanded: 1
   rangeTemp: 8
-  accuracyTemp: 43.83886
-  damageTemp: 10
-  damageMaxTemp: 15
+  accuracyTemp: 100
   damageMultipleTemp: 1
-  damage: 0
   parentGO: {fileID: 0}
   target: {fileID: 0}

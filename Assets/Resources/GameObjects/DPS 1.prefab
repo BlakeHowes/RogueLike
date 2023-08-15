@@ -167,7 +167,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   state: 0
   deathAction:
-  - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
+  - {fileID: 0}
   immunites: []
   maxHealthBase: 100
   armourBase: 0
@@ -206,24 +206,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: d5d93365186e3a34bb95b93d42dbd29a, type: 2}
-  - {fileID: 11400000, guid: aa5792562fd4e9a4a8f9e5781aa1cb85, type: 2}
-  - {fileID: 11400000, guid: a43b37b5df943ae4fa90083b87cdcc89, type: 2}
-  - {fileID: 11400000, guid: ca08bbda313055d438ebcdfa5c4d97c9, type: 2}
-  - {fileID: 11400000, guid: 83121250017751e4da7a17cabd930c3c, type: 2}
-  - {fileID: 11400000, guid: 14d7bdc328220344bb44b702e6990a6a, type: 2}
-  traits:
-  - {fileID: 11400000, guid: f773b7fec30eb2f4eb30425057da19b1, type: 2}
-  - {fileID: 11400000, guid: da9f73165fad19d4cad4975ffbbcf2a5, type: 2}
-  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
+  items: []
+  traits: []
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
+  mainHand: {fileID: 11400000, guid: f3673bfc8a2051649af2892ee1b6e01f, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
-  armour: {fileID: 11400000, guid: a32c5a68722a8b641af8048adb1de0bc, type: 2}
+  armour: {fileID: 0}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
