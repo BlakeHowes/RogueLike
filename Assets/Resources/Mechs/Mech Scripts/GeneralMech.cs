@@ -9,7 +9,7 @@ public class GeneralMech : MechAbstract
 {
     public GameObject particles;
     private GameObject particlesGameObject;
-    public ItemAbstract statusEffect;
+    public StatusEffect statusEffect;
 
     public void CreateParticles(Vector3Int position) {
         particlesGameObject = Instantiate(particles);

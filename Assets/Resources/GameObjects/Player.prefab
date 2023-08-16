@@ -170,14 +170,14 @@ MonoBehaviour:
   - {fileID: 0}
   immunites: []
   maxHealthBase: 100
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 4
   throwingRangeBase: 5
   walkCostBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
-  armourTemp: 0
+  maxArmourTemp: 0
   actionPointsTemp: 0
   throwingRangeTemp: 0
   walkCostTemp: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  meleeDamage: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -207,7 +208,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: da6dc9add706734439cf8f2f75c0e5f4, type: 2}
+  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
+  - {fileID: 11400000, guid: 04f7d9d4b8700644b9c2f67146dc0098, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []

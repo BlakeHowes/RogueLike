@@ -26,13 +26,6 @@ MonoBehaviour:
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
-  - callType: 6
-    actionContainers:
-    - action: {fileID: 11400000, guid: 1b977a6d4b071ca4fa98440e003c5f21, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
   shopValue: 30
   weaponType: 0
   damageRange: {x: 15, y: 30}

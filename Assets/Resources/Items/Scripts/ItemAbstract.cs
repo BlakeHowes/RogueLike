@@ -8,13 +8,7 @@ public abstract class ItemAbstract : ScriptableObject {
     public Tile tile;
     public List<Ability> abilities = new();
 
-    public void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
-        foreach (var ability in abilities) {
-            if (ability.callType == callType) {
-                ability.Call(position, origin, parentGO, this);
-            }
-        }
-    }
+    public abstract void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType);
 
     public abstract string Description();
 
@@ -49,6 +43,10 @@ public struct ActionContainer {
     public float floatValue;
     public ItemAbstract itemValue;
     public GameObject prefabValue;
+    public Color colorValue;
+    public Vector2Int vector2IntValue;
+    public Surface surfaceValue;
+    public Sprite spriteValue;
 }
 
 [System.Serializable]
@@ -104,7 +102,12 @@ public static class ItemStatic {
         Int,
         Float,
         Item,
-        Prefab
+        Prefab,
+        Color,
+        Vector2,
+        Surface,
+        Sprite,
+        SurfaceInt,
     }
 
     public enum Stat {

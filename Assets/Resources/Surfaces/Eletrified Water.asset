@@ -23,13 +23,19 @@ MonoBehaviour:
     subItem: {fileID: 0}
   - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
     resultingSurface: {fileID: 11400000}
-    subItem: {fileID: 11400000, guid: 83ed88ca05a559c4d96a6f8657098d9f, type: 2}
-  subItems:
-  - {fileID: 11400000, guid: b313ebb87f3c48d4988f8ec723e8bdb0, type: 2}
-  StatusEffect: {fileID: 11400000, guid: 41fd14a9afc550844b03fbcce0caabe6, type: 2}
+    subItem: {fileID: 0}
+  actions:
+  - action: {fileID: 11400000, guid: 5914442942a5c8443b438e6190de3c16, type: 2}
+    intValue: 5
+    floatValue: 0
+    itemValue: {fileID: 0}
+    prefabValue: {fileID: 0}
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vector2IntValue: {x: 0, y: 0}
+    surfaceValue: {fileID: 0}
   duration: {x: 19.59, y: 40.48}
   counter: 0
   effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c, type: 3}
-  dryUp: 1
   dryUpSurface: {fileID: 0}
+  dryUp: 1
   tryToSpread: 1

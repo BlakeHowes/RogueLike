@@ -76,8 +76,8 @@ public class LootGenerator : MonoBehaviour
             }
             float roll = Random.Range(0.000f, 1.000f);
             if (roll <= deathaction.rarity) {
-                if (deathaction.pool == 0 || deathaction.pool == poolRoll)
-                    stats.deathAction.Add(deathaction.item);
+               // if (deathaction.pool == 0 || deathaction.pool == poolRoll)
+                    //stats.deathAction.Add(deathaction.item);
             }
         }
     }

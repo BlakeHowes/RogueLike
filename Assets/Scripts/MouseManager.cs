@@ -3,10 +3,8 @@ using System.Collections;
 using Unity.Burst;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Tilemaps;
 using static ItemStatic;
 using static PartyManager;
-using static UnityEngine.UI.Image;
 
 public class MouseManager : MonoBehaviour
 {
@@ -32,7 +30,7 @@ public class MouseManager : MonoBehaviour
             var currentCharacter = PartyManager.i.currentCharacter;
             var origin = currentCharacter.Position();
             var currentStats = currentCharacter.GetComponent<Stats>();
-            currentStats.RefreshCharacter(origin);
+            //currentStats.RefreshCharacter(origin);
             GameUIManager.i.ShowRange(origin,currentCharacter.GetComponent<Stats>().throwingRangeTemp); 
         }
         if (!item) { InventoryManager.i.DeselectItems(); }
@@ -130,24 +128,10 @@ public class MouseManager : MonoBehaviour
             Actions.i.ThrowItem(position, origin, itemSelected, inventory);
             ChangeActionPoints(position, origin, inventory, currentStats, 1);
         }
-        else {
-            var skill = itemSelected as Skill;
-            if(skill.type != Skill.Type.JustTheUserTile && skill.type != Skill.Type.AreaAroundUser) {
-                if (!position.InRange(origin, skill.range)) { skill.startPositionSet = false; SelectItem(null); return true; }
-            }
-            if (skill.type == Skill.Type.SelectTwoGOUnderMouse) {
-                if(skill.startPositionSet == false) {
-                    if (position == origin) { SelectItem(null); return true; }
-                    skill.targetedStartPosition = position;
-                    skill.startPositionSet = true;
-                    return true;
-                }
+        var skill = itemSelected as Skill;
+        if (ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
+        itemSelected.Call(position, origin, inventory.gameObject, CallType.Activate);
 
-            }
-            if(ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
-            itemSelected.Call(position, origin,inventory.gameObject, CallType.Activate);
-            skill.startPositionSet = false;
-        }
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);

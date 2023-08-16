@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static ItemStatic;
 [CreateAssetMenu(fileName = "Equipment", menuName = "Items/Equipment")]
@@ -13,6 +14,13 @@ public class Equipment : ItemAbstract {
     public Vector3Int wornOffset;
     public bool hideHair;
 
+    public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
+        foreach (var ability in abilities) {
+            if (ability.callType == callType) {
+                ability.Call(position, origin, parentGO, this);
+            }
+        }
+    }
 
     public void WeightClass(GameObject originCharacter) {
         if (weight == Weight.None || weight == Weight.Light) { return; }

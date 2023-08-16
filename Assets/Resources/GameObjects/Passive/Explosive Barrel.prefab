@@ -51,27 +51,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 6e19525265b9931409be3996379e7db0, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: c2a3250779f65bc49a616055fbf8ae70, type: 2}
-  - {fileID: 11400000, guid: de6ce9d5d31c1784785f470385b44dea, type: 2}
-  - {fileID: 11400000, guid: 68b8a510a71b5814e99dbba1d51eee5b, type: 2}
-  - {fileID: 11400000, guid: 81e745a6c21899744beca520ac9f7326, type: 2}
-  - {fileID: 11400000, guid: 53a10d3be35627345a9d7032e7bdfe0c, type: 2}
-  - {fileID: 11400000, guid: bc50b55615db8b241b3dd21f042b52bf, type: 2}
   immunites: []
   maxHealthBase: 1
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 0
-  fistDamageBase: 0
   walkCostBase: 0
   enemyAlertRangeBase: 0
   skillRangeBase: 0
-  armourTemp: 0
+  maxHealthTemp: 0
+  maxArmourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
+  meleeDamage: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -93,8 +91,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: 57076fb29a94ffd48a4d26521bb752df, type: 2}
   skills: []
+  coolDowns: []
   statusEffects: []
   mainHand: {fileID: 0}
   offHand: {fileID: 0}

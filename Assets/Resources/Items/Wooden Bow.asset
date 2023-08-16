@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
+  m_Name: Wooden Bow
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 730000d08a114a644be5072c58fc6fe1, type: 2}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 1b2d52aa3c467e34ea61b9be2a78287d, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6375196592243838218, guid: 33be32fc41bc10542b0982aef2d903e7, type: 3}
+    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+  shopValue: 20
+  weaponType: 1
+  damageRange: {x: 10, y: 15}
+  accuracyBase: 100
+  rangeBase: 8
+  heldOffset: {x: 6, y: 6, z: 0}
+  twoHanded: 1
+  rangeTemp: 8
+  accuracyTemp: 100
+  damageMultipleTemp: 1
+  parentGO: {fileID: 0}
+  target: {fileID: 0}

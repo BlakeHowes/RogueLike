@@ -5,10 +5,10 @@ using static ItemStatic;
 [System.Serializable]
 public class CoolDown {
     public int coolDownTimer;
-    public Skill skill;
-    public CoolDown(int coolDown, Skill skill) {
+    public ItemAbstract item;
+    public CoolDown(int coolDown, ItemAbstract item) {
         this.coolDownTimer = coolDown;
-        this.skill = skill;
+        this.item = item;
     }
 }
 
@@ -18,8 +18,7 @@ public class Inventory : MonoBehaviour
     public List<ItemAbstract> traits = new List<ItemAbstract>();
     [HideInInspector] public List<ItemAbstract> skills = new List<ItemAbstract>();
     [HideInInspector] public List<CoolDown> coolDowns = new List<CoolDown>();
-    public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
-    public HashSet<ItemAbstract> statusEffectsToRemove = new HashSet<ItemAbstract>();
+    [HideInInspector] public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
     public ItemAbstract helmet;
@@ -35,8 +34,8 @@ public class Inventory : MonoBehaviour
         stats = GetComponent<Stats>();
     }
 
-    public void AddSkillCoolDown(int coolDown,Skill skill) {
-        var skillCoolDown = new CoolDown(coolDown, skill);
+    public void AddSkillCoolDown(int coolDown,ItemAbstract item) {
+        var skillCoolDown = new CoolDown(coolDown, item);
         coolDowns.Add(skillCoolDown);
     }
 
@@ -51,9 +50,9 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public int GetCoolDown(Skill skill) {
+    public int GetCoolDown(ItemAbstract item) {
         foreach(var skillCoolDown in coolDowns) {
-            if (skillCoolDown.skill ==  skill) { return skillCoolDown.coolDownTimer; }
+            if (skillCoolDown.item.name == item.name) { return skillCoolDown.coolDownTimer; }
         }
         return 0;
     }
@@ -73,7 +72,7 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public void AddStatusEffect(Vector3Int position,Vector3Int origin,ItemAbstract statusEffect) {
+    public void AddStatusEffect(Vector3Int position,Vector3Int origin,StatusEffect statusEffect) {
         if (stats.IsImmune(statusEffect)) { return; }
         foreach(var effect in statusEffects) {
             if(effect.name == statusEffect.name) { return; }
@@ -81,7 +80,14 @@ public class Inventory : MonoBehaviour
         var clone = Instantiate(statusEffect);
         clone.name = statusEffect.name;
         statusEffects.Add(clone);
+        AddSkillCoolDown(statusEffect.duration -1, statusEffect);
         clone.Call(position, origin, gameObject, CallType.SetTarget);
+        stats.RefreshCharacter(stats.gameObject.Position());
+    }
+
+    public void RemoveStatusEffect(ItemAbstract statusEffect) {
+        statusEffects.Remove(statusEffect);
+        stats.RefreshCharacter(stats.gameObject.Position());
     }
 
     public void RemoveItem(ItemAbstract item) {
@@ -127,8 +133,6 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, CallType signal) {
-        if (!stats) { stats =GetComponent<Stats>(); }
-        if (signal == CallType.CalculateStats) { stats.ResetTempStats(); }
         foreach (var item in traits) { if (item) item.Call(position, origin,gameObject, signal); }
         foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
         if (helmet) { helmet.Call(position, origin, gameObject, signal); }
@@ -138,27 +142,21 @@ public class Inventory : MonoBehaviour
         if (trinket2) { trinket2.Call(position, origin, gameObject, signal); }
         if (trinket3) { trinket3.Call(position, origin, gameObject, signal); }
         if (trinket4) { trinket4.Call(position, origin, gameObject, signal); }
-        if (statusEffectsToRemove.Count > 0) {
-            foreach (var item in statusEffectsToRemove) {
-            if (statusEffects.Contains(item)) { statusEffects.Remove(item); }}
-        }
         if (mainHand) { mainHand.Call(position, origin, gameObject, signal); }
         if (offHand) { offHand.Call(position, origin, gameObject, signal); }
-
     }
 
-    public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, CallType signal,GameObject parentGO) {
-        stats.UpdateHealthBar();
+    public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, CallType signal) {
+
         if (statusEffects.Count == 0) { goto traits; }
-        foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
-        if (statusEffectsToRemove.Count > 0) {
-            foreach (var item in statusEffectsToRemove) {
-                if (statusEffects.Contains(item)) { statusEffects.Remove(item); }
-            }
+        for (int i = 0; i < statusEffects.Count; i++) {
+            statusEffects[i].Call(position, origin, gameObject, signal);
         }
+        //foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
         traits:
         if (traits.Count == 0) { return; }
         foreach (var item in skills) { if (item) item.Call(position, origin, gameObject, signal); }
+        stats.UpdateHealthBar();
     }
 
     public Weapon GetMainHandAsWeapon() {

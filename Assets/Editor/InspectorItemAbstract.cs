@@ -42,28 +42,37 @@ public class InspectorActionIntPairCustom : PropertyDrawer {
 
         SerializedProperty action = property.FindPropertyRelative("action");
         SerializedProperty extraVariable = null;
+        SerializedProperty extraVariable2 = null;
         int indent = EditorGUI.indentLevel;
         EditorGUI.indentLevel = 0;
-        int actionWidth = -12;
+        float actionWidth = 1f;
+        float extraWidth = 2;
         if (action.objectReferenceValue) {
             Action actionFound = action.objectReferenceValue as Action;
             if (actionFound.extraVariableType == ExtraVariableType.None) goto Draw;
             actionWidth = 20;
             switch (actionFound.extraVariableType) {
-                case ExtraVariableType.Int: extraVariable = property.FindPropertyRelative("intValue"); break;
-                case ExtraVariableType.Float: extraVariable = property.FindPropertyRelative("floatValue"); break;
-                case ExtraVariableType.Item: extraVariable = property.FindPropertyRelative("itemValue"); actionWidth = 80; break;
-                case ExtraVariableType.Prefab: extraVariable = property.FindPropertyRelative("prefabValue"); actionWidth = 80; break;
+                case ExtraVariableType.Int: extraVariable = property.FindPropertyRelative("intValue"); actionWidth = 1.25f;extraWidth = 5; break;
+                case ExtraVariableType.Float: extraVariable = property.FindPropertyRelative("floatValue"); actionWidth = 1.25f; extraWidth = 5; break;
+                case ExtraVariableType.Item: extraVariable = property.FindPropertyRelative("itemValue"); actionWidth = 2; break;
+                case ExtraVariableType.Prefab: extraVariable = property.FindPropertyRelative("prefabValue"); actionWidth = 2; break;
+                case ExtraVariableType.Color: extraVariable = property.FindPropertyRelative("colorValue"); actionWidth = 1.25f; extraWidth = 5; break;
+                case ExtraVariableType.Vector2: extraVariable = property.FindPropertyRelative("vector2IntValue"); actionWidth = 2; break;
+                case ExtraVariableType.Surface: extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 1.25f; extraWidth = 5; break;
+                case ExtraVariableType.Sprite: extraVariable = property.FindPropertyRelative("spriteValue"); actionWidth = 1.25f; extraWidth = 5; break;
+                case ExtraVariableType.SurfaceInt: extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 2; extraWidth = 4; 
+                    extraVariable2 = property.FindPropertyRelative("intValue"); break;
             }
         }
-
         Draw:
-        Rect pos1 = new Rect(position.x - 10, position.y, position.width - actionWidth, position.height);
-        Rect pos2 = new Rect(position.x + position.width - actionWidth -8, position.y, actionWidth +12, position.height);
+        Rect pos1 = new Rect(position.x - 10, position.y, position.width/ actionWidth +12, position.height);
+        Rect pos2 = new Rect(position.x + position.width/ actionWidth, position.y, position.width / extraWidth + 2, position.height);
+        Rect pos3 = new Rect((position.x + position.width/ actionWidth)+ position.width / extraWidth + 2, position.y, position.width / extraWidth, position.height);
 
         EditorGUI.PropertyField(pos1, action, GUIContent.none);
         EditorGUI.indentLevel = indent;
         if (extraVariable != null) EditorGUI.PropertyField(pos2, extraVariable, GUIContent.none);
+        if (extraVariable2 != null) EditorGUI.PropertyField(pos3, extraVariable2, GUIContent.none);
 
 
         EditorGUI.EndProperty();

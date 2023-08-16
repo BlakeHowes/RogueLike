@@ -25,6 +25,15 @@ public class Weapon : ItemAbstract {
         damageMultipleTemp = 1;
     }
 
+    public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
+        if(callType == CallType.ResetStatsToBase) { ResetTempStats();return; }
+        foreach (var ability in abilities) {
+            if (ability.callType == callType) {
+                ability.Call(position, origin, parentGO, this);
+            }
+        }
+    }
+
     public int GetDamage(GameObject target,GameObject parentGO) {
         int damage = 0;
         if (!target) { goto SkipAccuracy; }

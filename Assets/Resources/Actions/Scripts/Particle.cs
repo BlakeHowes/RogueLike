@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Particle", menuName = "Actions/Particle")]
+[CreateAssetMenu(fileName = "ParticleEffect", menuName = "Actions/ParticleEffect")]
 public class Particle : Action {
     [HideInInspector] public GameObject particle;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        SaveValues(position,origin,parentGO,parentItem);
+        this.position = position;
         particle = actionContainer.prefabValue;
         this.AddToStack();
         return true;

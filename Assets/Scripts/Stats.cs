@@ -8,7 +8,6 @@ using static ItemStatic;
 public class Stats : MonoBehaviour {
     public TileBase tile;
     public PartyManager.State state = PartyManager.State.Idle;
-    public List<ItemAbstract> deathAction;
     public List<ItemAbstract> immunites;
     [Header("Base Stats")]
     public int maxHealthBase;
@@ -22,14 +21,14 @@ public class Stats : MonoBehaviour {
 
     [Header("Temporary Stats")]
     [HideInInspector] public int maxHealthTemp;
-    [HideInInspector] public int maxArmourTemp;
+     public int maxArmourTemp;
     [HideInInspector] public int actionPointsTemp;
     [HideInInspector] public int throwingRangeTemp;
     [HideInInspector] public int walkCostTemp;
     [HideInInspector] public int enemyAlertRangeTemp;
     [HideInInspector] public int skillRangeTemp;
     [HideInInspector] public int directDamage;
-    [HideInInspector] public int armour;
+     public int armour;
     [HideInInspector] public int damageTaken;
      public int meleeDamage;
 
@@ -178,10 +177,6 @@ public class Stats : MonoBehaviour {
 
     public void Die(Vector3Int position) {
         inventory.CallEquipment(position, position, CallType.Death);
-        foreach (var item in deathAction) {
-            if (item)
-                item.Call(position, position,gameObject, CallType.Death);
-        }
 
         PartyManager.i.RemoveDeadEnemy(gameObject);
         GridManager.i.goMethods.RemoveGameObject(position);
@@ -224,6 +219,11 @@ public class Stats : MonoBehaviour {
 
     public void RefreshCharacter(Vector3Int position) {
         ResetTempStats();
+
+        //System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
+        //System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
+        //Debug.LogError(gameObject.name +" "+ methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
+
         inventory.CallEquipment(position, position, CallType.ResetStatsToBase);
         inventory.CallEquipment(position,position, CallType.CalculateStats);
         if (!armourChecked) { armour = maxArmourTemp; armourChecked = true; }

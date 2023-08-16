@@ -9,14 +9,14 @@ public class Surface : ScriptableObject
     public TileBase tile;
     public Color iconColour = Color.white;
     public List<Combination> combinations = new List<Combination>();
-    public List<ItemAbstract> subItems = new List<ItemAbstract>();
-    public ItemAbstract StatusEffect;
+    public List<ActionContainer> actions = new List<ActionContainer>();
+    //public StatusEffect StatusEffect;
     [Tooltip("If values are zero, surface will only combine not set on ground")]public Vector2 duration;
     [HideInInspector]public int counter = 0;
     public GameObject effectPrefab;
     GameObject effectClone;
-    public bool dryUp = true;
     public Surface dryUpSurface;
+    public bool dryUp = true;
     public bool tryToSpread;
 
     public void Spread(Vector3Int position) {
@@ -83,11 +83,13 @@ public class Surface : ScriptableObject
 
         if (!position.GameObjectGo()) { return; }
         var character = position.GameObjectGo();
+        /*
         if (StatusEffect) {
             character.GetComponent<Inventory>().AddStatusEffect(position, position, StatusEffect);
         }
-        foreach(var subItem in subItems) {
-            subItem.Call(position, position ,null, ItemStatic.CallType.Activate);
+        */
+        foreach(var actionContainer in actions) {
+            actionContainer.action.Condition(position, position, null, null, null, actionContainer);
         }
     }
 

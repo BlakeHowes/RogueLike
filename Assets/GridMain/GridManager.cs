@@ -97,12 +97,12 @@ public class GridManager : MonoBehaviour {
     public void CallTickAndStartOfTurn(Vector3Int position, Inventory invetory, GameObject currentCharacter, PartyManager.State state) {
         if (state == PartyManager.State.Combat) {
             if (invetory.gameObject == currentCharacter) {
-                invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick, invetory.gameObject);
+                invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick);
             }
             return;
         }
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick, invetory.gameObject);
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnSwitchFactionTurn, invetory.gameObject);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnSwitchFactionTurn);
         invetory.ReduceCoolDowns();
     }
 
@@ -118,13 +118,13 @@ public class GridManager : MonoBehaviour {
 
     //After 4 hours I cannot find this bug so I am making a terrible hack
     //For some reason some items are being called multiple times
-    List<Action> itemsCheckedHack = new List<Action>();
+    //List<Action> itemsCheckedHack = new List<Action>();
     public IEnumerator Stack() {
-        itemsCheckedHack.Clear();
+        //itemsCheckedHack.Clear();
         while (itemsInActionStack.Count > 0) {
             Action action = itemsInActionStack[0];
-            if (itemsCheckedHack.Contains(action)) { itemsInActionStack.Remove(action); continue; }
-            itemsCheckedHack.Add(action);
+            //if (itemsCheckedHack.Contains(action)) { itemsInActionStack.Remove(action); continue; }
+            //itemsCheckedHack.Add(action);
             yield return StartCoroutine(action.StackAction());
             itemsInActionStack.Remove(action);
         }
@@ -166,13 +166,6 @@ public class GridManager : MonoBehaviour {
     }
 
     public void AddToStack(Action action) {
-        if (action == null) {
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
-            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
-            Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
-        }
-
-        Debug.Log(action.name + Time.deltaTime);
         itemsInActionStack.Add(Instantiate(action));
     }
 
@@ -422,6 +415,8 @@ public class GridManager : MonoBehaviour {
     }
 
     public void CombineOrSetSurface(Vector3Int position, Surface surface) {
+        if (!position.InBounds()) { return; }
+        if (!position.IsWalkable()) { return; }
         var surfaceFound = surfaceGrid[position.x, position.y];
         if (surfaceFound) {
             surfaceFound.Combine(position, surface);

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Projectile Effect", menuName = "Actions/Projectile Effect")]
+//[CreateAssetMenu(fileName = "Projectile Effect", menuName = "Actions/Projectile Effect")]
 public class Projectile : Action {
     public bool waitForProjectile = true;
     [HideInInspector] public GameObject particles;
