@@ -6,11 +6,12 @@ using UnityEngine;
 public class UtilityActions : Action {
     public Type type;
     [HideInInspector] public int intValue;
+    [HideInInspector] public ItemAbstract itemValue;
     [HideInInspector] public Sprite spriteValue;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         SaveValues(position, origin, parentGO, parentItem);
         intValue = actionContainer.intValue;
-
+        itemValue = actionContainer.itemValue;
         spriteValue = actionContainer.spriteValue;
         this.AddToStack();
         return true;
@@ -21,6 +22,7 @@ public class UtilityActions : Action {
             case Type.SetInactive: parentGO.SetActive(false); break;
             case Type.SetActive: parentGO.SetActive(true); break;
             case Type.ChangeSprite: parentGO.GetComponent<SpriteRenderer>().sprite = spriteValue; break;
+            case Type.DropItem: GridManager.i.itemMethods.FloodFillDropItem(position,true,itemValue); break;
         }
         yield return null;
     }
@@ -29,5 +31,6 @@ public class UtilityActions : Action {
         SetInactive,
         SetActive,
         ChangeSprite,
+        DropItem,
     }
 }

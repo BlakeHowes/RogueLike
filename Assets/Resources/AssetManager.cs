@@ -34,6 +34,11 @@ public class AssetManager {
         }
     }
 
+    public Surface RandomSurface() {
+        int i = Random.Range(0, surfaces.Count);
+        return surfaces[i];
+    }
+
     public Surface TiletoSurface(TileBase tile) {
         foreach (Surface item in surfaces) {
             if (item.tile == tile) return item;

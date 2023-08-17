@@ -10,7 +10,7 @@ public class Surface : ScriptableObject
     public Color iconColour = Color.white;
     public List<Combination> combinations = new List<Combination>();
     public List<ActionContainer> actions = new List<ActionContainer>();
-    //public StatusEffect StatusEffect;
+    public StatusEffect StatusEffect;
     [Tooltip("If values are zero, surface will only combine not set on ground")]public Vector2 duration;
     [HideInInspector]public int counter = 0;
     public GameObject effectPrefab;
@@ -83,11 +83,11 @@ public class Surface : ScriptableObject
 
         if (!position.GameObjectGo()) { return; }
         var character = position.GameObjectGo();
-        /*
+
         if (StatusEffect) {
             character.GetComponent<Inventory>().AddStatusEffect(position, position, StatusEffect);
         }
-        */
+
         foreach(var actionContainer in actions) {
             actionContainer.action.Condition(position, position, null, null, null, actionContainer);
         }
@@ -100,7 +100,7 @@ public class Surface : ScriptableObject
                 combination.inputSurface.name == surface.name + "(Clone)"||
                 combination.inputSurface.name == surface.name) {
                 GridManager.i.SetSurface(position, combination.resultingSurface);
-                if (combination.subItem) { combination.subItem.Call(position, position,null, ItemStatic.CallType.Activate); }
+                if (combination.subItem) { combination.subItem.Call(position, position,null, combination.callType); }
                 return true;
             }
         }
@@ -111,5 +111,6 @@ public class Surface : ScriptableObject
 public struct Combination {
     public Surface inputSurface;
     public Surface resultingSurface;
+    public ItemStatic.CallType callType;
     public ItemAbstract subItem;
 }

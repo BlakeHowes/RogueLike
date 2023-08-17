@@ -10,7 +10,7 @@ public class Actions : MonoBehaviour
     public float pickupCost;
     public float handCost;
     public int throwRange;
-    //public SetItem setItem;
+    public ActionContainer setItem;
     public ItemAbstract wait;
     public void Awake() {
         i = this;
@@ -20,39 +20,35 @@ public class Actions : MonoBehaviour
         if (!position.InRange(origin, inventory.GetComponent<Stats>().throwingRangeTemp)) { return; }
         var landPos = GridManager.i.itemMethods.FloodFillDropItem(position,false,item);
 
-        EffectManager.i.ShootBasicProjectile(position, origin, item.tile.sprite, false);
+        EffectManager.i.ShootBasicProjectile(position, origin, item.tile.sprite);
         bool itemOverTotalUses = false;
-        /*
-        if (item is Item) { 
-            var item2 = item as Item;
+        if (item is GeneralItem) { 
+            var item2 = item as GeneralItem;
             item2.thrownLocation = landPos;
-            item.Call(position, origin, CallType.Attack, inventory.gameObject, null); 
+            item.Call(position, origin, inventory.gameObject, CallType.Activate); 
             if(item2.timesUsed >= item2.totalUses) { itemOverTotalUses = true; }
         }
 
-        item.position = position;
-        item.origin = origin;
         if (position.GameObjectGo() && item is Weapon) {
             var weapon = item as Weapon;
-            weapon.parentGO = inventory.gameObject;
-            GridManager.i.AddToStack(item);
+            weapon.Call(position, position, inventory.gameObject, CallType.Activate); //This causes a bug, origin shouldnt be position
         }
        
-
+        /*
         if (landPos != position && !itemOverTotalUses) {
-            wait.Call(position, origin, CallType.Attack, inventory.gameObject, null);
+            wait.Call(position, origin, inventory.gameObject, CallType.Activate);
             EffectManager.i.ShootBasicProjectile(landPos, position, item.tile.sprite, false);
         }
+        */
 
-
-        setItem.item = item;
-        setItem.position = landPos;
-        if (!itemOverTotalUses) { GridManager.i.AddToStack(setItem);  }
+        if (!itemOverTotalUses) {
+            setItem.itemValue = item;
+            setItem.action.Condition(position, origin,inventory.gameObject,null,null, setItem);
+        }
         
 
         if (inventory.items.Contains(item)) {
             inventory.items.Remove(item);
         }
-        */
     }
 }

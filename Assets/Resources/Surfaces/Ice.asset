@@ -17,12 +17,13 @@ MonoBehaviour:
   combinations:
   - inputSurface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
     resultingSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
+    callType: 0
     subItem: {fileID: 0}
-  subItems: []
-  StatusEffect: {fileID: 11400000, guid: 3b35d7eb0fb8c3b478edf0f2bae250ef, type: 2}
+  actions: []
+  StatusEffect: {fileID: 11400000, guid: 6db5a432c46752146b2006dbe8ecaed4, type: 2}
   duration: {x: 19.59, y: 40.48}
   counter: 0
   effectPrefab: {fileID: 8288408381700605430, guid: 6a06fc446382a9c4e811f12c2fb59d53, type: 3}
-  dryUp: 0
   dryUpSurface: {fileID: 0}
+  dryUp: 0
   tryToSpread: 0

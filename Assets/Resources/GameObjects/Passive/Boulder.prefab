@@ -91,9 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities: []
   items: []
   traits:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a67c957bdece11b47a2f839a857fec14, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []

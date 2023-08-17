@@ -272,8 +272,8 @@ public class PartyManager : MonoBehaviour {
     public void OnSwitchFaction(GameObject character) {
         var pos = character.Position();
         var inventory = character.GetComponent<Inventory>();
-        inventory.ReduceCoolDowns();
-        inventory.CallEquipment(pos, pos, CallType.OnSwitchFactionTurn);
+        //inventory.ReduceCoolDowns();
+        inventory.CallEquipment(pos, pos, CallType.StartOfTurn);
     }
 
 

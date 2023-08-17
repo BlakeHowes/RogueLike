@@ -40,9 +40,12 @@ public class itemMethods {
             itemGrid[position.x, position.y] = null;
             return null;
         }
-        Debug.Log("Set Item " + position);
+        Debug.Log("Set Item " + item +" on "+ position);
         itemTilemap.SetTile(position, item.tile);
-        return itemGrid[position.x, position.y] = item;
+        itemGrid[position.x, position.y] = item;
+        var mech = GridManager.i.mechMethods.GetMechanism(position);
+        if (mech) { mech.Call(position, MechStatic.Signal.ItemDroppedOnto); }
+        return item;
     }
 
     public ItemAbstract RemoveItem(Vector3Int position) {

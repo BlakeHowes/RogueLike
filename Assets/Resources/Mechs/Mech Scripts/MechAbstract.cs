@@ -13,6 +13,6 @@ public static class MechStatic {
         Tick,
         ClickOnWhileStandingOntopOf,
         OnEnable,
-        ItemThrownOnto
+        ItemDroppedOnto
     }
 }

@@ -14,11 +14,12 @@ public class CoolDown {
 
 public class Inventory : MonoBehaviour
 {
+    public List<Ability> generalAbilities = new List<Ability>();
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
     [HideInInspector] public List<ItemAbstract> skills = new List<ItemAbstract>();
-    [HideInInspector] public List<CoolDown> coolDowns = new List<CoolDown>();
-    [HideInInspector] public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
+    public List<CoolDown> coolDowns = new List<CoolDown>();
+    public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
     public ItemAbstract helmet;
@@ -43,7 +44,7 @@ public class Inventory : MonoBehaviour
         List<CoolDown> coolDownsToRemove= new List<CoolDown>();
         foreach (var skillCoolDown in coolDowns) {
             skillCoolDown.coolDownTimer--;
-            if(skillCoolDown.coolDownTimer <= 0) { coolDownsToRemove.Add(skillCoolDown); }
+            if(skillCoolDown.coolDownTimer < 0) { coolDownsToRemove.Add(skillCoolDown); }
         }
         foreach (var skillCoolDown in coolDownsToRemove) {
             if (coolDowns.Contains(skillCoolDown)) { coolDowns.Remove(skillCoolDown); }
@@ -74,13 +75,19 @@ public class Inventory : MonoBehaviour
 
     public void AddStatusEffect(Vector3Int position,Vector3Int origin,StatusEffect statusEffect) {
         if (stats.IsImmune(statusEffect)) { return; }
+        foreach(var coolDown in coolDowns) {
+            if(coolDown.item == statusEffect) {
+                coolDown.coolDownTimer = statusEffect.duration;
+                return;
+            }
+        }
         foreach(var effect in statusEffects) {
             if(effect.name == statusEffect.name) { return; }
         }
         var clone = Instantiate(statusEffect);
         clone.name = statusEffect.name;
         statusEffects.Add(clone);
-        AddSkillCoolDown(statusEffect.duration -1, statusEffect);
+        AddSkillCoolDown(statusEffect.duration, statusEffect);
         clone.Call(position, origin, gameObject, CallType.SetTarget);
         stats.RefreshCharacter(stats.gameObject.Position());
     }
@@ -132,18 +139,22 @@ public class Inventory : MonoBehaviour
         */
     }
 
-    public void CallEquipment(Vector3Int position, Vector3Int origin, CallType signal) {
-        foreach (var item in traits) { if (item) item.Call(position, origin,gameObject, signal); }
-        foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
-        if (helmet) { helmet.Call(position, origin, gameObject, signal); }
-        if (armour) { armour.Call(position, origin, gameObject, signal); }
+    public void CallEquipment(Vector3Int position, Vector3Int origin, CallType callType) {
+        foreach (var item in traits) { if (item) item.Call(position, origin,gameObject, callType); }
+        foreach (var item in generalAbilities) { 
+            if(item.callType == callType)
+            item.Call(position, origin,gameObject, null);
+        }
+        foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, callType); }
+        if (helmet) { helmet.Call(position, origin, gameObject, callType); }
+        if (armour) { armour.Call(position, origin, gameObject, callType); }
 
-        if (trinket1) { trinket1.Call(position, origin, gameObject, signal); }
-        if (trinket2) { trinket2.Call(position, origin, gameObject, signal); }
-        if (trinket3) { trinket3.Call(position, origin, gameObject, signal); }
-        if (trinket4) { trinket4.Call(position, origin, gameObject, signal); }
-        if (mainHand) { mainHand.Call(position, origin, gameObject, signal); }
-        if (offHand) { offHand.Call(position, origin, gameObject, signal); }
+        if (trinket1) { trinket1.Call(position, origin, gameObject, callType); }
+        if (trinket2) { trinket2.Call(position, origin, gameObject, callType); }
+        if (trinket3) { trinket3.Call(position, origin, gameObject, callType); }
+        if (trinket4) { trinket4.Call(position, origin, gameObject, callType); }
+        if (mainHand) { mainHand.Call(position, origin, gameObject, callType); }
+        if (offHand) { offHand.Call(position, origin, gameObject, callType); }
     }
 
     public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, CallType signal) {

@@ -127,6 +127,9 @@ public class MouseManager : MonoBehaviour
         if (inventory.items.Contains(itemSelected)) {
             Actions.i.ThrowItem(position, origin, itemSelected, inventory);
             ChangeActionPoints(position, origin, inventory, currentStats, 1);
+            SelectItem(null);
+            EndOfAction();
+            return true;
         }
         var skill = itemSelected as Skill;
         if (ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))

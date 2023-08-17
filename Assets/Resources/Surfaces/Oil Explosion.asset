@@ -10,21 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f64c26c8e6df3846a08fec356c7cb63, type: 3}
-  m_Name: ExplodeOnDeath
+  m_Name: Oil Explosion
   m_EditorClassIdentifier: 
   tile: {fileID: 0}
   abilities:
-  - callType: 4
+  - callType: 0
     actionContainers:
-    - action: {fileID: 11400000, guid: bd92a27476135fa4bb6cf382cf0958f9, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 1, g: 0, b: 0, a: 1}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
     - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
       intValue: 0
       floatValue: 0.3
@@ -35,7 +26,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
     - action: {fileID: 11400000, guid: 295931a7820a0cf4da72fc59a774a925, type: 2}
-      intValue: 2
+      intValue: 1
       floatValue: 0.3
       itemValue: {fileID: 0}
       prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
@@ -43,44 +34,41 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
-  - callType: 4
-    actionContainers:
-    - action: {fileID: 11400000, guid: 07b63b36e780a6148b01fa29e44a67ff, type: 2}
-      intValue: 4
-      floatValue: 0
+    - action: {fileID: 11400000, guid: 8f95972c7fc7e4d4289ca05f1d92f9d9, type: 2}
+      intValue: 3
+      floatValue: 0.3
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
+      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-    - action: {fileID: 11400000, guid: 303c3ca73e5f6f048b7402c155701197, type: 2}
-      intValue: 2
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 1, g: 0, b: 0, a: 1}
-      vector2IntValue: {x: 0, y: 0}
+      vector2IntValue: {x: 2, y: 3}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
-  - callType: 4
-    actionContainers:
-    - action: {fileID: 11400000, guid: f2c7d59517fd6b74baee51f4d47f018a, type: 2}
-      intValue: 4
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 1, g: 0, b: 0, a: 1}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
     - action: {fileID: 11400000, guid: a9dc6512f1920d64ab6c5c706c0391a5, type: 2}
-      intValue: 4
-      floatValue: 0
+      intValue: 2
+      floatValue: 0.3
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
+      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 30, y: 4}
-      surfaceValue: {fileID: 0}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 42610b2fca6fcad40adb2c3f6b45ea1e, type: 2}
+      intValue: 2
+      floatValue: 0.3
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
+      colorValue: {r: 1, g: 0, b: 0, a: 1}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
   description: 
+  shopValue: 0
+  subItems: []
+  totalUses: 1
+  timesUsed: 6
+  endlessUses: 0
+  parentGO: {fileID: 0}
+  thrownLocation: {x: 0, y: 0, z: 0}
+  useOnlyOnViableTargets: 0
+  destroyOnUse: 0
+  viableTargets: []

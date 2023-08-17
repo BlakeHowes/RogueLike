@@ -166,8 +166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 0}
   immunites: []
   maxHealthBase: 100
   maxArmourBase: 0
@@ -207,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities: []
   items: []
   traits:
   - {fileID: 11400000, guid: da6dc9add706734439cf8f2f75c0e5f4, type: 2}
@@ -215,7 +214,7 @@ MonoBehaviour:
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 5e48060bd0471094081fb80237bc7a02, type: 2}
+  mainHand: {fileID: 11400000, guid: 85b1d7a58134d854aa0efa07a4fe50d3, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 11400000, guid: 26b93c5ad3fcb9144b1e94eff0dd856f, type: 2}
   armour: {fileID: 11400000, guid: 4757bab863a2dc447b69ef0bca634f19, type: 2}

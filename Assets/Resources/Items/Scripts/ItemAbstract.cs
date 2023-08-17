@@ -133,9 +133,9 @@ public static class ItemStatic {
         ActionPointSum,
         SelectItem,
         AddSkillToHotbar,
-        OnSwitchFactionTurn,
+        StartOfTurn,
         SetTarget,
-        EndOfIndividualTurn,
+        EndOfStack,
         DirectDamage,
         StartOfIndividualTurn
     }

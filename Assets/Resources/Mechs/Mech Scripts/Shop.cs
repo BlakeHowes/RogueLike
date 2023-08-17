@@ -12,7 +12,6 @@ public class Shop : MechAbstract
     private TextMeshProUGUI text;
     private GameObject image;
     public override void Call(Vector3Int position,Signal signal) {
-        /*
         if (!createdUI) {
             var priceUI = GridManager.i.InstantiateGo(priceUIPrefab);
             priceUI.transform.SetParent(GameUIManager.i.canvasWorld);
@@ -36,8 +35,8 @@ public class Shop : MechAbstract
             var item = position.Item();
             if (!item) { return; }
             var value = GetValue(item);
-            if (item is Item) {
-                var generalItem = item as Item;
+            if (item is GeneralItem) {
+                var generalItem = item as GeneralItem;
                 value = generalItem.shopValue;
                 if (generalItem.timesUsed != 0) {
                     return;
@@ -61,9 +60,10 @@ public class Shop : MechAbstract
             }
         }
 
-        if(signal == Signal.ItemThrownOnto) {
-            Debug.Log("Item on Shop "+position);
-            var item = position.Item();
+        if(signal == Signal.ItemDroppedOnto) {
+           
+            var item = GridManager.i.itemMethods.GetItem(position);
+            Debug.Log(item+" on Shop " + position);
             if (item) {
                 var value = GetValue(item);
                 Debug.Log("Value Changed");
@@ -80,8 +80,8 @@ public class Shop : MechAbstract
    
         var value = 0;
         if (!item) { return 0; }
-        if (item is Item) {
-            var generalItem = item as Item;
+        if (item is GeneralItem) {
+            var generalItem = item as GeneralItem;
             value = generalItem.shopValue;
         }
         if (item is Weapon) {
@@ -93,6 +93,5 @@ public class Shop : MechAbstract
             value = equipment.shopValue;
         }
         return value;
-        */
     }
 }

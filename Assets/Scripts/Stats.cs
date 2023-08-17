@@ -124,7 +124,7 @@ public class Stats : MonoBehaviour {
         RefreshCharacter(position);
         damageTaken = damage;
         inventory.CallEquipment(position, origin, CallType.TakeDamage);
-        Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
+        //Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
 
         var damageTotal = damage;
         if (!ignoreArmor) {

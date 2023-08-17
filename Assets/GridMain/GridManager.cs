@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Unity.Burst;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 using static ItemStatic;
 
 public class GridManager : MonoBehaviour {
@@ -70,15 +71,26 @@ public class GridManager : MonoBehaviour {
     }
 
     public void TickGame() {
+        var stopWatch = System.Diagnostics.Stopwatch.StartNew();
+        stopWatch.Start();
         var currentCharacter = PartyManager.i.currentCharacter;
         Vector3Int position = Vector3Int.zero;
-        for (int x = 0; x < globalValues.width; x++) {
-            for (int y = 0; y < globalValues.height; y++) {
+
+        List<Action> actions = new();
+        foreach(var action in itemsInActionStack) {
+            actions.Add(action);
+        }
+        itemsInActionStack.Clear();
+
+        for (int x = 0; x < globalValues.width; x++) {       //Instead of this tick can become an event
+            for (int y = 0; y < globalValues.height; y++) {  //Tick, BeforeStack, TurnTick , AfterStack
                 position.x = x;
                 position.y = y;
                 GameObject character = goGrid[x, y];
                 if (character) {
                     character.TryGetComponent<PandaBehaviour>(out PandaBehaviour panda);
+                    if (mechGrid[x, y]) mechGrid[x, y].Call(position, MechStatic.Signal.Tick);
+                    if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
                     if (panda) {
                         var state = panda.GetComponent<Stats>().state;
                         if (state == PartyManager.State.Idle)
@@ -87,9 +99,11 @@ public class GridManager : MonoBehaviour {
                     CallTickAndStartOfTurn(position, character.GetComponent<Inventory>(), currentCharacter, character.GetComponent<Stats>().state);
                 }
 
-                if (mechGrid[x, y]) mechGrid[x, y].Call(position, MechStatic.Signal.Tick);
-                if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
+             
             }
+        }
+        foreach(var action in actions) {
+           itemsInActionStack.Add(action);
         }
         StartStack();
     }
@@ -102,7 +116,7 @@ public class GridManager : MonoBehaviour {
             return;
         }
         invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick);
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnSwitchFactionTurn);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.StartOfTurn);
         invetory.ReduceCoolDowns();
     }
 
@@ -112,7 +126,7 @@ public class GridManager : MonoBehaviour {
         MouseManager.i.disableMouse = true;
         if (itemsInActionStack.Count == 0) { EndStack(); return; }
         enumeratingStack = true;
-        Debug.Log(itemsInActionStack.Count);
+        //Debug.Log(itemsInActionStack.Count);
         StartCoroutine(Stack());
     }
 
@@ -414,7 +428,7 @@ public class GridManager : MonoBehaviour {
         return prefab;
     }
 
-    public void CombineOrSetSurface(Vector3Int position, Surface surface) {
+    public void CombineOrSetSurface(Vector3Int position, Surface surface,bool justCombine) {
         if (!position.InBounds()) { return; }
         if (!position.IsWalkable()) { return; }
         var surfaceFound = surfaceGrid[position.x, position.y];
@@ -422,6 +436,7 @@ public class GridManager : MonoBehaviour {
             surfaceFound.Combine(position, surface);
             return;
         }
+        if (justCombine) { return; }
         if (surface.duration.y == 0) { return; }
         surfaceTilemap.SetTile(position, surface.tile);
         var surfaceOnGround = GetOrSpawnSurface(position);
