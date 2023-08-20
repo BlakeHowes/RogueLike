@@ -20,7 +20,4 @@ public class StatusEffect : ItemAbstract
             }
         }
     }
-    public override string Description() {
-        throw new System.NotImplementedException();
-    }
 }

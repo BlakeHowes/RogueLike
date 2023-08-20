@@ -50,6 +50,7 @@ public class DevHotkeys : MonoBehaviour
             var pos = MouseManager.i.MousePositionOnGrid();
             var character = pos.GameObjectGo();
             if (character) { character.GetComponent<Stats>().TakeDamage(1000000, pos); }
+            GridManager.i.StartStack();
         }
     }
 }

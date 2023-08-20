@@ -57,11 +57,4 @@ public class Equipment : ItemAbstract {
         }
 
     }
-
-    public override string Description() {
-        var description = "";
-        if (weight != Weight.None) { description += "Weight: " + weight + "\n"; }
-        description += customDescription;
-        return description;
-    }
 }

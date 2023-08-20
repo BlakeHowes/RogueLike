@@ -35,7 +35,7 @@ public class Skill : ItemAbstract {
             InventoryManager.i.AddSkill(this);
         }
         if (MouseManager.i.itemSelected != this) { return; }
-        if (callType == CallType.Activate) {
+        if (callType == CallType.OnActivate) {
             var inventory = parentGO.GetComponent<Inventory>();
             if (inventory.GetCoolDown(this) > 0) { return; }
             inventory.AddSkillCoolDown(coolDown +1, this);
@@ -61,9 +61,5 @@ public class Skill : ItemAbstract {
         }
 
         return true;
-    }
-
-    public override string Description() {
-        return "";
     }
 }

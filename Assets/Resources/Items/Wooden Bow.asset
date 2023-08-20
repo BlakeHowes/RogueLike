@@ -16,21 +16,24 @@ MonoBehaviour:
   abilities:
   - callType: 0
     actionContainers:
-    - action: {fileID: 11400000, guid: 1b2d52aa3c467e34ea61b9be2a78287d, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
     - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 6375196592243838218, guid: 33be32fc41bc10542b0982aef2d903e7, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
     - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
   shopValue: 20
   weaponType: 1
   damageRange: {x: 10, y: 15}

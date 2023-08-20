@@ -13,7 +13,4 @@ public class BlankItem : ItemAbstract {
             }
         }
     }
-    public override string Description() {
-        return description;
-    }
 }

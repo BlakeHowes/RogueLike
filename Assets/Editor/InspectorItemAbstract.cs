@@ -60,6 +60,7 @@ public class InspectorActionIntPairCustom : PropertyDrawer {
                 case ExtraVariableType.Vector2: extraVariable = property.FindPropertyRelative("vector2IntValue"); actionWidth = 2; break;
                 case ExtraVariableType.Surface: extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 1.25f; extraWidth = 5; break;
                 case ExtraVariableType.Sprite: extraVariable = property.FindPropertyRelative("spriteValue"); actionWidth = 1.25f; extraWidth = 5; break;
+                case ExtraVariableType.String: extraVariable = property.FindPropertyRelative("stringValue"); actionWidth = 2; break;
                 case ExtraVariableType.SurfaceInt: extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 2; extraWidth = 4; 
                     extraVariable2 = property.FindPropertyRelative("intValue"); break;
             }

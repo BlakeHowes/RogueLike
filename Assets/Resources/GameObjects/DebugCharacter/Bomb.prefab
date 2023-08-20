@@ -75,7 +75,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sightRange: 12
-  itemActions: []
   targetsTags: 18
 --- !u!114 &3243932232630802517
 MonoBehaviour:
@@ -91,23 +90,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c9780698b3775bd4b9aa6a9db749ec3e, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: c2a3250779f65bc49a616055fbf8ae70, type: 2}
-  - {fileID: 11400000, guid: c6491750a74d11f41819ca53705b2e46, type: 2}
-  - {fileID: 11400000, guid: 68b8a510a71b5814e99dbba1d51eee5b, type: 2}
-  - {fileID: 11400000, guid: 81e745a6c21899744beca520ac9f7326, type: 2}
-  - {fileID: 11400000, guid: 53a10d3be35627345a9d7032e7bdfe0c, type: 2}
-  - {fileID: 11400000, guid: bc50b55615db8b241b3dd21f042b52bf, type: 2}
   immunites: []
   maxHealthBase: 30
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
   skillRangeBase: 0
   maxHealthTemp: 0
-  armourTemp: 0
+  maxArmourTemp: 0
   actionPointsTemp: 0
   throwingRangeTemp: 0
   walkCostTemp: 0
@@ -115,6 +107,8 @@ MonoBehaviour:
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
+  meleeDamage: 0
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -135,12 +129,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 3b191e5224aef8442aa6b72eac2468db, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+    - action: {fileID: 11400000, guid: 249ba737b9e287b4eac72e99b8949295, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 6ac7ab720b8c9dc49ad3c370aeb538cd, type: 2}
+  mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}

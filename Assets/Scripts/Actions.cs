@@ -25,13 +25,13 @@ public class Actions : MonoBehaviour
         if (item is GeneralItem) { 
             var item2 = item as GeneralItem;
             item2.thrownLocation = landPos;
-            item.Call(position, origin, inventory.gameObject, CallType.Activate); 
+            item.Call(position, origin, inventory.gameObject, CallType.OnActivate); 
             if(item2.timesUsed >= item2.totalUses) { itemOverTotalUses = true; }
         }
 
         if (position.GameObjectGo() && item is Weapon) {
             var weapon = item as Weapon;
-            weapon.Call(position, position, inventory.gameObject, CallType.Activate); //This causes a bug, origin shouldnt be position
+            weapon.Call(position, position, inventory.gameObject, CallType.OnActivate); //This causes a bug, origin shouldnt be position
         }
        
         /*

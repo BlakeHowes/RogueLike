@@ -166,7 +166,7 @@ public class CharacterCreator : MonoBehaviour {
     public void ShowDescriptionForTraits(GameObject character) {
         traitDescription.text = "";
         foreach(ItemAbstract item in character.GetComponent<Inventory>().traits) {
-            traitDescription.text += item.Description() + "\n";
+            //traitDescription.text += item.Description() + "\n";
         }
     }
 

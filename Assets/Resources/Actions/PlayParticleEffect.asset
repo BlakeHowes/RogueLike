@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ad340b2fa22b9419ada3e8d3f90aca, type: 3}
+  m_Name: PlayParticleEffect
+  m_EditorClassIdentifier: 
+  position: {x: 27, y: 33, z: 0}
+  origin: {x: 26, y: 33, z: 0}
+  parentGO: {fileID: 0}
+  parentItem: {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
+  extraVariableType: 4
+  particle: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}

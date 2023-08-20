@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class AssetManager {
-    List<MechAbstract> mechs = new List<MechAbstract>();
-    List<Surface> surfaces = new List<Surface>();
-    List<ItemAbstract> items = new List<ItemAbstract>();
-    List<GameObject> gos = new List<GameObject>();
-    List<GameObject> characters = new List<GameObject>();
+    readonly List<MechAbstract> mechs = new();
+    readonly List<Surface> surfaces = new();
+    readonly List<ItemAbstract> items = new();
+    readonly List<GameObject> gos = new();
+    readonly List<GameObject> characters = new();
     public AssetManager() {
         //LOAD RESOURCES
         var mechResources = Resources.LoadAll<MechAbstract>("Mechs");

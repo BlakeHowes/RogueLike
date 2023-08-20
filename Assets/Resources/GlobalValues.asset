@@ -34,7 +34,7 @@ MonoBehaviour:
   repeatSpeed: 0.116
   Hardness: 841
   Dampening: 50.8
-  waitSeconds: {fileID: 11400000, guid: d9efe0b57f649a7499fb8cd9fe474109, type: 2}
+  waitSeconds: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
   healthBarPrefab: {fileID: 2981452813050143931, guid: e4ee793ba6c964a4c90a641802906cde, type: 3}
   hitNumberPrefab: {fileID: 5578361876964675343, guid: 3f47214e8ba56ce4a8a3d0848e08e7ff, type: 3}
   mouseHighlight: {fileID: 11400000, guid: 22086ff9f2e4cae4386722b11fc3ee12, type: 2}

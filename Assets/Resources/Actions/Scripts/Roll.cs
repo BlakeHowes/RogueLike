@@ -8,6 +8,7 @@ public class Roll : Action {
     [HideInInspector]public int maxDistanceRoll;
     public float speed;
     public bool dealDamage;
+    public bool hideAnimation;
     [HideInInspector] public Vector3Int damagePosition;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         if (position == origin) { return true; }
@@ -26,7 +27,10 @@ public class Roll : Action {
 
     public override IEnumerator StackAction() {
         var goHit = damagePosition.GameObjectGo();
-        PathingManager.i.Roll(position, origin, speed);
+        if (hideAnimation) { PathingManager.i.Jump(position, origin, speed * 13); }
+        else {
+            PathingManager.i.Roll(position, origin, speed);
+        }
         yield return new WaitForSeconds(0.1f * (Vector3.Distance(position, origin) * (speed * 10)));
         if (goHit && dealDamage) {
             if (position == damagePosition) { yield break; }

@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using static ItemStatic;
+using Unity.VisualScripting;
+
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
 public class Weapon : ItemAbstract {
@@ -27,6 +29,7 @@ public class Weapon : ItemAbstract {
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         if(callType == CallType.ResetStatsToBase) { ResetTempStats();return; }
+        if(callType == CallType.OnActivate) { if (!position.InRange(origin, rangeTemp)) { return; } }
         foreach (var ability in abilities) {
             if (ability.callType == callType) {
                 ability.Call(position, origin, parentGO, this);
@@ -52,13 +55,17 @@ public class Weapon : ItemAbstract {
         return false;
     }
 
-    public override string Description() {
-        ResetTempStats();
-        string description = "This " + name + " does " + damageRange.x + "-" + (damageRange.y);
-        description += " with an accuracy of " + accuracyBase;
-        description += ". ";
+    public string CreateDescription() {
+        var description = "";
+        foreach (var ability in abilities) {
+            foreach(var container in ability.actionContainers) {
+                if(container.action.name == "DamageThisWeapon") {
+                    description += ((IDescription)container.action).Description(this, container);
+                    break;
+                }
+            }
+            if(description != "") { break; }
+        }
         return description;
     }
-
-
 }

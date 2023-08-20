@@ -44,7 +44,4 @@ public class GeneralItem : ItemAbstract {
             }
         }
     }
-    public override string Description() {
-        return description;
-    }
 }

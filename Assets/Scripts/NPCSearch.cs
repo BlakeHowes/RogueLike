@@ -28,7 +28,7 @@ public class NPCSearch : MonoBehaviour
         if (enemies.Count >= 1) {
             foreach (var enemy in enemies) {
                 if (enemy == null) { continue; }
-                PartyManager.i.AddEnemy(enemy);
+                PartyManager.i.AddEnemy(enemy,origin);
             }
             if (stats.state == State.Idle) { 
                 MouseManager.i.isRepeatingActionsOutsideCombat = false; Debug.Log("Walked Disabled by NPC Search");

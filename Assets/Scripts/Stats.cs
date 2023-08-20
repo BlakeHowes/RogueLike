@@ -22,7 +22,7 @@ public class Stats : MonoBehaviour {
     [Header("Temporary Stats")]
     [HideInInspector] public int maxHealthTemp;
      public int maxArmourTemp;
-    [HideInInspector] public int actionPointsTemp;
+    public int actionPointsTemp;
     [HideInInspector] public int throwingRangeTemp;
     [HideInInspector] public int walkCostTemp;
     [HideInInspector] public int enemyAlertRangeTemp;
@@ -123,7 +123,7 @@ public class Stats : MonoBehaviour {
 
         RefreshCharacter(position);
         damageTaken = damage;
-        inventory.CallEquipment(position, origin, CallType.TakeDamage);
+        inventory.CallEquipment(position, origin, CallType.OnTakeDamage);
         //Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
 
         var damageTotal = damage;
@@ -176,7 +176,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void Die(Vector3Int position) {
-        inventory.CallEquipment(position, position, CallType.Death);
+        inventory.CallEquipment(position, position, CallType.OnDeath);
 
         PartyManager.i.RemoveDeadEnemy(gameObject);
         GridManager.i.goMethods.RemoveGameObject(position);
@@ -197,7 +197,7 @@ public class Stats : MonoBehaviour {
     public void Heal(int amount) {
         var position = gameObject.Position();
 
-        inventory.CallEquipment(position, position, CallType.Heal);
+        inventory.CallEquipment(position, position, CallType.OnHeal);
 
         var healthTemp = health;
         health += amount;

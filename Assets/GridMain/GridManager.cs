@@ -111,11 +111,11 @@ public class GridManager : MonoBehaviour {
     public void CallTickAndStartOfTurn(Vector3Int position, Inventory invetory, GameObject currentCharacter, PartyManager.State state) {
         if (state == PartyManager.State.Combat) {
             if (invetory.gameObject == currentCharacter) {
-                invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick);
+                invetory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
             }
             return;
         }
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.Tick);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
         invetory.CallTraitsAndStatusEffects(position, position, CallType.StartOfTurn);
         invetory.ReduceCoolDowns();
     }
@@ -180,6 +180,12 @@ public class GridManager : MonoBehaviour {
     }
 
     public void AddToStack(Action action) {
+        if (action == null) {
+            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
+            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
+            Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
+            return;
+        }
         itemsInActionStack.Add(Instantiate(action));
     }
 
@@ -188,6 +194,7 @@ public class GridManager : MonoBehaviour {
             System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
             System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
             Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
+            return;
         }
 
         Debug.Log(action.name + Time.deltaTime);
@@ -247,7 +254,7 @@ public class GridManager : MonoBehaviour {
     }
 
     void OnDrawGizmos() {
-        return;
+        /*
         //Draw a semitransparent red cube at the transforms position
         if (!globalValues) { return; }
         for (int x = 0; x < globalValues.width; x++) {
@@ -266,7 +273,7 @@ public class GridManager : MonoBehaviour {
                 }
             }
         }
-
+        */
     }
 
     public Vector3Int FindEntrance() {
@@ -295,16 +302,20 @@ public class GridManager : MonoBehaviour {
         UpdateGame();
         GameUIManager.i.actionPointsText.text = partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
         //ClearFog();
+        CallNPCSearch();
 
+        if (PartyManager.i.currentCharacter == null) { fogTilemap.gameObject.SetActive(false); }
+        GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
+        ClearFogDoor(PartyManager.i.party[0].Position());
+        ClearSemiFog();
+    }
+
+    public void CallNPCSearch() {
 
         foreach (var party in PartyManager.i.party) {
             if (party)
                 party.GetComponent<NPCSearch>().Search();
         }
-        if (PartyManager.i.currentCharacter == null) { fogTilemap.gameObject.SetActive(false); }
-        GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
-        ClearFogDoor(PartyManager.i.party[0].Position());
-        ClearSemiFog();
     }
 
     public void CreateFog() {

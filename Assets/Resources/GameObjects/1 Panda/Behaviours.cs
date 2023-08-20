@@ -14,22 +14,15 @@ public class Behaviours : MonoBehaviour
     private Stats stats;
     public int sightRange = 12;
     Vector3 offset = new Vector3(0.5f, 0.5f, 0.5f);
-    public List<ItemAbstract> itemActions = new List<ItemAbstract>();
     Tilemap gotilemap;
     private List<string> targetStrings = new List<string>();
     public Tags targetsTags;
+    private GlobalValues globalValues;
 
     public void OnEnable() {
         gotilemap = GridManager.i.goTilemap;
         targetStrings = ConvertFlagsEnumToStringList(targetsTags,gameObject);
-    }
-
-    [Task]
-    public void CallAttackItems() {
-        foreach (ItemAbstract item in itemActions) {
-            item.Call(origin, origin,gameObject, CallType.Activate);
-        }
-        ThisTask.Succeed();
+        globalValues = Manager.GetGlobalValues();
     }
 
     [Task]
@@ -46,8 +39,9 @@ public class Behaviours : MonoBehaviour
                
                 skill.Call(targetPosition,origin, gameObject,CallType.CalculateStats);
                 GameUIManager.i.ShowRange(origin, skill.range);
-                GridManager.i.AddToStack(Manager.GetGlobalValues().GetWaitSeconds(0.4f));
-                skill.Call(targetPosition,origin,gameObject, CallType.Activate);
+                globalValues.GetWaitSeconds(0.2f).AddToStack();
+                skill.Call(targetPosition,origin,gameObject, CallType.OnActivate);
+                globalValues.GetWaitSeconds(0.2f).AddToStack();
                 MouseManager.i.itemSelected = null;
                 ThisTask.Succeed();
                 break;
@@ -206,13 +200,21 @@ public class Behaviours : MonoBehaviour
 
     [Task]
     void Attack() {
-        Debug.Log("attack target " + target);
+        Debug.Log("attack target " + target + " Origin "+ origin + " Target Position " + targetPosition);
         if (!target) { ThisTask.Fail(); return; }
         if (MouseManager.i.Attack(targetPosition, origin, target, gameObject)){
+            globalValues.GetWaitSeconds(0.2f).AddToStack();
             ThisTask.Succeed();
             return;
         }
         ThisTask.Fail();
+        return;
+    }
+
+    [Task]
+    void CallActivate() {
+        GetComponent<Inventory>().CallEquipment(origin, origin, CallType.OnActivate);
+        ThisTask.Succeed();
         return;
     }
 

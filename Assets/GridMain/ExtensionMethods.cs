@@ -98,6 +98,9 @@ static class ExtensionMethods
     }
 
     public static bool InRange(this Vector3Int position, Vector3Int origin,int range) {
+        if(range == 1) {
+            return GridManager.i.tools.InMeeleeRange(position, origin);
+        }
         var positions =goMethods.PositionsInSight(range, origin);
         if (positions.Contains(position)) { return true; }
         return false;

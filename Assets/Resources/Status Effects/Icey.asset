@@ -16,7 +16,7 @@ MonoBehaviour:
   abilities:
   - callType: 2
     actionContainers:
-    - action: {fileID: 11400000, guid: 803ebe7c31559604995f70b60348a2cf, type: 2}
+    - action: {fileID: 11400000, guid: 477e78e30e976b9488e2291b051efe8e, type: 2}
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}

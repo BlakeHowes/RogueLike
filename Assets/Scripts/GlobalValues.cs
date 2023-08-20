@@ -38,7 +38,7 @@ public class GlobalValues : ScriptableObject
     [Range(0, 5000f)] public float Hardness;
     [Range(0, 100)] public float Dampening;
 
-    [Header("SubItems")]
+    [Header("Actions")]
     public WaitSeconds waitSeconds;
 
     [Header("UI")]

@@ -205,7 +205,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generalAbilities: []
+  generalAbilities:
+  - callType: 4
+    actionContainers:
+    - action: {fileID: 11400000, guid: 682c8871c50fdfb4084c1a13c4352c9f, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
   items: []
   traits:
   - {fileID: 11400000, guid: da6dc9add706734439cf8f2f75c0e5f4, type: 2}

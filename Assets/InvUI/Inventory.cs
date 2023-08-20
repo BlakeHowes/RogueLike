@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
     [HideInInspector] public List<ItemAbstract> skills = new List<ItemAbstract>();
-    public List<CoolDown> coolDowns = new List<CoolDown>();
+    [HideInInspector] public List<CoolDown> coolDowns = new List<CoolDown>();
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
@@ -163,7 +163,6 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < statusEffects.Count; i++) {
             statusEffects[i].Call(position, origin, gameObject, signal);
         }
-        //foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, signal); }
         traits:
         if (traits.Count == 0) { return; }
         foreach (var item in skills) { if (item) item.Call(position, origin, gameObject, signal); }

@@ -92,22 +92,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 8e8dd4cdc5e653f49b76c35fe16ce8f5, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: a92f6e84923d4c947b35e2434576607a, type: 2}
   immunites: []
   maxHealthBase: 85
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
-  fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
   skillRangeBase: 0
-  armourTemp: 0
+  maxHealthTemp: 0
+  maxArmourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
+  meleeDamage: 0
   health: 70
   actionPoints: 0
   actionPointsSum: 0
@@ -128,14 +131,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  generalAbilities: []
+  items:
+  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
   traits: []
   skills: []
   coolDowns: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 73fc896a1d331d64db39350014b865cf, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 11400000, guid: 67442533dc3f46f49bfce90a160517f5, type: 2}
+  helmet: {fileID: 11400000, guid: 26b93c5ad3fcb9144b1e94eff0dd856f, type: 2}
   armour: {fileID: 0}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}

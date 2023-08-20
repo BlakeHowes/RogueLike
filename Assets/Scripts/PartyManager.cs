@@ -300,7 +300,7 @@ public class PartyManager : MonoBehaviour {
         StartCoroutine(enumerator);
     }
 
-    public void AddEnemy(GameObject enemy) {
+    public void AddEnemy(GameObject enemy,Vector3Int origin) {
         if (enemyParty.Contains(enemy)) { return; }
         enemyParty.Add(enemy);
         var stats = enemy.GetComponent<Stats>();
@@ -308,6 +308,7 @@ public class PartyManager : MonoBehaviour {
         stats.state = State.Combat;
         var clone = Instantiate(GameUIManager.i.enemyInCombatUI, enemy.transform);
         clone.transform.localPosition = Vector3.zero;
+        PathingManager.i.FlipCharacter(enemy, origin, enemy.Position());
     }
 
     public void RemoveEnemy(GameObject enemy) {

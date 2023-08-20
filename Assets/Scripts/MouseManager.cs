@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static ItemStatic;
 using static PartyManager;
+using static UnityEditor.Progress;
 
 public class MouseManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class MouseManager : MonoBehaviour
     public Vector3Int clickPosition;
     private GlobalValues globalValues;
     public BagAnimation bagAnimation;
+    public bool inspectMode;
     public void Awake() {
         globalValues = Manager.GetGlobalValues();
         i = this;
@@ -55,6 +57,14 @@ public class MouseManager : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)) {
+            if (inspectMode) {
+                var gameobjectundermouse = mousePosition.GameObjectGo();
+                if (!gameobjectundermouse) { return; }
+                GameUIManager.i.itemtooltip.transform.position = mousePosition;
+                GameUIManager.i.tooltipGameObject.SetActive(true);
+                GameUIManager.i.itemtooltip.UpdateToolTip(gameobjectundermouse);
+                return;
+            }
             PlayerActionsOrder(mousePosition);
         }
     }
@@ -133,7 +143,7 @@ public class MouseManager : MonoBehaviour
         }
         var skill = itemSelected as Skill;
         if (ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
-        itemSelected.Call(position, origin, inventory.gameObject, CallType.Activate);
+        itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
 
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
@@ -152,13 +162,19 @@ public class MouseManager : MonoBehaviour
             if(target.CompareTag("Interactable") || target.CompareTag("Door"))
             goto Meelee; 
         }
-        inventory.CallEquipment(position, origin, CallType.Activate);
-        if (GridManager.i.itemsInActionStack.Count == 0 && inventory.mainHand)  { return false; }
-        PathingManager.i.FlipCharacter(currentCharacter, position, origin);
-        currentStats.actionPoints--;
+        inventory.CallEquipment(position, origin, CallType.OnActivate);
+        if (GridManager.i.itemsInActionStack.Count == 0)  {
+            if (!inventory.mainHand && !inventory.offHand) { goto Meelee; }
+        }
+        else {
+            PathingManager.i.FlipCharacter(currentCharacter, position, origin);
+            currentStats.actionPoints--;
 
-        currentCharacter.GetComponent<SpringToTarget3D>().Nudge(transform.position + new Vector3(0,globalValues.onAttackNudgeAmount), 24, 1000);
-        if (inventory.mainHand) { return true; }
+            currentCharacter.GetComponent<SpringToTarget3D>().Nudge(transform.position + new Vector3(0, globalValues.onAttackNudgeAmount), 24, 1000);
+            if (inventory.mainHand || inventory.offHand) { return true; }
+        }
+        
+
             
         Meelee:
         var range = GridManager.i.tools.MeeleeRange(origin);
@@ -191,7 +207,7 @@ public class MouseManager : MonoBehaviour
         var inventory = currentCharacter.GetComponent<Inventory>();
         var item = position.Item();
         if (item) {
-            item.Call(position, origin,currentCharacter, CallType.Pickup);
+            item.Call(position, origin,currentCharacter, CallType.OnPickupItem);
             if (blockPickup) { EndOfAction();return; }
             //Coins hack, better this concept if needed
             if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction();return; }
@@ -253,6 +269,7 @@ public class MouseManager : MonoBehaviour
                 partyManager.SetCurrentCharacter(PartyManager.i.party[0]);
             }
         }
+        partyManager.Follow();
         InventoryManager.i.UpdateSkillSlotGraphics();
         GridManager.i.TickGame();
     }
@@ -260,7 +277,6 @@ public class MouseManager : MonoBehaviour
     public void EndOfActionFinal() {
         
         var partyManager = PartyManager.i;
-        partyManager.Follow();
         if (state == State.Combat) { isRepeatingActionsOutsideCombat = false; }
         if (partyManager.currentCharacter.GetComponent<Stats>().actionPoints <= 0) {
             partyManager.EndTurn();

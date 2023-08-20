@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
@@ -9,17 +10,6 @@ public abstract class ItemAbstract : ScriptableObject {
     public List<Ability> abilities = new();
 
     public abstract void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType);
-
-    public abstract string Description();
-
-    public void OnValidate() {
-        /*
-        foreach (var ability in abilities) { 
-            CreateListener(ability.callType);
-        }
-        */
-    }
-
 }
 
 [System.Serializable]
@@ -47,6 +37,7 @@ public struct ActionContainer {
     public Vector2Int vector2IntValue;
     public Surface surfaceValue;
     public Sprite spriteValue;
+    public string stringValue;
 }
 
 [System.Serializable]
@@ -108,6 +99,7 @@ public static class ItemStatic {
         Surface,
         Sprite,
         SurfaceInt,
+        String
     }
 
     public enum Stat {
@@ -122,12 +114,12 @@ public static class ItemStatic {
     }
 
     public enum CallType {
-        Activate,
-        Tick,
-        TakeDamage,
-        Heal,
-        Death,
-        Pickup,
+        OnActivate,
+        OnTick,
+        OnTakeDamage,
+        OnHeal,
+        OnDeath,
+        OnPickupItem,
         ResetStatsToBase,
         CalculateStats,
         ActionPointSum,
