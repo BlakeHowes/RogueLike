@@ -90,6 +90,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities:
+  - callType: 2
+    actionContainers:
+    - action: {fileID: 11400000, guid: 2978d2baa60c368499f607e6938c0b85, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: bfefb702c13e8ee4abc551b37a7fd1e5, type: 3}
+      stringValue: 
   items: []
   traits: []
   skills: []

@@ -14,12 +14,13 @@ public class Roll : Action {
         if (position == origin) { return true; }
         this.origin = position;
         this.parentGO = parentGO;
+        maxDistanceRoll = actionContainer.intValue;
         var line = GridManager.i.tools.BresenhamLineLength(origin.x, origin.y, position.x, position.y, 15);
         var line2 = GridManager.i.tools.BresenhamLineLength(position.x, origin.y, line[line.Count - 1].x, line[line.Count - 1].y, maxDistanceRoll);
         var targetPos = line2[line2.Count - 1];
         this.position = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, position);
         this.parentGO = parentGO;
-        maxDistanceRoll = actionContainer.intValue;
+
         damagePosition = GridManager.i.goMethods.FirstGameObjectInSight(targetPos, position);
         this.AddToStack();
         return true;
@@ -34,7 +35,7 @@ public class Roll : Action {
         yield return new WaitForSeconds(0.1f * (Vector3.Distance(position, origin) * (speed * 10)));
         if (goHit && dealDamage) {
             if (position == damagePosition) { yield break; }
-            var damage = parentGO.GetComponent<Stats>().damageTaken;
+            var damage = position.GameObjectGo().GetComponent<Stats>().damageTaken;
             goHit.GetComponent<Stats>().TakeDamage(damage, position);
         }
     }

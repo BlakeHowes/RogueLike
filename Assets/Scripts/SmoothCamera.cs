@@ -70,6 +70,7 @@ public class SmoothCamera : MonoBehaviour {
             ActionZoomIn(new Vector3(30, 30, 0), 2,SmoothSpeed);
         }
     }
+    Vector3 offset = new Vector3(0.5f, 0.5f);
     void FixedUpdate() {
 
 
@@ -81,7 +82,7 @@ public class SmoothCamera : MonoBehaviour {
             if (currentCharacter == null) {
                 return;
             }
-            if (!useTargetPos) { targetPosition = currentCharacter.transform.position; }
+            if (!useTargetPos) { targetPosition = currentCharacter.transform.position.FloorToInt() + offset; }
             Vector3 position = Vector3.Lerp(transform.position, targetPosition, SmoothSpeed);
             position.z = -10;
             transform.position = position;

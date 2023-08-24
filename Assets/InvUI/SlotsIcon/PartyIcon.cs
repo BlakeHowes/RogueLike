@@ -5,6 +5,7 @@ public class PartyIcon : MonoBehaviour
 {
     GameObject character;
     public Vector2 offset;
+    public bool abilitySelection;
     public void SetIcon(GameObject character) {
         if(character == null) {
             Destroy(gameObject);
@@ -27,6 +28,13 @@ public class PartyIcon : MonoBehaviour
             PartyManager.i.partyMemberTurnTaken.Clear();
         }
         */
+        if (abilitySelection) {
+            var selector = transform.parent.gameObject.GetComponent<UIPartySelector>();
+            selector.selectedGO = character;
+            selector.HideIconHighlights();
+            EnableHighlight();
+            return;
+        }
         if (!PartyManager.i.partyMemberTurnTaken.Contains(character)) {
             PartyManager.i.SetCurrentCharacter(character);
         }

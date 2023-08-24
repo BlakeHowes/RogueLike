@@ -90,6 +90,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities:
+  - callType: 4
+    actionContainers:
+    - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 4bf9825f051ce854f9b9e9f3b1655db4, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   items: []
   traits: []
   skills: []
@@ -167,52 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - item: {fileID: 11400000, guid: 73fc896a1d331d64db39350014b865cf, type: 2}
-    rarity: 1
-    pool: 0
-  - item: {fileID: 11400000, guid: 73fc896a1d331d64db39350014b865cf, type: 2}
-    rarity: 1
-    pool: 0
-  - item: {fileID: 11400000, guid: 2f79edaa7aa946144bc88353e9e0cf52, type: 2}
-    rarity: 1
-    pool: 1
-  - item: {fileID: 11400000, guid: ac0238c8b9c98444db9df119545cfe8f, type: 2}
-    rarity: 1
-    pool: 2
-  - item: {fileID: 11400000, guid: a6c5ceb45ee122745918142666f37ff5, type: 2}
-    rarity: 1
-    pool: 2
-  - item: {fileID: 11400000, guid: a2c57c278a8ca024aa3cc65b033a4da4, type: 2}
-    rarity: 1
-    pool: 3
-  - item: {fileID: 11400000, guid: abfac50f1dc37064ebdd5b3902cb5afb, type: 2}
-    rarity: 1
-    pool: 4
-  - item: {fileID: 11400000, guid: 13b4bceec1561d94c95903ce2e18c39d, type: 2}
-    rarity: 1
-    pool: 5
-  - item: {fileID: 11400000, guid: 8d1ee927282434d4e8820da7941d45d1, type: 2}
-    rarity: 1
-    pool: 5
-  - item: {fileID: 11400000, guid: 4450762ef7d2f994785d120e38a49938, type: 2}
-    rarity: 1
-    pool: 6
-  - item: {fileID: 11400000, guid: 4383d0d4d12f2be4f806ad22e2d666bd, type: 2}
-    rarity: 1
-    pool: 7
-  - item: {fileID: 11400000, guid: 4383d0d4d12f2be4f806ad22e2d666bd, type: 2}
-    rarity: 1
-    pool: 7
-  - item: {fileID: 11400000, guid: 8464b4b94a14667479b60ea7b22507fc, type: 2}
-    rarity: 1
-    pool: 7
-  - item: {fileID: 11400000, guid: de9db2f2929764b48b63870a185da204, type: 2}
-    rarity: 1
-    pool: 8
-  - item: {fileID: 11400000, guid: f03fa77f8a8296640ab425f2a6c39886, type: 2}
-    rarity: 1
-    pool: 8
+  loot: []
   deathActions: []
   worldLootScriptable: {fileID: 0}
   useGridCounter: 1

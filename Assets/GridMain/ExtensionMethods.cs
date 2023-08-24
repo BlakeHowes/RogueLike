@@ -68,6 +68,10 @@ static class ExtensionMethods
         return goMethods.PositionsInSight(radius, position);
     }
 
+    public static bool InSight(this Vector3Int position, Vector3Int origin) {
+        return goMethods.IsInSight(position, origin);
+    }
+
     public static MechAbstract Mech(this Vector3Int position) {
         return gridManager.mechMethods.GetMechanism(position);
     }

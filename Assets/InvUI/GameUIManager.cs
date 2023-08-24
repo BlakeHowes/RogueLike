@@ -21,6 +21,12 @@ public class GameUIManager : MonoBehaviour {
     public Texture2D boarderEffectTexture;
     public GameObject enemyInCombatUI;
     private GlobalValues globalValues;
+    public APUIElement apUIElement;
+    public AbilitySelection abilitySelection;
+    public GameObject AbilitySelectLayout;
+    public void SetAP(float amount) {
+        apUIElement.ChangeAP(Mathf.FloorToInt(amount));
+    }
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();

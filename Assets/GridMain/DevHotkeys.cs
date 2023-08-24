@@ -35,6 +35,16 @@ public class DevHotkeys : MonoBehaviour
             PartyManager.i.EndTurn();
         }
 
+        if (Input.GetKeyDown(KeyCode.S)) {
+            var stack = GridManager.i.itemsInActionStack;
+            if(stack.Count == 0) { return; }
+            Action action = stack[0];
+            //if (itemsCheckedHack.Contains(action)) { itemsInActionStack.Remove(action); continue; }
+            //itemsCheckedHack.Add(action);
+            StartCoroutine(action.StackAction());
+            stack.Remove(action);
+        }
+
 
         if (Input.GetKeyDown(KeyCode.W)) {
             PartyManager.i.currentCharacter.GetComponent<Stats>().SpawnHitNumber("Wait", Color.blue, 1);

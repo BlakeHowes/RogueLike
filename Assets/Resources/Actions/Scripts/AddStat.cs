@@ -23,6 +23,8 @@ public class AddStat : Action {
             case Stat.Armour: stats.armour += actionContainer.intValue; break;
             case Stat.MaxActionPoints: stats.actionPointsTemp += actionContainer.intValue; break;
             case Stat.meleeDamage: stats.meleeDamage += actionContainer.intValue; break;
+            case Stat.ActionPoints: stats.actionPoints += actionContainer.intValue; break;
+            case Stat.DamageTaken: stats.damageTaken = actionContainer.intValue; break;
         }
         return true;
     }

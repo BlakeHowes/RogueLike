@@ -18,13 +18,15 @@ public class UtilityActions : Action {
     }
 
     public override IEnumerator StackAction() {
+        float waitTime = 0;
         switch (type) {
-            case Type.SetInactive: parentGO.SetActive(false); break;
+            case Type.SetInactive:if(parentGO) parentGO.SetActive(false); break;
             case Type.SetActive: parentGO.SetActive(true); break;
             case Type.ChangeSprite: parentGO.GetComponent<SpriteRenderer>().sprite = spriteValue; break;
             case Type.DropItem: GridManager.i.itemMethods.FloodFillDropItem(position,true,itemValue); break;
+            case Type.JumpToPosition: waitTime= PathingManager.i.Jump(position,origin,5); break;
         }
-        yield return null;
+        yield return new WaitForSeconds(waitTime);
     }
 
     public enum Type {
@@ -32,5 +34,6 @@ public class UtilityActions : Action {
         SetActive,
         ChangeSprite,
         DropItem,
+        JumpToPosition
     }
 }

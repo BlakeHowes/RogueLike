@@ -32,7 +32,7 @@ namespace LlamAcademy.Spring.Runtime
             StopAllCoroutines();
 
 
-            StartCoroutine(DoSpringToTarget(targetPosition));
+            if(gameObject.activeSelf)StartCoroutine(DoSpringToTarget(targetPosition));
         }
 
         public void SpringToDefaultValues(Vector3 targetPosition) {

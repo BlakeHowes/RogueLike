@@ -70,6 +70,13 @@ public class PartyManager : MonoBehaviour {
         Door = 0x20
     }
 
+    public bool InTeam(GameObject parentGO, GameObject target) {
+        if (parentGO.CompareTag(target.tag)) { return true; }
+        if(party.Contains(parentGO) && party.Contains(target)){ return true; }
+        if(enemyParty.Contains(parentGO) && enemyParty.Contains(target)){ return true; }
+        return false;
+    }
+
     public static List<string> ConvertFlagsEnumToStringList(Tags tags,GameObject parentGO) {
         List<string> tagsString = new List<string>();
         if(parentGO == null) {
@@ -134,7 +141,7 @@ public class PartyManager : MonoBehaviour {
         var position = character.Position();
         stats.RefreshCharacter(position);
         InventoryManager.i.UpdateInventory();
-        GameUIManager.i.actionPointsText.text = stats.actionPoints.ToString();
+        GameUIManager.i.SetAP(stats.actionPoints);
         if(stats.state == State.Idle) {
             stats.ResetActionPoints();
         }
@@ -272,7 +279,7 @@ public class PartyManager : MonoBehaviour {
     public void OnSwitchFaction(GameObject character) {
         var pos = character.Position();
         var inventory = character.GetComponent<Inventory>();
-        //inventory.ReduceCoolDowns();
+        inventory.ReduceCoolDowns();
         inventory.CallEquipment(pos, pos, CallType.StartOfTurn);
     }
 

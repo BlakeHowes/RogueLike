@@ -15,7 +15,7 @@ MonoBehaviour:
   width: 80
   height: 85
   onHitNudgeAmount: 1.5
-  onAttackNudgeAmount: 0.8
+  onAttackNudgeAmount: 10.47
   shadowTile: {fileID: 11400000, guid: 0369ba64565147a4b8256b16fd02b51a, type: 2}
   fog: {fileID: 11400000, guid: 2c396ea2d6ce5d949a0e70a8eba393a0, type: 2}
   bigFog: {fileID: 11400000, guid: 19e6a58cc88fe4c4f9141464049730be, type: 2}
@@ -26,14 +26,18 @@ MonoBehaviour:
   outerFogFill: 81
   fogDistance: 7
   outerFogDistance: 1000
+  generalTile: {fileID: 11400000, guid: fb2e91ed51e47234991b256342ede459, type: 2}
+  NullValue: {x: -1, y: -1, z: 0}
   maxItems: 9
   maxPathLength: 40
-  stepAnimationHeight: 6
-  stepAnimationSpeed: 0.2
+  stepAnimationHeight: 5.18
+  stepAnimationSpeed: 0.31
   walkSpeed: 0.0672
   repeatSpeed: 0.116
-  Hardness: 841
-  Dampening: 50.8
+  stepHardness: 761
+  stepDampening: 70.3
+  Hardness: 1119
+  Dampening: 62.3
   waitSeconds: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
   healthBarPrefab: {fileID: 2981452813050143931, guid: e4ee793ba6c964a4c90a641802906cde, type: 3}
   hitNumberPrefab: {fileID: 5578361876964675343, guid: 3f47214e8ba56ce4a8a3d0848e08e7ff, type: 3}
@@ -53,3 +57,8 @@ MonoBehaviour:
   defaultSkillSprite: {fileID: 21300000, guid: d6ea6a68f49522c4aa62ec5f3c21a990, type: 3}
   gameOverLayout: {fileID: 1658703206621903370, guid: be13d97939e9fec4cab43ca37c816e6b, type: 3}
   partyIconPrefab: {fileID: 867278356251875308, guid: 7c1b6f0d3a1a05b419bf455ae740db4d, type: 3}
+  items: []
+  traits:
+  - items:
+    - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
+    - {fileID: 11400000, guid: a67c957bdece11b47a2f839a857fec14, type: 2}

@@ -8,8 +8,15 @@ using static ItemStatic;
 public abstract class ItemAbstract : ScriptableObject {
     public Tile tile;
     public List<Ability> abilities = new();
-
     public abstract void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType);
+
+    public void CallAbilities(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
+        foreach (var ability in abilities) {
+            if (ability.callType == callType) {
+                ability.Call(position, origin, parentGO, this);
+            }
+        }
+    }
 }
 
 [System.Serializable]
@@ -38,6 +45,7 @@ public struct ActionContainer {
     public Surface surfaceValue;
     public Sprite spriteValue;
     public string stringValue;
+//public Material materialValue;
 }
 
 [System.Serializable]
@@ -99,7 +107,9 @@ public static class ItemStatic {
         Surface,
         Sprite,
         SurfaceInt,
-        String
+        String,
+        SurfaceColour,
+        //Material
     }
 
     public enum Stat {
@@ -110,7 +120,8 @@ public static class ItemStatic {
         rangeDamage,
         magicDamage,
         MaxActionPoints,
-        ActionPoints
+        ActionPoints,
+        DamageTaken
     }
 
     public enum CallType {
@@ -129,6 +140,10 @@ public static class ItemStatic {
         SetTarget,
         EndOfStack,
         DirectDamage,
-        StartOfIndividualTurn
+        StartOfIndividualTurn,
+        DisableItem,
+        OnTakeDamageGlobal,
+        OnDeathGlobal,
+        OnMoveGlobal
     }
 }

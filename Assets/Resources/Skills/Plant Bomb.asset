@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
+  m_Name: Plant Bomb
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: cc565d114ac41b54a83c80c0e0d584ab, type: 2}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: d6ea6a68f49522c4aa62ec5f3c21a990, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Give target a bomb than explodes on their death
+    - action: {fileID: 11400000, guid: bff8c5c22c225ec4fbfa106ec3457aaf, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Kick
+  rangeType: 0
+  targetsTags: -1
+  range: 4
+  AOE: 0
+  actionPointCost: 1
+  coolDown: 0
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  targets: []

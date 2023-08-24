@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
+  m_Name: Kick
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: cc565d114ac41b54a83c80c0e0d584ab, type: 2}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: d6ea6a68f49522c4aa62ec5f3c21a990, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Kick
+    - action: {fileID: 11400000, guid: 7c6366e2a3f7a7b469368eeaee7cd809, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 954559815ff752b4da37ea04d1396706, type: 2}
+      intValue: 4
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 5914442942a5c8443b438e6190de3c16, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  rangeType: 0
+  targetsTags: -1
+  range: 2
+  AOE: 0
+  actionPointCost: 1
+  coolDown: 0
+  targetedStartPosition: {x: 0, y: 0, z: 0}
+  startPositionSet: 0
+  targets: []

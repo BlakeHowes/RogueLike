@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
+using static UnityEngine.UI.Image;
 
 public class Stats : MonoBehaviour {
     public TileBase tile;
@@ -29,7 +30,7 @@ public class Stats : MonoBehaviour {
     [HideInInspector] public int skillRangeTemp;
     [HideInInspector] public int directDamage;
      public int armour;
-    [HideInInspector] public int damageTaken;
+    public int damageTaken;
      public int meleeDamage;
 
     [Header("Dynamic Stats")]
@@ -71,6 +72,7 @@ public class Stats : MonoBehaviour {
     }
 
     public bool IsImmune(ItemAbstract item) {
+        if (!item) { return false; }
         foreach(var immunity in immunites) {
             if(immunity.GetType() == item.GetType()) { return true; }
         }
@@ -96,7 +98,8 @@ public class Stats : MonoBehaviour {
         }
         if(gameObject.tag == "Summon") {
             PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
-            Die(gameObject.Position());
+            var pos = gameObject.Position();
+            Die(pos, pos);
         }
     }
 
@@ -124,6 +127,7 @@ public class Stats : MonoBehaviour {
         RefreshCharacter(position);
         damageTaken = damage;
         inventory.CallEquipment(position, origin, CallType.OnTakeDamage);
+        Manager.OnTakeDamageCall(position,origin);
         //Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
 
         var damageTotal = damage;
@@ -172,12 +176,12 @@ public class Stats : MonoBehaviour {
             GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(gameObject, origin, Color.white));
             return;
         }
-        Die(position);
+        Die(position,origin);
     }
 
-    public void Die(Vector3Int position) {
+    public void Die(Vector3Int position,Vector3Int origin) {
         inventory.CallEquipment(position, position, CallType.OnDeath);
-
+        Manager.OnDeathEventCall(position, origin);
         PartyManager.i.RemoveDeadEnemy(gameObject);
         GridManager.i.goMethods.RemoveGameObject(position);
         if(gameObject.tag != "Summon")inventory.items.Drop(position, position);
@@ -215,6 +219,7 @@ public class Stats : MonoBehaviour {
 
     public void ResetActionPoints() {
         actionPoints = actionPointsTemp;
+        if(actionPoints == 0) { actionPoints = actionPointsBase; }
     }
 
     public void RefreshCharacter(Vector3Int position) {

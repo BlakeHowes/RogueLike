@@ -217,19 +217,106 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
+  - callType: 17
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: If close ally is attacked, retaliate
+    - action: {fileID: 11400000, guid: 0a410748905f0204389c32748a361d00, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: c1279e94e5631d94fb3aeb036ed68f9f, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 20154a1aa7fe7f945a410b0d3fd63576, type: 2}
+      intValue: 3
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 37aff16ffbed4fa4ea7cb8970868c321, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 4e58be9a802718342b8422c96add5e88, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: c1f79d98365da08439dc247be2bc2809, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   items: []
   traits:
   - {fileID: 11400000, guid: da6dc9add706734439cf8f2f75c0e5f4, type: 2}
   - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
-  - {fileID: 11400000, guid: 04f7d9d4b8700644b9c2f67146dc0098, type: 2}
+  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
+  - {fileID: 11400000, guid: e2fd7d1eb258cff4c9bb3e9a177077b5, type: 2}
+  - {fileID: 11400000, guid: cf944f5b8d6e60a41aa907664bc7e87c, type: 2}
+  - {fileID: 11400000, guid: 3861e3f7c2f426f42b46dfe8cce291c0, type: 2}
+  - {fileID: 11400000, guid: 452ef03f915e8cc48b092cdef45110f9, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 85b1d7a58134d854aa0efa07a4fe50d3, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 11400000, guid: 26b93c5ad3fcb9144b1e94eff0dd856f, type: 2}
-  armour: {fileID: 11400000, guid: 4757bab863a2dc447b69ef0bca634f19, type: 2}
-  trinket1: {fileID: 0}
+  helmet: {fileID: 0}
+  armour: {fileID: 11400000, guid: e9266809da9eb504ba444080470830d8, type: 2}
+  trinket1: {fileID: 11400000, guid: 3eef8e428404eba4482d5c56fef962ef, type: 2}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}

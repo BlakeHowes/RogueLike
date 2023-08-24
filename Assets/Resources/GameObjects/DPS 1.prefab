@@ -217,6 +217,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   items: []
   traits: []
   skills: []
@@ -225,7 +226,7 @@ MonoBehaviour:
   mainHand: {fileID: 11400000, guid: f3673bfc8a2051649af2892ee1b6e01f, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
-  armour: {fileID: 0}
+  armour: {fileID: 11400000, guid: ca68bf8713d43ec4183da8bccf556b58, type: 2}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}

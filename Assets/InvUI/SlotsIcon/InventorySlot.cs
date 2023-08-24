@@ -24,6 +24,7 @@ public class InventorySlot : MonoBehaviour
         }
         GameUIManager.i.tooltipGameObject.SetActive(true);
         GameUIManager.i.itemtooltip.UpdateToolTip(item,top);
+        Debug.Log("Skill slot");
     }
 
     public void DisableToolTip() {

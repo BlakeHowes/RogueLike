@@ -34,6 +34,10 @@ public class AssetManager {
         }
     }
 
+    public void AddSurface(Surface surface) {
+        surfaces.Add(surface);
+    }
+
     public Surface RandomSurface() {
         int i = Random.Range(0, surfaces.Count);
         return surfaces[i];

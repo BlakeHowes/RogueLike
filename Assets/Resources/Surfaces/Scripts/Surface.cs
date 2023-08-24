@@ -9,7 +9,7 @@ public class Surface : ScriptableObject
     public TileBase tile;
     public Color iconColour = Color.white;
     public List<Combination> combinations = new List<Combination>();
-    public List<ActionContainer> actions = new List<ActionContainer>();
+    public List<Ability> abilities = new List<Ability>();
     public StatusEffect StatusEffect;
     [Tooltip("If values are zero, surface will only combine not set on ground")]public Vector2 duration;
     [HideInInspector]public int counter = 0;
@@ -88,8 +88,10 @@ public class Surface : ScriptableObject
             character.GetComponent<Inventory>().AddStatusEffect(position, position, StatusEffect);
         }
 
-        foreach(var actionContainer in actions) {
-            actionContainer.action.Condition(position, position, null, null, null, actionContainer);
+        foreach(var ability in abilities) {
+            foreach(var actionContainer in ability.actionContainers) {
+                actionContainer.action.Condition(position, position, null, null, ability, actionContainer);
+            }
         }
     }
 

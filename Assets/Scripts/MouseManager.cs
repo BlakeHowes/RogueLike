@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static ItemStatic;
 using static PartyManager;
-using static UnityEditor.Progress;
 
 public class MouseManager : MonoBehaviour
 {
@@ -57,14 +56,19 @@ public class MouseManager : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)) {
+            var toolTip = GameUIManager.i.tooltipGameObject;
+            
             if (inspectMode) {
                 var gameobjectundermouse = mousePosition.GameObjectGo();
                 if (!gameobjectundermouse) { return; }
-                GameUIManager.i.itemtooltip.transform.position = mousePosition;
-                GameUIManager.i.tooltipGameObject.SetActive(true);
+                toolTip.SetActive(true);
+                //toolTip.transform.position = mousePosition;
                 GameUIManager.i.itemtooltip.UpdateToolTip(gameobjectundermouse);
+                inspectMode = false;
                 return;
             }
+            if (toolTip.activeSelf) { toolTip.SetActive(false); return; }
+            
             PlayerActionsOrder(mousePosition);
         }
     }
@@ -144,7 +148,7 @@ public class MouseManager : MonoBehaviour
         var skill = itemSelected as Skill;
         if (ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
         itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
-
+        GameUIManager.i.apUIElement.HighlightAP(-1);
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);
@@ -170,7 +174,7 @@ public class MouseManager : MonoBehaviour
             PathingManager.i.FlipCharacter(currentCharacter, position, origin);
             currentStats.actionPoints--;
 
-            currentCharacter.GetComponent<SpringToTarget3D>().Nudge(transform.position + new Vector3(0, globalValues.onAttackNudgeAmount), 24, 1000);
+           
             if (inventory.mainHand || inventory.offHand) { return true; }
         }
         
@@ -182,6 +186,7 @@ public class MouseManager : MonoBehaviour
             currentStats.actionPoints -= 1;
             target.GetComponent<Stats>().TakeDamage(1, origin);
             PathingManager.i.FlipCharacter(currentCharacter,position, origin);
+            currentCharacter.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, globalValues.onAttackNudgeAmount), 24, 1000);
             return true;
         }
         return false;
@@ -356,13 +361,19 @@ public class MouseManager : MonoBehaviour
 
             if (itemSelected is Skill) {
                 var skill = itemSelected as Skill;
-                if (skill.type == Skill.Type.AreaUnderMouse) {
+                if (skill.rangeType == Skill.RangeType.CircleUnderMouse) {
                     var currentCharacter = PartyManager.i.currentCharacter;
                     var origin = currentCharacter.Position();
                     var currentStats = currentCharacter.GetComponent<Stats>();
                     currentStats.RefreshCharacter(origin);
-                    GameUIManager.i.ShowRange(origin, currentCharacter.GetComponent<Stats>().skillRangeTemp, true);
-                    GameUIManager.i.ShowRange(mousePosition, skill.AOE);
+                    GameUIManager.i.ShowRange(origin, skill.range, true);
+                    if (mousePosition.InRange(origin, skill.range)) {
+                        GameUIManager.i.ShowRange(mousePosition, skill.AOE);
+                    }
+                    else {
+                        GameUIManager.i.groundUI.ClearAllTiles();
+                    }
+
                 }
             }
         }

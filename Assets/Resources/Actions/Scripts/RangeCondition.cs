@@ -5,18 +5,19 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Range Condition", menuName = "Actions/Range Condition")]
 public class RangeCondition : Action {
     bool useParentItem;
+    public bool returnValue;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         if (!useParentItem) {
-            if(position.InRange(origin, actionContainer.intValue)){ return true; }
-            return false;
+            if(position.InRange(origin, actionContainer.intValue)){ return !returnValue; }
+            return returnValue;
         }
         if (parentItem is Weapon) {
             Weapon weapon = parentItem as Weapon;
             if (position.InRange(origin, weapon.rangeTemp)) {
-                return true;
+                return !returnValue;
             }
         }
-        return false;
+        return returnValue;
     }
 
     public override IEnumerator StackAction() {

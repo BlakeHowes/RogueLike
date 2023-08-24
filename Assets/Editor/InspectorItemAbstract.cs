@@ -57,12 +57,16 @@ public class InspectorActionIntPairCustom : PropertyDrawer {
                 case ExtraVariableType.Item: extraVariable = property.FindPropertyRelative("itemValue"); actionWidth = 2; break;
                 case ExtraVariableType.Prefab: extraVariable = property.FindPropertyRelative("prefabValue"); actionWidth = 2; break;
                 case ExtraVariableType.Color: extraVariable = property.FindPropertyRelative("colorValue"); actionWidth = 1.25f; extraWidth = 5; break;
+                //case ExtraVariableType.Material: extraVariable = property.FindPropertyRelative("materialValue"); actionWidth = 1.25f; extraWidth = 5; break;
                 case ExtraVariableType.Vector2: extraVariable = property.FindPropertyRelative("vector2IntValue"); actionWidth = 2; break;
                 case ExtraVariableType.Surface: extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 1.25f; extraWidth = 5; break;
                 case ExtraVariableType.Sprite: extraVariable = property.FindPropertyRelative("spriteValue"); actionWidth = 1.25f; extraWidth = 5; break;
                 case ExtraVariableType.String: extraVariable = property.FindPropertyRelative("stringValue"); actionWidth = 2; break;
                 case ExtraVariableType.SurfaceInt: extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 2; extraWidth = 4; 
                     extraVariable2 = property.FindPropertyRelative("intValue"); break;
+                case ExtraVariableType.SurfaceColour:
+                    extraVariable = property.FindPropertyRelative("surfaceValue"); actionWidth = 2; extraWidth = 4;
+                    extraVariable2 = property.FindPropertyRelative("colorValue"); break;
             }
         }
         Draw:

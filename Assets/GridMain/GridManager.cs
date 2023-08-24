@@ -87,10 +87,11 @@ public class GridManager : MonoBehaviour {
                 position.x = x;
                 position.y = y;
                 GameObject character = goGrid[x, y];
+                if (mechGrid[x, y]) mechGrid[x, y].Call(position, MechStatic.Signal.Tick);
+                if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
                 if (character) {
                     character.TryGetComponent<PandaBehaviour>(out PandaBehaviour panda);
-                    if (mechGrid[x, y]) mechGrid[x, y].Call(position, MechStatic.Signal.Tick);
-                    if (surfaceGrid[x, y]) surfaceGrid[x, y].Call(position);
+                  
                     if (panda) {
                         var state = panda.GetComponent<Stats>().state;
                         if (state == PartyManager.State.Idle)
@@ -170,7 +171,7 @@ public class GridManager : MonoBehaviour {
         if (currentCharacter.activeSelf) {
             if (PartyManager.i.party.Contains(currentCharacter)) {
                 //InstantiateGosMechsSurfacesAroundCharacters();
-                GameUIManager.i.actionPointsText.text = currentCharacter.GetComponent<Stats>().actionPoints.ToString();
+                GameUIManager.i.SetAP(currentCharacter.GetComponent<Stats>().actionPoints);
                 InventoryManager.i.UpdateInventory();
             }
         }
@@ -300,7 +301,7 @@ public class GridManager : MonoBehaviour {
         CreateFog();
         SpawnParty();
         UpdateGame();
-        GameUIManager.i.actionPointsText.text = partyPrefabs[0].GetComponent<Stats>().actionPointsBase.ToString();
+        GameUIManager.i.SetAP(partyPrefabs[0].GetComponent<Stats>().actionPointsBase);
         //ClearFog();
         CallNPCSearch();
 
@@ -551,6 +552,16 @@ public class GridManager : MonoBehaviour {
         clone.name = go.name;
         return clone;
     }
+
+    public Surface InstaniateSurface(Surface surface, Color color) {
+        var tile = Instantiate(globalValues.generalTile);
+        tile.color = color;
+        var surfaceClone = Instantiate(surface);
+        surfaceClone.tile = tile;
+        assets.AddSurface(surfaceClone);
+        return surfaceClone;
+    }
+
 
 
 }

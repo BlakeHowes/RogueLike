@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
     [HideInInspector] public List<ItemAbstract> skills = new List<ItemAbstract>();
-    [HideInInspector] public List<CoolDown> coolDowns = new List<CoolDown>();
+    public List<CoolDown> coolDowns = new List<CoolDown>();
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;
     public ItemAbstract offHand;
@@ -35,7 +35,13 @@ public class Inventory : MonoBehaviour
         stats = GetComponent<Stats>();
     }
 
-    public void AddSkillCoolDown(int coolDown,ItemAbstract item) {
+    public void AddCoolDown(int coolDown,ItemAbstract item) {
+        foreach(var itemCoolDown in coolDowns) {
+            if(itemCoolDown.item.name == item.name) {
+                itemCoolDown.coolDownTimer = coolDown;
+                return;
+            }
+        }
         var skillCoolDown = new CoolDown(coolDown, item);
         coolDowns.Add(skillCoolDown);
     }
@@ -58,10 +64,7 @@ public class Inventory : MonoBehaviour
         return 0;
     }
 
-    public void OnEnable() {
-        globalValues = Manager.GetGlobalValues();
-        CloneInventory();
-    }
+
     public bool AddItem(ItemAbstract item) {
         if(items.Count < globalValues.maxItems) {
             items.Add(item);
@@ -75,19 +78,19 @@ public class Inventory : MonoBehaviour
 
     public void AddStatusEffect(Vector3Int position,Vector3Int origin,StatusEffect statusEffect) {
         if (stats.IsImmune(statusEffect)) { return; }
-        foreach(var coolDown in coolDowns) {
-            if(coolDown.item == statusEffect) {
+        foreach (var coolDown in coolDowns) {
+            if (coolDown.item.name == statusEffect.name) {
                 coolDown.coolDownTimer = statusEffect.duration;
-                return;
             }
         }
-        foreach(var effect in statusEffects) {
+        foreach (var effect in statusEffects) {
             if(effect.name == statusEffect.name) { return; }
         }
+
         var clone = Instantiate(statusEffect);
         clone.name = statusEffect.name;
         statusEffects.Add(clone);
-        AddSkillCoolDown(statusEffect.duration, statusEffect);
+        AddCoolDown(statusEffect.duration, statusEffect);
         clone.Call(position, origin, gameObject, CallType.SetTarget);
         stats.RefreshCharacter(stats.gameObject.Position());
     }
@@ -137,6 +140,45 @@ public class Inventory : MonoBehaviour
             foreach (var item in itemTemp) {traits.Add(item);}
         }
         */
+    }
+    public void OnEnable() {
+        globalValues = Manager.GetGlobalValues();
+        CloneInventory();
+        CreateAbilityCallSubscriptions(); // Testing!
+    }
+
+    public void OnDisable() {
+        RemoveAbilityCallSubscriptions();
+    }
+    public void CreateAbilityCallSubscriptions() {
+        foreach(var ability in generalAbilities) {
+            if(ability.callType == CallType.OnTakeDamageGlobal) { 
+                Manager.OnTakeDamageEvent += CallAbilities; 
+                Debug.Log(gameObject.name + " Added To OnCharacterTakesDamageEvent"); 
+            }
+        }
+    }
+
+    public void RemoveAbilityCallSubscriptions() {
+        foreach (var ability in generalAbilities) {
+            if (ability.callType == CallType.OnTakeDamageGlobal) {
+                Manager.OnTakeDamageEvent -= CallAbilities;
+                Debug.Log(gameObject.name + " Added To OnCharacterTakesDamageEvent");
+            }
+        }
+    }
+
+    public void CallAbilities(Vector3Int position, Vector3Int origin, CallType callType) {
+        foreach (var item in generalAbilities) {
+            if (item.callType == callType)
+                item.Call(position, origin, gameObject, null);
+        }
+    }
+
+    public void AddAbility(ItemAbstract item,bool stackable) {
+        if(traits.Contains(item) && !stackable) { return; }
+        traits.Add(item);
+
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, CallType callType) {
