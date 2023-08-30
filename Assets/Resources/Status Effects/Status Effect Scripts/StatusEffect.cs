@@ -7,6 +7,8 @@ using static ItemStatic;
 public class StatusEffect : ItemAbstract
 {
     public int duration;
+
+
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         if (callType == CallType.StartOfTurn) {
             var inventory = parentGO.GetComponent<Inventory>();
@@ -20,6 +22,7 @@ public class StatusEffect : ItemAbstract
                 return; 
             }
         }
+
         foreach (var ability in abilities) {
             if (ability.callType == callType) {
                 ability.Call(position, origin, parentGO, this);

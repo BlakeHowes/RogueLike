@@ -16,6 +16,7 @@ public class UIPartySelector : MonoBehaviour
         bool clicked = false;
         var currentTurnCharacter = PartyManager.i.currentCharacter;
         foreach (var member in party) {
+            if (!member) { continue; }
             if (!member.CompareTag("Party")) { continue; }
             var go = transform.GetChild(i).gameObject;
             go.SetActive(true);

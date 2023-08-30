@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,10 @@ using static ItemStatic;
 public static class Manager {
     public static List<GameObject> party = new List<GameObject>();
     private static GlobalValues globalValues;
-    public static System.Action<Vector3Int,Vector3Int,CallType> OnTakeDamageEvent;
-    public static System.Action<Vector3Int,Vector3Int,CallType> OnDeathEvent;
-    public static System.Action<Vector3Int,Vector3Int,CallType> OnMoveEvent;
-
+    public static System.Action<Vector3Int, Vector3Int, CallType> OnTakeDamageEvent;
+    public static System.Action<Vector3Int, Vector3Int, CallType> OnDeathEvent;
+    public static System.Action<Vector3Int, Vector3Int, CallType> OnMoveEvent;
+    public static System.Action<Vector3Int, Vector3Int, CallType> OnAttackEvent;
 
     public static void OnTakeDamageCall(Vector3Int position, Vector3Int origin) {
         OnTakeDamageEvent?.Invoke(position, origin, CallType.OnTakeDamageGlobal);
@@ -22,6 +23,10 @@ public static class Manager {
 
     public static void OnMoveEventCall(Vector3Int position, Vector3Int origin) {
         OnMoveEvent?.Invoke(position, origin, CallType.OnMoveGlobal);
+    }
+
+    public static void OnAttackCall(Vector3Int position, Vector3Int origin) {
+        OnAttackEvent?.Invoke(position, origin, CallType.OnAttackGlobal);
     }
 
     public static void LoadNextScene() {

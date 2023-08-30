@@ -24,8 +24,9 @@ public class EquipmentSlot : MonoBehaviour {
         MouseManager.i.itemSelected = null;
         InventoryManager.i.DeselectItems();
         var position = inventory.gameObject.Position();
-        PartyManager.i.currentCharacter.GetComponent<Stats>().RefreshCharacter(position);
+
         InventoryManager.i.UpdateInventory();
+        PartyManager.i.currentCharacter.GetComponent<Stats>().RefreshCharacter(position);
         CharacterSpriteGenerator.CreateCharacterSprite(inventory.gameObject);
     }
 
@@ -73,7 +74,9 @@ public class EquipmentSlot : MonoBehaviour {
         }
 
         if (itemSelected is Weapon) {
+            var weapon = itemSelected as Weapon;
             if(equipmentType != EquipmentType.mainHand && equipmentType != EquipmentType.offHand) { return; }
+            if(equipmentType == EquipmentType.offHand && weapon.twoHanded) { return; }
             if (equipmentType == EquipmentType.mainHand) { ChangeCharacterInventory(inventory, EquipmentType.mainHand, itemSelected); }
             if (equipmentType == EquipmentType.offHand) { ChangeCharacterInventory(inventory, EquipmentType.offHand, itemSelected); }
         }

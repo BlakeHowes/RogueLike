@@ -167,6 +167,7 @@ public class MouseManager : MonoBehaviour
             goto Meelee; 
         }
         inventory.CallEquipment(position, origin, CallType.OnActivate);
+        Manager.OnAttackCall(position,origin);
         if (GridManager.i.itemsInActionStack.Count == 0)  {
             if (!inventory.mainHand && !inventory.offHand) { goto Meelee; }
         }
@@ -265,6 +266,7 @@ public class MouseManager : MonoBehaviour
         var partyManager = PartyManager.i;
         var currentCharacter = PartyManager.i.currentCharacter;
         var currentStats = currentCharacter.GetComponent<Stats>();
+        partyManager.RemoveNullCharacters(partyManager.party);
         if (currentStats.state == State.Idle) {
             foreach (GameObject member in partyManager.party) {
                 member.GetComponent<Stats>().ResetActionPoints();
@@ -280,8 +282,8 @@ public class MouseManager : MonoBehaviour
     }
 
     public void EndOfActionFinal() {
-        
         var partyManager = PartyManager.i;
+        if (!partyManager.currentCharacter.CompareTag("Party")) { return; }
         if (state == State.Combat) { isRepeatingActionsOutsideCombat = false; }
         if (partyManager.currentCharacter.GetComponent<Stats>().actionPoints <= 0) {
             partyManager.EndTurn();

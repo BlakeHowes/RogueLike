@@ -238,7 +238,7 @@ public class Behaviours : MonoBehaviour
 
     [Task]
     bool isCurrentTurnCharacter() {
-        if (PartyManager.i.currentCharacter == gameObject) return true;
+     if (PartyManager.i.currentCharacter == gameObject) return true;
         return false;
     }
 

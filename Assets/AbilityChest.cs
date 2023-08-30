@@ -10,6 +10,7 @@ public class AbilityChest : MonoBehaviour
         traits.Add(globalValues.GetRandomLootTrait());
         traits.Add(globalValues.GetRandomLootTrait());
         traits.Add(globalValues.GetRandomLootTrait());
+        if (!GameUIManager.i.AbilitySelectLayout) { return; }
         GameUIManager.i.AbilitySelectLayout.SetActive(true);
         GameUIManager.i.abilitySelection.AddAbilities(traits);
     }

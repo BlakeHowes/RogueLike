@@ -1,14 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static ItemStatic;
+using static MechStatic;
+
 [System.Serializable]
 public class CoolDown {
     public int coolDownTimer;
     public ItemAbstract item;
-    public CoolDown(int coolDown, ItemAbstract item) {
+    public GameObject go;
+    public CoolDown(int coolDown, ItemAbstract item, GameObject go) {
         this.coolDownTimer = coolDown;
         this.item = item;
+        this.go = go;   
     }
 }
 
@@ -17,7 +23,7 @@ public class Inventory : MonoBehaviour
     public List<Ability> generalAbilities = new List<Ability>();
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
-    [HideInInspector] public List<ItemAbstract> skills = new List<ItemAbstract>();
+    public List<ItemAbstract> skills = new List<ItemAbstract>();
     public List<CoolDown> coolDowns = new List<CoolDown>();
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;
@@ -42,7 +48,18 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
-        var skillCoolDown = new CoolDown(coolDown, item);
+        var skillCoolDown = new CoolDown(coolDown, item,null);
+        coolDowns.Add(skillCoolDown);
+    }
+
+    public void AddCoolDownGO(int coolDown, ItemAbstract item,GameObject go) {
+        foreach (var itemCoolDown in coolDowns) {
+            if (itemCoolDown.item.name == item.name && itemCoolDown.go == go) {
+                itemCoolDown.coolDownTimer = coolDown;
+                return;
+            }
+        }
+        var skillCoolDown = new CoolDown(coolDown, item, go);
         coolDowns.Add(skillCoolDown);
     }
 
@@ -64,6 +81,13 @@ public class Inventory : MonoBehaviour
         return 0;
     }
 
+    public int GetCoolDownGo(ItemAbstract item,GameObject go) {
+        foreach (var skillCoolDown in coolDowns) {
+            if (skillCoolDown.item.name == item.name && skillCoolDown.go == go) { return skillCoolDown.coolDownTimer; }
+        }
+        return 0;
+    }
+
 
     public bool AddItem(ItemAbstract item) {
         if(items.Count < globalValues.maxItems) {
@@ -77,7 +101,9 @@ public class Inventory : MonoBehaviour
     }
 
     public void AddStatusEffect(Vector3Int position,Vector3Int origin,StatusEffect statusEffect) {
-        if (stats.IsImmune(statusEffect)) { return; }
+        if (stats.elementalStats != null) {
+            if (stats.elementalStats.IsImmune(statusEffect)) { return; }
+        }
         foreach (var coolDown in coolDowns) {
             if (coolDown.item.name == statusEffect.name) {
                 coolDown.coolDownTimer = statusEffect.duration;
@@ -91,7 +117,7 @@ public class Inventory : MonoBehaviour
         clone.name = statusEffect.name;
         statusEffects.Add(clone);
         AddCoolDown(statusEffect.duration, statusEffect);
-        clone.Call(position, origin, gameObject, CallType.SetTarget);
+        clone.Call(position, gameObject.Position(), gameObject, CallType.OnStatusEffectEnable);
         stats.RefreshCharacter(stats.gameObject.Position());
     }
 
@@ -152,18 +178,42 @@ public class Inventory : MonoBehaviour
     }
     public void CreateAbilityCallSubscriptions() {
         foreach(var ability in generalAbilities) {
-            if(ability.callType == CallType.OnTakeDamageGlobal) { 
-                Manager.OnTakeDamageEvent += CallAbilities; 
-                Debug.Log(gameObject.name + " Added To OnCharacterTakesDamageEvent"); 
+            switch (ability.callType) {
+                case CallType.OnTakeDamageGlobal: Manager.OnTakeDamageEvent += CallAbilities; break;
+                case CallType.OnDeathGlobal: Manager.OnDeathEvent += CallAbilities; break;
+                case CallType.OnMoveGlobal: Manager.OnMoveEvent += CallAbilities; break;
+                case CallType.OnAttackGlobal: Manager.OnAttackEvent += CallAbilities; break;
+            }
+        }
+        foreach (var item in traits) { 
+            foreach(var ability in item.abilities) {
+                switch (ability.callType) {
+                    case CallType.OnTakeDamageGlobal: Manager.OnTakeDamageEvent += CallTraits; break;
+                    case CallType.OnDeathGlobal: Manager.OnDeathEvent += CallTraits; break;
+                    case CallType.OnMoveGlobal: Manager.OnMoveEvent += CallTraits; break;
+                    case CallType.OnAttackGlobal: Manager.OnAttackEvent += CallTraits; break;
+                }
             }
         }
     }
 
     public void RemoveAbilityCallSubscriptions() {
         foreach (var ability in generalAbilities) {
-            if (ability.callType == CallType.OnTakeDamageGlobal) {
-                Manager.OnTakeDamageEvent -= CallAbilities;
-                Debug.Log(gameObject.name + " Added To OnCharacterTakesDamageEvent");
+            switch (ability.callType) {
+                case CallType.OnTakeDamageGlobal: Manager.OnTakeDamageEvent -= CallAbilities; break;
+                case CallType.OnDeathGlobal: Manager.OnDeathEvent -= CallAbilities; break;
+                case CallType.OnMoveGlobal: Manager.OnMoveEvent -= CallAbilities; break;
+                case CallType.OnAttackGlobal: Manager.OnAttackEvent -= CallAbilities; break;
+            }
+        }
+        foreach (var item in traits) {
+            foreach (var ability in item.abilities) {
+                switch (ability.callType) {
+                    case CallType.OnTakeDamageGlobal: Manager.OnTakeDamageEvent -= CallTraits; break;
+                    case CallType.OnDeathGlobal: Manager.OnDeathEvent -= CallTraits; break;
+                    case CallType.OnMoveGlobal: Manager.OnMoveEvent -= CallTraits; break;
+                    case CallType.OnAttackGlobal: Manager.OnAttackEvent -= CallTraits; break;
+                }
             }
         }
     }
@@ -175,10 +225,17 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void CallTraits(Vector3Int position, Vector3Int origin, CallType callType) {
+        foreach (var item in traits) {
+            item.Call(position, origin, gameObject,callType);
+        }
+    }
+
     public void AddAbility(ItemAbstract item,bool stackable) {
         if(traits.Contains(item) && !stackable) { return; }
         traits.Add(item);
-
+        RemoveAbilityCallSubscriptions();
+        CreateAbilityCallSubscriptions();
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, CallType callType) {
@@ -187,7 +244,9 @@ public class Inventory : MonoBehaviour
             if(item.callType == callType)
             item.Call(position, origin,gameObject, null);
         }
-        foreach (var item in statusEffects) { if (item) item.Call(position, origin, gameObject, callType); }
+        for (int i = 0; i < statusEffects.Count; i++) {
+            statusEffects[i].Call(position, origin, gameObject, callType);
+        }
         if (helmet) { helmet.Call(position, origin, gameObject, callType); }
         if (armour) { armour.Call(position, origin, gameObject, callType); }
 

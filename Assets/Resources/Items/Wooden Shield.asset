@@ -25,6 +25,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   - callType: 10
     actionContainers:
     - action: {fileID: 11400000, guid: e3130203548a3a24e965947238ad3922, type: 2}
@@ -36,10 +37,11 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 10
   equipmentType: 1
   weight: 1
   wornSprite: {fileID: 0}
   customDescription: 
-  wornOffset: {x: 0, y: 0, z: 0}
+  wornOffset: {x: -4, y: 3, z: 0}
   hideHair: 1

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
-using static UnityEngine.UI.Image;
+
 
 public class Stats : MonoBehaviour {
     public TileBase tile;
     public PartyManager.State state = PartyManager.State.Idle;
-    public List<ItemAbstract> immunites;
+    [HideInInspector] public ElementalStats elementalStats;
     [Header("Base Stats")]
     public int maxHealthBase;
     public int maxArmourBase;
@@ -68,16 +68,11 @@ public class Stats : MonoBehaviour {
             DontDestroyOnLoad(this);
         }
         inventory = GetComponent<Inventory>();
+        TryGetComponent(out ElementalStats elementalStats);
+        this.elementalStats = elementalStats;
         CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
     }
 
-    public bool IsImmune(ItemAbstract item) {
-        if (!item) { return false; }
-        foreach(var immunity in immunites) {
-            if(immunity.GetType() == item.GetType()) { return true; }
-        }
-        return false;
-    }
 
     public void OnStartOfCombat() {
 
@@ -99,7 +94,7 @@ public class Stats : MonoBehaviour {
         if(gameObject.tag == "Summon") {
             PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
             var pos = gameObject.Position();
-            Die(pos, pos);
+            inventory.AddStatusEffect(pos, pos,globalValues.summonSickness);
         }
     }
 
@@ -120,10 +115,23 @@ public class Stats : MonoBehaviour {
         TakeDamage(damage, origin, false);
     }
 
-    public void TakeDamage(int damage,Vector3Int origin,bool ignoreArmor) {
-     
-        var position = gameObject.Position();
+    public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element) {
+        TryGetComponent(out ElementalStats elementStats);
+        if (elementStats == null) { return; }
 
+        float damageResult = damage;
+        foreach (var elementInteraction in elementalStats.elementalInteractions) {
+            if(elementInteraction.surface == element) { 
+                damageResult *= elementInteraction.damageMultiplier; 
+
+            }
+        }
+        TakeDamage(Mathf.RoundToInt(damageResult), origin, ignoreArmor);
+    }
+
+    public void TakeDamage(int damage,Vector3Int origin,bool ignoreArmor) {
+        if (!gameObject.activeSelf) { return; }
+        var position = gameObject.Position();
         RefreshCharacter(position);
         damageTaken = damage;
         inventory.CallEquipment(position, origin, CallType.OnTakeDamage);
@@ -178,15 +186,19 @@ public class Stats : MonoBehaviour {
         }
         Die(position,origin);
     }
+    bool dead = false;
 
     public void Die(Vector3Int position,Vector3Int origin) {
+        if (dead) { return; }
+        dead = true;
+     
         inventory.CallEquipment(position, position, CallType.OnDeath);
         Manager.OnDeathEventCall(position, origin);
         PartyManager.i.RemoveDeadEnemy(gameObject);
         GridManager.i.goMethods.RemoveGameObject(position);
         if(gameObject.tag != "Summon")inventory.items.Drop(position, position);
         GridManager.i.graphics.UpdateEverything();
-        //if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
+        if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
         healthbarGameObject.SetActive(false);
         if (setInactiveOnDeath) gameObject.SetActive(false);
     }

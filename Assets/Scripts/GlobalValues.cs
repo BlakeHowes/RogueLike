@@ -25,6 +25,7 @@ public class GlobalValues : ScriptableObject
     public float fogDistance;
     public float outerFogDistance;
     public Tile generalTile;
+    public StatusEffect summonSickness;
     [HideInInspector] public Vector3Int NullValue = new Vector3Int(-1, -1, 0);
 
     [Header("Inventory")]
@@ -75,19 +76,40 @@ public class GlobalValues : ScriptableObject
         return waitSeconds;
     }
 
+    public void CloneLoot() {
+        foreach(var floor in items) {
+            floor.CreateCopy();
+        }
+
+        foreach (var floor in traits) {
+            floor.CreateCopy();
+        }
+    }
+
     public ItemAbstract GetRandomLootItem() {
         var floor = items[0];
-        int i = Random.Range(0, floor.items.Count);
-        return floor.items[i];
+        return floor.GetItem();
     }
 
     public ItemAbstract GetRandomLootTrait() {
         var floor = traits[0];
-        int i = Random.Range(0, floor.items.Count);
-        return floor.items[i];
+        return floor.GetItem();
     }
 }
 [System.Serializable]
 public class LootPool {
     public List<ItemAbstract> items = new();
+    private List<ItemAbstract> itemsCopy = new();
+    public void CreateCopy() {
+        itemsCopy.Clear();
+        foreach (var item in items) {
+            itemsCopy.Add(item);
+        }
+    }
+    public ItemAbstract GetItem() {
+        if (itemsCopy.Count < 1) { CreateCopy(); }
+        var item = itemsCopy[Random.Range(0, itemsCopy.Count)];
+        itemsCopy.Remove(item);
+        return item;
+    }
 }

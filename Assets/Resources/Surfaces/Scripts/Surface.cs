@@ -97,7 +97,7 @@ public class Surface : ScriptableObject
 
     public bool Combine(Vector3Int position,Surface surface) {
         foreach (var combination in combinations) {
-            if(!combination.inputSurface || !combination.resultingSurface) { continue; }
+            if(!combination.inputSurface) { continue; }
             if (combination.inputSurface.name+"(Clone)" == surface.name||
                 combination.inputSurface.name == surface.name + "(Clone)"||
                 combination.inputSurface.name == surface.name) {

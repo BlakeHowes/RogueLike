@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6239783329631998961}
   m_Layer: 0
   m_Name: GenericCharacter
-  m_TagString: Party
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   items: []
   traits: []
   skills: []

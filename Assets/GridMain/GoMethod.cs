@@ -195,7 +195,10 @@ public class GoMethod
 
     public List<Vector3Int> PositionsInSight(int range, Vector3Int origin) {
         List<Vector3Int> positions = new List<Vector3Int>();
+   
         var cirlce = GridManager.i.tools.Circle(range, origin);
+        if (range == 1) { cirlce = GridManager.i.tools.MeeleeRange(origin); }
+
         foreach (var positionInCircle in cirlce) {
             if (IsInSight(positionInCircle, origin)) {
                 positions.Add(positionInCircle);

@@ -21,6 +21,8 @@ public class PartyIcon : MonoBehaviour
     }
 
     public void Click() {
+        if (Camera.main == null) { return; }
+        if(character == null) { Destroy(gameObject); return; }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
         MouseManager.i.itemSelected = null;
         /*

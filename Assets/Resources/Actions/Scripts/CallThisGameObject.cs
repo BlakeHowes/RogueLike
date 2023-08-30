@@ -6,12 +6,15 @@ using static ItemStatic;
 public class CallThisGameObject : Action {
     public CallType callType;
     public bool callPosition;
+    public bool targetOrigin;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         var calledGO = parentGO;
-        if (callPosition) { calledGO = position.GameObjectGo(); }
+       if (callPosition) { calledGO = position.GameObjectGo(); }
         var calledGoPosition = calledGO.Position();
         if (!calledGO) { return true; }
-        calledGO.GetComponent<Inventory>().CallEquipment(origin, calledGoPosition, callType);
+        var targetPos = position;
+        if (targetOrigin) { targetPos = origin; }
+        calledGO.GetComponent<Inventory>().CallEquipment(targetPos, calledGoPosition, callType);
         this.AddToStack();
         return true;
     }

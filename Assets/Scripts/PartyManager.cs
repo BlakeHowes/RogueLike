@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using static ItemStatic;
 
 public class PartyManager : MonoBehaviour {
@@ -74,6 +73,15 @@ public class PartyManager : MonoBehaviour {
         if (parentGO.CompareTag(target.tag)) { return true; }
         if(party.Contains(parentGO) && party.Contains(target)){ return true; }
         if(enemyParty.Contains(parentGO) && enemyParty.Contains(target)){ return true; }
+        return false;
+    }
+
+    public bool IsEnemy(GameObject parentGO, GameObject target) {
+        if (parentGO.CompareTag("Party") || parentGO.CompareTag("Summon")) {
+            if (target.CompareTag("Enemy")) {
+                return true; 
+            } }
+        if (parentGO.CompareTag("Enemy")) { if (parentGO.CompareTag("Party") || parentGO.CompareTag("Summon")) { return true; }  }
         return false;
     }
 

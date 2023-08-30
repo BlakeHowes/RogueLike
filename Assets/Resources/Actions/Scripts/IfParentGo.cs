@@ -11,12 +11,15 @@ public class IfParentGo : Action {
         GameObject target = null;
         if (!useOrigin) target = position.GameObjectGo();
         if (useOrigin) target = origin.GameObjectGo();
+        var targetPos = position;
+        if (useOrigin) { targetPos = origin; }
         if (!target) { return returnInverse; }
         switch (type) {
             case Type.IfPositionGoInRange: if (target.Position().InRange(parentGO.Position(), actionContainer.intValue)) { return !returnInverse; }break;
             case Type.IfPositionGoInParty: if (PartyManager.i.InTeam(parentGO,target) ) { return !returnInverse; }break;
             case Type.IfPositionIsOrigin: if (position == origin) { return !returnInverse; }break;
-            case Type.IfPositionIsThis: if (position == parentGO.Position()) { return !returnInverse; }break;
+            case Type.IfPositionIsThis: if (targetPos.GameObjectGo() == parentGO) { return !returnInverse; }break;
+            case Type.IfPositionIsEnemy: if (PartyManager.i.IsEnemy(parentGO, target)) { return !returnInverse; }break;
         }
     
         return returnInverse;
@@ -31,5 +34,6 @@ public class IfParentGo : Action {
         IfPositionGoInParty,
         IfPositionIsOrigin,
         IfPositionIsThis,
+        IfPositionIsEnemy
     }
 }

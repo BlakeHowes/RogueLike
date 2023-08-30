@@ -25,6 +25,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
       intValue: 0
       floatValue: 0
@@ -34,6 +35,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 5
   weaponType: 2
   damageRange: {x: 6, y: 12}
@@ -41,7 +43,7 @@ MonoBehaviour:
   rangeBase: 6
   heldOffset: {x: 11, y: 6, z: 0}
   twoHanded: 0
-  rangeTemp: 1
+  rangeTemp: 6
   accuracyTemp: 100
   damageMultipleTemp: 1
   parentGO: {fileID: 0}

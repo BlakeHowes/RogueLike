@@ -22,6 +22,7 @@ namespace LlamAcademy.Spring.Runtime
 
         public void SpringTo(Vector3 targetPosition,float damping, float stiffness)
         {
+            if (gameObject == null) { return; }
             if (!healthbar) {
                 TryGetComponent<Stats>(out Stats stats);
                 if (stats) { healthbar = stats.healthbarGameObject; }

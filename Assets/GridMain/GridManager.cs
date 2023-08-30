@@ -44,6 +44,7 @@ public class GridManager : MonoBehaviour {
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
+        globalValues.CloneLoot();
         assets = new AssetManager();
         tools = new GridTools(globalValues);
         Initialize();
@@ -141,7 +142,9 @@ public class GridManager : MonoBehaviour {
             //if (itemsCheckedHack.Contains(action)) { itemsInActionStack.Remove(action); continue; }
             //itemsCheckedHack.Add(action);
             yield return StartCoroutine(action.StackAction());
-            itemsInActionStack.Remove(action);
+            
+            if (itemsInActionStack.Count == 0) { break; } //WHHHYYY
+            itemsInActionStack.Remove(itemsInActionStack[0]); //I cant insert into stack, god knows why this is happening, 2 more hours wasted trying to debug this
         }
         EndStack();
     }
@@ -187,7 +190,9 @@ public class GridManager : MonoBehaviour {
             Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
             return;
         }
-        itemsInActionStack.Add(Instantiate(action));
+        var clone = Instantiate(action);
+        clone.name = clone.name + UnityEngine.Random.Range(0.000f, 100.000f);
+        itemsInActionStack.Add(clone);
     }
 
     public void AddToStack(Action action, bool instantiate) {
@@ -201,15 +206,6 @@ public class GridManager : MonoBehaviour {
         Debug.Log(action.name + Time.deltaTime);
         if (instantiate) { itemsInActionStack.Add(Instantiate(action)); return; }
         itemsInActionStack.Add(action);
-    }
-
-    public void InsertToStack(Action action) {
-        if (action == null) {
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
-            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
-            Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
-        }
-        itemsInActionStack.Insert(0, Instantiate(action));
     }
 
     public void ClearInactiveGameObjects() {
@@ -303,12 +299,13 @@ public class GridManager : MonoBehaviour {
         UpdateGame();
         GameUIManager.i.SetAP(partyPrefabs[0].GetComponent<Stats>().actionPointsBase);
         //ClearFog();
-        CallNPCSearch();
+ 
 
         if (PartyManager.i.currentCharacter == null) { fogTilemap.gameObject.SetActive(false); }
         GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
         ClearFogDoor(PartyManager.i.party[0].Position());
         ClearSemiFog();
+        CallNPCSearch();
     }
 
     public void CallNPCSearch() {

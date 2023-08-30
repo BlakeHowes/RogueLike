@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using static ItemStatic;
-using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 

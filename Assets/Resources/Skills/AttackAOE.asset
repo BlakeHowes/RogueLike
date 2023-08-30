@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
   m_Name: AttackAOE
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: cc565d114ac41b54a83c80c0e0d584ab, type: 2}
+  tile: {fileID: 11400000, guid: 5109417d454ea684a911f86357cf24c7, type: 2}
   abilities:
   - callType: 0
     actionContainers:
@@ -66,9 +66,21 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: attack in an area
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 6375196592243838218, guid: 7259e9c2babccf04abedbd6e1b221127, type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: d6ea6a68f49522c4aa62ec5f3c21a990, type: 3}
+      stringValue: 
   rangeType: 1
   targetsTags: -1
-  range: 4
+  range: 2
   AOE: 1
   actionPointCost: 1
   coolDown: 0

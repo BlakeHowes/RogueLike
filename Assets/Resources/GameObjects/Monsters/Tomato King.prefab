@@ -133,6 +133,16 @@ MonoBehaviour:
   generalAbilities:
   - callType: 4
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6, type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: a49d10cfb8e196247a30fa4e014c7ee7, type: 3}
+      stringValue: 
     - action: {fileID: 11400000, guid: e445fb7a8f2ecda459424f96e9c1d165, type: 2}
       intValue: 0
       floatValue: 0
@@ -142,6 +152,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: e445fb7a8f2ecda459424f96e9c1d165, type: 2}
       intValue: 0
       floatValue: 0
@@ -151,6 +162,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   items:
   - {fileID: 11400000, guid: 985e17ddf19ed31419533fcf17e18a89, type: 2}
   - {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
@@ -230,10 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: []
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
 --- !u!114 &752585418151326076
 MonoBehaviour:
   m_ObjectHideFlags: 0

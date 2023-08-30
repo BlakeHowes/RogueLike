@@ -27,6 +27,7 @@ MonoBehaviour:
   fogDistance: 7
   outerFogDistance: 1000
   generalTile: {fileID: 11400000, guid: fb2e91ed51e47234991b256342ede459, type: 2}
+  summonSickness: {fileID: 11400000, guid: 419759a89e7e0354290aa6b6d8fd63f7, type: 2}
   NullValue: {x: -1, y: -1, z: 0}
   maxItems: 9
   maxPathLength: 40
@@ -61,4 +62,9 @@ MonoBehaviour:
   traits:
   - items:
     - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
+    - {fileID: 11400000, guid: 301da835504aea14b82dea932ea89b8e, type: 2}
+    - {fileID: 11400000, guid: 26bcda6b95ccee54ba15a8621594125e, type: 2}
+    - {fileID: 11400000, guid: d08bfa8fbfb9dd148b2b43781af920b5, type: 2}
+    - {fileID: 11400000, guid: 9e39029156c22644a9bdd5237757f52e, type: 2}
+    - {fileID: 11400000, guid: 6b6ff8fac398e9a449c2dff98072635d, type: 2}
     - {fileID: 11400000, guid: a67c957bdece11b47a2f839a857fec14, type: 2}

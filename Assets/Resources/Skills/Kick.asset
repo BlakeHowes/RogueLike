@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
   m_Name: Kick
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: cc565d114ac41b54a83c80c0e0d584ab, type: 2}
+  tile: {fileID: 11400000, guid: 5109417d454ea684a911f86357cf24c7, type: 2}
   abilities:
   - callType: 0
     actionContainers:

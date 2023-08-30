@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class ItemToolTip : MonoBehaviour
@@ -39,19 +40,23 @@ public class ItemToolTip : MonoBehaviour
         if(item is Weapon) {
             AddTraitUIItem(item.tile.sprite, ((Weapon)item).CreateDescription());
         }
-        foreach (var ability in item.abilities) { 
-            foreach(var container in ability.actionContainers) {
-                if(container.action is UITrait) {
-                    UITrait uiTrait = container.action as UITrait;
-                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, item, ability, container);
-                    AddTraitUIItem(uiTrait.icon, uiTrait.description);
-                }
-            }
-        }
+        AddAbilitysToUI(item.abilities);
         var position = Input.mousePosition;
         transform.position = new Vector3(position.x, position.y, 0);
         //if(item.tile)
         //handle.transform.Find("Image").GetComponent<Image>().sprite = item.tile.sprite;
+    }
+
+    public void AddAbilitysToUI(List<Ability> abilities) {
+        foreach (var ability in abilities) {
+            foreach (var container in ability.actionContainers) {
+                if (container.action is UITrait) {
+                    UITrait uiTrait = container.action as UITrait;
+                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, null, ability, container);
+                    AddTraitUIItem(uiTrait.icon, uiTrait.description);
+                }
+            }
+        }
     }
 
     public void UpdateToolTip(GameObject character) {
@@ -65,26 +70,10 @@ public class ItemToolTip : MonoBehaviour
         statsClone.GetComponent<StatsUI>().UpdateStats(character);
 
         Title.text = character.name.ToString();
-        foreach (var ability in character.GetComponent<Inventory>().generalAbilities) {
-            foreach (var container in ability.actionContainers) {
-                if (container.action is UITrait) {
-                    UITrait uiTrait = container.action as UITrait;
-                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, null, ability, container);
-                    AddTraitUIItem(uiTrait.icon, uiTrait.description);
-                }
-            }
-        }
-        foreach(var item in character.GetComponent<Inventory>().traits) {
+        AddAbilitysToUI(character.GetComponent<Inventory>().generalAbilities);
+        foreach (var item in character.GetComponent<Inventory>().traits) {
             if(item is Skill) { continue; }
-            foreach (var ability in item.abilities) {
-                foreach (var container in ability.actionContainers) {
-                    if (container.action is UITrait) {
-                        UITrait uiTrait = container.action as UITrait;
-                        uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, null, ability, container);
-                        AddTraitUIItem(uiTrait.icon, uiTrait.description);
-                    }
-                }
-            }
+            AddAbilitysToUI(item.abilities);
         }
         var position = Input.mousePosition;
         var offset = 0;

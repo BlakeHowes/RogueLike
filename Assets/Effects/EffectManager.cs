@@ -6,7 +6,6 @@ public class EffectManager : MonoBehaviour
 {
     public static EffectManager i;
     private Vector3 offset = new Vector3(0.5f, 0.5f, 0);
-    public Vector3 weaponOriginOffset;
     public GameObject hitParticles;
     public ActionContainer throwAction;
     public void Awake() {
@@ -25,7 +24,7 @@ public class EffectManager : MonoBehaviour
     public void CreateLineEffect(Vector3 position,Vector3 origin,GameObject linePrefab) {
         if (linePrefab == null) { return; }
         var clone =Instantiate(linePrefab);
-        clone.GetComponent<LineEffect>().SetLine(position+ offset, origin+ offset+ weaponOriginOffset);
+        clone.GetComponent<LineEffect>().SetLine(position+ offset, origin+ offset);
     }
 
     public GameObject CreateSingleParticleEffect(Vector3 position, GameObject partPrefab) {

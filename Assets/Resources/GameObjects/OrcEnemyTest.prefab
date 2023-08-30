@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: eac208a24e851094a93ec17906acc342, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 60
   maxArmourBase: 0
   actionPointsBase: 4
@@ -132,15 +132,17 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: 301da835504aea14b82dea932ea89b8e, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: e15f871269c69144e9c57400aa9f8166, type: 2}
+  mainHand: {fileID: 11400000, guid: 9841c4330d32ce24593bc7636f147443, type: 2}
   offHand: {fileID: 11400000, guid: e15f871269c69144e9c57400aa9f8166, type: 2}
   helmet: {fileID: 0}
-  armour: {fileID: 11400000, guid: a32c5a68722a8b641af8048adb1de0bc, type: 2}
+  armour: {fileID: 11400000, guid: ca68bf8713d43ec4183da8bccf556b58, type: 2}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
@@ -226,7 +228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sightRange: 12
-  itemActions: []
   targetsTags: 18
 --- !u!114 &-3746751994804727915
 MonoBehaviour:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
   m_Name: Explode On Death
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: 3451836b6c0c78b47bf45b336bb56571, type: 2}
   abilities:
   - callType: 4
     actionContainers:
@@ -24,7 +24,17 @@ MonoBehaviour:
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 2, y: 4}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
-      spriteValue: {fileID: 21300000, guid: 07caf3d1930bab14aa8f6dcdf2db871a, type: 3}
+      spriteValue: {fileID: 21300000, guid: ad852ca41b90d924287a8daac6aab11f, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 758f536bb716b88499fd60c64e8b3cd9, type: 2}
+      intValue: 2
+      floatValue: 0.3
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
+      colorValue: {r: 1, g: 0, b: 0, a: 1}
+      vector2IntValue: {x: 2, y: 4}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 2
@@ -36,21 +46,11 @@ MonoBehaviour:
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
       stringValue: Explode!
-    - action: {fileID: 11400000, guid: bd92a27476135fa4bb6cf382cf0958f9, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 1, g: 0, b: 0, a: 1}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: 
     - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
       intValue: 0
       floatValue: 0.3
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
+      prefabValue: {fileID: 8194992990867289339, guid: e47636281c7c0e44786a2a0c5e655b91, type: 3}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -96,4 +96,3 @@ MonoBehaviour:
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
-  description: 

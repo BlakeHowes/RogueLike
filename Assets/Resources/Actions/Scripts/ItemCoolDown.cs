@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemCoolDown", menuName = "Actions/ItemCoolDown")]
 public class ItemCoolDown : Action {
     [HideInInspector]public ItemAbstract item;
+    public bool forEachGameObject;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         Inventory inventory = null;
         if (parentItem) { item = parentItem; }
@@ -14,10 +15,20 @@ public class ItemCoolDown : Action {
             item.name = "GeneratedItem" + seed.ToString();
         }
         if (parentGO) { inventory = parentGO.GetComponent<Inventory>(); }
-        if(inventory.GetCoolDown(item) > 0) { return false; }
+
+        if (forEachGameObject) {
+            if (inventory.GetCoolDownGo(item,position.GameObjectGo()) > 0) { return false; }
+        }
+        else {
+            if (inventory.GetCoolDown(item) > 0) { return false; }
+        }
 
 
 
+        if (forEachGameObject) {
+            inventory.AddCoolDownGO(actionContainer.intValue, item,position.GameObjectGo());
+            return true;
+        }
         inventory.AddCoolDown(actionContainer.intValue, item);
         return true;
     }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2354247380013042047}
   - component: {fileID: 1773118153572415346}
   - component: {fileID: 3010307117989880704}
-  - component: {fileID: -6281585937373113798}
   - component: {fileID: 5489671670705153384}
   - component: {fileID: -3658060747447821813}
   m_Layer: 0
@@ -104,16 +103,6 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 61c0228d685f33c45b9c6b626f1bcbdb, type: 3}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: 
   items: []
   traits: []
   skills: []
@@ -189,18 +178,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e12489f06cefdf44b892aa389c4de1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-6281585937373113798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2354247380013042016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5489671670705153384

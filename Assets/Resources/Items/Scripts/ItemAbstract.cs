@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using static ItemStatic;
@@ -25,9 +24,6 @@ public class Ability {
     [SerializeField] public List<ActionContainer> actionContainers;
 
     public void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem) {
-        //For any signal specific values an indirect reference to signal, for instance
-        // globalValues.Indirect(signal + "CallMultiplication")
-        //This in a for loop for the value
         foreach (var actionContainer in actionContainers) {
             if (!actionContainer.action.Condition(position, origin, parentGO, parentItem, this, actionContainer)) { break; }
         }
@@ -137,13 +133,15 @@ public static class ItemStatic {
         SelectItem,
         AddSkillToHotbar,
         StartOfTurn,
-        SetTarget,
+        OnStatusEffectEnable,
         EndOfStack,
         DirectDamage,
         StartOfIndividualTurn,
         DisableItem,
         OnTakeDamageGlobal,
         OnDeathGlobal,
-        OnMoveGlobal
+        OnMoveGlobal,
+        OnAttackGlobal
+           
     }
 }

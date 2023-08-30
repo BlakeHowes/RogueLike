@@ -103,6 +103,7 @@ public class PathingManager : MonoBehaviour
         var spring = character.GetComponent<SpringToTarget3D>();
         spring.SpringTo(position + new Vector3(0, globalValues.stepAnimationHeight/10), globalValues.stepDampening, globalValues.stepHardness);
         yield return new WaitForSeconds(globalValues.stepAnimationSpeed / 10);
+        if (!character) { yield break; }    
         spring.SpringTo(position, globalValues.Dampening, globalValues.Hardness);
     }
 

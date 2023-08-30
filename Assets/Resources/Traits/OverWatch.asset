@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
   m_Name: OverWatch
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: 5941eb9f18da3544a9ba04be7e899236, type: 2}
   abilities:
-  - callType: 2
+  - callType: 19
     actionContainers:
     - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
       intValue: 4
@@ -24,7 +24,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: c00abed4b50beb145ae657d464e1a179, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 4
@@ -36,7 +36,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: If an enemy enters range attack
-    - action: {fileID: 11400000, guid: 3b191e5224aef8442aa6b72eac2468db, type: 2}
+    - action: {fileID: 11400000, guid: fc23d5b8a3d7c7143a4a86e2f92c49f3, type: 2}
       intValue: 4
       floatValue: 0
       itemValue: {fileID: 0}
@@ -46,7 +46,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: 0a410748905f0204389c32748a361d00, type: 2}
+    - action: {fileID: 11400000, guid: f8c2f68a6ececf44f8b1cb4a50d89b0a, type: 2}
       intValue: 4
       floatValue: 0
       itemValue: {fileID: 0}
@@ -56,4 +56,33 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  description: 
+    - action: {fileID: 11400000, guid: f099e0ed934634a4aa1b3b22e8aae0fc, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 758f536bb716b88499fd60c64e8b3cd9, type: 2}
+      intValue: 4
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: c1f79d98365da08439dc247be2bc2809, type: 2}
+      intValue: 4
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 

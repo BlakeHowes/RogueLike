@@ -8,12 +8,12 @@ public class BagAnimation : MonoBehaviour
 {
     public Sprite closed;
     public Sprite open;
-    public ParticleSystem particle;
-    public SpringToRotation spring;
-
+    public new Animation animation;
+    public Image itemImage;
+    bool openToggle = true;
     public void PlayAnimation(ItemAbstract item) {
-        particle.textureSheetAnimation.SetSprite(0, item.tile.sprite);
-        particle.Play();
+        animation.Play();
+        itemImage.sprite = item.tile.sprite;
         StartCoroutine(OpenBag());
     }
 
@@ -21,5 +21,11 @@ public class BagAnimation : MonoBehaviour
         GetComponent<Image>().sprite = open;
         yield return new WaitForSeconds(0.3f);
         GetComponent<Image>().sprite = closed;
+    }
+
+    public void ToggleSprite() {
+        openToggle = !openToggle;
+        if (!openToggle) { GetComponent<Image>().sprite = open; }
+        if (openToggle) { GetComponent<Image>().sprite = closed; }
     }
 }

@@ -17,6 +17,6 @@ MonoBehaviour:
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
   extraVariableType: 0
-  type: 0
+  type: 1
   returnInverse: 1
   useOrigin: 0

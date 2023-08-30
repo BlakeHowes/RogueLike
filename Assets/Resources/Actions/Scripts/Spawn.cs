@@ -9,7 +9,9 @@ public class Spawn : Action,IDescription {
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         this.position = position;
         this.origin = origin;
+        this.parentGO = parentGO;
         prefab = actionContainer.prefabValue;
+        if (!parentGO) { return true; }
         this.AddToStack();
         return true;
     }
@@ -17,6 +19,7 @@ public class Spawn : Action,IDescription {
     public override IEnumerator StackAction() {
         if (!prefab) { yield break; }
         var clone = GridManager.i.goMethods.SpawnFloodFill(position, prefab);
+        if (!clone) { yield break; }
         var pos = clone.transform.position - new Vector3(0.5f, 0.5f);
         clone.transform.position = position;
         clone.GetComponent<SpringToTarget3D>().SpringTo(pos, 30, 1000);

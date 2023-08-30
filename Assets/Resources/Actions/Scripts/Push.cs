@@ -30,6 +30,7 @@ public class Push : Action {
                 if (go) { positions.Add(positionInArea); }
             }
             foreach (var positionInArea in positions) {
+                if(positionInArea == position) { continue; }
                 var line2 = GridManager.i.tools.BresenhamLineLength(positionInArea.x, positionInArea.y, origin.x, origin.y, numberOfSteps);
                 var targetPos2 = line2[line2.Count - 1];
                 if (away) {

@@ -24,6 +24,7 @@ public class GameUIManager : MonoBehaviour {
     public APUIElement apUIElement;
     public AbilitySelection abilitySelection;
     public GameObject AbilitySelectLayout;
+    public TraitAnimation traitAnimation;
     public void SetAP(float amount) {
         apUIElement.ChangeAP(Mathf.FloorToInt(amount));
     }
@@ -162,7 +163,7 @@ public class GameUIManager : MonoBehaviour {
         }
         foreach(GameObject member in party) {
             if(member == null) continue;
-            
+            if (member.CompareTag("Summon")) { continue; }
             var clone = Instantiate(globalValues.partyIconPrefab,partyIconLayout.transform);
             var partyicon = clone.gameObject.GetComponent<PartyIcon>();
             var state = member.GetComponent<Stats>().state;

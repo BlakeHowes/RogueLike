@@ -21,17 +21,20 @@ public class AreaAroundUser : Action {
                 range = weapon.rangeTemp;
             }
         }
+
         var positions = origin.PositionsInSight(range);
-        foreach(var pos in positions) {
+
+        foreach (var pos in positions) {
             var go = pos.GameObjectGo();
             if (requireTarget) { if (!go) { continue; } }
-            if(checkTags) if (!tags.Contains(go.tag)) { continue; }
+            if (checkTags && go) if (!tags.Contains(go.tag)) { continue; }
+
             foreach (var container in ability.actionContainers) {
                 if (container.action == this) { continue; }
-                container.action.Condition(pos, origin, parentGO, parentItem, ability, container);
+                if (!container.action.Condition(pos, origin, parentGO, parentItem, ability, container)) { break; }
             }
-        }
 
+        }
         return false;
     }
 
