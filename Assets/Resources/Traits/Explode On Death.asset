@@ -46,6 +46,16 @@ MonoBehaviour:
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
       stringValue: Explode!
+    - action: {fileID: 11400000, guid: f6d7c84157301af40a056315fc9f3ba9, type: 2}
+      intValue: 2
+      floatValue: 0.3
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5, type: 3}
+      colorValue: {r: 1, g: 0, b: 0, a: 1}
+      vector2IntValue: {x: 2, y: 4}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
       intValue: 0
       floatValue: 0.3

@@ -24,14 +24,16 @@ public class DealDamage : Action,IDescription
 
     public enum DamageSource {
         Damage,
-        ParentItemAsWeapon,
+        ParentItem,
         Weapon,
         MainHand,
         OffHand,
         Percentage,
         Destroy,
         Area,
-        Range
+        Range,
+        DamageTaken,
+        Armour
     }
 
     public void Percentage() {
@@ -39,7 +41,7 @@ public class DealDamage : Action,IDescription
         int health = Mathf.RoundToInt((((float)stats.health) / 100) * (100 - this.damage));
         if (health <= 0) { health = 1; }
         var damage = Mathf.Abs(health - stats.health);
-        stats.TakeDamage(damage, origin, true);
+        stats.TakeDamage(damage, position, true);
     }
 
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
@@ -62,36 +64,47 @@ public class DealDamage : Action,IDescription
     public void UseCharacterWeapon(ItemAbstract item) {
         if (!item) { return; }
        
-        item.CallAbilities(position, origin, parentGO, CallType.OnActivate);
+        item.CallAbilities(origin, position, parentGO, CallType.OnActivate);
     }
 
     public void Area() {
-        var inSightArea = GridManager.i.goMethods.PositionsInSight(areaRange, position);
+        var inSightArea = GridManager.i.goMethods.PositionsInSight(areaRange, origin);
         foreach (var positionInArea in inSightArea) {
             var go = positionInArea.GameObjectGo();
             if (!go) { continue; }
-            go.GetComponent<Stats>().TakeDamage(damage, origin);
+            go.GetComponent<Stats>().TakeDamage(damage, position);
+        }
+    }
+
+    public void ParentItemDamage() {
+        if(parentItem is Weapon) {
+            var weapon = parentItem as Weapon;
+            var weaponDamage = weapon.GetDamage(targetGo, parentGO);
+            targetGo.GetComponent<Stats>().TakeDamage(weaponDamage, position);
+            if (parentGO) parentGO.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, Manager.GetGlobalValues().onAttackNudgeAmount), 24, 1000);
+        }
+        if (parentItem is Skill) {
+            var skill = parentItem as Skill;
+            var weaponDamage = skill.GetDamage();
+            targetGo.GetComponent<Stats>().TakeDamage(weaponDamage, position);
+            //if (parentGO) parentGO.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, Manager.GetGlobalValues().onAttackNudgeAmount), 24, 1000);
         }
     }
 
     public override IEnumerator StackAction() {
-        origin = parentGO.Position();
+        position = parentGO.Position();
         switch (damageSource) {
-            case DamageSource.Damage: targetGo.GetComponent<Stats>().TakeDamage(damage, origin); break;
-            case DamageSource.ParentItemAsWeapon:
-                var weapon = parentItem as Weapon;
-                var weaponDamage = weapon.GetDamage(targetGo, parentGO);
-                targetGo.GetComponent<Stats>().TakeDamage(weaponDamage, origin);
-                if (parentGO) parentGO.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, Manager.GetGlobalValues().onAttackNudgeAmount), 24, 1000);
-                break;
-            case DamageSource.Weapon: this.weapon.Call(position, origin, parentGO, CallType.OnActivate); break;
+            case DamageSource.Damage: targetGo.GetComponent<Stats>().TakeDamage(damage, position); break;
+            case DamageSource.ParentItem: ParentItemDamage(); break;
+            case DamageSource.Weapon: this.weapon.Call(origin, position, parentGO, CallType.OnActivate); break;
             case DamageSource.Percentage: Percentage(); break;
-            case DamageSource.Destroy: targetGo.GetComponent<Stats>().Die(position,origin); break;
+            case DamageSource.Destroy: targetGo.GetComponent<Stats>().Die(origin,position); break;
             case DamageSource.Area: Area(); break;
-            case DamageSource.Range: targetGo.GetComponent<Stats>().TakeDamage(Random.Range(damageRange.x,damageRange.y +1), origin); break;
-
+            case DamageSource.Range: targetGo.GetComponent<Stats>().TakeDamage(Random.Range(damageRange.x,damageRange.y +1), position); break;
+            case DamageSource.DamageTaken: targetGo.GetComponent<Stats>().TakeDamage(parentGO.GetComponent<Stats>().damageTaken, position); break;
             case DamageSource.MainHand: UseCharacterWeapon(parentGO.GetComponent<Inventory>().GetMainHandAsWeapon()); break;
             case DamageSource.OffHand: UseCharacterWeapon(parentGO.GetComponent<Inventory>().GetOffHandAsWeapon()); break;
+            case DamageSource.Armour: targetGo.GetComponent<Stats>().TakeDamage(parentGO.GetComponent<Stats>().armour, position); break;
         }
         yield return null;
     }
@@ -99,7 +112,7 @@ public class DealDamage : Action,IDescription
     public string Description(ItemAbstract parentItem ,ActionContainer actionContainer) {
         var description = "";
         switch (damageSource) {
-            case DamageSource.ParentItemAsWeapon:
+            case DamageSource.ParentItem:
                 var weapon = parentItem as Weapon;
                 description += "Deals " +weapon.damageRange.x + " to " +weapon.damageRange.y + " " +weapon.weaponType + " damage";
                 if(weapon.rangeTemp > 1) { description += " at a range of " + weapon.rangeTemp; }

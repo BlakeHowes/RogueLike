@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
   m_Name: Barrel Hell
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 6e19525265b9931409be3996379e7db0, type: 2}
+  tile: {fileID: 11400000, guid: 4c3d6f4c7b2dcdd4dba2c62b20cc6972, type: 2}
   abilities:
   - callType: 19
     actionContainers:

@@ -263,7 +263,7 @@
       "url": "https://packages.unity.com"
     },
     "com.wooshii.foldericons": {
-      "version": "file:C:/Users/blake/Downloads/FolderIcons/Unity-Folder-Icons-main",
+      "version": "file:../Unity-Folder-Icons-main",
       "depth": 0,
       "source": "local",
       "dependencies": {}

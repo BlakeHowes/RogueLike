@@ -17,7 +17,7 @@ MonoBehaviour:
   - callType: 2
     actionContainers:
     - action: {fileID: 11400000, guid: 803ebe7c31559604995f70b60348a2cf, type: 2}
-      intValue: 4
+      intValue: 6
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}

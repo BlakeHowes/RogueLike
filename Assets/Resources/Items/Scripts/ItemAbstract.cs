@@ -46,16 +46,16 @@ public struct ActionContainer {
 
 [System.Serializable]
 public abstract class Action : ScriptableObject {
-    [HideInInspector] public Vector3Int position;
     [HideInInspector] public Vector3Int origin;
+    [HideInInspector] public Vector3Int position;
     [HideInInspector] public GameObject parentGO;
     [HideInInspector] public ItemAbstract parentItem;
     public ExtraVariableType extraVariableType;
     public abstract bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer);
 
     public void SaveValues(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem) {
-        this.position = position;
-        this.origin = origin;
+        this.origin = position;
+        this.position = origin;
         this.parentGO = parentGO;
         this.parentItem = parentItem;
     }

@@ -25,6 +25,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 30
   weaponType: 0
   damageRange: {x: 15, y: 30}

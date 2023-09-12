@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 275bfdfc51147c5a0372ef3ca5cf220ddfbee1e2e348c350875cf80c118ef72000000000b3a45873bbf9545445ea18edd5942055e71f88fc4f9252936d7b47cf
+  m_ApplyToSortingLayers: bb0335c7cfdc3d2a21c7ec8dbb8e2e0c37fa09f7b1e7bd45000000007b9630fda5c62e89fd94baef
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -399,7 +399,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.72
+      scalar: 2.68
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1099,26 +1099,17 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: -0.620136
-          outSlope: -0.620136
+          inSlope: -0.631892
+          outSlope: -0.631892
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.64863783
-          value: 0.5977563
-          inSlope: -0.6790513
-          outSlope: -0.6790513
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0.33846283
-          inSlope: -0.7379665
-          outSlope: -0.7379665
+          time: 0.97387695
+          value: 0.38461494
+          inSlope: -0.631892
+          outSlope: -0.631892
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1486,7 +1477,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     mode: 0
     timeMode: 0
     fps: 30
@@ -3929,6 +3920,11 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 0
     subEmitters:
+    - serializedVersion: 3
+      emitter: {fileID: 0}
+      type: 0
+      properties: 0
+      emitProbability: 1
     - serializedVersion: 3
       emitter: {fileID: 0}
       type: 0

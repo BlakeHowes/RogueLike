@@ -221,6 +221,7 @@ MonoBehaviour:
   items: []
   traits:
   - {fileID: 11400000, guid: 5294c44ef8f4ce141a3a358f84afdfc0, type: 2}
+  - {fileID: 11400000, guid: 4e9ea6065a3a4f846a34b979deb55bf1, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []

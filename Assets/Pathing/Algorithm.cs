@@ -100,7 +100,9 @@ public class Algorithm {
                 if (curCell == goalCell) {
                     curCell.parent = bestCell;
                     var positions = new List<Vector3>();
-                    ConstructPath(curCell).ToList().ForEach(c => positions.Add(new Vector3(c.position.x, c.position.y, 0)));
+                    var path = ConstructPath(curCell);
+                    if(path == null) { return null; }
+                    path.ToList().ForEach(c => positions.Add(new Vector3(c.position.x, c.position.y, 0)));
                     return positions.ToArray();
                 }
 

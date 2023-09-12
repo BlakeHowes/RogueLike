@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
     public List<Ability> generalAbilities = new List<Ability>();
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
-    public List<ItemAbstract> skills = new List<ItemAbstract>();
+    [HideInInspector]public List<ItemAbstract> skills = new List<ItemAbstract>();
     public List<CoolDown> coolDowns = new List<CoolDown>();
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;
@@ -114,6 +114,28 @@ public class Inventory : MonoBehaviour
         }
 
         var clone = Instantiate(statusEffect);
+        clone.name = statusEffect.name;
+        statusEffects.Add(clone);
+        AddCoolDown(statusEffect.duration, statusEffect);
+        clone.Call(position, gameObject.Position(), gameObject, CallType.OnStatusEffectEnable);
+        stats.RefreshCharacter(stats.gameObject.Position());
+    }
+
+    public void AddStatusEffect(Vector3Int position, Vector3Int origin, StatusEffectTargeted statusEffect) {
+        if (stats.elementalStats != null) {
+            if (stats.elementalStats.IsImmune(statusEffect)) { return; }
+        }
+        foreach (var coolDown in coolDowns) {
+            if (coolDown.item.name == statusEffect.name) {
+                coolDown.coolDownTimer = statusEffect.duration;
+            }
+        }
+        foreach (var effect in statusEffects) {
+            if (effect.name == statusEffect.name) { return; }
+        }
+        
+        var clone = Instantiate(statusEffect);
+        clone.target = origin.GameObjectGo();
         clone.name = statusEffect.name;
         statusEffects.Add(clone);
         AddCoolDown(statusEffect.duration, statusEffect);
@@ -239,14 +261,15 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, CallType callType) {
+        for (int i = 0; i < statusEffects.Count; i++) {
+            statusEffects[i].Call(position, origin, gameObject, callType);
+        }
         foreach (var item in traits) { if (item) item.Call(position, origin,gameObject, callType); }
         foreach (var item in generalAbilities) { 
             if(item.callType == callType)
             item.Call(position, origin,gameObject, null);
         }
-        for (int i = 0; i < statusEffects.Count; i++) {
-            statusEffects[i].Call(position, origin, gameObject, callType);
-        }
+
         if (helmet) { helmet.Call(position, origin, gameObject, callType); }
         if (armour) { armour.Call(position, origin, gameObject, callType); }
 

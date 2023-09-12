@@ -58,7 +58,7 @@ public class Weapon : ItemAbstract {
         var description = "";
         foreach (var ability in abilities) {
             foreach(var container in ability.actionContainers) {
-                if(container.action.name == "DamageThisWeapon") {
+                if(container.action.name == "DamageThisItem") {
                     description += ((IDescription)container.action).Description(this, container);
                     break;
                 }

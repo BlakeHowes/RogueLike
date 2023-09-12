@@ -2,6 +2,7 @@ using LlamAcademy.Spring.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PathingManager : MonoBehaviour
 {
@@ -168,15 +169,23 @@ public class PathingManager : MonoBehaviour
 
     public Vector3Int Teleport(Vector3Int endPosition, Vector3Int startPosition) {
         var character = startPosition.GameObjectSpawn();
-
+        if (!character) { return startPosition; }
+        character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
+        character.GetComponent<SpringToTarget3D>().spring.Reset();
         GridManager.i.goMethods.RemoveGameObject(startPosition);
         var pos =GridManager.i.goMethods.FindFloodFillCellForGo(endPosition);
         GridManager.i.goMethods.SetGameObject(pos, character);
         if (!character) { return pos; }
         FlipCharacter(character, pos, startPosition);
-        character.transform.position = endPosition + new Vector3(0.5f, 3f);
-        character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, 800);
+        StartCoroutine(TeleportAnimation(endPosition, pos, character));
         return pos;
+    }
+
+    public IEnumerator TeleportAnimation(Vector3Int landedPosition,Vector3Int finalPosition, GameObject character) {
+        character.transform.position = landedPosition + new Vector3(0.5f, 3f);
+        character.GetComponent<SpringToTarget3D>().SpringTo(landedPosition, 40, 800);
+        yield return new WaitForSeconds(0.1f);
+        character.GetComponent<SpringToTarget3D>().SpringTo(finalPosition, 50, 700);
     }
 
     public bool IsPathable(Vector3Int position, Vector3Int origin) {

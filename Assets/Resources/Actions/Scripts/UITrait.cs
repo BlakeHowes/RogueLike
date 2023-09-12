@@ -8,7 +8,13 @@ public class UITrait : Action {
     public string description;
     public Sprite icon;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        description = ability.callType.ToString() + ": ";
+        if (ability.callType != ItemStatic.CallType.CalculateStats) {
+            description = ability.callType.ToString() + ": ";
+        }
+        else {
+            description = "";
+        }
+     
         icon = actionContainer.spriteValue;
         foreach (var container in ability.actionContainers) {
             if (container.action == this) { continue; }

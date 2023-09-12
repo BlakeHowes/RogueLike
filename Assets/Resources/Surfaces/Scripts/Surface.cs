@@ -75,7 +75,9 @@ public class Surface : ScriptableObject
             effectClone.transform.parent = null;
             GridManager.i.surfaceTilemap.SetColor(position,Color.clear);
         }
-        if (tryToSpread) { Spread(position); }
+        if (tryToSpread) {
+            Spread(position);
+        }
         DryUp(position);
         
 

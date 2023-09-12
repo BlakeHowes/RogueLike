@@ -40,19 +40,19 @@ public class ItemToolTip : MonoBehaviour
         if(item is Weapon) {
             AddTraitUIItem(item.tile.sprite, ((Weapon)item).CreateDescription());
         }
-        AddAbilitysToUI(item.abilities);
+        AddAbilitysToUI(item.abilities,null, item);
         var position = Input.mousePosition;
         transform.position = new Vector3(position.x, position.y, 0);
         //if(item.tile)
         //handle.transform.Find("Image").GetComponent<Image>().sprite = item.tile.sprite;
     }
 
-    public void AddAbilitysToUI(List<Ability> abilities) {
+    public void AddAbilitysToUI(List<Ability> abilities, GameObject go, ItemAbstract item) {
         foreach (var ability in abilities) {
             foreach (var container in ability.actionContainers) {
                 if (container.action is UITrait) {
                     UITrait uiTrait = container.action as UITrait;
-                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, null, ability, container);
+                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, go, item, ability, container);
                     AddTraitUIItem(uiTrait.icon, uiTrait.description);
                 }
             }
@@ -70,10 +70,10 @@ public class ItemToolTip : MonoBehaviour
         statsClone.GetComponent<StatsUI>().UpdateStats(character);
 
         Title.text = character.name.ToString();
-        AddAbilitysToUI(character.GetComponent<Inventory>().generalAbilities);
+        AddAbilitysToUI(character.GetComponent<Inventory>().generalAbilities, character, null) ;
         foreach (var item in character.GetComponent<Inventory>().traits) {
             if(item is Skill) { continue; }
-            AddAbilitysToUI(item.abilities);
+            AddAbilitysToUI(item.abilities,character,null);
         }
         var position = Input.mousePosition;
         var offset = 0;

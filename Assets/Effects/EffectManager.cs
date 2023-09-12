@@ -24,7 +24,14 @@ public class EffectManager : MonoBehaviour
     public void CreateLineEffect(Vector3 position,Vector3 origin,GameObject linePrefab) {
         if (linePrefab == null) { return; }
         var clone =Instantiate(linePrefab);
-        clone.GetComponent<LineEffect>().SetLine(position+ offset, origin+ offset);
+        clone.GetComponent<LineEffect>().SetPositions(position+ offset, origin+ offset);
+    }
+
+    public void LineEffectBetweenGos(Vector3Int position, Vector3Int origin, GameObject linePrefab) {
+        if (linePrefab == null) { return; }
+        var clone = Instantiate(linePrefab);
+        var lineEffect = clone.GetComponent<LineEffect>();
+        lineEffect.LinkGos(position, origin);
     }
 
     public GameObject CreateSingleParticleEffect(Vector3 position, GameObject partPrefab) {

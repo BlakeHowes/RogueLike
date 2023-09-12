@@ -16,6 +16,16 @@ MonoBehaviour:
   abilities:
   - callType: 7
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 12
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: a16013373a2466a4b93b6077db8da35e, type: 3}
+      stringValue: 
     - action: {fileID: 11400000, guid: 92665c8e0d1cb9e4b97475dbc3f7399a, type: 2}
       intValue: 12
       floatValue: 0
@@ -25,6 +35,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 15
   equipmentType: 3
   weight: 1

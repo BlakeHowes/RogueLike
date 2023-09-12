@@ -12,17 +12,28 @@ public class TraitAnimation : MonoBehaviour
     public List<GameObject> history = new List<GameObject>();
     public int historyLength;
     bool showHistory;
+
+    public Dictionary<string, string> colourLookup = new Dictionary<string, string>() {
+        {"Party","<color=\"green\">" },
+        {"Enemy","<color=\"red\">" },
+        {"Summon","<color=\"purple\">" },
+        {"Passive","<color=\"yellow\">" },
+    };
+
+    public string GetTagColour(string tag) {
+        return colourLookup[tag];
+    }
+
     public void AddTrait(string description, Sprite sprite,GameObject parentGO,ItemAbstract item,GameObject positionGO) {
         foreach (Transform child in transform) {
             if (child.gameObject.activeSelf) { continue; }
             if (history.Contains(child.gameObject)) { continue; }
             if(traits.Contains(child.gameObject)) { continue; }
             child.Find("Image").gameObject.GetComponent<Image>().sprite = sprite;
-
-            var text = parentGO.name + " used "+ item.name;
+            var text = GetTagColour(parentGO.tag) + parentGO.name + " <color=\"white\">used <color=\"yellow\">" + item.name + "<color=\"white\">";
             if (positionGO) {
                 if(positionGO != parentGO) {
-                    text += " on " + positionGO.name;
+                    text += " on " + GetTagColour(positionGO.tag) + positionGO.name + "<color=\"white\">";
                 }
             }
             text += " " + description;

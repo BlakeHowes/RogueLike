@@ -25,6 +25,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 295931a7820a0cf4da72fc59a774a925, type: 2}
       intValue: 1
       floatValue: 0.3
@@ -34,6 +35,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 8f95972c7fc7e4d4289ca05f1d92f9d9, type: 2}
       intValue: 3
       floatValue: 0.3
@@ -43,6 +45,17 @@ MonoBehaviour:
       vector2IntValue: {x: 2, y: 3}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
+      intValue: 2
+      floatValue: 0.3
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 1995403933065894, guid: 4961a16ba01e09547be3e1c9d16d5ad0, type: 3}
+      colorValue: {r: 1, g: 0, b: 0, a: 1}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: a9dc6512f1920d64ab6c5c706c0391a5, type: 2}
       intValue: 2
       floatValue: 0.3
@@ -52,6 +65,7 @@ MonoBehaviour:
       vector2IntValue: {x: 30, y: 4}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 42610b2fca6fcad40adb2c3f6b45ea1e, type: 2}
       intValue: 2
       floatValue: 0.3
@@ -61,11 +75,12 @@ MonoBehaviour:
       vector2IntValue: {x: 2, y: 3}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
+      stringValue: 
   description: 
   shopValue: 0
   subItems: []
   totalUses: 1
-  timesUsed: 6
+  timesUsed: 8
   endlessUses: 0
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}

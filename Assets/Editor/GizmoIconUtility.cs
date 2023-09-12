@@ -2,7 +2,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEditor.Callbacks;
 using Unity.VisualScripting;
-using static UnityEditor.Progress;
 
 namespace FolderIcons {
     public class GizmoIconUtility {
@@ -10,6 +9,7 @@ namespace FolderIcons {
         [DidReloadScripts]
         static GizmoIconUtility() {
             EditorApplication.projectWindowItemOnGUI += ItemOnGUI;
+            EditorApplication.projectWindowItemOnGUI += MechOnGUI;
             EditorApplication.projectWindowItemOnGUI += RaceOnGUI;
             EditorApplication.projectWindowItemOnGUI += SurfaceOnGUI;
             EditorApplication.projectWindowItemOnGUI += GameObjectOnGUI;
@@ -71,6 +71,25 @@ namespace FolderIcons {
                 Rect rbase = rect;
                 if (rbase.height >= rbase.width) {
                     rbase.height -= 14; }
+                else { rbase.width = 20; }
+
+                DrawGUIRoundedBasicTexture(rbase, texture);
+            }
+        }
+
+        static void MechOnGUI(string guid, Rect rect) {
+            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+            MechAbstract item = AssetDatabase.LoadAssetAtPath(assetPath, typeof(MechAbstract)) as MechAbstract;
+            if (item != null && item is MechAbstract) {
+                if (!item.tile) { return; }
+                if (!item.tile.sprite) { return; }
+                if (!item.tile.sprite.texture) { return; }
+                var texture = CropTexture(item.tile.sprite.texture, item.tile.sprite);
+                //var texture = item.tile.sprite.texture;
+                Rect rbase = rect;
+                if (rbase.height >= rbase.width) {
+                    rbase.height -= 14;
+                }
                 else { rbase.width = 20; }
 
                 DrawGUIRoundedBasicTexture(rbase, texture);

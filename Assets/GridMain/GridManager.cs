@@ -251,7 +251,7 @@ public class GridManager : MonoBehaviour {
     }
 
     void OnDrawGizmos() {
-        /*
+   
         //Draw a semitransparent red cube at the transforms position
         if (!globalValues) { return; }
         for (int x = 0; x < globalValues.width; x++) {
@@ -270,7 +270,7 @@ public class GridManager : MonoBehaviour {
                 }
             }
         }
-        */
+      
     }
 
     public Vector3Int FindEntrance() {
@@ -287,7 +287,7 @@ public class GridManager : MonoBehaviour {
     }
 
     //TEST START
-    public void Start() {
+    public void OnEnable() {
         TryGetComponent<RoomGenerator>(out RoomGenerator gen);
         if (!gen) { BeginGame(); }
     }
@@ -303,6 +303,7 @@ public class GridManager : MonoBehaviour {
 
         if (PartyManager.i.currentCharacter == null) { fogTilemap.gameObject.SetActive(false); }
         GameUIManager.i.UpdatePartyIcons(PartyManager.i.party);
+        if(PartyManager.i.party.Count == 0) { Debug.LogError("Party is empty, check members have the Party tag"); }
         ClearFogDoor(PartyManager.i.party[0].Position());
         ClearSemiFog();
         CallNPCSearch();
@@ -329,6 +330,10 @@ public class GridManager : MonoBehaviour {
     public void ClearFogDoor(Vector3Int position) {
         tools.FloodFill(position, fogMap, 1000, null, fogDarkTilemap);
     }
+
+    // 0 = empty
+    // 1 = door
+    //2 = floor
 
     [BurstCompile]
     public void GenerateFogMap() {
@@ -368,6 +373,10 @@ public class GridManager : MonoBehaviour {
 
     public void SetFogMapTile(Vector3Int position, int value) {
         fogMap[position.x, position.y] = value;
+    }
+
+    public int GetFogMapValue(Vector3Int position) {
+        return fogMap[position.x, position.y];
     }
     public HashSet<Vector3Int> tilesToFill = new HashSet<Vector3Int>();
     public HashSet<Vector3Int> tilesToFill2 = new HashSet<Vector3Int>();

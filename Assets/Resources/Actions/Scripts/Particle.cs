@@ -6,7 +6,7 @@ using UnityEngine;
 public class Particle : Action {
     [HideInInspector] public GameObject particle;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        this.position = position;
+        this.origin = position;
         particle = actionContainer.prefabValue;
         this.AddToStack();
         return true;
@@ -14,7 +14,7 @@ public class Particle : Action {
 
     public override IEnumerator StackAction() {
         if (particle) {
-            EffectManager.i.CreateSingleParticleEffect(position, particle);
+            EffectManager.i.CreateSingleParticleEffect(origin, particle);
         }
         yield return null;
     }

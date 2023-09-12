@@ -1,5 +1,6 @@
 using LlamAcademy.Spring.Runtime;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Burst;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,10 +20,19 @@ public class MouseManager : MonoBehaviour
     public Vector3Int clickPosition;
     private GlobalValues globalValues;
     public BagAnimation bagAnimation;
-    public bool inspectMode;
+    public MouseMode mouseMode = MouseMode.None;
+
+    public List<Vector3Int> targets = new List<Vector3Int>();
+
     public void Awake() {
         globalValues = Manager.GetGlobalValues();
         i = this;
+    }
+
+    public enum MouseMode {
+        None,
+        Inspect,
+        SelectTargets,
     }
 
     public void SelectItem(ItemAbstract item) {
@@ -53,24 +63,47 @@ public class MouseManager : MonoBehaviour
             }
             SelectItem(null);
             GameUIManager.i.groundUI.ClearAllTiles();
+            SetMode(MouseMode.None);
         }
 
         if (Input.GetMouseButtonDown(0)) {
             var toolTip = GameUIManager.i.tooltipGameObject;
-            
-            if (inspectMode) {
-                var gameobjectundermouse = mousePosition.GameObjectGo();
-                if (!gameobjectundermouse) { return; }
-                toolTip.SetActive(true);
-                //toolTip.transform.position = mousePosition;
-                GameUIManager.i.itemtooltip.UpdateToolTip(gameobjectundermouse);
-                inspectMode = false;
-                return;
-            }
             if (toolTip.activeSelf) { toolTip.SetActive(false); return; }
+            switch (mouseMode) {
+                case MouseMode.None: PlayerActionsOrder(mousePosition); break;
+                case MouseMode.Inspect: Inspect(mousePosition); break;
+                case MouseMode.SelectTargets: AddTarget(mousePosition); break;
+            }
             
-            PlayerActionsOrder(mousePosition);
         }
+    }
+
+    public void AddTarget(Vector3Int mousePosition) {
+        if (!itemSelected) { SetMode(MouseMode.None);return;}
+        var skill = itemSelected as Skill;
+        var totalTargets = skill.totalTargets;
+        targets.Add(mousePosition);
+        if (targets.Count >= totalTargets) {
+            PlayerActionsOrder(mousePosition);
+            targets.Clear();
+            SetMode(MouseMode.None);
+            return;
+        }
+    }
+
+    public void SetMode(MouseMode mouseMode) {
+        this.mouseMode = mouseMode;
+        if(mouseMode == MouseMode.SelectTargets) { targets.Clear(); }
+    }
+
+    public void Inspect(Vector3Int mousePosition) {
+        var gameobjectundermouse = mousePosition.GameObjectGo();
+        if (!gameobjectundermouse) { return; }
+        var toolTip = GameUIManager.i.itemtooltip;
+        toolTip.gameObject.SetActive(true);
+        //toolTip.transform.position = mousePosition;
+        GameUIManager.i.itemtooltip.UpdateToolTip(gameobjectundermouse);
+        SetMode(MouseMode.None);
     }
 
     [BurstCompile]public void PlayerActionsOrder(Vector3Int mousePosition) {

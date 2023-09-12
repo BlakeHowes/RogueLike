@@ -9,6 +9,8 @@ public class IfParentGo : Action {
     public bool useOrigin;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         GameObject target = null;
+        this.parentItem = parentItem;
+        this.position = position;   
         if (!useOrigin) target = position.GameObjectGo();
         if (useOrigin) target = origin.GameObjectGo();
         var targetPos = position;
@@ -34,6 +36,6 @@ public class IfParentGo : Action {
         IfPositionGoInParty,
         IfPositionIsOrigin,
         IfPositionIsThis,
-        IfPositionIsEnemy
+        IfPositionIsEnemy,
     }
 }

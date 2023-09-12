@@ -13210,6 +13210,7 @@ MonoBehaviour:
   inventoryLayout: {fileID: 0}
   equipmentLayout: {fileID: 0}
   skillLayout: {fileID: 0}
+  bagLayout: {fileID: 0}
   skills: []
 --- !u!114 &1677353857
 MonoBehaviour:

@@ -115,9 +115,14 @@ public class Stats : MonoBehaviour {
         TakeDamage(damage, origin, false);
     }
 
+    public bool IsImmune(Action action) {
+        if (elementalStats == null) { return false; }
+        if (elementalStats.IsImmune(action)) { return true; }
+        return false;
+    }
+
     public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element) {
-        TryGetComponent(out ElementalStats elementStats);
-        if (elementStats == null) { return; }
+        if (elementalStats == null) { return; }
 
         float damageResult = damage;
         foreach (var elementInteraction in elementalStats.elementalInteractions) {
@@ -134,8 +139,8 @@ public class Stats : MonoBehaviour {
         var position = gameObject.Position();
         RefreshCharacter(position);
         damageTaken = damage;
-        inventory.CallEquipment(position, origin, CallType.OnTakeDamage);
-        Manager.OnTakeDamageCall(position,origin);
+        inventory.CallEquipment(origin, position, CallType.OnTakeDamage);
+        Manager.OnTakeDamageCall(origin, position);
         //Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
 
         var damageTotal = damage;
@@ -191,16 +196,20 @@ public class Stats : MonoBehaviour {
     public void Die(Vector3Int position,Vector3Int origin) {
         if (dead) { return; }
         dead = true;
-     
+        
         inventory.CallEquipment(position, position, CallType.OnDeath);
         Manager.OnDeathEventCall(position, origin);
         PartyManager.i.RemoveDeadEnemy(gameObject);
-        GridManager.i.goMethods.RemoveGameObject(position);
         if(gameObject.tag != "Summon")inventory.items.Drop(position, position);
         GridManager.i.graphics.UpdateEverything();
         if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
         healthbarGameObject.SetActive(false);
-        if (setInactiveOnDeath) gameObject.SetActive(false);
+        if (setInactiveOnDeath) {
+            gameObject.SetActive(false);
+            GridManager.i.goMethods.RemoveGameObject(position);
+        }
+
+
     }
 
     public void SpawnHitNumber(string value,Color colour,float scale) {

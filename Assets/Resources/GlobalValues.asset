@@ -54,7 +54,7 @@ MonoBehaviour:
   normalMaterial: {fileID: 2100000, guid: bf4d15c5ff40392488453ba33fa882c2, type: 2}
   hitMaterial: {fileID: 2100000, guid: 38acd3acbd101ad4380fb61887b259d8, type: 2}
   skillSlotPrefab: {fileID: 5883403779578738274, guid: c82de24fbcabd20459cda28b8ad8e7f7, type: 3}
-  rangeTile: {fileID: 11400000, guid: 52ceb1333d59ea04897118e0c00561c7, type: 2}
+  rangeTile: {fileID: 11400000, guid: 1a478c1e4decde2419d7ad75775e15e8, type: 2}
   defaultSkillSprite: {fileID: 21300000, guid: d6ea6a68f49522c4aa62ec5f3c21a990, type: 3}
   gameOverLayout: {fileID: 1658703206621903370, guid: be13d97939e9fec4cab43ca37c816e6b, type: 3}
   partyIconPrefab: {fileID: 867278356251875308, guid: 7c1b6f0d3a1a05b419bf455ae740db4d, type: 3}

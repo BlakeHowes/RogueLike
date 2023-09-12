@@ -8,7 +8,7 @@ public class DeathAnimation : Action {
     [HideInInspector]public GameObject particles;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         if (parentGO) {
-            this.position = position;
+            this.origin = position;
             particles = actionContainer.prefabValue;
             var sprite = parentGO.GetComponent<SpriteRenderer>().sprite;
             particles.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
@@ -18,7 +18,7 @@ public class DeathAnimation : Action {
     }
 
     public override IEnumerator StackAction() {
-        EffectManager.i.CreateSingleParticleEffect(position, particles);
+        EffectManager.i.CreateSingleParticleEffect(origin, particles);
         yield return null;
     }
 }

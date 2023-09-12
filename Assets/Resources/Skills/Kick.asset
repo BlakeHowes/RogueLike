@@ -46,7 +46,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: 954559815ff752b4da37ea04d1396706, type: 2}
+    - action: {fileID: 11400000, guid: 49ecec76cff1d0f47830526c0b05aa65, type: 2}
       intValue: 4
       floatValue: 0
       itemValue: {fileID: 0}
@@ -71,7 +71,10 @@ MonoBehaviour:
   range: 2
   AOE: 0
   actionPointCost: 1
+  actionPointCostTemp: 0
   coolDown: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
-  targets: []
+  totalTargets: 0
+  skillDamage: {x: 0, y: 0}
+  weaponType: 0

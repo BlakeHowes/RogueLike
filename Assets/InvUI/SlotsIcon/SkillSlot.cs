@@ -19,6 +19,7 @@ public class SkillSlot : MonoBehaviour
         if (!skill) { return; }
         if(coolDown() > 0) { return; }
         MouseManager.i.itemSelected = skill;
+        if (skill.rangeType == Skill.RangeType.Multi || skill.rangeType == Skill.RangeType.TwoTargets) { MouseManager.i.SetMode(MouseManager.MouseMode.SelectTargets); }
         var currentCharacter = PartyManager.i.currentCharacter;
         var postion = currentCharacter.Position();
         var stats = currentCharacter.GetComponent<Stats>();

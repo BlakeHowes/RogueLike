@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6239783329631998961}
   m_Layer: 0
   m_Name: GenericCharacter
-  m_TagString: Player
+  m_TagString: Party
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 100
   maxArmourBase: 0
   actionPointsBase: 4

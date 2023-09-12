@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 6e19525265b9931409be3996379e7db0, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 1
   maxArmourBase: 0
   actionPointsBase: 3
@@ -70,7 +70,7 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
-  health: 0
+  health: 1
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
@@ -169,10 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: []
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0

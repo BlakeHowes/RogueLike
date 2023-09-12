@@ -161,7 +161,8 @@ public class GridTools
                     }
                     GridManager.i.InstantiateCell(pos);
                     checkedCells.Add(pos);
-                    if(fogMap[x, y] == 0) {
+
+                    if (fogMap[x, y] == 0) {
                         tilemap.SetTile(pos, tile);
                         continue;
                     }
@@ -175,7 +176,6 @@ public class GridTools
                             tilemap.SetTile(pos + new Vector3Int(-1, -2), tile);
                             tilemap.SetTile(pos + offset2, tile);
                         }
-
                         continue;
                     }
                     if (fogMap[x,y] == 2) {

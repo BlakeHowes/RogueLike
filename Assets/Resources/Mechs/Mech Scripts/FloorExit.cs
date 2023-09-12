@@ -6,6 +6,7 @@ using static MechStatic;
 public class FloorExit : MechAbstract {
     public override void Call(Vector3Int position, Signal signal) {
         if (signal == Signal.ClickOnWhileStandingOntopOf) {
+            Debug.Log("Ladder EXIT!");
             GridManager.i.StartCoroutine(Wait());
         }
     }

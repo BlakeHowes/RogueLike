@@ -1,11 +1,11 @@
-using System;
+
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 using static PartyManager;
 
 [CreateAssetMenu(fileName = "Skill", menuName = "Items/Skill")]
-public class Skill : ItemAbstract {
+public class Skill : ItemAbstract{
     public RangeType rangeType;
     public Tags targetsTags;
     [Range(0, 16)]
@@ -13,25 +13,35 @@ public class Skill : ItemAbstract {
     public int AOE = 0;
     [Range(0, 6)]
     public int actionPointCost = 2;
-    [NonSerialized] public int actionPointCostTemp;
+    [HideInInspector] public int actionPointCostTemp;
     [Range(0, 17)]
     public int coolDown = 2;
 
     public Vector3Int targetedStartPosition;
     public bool startPositionSet = false;
 
-    public List<Vector3Int> targets = new List<Vector3Int>();
+    public int totalTargets = 0;
 
+    public Vector2Int skillDamage;
+    public WeaponType weaponType;
     public enum RangeType {
         None,
         CircleUnderMouse,
         Cone,
+        Multi,
+        TwoTargets,
+    }
+
+    public int GetDamage() {
+        var damage = Random.Range(skillDamage.x, skillDamage.y + 1);
+        return damage;
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         if(rangeType == RangeType.Cone) {
             //Targets = cone;
         }
+
         if (callType == CallType.AddSkillToHotbar) {
             InventoryManager.i.AddSkill(this);
         }
@@ -41,7 +51,25 @@ public class Skill : ItemAbstract {
             if (inventory.GetCoolDown(this) > 0) { return; }
             inventory.AddCoolDown(coolDown +1, this);
         }
-   
+
+        if (rangeType == RangeType.Multi && callType == CallType.OnActivate) {
+            foreach(var target in MouseManager.i.targets) {
+                foreach (var ability in abilities) {
+                    if (ability.callType == callType) {
+                        ability.Call(target, origin, parentGO, this);
+                    }
+                }
+            }
+            return;
+        }
+
+
+        if (rangeType == RangeType.TwoTargets && callType == CallType.OnActivate) {
+            abilities[0].Call(MouseManager.i.targets[0], MouseManager.i.targets[1], parentGO, this);
+            abilities[1].Call(MouseManager.i.targets[1], MouseManager.i.targets[0], parentGO, this);
+            return;
+        }
+
         foreach (var ability in abilities) {
             if (ability.callType == callType) {
                 ability.Call(position, origin, parentGO, this);

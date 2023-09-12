@@ -18,7 +18,7 @@ public class FlashAnimation : Action {
 
     public override IEnumerator StackAction() {
         if (character) {
-            if(flash)GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(character, origin, Color.red));
+            if(flash)GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(character, position, Color.red));
             //if (setMaterialSolid) { character.GetComponent<SpriteRenderer>().material = material; }
         }
         yield return null;

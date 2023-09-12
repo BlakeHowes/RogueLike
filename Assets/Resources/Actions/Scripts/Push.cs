@@ -10,8 +10,8 @@ public class Push : Action {
     [HideInInspector] public int range;
     [HideInInspector] public int numberOfSteps;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        this.position = position;
-        this.origin = origin;
+        this.origin = position;
+        this.position = origin;
         numberOfSteps = actionContainer.intValue;
         if (area) {
             numberOfSteps = actionContainer.vector2IntValue.x;
@@ -23,15 +23,15 @@ public class Push : Action {
 
     public override IEnumerator StackAction() {
         if (area) {
-            var inSightArea = GridManager.i.goMethods.PositionsInSight(range, position);
+            var inSightArea = GridManager.i.goMethods.PositionsInSight(range, origin);
             List<Vector3Int> positions = new();
             foreach (var positionInArea in inSightArea) {
                 var go = positionInArea.GameObjectGo();
                 if (go) { positions.Add(positionInArea); }
             }
             foreach (var positionInArea in positions) {
-                if(positionInArea == position) { continue; }
-                var line2 = GridManager.i.tools.BresenhamLineLength(positionInArea.x, positionInArea.y, origin.x, origin.y, numberOfSteps);
+                if(positionInArea == origin) { continue; }
+                var line2 = GridManager.i.tools.BresenhamLineLength(positionInArea.x, positionInArea.y, position.x, position.y, numberOfSteps);
                 var targetPos2 = line2[line2.Count - 1];
                 if (away) {
                     var oppositeTarget = (positionInArea - targetPos2) + positionInArea;
@@ -43,14 +43,14 @@ public class Push : Action {
 
             yield break;
         }
-        var line = GridManager.i.tools.BresenhamLineLength(position.x, position.y, origin.x, origin.y, numberOfSteps);
+        var line = GridManager.i.tools.BresenhamLineLength(origin.x, origin.y, position.x, position.y, numberOfSteps);
         var targetPos = line[line.Count - 1];
         if (away) {
-            var oppositeTarget = (position - targetPos) + position;
+            var oppositeTarget = (origin - targetPos) + origin;
             targetPos = oppositeTarget;
         }
-        var endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, position);
-        PathingManager.i.Jump(endPosition, position, speed);
+        var endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, origin);
+        PathingManager.i.Jump(endPosition, origin, speed);
         yield return null;
     }
 }

@@ -9,34 +9,44 @@ public class Roll : Action {
     public float speed;
     public bool dealDamage;
     public bool hideAnimation;
+    public bool rollOther;
     [HideInInspector] public Vector3Int damagePosition;
+    [HideInInspector] public Vector3Int endPos;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        if (position == origin) { return true; }
-        this.origin = position;
+        if (origin == position) { return true; }
+        // Position Attacker
+        //Origin Attacked
+        if (rollOther) {
+            (origin, position) = (position, origin);
+        }
+
+        this.position = position;
+        this.origin = origin;
         this.parentGO = parentGO;
         maxDistanceRoll = actionContainer.intValue;
-        var line = GridManager.i.tools.BresenhamLineLength(origin.x, origin.y, position.x, position.y, 15);
-        var line2 = GridManager.i.tools.BresenhamLineLength(position.x, origin.y, line[line.Count - 1].x, line[line.Count - 1].y, maxDistanceRoll);
+        var line = GridManager.i.tools.BresenhamLineLength(position.x, position.y, origin.x, origin.y, 15);
+        var line2 = GridManager.i.tools.BresenhamLineLength(origin.x, origin.y, line[line.Count - 1].x, line[line.Count - 1].y, maxDistanceRoll);
         var targetPos = line2[line2.Count - 1];
-        this.position = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, position);
+        endPos = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, origin);
         this.parentGO = parentGO;
 
-        damagePosition = GridManager.i.goMethods.FirstGameObjectInSight(targetPos, position);
+        damagePosition = GridManager.i.goMethods.FirstGameObjectInSight(targetPos, origin);
         this.AddToStack();
         return true;
     }
 
     public override IEnumerator StackAction() {
+        if (!rollOther) { origin = parentGO.Position(); }
         var goHit = damagePosition.GameObjectGo();
-        if (hideAnimation) { PathingManager.i.Jump(position, origin, speed * 13); }
+        if (hideAnimation) { PathingManager.i.Jump(endPos, origin, speed * 13); }
         else {
-            PathingManager.i.Roll(position, origin, speed);
+            PathingManager.i.Roll(endPos, origin, speed);
         }
-        yield return new WaitForSeconds(0.1f * (Vector3.Distance(position, origin) * (speed * 10)));
+        yield return new WaitForSeconds(0.1f * (Vector3.Distance(endPos, origin) * (speed * 10)));
         if (goHit && dealDamage) {
-            if (position == damagePosition) { yield break; }
-            var damage = position.GameObjectGo().GetComponent<Stats>().damageTaken;
-            goHit.GetComponent<Stats>().TakeDamage(damage, position);
+            if (origin == damagePosition) { yield break; }
+            var damage = endPos.GameObjectGo().GetComponent<Stats>().damageTaken;
+            goHit.GetComponent<Stats>().TakeDamage(damage, endPos);
         }
     }
 }

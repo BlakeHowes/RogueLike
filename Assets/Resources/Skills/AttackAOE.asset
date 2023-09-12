@@ -86,4 +86,4 @@ MonoBehaviour:
   coolDown: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
-  targets: []
+  totalTargets: 0

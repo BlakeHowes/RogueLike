@@ -37,7 +37,7 @@ public class TargetParty : Action {
         foreach (var container in ability.actionContainers) {
             if (container.action == this) { continue; }
             foreach (var character in characters) {
-                container.action.Condition(character.Position(), origin, parentGO, parentItem, ability, container);
+                container.action.Condition(character.Position(), position, parentGO, parentItem, ability, container);
             }
         }
     }

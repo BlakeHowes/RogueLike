@@ -9,7 +9,6 @@ public class Inspect : MonoBehaviour
     public void OnEnable() {
     }
     public void ToggleInspect() {
-        var mouseManager = MouseManager.i;
-        mouseManager.inspectMode = true;
+        MouseManager.i.SetMode(MouseManager.MouseMode.Inspect);
     }
 }
