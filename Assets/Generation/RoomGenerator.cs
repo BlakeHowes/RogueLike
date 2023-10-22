@@ -74,7 +74,7 @@ public class RoomGenerator : MonoBehaviour {
         grid = CreateCorridors(tree, grid);
         floorTilemap.ClearAllTiles();
         GridToTilemap(grid);
-        GridManager.i.BeginGame();
+        //GridManager.i.BeginGame();
     }
 
     public void OnDrawGizmos() {

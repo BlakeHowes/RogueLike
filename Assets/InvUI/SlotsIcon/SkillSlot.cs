@@ -31,6 +31,7 @@ public class SkillSlot : MonoBehaviour
 
     public void OnEnable() {
         image = GetComponent<Image>();  
+        if(image == null) { Debug.Log("WTF + " + gameObject); }
     }
 
     public void ResetGraphic() {
@@ -49,6 +50,7 @@ public class SkillSlot : MonoBehaviour
     public void AddSkill(Skill skill) {
         if (skill == null) { Debug.LogError("SKILL IS NULL"); return; }
         this.skill = skill;
+        //Debug.Log(skill.name);
         if (skill.tile != null) {
             image.sprite = skill.tile.sprite; }
         else { image.sprite = Manager.GetGlobalValues().defaultSkillSprite; }

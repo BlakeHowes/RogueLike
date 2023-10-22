@@ -20,7 +20,8 @@ MonoBehaviour:
       intValue: 20
       floatValue: 0
       itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
-      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
       colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -30,7 +31,8 @@ MonoBehaviour:
       intValue: 20
       floatValue: 0
       itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
-      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
       colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -40,7 +42,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 4, y: 6}
       surfaceValue: {fileID: 0}
@@ -50,7 +53,8 @@ MonoBehaviour:
       intValue: 4
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -60,7 +64,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 5c7ec8bf6ac7a734e8bb517915f35305,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 4, y: 6}
       surfaceValue: {fileID: 0}

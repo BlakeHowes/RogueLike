@@ -51,7 +51,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: d1dc7f953531e9746aca94ef8997cf25, type: 2}
   state: 0
   elementalStats: {fileID: 0}
-  maxHealthBase: 0
+  maxHealthBase: 1
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
-  health: 0
+  health: 1
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0

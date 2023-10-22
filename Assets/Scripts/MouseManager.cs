@@ -384,16 +384,12 @@ public class MouseManager : MonoBehaviour
 
     public void UpdateHightlight(Vector3Int mousePosition) { 
         if (mousePosition != lastMousePosition) {
-
-
-
-            GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
             lastMousePosition = mousePosition;
             if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
             if (GridManager.i.FogTile(mousePosition) || !mousePosition.IsWalkable()) {
-                GameUIManager.i.HideHighlight();
+                GameUIManager.i.HideHighlight(); return;
             }
-
+            GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
             if (itemSelected is Skill) {
                 var skill = itemSelected as Skill;
                 if (skill.rangeType == Skill.RangeType.CircleUnderMouse) {

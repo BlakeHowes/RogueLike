@@ -8,12 +8,13 @@ using UnityEngine.UIElements;
 public class GeneralMech : MechAbstract
 {
     public GameObject particles;
+    public Vector3 particleOffset;
     private GameObject particlesGameObject;
     public StatusEffect statusEffect;
 
     public void CreateParticles(Vector3Int position) {
         particlesGameObject = Instantiate(particles);
-        particlesGameObject.transform.position = position + new Vector3(0.5f, 0.5f);
+        particlesGameObject.transform.position = position + new Vector3(0.5f, 0.5f) + particleOffset;
     }
     public override void Call(Vector3Int position, MechStatic.Signal signal) {
         if(signal == MechStatic.Signal.OnEnable) {

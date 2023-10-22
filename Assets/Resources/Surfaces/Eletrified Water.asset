@@ -43,7 +43,8 @@ MonoBehaviour:
   StatusEffect: {fileID: 0}
   duration: {x: 19.59, y: 40.48}
   counter: 0
-  effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c, type: 3}
+  effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c,
+    type: 3}
   dryUpSurface: {fileID: 0}
   dryUp: 1
   tryToSpread: 1

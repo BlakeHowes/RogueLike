@@ -88,7 +88,6 @@ public class InventoryManager : MonoBehaviour
     public void CreateSkillSlots(Inventory inventory) {
         int i = 0;
         int skillsLength = inventory.skills.Count;
-    
         foreach (Transform slot in skillLayout.transform) {
             var skillSlot = slot.GetComponent<SkillSlot>();
             if (i < skillsLength) {

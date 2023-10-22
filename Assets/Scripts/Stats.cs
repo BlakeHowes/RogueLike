@@ -63,6 +63,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void OnEnable() {
+        Manager.EndOfStackEvent += EndOfStackGORemoval;
         globalValues = Manager.GetGlobalValues();
         if(gameObject.tag == "Party") {
             DontDestroyOnLoad(this);
@@ -71,6 +72,10 @@ public class Stats : MonoBehaviour {
         TryGetComponent(out ElementalStats elementalStats);
         this.elementalStats = elementalStats;
         CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
+    }
+
+    public void OnDisable() {
+        Manager.EndOfStackEvent -= EndOfStackGORemoval;
     }
 
 
@@ -208,8 +213,10 @@ public class Stats : MonoBehaviour {
             gameObject.SetActive(false);
             GridManager.i.goMethods.RemoveGameObject(position);
         }
+    }
 
-
+    public void EndOfStackGORemoval(bool idkwhyIhavetomakeavariable) {
+        if(health <= 0) { gameObject.SetActive(false); }
     }
 
     public void SpawnHitNumber(string value,Color colour,float scale) {

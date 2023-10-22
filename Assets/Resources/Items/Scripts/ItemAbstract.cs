@@ -8,14 +8,6 @@ public abstract class ItemAbstract : ScriptableObject {
     public Tile tile;
     public List<Ability> abilities = new();
     public abstract void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType);
-
-    public void CallAbilities(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
-        foreach (var ability in abilities) {
-            if (ability.callType == callType) {
-                ability.Call(position, origin, parentGO, this);
-            }
-        }
-    }
 }
 
 [System.Serializable]
@@ -54,8 +46,8 @@ public abstract class Action : ScriptableObject {
     public abstract bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer);
 
     public void SaveValues(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem) {
-        this.origin = position;
-        this.position = origin;
+        this.position = position;
+        this.origin = origin;
         this.parentGO = parentGO;
         this.parentItem = parentItem;
     }

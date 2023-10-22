@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdab69d146b154749a8c9d21fcfc172e, type: 3}
+  m_Name: Yellow Torch
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 479e94ebfb99f5d40a3e76ce7081f7eb, type: 2}
+  particles: {fileID: 8288408381700605430, guid: ec2d03263ffbf404b92a9f69e096a199,
+    type: 3}
+  particleOffset: {x: 0.05, y: 1.67, z: 0}
+  statusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}

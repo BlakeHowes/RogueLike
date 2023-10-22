@@ -28,6 +28,7 @@ public class Weapon : ItemAbstract {
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         if(callType == CallType.ResetStatsToBase) { ResetTempStats();return; }
+        origin = parentGO.Position();
         if(callType == CallType.OnActivate) { if (!position.InRange(origin, rangeTemp)) { return; } }
         foreach (var ability in abilities) {
             if (ability.callType == callType) {

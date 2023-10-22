@@ -12,6 +12,11 @@ public static class Manager {
     public static System.Action<Vector3Int, Vector3Int, CallType> OnDeathEvent;
     public static System.Action<Vector3Int, Vector3Int, CallType> OnMoveEvent;
     public static System.Action<Vector3Int, Vector3Int, CallType> OnAttackEvent;
+    public static Action<bool> EndOfStackEvent;
+
+    public static void OnEndOfStackCall() {
+        EndOfStackEvent?.Invoke(true);
+    }
 
     public static void OnTakeDamageCall(Vector3Int position, Vector3Int origin) {
         OnTakeDamageEvent?.Invoke(position, origin, CallType.OnTakeDamageGlobal);

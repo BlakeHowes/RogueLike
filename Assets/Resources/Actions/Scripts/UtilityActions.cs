@@ -13,6 +13,9 @@ public class UtilityActions : Action {
         intValue = actionContainer.intValue;
         itemValue = actionContainer.itemValue;
         spriteValue = actionContainer.spriteValue;
+        if(parentGO.GetComponent<SpriteRenderer>().sprite == spriteValue) {
+            return true;
+        }
         this.AddToStack();
         return true;
     }
@@ -24,7 +27,7 @@ public class UtilityActions : Action {
             case Type.SetActive: parentGO.SetActive(true); break;
             case Type.ChangeSprite: parentGO.GetComponent<SpriteRenderer>().sprite = spriteValue; break;
             case Type.DropItem: GridManager.i.itemMethods.FloodFillDropItem(origin,true,itemValue); break;
-            case Type.JumpToPosition: waitTime= PathingManager.i.Jump(origin,position,5); break;
+            case Type.JumpToPosition: waitTime= PathingManager.i.Jump(position, origin,5); break;
         }
         yield return new WaitForSeconds(waitTime);
     }

@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 3d1bafa6ca42b5d4d8b3c8a133a73422, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 20
   maxArmourBase: 0
   actionPointsBase: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   actionPointsSum: 0
   infiniteHealth: 0
   showHealthBar: 1
-  setInactiveOnDeath: 1
+  setInactiveOnDeath: 0
   healthbarGameObject: {fileID: 0}
   healthbar: {fileID: 0}
 --- !u!114 &2354247380013042047
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf4d15c5ff40392488453ba33fa882c2, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -168,16 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: []
-  deathActions:
-  - item: {fileID: 0}
-    rarity: 0.705
-    pool: 1
-  - item: {fileID: 0}
-    rarity: 0.199
-    pool: 2
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0

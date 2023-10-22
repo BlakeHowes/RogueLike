@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: a195de05529a82c419c1ab54294ef723, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 1000
   maxArmourBase: 0
   actionPointsBase: 3
@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities: []
   items: []
   traits: []
   skills: []
@@ -122,7 +123,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf4d15c5ff40392488453ba33fa882c2, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -166,19 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - item: {fileID: 11400000, guid: d5d93365186e3a34bb95b93d42dbd29a, type: 2}
-    rarity: 0.123
-    pool: 1
-  - item: {fileID: 11400000, guid: b269883fab5f18949b1840a8a8e3dd06, type: 2}
-    rarity: 0.664
-    pool: 2
-  - item: {fileID: 11400000, guid: f824e5aff374d0c49aa960bfcee84337, type: 2}
-    rarity: 0.255
-    pool: 3
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0

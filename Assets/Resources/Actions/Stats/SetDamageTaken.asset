@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfd040f8c995a524fae73f9519a5919d, type: 3}
   m_Name: SetDamageTaken
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
-  origin: {x: 0, y: 0, z: 0}
+  origin: {x: 44, y: 46, z: 0}
+  position: {x: 42, y: 46, z: 0}
   parentGO: {fileID: 0}
-  parentItem: {fileID: 0}
+  parentItem: {fileID: 11400000, guid: e2fd7d1eb258cff4c9bb3e9a177077b5, type: 2}
   extraVariableType: 1
   stat: 8
   userGainsStat: 0
+  set: 1
+  amount: 5

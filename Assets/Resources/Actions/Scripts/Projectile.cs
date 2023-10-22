@@ -17,8 +17,8 @@ public class Projectile : Action {
     public override IEnumerator StackAction() {
         if (!particles) { Debug.LogError("Particles missing from " + this); yield break; }
         var go = GridManager.i.InstantiateNonCharacterGameObject(particles);
-        var life = go.GetComponent<ProjectileEffect>().Fire(origin, position);
-        Debug.Log("ProjectileEffect position " + endPos + " origin " + startPos);
+        var life = go.GetComponent<ProjectileEffect>().Fire(position, origin);
+        //Debug.Log("ProjectileEffect position " + endPos + " origin " + startPos);
         if (!waitForProjectile) { life = 0; }
         yield return new WaitForSeconds(life);
     }

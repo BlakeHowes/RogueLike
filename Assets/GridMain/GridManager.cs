@@ -14,6 +14,7 @@ public class GridManager : MonoBehaviour {
     public GridGraphics graphics;
     public AssetManager assets;
     public GridTools tools;
+    public bool showFogGrid = false;
 
     private GlobalValues globalValues;
 
@@ -150,6 +151,7 @@ public class GridManager : MonoBehaviour {
     }
 
     public void EndStack() {
+        Manager.OnEndOfStackCall();
         ClearInactiveGameObjects();
         var currentCharacter = PartyManager.i.currentCharacter;
         enumeratingStack = false;
@@ -184,12 +186,6 @@ public class GridManager : MonoBehaviour {
     }
 
     public void AddToStack(Action action) {
-        if (action == null) {
-            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
-            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
-            Debug.LogError("Missing item from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
-            return;
-        }
         var clone = Instantiate(action);
         clone.name = clone.name + UnityEngine.Random.Range(0.000f, 100.000f);
         itemsInActionStack.Add(clone);
@@ -251,7 +247,7 @@ public class GridManager : MonoBehaviour {
     }
 
     void OnDrawGizmos() {
-   
+        if (!showFogGrid) { return; }
         //Draw a semitransparent red cube at the transforms position
         if (!globalValues) { return; }
         for (int x = 0; x < globalValues.width; x++) {
@@ -289,10 +285,10 @@ public class GridManager : MonoBehaviour {
     //TEST START
     public void OnEnable() {
         TryGetComponent<RoomGenerator>(out RoomGenerator gen);
-        if (!gen) { BeginGame(); }
+        //if (!gen) { BeginGame(); }
     }
 
-    public void BeginGame() {
+    public void Start() {
         GenerateFogMap();
         CreateFog();
         SpawnParty();
@@ -535,9 +531,7 @@ public class GridManager : MonoBehaviour {
 
 
     public bool FogTile(Vector3Int position) {
-        if (fogTilemap.GetTile(position) == globalValues.fog) {
-            return true;
-        }
+        if (fogDarkTilemap.GetTile(position)) { return true; }
         return false;
     }
 

@@ -27,13 +27,12 @@ MonoBehaviour:
     resultingSurface: {fileID: 0}
     callType: 0
     subItem: {fileID: 0}
-  abilities:
-  - callType: 0
-    actionContainers: []
+  abilities: []
   StatusEffect: {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
   duration: {x: 10, y: 15}
   counter: 0
-  effectPrefab: {fileID: 8288408381700605430, guid: af6d5fc68edeb644fb7bffa7241dd03e, type: 3}
+  effectPrefab: {fileID: 8288408381700605430, guid: af6d5fc68edeb644fb7bffa7241dd03e,
+    type: 3}
   dryUpSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
   dryUp: 1
   tryToSpread: 1

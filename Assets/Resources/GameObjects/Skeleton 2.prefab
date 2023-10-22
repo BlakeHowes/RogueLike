@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 217603207
-  m_SortingLayer: -2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f67f357ddf748cd439300f99dc12fa9e, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.18431373}
@@ -151,6 +151,7 @@ MonoBehaviour:
   mainHandOffset: {x: 0, y: 0, z: 0}
   offHandOffset: {x: 0, y: 0, z: 0}
   characterOffset: {x: 31, y: 15, z: 0}
+  hideWeapons: 0
   hideHelmet: 0
 --- !u!114 &6780645703283991166
 MonoBehaviour:
@@ -166,22 +167,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: b219d4b65dfbdcd4596bbdca204551ac, type: 2}
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 100
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 4
   throwingRangeBase: 5
-  fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
-  armourTemp: 0
+  maxHealthTemp: 0
+  maxArmourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
+  meleeDamage: 0
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -202,9 +206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities: []
   items: []
   traits: []
   skills: []
+  coolDowns: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: fb314a0ed2eeb384b9c805268a7a6695, type: 2}
   offHand: {fileID: 0}
@@ -247,7 +253,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf4d15c5ff40392488453ba33fa882c2, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -346,5 +352,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sightRange: 12
-  itemActions: []
   targetsTags: 18
