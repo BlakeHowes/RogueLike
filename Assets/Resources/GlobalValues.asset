@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GlobalValues
   m_EditorClassIdentifier: 
   width: 80
-  height: 85
+  height: 80
   onHitNudgeAmount: 1.5
   onAttackNudgeAmount: 10.47
   shadowTile: {fileID: 11400000, guid: 0369ba64565147a4b8256b16fd02b51a, type: 2}
@@ -30,7 +30,7 @@ MonoBehaviour:
   summonSickness: {fileID: 11400000, guid: 419759a89e7e0354290aa6b6d8fd63f7, type: 2}
   NullValue: {x: -1, y: -1, z: 0}
   maxItems: 9
-  maxPathLength: 40
+  maxPathLength: 30
   stepAnimationHeight: 5.18
   stepAnimationSpeed: 0.31
   walkSpeed: 0.0672
@@ -63,6 +63,8 @@ MonoBehaviour:
   gameOverLayout: {fileID: 1658703206621903370, guid: be13d97939e9fec4cab43ca37c816e6b,
     type: 3}
   partyIconPrefab: {fileID: 867278356251875308, guid: 7c1b6f0d3a1a05b419bf455ae740db4d,
+    type: 3}
+  traitUIPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
     type: 3}
   items: []
   traits:

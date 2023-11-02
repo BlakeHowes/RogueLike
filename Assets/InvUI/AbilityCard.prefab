@@ -164,7 +164,7 @@ RectTransform:
   m_GameObject: {fileID: 6960081279145080352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7920099629052701548}
@@ -322,7 +322,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7489, y: -46.4673}
-  m_SizeDelta: {x: 115.0978, y: 102.3308}
+  m_SizeDelta: {x: 121.7, y: 106.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4046103159536773259
 CanvasRenderer:
@@ -355,7 +355,8 @@ MonoBehaviour:
   m_text: 'OnTakeDamageGlobal: if you are seeing this something has gone very wrong.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 72c2fd52dd14e7b4e987f955ff7a46c7, type: 2}
-  m_sharedMaterial: {fileID: 959738990304367806, guid: 72c2fd52dd14e7b4e987f955ff7a46c7, type: 2}
+  m_sharedMaterial: {fileID: 959738990304367806, guid: 72c2fd52dd14e7b4e987f955ff7a46c7,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -379,8 +380,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.5
-  m_fontSizeBase: 15.5
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -490,7 +491,8 @@ MonoBehaviour:
   m_text: Debug Option
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 72c2fd52dd14e7b4e987f955ff7a46c7, type: 2}
-  m_sharedMaterial: {fileID: 959738990304367806, guid: 72c2fd52dd14e7b4e987f955ff7a46c7, type: 2}
+  m_sharedMaterial: {fileID: 959738990304367806, guid: 72c2fd52dd14e7b4e987f955ff7a46c7,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

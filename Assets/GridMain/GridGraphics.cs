@@ -19,6 +19,7 @@ public class GridGraphics
     GameObject[,] goGrid;
     GlobalValues globalValues;
     public bool lerping;
+    public int[,] fogMap;
     public GridGraphics(int width, int height, MechAbstract[,] mechGrid, Surface[,] surfaceGrid, GameObject[,] goGrid, ItemAbstract[,] itemGrid, Tilemap goTilemap, Tilemap itemTilemap, Tilemap mechTilemap, Tilemap surfaceTilemap,Tilemap shadowTilemap, GlobalValues globalValues) {
         this.width = width;
         this.height = height;
@@ -39,11 +40,11 @@ public class GridGraphics
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 var position = new Vector3Int(x, y);
+                if (fogMap[x,y] == 0) { continue; }
                 if (itemGrid[x, y] != null) {
                     itemTilemap.SetTile(position, itemGrid[x, y].tile);
                     shadowTilemap.SetTile(position, globalValues.shadowTile);
-                }
-
+                }  
                 if (mechGrid[x, y] != null) mechTilemap.SetTile(position, mechGrid[x, y].tile);
                 if (surfaceGrid[x, y] != null) surfaceTilemap.SetTile(position, surfaceGrid[x, y].tile);
             }

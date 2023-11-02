@@ -73,6 +73,7 @@ public class GridManager : MonoBehaviour {
     }
 
     public void TickGame() {
+
         var stopWatch = System.Diagnostics.Stopwatch.StartNew();
         stopWatch.Start();
         var currentCharacter = PartyManager.i.currentCharacter;
@@ -108,6 +109,7 @@ public class GridManager : MonoBehaviour {
         foreach(var action in actions) {
            itemsInActionStack.Add(action);
         }
+
         StartStack();
     }
 
@@ -170,6 +172,7 @@ public class GridManager : MonoBehaviour {
     }
 
     public void UpdateGame() {
+
         var currentCharacter = PartyManager.i.currentCharacter;
         if (!currentCharacter) { return; }
 
@@ -177,12 +180,19 @@ public class GridManager : MonoBehaviour {
             if (PartyManager.i.party.Contains(currentCharacter)) {
                 //InstantiateGosMechsSurfacesAroundCharacters();
                 GameUIManager.i.SetAP(currentCharacter.GetComponent<Stats>().actionPoints);
-                InventoryManager.i.UpdateInventory();
+                InventoryManager.i.UpdateInventory(currentCharacter);
             }
         }
 
-        ClearSemiFog();
+        //ClearSemiFog();
+
         graphics.UpdateEverything();
+
+    }
+
+    public Action GetNextStackItem() {
+        if(itemsInActionStack.Count <= 1) { return null; }
+        return itemsInActionStack[1];
     }
 
     public void AddToStack(Action action) {
@@ -231,6 +241,7 @@ public class GridManager : MonoBehaviour {
                     goMethods.SetGameObject(pos, character);
                     stats.InitializeCharacter();
                     character.transform.position = pos + new Vector3(0.5f, 0.5f);
+                    character.transform.localScale = new Vector3(1, 1, 1);
                     PartyManager.i.AddPartyMember(character);
                 }
             }
@@ -321,6 +332,7 @@ public class GridManager : MonoBehaviour {
                 fogTilemap.SetTile(pos, globalValues.fogSemi);
             }
         }
+        graphics.fogMap = fogMap;
     }
 
     public void ClearFogDoor(Vector3Int position) {

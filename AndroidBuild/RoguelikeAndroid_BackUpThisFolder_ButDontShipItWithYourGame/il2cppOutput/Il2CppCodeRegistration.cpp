@@ -21,8 +21,11 @@ IL2CPP_EXTERN_C Il2CppInteropData g_Il2CppInteropData[];
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_CFXRDemo_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_CFXRRuntime_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_CW_Common_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_HierarchyIcons_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_KinoBloom_Runtime_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_LeanCommon_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_LeanTouch_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_PandaBT_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_PandaBehaviour_CodeGenModule;
@@ -61,6 +64,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_XRModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_2D_Tilemap_Extras_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Burst_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Burst_Unsafe_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_InputSystem_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Mathematics_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_RenderPipelines_Core_Runtime_CodeGenModule;
@@ -69,13 +73,16 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_TextMeshPro_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[50] = 
+const Il2CppCodeGenModule* g_CodeGenModules[54] = 
 {
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_CFXRDemo_CodeGenModule),
 	(&g_CFXRRuntime_CodeGenModule),
+	(&g_CW_Common_CodeGenModule),
 	(&g_HierarchyIcons_CodeGenModule),
 	(&g_KinoBloom_Runtime_CodeGenModule),
+	(&g_LeanCommon_CodeGenModule),
+	(&g_LeanTouch_CodeGenModule),
 	(&g_Mono_Security_CodeGenModule),
 	(&g_PandaBT_CodeGenModule),
 	(&g_PandaBehaviour_CodeGenModule),
@@ -114,6 +121,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[50] =
 	(&g_Unity_2D_Tilemap_Extras_CodeGenModule),
 	(&g_Unity_Burst_CodeGenModule),
 	(&g_Unity_Burst_Unsafe_CodeGenModule),
+	(&g_Unity_InputSystem_CodeGenModule),
 	(&g_Unity_Mathematics_CodeGenModule),
 	(&g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGenModule),
 	(&g_Unity_RenderPipelines_Core_Runtime_CodeGenModule),
@@ -127,18 +135,18 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	3,
 	g_ReversePInvokeWrapperPointers,
-	38693,
+	46650,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	10877,
+	12539,
 	g_Il2CppInvokerPointers,
-	1338,
+	1615,
 	g_UnresolvedVirtualMethodPointers,
-	405,
+	532,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	50,
+	54,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

@@ -3,7 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using static ItemStatic;
 
 public class PartyManager : MonoBehaviour {
@@ -33,6 +35,7 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void Follow() {
+
         if (!follow) {
             return;
         }
@@ -46,9 +49,19 @@ public class PartyManager : MonoBehaviour {
         foreach (GameObject member in party) {
             if (member == currentCharacter) {  continue; }
             var memberpos = member.Position();
+
+            if (GridManager.i.tools.InMeeleeRange(memberpos, playerpos)) {
+                if (FloorManager.i.IsWalkable(playerpos) && playerpos.GameObjectGo() == null) {
+                    PathingManager.i.MovePosition(playerpos, memberpos, member);
+                    StartCoroutine(PathingManager.i.WalkAnimation(member, playerpos));
+                    playerpos = memberpos;
+                    continue;
+                }
+            }
+
             var moved = PathingManager.i.MoveOneStep(playerpos, memberpos);
-            if (moved == false && !playerpos.InMeleeRange(memberpos)) {
-                PathingManager.i.MoveOneStepLeader(playerpos, memberpos);
+           if (moved == false && !playerpos.InMeleeRange(memberpos)) {
+                PathingManager.i.MoveOneStepLeader(playerpos, memberpos,member);
             }
             playerpos = memberpos;
         }
@@ -148,7 +161,7 @@ public class PartyManager : MonoBehaviour {
         stats.ResetTempStats();
         var position = character.Position();
         stats.RefreshCharacter(position);
-        InventoryManager.i.UpdateInventory();
+        InventoryManager.i.UpdateInventory(currentCharacter);
         GameUIManager.i.SetAP(stats.actionPoints);
         if(stats.state == State.Idle) {
             stats.ResetActionPoints();

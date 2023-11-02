@@ -17,10 +17,12 @@ public class ItemCoolDown : Action {
         if (parentGO) { inventory = parentGO.GetComponent<Inventory>(); }
 
         if (forEachGameObject) {
-            if (inventory.GetCoolDownGo(item,position.GameObjectGo()) > 0) { return false; }
+            if (inventory.GetCoolDownGo(item,position.GameObjectGo()) > 0) { 
+                return false; }
         }
         else {
-            if (inventory.GetCoolDown(item) > 0) { return false; }
+            if (inventory.GetCoolDown(item) > 0) { 
+                return false; }
         }
 
 

@@ -15,7 +15,8 @@ public class MouseManager : MonoBehaviour
     public bool disableToggle = false;
     State state;
     public GameObject highlightedGameObject = null;
-    public Vector3Int lastMousePosition;
+    public Vector3Int lastMouseCoord;
+    private Vector3 lastMousePosition;
     public bool isRepeatingActionsOutsideCombat = false;
     public Vector3Int clickPosition;
     private GlobalValues globalValues;
@@ -50,8 +51,7 @@ public class MouseManager : MonoBehaviour
     public void Update() {
         var mousePosition = MousePositionOnGrid();
         if (!CheckMouseValidity()) { return; }
-
-        UpdateHightlight(mousePosition);
+        //UpdateHightlight(mousePosition);
 
 
         if (Input.GetMouseButtonDown(1)) {
@@ -67,14 +67,22 @@ public class MouseManager : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)) {
-            var toolTip = GameUIManager.i.tooltipGameObject;
-            if (toolTip.activeSelf) { toolTip.SetActive(false); return; }
-            switch (mouseMode) {
-                case MouseMode.None: PlayerActionsOrder(mousePosition); break;
-                case MouseMode.Inspect: Inspect(mousePosition); break;
-                case MouseMode.SelectTargets: AddTarget(mousePosition); break;
-            }
-            
+            OnMouseDown();
+        }
+    }
+
+    public void OnMouseDown() {
+        if (isRepeatingActionsOutsideCombat) { isRepeatingActionsOutsideCombat = false; return; }
+        lastMousePosition = Input.mousePosition;
+        var mousePosition = MousePositionOnGrid();
+        if (!CheckMouseValidity()) { return; }
+        UpdateHightlight(mousePosition);
+        var toolTip = GameUIManager.i.tooltipGameObject;
+        if (toolTip.activeSelf) { toolTip.SetActive(false); return; }
+        switch (mouseMode) {
+            case MouseMode.None: PlayerActionsOrder(mousePosition); break;
+            case MouseMode.Inspect: Inspect(mousePosition); break;
+            case MouseMode.SelectTargets: AddTarget(mousePosition); break;
         }
     }
 
@@ -106,7 +114,11 @@ public class MouseManager : MonoBehaviour
         SetMode(MouseMode.None);
     }
 
-    [BurstCompile]public void PlayerActionsOrder(Vector3Int mousePosition) {
+    public void PlayerActionsOrder(Vector3Int mousePosition) {
+        //START STOPWATCH
+        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        stopwatch.Start();
+        //START STOPWATCH
         clickPosition = mousePosition;
         if (EventSystem.current.IsPointerOverGameObject()) { return; }
         if (!mousePosition.IsWalkable()) { return; }
@@ -118,38 +130,49 @@ public class MouseManager : MonoBehaviour
         var inventory = currentCharacter.GetComponent<Inventory>();
         state = currentStats.state;
 
+        Debug.Log("StopWatch 1:" + stopwatch.Elapsed);
+
         //1 Prepare character
         currentStats.RefreshCharacter(origin); //This calls all their equipment to add values to Stats
+        Debug.Log("StopWatch 2:" + stopwatch.Elapsed);
 
         //2 If and item is selected, use that item
-        if (UseItem(mousePosition, origin, currentStats, inventory)) { return; };
-
+        if (UseItem(mousePosition, origin,currentCharacter, currentStats, inventory)) { return; };
+        Debug.Log("StopWatch 2.1:" + stopwatch.Elapsed);
         //3 Try to pick up item under current character while mouse is over them, if no item wait one tick
         if (mousePosition == origin) { WaitOrPickUpItem(mousePosition, origin, gameobjectundermouse, currentStats, currentCharacter); }
-
+        Debug.Log("StopWatch 2.2:" + stopwatch.Elapsed);
         //4 Try to attack a gameobject in range
         if (gameobjectundermouse) {
             if (!currentCharacter.CompareTag(gameobjectundermouse.tag)) {
-                if (Attack(mousePosition, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(); return; };
+                if (Attack(mousePosition, origin, gameobjectundermouse, currentCharacter)) { EndOfAction(currentCharacter,currentStats); return; };
             }
         }
 
-        
+        Debug.Log("StopWatch 3:" + stopwatch.Elapsed);
 
         //5 if a clicked on ally is next to current character during combat, swap with them
-        if (SwapPositionWithAllyDuringCombat(mousePosition, origin, gameobjectundermouse, currentStats)) { return; }
-
+        if (SwapPositionWithAllyDuringCombat(mousePosition, origin,currentCharacter, gameobjectundermouse, currentStats)) { return; }
+        Debug.Log("StopWatch 3.1:" + stopwatch.Elapsed);
         //6 Walk if all else fails
         PartyManager.i.characterFollowPosition = currentCharacter.Position();
+        Debug.Log("StopWatch 3.2:" + stopwatch.Elapsed);
         if (currentCharacter.CompareTag("Party")) { isRepeatingActionsOutsideCombat = WalkLeader(mousePosition, origin, currentStats); }
         else { isRepeatingActionsOutsideCombat = Walk(mousePosition, origin, currentStats); }
-        
+        Debug.Log("StopWatch 4:" + stopwatch.Elapsed);
         var newpos = PartyManager.i.currentCharacter.Position();
+        Debug.Log("StopWatch 4.1:" + stopwatch.Elapsed);
         if (newpos == mousePosition || newpos == origin) { isRepeatingActionsOutsideCombat = false; }
-        if (newpos != origin) { EndOfAction(); }
+        Debug.Log("StopWatch 4,2:" + stopwatch.Elapsed);
+        if (newpos != origin) { EndOfAction(currentCharacter, currentStats); }
+
+        //STOP STOPWATCH
+        stopwatch.Stop();
+        Debug.Log("StopWatch 5:" + stopwatch.Elapsed);
+        //STOP STOPWATCH
     }
 
-    public bool SwapPositionWithAllyDuringCombat(Vector3Int mousePosition, Vector3Int origin,GameObject gameobjectundermouse,Stats currentStats) {
+    public bool SwapPositionWithAllyDuringCombat(Vector3Int mousePosition, Vector3Int origin, GameObject currentCharacter, GameObject gameobjectundermouse,Stats currentStats) {
         if (gameobjectundermouse != null) {
 
             if (state != State.Combat) { return false; }
@@ -160,7 +183,7 @@ public class MouseManager : MonoBehaviour
                 if (gameobjectundermouse.CompareTag("Party")) {
                     PathingManager.i.SwapPlaces(mousePosition, origin);
                     currentStats.actionPoints -= currentStats.walkCostTemp;
-                    EndOfAction();
+                    EndOfAction(currentCharacter, currentStats);
                     return true;
                 }
             }
@@ -168,14 +191,14 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
-    public bool UseItem(Vector3Int position, Vector3Int origin, Stats currentStats, Inventory inventory) {
+    public bool UseItem(Vector3Int position, Vector3Int origin,GameObject currentCharacter, Stats currentStats, Inventory inventory) {
         if (itemSelected == null) { return false; }
 
         if (inventory.items.Contains(itemSelected)) {
             Actions.i.ThrowItem(position, origin, itemSelected, inventory);
             ChangeActionPoints(position, origin, inventory, currentStats, 1);
             SelectItem(null);
-            EndOfAction();
+            EndOfAction(currentCharacter, currentStats);
             return true;
         }
         var skill = itemSelected as Skill;
@@ -186,7 +209,7 @@ public class MouseManager : MonoBehaviour
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);
 
-        EndOfAction();
+        EndOfAction(currentCharacter, currentStats);
         return true;
     }
 
@@ -230,43 +253,54 @@ public class MouseManager : MonoBehaviour
     [HideInInspector] public bool blockPickup = false;
     [HideInInspector] public bool pickUpButNotAddToInventory = false;
     public void WaitOrPickUpItem(Vector3Int position, Vector3Int origin, GameObject target, Stats currentStats, GameObject currentCharacter) {
-
+        //START STOPWATCH
+        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        stopwatch.Start();
+        //START STOPWATCH
+        if(position != origin) { return; }
         var mech = GridManager.i.mechMethods.GetMechanism(position);
         if(mech)mech.Call(position,MechStatic.Signal.ClickOnWhileStandingOntopOf);
-
+        Debug.Log("WaitOrPickup 1 StopWatch:" + stopwatch.Elapsed);
         //Wait
-        if(target != currentCharacter) { return; }
+        if (target != currentCharacter) { return; }
         if (position.Item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
-            EndOfAction();
+            EndOfAction(currentCharacter, currentStats);
             return;
         }
-
+        Debug.Log("WaitOrPickup 2 StopWatch:" + stopwatch.Elapsed);
         //Pick up
         var inventory = currentCharacter.GetComponent<Inventory>();
         var item = position.Item();
         if (item) {
+            Debug.Log("WaitOrPickup 3 StopWatch:" + stopwatch.Elapsed);
             item.Call(position, origin,currentCharacter, CallType.OnPickupItem);
-            if (blockPickup) { EndOfAction();return; }
+            if (blockPickup) { EndOfAction(currentCharacter, currentStats);return; }
             //Coins hack, better this concept if needed
-            if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction();return; }
-
+            if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction(currentCharacter, currentStats);return; }
+            Debug.Log("WaitOrPickup 4 StopWatch:" + stopwatch.Elapsed);
             if (inventory.items.Count < globalValues.maxItems) {
                 GridManager.i.itemMethods.RemoveItem(position);
                 inventory.AddItem(item);
                 bagAnimation.PlayAnimation(item);
 
             }
+            Debug.Log("WaitOrPickup 5 StopWatch:" + stopwatch.Elapsed);
         }
 
         currentStats.actionPoints -= 1;
-        EndOfAction();
+        //STOP STOPWATCH
+        stopwatch.Stop();
+        Debug.Log("WaitOrPickup 6 StopWatch:" + stopwatch.Elapsed);
+        //STOP STOPWATCH
+        EndOfAction(currentCharacter, currentStats);
     }
 
     public bool WalkLeader(Vector3Int position, Vector3Int origin, Stats stats) {
         var walkCost = stats.walkCostTemp;
         if (walkCost > stats.actionPoints) { return false; }
-        var walked = PathingManager.i.MoveOneStepLeader(position, origin);
+
+        var walked = PathingManager.i.MoveOneStepLeader(position, origin,stats.gameObject);
         if (walked) {
             stats.actionPoints -= walkCost;
             return true;
@@ -292,14 +326,12 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
-    public void EndOfAction() {
+    public void EndOfAction(GameObject currentCharacter,Stats currentStats) {
 
         pickUpButNotAddToInventory = false;
         blockPickup = false;
         var partyManager = PartyManager.i;
-        var currentCharacter = PartyManager.i.currentCharacter;
-        var currentStats = currentCharacter.GetComponent<Stats>();
-        partyManager.RemoveNullCharacters(partyManager.party);
+        //partyManager.RemoveNullCharacters(partyManager.party);
         if (currentStats.state == State.Idle) {
             foreach (GameObject member in partyManager.party) {
                 member.GetComponent<Stats>().ResetActionPoints();
@@ -324,7 +356,7 @@ public class MouseManager : MonoBehaviour
         }
         if (isRepeatingActionsOutsideCombat) { StartCoroutine(RepeatDelay());  }
 
-        GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
+        //GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
     }
 
     public IEnumerator RepeatDelay() {
@@ -334,19 +366,20 @@ public class MouseManager : MonoBehaviour
 
 
     public void Repeat() {
-        if (!isRepeatingActionsOutsideCombat) { EndOfAction(); return; }
         var currentCharacter = PartyManager.i.currentCharacter;
         if (currentCharacter == null) { return; }
         var origin = currentCharacter.Position();
         var currentStats = currentCharacter.GetComponent<Stats>();
+        if (!isRepeatingActionsOutsideCombat) { EndOfAction(currentCharacter, currentStats); return; }
+      
         var inventory = currentCharacter.GetComponent<Inventory>();
         var target = clickPosition.GameObjectSpawn();
         currentStats.RefreshCharacter(origin);
-        if (UseItem(clickPosition, origin, currentStats, inventory)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
+        if (UseItem(clickPosition, origin,currentCharacter, currentStats, inventory)) { isRepeatingActionsOutsideCombat = false; EndOfAction(currentCharacter,currentStats); return; };
 
         if (target) {
             if (!currentCharacter.CompareTag(target.tag)) {
-                if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(); return; };
+                if (Attack(clickPosition, origin, target, currentCharacter)) { isRepeatingActionsOutsideCombat = false; EndOfAction(currentCharacter, currentStats); return; };
             }
         }
 
@@ -359,7 +392,7 @@ public class MouseManager : MonoBehaviour
             isRepeatingActionsOutsideCombat = false;
         }
         if(currentStats.state == State.Combat) { isRepeatingActionsOutsideCombat = false; }
-        EndOfAction();
+        EndOfAction(currentCharacter,currentStats);
     }
 
     public Vector3Int MousePositionOnGrid() {
@@ -382,31 +415,35 @@ public class MouseManager : MonoBehaviour
         return true;
     }
 
-    public void UpdateHightlight(Vector3Int mousePosition) { 
-        if (mousePosition != lastMousePosition) {
-            lastMousePosition = mousePosition;
-            if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
-            if (GridManager.i.FogTile(mousePosition) || !mousePosition.IsWalkable()) {
-                GameUIManager.i.HideHighlight(); return;
-            }
-            GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
-            if (itemSelected is Skill) {
-                var skill = itemSelected as Skill;
-                if (skill.rangeType == Skill.RangeType.CircleUnderMouse) {
-                    var currentCharacter = PartyManager.i.currentCharacter;
-                    var origin = currentCharacter.Position();
-                    var currentStats = currentCharacter.GetComponent<Stats>();
-                    currentStats.RefreshCharacter(origin);
-                    GameUIManager.i.ShowRange(origin, skill.range, true);
-                    if (mousePosition.InRange(origin, skill.range)) {
-                        GameUIManager.i.ShowRange(mousePosition, skill.AOE);
-                    }
-                    else {
-                        GameUIManager.i.groundUI.ClearAllTiles();
-                    }
-
-                }
-            }
+    public void UpdateHightlight(Vector3Int mousePosition) {
+        if (mousePosition == lastMouseCoord) { return; }
+        if(Input.mousePosition == lastMousePosition) { return; }
+        lastMouseCoord = mousePosition;
+        if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }
+        if (GridManager.i.FogTile(mousePosition) || !mousePosition.IsWalkable()) {
+            GameUIManager.i.HideHighlight(); return;
         }
+
+        //GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
+
+        if (itemSelected is not Skill) { return; }
+        var skill = itemSelected as Skill;
+
+        if (skill.rangeType == Skill.RangeType.CircleUnderMouse) {
+            var currentCharacter = PartyManager.i.currentCharacter;
+            var origin = currentCharacter.Position();
+            var currentStats = currentCharacter.GetComponent<Stats>();
+            currentStats.RefreshCharacter(origin);
+            GameUIManager.i.ShowRange(origin, skill.range, true);
+            if (mousePosition.InRange(origin, skill.range)) {
+                GameUIManager.i.ShowRange(mousePosition, skill.AOE);
+            }
+            else {
+                GameUIManager.i.groundUI.ClearAllTiles();
+            }
+
+        }
+
+
     }
 }

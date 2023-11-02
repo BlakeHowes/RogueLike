@@ -26,7 +26,7 @@ public class UtilityActions : Action {
             case Type.SetInactive:if(parentGO) parentGO.SetActive(false); break;
             case Type.SetActive: parentGO.SetActive(true); break;
             case Type.ChangeSprite: parentGO.GetComponent<SpriteRenderer>().sprite = spriteValue; break;
-            case Type.DropItem: GridManager.i.itemMethods.FloodFillDropItem(origin,true,itemValue); break;
+            case Type.DropItem: GridManager.i.itemMethods.FloodFillDropItem(position,true,itemValue); break;
             case Type.JumpToPosition: waitTime= PathingManager.i.Jump(position, origin,5); break;
         }
         yield return new WaitForSeconds(waitTime);

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using static ItemStatic;
 //[CreateAssetMenu(fileName = "AddStat", menuName = "Actions/AddStat")]
@@ -12,13 +11,23 @@ public class AddStat : Action {
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         amount = actionContainer.intValue;
         SaveValues(position, origin,parentGO,parentItem);
-        if(ability.callType == CallType.CalculateStats) { ChangeStats();return true; }
+        if(ability.callType == CallType.CalculateStats) { ChangeStats(); return true; }
         this.AddToStack();
         return true;
     }
 
     public void ChangeStats() {
         Stats stats = null;
+
+        if (amount == 0) {
+            var action = GridManager.i.GetNextStackItem();
+            if(action is ValueOverride) {
+                var valueOverride = action as ValueOverride;
+                amount = valueOverride.GetValue(parentGO);
+                Debug.Log("OVERRIDE AMOUNT" + amount);
+            }
+        }
+
         if (userGainsStat) {
             if (!parentGO) { return; }
             stats = parentGO.GetComponent<Stats>();

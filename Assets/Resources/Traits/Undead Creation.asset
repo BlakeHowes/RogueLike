@@ -20,7 +20,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1, type: 3}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -40,7 +41,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 2354247380013042016, guid: 2a67c3c68dc52da4790fbbc4b0afebb1, type: 3}
+      prefabValue: {fileID: 2354247380013042016, guid: 2a67c3c68dc52da4790fbbc4b0afebb1,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -50,7 +52,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1, type: 3}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -60,31 +63,11 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1, type: 3}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  - callType: 0
-    actionContainers:
-    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1, type: 3}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: 55e8dc9fbafb3ca448985fa623eab9c1, type: 3}
-      stringValue: 
-    - action: {fileID: 11400000, guid: 7d6db3d4bdc477c4fb2f1bec81fa60f4, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1, type: 3}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: 55e8dc9fbafb3ca448985fa623eab9c1, type: 3}
-      stringValue: 
+  notes: 

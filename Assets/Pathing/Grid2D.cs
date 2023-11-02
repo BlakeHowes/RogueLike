@@ -22,7 +22,6 @@ public class Grid2D {
             for (int l = 0; l < length; l++) {
                 int index = w * length + l;
                 var cell = new Cell(new Vector3Int(w, l));
-
                 cells[index] = cell;
             }
         }
@@ -30,13 +29,8 @@ public class Grid2D {
 
 
     public Cell FindCellByPosition(Vector3Int pos) {
-        if (pos.x >= 0 && pos.x < width && pos.y >= 0 && pos.y < length) {
-            int index = pos.x * length + pos.y;
-            var cell = cells[index];
-            return cell;
-        }
-
-        throw new System.Exception(string.Format("There is no cell on the grid corresponding to position {0}", pos));
+        int index = pos.x * length + pos.y;
+        return cells[index];
     }
 
     public Cell[] GetMooreNeighbours(Cell current) {

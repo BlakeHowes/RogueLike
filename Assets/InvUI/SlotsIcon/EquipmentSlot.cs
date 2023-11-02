@@ -18,14 +18,15 @@ public class EquipmentSlot : MonoBehaviour {
     }
     public void Equip() {
         var itemSelected = MouseManager.i.itemSelected;
-        var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
+        var currentCharacter = PartyManager.i.currentCharacter;
+        var inventory = currentCharacter.GetComponent<Inventory>();
         if (item) { RemoveItem(inventory); }
         if (itemSelected) { EquipItemSelected(inventory,itemSelected); }
         MouseManager.i.itemSelected = null;
         InventoryManager.i.DeselectItems();
         var position = inventory.gameObject.Position();
 
-        InventoryManager.i.UpdateInventory();
+        InventoryManager.i.UpdateInventory(currentCharacter);
         PartyManager.i.currentCharacter.GetComponent<Stats>().RefreshCharacter(position);
         CharacterSpriteGenerator.CreateCharacterSprite(inventory.gameObject);
     }

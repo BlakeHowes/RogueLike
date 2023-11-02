@@ -43,7 +43,7 @@ public class Actions : MonoBehaviour
 
         if (!itemOverTotalUses) {
             setItem.itemValue = item;
-            setItem.action.Condition(position, origin,inventory.gameObject,null,null, setItem);
+            setItem.action.Condition(landPos, origin,inventory.gameObject,null,null, setItem);
         }
         
 

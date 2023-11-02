@@ -16,10 +16,11 @@ MonoBehaviour:
   iconColour: {r: 1, g: 0.5922127, b: 0.28627455, a: 1}
   combinations: []
   abilities: []
-  StatusEffect: {fileID: 0}
+  StatusEffect: {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
   duration: {x: 55, y: 68}
   counter: 0
-  effectPrefab: {fileID: 0}
+  effectPrefab: {fileID: 5137123306192418792, guid: 1115934704833824a9e0a7337ceff8c6,
+    type: 3}
   dryUpSurface: {fileID: 0}
   dryUp: 1
   tryToSpread: 1

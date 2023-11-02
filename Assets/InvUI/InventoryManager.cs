@@ -11,10 +11,21 @@ public class InventoryManager : MonoBehaviour
     public GameObject equipmentLayout;
     public GameObject skillLayout;
     public GameObject bagLayout;
+    private List<SkillSlot> skillSlots = new List<SkillSlot>();
     public List<ItemAbstract> skills = new List<ItemAbstract>();
     Inventory currentInventory;
     public void Awake() {
         i = this;
+        if (!skillLayout) { return; }
+        foreach (Transform slot in skillLayout.transform) {
+            skillSlots.Add(slot.gameObject.GetComponent<SkillSlot>());
+        }
+    }
+
+    public GameObject InstantiateGo(GameObject go) {
+        var clone = Instantiate(go);
+        clone.name = go.name;
+        return clone;
     }
 
     public void ToggleHideHelmet() {
@@ -80,30 +91,28 @@ public class InventoryManager : MonoBehaviour
     }
 
     public void UpdateSkillSlotGraphics() {
-        foreach (Transform slot in skillLayout.transform) {
-            slot.gameObject.GetComponent<SkillSlot>().UpdateGraphic();
+        foreach (SkillSlot slot in skillSlots) {
+            slot.UpdateGraphic();
         }
     }
 
     public void CreateSkillSlots(Inventory inventory) {
         int i = 0;
         int skillsLength = inventory.skills.Count;
-        foreach (Transform slot in skillLayout.transform) {
-            var skillSlot = slot.GetComponent<SkillSlot>();
+        foreach (SkillSlot slot in skillSlots) {
             if (i < skillsLength) {
                 var skill = inventory.skills[i];
                 if (!skill) { continue; }
-                skillSlot.AddSkill(skill as Skill);
+                slot.AddSkill(skill as Skill);
                 slot.gameObject.SetActive(true);
             }
-            else { skillSlot.ResetGraphic(); }
+            else { slot.ResetGraphic(); }
             i++;
         }
     }
 
 
-    public void UpdateInventory() { //THIS HAPPENS A LOT
-        var character = PartyManager.i.currentCharacter;
+    public void UpdateInventory(GameObject character) { //THIS HAPPENS A LOT
         var inventory = character.GetComponent<Inventory>();
         var position = character.Position();
         UpdateEquipmentSlots(inventory);

@@ -108,8 +108,7 @@ public class PathingManager : MonoBehaviour
         spring.SpringTo(position, globalValues.Dampening, globalValues.Hardness);
     }
 
-    public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin) {
-        var character = origin.GameObjectSpawn();
+    public bool MoveOneStepLeader(Vector3Int position, Vector3Int origin,GameObject character) {
         if (character == null) { return true; }
         if (origin == globalValues.NullValue) {
             Debug.LogError("MoveOneStep returned, origin not found");

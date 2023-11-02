@@ -364,78 +364,78 @@ extern void GridGraphics_TimeFromSpeed_mBE3E4C1914F46669D1E98DDADCBA96A3A29C3EA9
 extern void GridGraphics_TileLerp_mCE1CDD9F8529207808566A014914D9B0106E285B (void);
 // 0x000000B0 System.Collections.IEnumerator GridGraphics::FlashAnimation(UnityEngine.GameObject,UnityEngine.Vector3Int,UnityEngine.Color)
 extern void GridGraphics_FlashAnimation_m2AB1FF7710F3118CF577D01AFA6E0BE68D90472A (void);
-// 0x000000B1 System.Void GridGraphics/<LerpPosition>d__16::.ctor(System.Int32)
-extern void U3CLerpPositionU3Ed__16__ctor_m8B4C2280C31570B8DB92268D96E4B6628E5A7D43 (void);
-// 0x000000B2 System.Void GridGraphics/<LerpPosition>d__16::System.IDisposable.Dispose()
-extern void U3CLerpPositionU3Ed__16_System_IDisposable_Dispose_m33BDB787B68150225DA82BD0F2799F13EA2A68CD (void);
-// 0x000000B3 System.Boolean GridGraphics/<LerpPosition>d__16::MoveNext()
-extern void U3CLerpPositionU3Ed__16_MoveNext_m90D1CFBC805DFC0F269889B21611E35F5A526365 (void);
-// 0x000000B4 System.Object GridGraphics/<LerpPosition>d__16::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CLerpPositionU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m484E482F275E2FAE4C93D43DFDA019A7D2CD03C2 (void);
-// 0x000000B5 System.Void GridGraphics/<LerpPosition>d__16::System.Collections.IEnumerator.Reset()
-extern void U3CLerpPositionU3Ed__16_System_Collections_IEnumerator_Reset_mE802D93B5A416CEE2B79A5098DFB65F19565421F (void);
-// 0x000000B6 System.Object GridGraphics/<LerpPosition>d__16::System.Collections.IEnumerator.get_Current()
-extern void U3CLerpPositionU3Ed__16_System_Collections_IEnumerator_get_Current_m9CA68A1FC616FF0954034051699A35D494F15924 (void);
-// 0x000000B7 System.Void GridGraphics/<RollToPosition>d__18::.ctor(System.Int32)
-extern void U3CRollToPositionU3Ed__18__ctor_m726F4BD13B5B5C1FCCA51F1F95305AED832B75AD (void);
-// 0x000000B8 System.Void GridGraphics/<RollToPosition>d__18::System.IDisposable.Dispose()
-extern void U3CRollToPositionU3Ed__18_System_IDisposable_Dispose_m6606460DBD17C39AB99DB33CA529D458FA884298 (void);
-// 0x000000B9 System.Boolean GridGraphics/<RollToPosition>d__18::MoveNext()
-extern void U3CRollToPositionU3Ed__18_MoveNext_mEB89A66FDBEA53DE06A2ECDE8506E2E09831FAAC (void);
-// 0x000000BA System.Object GridGraphics/<RollToPosition>d__18::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CRollToPositionU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m72A2ED7BCD4A41D05AE2784EB1DE2FA9C29A182F (void);
-// 0x000000BB System.Void GridGraphics/<RollToPosition>d__18::System.Collections.IEnumerator.Reset()
-extern void U3CRollToPositionU3Ed__18_System_Collections_IEnumerator_Reset_m1CA99B539E5A5CE0A423B0AA10A47C65FA8F8D9B (void);
-// 0x000000BC System.Object GridGraphics/<RollToPosition>d__18::System.Collections.IEnumerator.get_Current()
-extern void U3CRollToPositionU3Ed__18_System_Collections_IEnumerator_get_Current_mA90452A1144D580D765033A0FBE532D0BDCC600E (void);
-// 0x000000BD System.Void GridGraphics/<NudgeSpring>d__19::.ctor(System.Int32)
-extern void U3CNudgeSpringU3Ed__19__ctor_m4C87AE80F707F2D5C8618E00B79C5ABD24B0F14D (void);
-// 0x000000BE System.Void GridGraphics/<NudgeSpring>d__19::System.IDisposable.Dispose()
-extern void U3CNudgeSpringU3Ed__19_System_IDisposable_Dispose_m306B882D5159FB7F159849398C02A837C8D83390 (void);
-// 0x000000BF System.Boolean GridGraphics/<NudgeSpring>d__19::MoveNext()
-extern void U3CNudgeSpringU3Ed__19_MoveNext_mF40FE819ED015EFAB2BC8F4F87927880C2C57427 (void);
-// 0x000000C0 System.Object GridGraphics/<NudgeSpring>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CNudgeSpringU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD442A28D43421797785E0B15B71456487AA6349F (void);
-// 0x000000C1 System.Void GridGraphics/<NudgeSpring>d__19::System.Collections.IEnumerator.Reset()
-extern void U3CNudgeSpringU3Ed__19_System_Collections_IEnumerator_Reset_m4498A94564F3AD6DD287F2937CA9C44846D2EFE2 (void);
-// 0x000000C2 System.Object GridGraphics/<NudgeSpring>d__19::System.Collections.IEnumerator.get_Current()
-extern void U3CNudgeSpringU3Ed__19_System_Collections_IEnumerator_get_Current_mCD584252F6AB06F6D8B3C20DBFC9A2EE42C2CE4F (void);
-// 0x000000C3 System.Void GridGraphics/<LerpPositionSpring>d__20::.ctor(System.Int32)
-extern void U3CLerpPositionSpringU3Ed__20__ctor_m6FAEDB5F2C3CD7379B3D824018BB6C8B7E58D6FE (void);
-// 0x000000C4 System.Void GridGraphics/<LerpPositionSpring>d__20::System.IDisposable.Dispose()
-extern void U3CLerpPositionSpringU3Ed__20_System_IDisposable_Dispose_mC713F6FC4248C385BB37635DB59EA4286F9C500B (void);
-// 0x000000C5 System.Boolean GridGraphics/<LerpPositionSpring>d__20::MoveNext()
-extern void U3CLerpPositionSpringU3Ed__20_MoveNext_m454D9099B85F6AD2EDA6759F30C30D48EE903BE0 (void);
-// 0x000000C6 System.Object GridGraphics/<LerpPositionSpring>d__20::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CLerpPositionSpringU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m91650D2CCBCA8DE236BF99746CA39F9871BBFEFF (void);
-// 0x000000C7 System.Void GridGraphics/<LerpPositionSpring>d__20::System.Collections.IEnumerator.Reset()
-extern void U3CLerpPositionSpringU3Ed__20_System_Collections_IEnumerator_Reset_mAB98AD8A4C9153DF179CEE780FC19D3F64BAD1DE (void);
-// 0x000000C8 System.Object GridGraphics/<LerpPositionSpring>d__20::System.Collections.IEnumerator.get_Current()
-extern void U3CLerpPositionSpringU3Ed__20_System_Collections_IEnumerator_get_Current_m61A2DE194D3E07C920DE78F961AB91128A1D966F (void);
-// 0x000000C9 System.Void GridGraphics/<TileLerp>d__22::.ctor(System.Int32)
-extern void U3CTileLerpU3Ed__22__ctor_m571C75DAC264E5BC924D4AC8D7B1F0BC3A0282AE (void);
-// 0x000000CA System.Void GridGraphics/<TileLerp>d__22::System.IDisposable.Dispose()
-extern void U3CTileLerpU3Ed__22_System_IDisposable_Dispose_mE3D809A6252DF68C0F2CA69DC8BA07B9B38B70FB (void);
-// 0x000000CB System.Boolean GridGraphics/<TileLerp>d__22::MoveNext()
-extern void U3CTileLerpU3Ed__22_MoveNext_m644D5258AF386A38D5A38DA173DCD739506A8114 (void);
-// 0x000000CC System.Object GridGraphics/<TileLerp>d__22::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CTileLerpU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB7E73B142A12BA4D83BFE5A8CE1BC25C044BDE1F (void);
-// 0x000000CD System.Void GridGraphics/<TileLerp>d__22::System.Collections.IEnumerator.Reset()
-extern void U3CTileLerpU3Ed__22_System_Collections_IEnumerator_Reset_m2544ADBD825F71541D4CFDC3CAB532C784834465 (void);
-// 0x000000CE System.Object GridGraphics/<TileLerp>d__22::System.Collections.IEnumerator.get_Current()
-extern void U3CTileLerpU3Ed__22_System_Collections_IEnumerator_get_Current_m837557238DD9637A8739B21A782E35779DC29137 (void);
-// 0x000000CF System.Void GridGraphics/<FlashAnimation>d__23::.ctor(System.Int32)
-extern void U3CFlashAnimationU3Ed__23__ctor_m63E4C22FAB50051CD7D5880BB7230D9BCB060E39 (void);
-// 0x000000D0 System.Void GridGraphics/<FlashAnimation>d__23::System.IDisposable.Dispose()
-extern void U3CFlashAnimationU3Ed__23_System_IDisposable_Dispose_mE57E53376C1AA5060071D89874CD3EF11187A751 (void);
-// 0x000000D1 System.Boolean GridGraphics/<FlashAnimation>d__23::MoveNext()
-extern void U3CFlashAnimationU3Ed__23_MoveNext_mFA710068FEE51F385463E617E79BB071D57984C9 (void);
-// 0x000000D2 System.Object GridGraphics/<FlashAnimation>d__23::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CFlashAnimationU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3C9037F9E1517168D8560C5A501D65D90250028F (void);
-// 0x000000D3 System.Void GridGraphics/<FlashAnimation>d__23::System.Collections.IEnumerator.Reset()
-extern void U3CFlashAnimationU3Ed__23_System_Collections_IEnumerator_Reset_m19F48A856ED7DFECE2759ED459BDC6F870A36116 (void);
-// 0x000000D4 System.Object GridGraphics/<FlashAnimation>d__23::System.Collections.IEnumerator.get_Current()
-extern void U3CFlashAnimationU3Ed__23_System_Collections_IEnumerator_get_Current_m8C8A3F3E1090585451F9847EAC13EC956CEBCC1C (void);
+// 0x000000B1 System.Void GridGraphics/<LerpPosition>d__17::.ctor(System.Int32)
+extern void U3CLerpPositionU3Ed__17__ctor_mF5B812E0BF9EE3290ECC9E516F52285D67ECFEDE (void);
+// 0x000000B2 System.Void GridGraphics/<LerpPosition>d__17::System.IDisposable.Dispose()
+extern void U3CLerpPositionU3Ed__17_System_IDisposable_Dispose_m6D49758ABDE90470C9A6B12ED433E09F274064C2 (void);
+// 0x000000B3 System.Boolean GridGraphics/<LerpPosition>d__17::MoveNext()
+extern void U3CLerpPositionU3Ed__17_MoveNext_m1FFA0B7B6E73E6F98205A65F58A5293F5076F098 (void);
+// 0x000000B4 System.Object GridGraphics/<LerpPosition>d__17::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLerpPositionU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1E57D98C2DBB4E62E0C3634E03912790BE8BF3BB (void);
+// 0x000000B5 System.Void GridGraphics/<LerpPosition>d__17::System.Collections.IEnumerator.Reset()
+extern void U3CLerpPositionU3Ed__17_System_Collections_IEnumerator_Reset_m5FB498F2C724AC76FB1866086854FBA8E4C2DF51 (void);
+// 0x000000B6 System.Object GridGraphics/<LerpPosition>d__17::System.Collections.IEnumerator.get_Current()
+extern void U3CLerpPositionU3Ed__17_System_Collections_IEnumerator_get_Current_m53800203EC2115BA4DB550B712542FF60712C5A0 (void);
+// 0x000000B7 System.Void GridGraphics/<RollToPosition>d__19::.ctor(System.Int32)
+extern void U3CRollToPositionU3Ed__19__ctor_mFD8D497B2EC0A9C54089ABBDD8D560D4DA746351 (void);
+// 0x000000B8 System.Void GridGraphics/<RollToPosition>d__19::System.IDisposable.Dispose()
+extern void U3CRollToPositionU3Ed__19_System_IDisposable_Dispose_m32B15FE8AA5AB77BAEBAC07EA817CA9162368770 (void);
+// 0x000000B9 System.Boolean GridGraphics/<RollToPosition>d__19::MoveNext()
+extern void U3CRollToPositionU3Ed__19_MoveNext_mCE6260E77AF98563E10D56513017A8B0C1E3ACFA (void);
+// 0x000000BA System.Object GridGraphics/<RollToPosition>d__19::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CRollToPositionU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEC97F388D384F5A45C61ED0CB7996DB50E752C03 (void);
+// 0x000000BB System.Void GridGraphics/<RollToPosition>d__19::System.Collections.IEnumerator.Reset()
+extern void U3CRollToPositionU3Ed__19_System_Collections_IEnumerator_Reset_mDB130E02BA7DDE8D6343F369D2EDD06CCD9B6658 (void);
+// 0x000000BC System.Object GridGraphics/<RollToPosition>d__19::System.Collections.IEnumerator.get_Current()
+extern void U3CRollToPositionU3Ed__19_System_Collections_IEnumerator_get_Current_m5B25144E759CA19029DD936B193D1E6DC34F4008 (void);
+// 0x000000BD System.Void GridGraphics/<NudgeSpring>d__20::.ctor(System.Int32)
+extern void U3CNudgeSpringU3Ed__20__ctor_mE10DCDE359AC56B2195E22518461BC308F07AD5E (void);
+// 0x000000BE System.Void GridGraphics/<NudgeSpring>d__20::System.IDisposable.Dispose()
+extern void U3CNudgeSpringU3Ed__20_System_IDisposable_Dispose_mA88905636C77F21A45BF2DE37058C5D0FA253EE2 (void);
+// 0x000000BF System.Boolean GridGraphics/<NudgeSpring>d__20::MoveNext()
+extern void U3CNudgeSpringU3Ed__20_MoveNext_mAEB466C8A671ABB6A27D15DEA1C471813AC47BDB (void);
+// 0x000000C0 System.Object GridGraphics/<NudgeSpring>d__20::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CNudgeSpringU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m35C17205BA9A2A5A5121A97B3F8E94A839CF3D56 (void);
+// 0x000000C1 System.Void GridGraphics/<NudgeSpring>d__20::System.Collections.IEnumerator.Reset()
+extern void U3CNudgeSpringU3Ed__20_System_Collections_IEnumerator_Reset_m5B069B969B57C9CFADE613F9BF0FB50927ABCAAC (void);
+// 0x000000C2 System.Object GridGraphics/<NudgeSpring>d__20::System.Collections.IEnumerator.get_Current()
+extern void U3CNudgeSpringU3Ed__20_System_Collections_IEnumerator_get_Current_m7393A6078EB2B20BD79B6B9EA7742CD618B7ACF7 (void);
+// 0x000000C3 System.Void GridGraphics/<LerpPositionSpring>d__21::.ctor(System.Int32)
+extern void U3CLerpPositionSpringU3Ed__21__ctor_m7EC024E5AA2540C36A6048D4F9C56756D9A0139D (void);
+// 0x000000C4 System.Void GridGraphics/<LerpPositionSpring>d__21::System.IDisposable.Dispose()
+extern void U3CLerpPositionSpringU3Ed__21_System_IDisposable_Dispose_m0509224292E79545E3A8A5D19295E853B62D89C2 (void);
+// 0x000000C5 System.Boolean GridGraphics/<LerpPositionSpring>d__21::MoveNext()
+extern void U3CLerpPositionSpringU3Ed__21_MoveNext_m2504ACCCE2110AA6BD268DF3E777FBEC11148706 (void);
+// 0x000000C6 System.Object GridGraphics/<LerpPositionSpring>d__21::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CLerpPositionSpringU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8A9505020EB43846EB7EDA11C82055EAF0B22C6E (void);
+// 0x000000C7 System.Void GridGraphics/<LerpPositionSpring>d__21::System.Collections.IEnumerator.Reset()
+extern void U3CLerpPositionSpringU3Ed__21_System_Collections_IEnumerator_Reset_m5F7377C4B53925AFC4DD586205AB0C5A7B71199C (void);
+// 0x000000C8 System.Object GridGraphics/<LerpPositionSpring>d__21::System.Collections.IEnumerator.get_Current()
+extern void U3CLerpPositionSpringU3Ed__21_System_Collections_IEnumerator_get_Current_m3B3DBFC2E13107B16B89E7AE0213EBA707DB174E (void);
+// 0x000000C9 System.Void GridGraphics/<TileLerp>d__23::.ctor(System.Int32)
+extern void U3CTileLerpU3Ed__23__ctor_m5254F966CF81E56B7672B2BE20F04B8879694482 (void);
+// 0x000000CA System.Void GridGraphics/<TileLerp>d__23::System.IDisposable.Dispose()
+extern void U3CTileLerpU3Ed__23_System_IDisposable_Dispose_mDD7A6723D0D3B924B2B7E91B9942D69D953149EA (void);
+// 0x000000CB System.Boolean GridGraphics/<TileLerp>d__23::MoveNext()
+extern void U3CTileLerpU3Ed__23_MoveNext_m5651A060E8D193E9892188748214E624A0002079 (void);
+// 0x000000CC System.Object GridGraphics/<TileLerp>d__23::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CTileLerpU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF50C86D2489AFE6BA2460D1FE3F39E88BB3A3E8A (void);
+// 0x000000CD System.Void GridGraphics/<TileLerp>d__23::System.Collections.IEnumerator.Reset()
+extern void U3CTileLerpU3Ed__23_System_Collections_IEnumerator_Reset_m614C5E167170BDA80650A50CC6B8BB3EEF3F4D61 (void);
+// 0x000000CE System.Object GridGraphics/<TileLerp>d__23::System.Collections.IEnumerator.get_Current()
+extern void U3CTileLerpU3Ed__23_System_Collections_IEnumerator_get_Current_mC9ACA76A7EE048308CC2AF2F725F33B669D64017 (void);
+// 0x000000CF System.Void GridGraphics/<FlashAnimation>d__24::.ctor(System.Int32)
+extern void U3CFlashAnimationU3Ed__24__ctor_mAF31998CF68D0DA54D8C41352B46C5B095F77F63 (void);
+// 0x000000D0 System.Void GridGraphics/<FlashAnimation>d__24::System.IDisposable.Dispose()
+extern void U3CFlashAnimationU3Ed__24_System_IDisposable_Dispose_m8A28B90212D02294B707BCAAFB65516E40F338ED (void);
+// 0x000000D1 System.Boolean GridGraphics/<FlashAnimation>d__24::MoveNext()
+extern void U3CFlashAnimationU3Ed__24_MoveNext_m86FCDB979811F040FDEE6A09A203568B4F78B892 (void);
+// 0x000000D2 System.Object GridGraphics/<FlashAnimation>d__24::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CFlashAnimationU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0357875AACB3F2B90166DB894DEC0AF58140BEEA (void);
+// 0x000000D3 System.Void GridGraphics/<FlashAnimation>d__24::System.Collections.IEnumerator.Reset()
+extern void U3CFlashAnimationU3Ed__24_System_Collections_IEnumerator_Reset_mA545D0418154187224E726E54B21CDA063BB2769 (void);
+// 0x000000D4 System.Object GridGraphics/<FlashAnimation>d__24::System.Collections.IEnumerator.get_Current()
+extern void U3CFlashAnimationU3Ed__24_System_Collections_IEnumerator_get_Current_m6D73B348B0C00CFB8CF64EE880C0C9E75BF41FEB (void);
 // 0x000000D5 System.Void GridManager::Awake()
 extern void GridManager_Awake_m663A059BFA9CB0F09507D270962932D937C78AE7 (void);
 // 0x000000D6 System.Void GridManager::Initialize()
@@ -728,8 +728,8 @@ extern void InventoryManager_UpdateInvetorySlots_m11D534F76A1A843064C19D691DBC32
 extern void InventoryManager_UpdateSkillSlotGraphics_m258D2BF6418F8E191C432EC2A98DE12E68C3E3D5 (void);
 // 0x00000166 System.Void InventoryManager::CreateSkillSlots(Inventory)
 extern void InventoryManager_CreateSkillSlots_mF5A8E1E7900DEEA4940B4516F188F7AAA1B69D9F (void);
-// 0x00000167 System.Void InventoryManager::UpdateInventory()
-extern void InventoryManager_UpdateInventory_m85B32CE8C31B6E843C4245BAAA5F6C3CB034A47A (void);
+// 0x00000167 System.Void InventoryManager::UpdateInventory(UnityEngine.GameObject)
+extern void InventoryManager_UpdateInventory_m7BBB8CEF7DC99D0D823B47BD8619D4FC49B40861 (void);
 // 0x00000168 System.Void InventoryManager::AddSkill(ItemAbstract)
 extern void InventoryManager_AddSkill_m48CECD881943C9EDED8785FCAF4C9CCD36CC7011 (void);
 // 0x00000169 System.Void InventoryManager::CreateSkills(Inventory,UnityEngine.Vector3Int)
@@ -1030,8 +1030,8 @@ extern void PathingManager_SwapPlacesSpring_m19BFBE0E3033B78B873F4411D08A108E046
 extern void PathingManager_MoveOneStep_mFAE0BAE97EB493ECB52333331D2305B9045A1E3D (void);
 // 0x000001FD System.Collections.IEnumerator PathingManager::WalkAnimation(UnityEngine.GameObject,UnityEngine.Vector3)
 extern void PathingManager_WalkAnimation_mA2EEA31D4B8725D36664CDB9A87A7FD651DD00FF (void);
-// 0x000001FE System.Boolean PathingManager::MoveOneStepLeader(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
-extern void PathingManager_MoveOneStepLeader_m7E81FB401CC9A5B59C9B5C8747213C0E0CF972B9 (void);
+// 0x000001FE System.Boolean PathingManager::MoveOneStepLeader(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject)
+extern void PathingManager_MoveOneStepLeader_mCA57E0D0BFDF1D44EC4B8C7498C5AC1C21A7C429 (void);
 // 0x000001FF System.Single PathingManager::Jump(UnityEngine.Vector3Int,UnityEngine.Vector3Int,System.Single)
 extern void PathingManager_Jump_m391AFA5782E3700A6CE57490E8E6D1FC58B86C4D (void);
 // 0x00000200 System.Void PathingManager::MovePosition(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject)
@@ -2063,4920 +2063,4936 @@ extern void CharacterSpriteGenerator_ColourizeSprite_m7D1B6712A419A588BE82EEC7F9
 extern void FloorManager_Awake_m89C18E059C58484EA987994B69D24F75529AF904 (void);
 // 0x00000404 System.Boolean FloorManager::IsWalkable(UnityEngine.Vector3Int)
 extern void FloorManager_IsWalkable_mC0E7C4D4F3DEF7544DB03A26622877C4ED7B64EE (void);
-// 0x00000405 System.Boolean FloorManager::IsWall(UnityEngine.Vector3Int)
+// 0x00000405 System.Boolean FloorManager::IsWalkableAndNoGO(UnityEngine.Vector3Int)
+extern void FloorManager_IsWalkableAndNoGO_m08F2BFB8E9381053B29A4C557AD12F8E0B721BA7 (void);
+// 0x00000406 System.Boolean FloorManager::IsWall(UnityEngine.Vector3Int)
 extern void FloorManager_IsWall_mB043B6E189341177F6895BAE998DB12A8D550368 (void);
-// 0x00000406 System.Void FloorManager::.ctor()
+// 0x00000407 System.Void FloorManager::.ctor()
 extern void FloorManager__ctor_m7AA977075C58B22730E0F38740183F79D796C900 (void);
-// 0x00000407 WaitSeconds GlobalValues::GetWaitSeconds(System.Single)
+// 0x00000408 WaitSeconds GlobalValues::GetWaitSeconds(System.Single)
 extern void GlobalValues_GetWaitSeconds_m1AF3CF16989088A1C12B29E5586573C569534791 (void);
-// 0x00000408 System.Void GlobalValues::CloneLoot()
+// 0x00000409 System.Void GlobalValues::CloneLoot()
 extern void GlobalValues_CloneLoot_m8B8D0E4FBAF9BEB62586180F7EAB32D942F21397 (void);
-// 0x00000409 ItemAbstract GlobalValues::GetRandomLootItem()
+// 0x0000040A ItemAbstract GlobalValues::GetRandomLootItem()
 extern void GlobalValues_GetRandomLootItem_mCF14EF6D619201D55F7C7F4C53CA38640667B35C (void);
-// 0x0000040A ItemAbstract GlobalValues::GetRandomLootTrait()
+// 0x0000040B ItemAbstract GlobalValues::GetRandomLootTrait()
 extern void GlobalValues_GetRandomLootTrait_mE547C6B3800C55C42A01CAEE54DFB1227473E883 (void);
-// 0x0000040B System.Void GlobalValues::.ctor()
+// 0x0000040C System.Void GlobalValues::.ctor()
 extern void GlobalValues__ctor_mFE74C22CE8481ADD8F771B95DF72CAC95045B366 (void);
-// 0x0000040C System.Void LootPool::CreateCopy()
+// 0x0000040D System.Void LootPool::CreateCopy()
 extern void LootPool_CreateCopy_mAA911A37076D94927767B10264CB8A73B4ED8843 (void);
-// 0x0000040D ItemAbstract LootPool::GetItem()
+// 0x0000040E ItemAbstract LootPool::GetItem()
 extern void LootPool_GetItem_mA71AC0C69B3CD6E1707C0DB59C6C6850B3CF03C8 (void);
-// 0x0000040E System.Void LootPool::.ctor()
+// 0x0000040F System.Void LootPool::.ctor()
 extern void LootPool__ctor_mB54B3938164E7355FE0AE94BB36791C9F5629BB6 (void);
-// 0x0000040F System.Void IStatInterface::TakeDamage()
-// 0x00000410 System.Void IStatInterface::Heal()
-// 0x00000411 System.Void IStatInterface::RecalculateStats()
-// 0x00000412 System.Boolean IStatInterface/IsInCombat::get_HealthPoint()
-// 0x00000413 System.Void IStatInterface/IsInCombat::set_HealthPoint(System.Boolean)
-// 0x00000414 System.Void MouseManager::Awake()
+// 0x00000410 System.Void IStatInterface::TakeDamage()
+// 0x00000411 System.Void IStatInterface::Heal()
+// 0x00000412 System.Void IStatInterface::RecalculateStats()
+// 0x00000413 System.Boolean IStatInterface/IsInCombat::get_HealthPoint()
+// 0x00000414 System.Void IStatInterface/IsInCombat::set_HealthPoint(System.Boolean)
+// 0x00000415 System.Void MouseManager::Awake()
 extern void MouseManager_Awake_m8436803D6C05A0AF1840170513568BC64B8540E3 (void);
-// 0x00000415 System.Void MouseManager::SelectItem(ItemAbstract)
+// 0x00000416 System.Void MouseManager::SelectItem(ItemAbstract)
 extern void MouseManager_SelectItem_mAD91E78AD62F1BF603DA97F39170E138D4826662 (void);
-// 0x00000416 System.Void MouseManager::Update()
+// 0x00000417 System.Void MouseManager::Update()
 extern void MouseManager_Update_mED479C9012C280EF4688D9C84AEF7E40CE04B55B (void);
-// 0x00000417 System.Void MouseManager::AddTarget(UnityEngine.Vector3Int)
+// 0x00000418 System.Void MouseManager::OnMouseDown()
+extern void MouseManager_OnMouseDown_m8BBBB146017F79A5FF5AF1FACF8A1083885CE52F (void);
+// 0x00000419 System.Void MouseManager::AddTarget(UnityEngine.Vector3Int)
 extern void MouseManager_AddTarget_m81E4255B7B859D3A97FA614240957D076912F3E8 (void);
-// 0x00000418 System.Void MouseManager::SetMode(MouseManager/MouseMode)
+// 0x0000041A System.Void MouseManager::SetMode(MouseManager/MouseMode)
 extern void MouseManager_SetMode_mD68147B960B05951D80757F91AA1264A96A5BEA8 (void);
-// 0x00000419 System.Void MouseManager::Inspect(UnityEngine.Vector3Int)
+// 0x0000041B System.Void MouseManager::Inspect(UnityEngine.Vector3Int)
 extern void MouseManager_Inspect_m48EC6E9CE12F9C8B90D820D8C19595E5F4221AAC (void);
-// 0x0000041A System.Void MouseManager::PlayerActionsOrder(UnityEngine.Vector3Int)
+// 0x0000041C System.Void MouseManager::PlayerActionsOrder(UnityEngine.Vector3Int)
 extern void MouseManager_PlayerActionsOrder_m0417B0BB939140861AB6D2C0FF91C37D1DAEF222 (void);
-// 0x0000041B System.Boolean MouseManager::SwapPositionWithAllyDuringCombat(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,Stats)
-extern void MouseManager_SwapPositionWithAllyDuringCombat_m73F9F986B74460E26BBBDC6D68764FB4B650C7F2 (void);
-// 0x0000041C System.Boolean MouseManager::UseItem(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Stats,Inventory)
-extern void MouseManager_UseItem_m0DCB7CD0B92CDACC6654B37FE64C5E439A30F862 (void);
-// 0x0000041D System.Boolean MouseManager::Attack(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,UnityEngine.GameObject)
+// 0x0000041D System.Boolean MouseManager::SwapPositionWithAllyDuringCombat(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,UnityEngine.GameObject,Stats)
+extern void MouseManager_SwapPositionWithAllyDuringCombat_mC1A14A1FA19319E601C75E7707A1F3C7EAC77728 (void);
+// 0x0000041E System.Boolean MouseManager::UseItem(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,Stats,Inventory)
+extern void MouseManager_UseItem_m86A4EA9974606A417AF22723CD8C733BD29468A0 (void);
+// 0x0000041F System.Boolean MouseManager::Attack(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,UnityEngine.GameObject)
 extern void MouseManager_Attack_mA4046A87A1F392C4E892C83BC98F5D04A8A02429 (void);
-// 0x0000041E System.Void MouseManager::WaitOrPickUpItem(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,Stats,UnityEngine.GameObject)
+// 0x00000420 System.Void MouseManager::WaitOrPickUpItem(UnityEngine.Vector3Int,UnityEngine.Vector3Int,UnityEngine.GameObject,Stats,UnityEngine.GameObject)
 extern void MouseManager_WaitOrPickUpItem_m4EE3CF0B19B0018D9CB9FCF7A62E371FF56185B2 (void);
-// 0x0000041F System.Boolean MouseManager::WalkLeader(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Stats)
+// 0x00000421 System.Boolean MouseManager::WalkLeader(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Stats)
 extern void MouseManager_WalkLeader_mD7DDED3FA899CC52F509697D0576F5DC40BA4948 (void);
-// 0x00000420 System.Boolean MouseManager::Walk(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Stats)
+// 0x00000422 System.Boolean MouseManager::Walk(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Stats)
 extern void MouseManager_Walk_mB3FF3C3E7E57FF0B8472B91064CF9595D32D16F2 (void);
-// 0x00000421 System.Boolean MouseManager::ChangeActionPoints(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Inventory,Stats,System.Int32)
+// 0x00000423 System.Boolean MouseManager::ChangeActionPoints(UnityEngine.Vector3Int,UnityEngine.Vector3Int,Inventory,Stats,System.Int32)
 extern void MouseManager_ChangeActionPoints_mFD43E8CF4746EF1CAC13ABD736AA93D7C69A99B9 (void);
-// 0x00000422 System.Void MouseManager::EndOfAction()
-extern void MouseManager_EndOfAction_m83BE1A060EB06A0E93CFC9268C994575AA6CB094 (void);
-// 0x00000423 System.Void MouseManager::EndOfActionFinal()
+// 0x00000424 System.Void MouseManager::EndOfAction(UnityEngine.GameObject,Stats)
+extern void MouseManager_EndOfAction_m64E0F2B2E43BBC32413D3D98CBACC1F8123C6249 (void);
+// 0x00000425 System.Void MouseManager::EndOfActionFinal()
 extern void MouseManager_EndOfActionFinal_m3A1715E1420D779A01C169C91B008DFDA89CDAF0 (void);
-// 0x00000424 System.Collections.IEnumerator MouseManager::RepeatDelay()
+// 0x00000426 System.Collections.IEnumerator MouseManager::RepeatDelay()
 extern void MouseManager_RepeatDelay_m2558B65C58067022289FA7E4D2B2E4D0D8F58103 (void);
-// 0x00000425 System.Void MouseManager::Repeat()
+// 0x00000427 System.Void MouseManager::Repeat()
 extern void MouseManager_Repeat_mBC827AC8AD2A0C00D16CB06121B224C418DF29B7 (void);
-// 0x00000426 UnityEngine.Vector3Int MouseManager::MousePositionOnGrid()
+// 0x00000428 UnityEngine.Vector3Int MouseManager::MousePositionOnGrid()
 extern void MouseManager_MousePositionOnGrid_m47E6AF325634628A547F8647C85A588AC049C854 (void);
-// 0x00000427 System.Boolean MouseManager::CheckMouseValidity()
+// 0x00000429 System.Boolean MouseManager::CheckMouseValidity()
 extern void MouseManager_CheckMouseValidity_mE588FF9066ADA35215A388C8E316580AB94A58DE (void);
-// 0x00000428 System.Void MouseManager::UpdateHightlight(UnityEngine.Vector3Int)
+// 0x0000042A System.Void MouseManager::UpdateHightlight(UnityEngine.Vector3Int)
 extern void MouseManager_UpdateHightlight_mB372203D1D1BD64AA99B376FE9513D8DB6BB636E (void);
-// 0x00000429 System.Void MouseManager::.ctor()
+// 0x0000042B System.Void MouseManager::.ctor()
 extern void MouseManager__ctor_m7740CE6641B9764E619CD8F6908648F8EE800FAD (void);
-// 0x0000042A System.Void MouseManager/<RepeatDelay>d__32::.ctor(System.Int32)
-extern void U3CRepeatDelayU3Ed__32__ctor_m494011C0D3D135BCF71AA3E21CBE7AAB96AF21FB (void);
-// 0x0000042B System.Void MouseManager/<RepeatDelay>d__32::System.IDisposable.Dispose()
-extern void U3CRepeatDelayU3Ed__32_System_IDisposable_Dispose_m300F8FCE3EEFF304712CDE96811C99FC410BB475 (void);
-// 0x0000042C System.Boolean MouseManager/<RepeatDelay>d__32::MoveNext()
-extern void U3CRepeatDelayU3Ed__32_MoveNext_mE5CE7D1DBB03728635442F4A9911AD05A4AC2A2B (void);
-// 0x0000042D System.Object MouseManager/<RepeatDelay>d__32::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CRepeatDelayU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4FDBEEE8C3C0B7CF923D5D801D2168A6792FC759 (void);
-// 0x0000042E System.Void MouseManager/<RepeatDelay>d__32::System.Collections.IEnumerator.Reset()
-extern void U3CRepeatDelayU3Ed__32_System_Collections_IEnumerator_Reset_mF8066B4E06159864EA4F0116CBF18202FFDD4F0A (void);
-// 0x0000042F System.Object MouseManager/<RepeatDelay>d__32::System.Collections.IEnumerator.get_Current()
-extern void U3CRepeatDelayU3Ed__32_System_Collections_IEnumerator_get_Current_m63990CEE17AA41CDE63A979E90E564DFEF5E8801 (void);
-// 0x00000430 System.Void NPCSearch::OnEnable()
+// 0x0000042C System.Void MouseManager/<RepeatDelay>d__34::.ctor(System.Int32)
+extern void U3CRepeatDelayU3Ed__34__ctor_m0ED4605F71E6CD5EEC0BE708535346C45CBD9FF7 (void);
+// 0x0000042D System.Void MouseManager/<RepeatDelay>d__34::System.IDisposable.Dispose()
+extern void U3CRepeatDelayU3Ed__34_System_IDisposable_Dispose_mA06263B97AB8655300AC25077BB1936038710E86 (void);
+// 0x0000042E System.Boolean MouseManager/<RepeatDelay>d__34::MoveNext()
+extern void U3CRepeatDelayU3Ed__34_MoveNext_mF9CF96BC87E4C7564A534C361290543F65E69335 (void);
+// 0x0000042F System.Object MouseManager/<RepeatDelay>d__34::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CRepeatDelayU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2E7BFDEBA38696FDBD383238878434F8B922E783 (void);
+// 0x00000430 System.Void MouseManager/<RepeatDelay>d__34::System.Collections.IEnumerator.Reset()
+extern void U3CRepeatDelayU3Ed__34_System_Collections_IEnumerator_Reset_mDAEE4F11FEA72677348B4B4A2B2C513A00779EB8 (void);
+// 0x00000431 System.Object MouseManager/<RepeatDelay>d__34::System.Collections.IEnumerator.get_Current()
+extern void U3CRepeatDelayU3Ed__34_System_Collections_IEnumerator_get_Current_mCF4BD37E0A4996B75567A94DB8A9C65BB116BBB1 (void);
+// 0x00000432 System.Void NPCSearch::OnEnable()
 extern void NPCSearch_OnEnable_m6FB7364E01FD171E5EBAE410240B21B7D3293270 (void);
-// 0x00000431 System.Void NPCSearch::Search()
+// 0x00000433 System.Void NPCSearch::Search()
 extern void NPCSearch_Search_mF139E0EFB0568385E934BBE3454D5BA3C401626E (void);
-// 0x00000432 System.Void NPCSearch::.ctor()
+// 0x00000434 System.Void NPCSearch::.ctor()
 extern void NPCSearch__ctor_m6AFD37C974E3508BEAB4F6D878620DBED90F5A85 (void);
-// 0x00000433 System.Void PartyManager::RemoveDeadEnemy(UnityEngine.GameObject)
+// 0x00000435 System.Void PartyManager::RemoveDeadEnemy(UnityEngine.GameObject)
 extern void PartyManager_RemoveDeadEnemy_mF31F63680EC776E3C7768EBE28649C0E69E06AD0 (void);
-// 0x00000434 System.Void PartyManager::FollowToggle()
+// 0x00000436 System.Void PartyManager::FollowToggle()
 extern void PartyManager_FollowToggle_m0BA36480972C7912FD2CBC55D18D88F06AC384F2 (void);
-// 0x00000435 System.Void PartyManager::Follow()
+// 0x00000437 System.Void PartyManager::Follow()
 extern void PartyManager_Follow_mED18EB8660B417290CB66C38E168771A2B13958B (void);
-// 0x00000436 System.Void PartyManager::Awake()
+// 0x00000438 System.Void PartyManager::Awake()
 extern void PartyManager_Awake_m4796F607A13D326FC9EC84968BDB172A8A7F4721 (void);
-// 0x00000437 System.Boolean PartyManager::InTeam(UnityEngine.GameObject,UnityEngine.GameObject)
+// 0x00000439 System.Boolean PartyManager::InTeam(UnityEngine.GameObject,UnityEngine.GameObject)
 extern void PartyManager_InTeam_mE373F6A53CA0947539DE1426029BECB9F30D6EED (void);
-// 0x00000438 System.Boolean PartyManager::IsEnemy(UnityEngine.GameObject,UnityEngine.GameObject)
+// 0x0000043A System.Boolean PartyManager::IsEnemy(UnityEngine.GameObject,UnityEngine.GameObject)
 extern void PartyManager_IsEnemy_mE8365376DD185375A666204F0AA9B6A8AC4CC532 (void);
-// 0x00000439 System.Collections.Generic.List`1<System.String> PartyManager::ConvertFlagsEnumToStringList(PartyManager/Tags,UnityEngine.GameObject)
+// 0x0000043B System.Collections.Generic.List`1<System.String> PartyManager::ConvertFlagsEnumToStringList(PartyManager/Tags,UnityEngine.GameObject)
 extern void PartyManager_ConvertFlagsEnumToStringList_mD84FB5B9C58C4CFDE78165FF5B5DDA0085199EA3 (void);
-// 0x0000043A System.Void PartyManager::AddPartyMember(UnityEngine.GameObject)
+// 0x0000043C System.Void PartyManager::AddPartyMember(UnityEngine.GameObject)
 extern void PartyManager_AddPartyMember_m40559F424CD0046E2D14A219F6ACF05EE0E65948 (void);
-// 0x0000043B System.Void PartyManager::Update()
+// 0x0000043D System.Void PartyManager::Update()
 extern void PartyManager_Update_m7A0C34F214BBCE2C7586B713437DCD5C7602E565 (void);
-// 0x0000043C System.Void PartyManager::SetCurrentCharacter(UnityEngine.GameObject)
+// 0x0000043E System.Void PartyManager::SetCurrentCharacter(UnityEngine.GameObject)
 extern void PartyManager_SetCurrentCharacter_mC385769FB4244712CB8703077A5FE04F0B2E569F (void);
-// 0x0000043D UnityEngine.GameObject PartyManager::GetCurrentTurnCharacter()
+// 0x0000043F UnityEngine.GameObject PartyManager::GetCurrentTurnCharacter()
 extern void PartyManager_GetCurrentTurnCharacter_m87D4E53C12E8EC6B599C304A223EB35632E3798D (void);
-// 0x0000043E System.Void PartyManager::RemoveNullCharacters(System.Collections.Generic.List`1<UnityEngine.GameObject>)
+// 0x00000440 System.Void PartyManager::RemoveNullCharacters(System.Collections.Generic.List`1<UnityEngine.GameObject>)
 extern void PartyManager_RemoveNullCharacters_mDDD5B9EF6B202982736AD670E2772B8EAE322113 (void);
-// 0x0000043F System.Void PartyManager::SwitchToNextCharacter()
+// 0x00000441 System.Void PartyManager::SwitchToNextCharacter()
 extern void PartyManager_SwitchToNextCharacter_m594478E25AE0D1363F4839B79DA624DBFD9DFBC3 (void);
-// 0x00000440 System.Void PartyManager::EndTurn()
+// 0x00000442 System.Void PartyManager::EndTurn()
 extern void PartyManager_EndTurn_mDCC008DE33865F076AC4EB35F0D6B495938391F3 (void);
-// 0x00000441 System.Void PartyManager::EnemyPartyStartTurn()
+// 0x00000443 System.Void PartyManager::EnemyPartyStartTurn()
 extern void PartyManager_EnemyPartyStartTurn_m549D83E11E0ABFA2A717FBA46AC78BDB769507F3 (void);
-// 0x00000442 System.Collections.Generic.List`1<UnityEngine.GameObject> PartyManager::ArrangeEnemyPartyBasedOnPath()
+// 0x00000444 System.Collections.Generic.List`1<UnityEngine.GameObject> PartyManager::ArrangeEnemyPartyBasedOnPath()
 extern void PartyManager_ArrangeEnemyPartyBasedOnPath_m54D597ACE7B7DF95491BB7B056BF3EF4CCBC3D1B (void);
-// 0x00000443 System.Void PartyManager::EndEnemyTurn(UnityEngine.GameObject)
+// 0x00000445 System.Void PartyManager::EndEnemyTurn(UnityEngine.GameObject)
 extern void PartyManager_EndEnemyTurn_m89D1367E9BEE9248883D0D03AC6E8B97BDB244DE (void);
-// 0x00000444 System.Void PartyManager::OnSwitchFaction(UnityEngine.GameObject)
+// 0x00000446 System.Void PartyManager::OnSwitchFaction(UnityEngine.GameObject)
 extern void PartyManager_OnSwitchFaction_m803AFC5284BB804F0141082925D5CC844536692F (void);
-// 0x00000445 System.Void PartyManager::PartyStartTurn()
+// 0x00000447 System.Void PartyManager::PartyStartTurn()
 extern void PartyManager_PartyStartTurn_mC6CCD12AC0519EF2A68CDF31293B3D1B688BE048 (void);
-// 0x00000446 System.Void PartyManager::TakeEnemyTurn(System.Collections.IEnumerator,UnityEngine.GameObject)
+// 0x00000448 System.Void PartyManager::TakeEnemyTurn(System.Collections.IEnumerator,UnityEngine.GameObject)
 extern void PartyManager_TakeEnemyTurn_mB1EB811BEB26159ECFB9E7E7B22A3AF5263E0348 (void);
-// 0x00000447 System.Void PartyManager::AddEnemy(UnityEngine.GameObject,UnityEngine.Vector3Int)
+// 0x00000449 System.Void PartyManager::AddEnemy(UnityEngine.GameObject,UnityEngine.Vector3Int)
 extern void PartyManager_AddEnemy_mD3F4A0875A1A4615AB0226700C147EC485125D49 (void);
-// 0x00000448 System.Void PartyManager::RemoveEnemy(UnityEngine.GameObject)
+// 0x0000044A System.Void PartyManager::RemoveEnemy(UnityEngine.GameObject)
 extern void PartyManager_RemoveEnemy_m5A1FE32ECAE2EF38CA860A23D1A736A817041F66 (void);
-// 0x00000449 System.Void PartyManager::.ctor()
+// 0x0000044B System.Void PartyManager::.ctor()
 extern void PartyManager__ctor_m140DDAAE66021A22E72AF0C90CDFACEE0580D4A2 (void);
-// 0x0000044A System.Void PartyManager/<>c__DisplayClass27_0::.ctor()
+// 0x0000044C System.Void PartyManager/<>c__DisplayClass27_0::.ctor()
 extern void U3CU3Ec__DisplayClass27_0__ctor_m217159009DF188988CEB6B897CE1C2C179F70F2C (void);
-// 0x0000044B System.Int32 PartyManager/<>c__DisplayClass27_0::<ArrangeEnemyPartyBasedOnPath>b__0(UnityEngine.GameObject,UnityEngine.GameObject)
+// 0x0000044D System.Int32 PartyManager/<>c__DisplayClass27_0::<ArrangeEnemyPartyBasedOnPath>b__0(UnityEngine.GameObject,UnityEngine.GameObject)
 extern void U3CU3Ec__DisplayClass27_0_U3CArrangeEnemyPartyBasedOnPathU3Eb__0_mD2A2DDB81CE1CE3649A42F47929543DCBF59D38C (void);
-// 0x0000044C System.Void PartyManager/<>c__DisplayClass27_1::.ctor()
+// 0x0000044E System.Void PartyManager/<>c__DisplayClass27_1::.ctor()
 extern void U3CU3Ec__DisplayClass27_1__ctor_mADB7140F3E741F0D6A206211F509A443FA83EE88 (void);
-// 0x0000044D System.Boolean PartyManager/<>c__DisplayClass27_1::<ArrangeEnemyPartyBasedOnPath>b__1(System.Collections.Generic.KeyValuePair`2<UnityEngine.GameObject,System.Int32>)
+// 0x0000044F System.Boolean PartyManager/<>c__DisplayClass27_1::<ArrangeEnemyPartyBasedOnPath>b__1(System.Collections.Generic.KeyValuePair`2<UnityEngine.GameObject,System.Int32>)
 extern void U3CU3Ec__DisplayClass27_1_U3CArrangeEnemyPartyBasedOnPathU3Eb__1_m90B4771783DCADD22D78FBFCBE01C26DE2FEC2C0 (void);
-// 0x0000044E System.Boolean PartyManager/<>c__DisplayClass27_1::<ArrangeEnemyPartyBasedOnPath>b__2(System.Collections.Generic.KeyValuePair`2<UnityEngine.GameObject,System.Int32>)
+// 0x00000450 System.Boolean PartyManager/<>c__DisplayClass27_1::<ArrangeEnemyPartyBasedOnPath>b__2(System.Collections.Generic.KeyValuePair`2<UnityEngine.GameObject,System.Int32>)
 extern void U3CU3Ec__DisplayClass27_1_U3CArrangeEnemyPartyBasedOnPathU3Eb__2_m8BD3869A3E6124C7882433F4B131507293A4C4B1 (void);
-// 0x0000044F System.Void SmoothCamera::Awake()
+// 0x00000451 System.Void SmoothCamera::Awake()
 extern void SmoothCamera_Awake_m75D40561645114488A131364379CE2255761F13F (void);
-// 0x00000450 System.Void SmoothCamera::LateUpdate()
+// 0x00000452 System.Void SmoothCamera::OnEnable()
+extern void SmoothCamera_OnEnable_m83005D1509BE885FABC0849407533EE1784A2AA1 (void);
+// 0x00000453 System.Void SmoothCamera::OnDisable()
+extern void SmoothCamera_OnDisable_mE1A60CFDF8C49957F1ED5C549CD2A8966E9EA426 (void);
+// 0x00000454 System.Void SmoothCamera::DisableFollow(Lean.Touch.LeanFinger)
+extern void SmoothCamera_DisableFollow_m8003B84EE6B170F40D8382264BFDF27307B02AAF (void);
+// 0x00000455 System.Void SmoothCamera::LateUpdate()
 extern void SmoothCamera_LateUpdate_m7ACC7CA5B88F2724CB11568D7A9F75D661A0E711 (void);
-// 0x00000451 System.Void SmoothCamera::ActionZoomIn(UnityEngine.Vector3,System.Single,System.Single)
+// 0x00000456 System.Void SmoothCamera::ActionZoomIn(UnityEngine.Vector3,System.Single,System.Single)
 extern void SmoothCamera_ActionZoomIn_m6CF65FED6D906444D823497EE75B077CC6A0BEB0 (void);
-// 0x00000452 System.Collections.IEnumerator SmoothCamera::IActionZoomIn(UnityEngine.Vector3,System.Single,System.Single)
+// 0x00000457 System.Collections.IEnumerator SmoothCamera::IActionZoomIn(UnityEngine.Vector3,System.Single,System.Single)
 extern void SmoothCamera_IActionZoomIn_m76B85B0048DD38163C14B0D8EE1DFD9FD8DB0A4B (void);
-// 0x00000453 System.Void SmoothCamera::resetFollow()
+// 0x00000458 System.Void SmoothCamera::resetFollow()
 extern void SmoothCamera_resetFollow_mE1EC2BC5FEB0D8CEAF65D76F2B556876023F6368 (void);
-// 0x00000454 System.Void SmoothCamera::Update()
+// 0x00000459 System.Void SmoothCamera::Update()
 extern void SmoothCamera_Update_m9FF6F2F2C4025179B6FB5238E6A74CA90ABDC235 (void);
-// 0x00000455 System.Void SmoothCamera::FixedUpdate()
+// 0x0000045A System.Void SmoothCamera::FixedUpdate()
 extern void SmoothCamera_FixedUpdate_m718555E08F94553BE18B5CC3FB80638B219D3B61 (void);
-// 0x00000456 System.Void SmoothCamera::.ctor()
+// 0x0000045B System.Void SmoothCamera::.ctor()
 extern void SmoothCamera__ctor_m7F985CCBB10438AEF7AF1EFCCF2476A61AA6C08E (void);
-// 0x00000457 System.Void SmoothCamera/<IActionZoomIn>d__17::.ctor(System.Int32)
-extern void U3CIActionZoomInU3Ed__17__ctor_m403C06B8A0679DA52EB23CDF0D65CDB172148AE7 (void);
-// 0x00000458 System.Void SmoothCamera/<IActionZoomIn>d__17::System.IDisposable.Dispose()
-extern void U3CIActionZoomInU3Ed__17_System_IDisposable_Dispose_m642CD71B9013EB67279C6DF0309CD39A3A8AAC8B (void);
-// 0x00000459 System.Boolean SmoothCamera/<IActionZoomIn>d__17::MoveNext()
-extern void U3CIActionZoomInU3Ed__17_MoveNext_mB94B270ED5C3EBC156B214671540C4A120A693AF (void);
-// 0x0000045A System.Object SmoothCamera/<IActionZoomIn>d__17::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CIActionZoomInU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m842EE1E37FDE2C2E6AE0375B5463A7F9484134FF (void);
-// 0x0000045B System.Void SmoothCamera/<IActionZoomIn>d__17::System.Collections.IEnumerator.Reset()
-extern void U3CIActionZoomInU3Ed__17_System_Collections_IEnumerator_Reset_m5FD1EDE102F54DC1411A0B597A2FB2B37F7059FC (void);
-// 0x0000045C System.Object SmoothCamera/<IActionZoomIn>d__17::System.Collections.IEnumerator.get_Current()
-extern void U3CIActionZoomInU3Ed__17_System_Collections_IEnumerator_get_Current_mC32B156281D69C79E1516362D7DBC49476800AD2 (void);
-// 0x0000045D System.Void SOAttribute::.ctor()
+// 0x0000045C System.Void SmoothCamera/<IActionZoomIn>d__20::.ctor(System.Int32)
+extern void U3CIActionZoomInU3Ed__20__ctor_m0E56739F0D28681A138689EA63F59DBD7A42ACA4 (void);
+// 0x0000045D System.Void SmoothCamera/<IActionZoomIn>d__20::System.IDisposable.Dispose()
+extern void U3CIActionZoomInU3Ed__20_System_IDisposable_Dispose_mA57FB639F541EFCB33C69A3A8FA55D826E491F2B (void);
+// 0x0000045E System.Boolean SmoothCamera/<IActionZoomIn>d__20::MoveNext()
+extern void U3CIActionZoomInU3Ed__20_MoveNext_m4AF2766E0A2E5F61313E84E06523236A9D0D7B1D (void);
+// 0x0000045F System.Object SmoothCamera/<IActionZoomIn>d__20::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CIActionZoomInU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDEB3E7D192D41E1EBBE4477E12F8EADDC56909FA (void);
+// 0x00000460 System.Void SmoothCamera/<IActionZoomIn>d__20::System.Collections.IEnumerator.Reset()
+extern void U3CIActionZoomInU3Ed__20_System_Collections_IEnumerator_Reset_m50977AC701AFA2A4A13EF04425FCFCDEC643EDB9 (void);
+// 0x00000461 System.Object SmoothCamera/<IActionZoomIn>d__20::System.Collections.IEnumerator.get_Current()
+extern void U3CIActionZoomInU3Ed__20_System_Collections_IEnumerator_get_Current_mEC52EA96330B3626C85ADB33EB007ECF1522C1C3 (void);
+// 0x00000462 System.Void SOAttribute::.ctor()
 extern void SOAttribute__ctor_m6232E3A190E7BDCF490CD5057430692BFDD29A0B (void);
-// 0x0000045E System.Void Stats::ResetTempStats()
+// 0x00000463 System.Void Stats::ResetTempStats()
 extern void Stats_ResetTempStats_mEEF85BF4FA2A8A8E6676CF52B08AB7CCD8C9CCC6 (void);
-// 0x0000045F System.Void Stats::OnEnable()
+// 0x00000464 System.Void Stats::OnEnable()
 extern void Stats_OnEnable_m03B40D610EE92F7CB669B4A66966C51192F3FDF6 (void);
-// 0x00000460 System.Void Stats::OnDisable()
+// 0x00000465 System.Void Stats::OnDisable()
 extern void Stats_OnDisable_m7C6065A7B094343AE732CFD96C65FBF89E8ECBDD (void);
-// 0x00000461 System.Void Stats::OnStartOfCombat()
+// 0x00000466 System.Void Stats::OnStartOfCombat()
 extern void Stats_OnStartOfCombat_mC72AF3F8258C4D612666B1DF21B88C1920F5932F (void);
-// 0x00000462 System.Void Stats::OnIdleTick()
+// 0x00000467 System.Void Stats::OnIdleTick()
 extern void Stats_OnIdleTick_m7AD9A63CDC8995EBF1758FB7B033A035A9302771 (void);
-// 0x00000463 System.Void Stats::InitializeCharacter()
+// 0x00000468 System.Void Stats::InitializeCharacter()
 extern void Stats_InitializeCharacter_m4F014190E5828E2F3B3CE473569D7BC895462EAF (void);
-// 0x00000464 System.Void Stats::TakeDamage(System.Int32,UnityEngine.Vector3Int)
+// 0x00000469 System.Void Stats::TakeDamage(System.Int32,UnityEngine.Vector3Int)
 extern void Stats_TakeDamage_m93A9F7825AAE43F2626DF7D20587FDF35FB3B748 (void);
-// 0x00000465 System.Boolean Stats::IsImmune(Action)
+// 0x0000046A System.Boolean Stats::IsImmune(Action)
 extern void Stats_IsImmune_mE71D54B2BB7FBBA1B8CF89770FAC5524A7141AC1 (void);
-// 0x00000466 System.Void Stats::TakeDamage(System.Int32,UnityEngine.Vector3Int,System.Boolean,Surface)
+// 0x0000046B System.Void Stats::TakeDamage(System.Int32,UnityEngine.Vector3Int,System.Boolean,Surface)
 extern void Stats_TakeDamage_m7D2C5AB1734A54906B94F3B1879AA57D5526082D (void);
-// 0x00000467 System.Void Stats::TakeDamage(System.Int32,UnityEngine.Vector3Int,System.Boolean)
+// 0x0000046C System.Void Stats::TakeDamage(System.Int32,UnityEngine.Vector3Int,System.Boolean)
 extern void Stats_TakeDamage_m1E4B842F2E8BC12E83AF14044F7A993443F376E4 (void);
-// 0x00000468 System.Void Stats::Die(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
+// 0x0000046D System.Void Stats::Die(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
 extern void Stats_Die_m540012AC1EFD37EF4ED30B359BCAACB788A7DAF1 (void);
-// 0x00000469 System.Void Stats::EndOfStackGORemoval(System.Boolean)
+// 0x0000046E System.Void Stats::EndOfStackGORemoval(System.Boolean)
 extern void Stats_EndOfStackGORemoval_m63D16579D3BB5E2711B7B01BF5D1A69D53616860 (void);
-// 0x0000046A System.Void Stats::SpawnHitNumber(System.String,UnityEngine.Color,System.Single)
+// 0x0000046F System.Void Stats::SpawnHitNumber(System.String,UnityEngine.Color,System.Single)
 extern void Stats_SpawnHitNumber_mDD7B43E04D41E3A4C1AED2A1309D853754ABA142 (void);
-// 0x0000046B System.Void Stats::Heal(System.Int32)
+// 0x00000470 System.Void Stats::Heal(System.Int32)
 extern void Stats_Heal_m254457E3A56B28081D85DA11B292B0EE00BB8184 (void);
-// 0x0000046C System.Void Stats::UpdateHealthBar()
+// 0x00000471 System.Void Stats::UpdateHealthBar()
 extern void Stats_UpdateHealthBar_m3186F7338CDFC1C88B27D29EE95A9610F51A6B1D (void);
-// 0x0000046D System.Void Stats::ResetActionPoints()
+// 0x00000472 System.Void Stats::ResetActionPoints()
 extern void Stats_ResetActionPoints_m6AA358FC3733C9E1DEAB2A48ADE79FFB538FF57B (void);
-// 0x0000046E System.Void Stats::RefreshCharacter(UnityEngine.Vector3Int)
+// 0x00000473 System.Void Stats::RefreshCharacter(UnityEngine.Vector3Int)
 extern void Stats_RefreshCharacter_mE860E6CA826A6D4CE8F19D4D0D4868BEC0FF3727 (void);
-// 0x0000046F System.Void Stats::OnDestroy()
+// 0x00000474 System.Void Stats::OnDestroy()
 extern void Stats_OnDestroy_m0C3D6A3178CFF25C7BF66E02FFAFB0E4966B5005 (void);
-// 0x00000470 System.Void Stats::.ctor()
+// 0x00000475 System.Void Stats::.ctor()
 extern void Stats__ctor_mAB9F4491E61A2DD27BC16E98E9709FE22FE0C1C8 (void);
-// 0x00000471 System.Void StatsUI::UpdateStats(UnityEngine.GameObject)
+// 0x00000476 System.Void StatsUI::UpdateStats(UnityEngine.GameObject)
 extern void StatsUI_UpdateStats_m80EC761CF31096705B3ACEE9D3C40E90E4FDC540 (void);
-// 0x00000472 System.Void StatsUI::.ctor()
+// 0x00000477 System.Void StatsUI::.ctor()
 extern void StatsUI__ctor_mA0A18B5FD6FF30A6CC492B4BF50CF77FCA5B243F (void);
-// 0x00000473 System.Void UIPartySelector::OnEnable()
+// 0x00000478 System.Void UIPartySelector::OnEnable()
 extern void UIPartySelector_OnEnable_mCE8DBE4C63E62427F8D63B9EE4F3B7C690326560 (void);
-// 0x00000474 System.Void UIPartySelector::HideIconHighlights()
+// 0x00000479 System.Void UIPartySelector::HideIconHighlights()
 extern void UIPartySelector_HideIconHighlights_m49C27433A40BB190D067E0A71A5D7954E6DD0829 (void);
-// 0x00000475 System.Void UIPartySelector::.ctor()
+// 0x0000047A System.Void UIPartySelector::.ctor()
 extern void UIPartySelector__ctor_m514459961F89C3E779D8843162AC35018D172936 (void);
-// 0x00000476 System.Void CCAssets::Awake()
+// 0x0000047B System.Void CCAssets::Awake()
 extern void CCAssets_Awake_mCA5A26A37E9FCB93B1EC9FEF382B4668D0A409AC (void);
-// 0x00000477 T CCAssets::NextOption(System.Int32,System.Collections.Generic.List`1<T>,T)
-// 0x00000478 System.Void CCAssets::.ctor()
+// 0x0000047C T CCAssets::NextOption(System.Int32,System.Collections.Generic.List`1<T>,T)
+// 0x0000047D System.Void CCAssets::.ctor()
 extern void CCAssets__ctor_mEB7FE25CF463115AF447AC26EB6AD676BD3C87B5 (void);
-// 0x00000479 System.Void CCLoadout::.ctor()
+// 0x0000047E System.Void CCLoadout::.ctor()
 extern void CCLoadout__ctor_mE5393CF48E10264F9FED3DF6E671CBDB54F07CB2 (void);
-// 0x0000047A System.Void CCOptions::SaveCharacterSpriteToFile()
+// 0x0000047F System.Void CCOptions::SaveCharacterSpriteToFile()
 extern void CCOptions_SaveCharacterSpriteToFile_m47E5DD0E3A3C3A2620B6BE9252A34F701CFB9A7F (void);
-// 0x0000047B System.Void CCOptions::.ctor()
+// 0x00000480 System.Void CCOptions::.ctor()
 extern void CCOptions__ctor_m1785859E0D792CF0CF66F10B7917931201C36EF6 (void);
-// 0x0000047C System.Void CCPalette::.ctor()
+// 0x00000481 System.Void CCPalette::.ctor()
 extern void CCPalette__ctor_m5939F18A711E58D5F6CA7BDDA6AC917E77C63777 (void);
-// 0x0000047D System.Void CCRace::.ctor()
+// 0x00000482 System.Void CCRace::.ctor()
 extern void CCRace__ctor_mF361A1ECD2F4F2D75AFDBBE5B8DE21430FB85635 (void);
-// 0x0000047E System.Void CharacterCreator::Awake()
+// 0x00000483 System.Void CharacterCreator::Awake()
 extern void CharacterCreator_Awake_m75376040A3987D28AE5C35654CB01B63F21F0123 (void);
-// 0x0000047F System.Void CharacterCreator::QuickStart()
+// 0x00000484 System.Void CharacterCreator::QuickStart()
 extern void CharacterCreator_QuickStart_m7E56FA7B97166AABA014BB9BB984AAC7791A1B28 (void);
-// 0x00000480 System.Void CharacterCreator::CharacterSelect()
+// 0x00000485 System.Void CharacterCreator::CharacterSelect()
 extern void CharacterCreator_CharacterSelect_mE4A8F846DA1AB78725C81D1C857DC5510A6CC583 (void);
-// 0x00000481 System.Void CharacterCreator::ToggleCharacter(UnityEngine.GameObject)
+// 0x00000486 System.Void CharacterCreator::ToggleCharacter(UnityEngine.GameObject)
 extern void CharacterCreator_ToggleCharacter_m900A59A1F6B1C198067117A8E169728031A202B1 (void);
-// 0x00000482 System.Void CharacterCreator::CharacterEdit(UnityEngine.GameObject)
+// 0x00000487 System.Void CharacterCreator::CharacterEdit(UnityEngine.GameObject)
 extern void CharacterCreator_CharacterEdit_mBBFBDC8126805C1212F45358E48A78D8ED4750D5 (void);
-// 0x00000483 System.Void CharacterCreator::RandomizeCharacter(UnityEngine.GameObject)
+// 0x00000488 System.Void CharacterCreator::RandomizeCharacter(UnityEngine.GameObject)
 extern void CharacterCreator_RandomizeCharacter_mE12F6102F7BDB860D10B122EBBCDCF0CE7073688 (void);
-// 0x00000484 System.Void CharacterCreator::RandomAppearence(UnityEngine.GameObject)
+// 0x00000489 System.Void CharacterCreator::RandomAppearence(UnityEngine.GameObject)
 extern void CharacterCreator_RandomAppearence_m14341BDEC67668E53F17F808058A9E16D2416B86 (void);
-// 0x00000485 System.Void CharacterCreator::Start()
+// 0x0000048A System.Void CharacterCreator::Start()
 extern void CharacterCreator_Start_mA5EC2D97A5A748DEE91B5D01BFEB6B38270A3666 (void);
-// 0x00000486 System.Void CharacterCreator::UpdateLabels()
+// 0x0000048B System.Void CharacterCreator::UpdateLabels()
 extern void CharacterCreator_UpdateLabels_m93F6F63D678FE206BFB79AE1236CF7C80416C291 (void);
-// 0x00000487 CCPalette CharacterCreator::FirstPaletteInLayout(System.String,CharacterCreator/PaletteButtonType,System.Collections.Generic.List`1<CCPalette>)
+// 0x0000048C CCPalette CharacterCreator::FirstPaletteInLayout(System.String,CharacterCreator/PaletteButtonType,System.Collections.Generic.List`1<CCPalette>)
 extern void CharacterCreator_FirstPaletteInLayout_m0C6546184DD005C7A4B0493F19772B137390C6A4 (void);
-// 0x00000488 System.Void CharacterCreator::NextRace(System.Int32)
+// 0x0000048D System.Void CharacterCreator::NextRace(System.Int32)
 extern void CharacterCreator_NextRace_m0BF8871089E183471C4C5193320CE8A9A834E4C2 (void);
-// 0x00000489 System.Void CharacterCreator::ShowDescriptionForTraits(UnityEngine.GameObject)
+// 0x0000048E System.Void CharacterCreator::ShowDescriptionForTraits(UnityEngine.GameObject)
 extern void CharacterCreator_ShowDescriptionForTraits_m872AB6BB2DA1E4B84BFAED4D257A064509867414 (void);
-// 0x0000048A System.Void CharacterCreator::NextFace(System.Int32)
+// 0x0000048F System.Void CharacterCreator::NextFace(System.Int32)
 extern void CharacterCreator_NextFace_mFB781839E0AC0F25F9AEAB5D0351EC23E7964A75 (void);
-// 0x0000048B System.Void CharacterCreator::NextLoadout(System.Int32)
+// 0x00000490 System.Void CharacterCreator::NextLoadout(System.Int32)
 extern void CharacterCreator_NextLoadout_m29B842888D7581BE03AE1329679261F277303A5A (void);
-// 0x0000048C System.Void CharacterCreator::NextGender(System.Int32)
+// 0x00000491 System.Void CharacterCreator::NextGender(System.Int32)
 extern void CharacterCreator_NextGender_m000BFFFCCEB49E752E1D967DD53C0B48B893D785 (void);
-// 0x0000048D System.Void CharacterCreator::CheckBodyPalette()
+// 0x00000492 System.Void CharacterCreator::CheckBodyPalette()
 extern void CharacterCreator_CheckBodyPalette_mE033A7EE556C1E86D5D79E2B7037C6E169B75EB8 (void);
-// 0x0000048E System.Void CharacterCreator::NextFeatures(System.Int32)
+// 0x00000493 System.Void CharacterCreator::NextFeatures(System.Int32)
 extern void CharacterCreator_NextFeatures_mABFF3700AC86F1E8BBD223253D00165F1F1EB9C3 (void);
-// 0x0000048F System.Void CharacterCreator::NextHair(System.Int32)
+// 0x00000494 System.Void CharacterCreator::NextHair(System.Int32)
 extern void CharacterCreator_NextHair_m6A9EECD0070BB06891C55BDD01BBBFA8011666AC (void);
-// 0x00000490 System.Void CharacterCreator::RefreshContent(UnityEngine.GameObject)
+// 0x00000495 System.Void CharacterCreator::RefreshContent(UnityEngine.GameObject)
 extern void CharacterCreator_RefreshContent_mF8489884D1E2A90EFB3375D1FA33C94DDF785EF8 (void);
-// 0x00000491 System.Void CharacterCreator::CreatePaletteButtons(UnityEngine.Transform,System.Collections.Generic.List`1<CCPalette>,CharacterCreator/PaletteButtonType)
+// 0x00000496 System.Void CharacterCreator::CreatePaletteButtons(UnityEngine.Transform,System.Collections.Generic.List`1<CCPalette>,CharacterCreator/PaletteButtonType)
 extern void CharacterCreator_CreatePaletteButtons_m7719DF79A34B6F737E396D29330617A8CED05817 (void);
-// 0x00000492 System.Void CharacterCreator::.ctor()
+// 0x00000497 System.Void CharacterCreator::.ctor()
 extern void CharacterCreator__ctor_m92F95841845F10A3AEF72EA583EA17C6386486E4 (void);
-// 0x00000493 System.Void ColourReplacer::Awake()
+// 0x00000498 System.Void ColourReplacer::Awake()
 extern void ColourReplacer_Awake_m666340F9962EB9712ADFFA85D9677B020DE6FD1A (void);
-// 0x00000494 UnityEngine.Sprite ColourReplacer::ColourizeSprite(UnityEngine.Sprite,CCPalette)
+// 0x00000499 UnityEngine.Sprite ColourReplacer::ColourizeSprite(UnityEngine.Sprite,CCPalette)
 extern void ColourReplacer_ColourizeSprite_mC5C0D6528013F1CD0A9AF87DCF270862BA879D98 (void);
-// 0x00000495 System.Void ColourReplacer::.ctor()
+// 0x0000049A System.Void ColourReplacer::.ctor()
 extern void ColourReplacer__ctor_mA07D8076AFC599591C32B2DC403956AF55194710 (void);
-// 0x00000496 DontdestroyOnLoadAccessor DontdestroyOnLoadAccessor::get_Instance()
+// 0x0000049B DontdestroyOnLoadAccessor DontdestroyOnLoadAccessor::get_Instance()
 extern void DontdestroyOnLoadAccessor_get_Instance_m2D55E3620B9F20A46D8613A9B95CCE969300FFC3 (void);
-// 0x00000497 System.Void DontdestroyOnLoadAccessor::Awake()
+// 0x0000049C System.Void DontdestroyOnLoadAccessor::Awake()
 extern void DontdestroyOnLoadAccessor_Awake_mB86737B81F716DA35D25B4B27A6292A588FDFF21 (void);
-// 0x00000498 UnityEngine.GameObject[] DontdestroyOnLoadAccessor::GetAllRootsOfDontDestroyOnLoad()
+// 0x0000049D UnityEngine.GameObject[] DontdestroyOnLoadAccessor::GetAllRootsOfDontDestroyOnLoad()
 extern void DontdestroyOnLoadAccessor_GetAllRootsOfDontDestroyOnLoad_m026A75DECB27229FD128F4B29DABC3F1AADC4F76 (void);
-// 0x00000499 System.Void DontdestroyOnLoadAccessor::.ctor()
+// 0x0000049E System.Void DontdestroyOnLoadAccessor::.ctor()
 extern void DontdestroyOnLoadAccessor__ctor_m20A194FCAB2A53A75DF8AA6DF9F0CAA224946FCF (void);
-// 0x0000049A System.Void LoadoutSwitch::NextLoadout(UnityEngine.GameObject)
+// 0x0000049F System.Void LoadoutSwitch::NextLoadout(UnityEngine.GameObject)
 extern void LoadoutSwitch_NextLoadout_mBF356FCEB61626A648195345C460C2C2801D6507 (void);
-// 0x0000049B System.Void LoadoutSwitch::PreviousLoadout(UnityEngine.GameObject)
+// 0x000004A0 System.Void LoadoutSwitch::PreviousLoadout(UnityEngine.GameObject)
 extern void LoadoutSwitch_PreviousLoadout_m541DA1C31F709889B9DFA10AD523B52F8ACAD1DC (void);
-// 0x0000049C System.Void LoadoutSwitch::.ctor()
+// 0x000004A1 System.Void LoadoutSwitch::.ctor()
 extern void LoadoutSwitch__ctor_m55F5AF35FB8F374BD64D46332AF4274E67AE664B (void);
-// 0x0000049D System.Void Manager::OnEndOfStackCall()
+// 0x000004A2 System.Void Manager::OnEndOfStackCall()
 extern void Manager_OnEndOfStackCall_m5A1DAB4BA12520A07EC2C47657F03684C2E8A08C (void);
-// 0x0000049E System.Void Manager::OnTakeDamageCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
+// 0x000004A3 System.Void Manager::OnTakeDamageCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
 extern void Manager_OnTakeDamageCall_m1BCF93126675E54C4123ADFD6D1C15E115EFD55A (void);
-// 0x0000049F System.Void Manager::OnDeathEventCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
+// 0x000004A4 System.Void Manager::OnDeathEventCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
 extern void Manager_OnDeathEventCall_mF68B72159E035A81B2608168B131E3B61524F016 (void);
-// 0x000004A0 System.Void Manager::OnMoveEventCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
+// 0x000004A5 System.Void Manager::OnMoveEventCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
 extern void Manager_OnMoveEventCall_m681556E35D1DEFEA7BD4809DFCF5957DF0F122F8 (void);
-// 0x000004A1 System.Void Manager::OnAttackCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
+// 0x000004A6 System.Void Manager::OnAttackCall(UnityEngine.Vector3Int,UnityEngine.Vector3Int)
 extern void Manager_OnAttackCall_m38C9F9E45F13992DDC44B98F73D417F9100146FB (void);
-// 0x000004A2 System.Void Manager::LoadNextScene()
+// 0x000004A7 System.Void Manager::LoadNextScene()
 extern void Manager_LoadNextScene_mB46DE4D785E2F4CA92EB4403BCBEB3C45E42EDCE (void);
-// 0x000004A3 System.Void Manager::LoadCharacterCreator()
+// 0x000004A8 System.Void Manager::LoadCharacterCreator()
 extern void Manager_LoadCharacterCreator_m044FE0B7EEA645528BA50D130B5F1208F7EFCFD2 (void);
-// 0x000004A4 GlobalValues Manager::GetGlobalValues()
+// 0x000004A9 GlobalValues Manager::GetGlobalValues()
 extern void Manager_GetGlobalValues_m1BA3CD90CDA8BFF108DA4600851CD9CD0A34A785 (void);
-// 0x000004A5 System.Void Manager::.cctor()
+// 0x000004AA System.Void Manager::.cctor()
 extern void Manager__cctor_m0ECB0C839FE752FE3FF6611FC644CBB2673AE2E6 (void);
-// 0x000004A6 System.Void PaletteButton::SetPalette(CCPalette)
+// 0x000004AB System.Void PaletteButton::SetPalette(CCPalette)
 extern void PaletteButton_SetPalette_mD4D88B1DECF92970D3FE461FF9D1CA37064D66E0 (void);
-// 0x000004A7 System.Void PaletteButton::ClickPalette()
+// 0x000004AC System.Void PaletteButton::ClickPalette()
 extern void PaletteButton_ClickPalette_mEB3AF4A0E42A7638D19DFD7550FDADEA6B2D8480 (void);
-// 0x000004A8 System.Void PaletteButton::.ctor()
+// 0x000004AD System.Void PaletteButton::.ctor()
 extern void PaletteButton__ctor_m56CF16B157A920670922F771B4F4921EBC9C7FB3 (void);
-// 0x000004A9 System.Void StartGame::.ctor()
+// 0x000004AE System.Void StartGame::.ctor()
 extern void StartGame__ctor_mCE51A8179D9D10D4F741CDAB63ED2DA16C00B797 (void);
-// 0x000004AA System.Single LlamAcademy.Spring.BaseSpring`1::get_Damping()
-// 0x000004AB System.Void LlamAcademy.Spring.BaseSpring`1::set_Damping(System.Single)
-// 0x000004AC System.Single LlamAcademy.Spring.BaseSpring`1::get_Mass()
-// 0x000004AD System.Void LlamAcademy.Spring.BaseSpring`1::set_Mass(System.Single)
-// 0x000004AE System.Single LlamAcademy.Spring.BaseSpring`1::get_Stiffness()
-// 0x000004AF System.Void LlamAcademy.Spring.BaseSpring`1::set_Stiffness(System.Single)
-// 0x000004B0 T LlamAcademy.Spring.BaseSpring`1::get_StartValue()
-// 0x000004B1 System.Void LlamAcademy.Spring.BaseSpring`1::set_StartValue(T)
-// 0x000004B2 T LlamAcademy.Spring.BaseSpring`1::get_EndValue()
-// 0x000004B3 System.Void LlamAcademy.Spring.BaseSpring`1::set_EndValue(T)
-// 0x000004B4 T LlamAcademy.Spring.BaseSpring`1::get_InitialVelocity()
-// 0x000004B5 System.Void LlamAcademy.Spring.BaseSpring`1::set_InitialVelocity(T)
-// 0x000004B6 T LlamAcademy.Spring.BaseSpring`1::get_CurrentValue()
-// 0x000004B7 System.Void LlamAcademy.Spring.BaseSpring`1::set_CurrentValue(T)
-// 0x000004B8 T LlamAcademy.Spring.BaseSpring`1::get_CurrentVelocity()
-// 0x000004B9 System.Void LlamAcademy.Spring.BaseSpring`1::set_CurrentVelocity(T)
-// 0x000004BA System.Void LlamAcademy.Spring.BaseSpring`1::Reset()
-// 0x000004BB System.Void LlamAcademy.Spring.BaseSpring`1::UpdateEndValue(T)
-// 0x000004BC System.Void LlamAcademy.Spring.BaseSpring`1::UpdateEndValue(T,T)
-// 0x000004BD T LlamAcademy.Spring.BaseSpring`1::Evaluate(System.Single)
-// 0x000004BE System.Void LlamAcademy.Spring.BaseSpring`1::.ctor()
-// 0x000004BF System.Void LlamAcademy.Spring.FloatSpring::Reset()
+// 0x000004AF System.Single LlamAcademy.Spring.BaseSpring`1::get_Damping()
+// 0x000004B0 System.Void LlamAcademy.Spring.BaseSpring`1::set_Damping(System.Single)
+// 0x000004B1 System.Single LlamAcademy.Spring.BaseSpring`1::get_Mass()
+// 0x000004B2 System.Void LlamAcademy.Spring.BaseSpring`1::set_Mass(System.Single)
+// 0x000004B3 System.Single LlamAcademy.Spring.BaseSpring`1::get_Stiffness()
+// 0x000004B4 System.Void LlamAcademy.Spring.BaseSpring`1::set_Stiffness(System.Single)
+// 0x000004B5 T LlamAcademy.Spring.BaseSpring`1::get_StartValue()
+// 0x000004B6 System.Void LlamAcademy.Spring.BaseSpring`1::set_StartValue(T)
+// 0x000004B7 T LlamAcademy.Spring.BaseSpring`1::get_EndValue()
+// 0x000004B8 System.Void LlamAcademy.Spring.BaseSpring`1::set_EndValue(T)
+// 0x000004B9 T LlamAcademy.Spring.BaseSpring`1::get_InitialVelocity()
+// 0x000004BA System.Void LlamAcademy.Spring.BaseSpring`1::set_InitialVelocity(T)
+// 0x000004BB T LlamAcademy.Spring.BaseSpring`1::get_CurrentValue()
+// 0x000004BC System.Void LlamAcademy.Spring.BaseSpring`1::set_CurrentValue(T)
+// 0x000004BD T LlamAcademy.Spring.BaseSpring`1::get_CurrentVelocity()
+// 0x000004BE System.Void LlamAcademy.Spring.BaseSpring`1::set_CurrentVelocity(T)
+// 0x000004BF System.Void LlamAcademy.Spring.BaseSpring`1::Reset()
+// 0x000004C0 System.Void LlamAcademy.Spring.BaseSpring`1::UpdateEndValue(T)
+// 0x000004C1 System.Void LlamAcademy.Spring.BaseSpring`1::UpdateEndValue(T,T)
+// 0x000004C2 T LlamAcademy.Spring.BaseSpring`1::Evaluate(System.Single)
+// 0x000004C3 System.Void LlamAcademy.Spring.BaseSpring`1::.ctor()
+// 0x000004C4 System.Void LlamAcademy.Spring.FloatSpring::Reset()
 extern void FloatSpring_Reset_mBEC3BBE2F9294ED47E996117BE568288E0E80BBE (void);
-// 0x000004C0 System.Void LlamAcademy.Spring.FloatSpring::UpdateEndValue(System.Single,System.Single)
+// 0x000004C5 System.Void LlamAcademy.Spring.FloatSpring::UpdateEndValue(System.Single,System.Single)
 extern void FloatSpring_UpdateEndValue_m3BFE8D5B9C52819F89446C346FD5BFF1E3B384C3 (void);
-// 0x000004C1 System.Single LlamAcademy.Spring.FloatSpring::Evaluate(System.Single)
+// 0x000004C6 System.Single LlamAcademy.Spring.FloatSpring::Evaluate(System.Single)
 extern void FloatSpring_Evaluate_mB4E36D431D645C503210C271261FCE948FB6978C (void);
-// 0x000004C2 System.Void LlamAcademy.Spring.FloatSpring::.ctor()
+// 0x000004C7 System.Void LlamAcademy.Spring.FloatSpring::.ctor()
 extern void FloatSpring__ctor_m4A231A6F7511A84FAA031D7E08E68F68AB64A163 (void);
-// 0x000004C3 System.Single LlamAcademy.Spring.SpringVector2::get_Damping()
+// 0x000004C8 System.Single LlamAcademy.Spring.SpringVector2::get_Damping()
 extern void SpringVector2_get_Damping_mFF42407EC87775CBADF50FDCE891D965267181A5 (void);
-// 0x000004C4 System.Void LlamAcademy.Spring.SpringVector2::set_Damping(System.Single)
+// 0x000004C9 System.Void LlamAcademy.Spring.SpringVector2::set_Damping(System.Single)
 extern void SpringVector2_set_Damping_mC841261BD80C63B97940AD55C64FF07E2071E929 (void);
-// 0x000004C5 System.Single LlamAcademy.Spring.SpringVector2::get_Stiffness()
+// 0x000004CA System.Single LlamAcademy.Spring.SpringVector2::get_Stiffness()
 extern void SpringVector2_get_Stiffness_m9DF15D40B43EDEE344CD37AF714ED12BCCEF680E (void);
-// 0x000004C6 System.Void LlamAcademy.Spring.SpringVector2::set_Stiffness(System.Single)
+// 0x000004CB System.Void LlamAcademy.Spring.SpringVector2::set_Stiffness(System.Single)
 extern void SpringVector2_set_Stiffness_m6F656A7E4EEA0EE1B02E47376025115973BB5075 (void);
-// 0x000004C7 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_InitialVelocity()
+// 0x000004CC UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_InitialVelocity()
 extern void SpringVector2_get_InitialVelocity_m7FE4C5D706C3E98799080ECAEE08A4565B8D645F (void);
-// 0x000004C8 System.Void LlamAcademy.Spring.SpringVector2::set_InitialVelocity(UnityEngine.Vector2)
+// 0x000004CD System.Void LlamAcademy.Spring.SpringVector2::set_InitialVelocity(UnityEngine.Vector2)
 extern void SpringVector2_set_InitialVelocity_m1C9F2869BBFCF317759A0487BD906A3D062BD87D (void);
-// 0x000004C9 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_StartValue()
+// 0x000004CE UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_StartValue()
 extern void SpringVector2_get_StartValue_m1CA1BF8A60CB6256B096F804460BBF91D3931399 (void);
-// 0x000004CA System.Void LlamAcademy.Spring.SpringVector2::set_StartValue(UnityEngine.Vector2)
+// 0x000004CF System.Void LlamAcademy.Spring.SpringVector2::set_StartValue(UnityEngine.Vector2)
 extern void SpringVector2_set_StartValue_m70C18A154CE058BB53C67F9353AD0688867F9202 (void);
-// 0x000004CB UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_EndValue()
+// 0x000004D0 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_EndValue()
 extern void SpringVector2_get_EndValue_m6BF708D57F1DA40E79C08E3BAE25605472424FFE (void);
-// 0x000004CC System.Void LlamAcademy.Spring.SpringVector2::set_EndValue(UnityEngine.Vector2)
+// 0x000004D1 System.Void LlamAcademy.Spring.SpringVector2::set_EndValue(UnityEngine.Vector2)
 extern void SpringVector2_set_EndValue_m0806A1FD985AA04821EBEDD97EF70E1677112528 (void);
-// 0x000004CD UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_CurrentVelocity()
+// 0x000004D2 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_CurrentVelocity()
 extern void SpringVector2_get_CurrentVelocity_mE5D7D61173123878E9BE5AD5176F3D0EFFF25876 (void);
-// 0x000004CE System.Void LlamAcademy.Spring.SpringVector2::set_CurrentVelocity(UnityEngine.Vector2)
+// 0x000004D3 System.Void LlamAcademy.Spring.SpringVector2::set_CurrentVelocity(UnityEngine.Vector2)
 extern void SpringVector2_set_CurrentVelocity_m2DD6B4146EFB6EE83FFA51132C3F37A522377D99 (void);
-// 0x000004CF UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_CurrentValue()
+// 0x000004D4 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::get_CurrentValue()
 extern void SpringVector2_get_CurrentValue_mA6A3CDA60A3447C1C937ED584FEBD62F24993598 (void);
-// 0x000004D0 System.Void LlamAcademy.Spring.SpringVector2::set_CurrentValue(UnityEngine.Vector2)
+// 0x000004D5 System.Void LlamAcademy.Spring.SpringVector2::set_CurrentValue(UnityEngine.Vector2)
 extern void SpringVector2_set_CurrentValue_m837E064D22339EF1D3A8A103489037075F157410 (void);
-// 0x000004D1 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::Evaluate(System.Single)
+// 0x000004D6 UnityEngine.Vector2 LlamAcademy.Spring.SpringVector2::Evaluate(System.Single)
 extern void SpringVector2_Evaluate_mDD024DFAC34C6ACCFA4AFE9E922A937678046816 (void);
-// 0x000004D2 System.Void LlamAcademy.Spring.SpringVector2::Reset()
+// 0x000004D7 System.Void LlamAcademy.Spring.SpringVector2::Reset()
 extern void SpringVector2_Reset_m9204C6F252B8A14821A70550C9515E14BD9DC88E (void);
-// 0x000004D3 System.Void LlamAcademy.Spring.SpringVector2::UpdateEndValue(UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x000004D8 System.Void LlamAcademy.Spring.SpringVector2::UpdateEndValue(UnityEngine.Vector2,UnityEngine.Vector2)
 extern void SpringVector2_UpdateEndValue_m72568680F38947DBA050CBD8D594D90A44D9A08A (void);
-// 0x000004D4 System.Void LlamAcademy.Spring.SpringVector2::.ctor()
+// 0x000004D9 System.Void LlamAcademy.Spring.SpringVector2::.ctor()
 extern void SpringVector2__ctor_m0F663215B5B4FEFE213B793A86F8DE92965C6443 (void);
-// 0x000004D5 System.Single LlamAcademy.Spring.SpringVector3::get_Damping()
+// 0x000004DA System.Single LlamAcademy.Spring.SpringVector3::get_Damping()
 extern void SpringVector3_get_Damping_m6410E6E30971893FF8CA9A0ABC3C06396EA5F2F6 (void);
-// 0x000004D6 System.Void LlamAcademy.Spring.SpringVector3::set_Damping(System.Single)
+// 0x000004DB System.Void LlamAcademy.Spring.SpringVector3::set_Damping(System.Single)
 extern void SpringVector3_set_Damping_mCACD41BAF1CC4B0B8DC630B4867C9AFCC19A97AF (void);
-// 0x000004D7 System.Single LlamAcademy.Spring.SpringVector3::get_Stiffness()
+// 0x000004DC System.Single LlamAcademy.Spring.SpringVector3::get_Stiffness()
 extern void SpringVector3_get_Stiffness_m7E8037C1C0B7A32EC62882096E98EE68869C3DF4 (void);
-// 0x000004D8 System.Void LlamAcademy.Spring.SpringVector3::set_Stiffness(System.Single)
+// 0x000004DD System.Void LlamAcademy.Spring.SpringVector3::set_Stiffness(System.Single)
 extern void SpringVector3_set_Stiffness_mC95602F6BE3FE4FA60F2FA99AD02C8943BBAC1FE (void);
-// 0x000004D9 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_StartValue()
+// 0x000004DE UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_StartValue()
 extern void SpringVector3_get_StartValue_mE19D4F32225A6E6BA3AE885055251D97E1D216E6 (void);
-// 0x000004DA System.Void LlamAcademy.Spring.SpringVector3::set_StartValue(UnityEngine.Vector3)
+// 0x000004DF System.Void LlamAcademy.Spring.SpringVector3::set_StartValue(UnityEngine.Vector3)
 extern void SpringVector3_set_StartValue_mDCA7D48A26E60D5FE466F472E4BAA041B92F714E (void);
-// 0x000004DB UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_EndValue()
+// 0x000004E0 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_EndValue()
 extern void SpringVector3_get_EndValue_m940B65681CBAA88D3B4E003E5FF92332723561FE (void);
-// 0x000004DC System.Void LlamAcademy.Spring.SpringVector3::set_EndValue(UnityEngine.Vector3)
+// 0x000004E1 System.Void LlamAcademy.Spring.SpringVector3::set_EndValue(UnityEngine.Vector3)
 extern void SpringVector3_set_EndValue_m49EBC08C5A53E226292700A4A52163F3607F337C (void);
-// 0x000004DD UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_InitialVelocity()
+// 0x000004E2 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_InitialVelocity()
 extern void SpringVector3_get_InitialVelocity_m3A07E3DAADBF3D44A4CAE7A8755485C9D6E1193A (void);
-// 0x000004DE System.Void LlamAcademy.Spring.SpringVector3::set_InitialVelocity(UnityEngine.Vector3)
+// 0x000004E3 System.Void LlamAcademy.Spring.SpringVector3::set_InitialVelocity(UnityEngine.Vector3)
 extern void SpringVector3_set_InitialVelocity_m6DF6A979ED5519BC71DD322A1302D101E59C1975 (void);
-// 0x000004DF UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_CurrentVelocity()
+// 0x000004E4 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_CurrentVelocity()
 extern void SpringVector3_get_CurrentVelocity_mE04B520B45000B4548A624B08F5E417768E6283F (void);
-// 0x000004E0 System.Void LlamAcademy.Spring.SpringVector3::set_CurrentVelocity(UnityEngine.Vector3)
+// 0x000004E5 System.Void LlamAcademy.Spring.SpringVector3::set_CurrentVelocity(UnityEngine.Vector3)
 extern void SpringVector3_set_CurrentVelocity_m700E44B83D2E0A12CD244879837C09CB6118A3ED (void);
-// 0x000004E1 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_CurrentValue()
+// 0x000004E6 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::get_CurrentValue()
 extern void SpringVector3_get_CurrentValue_m348499A80F4566D4EF51235769EFE761E86359B5 (void);
-// 0x000004E2 System.Void LlamAcademy.Spring.SpringVector3::set_CurrentValue(UnityEngine.Vector3)
+// 0x000004E7 System.Void LlamAcademy.Spring.SpringVector3::set_CurrentValue(UnityEngine.Vector3)
 extern void SpringVector3_set_CurrentValue_mF95C76DB8482A2AF6EB0DAC55F4AA8C6D9A5B079 (void);
-// 0x000004E3 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::Evaluate(System.Single)
+// 0x000004E8 UnityEngine.Vector3 LlamAcademy.Spring.SpringVector3::Evaluate(System.Single)
 extern void SpringVector3_Evaluate_mAD9F14BF158C8261BCE522AC979B206DB93A0582 (void);
-// 0x000004E4 System.Void LlamAcademy.Spring.SpringVector3::Reset()
+// 0x000004E9 System.Void LlamAcademy.Spring.SpringVector3::Reset()
 extern void SpringVector3_Reset_mD4C6ED0CDDDF7BDDBAF205BAC16908020D693DA6 (void);
-// 0x000004E5 System.Void LlamAcademy.Spring.SpringVector3::UpdateEndValue(UnityEngine.Vector3,UnityEngine.Vector3)
+// 0x000004EA System.Void LlamAcademy.Spring.SpringVector3::UpdateEndValue(UnityEngine.Vector3,UnityEngine.Vector3)
 extern void SpringVector3_UpdateEndValue_m77420B938023E9B09C132C73672235F5A09EC5F9 (void);
-// 0x000004E6 System.Void LlamAcademy.Spring.SpringVector3::.ctor()
+// 0x000004EB System.Void LlamAcademy.Spring.SpringVector3::.ctor()
 extern void SpringVector3__ctor_m9334B7B02E71C495D6F60E31486FEFA4D899D8B5 (void);
-// 0x000004E7 System.Void LlamAcademy.Spring.Runtime.BaseSpringBehaviour::.ctor()
+// 0x000004EC System.Void LlamAcademy.Spring.Runtime.BaseSpringBehaviour::.ctor()
 extern void BaseSpringBehaviour__ctor_m76A6966DB56BA9A3C8D874CE665B0BEC8303DFCA (void);
-// 0x000004E8 System.Void LlamAcademy.Spring.Runtime.INudgeable`1::Nudge(T)
-// 0x000004E9 System.Void LlamAcademy.Spring.Runtime.ISpringTo`1::SpringTo(T)
-// 0x000004EA System.Void LlamAcademy.Spring.Runtime.SpringToRotation::Awake()
+// 0x000004ED System.Void LlamAcademy.Spring.Runtime.INudgeable`1::Nudge(T)
+// 0x000004EE System.Void LlamAcademy.Spring.Runtime.ISpringTo`1::SpringTo(T)
+// 0x000004EF System.Void LlamAcademy.Spring.Runtime.SpringToRotation::Awake()
 extern void SpringToRotation_Awake_m2E710D043BD966CE1A8D477E648CBA3DC58DAE00 (void);
-// 0x000004EB System.Void LlamAcademy.Spring.Runtime.SpringToRotation::SpringTo(UnityEngine.Vector3)
+// 0x000004F0 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::SpringTo(UnityEngine.Vector3)
 extern void SpringToRotation_SpringTo_mB96B5542FCD19D9F98E3CDA44094702717988170 (void);
-// 0x000004EC System.Void LlamAcademy.Spring.Runtime.SpringToRotation::SpringTo(UnityEngine.Quaternion)
+// 0x000004F1 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::SpringTo(UnityEngine.Quaternion)
 extern void SpringToRotation_SpringTo_m15C97D93DAD65EF80DC2AD78C82EC6BBF56F269C (void);
-// 0x000004ED System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToRotation::DoSpringToTarget(UnityEngine.Quaternion)
+// 0x000004F2 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToRotation::DoSpringToTarget(UnityEngine.Quaternion)
 extern void SpringToRotation_DoSpringToTarget_m26616D0ACBBE3FCDBD72D9D968EA25B494B5C615 (void);
-// 0x000004EE System.Void LlamAcademy.Spring.Runtime.SpringToRotation::CheckInspectorChanges()
+// 0x000004F3 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::CheckInspectorChanges()
 extern void SpringToRotation_CheckInspectorChanges_mE71BA1B992D044408002443A52F2613D4E6C2169 (void);
-// 0x000004EF System.Void LlamAcademy.Spring.Runtime.SpringToRotation::Nudge(UnityEngine.Vector3)
+// 0x000004F4 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::Nudge(UnityEngine.Vector3)
 extern void SpringToRotation_Nudge_m743973947BE389FD4264C36B6676A1B93150CE40 (void);
-// 0x000004F0 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToRotation::HandleNudge(UnityEngine.Vector3)
+// 0x000004F5 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToRotation::HandleNudge(UnityEngine.Vector3)
 extern void SpringToRotation_HandleNudge_m08B73B13F00436140088758038A1A0DE5F6458B3 (void);
-// 0x000004F1 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::Nudge(UnityEngine.Quaternion)
+// 0x000004F6 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::Nudge(UnityEngine.Quaternion)
 extern void SpringToRotation_Nudge_mD520A9A854E56B0A94ACA76DFEE3CCFF7C73B306 (void);
-// 0x000004F2 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::.ctor()
+// 0x000004F7 System.Void LlamAcademy.Spring.Runtime.SpringToRotation::.ctor()
 extern void SpringToRotation__ctor_m59533F0D599BFA973E3DC93BF2F2B3373579AA7C (void);
-// 0x000004F3 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::.ctor(System.Int32)
+// 0x000004F8 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::.ctor(System.Int32)
 extern void U3CDoSpringToTargetU3Ed__4__ctor_mABA032F03A501B355C1A22C84C46895C3FCBDBB2 (void);
-// 0x000004F4 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.IDisposable.Dispose()
+// 0x000004F9 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.IDisposable.Dispose()
 extern void U3CDoSpringToTargetU3Ed__4_System_IDisposable_Dispose_m9A7B93120E7065FF5D7BC4ACE2B760B861289449 (void);
-// 0x000004F5 System.Boolean LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::MoveNext()
+// 0x000004FA System.Boolean LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::MoveNext()
 extern void U3CDoSpringToTargetU3Ed__4_MoveNext_mC93BC79CE738E091E98C266B9941B5B22C6F540B (void);
-// 0x000004F6 System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000004FB System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDoSpringToTargetU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m39EA1F155FFE20F1864B73F297C91058F995AAB7 (void);
-// 0x000004F7 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.Collections.IEnumerator.Reset()
+// 0x000004FC System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CDoSpringToTargetU3Ed__4_System_Collections_IEnumerator_Reset_mE187EC9FF9E0E7813B2974178CF57FC47CF44E9A (void);
-// 0x000004F8 System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.Collections.IEnumerator.get_Current()
+// 0x000004FD System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<DoSpringToTarget>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CDoSpringToTargetU3Ed__4_System_Collections_IEnumerator_get_Current_mFA4152AB8CF627CADB81CF7BDC8ADB49CA1A4043 (void);
-// 0x000004F9 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::.ctor(System.Int32)
+// 0x000004FE System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::.ctor(System.Int32)
 extern void U3CHandleNudgeU3Ed__7__ctor_m9B908F1A104372E928C266DAE97242D5DCDD9C1D (void);
-// 0x000004FA System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.IDisposable.Dispose()
+// 0x000004FF System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.IDisposable.Dispose()
 extern void U3CHandleNudgeU3Ed__7_System_IDisposable_Dispose_mC4B66A0F4A8E30B3A341B7F92DEA9B46745D7729 (void);
-// 0x000004FB System.Boolean LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::MoveNext()
+// 0x00000500 System.Boolean LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::MoveNext()
 extern void U3CHandleNudgeU3Ed__7_MoveNext_m9EC3D65F11F9A05BE01D0C330D6729D4F3F7E2F4 (void);
-// 0x000004FC System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000501 System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CHandleNudgeU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m09E642B6F63A00BCE75E11B0DDEE56AB7C302503 (void);
-// 0x000004FD System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.Collections.IEnumerator.Reset()
+// 0x00000502 System.Void LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.Collections.IEnumerator.Reset()
 extern void U3CHandleNudgeU3Ed__7_System_Collections_IEnumerator_Reset_m1A8F46B86BD9A8FAB338423C6016D449075A3000 (void);
-// 0x000004FE System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.Collections.IEnumerator.get_Current()
+// 0x00000503 System.Object LlamAcademy.Spring.Runtime.SpringToRotation/<HandleNudge>d__7::System.Collections.IEnumerator.get_Current()
 extern void U3CHandleNudgeU3Ed__7_System_Collections_IEnumerator_get_Current_m730975F76648CB855780AD16F983F2A6871ACDDE (void);
-// 0x000004FF System.Void LlamAcademy.Spring.Runtime.SpringToScale::Awake()
+// 0x00000504 System.Void LlamAcademy.Spring.Runtime.SpringToScale::Awake()
 extern void SpringToScale_Awake_mE1B6C9A012519AC2D8256F6A7FDB2386D9E321D8 (void);
-// 0x00000500 System.Void LlamAcademy.Spring.Runtime.SpringToScale::SpringTo(UnityEngine.Vector3)
+// 0x00000505 System.Void LlamAcademy.Spring.Runtime.SpringToScale::SpringTo(UnityEngine.Vector3)
 extern void SpringToScale_SpringTo_m8DCC8774B70526F267603469ED016041167C2A08 (void);
-// 0x00000501 System.Void LlamAcademy.Spring.Runtime.SpringToScale::Nudge(UnityEngine.Vector3)
+// 0x00000506 System.Void LlamAcademy.Spring.Runtime.SpringToScale::Nudge(UnityEngine.Vector3)
 extern void SpringToScale_Nudge_m0BE51389CAF5302720712ABAF479ADC122DE35B6 (void);
-// 0x00000502 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToScale::HandleNudge(UnityEngine.Vector3)
+// 0x00000507 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToScale::HandleNudge(UnityEngine.Vector3)
 extern void SpringToScale_HandleNudge_m36C7254E5BB7A77B07E2124778125B746183E835 (void);
-// 0x00000503 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToScale::DoSpringToTarget(UnityEngine.Vector3)
+// 0x00000508 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToScale::DoSpringToTarget(UnityEngine.Vector3)
 extern void SpringToScale_DoSpringToTarget_m2ECA182916D04C0BC766A17F94D13F75D74686B3 (void);
-// 0x00000504 System.Void LlamAcademy.Spring.Runtime.SpringToScale::CheckInspectorChanges()
+// 0x00000509 System.Void LlamAcademy.Spring.Runtime.SpringToScale::CheckInspectorChanges()
 extern void SpringToScale_CheckInspectorChanges_mBBCADF72C01BF24A000E8C951ED250ACB2A43159 (void);
-// 0x00000505 System.Void LlamAcademy.Spring.Runtime.SpringToScale::.ctor()
+// 0x0000050A System.Void LlamAcademy.Spring.Runtime.SpringToScale::.ctor()
 extern void SpringToScale__ctor_mFF2E8E3EB5463BC2B5EC53D9FDB19F8F1655A29E (void);
-// 0x00000506 System.Void LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::.ctor(System.Int32)
+// 0x0000050B System.Void LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::.ctor(System.Int32)
 extern void U3CHandleNudgeU3Ed__4__ctor_m5DBE29160994AAF59D63E695E417FBBA9CA677D2 (void);
-// 0x00000507 System.Void LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.IDisposable.Dispose()
+// 0x0000050C System.Void LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.IDisposable.Dispose()
 extern void U3CHandleNudgeU3Ed__4_System_IDisposable_Dispose_m0B6B7E932BC2CCE5C82AA2C1F3849E80991F83E5 (void);
-// 0x00000508 System.Boolean LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::MoveNext()
+// 0x0000050D System.Boolean LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::MoveNext()
 extern void U3CHandleNudgeU3Ed__4_MoveNext_mF8FA5291EBCFE2B62E6E6A99C2E277A8CF08400E (void);
-// 0x00000509 System.Object LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000050E System.Object LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CHandleNudgeU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m77CDFA67283A84A85A315A7802E2CFA09D711B69 (void);
-// 0x0000050A System.Void LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.Collections.IEnumerator.Reset()
+// 0x0000050F System.Void LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CHandleNudgeU3Ed__4_System_Collections_IEnumerator_Reset_m7C44D9DD108B62F5FFA36369102CBFB6C11F49D2 (void);
-// 0x0000050B System.Object LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.Collections.IEnumerator.get_Current()
+// 0x00000510 System.Object LlamAcademy.Spring.Runtime.SpringToScale/<HandleNudge>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CHandleNudgeU3Ed__4_System_Collections_IEnumerator_get_Current_m3C25422639168926D87E5E37631EF422856C775C (void);
-// 0x0000050C System.Void LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::.ctor(System.Int32)
+// 0x00000511 System.Void LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::.ctor(System.Int32)
 extern void U3CDoSpringToTargetU3Ed__5__ctor_m5A003D5D719C6292381310CE5D31A49529E3937F (void);
-// 0x0000050D System.Void LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.IDisposable.Dispose()
+// 0x00000512 System.Void LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.IDisposable.Dispose()
 extern void U3CDoSpringToTargetU3Ed__5_System_IDisposable_Dispose_m27644B575F49C39C87EC84DD053B46EE6706C83F (void);
-// 0x0000050E System.Boolean LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::MoveNext()
+// 0x00000513 System.Boolean LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::MoveNext()
 extern void U3CDoSpringToTargetU3Ed__5_MoveNext_mA67506B6146BF52492C5176061600822416374A4 (void);
-// 0x0000050F System.Object LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000514 System.Object LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDoSpringToTargetU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAAEAA03AAA2DC15769C40A261FF31F8A6115E402 (void);
-// 0x00000510 System.Void LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.Collections.IEnumerator.Reset()
+// 0x00000515 System.Void LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.Collections.IEnumerator.Reset()
 extern void U3CDoSpringToTargetU3Ed__5_System_Collections_IEnumerator_Reset_m45215D9D93B02F63616CCE114A60B009DE61FEC6 (void);
-// 0x00000511 System.Object LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.Collections.IEnumerator.get_Current()
+// 0x00000516 System.Object LlamAcademy.Spring.Runtime.SpringToScale/<DoSpringToTarget>d__5::System.Collections.IEnumerator.get_Current()
 extern void U3CDoSpringToTargetU3Ed__5_System_Collections_IEnumerator_get_Current_mD5C9176F87E183B2748257BCD5456EC89872436F (void);
-// 0x00000512 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::Awake()
+// 0x00000517 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::Awake()
 extern void SpringToTarget2D_Awake_mECC4F484C0A87BBDE0FC901A1CFFDEE17A3000F7 (void);
-// 0x00000513 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget2D::DoSpringToTarget(UnityEngine.Vector2)
+// 0x00000518 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget2D::DoSpringToTarget(UnityEngine.Vector2)
 extern void SpringToTarget2D_DoSpringToTarget_m1B44AB8D9110E3C792764E8DAA85E14EF789207D (void);
-// 0x00000514 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::SpringTo(UnityEngine.Vector2)
+// 0x00000519 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::SpringTo(UnityEngine.Vector2)
 extern void SpringToTarget2D_SpringTo_mA8CB4EC4796970B1BECBE6C4FB8636222E68316B (void);
-// 0x00000515 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::CheckInspectorChanges()
+// 0x0000051A System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::CheckInspectorChanges()
 extern void SpringToTarget2D_CheckInspectorChanges_mDE6FF22FC8AE46BECFF52E2439AF6F609CFB4447 (void);
-// 0x00000516 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::Nudge(UnityEngine.Vector2)
+// 0x0000051B System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::Nudge(UnityEngine.Vector2)
 extern void SpringToTarget2D_Nudge_m6F253C748F51CAE56C557D30EB0FBC53C53577F8 (void);
-// 0x00000517 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget2D::HandleNudge(UnityEngine.Vector2)
+// 0x0000051C System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget2D::HandleNudge(UnityEngine.Vector2)
 extern void SpringToTarget2D_HandleNudge_m9D12461B0CE160AE1B98C0340BD883FBBF0FE879 (void);
-// 0x00000518 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::.ctor()
+// 0x0000051D System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D::.ctor()
 extern void SpringToTarget2D__ctor_m3BF3DB185CE8726B8DA42D3972A76EE30909C21C (void);
-// 0x00000519 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::.ctor(System.Int32)
+// 0x0000051E System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::.ctor(System.Int32)
 extern void U3CDoSpringToTargetU3Ed__2__ctor_mC69BA4AC15274C2A27EEF584206A04470486C77D (void);
-// 0x0000051A System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.IDisposable.Dispose()
+// 0x0000051F System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.IDisposable.Dispose()
 extern void U3CDoSpringToTargetU3Ed__2_System_IDisposable_Dispose_mF411A9C15FC48FCF73CB0E6788B2DE89D1063462 (void);
-// 0x0000051B System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::MoveNext()
+// 0x00000520 System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::MoveNext()
 extern void U3CDoSpringToTargetU3Ed__2_MoveNext_mAF6E0B8DED8B7717A2C9626C9D3930C548E68156 (void);
-// 0x0000051C System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000521 System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDoSpringToTargetU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7372664DB7993B252E34BF6C045B1A967C670860 (void);
-// 0x0000051D System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.Collections.IEnumerator.Reset()
+// 0x00000522 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.Collections.IEnumerator.Reset()
 extern void U3CDoSpringToTargetU3Ed__2_System_Collections_IEnumerator_Reset_m310CB46F003EFF2DD5B13EA99DD7477E39CA250E (void);
-// 0x0000051E System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.Collections.IEnumerator.get_Current()
+// 0x00000523 System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<DoSpringToTarget>d__2::System.Collections.IEnumerator.get_Current()
 extern void U3CDoSpringToTargetU3Ed__2_System_Collections_IEnumerator_get_Current_m433882FB9B2539A18497D239AD4FDFB5EB6101C0 (void);
-// 0x0000051F System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::.ctor(System.Int32)
+// 0x00000524 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::.ctor(System.Int32)
 extern void U3CHandleNudgeU3Ed__6__ctor_m4F36E2BC471E1BD1CB7CDDFCE64D29F656121981 (void);
-// 0x00000520 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.IDisposable.Dispose()
+// 0x00000525 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.IDisposable.Dispose()
 extern void U3CHandleNudgeU3Ed__6_System_IDisposable_Dispose_m584A030DD96EB850F8797512C9A42DFC6317FA2C (void);
-// 0x00000521 System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::MoveNext()
+// 0x00000526 System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::MoveNext()
 extern void U3CHandleNudgeU3Ed__6_MoveNext_mCB55B0D2A4FB186105FB4B8F3A712E3091A60E2A (void);
-// 0x00000522 System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000527 System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CHandleNudgeU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0537B3F0FEB98FC54C1AD3CDBBE09275E7E00346 (void);
-// 0x00000523 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.Collections.IEnumerator.Reset()
+// 0x00000528 System.Void LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.Collections.IEnumerator.Reset()
 extern void U3CHandleNudgeU3Ed__6_System_Collections_IEnumerator_Reset_m17DF3CEF721C42EF213262C38656FB7A76B2252C (void);
-// 0x00000524 System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.Collections.IEnumerator.get_Current()
+// 0x00000529 System.Object LlamAcademy.Spring.Runtime.SpringToTarget2D/<HandleNudge>d__6::System.Collections.IEnumerator.get_Current()
 extern void U3CHandleNudgeU3Ed__6_System_Collections_IEnumerator_get_Current_mBD045CCF7D916D5CFFADEB4B9051B28048546E20 (void);
-// 0x00000525 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::Awake()
+// 0x0000052A System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::Awake()
 extern void SpringToTarget3D_Awake_mC3F14EF92B1D3995F4E24F0AED5B5DB7ED1EBF42 (void);
-// 0x00000526 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::SpringTo(UnityEngine.Vector3,System.Single,System.Single)
+// 0x0000052B System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::SpringTo(UnityEngine.Vector3,System.Single,System.Single)
 extern void SpringToTarget3D_SpringTo_mECA730B7185E9563CA14AF82A956293B95C410C2 (void);
-// 0x00000527 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::SpringToDefaultValues(UnityEngine.Vector3)
+// 0x0000052C System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::SpringToDefaultValues(UnityEngine.Vector3)
 extern void SpringToTarget3D_SpringToDefaultValues_m836A94167BD9F7DF1C507E01912F5D15F98E98A3 (void);
-// 0x00000528 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::Nudge(UnityEngine.Vector3,System.Single,System.Single)
+// 0x0000052D System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::Nudge(UnityEngine.Vector3,System.Single,System.Single)
 extern void SpringToTarget3D_Nudge_m02F4340C566C4BB0B5AAF9204D1B32A358EE66AD (void);
-// 0x00000529 System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget3D::HandleNudge(UnityEngine.Vector3)
+// 0x0000052E System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget3D::HandleNudge(UnityEngine.Vector3)
 extern void SpringToTarget3D_HandleNudge_m96F1E8CF07C7E2873292101223D1F11551787140 (void);
-// 0x0000052A System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget3D::DoSpringToTarget(UnityEngine.Vector3)
+// 0x0000052F System.Collections.IEnumerator LlamAcademy.Spring.Runtime.SpringToTarget3D::DoSpringToTarget(UnityEngine.Vector3)
 extern void SpringToTarget3D_DoSpringToTarget_m97E485055B755D67284A6A03B2DD1AE8A96339D0 (void);
-// 0x0000052B System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::.ctor()
+// 0x00000530 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D::.ctor()
 extern void SpringToTarget3D__ctor_m0A6C2DD34832F13804A723691A954108AB843953 (void);
-// 0x0000052C System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::.ctor(System.Int32)
+// 0x00000531 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::.ctor(System.Int32)
 extern void U3CHandleNudgeU3Ed__6__ctor_m5DF5166BE76C8F168A1B69302223D779D00ACFB4 (void);
-// 0x0000052D System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.IDisposable.Dispose()
+// 0x00000532 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.IDisposable.Dispose()
 extern void U3CHandleNudgeU3Ed__6_System_IDisposable_Dispose_m3647445034243DE99C19ED080268F2EC1232C21C (void);
-// 0x0000052E System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::MoveNext()
+// 0x00000533 System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::MoveNext()
 extern void U3CHandleNudgeU3Ed__6_MoveNext_m71FD739ABE5280A89BF2BAD8408509C5F5BD1CBB (void);
-// 0x0000052F System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000534 System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CHandleNudgeU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE2D9BA627D1FBE5844C61C3E28146F1D3234D246 (void);
-// 0x00000530 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.Collections.IEnumerator.Reset()
+// 0x00000535 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.Collections.IEnumerator.Reset()
 extern void U3CHandleNudgeU3Ed__6_System_Collections_IEnumerator_Reset_m087E57C5A7F1D859C549EC3FCA42E1B4F343B91B (void);
-// 0x00000531 System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.Collections.IEnumerator.get_Current()
+// 0x00000536 System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<HandleNudge>d__6::System.Collections.IEnumerator.get_Current()
 extern void U3CHandleNudgeU3Ed__6_System_Collections_IEnumerator_get_Current_m4F4488E7559AC97299AF4752D1A33221D73C1C13 (void);
-// 0x00000532 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::.ctor(System.Int32)
+// 0x00000537 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::.ctor(System.Int32)
 extern void U3CDoSpringToTargetU3Ed__7__ctor_m30E2A6AAED606DAD7BF47B5BFE626F8ADB1380A8 (void);
-// 0x00000533 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.IDisposable.Dispose()
+// 0x00000538 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.IDisposable.Dispose()
 extern void U3CDoSpringToTargetU3Ed__7_System_IDisposable_Dispose_mCF86C104A0A304C99DDDD6C77DDB4464A4D43AF3 (void);
-// 0x00000534 System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::MoveNext()
+// 0x00000539 System.Boolean LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::MoveNext()
 extern void U3CDoSpringToTargetU3Ed__7_MoveNext_mF0472DEF800CF8C8A70D7998322D233275FC24FC (void);
-// 0x00000535 System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000053A System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CDoSpringToTargetU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m403E1417544D23D80610B3385996D156CAF480BB (void);
-// 0x00000536 System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.Collections.IEnumerator.Reset()
+// 0x0000053B System.Void LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.Collections.IEnumerator.Reset()
 extern void U3CDoSpringToTargetU3Ed__7_System_Collections_IEnumerator_Reset_m4D10B3198CC608B6A935B18E749C4AFBB3224D55 (void);
-// 0x00000537 System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.Collections.IEnumerator.get_Current()
+// 0x0000053C System.Object LlamAcademy.Spring.Runtime.SpringToTarget3D/<DoSpringToTarget>d__7::System.Collections.IEnumerator.get_Current()
 extern void U3CDoSpringToTargetU3Ed__7_System_Collections_IEnumerator_get_Current_m11B3D7F51D6AD0326FE3A1B32B73BEAB095191BD (void);
-// 0x00000538 System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::Awake()
+// 0x0000053D System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::Awake()
 extern void Vector2Nudger_Awake_m8CAB0C416B152481B37D533629E1348D29A014DC (void);
-// 0x00000539 System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::Update()
+// 0x0000053E System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::Update()
 extern void Vector2Nudger_Update_mAD0EE26E6B3AFA33DFE29EA09DF7CFE220EB2AEB (void);
-// 0x0000053A System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::Nudge()
+// 0x0000053F System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::Nudge()
 extern void Vector2Nudger_Nudge_m7F12F491D7302C85B2972818B75E48BA0D4EBB65 (void);
-// 0x0000053B System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::.ctor()
+// 0x00000540 System.Void LlamAcademy.Spring.Runtime.Vector2Nudger::.ctor()
 extern void Vector2Nudger__ctor_m592E9E114D31264CDD586ACCE49C915624D9112A (void);
-// 0x0000053C System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::Awake()
+// 0x00000541 System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::Awake()
 extern void Vector3Nudger_Awake_m1CC8B8CB4F32886EB4E49A4A33E7143583F41731 (void);
-// 0x0000053D System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::Update()
+// 0x00000542 System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::Update()
 extern void Vector3Nudger_Update_m1BE2A61EB0AFB6B059403EA3C90FD3396D6881BA (void);
-// 0x0000053E System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::Nudge()
+// 0x00000543 System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::Nudge()
 extern void Vector3Nudger_Nudge_mE3A3735FBD0E6662C88528EB6C5651F84922ED66 (void);
-// 0x0000053F System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::.ctor()
+// 0x00000544 System.Void LlamAcademy.Spring.Runtime.Vector3Nudger::.ctor()
 extern void Vector3Nudger__ctor_m5C7B7D2587CA860872742D1E0ACEC67A4C868E7B (void);
-// 0x00000540 System.Void Panda.Examples.FollowCamera::Start()
+// 0x00000545 System.Void Panda.Examples.FollowCamera::Start()
 extern void FollowCamera_Start_m49BDE71AE6DAD16645CAD2A3EC5925B06335252D (void);
-// 0x00000541 System.Void Panda.Examples.FollowCamera::Update()
+// 0x00000546 System.Void Panda.Examples.FollowCamera::Update()
 extern void FollowCamera_Update_m66D8001C41EFFCAB2AA7CA421041D51AB818E9C6 (void);
-// 0x00000542 System.Void Panda.Examples.FollowCamera::.ctor()
+// 0x00000547 System.Void Panda.Examples.FollowCamera::.ctor()
 extern void FollowCamera__ctor_m5226D861525B94ADCBE3366C003A9A6F4B7343B5 (void);
-// 0x00000543 System.Boolean Panda.Examples.Shooter.AI::SetTarget_Enemy()
+// 0x00000548 System.Boolean Panda.Examples.Shooter.AI::SetTarget_Enemy()
 extern void AI_SetTarget_Enemy_m64C19CBAFD4A99132300DF4C9750A2A987536B24 (void);
-// 0x00000544 System.Boolean Panda.Examples.Shooter.AI::SetTarget_EnemyLastSeenPosition()
+// 0x00000549 System.Boolean Panda.Examples.Shooter.AI::SetTarget_EnemyLastSeenPosition()
 extern void AI_SetTarget_EnemyLastSeenPosition_m6EC506455145BA2067504EF91B8B8BF8E213490D (void);
-// 0x00000545 System.Boolean Panda.Examples.Shooter.AI::SetTarget_Angle(System.Single)
+// 0x0000054A System.Boolean Panda.Examples.Shooter.AI::SetTarget_Angle(System.Single)
 extern void AI_SetTarget_Angle_m272F875269808ADB6251461BA7697D82BE4D1371 (void);
-// 0x00000546 System.Void Panda.Examples.Shooter.AI::Acquire_Enemy()
+// 0x0000054B System.Void Panda.Examples.Shooter.AI::Acquire_Enemy()
 extern void AI_Acquire_Enemy_m4ED5D871EFDF0407746459BD582898D8B476F8D6 (void);
-// 0x00000547 System.Boolean Panda.Examples.Shooter.AI::HasAmmo_Ememy()
+// 0x0000054C System.Boolean Panda.Examples.Shooter.AI::HasAmmo_Ememy()
 extern void AI_HasAmmo_Ememy_m023F4A271D83709827536951B844EC4952945A1B (void);
-// 0x00000548 System.Boolean Panda.Examples.Shooter.AI::Clear_Enemy()
+// 0x0000054D System.Boolean Panda.Examples.Shooter.AI::Clear_Enemy()
 extern void AI_Clear_Enemy_m2A2688AB6A4F47BF347E8D90EB6C453DF5A80A0E (void);
-// 0x00000549 System.Boolean Panda.Examples.Shooter.AI::IsVisible_Enemy()
+// 0x0000054E System.Boolean Panda.Examples.Shooter.AI::IsVisible_Enemy()
 extern void AI_IsVisible_Enemy_m1939524CD12877223854717887BB6362FA80B4AB (void);
-// 0x0000054A System.Boolean Panda.Examples.Shooter.AI::SetDestination_Enemy()
+// 0x0000054F System.Boolean Panda.Examples.Shooter.AI::SetDestination_Enemy()
 extern void AI_SetDestination_Enemy_m786E96CC0D5450A1DB279B78A597FB5901E64E24 (void);
-// 0x0000054B System.Boolean Panda.Examples.Shooter.AI::SetDestination_Random(System.Single)
+// 0x00000550 System.Boolean Panda.Examples.Shooter.AI::SetDestination_Random(System.Single)
 extern void AI_SetDestination_Random_mF2B14BB39A03ACA5E2E9C49E01B7E1BE382526F4 (void);
-// 0x0000054C System.Boolean Panda.Examples.Shooter.AI::SetDestination_Random()
+// 0x00000551 System.Boolean Panda.Examples.Shooter.AI::SetDestination_Random()
 extern void AI_SetDestination_Random_m9F970791373844710D21D2E68A9436F90A949273 (void);
-// 0x0000054D System.Boolean Panda.Examples.Shooter.AI::HasEnemy()
+// 0x00000552 System.Boolean Panda.Examples.Shooter.AI::HasEnemy()
 extern void AI_HasEnemy_m071F4E482D88987F50AA24D0B8B8D9ED90E0B217 (void);
-// 0x0000054E System.Boolean Panda.Examples.Shooter.AI::IsThereLineOfSight_Attacker_Destination()
+// 0x00000553 System.Boolean Panda.Examples.Shooter.AI::IsThereLineOfSight_Attacker_Destination()
 extern void AI_IsThereLineOfSight_Attacker_Destination_m0B663F6AA6D5BD71F04FA0E4088843EFF2AEB6D6 (void);
-// 0x0000054F System.Boolean Panda.Examples.Shooter.AI::LastBulletSeenTime_LessThan(System.Single)
+// 0x00000554 System.Boolean Panda.Examples.Shooter.AI::LastBulletSeenTime_LessThan(System.Single)
 extern void AI_LastBulletSeenTime_LessThan_mF872EB7449EE46D3F3CC72A80B0ACE569781A0CD (void);
-// 0x00000550 System.Boolean Panda.Examples.Shooter.AI::HasLoS(UnityEngine.Vector3,UnityEngine.Vector3,System.Collections.Generic.List`1<UnityEngine.GameObject>)
+// 0x00000555 System.Boolean Panda.Examples.Shooter.AI::HasLoS(UnityEngine.Vector3,UnityEngine.Vector3,System.Collections.Generic.List`1<UnityEngine.GameObject>)
 extern void AI_HasLoS_mBE099F517E5F44A88EA12315AB1A009A0CDCBDE6 (void);
-// 0x00000551 System.Boolean Panda.Examples.Shooter.AI::SetDestination_Cover()
+// 0x00000556 System.Boolean Panda.Examples.Shooter.AI::SetDestination_Cover()
 extern void AI_SetDestination_Cover_m80533BF3CECF4E02F81178C766218871E0A23CAA (void);
-// 0x00000552 System.Single Panda.Examples.Shooter.AI::PathLength(UnityEngine.AI.NavMeshPath)
+// 0x00000557 System.Single Panda.Examples.Shooter.AI::PathLength(UnityEngine.AI.NavMeshPath)
 extern void AI_PathLength_m16D03980844D9DA6CA36550CC9061D5B8A26F970 (void);
-// 0x00000553 System.Void Panda.Examples.Shooter.AI::Start()
+// 0x00000558 System.Void Panda.Examples.Shooter.AI::Start()
 extern void AI_Start_m3296972206603B64C9B97BED6EF2760C7FC78FE6 (void);
-// 0x00000554 System.Void Panda.Examples.Shooter.AI::.ctor()
+// 0x00000559 System.Void Panda.Examples.Shooter.AI::.ctor()
 extern void AI__ctor_mA0E996865D12C02AC6C5C78A0EBDAB1B6F9C40D2 (void);
-// 0x00000555 System.Void Panda.Examples.Shooter.AIVision::OnTriggerEnter(UnityEngine.Collider)
+// 0x0000055A System.Void Panda.Examples.Shooter.AIVision::OnTriggerEnter(UnityEngine.Collider)
 extern void AIVision_OnTriggerEnter_m5BA454663936837F6B68557FA6E30F360349F09E (void);
-// 0x00000556 System.Void Panda.Examples.Shooter.AIVision::OnTriggerExit(UnityEngine.Collider)
+// 0x0000055B System.Void Panda.Examples.Shooter.AIVision::OnTriggerExit(UnityEngine.Collider)
 extern void AIVision_OnTriggerExit_m4E25C6485C21B776D43BB4B55EEB145BEF72B349 (void);
-// 0x00000557 System.Void Panda.Examples.Shooter.AIVision::UpdateVisibility()
+// 0x0000055C System.Void Panda.Examples.Shooter.AIVision::UpdateVisibility()
 extern void AIVision_UpdateVisibility_mBF701C70A4BAFE2BEC9B3756228521B77BC6CA38 (void);
-// 0x00000558 System.Boolean Panda.Examples.Shooter.AIVision::HasLoS(UnityEngine.GameObject)
+// 0x0000055D System.Boolean Panda.Examples.Shooter.AIVision::HasLoS(UnityEngine.GameObject)
 extern void AIVision_HasLoS_mA1576543BF4036063F653B7A22E69476DFB50B32 (void);
-// 0x00000559 System.Void Panda.Examples.Shooter.AIVision::Start()
+// 0x0000055E System.Void Panda.Examples.Shooter.AIVision::Start()
 extern void AIVision_Start_m8310A52820237AD645B528F23D4BFE16EA167C20 (void);
-// 0x0000055A System.Void Panda.Examples.Shooter.AIVision::Update()
+// 0x0000055F System.Void Panda.Examples.Shooter.AIVision::Update()
 extern void AIVision_Update_m930669F90BE1A449E9699C76932F2B1CF20E872C (void);
-// 0x0000055B System.Void Panda.Examples.Shooter.AIVision::.ctor()
+// 0x00000560 System.Void Panda.Examples.Shooter.AIVision::.ctor()
 extern void AIVision__ctor_mB9472536A68D3C15BECA8C5B281108F173359210 (void);
-// 0x0000055C System.Void Panda.Examples.Shooter.AIVision/<>c::.cctor()
+// 0x00000561 System.Void Panda.Examples.Shooter.AIVision/<>c::.cctor()
 extern void U3CU3Ec__cctor_mAFD5EFA8A504EC295D87B970D9D017411D78A396 (void);
-// 0x0000055D System.Void Panda.Examples.Shooter.AIVision/<>c::.ctor()
+// 0x00000562 System.Void Panda.Examples.Shooter.AIVision/<>c::.ctor()
 extern void U3CU3Ec__ctor_m19616BFC5BF8099D406489A0C9831B05793509F4 (void);
-// 0x0000055E System.Boolean Panda.Examples.Shooter.AIVision/<>c::<OnTriggerEnter>b__6_0(UnityEngine.Collider)
+// 0x00000563 System.Boolean Panda.Examples.Shooter.AIVision/<>c::<OnTriggerEnter>b__6_0(UnityEngine.Collider)
 extern void U3CU3Ec_U3COnTriggerEnterU3Eb__6_0_mDE57471A6C6351346B40E253937E06F880468D4D (void);
-// 0x0000055F System.Boolean Panda.Examples.Shooter.AIVision/<>c::<OnTriggerExit>b__7_0(UnityEngine.Collider)
+// 0x00000564 System.Boolean Panda.Examples.Shooter.AIVision/<>c::<OnTriggerExit>b__7_0(UnityEngine.Collider)
 extern void U3CU3Ec_U3COnTriggerExitU3Eb__7_0_m18CE4933FA3777EDEBED28BF94F646B074D3F5F1 (void);
-// 0x00000560 System.Void Panda.Examples.Shooter.Bullet::Start()
+// 0x00000565 System.Void Panda.Examples.Shooter.Bullet::Start()
 extern void Bullet_Start_mCE38D341C9065593F4F6004664AC8608D20432DE (void);
-// 0x00000561 System.Void Panda.Examples.Shooter.Bullet::FixedUpdate()
+// 0x00000566 System.Void Panda.Examples.Shooter.Bullet::FixedUpdate()
 extern void Bullet_FixedUpdate_m2AD7D099CEBF5A9B77833AAB197F39E40BC4E1FB (void);
-// 0x00000562 System.Void Panda.Examples.Shooter.Bullet::BulletScan()
+// 0x00000567 System.Void Panda.Examples.Shooter.Bullet::BulletScan()
 extern void Bullet_BulletScan_m7ED2F5ACEFCE87565305F2093681C51EBFAD6461 (void);
-// 0x00000563 System.Void Panda.Examples.Shooter.Bullet::OnHit(Panda.Examples.Shooter.Unit)
+// 0x00000568 System.Void Panda.Examples.Shooter.Bullet::OnHit(Panda.Examples.Shooter.Unit)
 extern void Bullet_OnHit_mFC07773FCEA3033329CFE224AAF14739E7093CE2 (void);
-// 0x00000564 System.Void Panda.Examples.Shooter.Bullet::Explode(UnityEngine.RaycastHit)
+// 0x00000569 System.Void Panda.Examples.Shooter.Bullet::Explode(UnityEngine.RaycastHit)
 extern void Bullet_Explode_m63987B68319D5C2D00E791753AE97C2E99FBAD2C (void);
-// 0x00000565 System.Void Panda.Examples.Shooter.Bullet::.ctor()
+// 0x0000056A System.Void Panda.Examples.Shooter.Bullet::.ctor()
 extern void Bullet__ctor_mD28D2B2B3275746D9F1AC4B540229C772BC14CBC (void);
-// 0x00000566 System.Void Panda.Examples.Shooter.HUD::Start()
+// 0x0000056B System.Void Panda.Examples.Shooter.HUD::Start()
 extern void HUD_Start_m8E7753CEAF5CE97FFDE8034C692AFF58FC1CE402 (void);
-// 0x00000567 System.Void Panda.Examples.Shooter.HUD::Update()
+// 0x0000056C System.Void Panda.Examples.Shooter.HUD::Update()
 extern void HUD_Update_mD0F4894145A8F172A59A33C129D772F67024C2AF (void);
-// 0x00000568 System.Void Panda.Examples.Shooter.HUD::UpdateHUD()
+// 0x0000056D System.Void Panda.Examples.Shooter.HUD::UpdateHUD()
 extern void HUD_UpdateHUD_mD04CFB6DC86CB1373975781406F92080C697B652 (void);
-// 0x00000569 System.Void Panda.Examples.Shooter.HUD::.ctor()
+// 0x0000056E System.Void Panda.Examples.Shooter.HUD::.ctor()
 extern void HUD__ctor_mE152699759F9A757A7D90E827D63F9B1D4F96C12 (void);
-// 0x0000056A System.Void Panda.Examples.Shooter.Patroller::Start()
+// 0x0000056F System.Void Panda.Examples.Shooter.Patroller::Start()
 extern void Patroller_Start_m1E3AB3E7F0FF09B4B6D80C57386F46477AA629CD (void);
-// 0x0000056B System.Void Panda.Examples.Shooter.Patroller::Update()
+// 0x00000570 System.Void Panda.Examples.Shooter.Patroller::Update()
 extern void Patroller_Update_m41812056D0ED480AA7D23D7F8DF4EFE66259F217 (void);
-// 0x0000056C System.Boolean Panda.Examples.Shooter.Patroller::NextWaypoint()
+// 0x00000571 System.Boolean Panda.Examples.Shooter.Patroller::NextWaypoint()
 extern void Patroller_NextWaypoint_mBEE53527A94E2329F21F7B122B1F41F1CA4432C1 (void);
-// 0x0000056D System.Boolean Panda.Examples.Shooter.Patroller::SetDestination_Waypoint()
+// 0x00000572 System.Boolean Panda.Examples.Shooter.Patroller::SetDestination_Waypoint()
 extern void Patroller_SetDestination_Waypoint_mDE3D3B841042BEE090A547BA1FFF4E0A3207B215 (void);
-// 0x0000056E System.Boolean Panda.Examples.Shooter.Patroller::SetDestination_Waypoint(System.Int32)
+// 0x00000573 System.Boolean Panda.Examples.Shooter.Patroller::SetDestination_Waypoint(System.Int32)
 extern void Patroller_SetDestination_Waypoint_mC8969F27FC9DE69966C62E62297EDFE4FA30B863 (void);
-// 0x0000056F System.Void Panda.Examples.Shooter.Patroller::MoveTo(System.Int32)
+// 0x00000574 System.Void Panda.Examples.Shooter.Patroller::MoveTo(System.Int32)
 extern void Patroller_MoveTo_mAE89E234B034F960D3D566BEEAB94B831DB325C5 (void);
-// 0x00000570 System.Void Panda.Examples.Shooter.Patroller::LookAt(System.Int32)
+// 0x00000575 System.Void Panda.Examples.Shooter.Patroller::LookAt(System.Int32)
 extern void Patroller_LookAt_mB8E18589F45EFDA540AC53D6279D60808C019D3B (void);
-// 0x00000571 System.Int32 Panda.Examples.Shooter.Patroller::get_waypointArrayIndex()
+// 0x00000576 System.Int32 Panda.Examples.Shooter.Patroller::get_waypointArrayIndex()
 extern void Patroller_get_waypointArrayIndex_mA452D92208C2289AD4E9452AA5CC86EB41C2B47A (void);
-// 0x00000572 System.Void Panda.Examples.Shooter.Patroller::.ctor()
+// 0x00000577 System.Void Panda.Examples.Shooter.Patroller::.ctor()
 extern void Patroller__ctor_m540E5CADAFD80E84A946E87C666FA62453AF8B17 (void);
-// 0x00000573 Panda.Examples.Shooter.ShooterGameController Panda.Examples.Shooter.ShooterGameController::get_instance()
+// 0x00000578 Panda.Examples.Shooter.ShooterGameController Panda.Examples.Shooter.ShooterGameController::get_instance()
 extern void ShooterGameController_get_instance_mBC5125C1EC103C7FBEDD405CCFB1D0C4B008BCCE (void);
-// 0x00000574 System.Void Panda.Examples.Shooter.ShooterGameController::OnUnitDestroy(Panda.Examples.Shooter.Unit)
+// 0x00000579 System.Void Panda.Examples.Shooter.ShooterGameController::OnUnitDestroy(Panda.Examples.Shooter.Unit)
 extern void ShooterGameController_OnUnitDestroy_mEAF2B9BA5F303888F61E589813FFAEB9BAB84F8C (void);
-// 0x00000575 System.Boolean Panda.Examples.Shooter.ShooterGameController::IsPlayerDead()
+// 0x0000057A System.Boolean Panda.Examples.Shooter.ShooterGameController::IsPlayerDead()
 extern void ShooterGameController_IsPlayerDead_mD0A9A9BC69753089E5D90FD3728F6C8E141CA4C8 (void);
-// 0x00000576 System.Boolean Panda.Examples.Shooter.ShooterGameController::IsLevelCompleted()
+// 0x0000057B System.Boolean Panda.Examples.Shooter.ShooterGameController::IsLevelCompleted()
 extern void ShooterGameController_IsLevelCompleted_m4402B4BA0225450D90CF978C6554B378137B994A (void);
-// 0x00000577 System.Boolean Panda.Examples.Shooter.ShooterGameController::ReloadLevel()
+// 0x0000057C System.Boolean Panda.Examples.Shooter.ShooterGameController::ReloadLevel()
 extern void ShooterGameController_ReloadLevel_mD65EA8204187CC1D2BF18DEDCADD67CEE7219EFF (void);
-// 0x00000578 System.Boolean Panda.Examples.Shooter.ShooterGameController::Display(System.String)
+// 0x0000057D System.Boolean Panda.Examples.Shooter.ShooterGameController::Display(System.String)
 extern void ShooterGameController_Display_mA9A0AFCC60F3A32E5FAA7F9EE16536880CCC7EB6 (void);
-// 0x00000579 System.Void Panda.Examples.Shooter.ShooterGameController::Start()
+// 0x0000057E System.Void Panda.Examples.Shooter.ShooterGameController::Start()
 extern void ShooterGameController_Start_m908483FAA8F87E65885990E62D4F4C1AC8916AA4 (void);
-// 0x0000057A System.Void Panda.Examples.Shooter.ShooterGameController::Update()
+// 0x0000057F System.Void Panda.Examples.Shooter.ShooterGameController::Update()
 extern void ShooterGameController_Update_mD34AB034993EA226CADC3D773ECEAAE8B8EC7C98 (void);
-// 0x0000057B System.Void Panda.Examples.Shooter.ShooterGameController::.ctor()
+// 0x00000580 System.Void Panda.Examples.Shooter.ShooterGameController::.ctor()
 extern void ShooterGameController__ctor_mBFC4E5E8620FA54679D50959306A2CF35BF07426 (void);
-// 0x0000057C System.Boolean Panda.Examples.Shooter.ShooterGameController::<Start>b__11_0(Panda.Examples.Shooter.Unit)
+// 0x00000581 System.Boolean Panda.Examples.Shooter.ShooterGameController::<Start>b__11_0(Panda.Examples.Shooter.Unit)
 extern void ShooterGameController_U3CStartU3Eb__11_0_mDF8AE305824050FFE2B299B085DBD41E5E7646F6 (void);
-// 0x0000057D System.Void Panda.Examples.Shooter.TriggerType::.ctor()
+// 0x00000582 System.Void Panda.Examples.Shooter.TriggerType::.ctor()
 extern void TriggerType__ctor_mFD5C8F5DFE4CA559A15D53344467C5EA4CED6E9E (void);
-// 0x0000057E System.Void Panda.Examples.Shooter.Unit::Start()
+// 0x00000583 System.Void Panda.Examples.Shooter.Unit::Start()
 extern void Unit_Start_m8D33520D87A784C463305DFC6829ADB909E7846B (void);
-// 0x0000057F System.Void Panda.Examples.Shooter.Unit::Update()
+// 0x00000584 System.Void Panda.Examples.Shooter.Unit::Update()
 extern void Unit_Update_m2D5DD7662ED9DAF9914B4FBE2064E49B2BCA7342 (void);
-// 0x00000580 UnityEngine.Vector3 Panda.Examples.Shooter.Unit::GetMousePosition()
+// 0x00000585 UnityEngine.Vector3 Panda.Examples.Shooter.Unit::GetMousePosition()
 extern void Unit_GetMousePosition_mFA3D982F77AC05F423B508CE351E8E879D2C6C23 (void);
-// 0x00000581 System.Boolean Panda.Examples.Shooter.Unit::IsHealthLessThan(System.Single)
+// 0x00000586 System.Boolean Panda.Examples.Shooter.Unit::IsHealthLessThan(System.Single)
 extern void Unit_IsHealthLessThan_m5899F3FB12C4933FEC1B1732A6B928352F003E5F (void);
-// 0x00000582 System.Boolean Panda.Examples.Shooter.Unit::IsHealth_PercentLessThan(System.Single)
+// 0x00000587 System.Boolean Panda.Examples.Shooter.Unit::IsHealth_PercentLessThan(System.Single)
 extern void Unit_IsHealth_PercentLessThan_m42E892599CE13EC8D3948209E5C916847B34C49E (void);
-// 0x00000583 System.Boolean Panda.Examples.Shooter.Unit::HasAmmo()
+// 0x00000588 System.Boolean Panda.Examples.Shooter.Unit::HasAmmo()
 extern void Unit_HasAmmo_m6E61FE636D31DD0A2AA31760148B3BC4675D7652 (void);
-// 0x00000584 System.Boolean Panda.Examples.Shooter.Unit::Ammo_LessThan(System.Int32)
+// 0x00000589 System.Boolean Panda.Examples.Shooter.Unit::Ammo_LessThan(System.Int32)
 extern void Unit_Ammo_LessThan_m5540243399843E37032C436FCABFA5ECB638D55D (void);
-// 0x00000585 System.Boolean Panda.Examples.Shooter.Unit::SetDestination(UnityEngine.Vector3)
+// 0x0000058A System.Boolean Panda.Examples.Shooter.Unit::SetDestination(UnityEngine.Vector3)
 extern void Unit_SetDestination_mADC6233FAC31D4E1BEFCFF33CA0175AA64838AE3 (void);
-// 0x00000586 System.Void Panda.Examples.Shooter.Unit::WaitArrival()
+// 0x0000058B System.Void Panda.Examples.Shooter.Unit::WaitArrival()
 extern void Unit_WaitArrival_m479962B1A233CECCB3F8C57E8DDDA30632E8FB42 (void);
-// 0x00000587 System.Void Panda.Examples.Shooter.Unit::MoveTo(UnityEngine.Vector3)
+// 0x0000058C System.Void Panda.Examples.Shooter.Unit::MoveTo(UnityEngine.Vector3)
 extern void Unit_MoveTo_m5330EFABE54C50837AEA2932046859E0C1718F67 (void);
-// 0x00000588 System.Void Panda.Examples.Shooter.Unit::MoveTo_Destination()
+// 0x0000058D System.Void Panda.Examples.Shooter.Unit::MoveTo_Destination()
 extern void Unit_MoveTo_Destination_m6E6D4FB5ABA0361EA6C15D988B24FF54AB950BEB (void);
-// 0x00000589 System.Boolean Panda.Examples.Shooter.Unit::SetDestination_Mouse()
+// 0x0000058E System.Boolean Panda.Examples.Shooter.Unit::SetDestination_Mouse()
 extern void Unit_SetDestination_Mouse_m4C70E6ECBAF4824D023B6EE78E54664D0A380C90 (void);
-// 0x0000058A System.Boolean Panda.Examples.Shooter.Unit::SetDestination_WASD()
+// 0x0000058F System.Boolean Panda.Examples.Shooter.Unit::SetDestination_WASD()
 extern void Unit_SetDestination_WASD_mD284AF14A6943E4CDA31DDA4634A9067FB6B9D9E (void);
-// 0x0000058B System.Boolean Panda.Examples.Shooter.Unit::Stop()
+// 0x00000590 System.Boolean Panda.Examples.Shooter.Unit::Stop()
 extern void Unit_Stop_mCC39EAD998D32876CE0A7ED6614E00A56ADC6669 (void);
-// 0x0000058C System.Boolean Panda.Examples.Shooter.Unit::LastShotTime_LessThan(System.Single)
+// 0x00000591 System.Boolean Panda.Examples.Shooter.Unit::LastShotTime_LessThan(System.Single)
 extern void Unit_LastShotTime_LessThan_m79C11FE73854577A4745D50D614CE7D95ACF17A2 (void);
-// 0x0000058D System.Boolean Panda.Examples.Shooter.Unit::Fire()
+// 0x00000592 System.Boolean Panda.Examples.Shooter.Unit::Fire()
 extern void Unit_Fire_mB1FBA431126D5386DE096C6EAA39A893BE18E221 (void);
-// 0x0000058E System.Boolean Panda.Examples.Shooter.Unit::SetTarget(UnityEngine.Vector3)
+// 0x00000593 System.Boolean Panda.Examples.Shooter.Unit::SetTarget(UnityEngine.Vector3)
 extern void Unit_SetTarget_m94320BF73F1819D15E2FA5E41FC02CE2E59D1E0E (void);
-// 0x0000058F System.Boolean Panda.Examples.Shooter.Unit::SetTarget_Mouse()
+// 0x00000594 System.Boolean Panda.Examples.Shooter.Unit::SetTarget_Mouse()
 extern void Unit_SetTarget_Mouse_mB5557119A55503BC60A5F2548B571E37A5DC646A (void);
-// 0x00000590 System.Boolean Panda.Examples.Shooter.Unit::SetTarget_Destination()
+// 0x00000595 System.Boolean Panda.Examples.Shooter.Unit::SetTarget_Destination()
 extern void Unit_SetTarget_Destination_mF6A36D8FD0F599256AECC19B1F2ED584B3F18B60 (void);
-// 0x00000591 System.Void Panda.Examples.Shooter.Unit::AimAt_Target()
+// 0x00000596 System.Void Panda.Examples.Shooter.Unit::AimAt_Target()
 extern void Unit_AimAt_Target_mEABCFFF3E16F86AF73DC7870E56BC3CD8C356FCF (void);
-// 0x00000592 System.Boolean Panda.Examples.Shooter.Unit::Explode()
+// 0x00000597 System.Boolean Panda.Examples.Shooter.Unit::Explode()
 extern void Unit_Explode_m4241AD2238DCA2C175F03A76341BC4D9DDC66B28 (void);
-// 0x00000593 System.Void Panda.Examples.Shooter.Unit::.ctor()
+// 0x00000598 System.Void Panda.Examples.Shooter.Unit::.ctor()
 extern void Unit__ctor_mACEAE25EDB11FDE46EC4A1D450D86780CB6D39ED (void);
-// 0x00000594 System.Void Panda.Examples.Shooter.UnitExplosion::Start()
+// 0x00000599 System.Void Panda.Examples.Shooter.UnitExplosion::Start()
 extern void UnitExplosion_Start_mA30DD395333850247F7994CE6296C48342781BD9 (void);
-// 0x00000595 System.Void Panda.Examples.Shooter.UnitExplosion::Update()
+// 0x0000059A System.Void Panda.Examples.Shooter.UnitExplosion::Update()
 extern void UnitExplosion_Update_m7836ABC7FF62BF9E062F8D15B38F60BF1A03A092 (void);
-// 0x00000596 System.Void Panda.Examples.Shooter.UnitExplosion::.ctor()
+// 0x0000059B System.Void Panda.Examples.Shooter.UnitExplosion::.ctor()
 extern void UnitExplosion__ctor_m813486D8FFA63304CBB1E1F599177D027A9D3BCC (void);
-// 0x00000597 UnityEngine.Transform[] Panda.Examples.Shooter.WaypointPath::get_waypoints()
+// 0x0000059C UnityEngine.Transform[] Panda.Examples.Shooter.WaypointPath::get_waypoints()
 extern void WaypointPath_get_waypoints_mD01A0AA14A0F39617769B820056E43A0DFBD435E (void);
-// 0x00000598 System.Void Panda.Examples.Shooter.WaypointPath::Start()
+// 0x0000059D System.Void Panda.Examples.Shooter.WaypointPath::Start()
 extern void WaypointPath_Start_m0273A89EF47275E35F04E69013AF86E4656F0AE1 (void);
-// 0x00000599 System.Void Panda.Examples.Shooter.WaypointPath::Update()
+// 0x0000059E System.Void Panda.Examples.Shooter.WaypointPath::Update()
 extern void WaypointPath_Update_mC4B3FAAF13A6268917B2A40234DE4C900EDBDF7D (void);
-// 0x0000059A System.Void Panda.Examples.Shooter.WaypointPath::OnDrawGizmos()
+// 0x0000059F System.Void Panda.Examples.Shooter.WaypointPath::OnDrawGizmos()
 extern void WaypointPath_OnDrawGizmos_mEFE3D218C7012425EA852BAD0591A54AD62B4980 (void);
-// 0x0000059B System.Void Panda.Examples.Shooter.WaypointPath::OnDrawGizmosSelected()
+// 0x000005A0 System.Void Panda.Examples.Shooter.WaypointPath::OnDrawGizmosSelected()
 extern void WaypointPath_OnDrawGizmosSelected_m34695B73338BA94B6E59CFFCD4014B084BC8EE32 (void);
-// 0x0000059C System.Void Panda.Examples.Shooter.WaypointPath::DrawSpheres(System.Single)
+// 0x000005A1 System.Void Panda.Examples.Shooter.WaypointPath::DrawSpheres(System.Single)
 extern void WaypointPath_DrawSpheres_m416B2AAB11C14DAFE4FF8233B0AD2C38E3CD79B0 (void);
-// 0x0000059D System.Void Panda.Examples.Shooter.WaypointPath::DrawLines()
+// 0x000005A2 System.Void Panda.Examples.Shooter.WaypointPath::DrawLines()
 extern void WaypointPath_DrawLines_m2856C823037622C379E8F67A60482924F9B495B9 (void);
-// 0x0000059E System.Void Panda.Examples.Shooter.WaypointPath::.ctor()
+// 0x000005A3 System.Void Panda.Examples.Shooter.WaypointPath::.ctor()
 extern void WaypointPath__ctor_m55BDE096DE366888FF1241CE7A6EAC44C13BF989 (void);
-// 0x0000059F System.Void Panda.Examples.Shooter.Panda.BulletImpact::Start()
+// 0x000005A4 System.Void Panda.Examples.Shooter.Panda.BulletImpact::Start()
 extern void BulletImpact_Start_m26308BF3527EB3F264A015E1ED252393C888FDB7 (void);
-// 0x000005A0 System.Void Panda.Examples.Shooter.Panda.BulletImpact::Update()
+// 0x000005A5 System.Void Panda.Examples.Shooter.Panda.BulletImpact::Update()
 extern void BulletImpact_Update_m38516F052DD09E732FD42BEA3C23AD179A601240 (void);
-// 0x000005A1 System.Void Panda.Examples.Shooter.Panda.BulletImpact::.ctor()
+// 0x000005A6 System.Void Panda.Examples.Shooter.Panda.BulletImpact::.ctor()
 extern void BulletImpact__ctor_m2BE8AFED559D4261C9D9E663CE53560635BBB4C0 (void);
-// 0x000005A2 System.Boolean Panda.Examples.PlayTag.Computer::get_IsColliding_Player()
+// 0x000005A7 System.Boolean Panda.Examples.PlayTag.Computer::get_IsColliding_Player()
 extern void Computer_get_IsColliding_Player_m0EC41973162396E619A983F5BFCFC3C8A867AA82 (void);
-// 0x000005A3 System.Void Panda.Examples.PlayTag.Computer::IsPlayerNear()
+// 0x000005A8 System.Void Panda.Examples.PlayTag.Computer::IsPlayerNear()
 extern void Computer_IsPlayerNear_mF40489CACA8BACDB4EC22ECE1B4A925B79D97279 (void);
-// 0x000005A4 System.Boolean Panda.Examples.PlayTag.Computer::Say(System.String)
+// 0x000005A9 System.Boolean Panda.Examples.PlayTag.Computer::Say(System.String)
 extern void Computer_Say_m331691FB81FE215DBE217DA1F534AF5B0CD9B028 (void);
-// 0x000005A5 System.Void Panda.Examples.PlayTag.Computer::MoveToDestination()
+// 0x000005AA System.Void Panda.Examples.PlayTag.Computer::MoveToDestination()
 extern void Computer_MoveToDestination_m8BA2F633E845982A156AF6CDCAF1EC239D6969A1 (void);
-// 0x000005A6 System.Boolean Panda.Examples.PlayTag.Computer::SetDestination_Player()
+// 0x000005AB System.Boolean Panda.Examples.PlayTag.Computer::SetDestination_Player()
 extern void Computer_SetDestination_Player_m1C3DA363C7CBC8E7C3B617E70236A2C4E3D4CDEC (void);
-// 0x000005A7 System.Boolean Panda.Examples.PlayTag.Computer::SetDestination_Random()
+// 0x000005AC System.Boolean Panda.Examples.PlayTag.Computer::SetDestination_Random()
 extern void Computer_SetDestination_Random_mF8CEE9A51F175AC3A801BAB2FED5DAF553E72188 (void);
-// 0x000005A8 System.Boolean Panda.Examples.PlayTag.Computer::get_IsDirectionSafe()
+// 0x000005AD System.Boolean Panda.Examples.PlayTag.Computer::get_IsDirectionSafe()
 extern void Computer_get_IsDirectionSafe_mECD5A8BA7D5F57EC7FD85C7299DA0C3F491726AE (void);
-// 0x000005A9 System.Boolean Panda.Examples.PlayTag.Computer::SetSpeed(System.Single)
+// 0x000005AE System.Boolean Panda.Examples.PlayTag.Computer::SetSpeed(System.Single)
 extern void Computer_SetSpeed_m2BF4C7A55F8285347E14D1A396AF0532A1DAC2DF (void);
-// 0x000005AA System.Boolean Panda.Examples.PlayTag.Computer::Tag()
+// 0x000005AF System.Boolean Panda.Examples.PlayTag.Computer::Tag()
 extern void Computer_Tag_m1EA526AB00EF12B56A63CB71743C92F3B351A31B (void);
-// 0x000005AB System.Void Panda.Examples.PlayTag.Computer::DoTag()
+// 0x000005B0 System.Void Panda.Examples.PlayTag.Computer::DoTag()
 extern void Computer_DoTag_mBB29BE98D80EAE852D4263205F8A8BD8F20FEE9B (void);
-// 0x000005AC System.Void Panda.Examples.PlayTag.Computer::Start()
+// 0x000005B1 System.Void Panda.Examples.PlayTag.Computer::Start()
 extern void Computer_Start_m3D5D01AE351528B0C991FCD859561D7E3B8AF646 (void);
-// 0x000005AD System.Void Panda.Examples.PlayTag.Computer::OnTriggerEnter(UnityEngine.Collider)
+// 0x000005B2 System.Void Panda.Examples.PlayTag.Computer::OnTriggerEnter(UnityEngine.Collider)
 extern void Computer_OnTriggerEnter_m2BFF1C6BD1721164A833523A8616CB315DB7D75E (void);
-// 0x000005AE System.Void Panda.Examples.PlayTag.Computer::OnTriggerExit(UnityEngine.Collider)
+// 0x000005B3 System.Void Panda.Examples.PlayTag.Computer::OnTriggerExit(UnityEngine.Collider)
 extern void Computer_OnTriggerExit_mAA487E041694426CDB92D5E746D6DBD7E6796523 (void);
-// 0x000005AF System.Void Panda.Examples.PlayTag.Computer::.ctor()
+// 0x000005B4 System.Void Panda.Examples.PlayTag.Computer::.ctor()
 extern void Computer__ctor_m2054D4682DDBBA5ADFA001F372DBBF1E9C25E46E (void);
-// 0x000005B0 System.Void Panda.Examples.PlayTag.Dialogue::EnableText(System.Boolean)
+// 0x000005B5 System.Void Panda.Examples.PlayTag.Dialogue::EnableText(System.Boolean)
 extern void Dialogue_EnableText_m14A43B58EE6421C43E6B6520117B8A686B28979B (void);
-// 0x000005B1 System.Void Panda.Examples.PlayTag.Dialogue::SetText(System.String)
+// 0x000005B6 System.Void Panda.Examples.PlayTag.Dialogue::SetText(System.String)
 extern void Dialogue_SetText_mC673E4814FEE7FD7BD2D8F0BA11461BA361E2E33 (void);
-// 0x000005B2 System.Void Panda.Examples.PlayTag.Dialogue::ShowText()
+// 0x000005B7 System.Void Panda.Examples.PlayTag.Dialogue::ShowText()
 extern void Dialogue_ShowText_m7EFF45F3C1E947575E5AA1CC93583206C696C23A (void);
-// 0x000005B3 System.Void Panda.Examples.PlayTag.Dialogue::Start()
+// 0x000005B8 System.Void Panda.Examples.PlayTag.Dialogue::Start()
 extern void Dialogue_Start_m9BB35C933F905634D1BD5B11A9C9091D1F4C0A19 (void);
-// 0x000005B4 System.Void Panda.Examples.PlayTag.Dialogue::Update()
+// 0x000005B9 System.Void Panda.Examples.PlayTag.Dialogue::Update()
 extern void Dialogue_Update_m16E8A8A6B7E44566D1F40930DB649BD67199F94E (void);
-// 0x000005B5 System.Void Panda.Examples.PlayTag.Dialogue::.ctor()
+// 0x000005BA System.Void Panda.Examples.PlayTag.Dialogue::.ctor()
 extern void Dialogue__ctor_mE540A1290EC59FDC8DD18DF3CF90D31F92263E13 (void);
-// 0x000005B6 System.Void Panda.Examples.PlayTag.Player::Start()
+// 0x000005BB System.Void Panda.Examples.PlayTag.Player::Start()
 extern void Player_Start_m5FCFF53B84B96FC3F7E06D03D3A87CF24D4C8645 (void);
-// 0x000005B7 System.Void Panda.Examples.PlayTag.Player::Update()
+// 0x000005BC System.Void Panda.Examples.PlayTag.Player::Update()
 extern void Player_Update_m3EE5B2C6C19899698899E2CD1BA09A91D46F0EAA (void);
-// 0x000005B8 System.Void Panda.Examples.PlayTag.Player::.ctor()
+// 0x000005BD System.Void Panda.Examples.PlayTag.Player::.ctor()
 extern void Player__ctor_m17304CDE705904868C9AB997860F00078DA56D79 (void);
-// 0x000005B9 System.Void Panda.Examples.Move.Move::MoveTo(System.Single,System.Single)
+// 0x000005BE System.Void Panda.Examples.Move.Move::MoveTo(System.Single,System.Single)
 extern void Move_MoveTo_mC1EAB8658511A76093D3C8D85A4CD80C59929886 (void);
-// 0x000005BA System.Void Panda.Examples.Move.Move::Rotate(System.Single,System.Single)
+// 0x000005BF System.Void Panda.Examples.Move.Move::Rotate(System.Single,System.Single)
 extern void Move_Rotate_m661F800301691D767AE46BD6D236EAAC236DAED1 (void);
-// 0x000005BB System.Void Panda.Examples.Move.Move::.ctor()
+// 0x000005C0 System.Void Panda.Examples.Move.Move::.ctor()
 extern void Move__ctor_m431383ED8BD8063E9F94D0BEE225602C2046E152 (void);
-// 0x000005BC System.Void Panda.Examples.ChangeColor.MyCube::SetColor(System.Single,System.Single,System.Single)
+// 0x000005C1 System.Void Panda.Examples.ChangeColor.MyCube::SetColor(System.Single,System.Single,System.Single)
 extern void MyCube_SetColor_m7A1D4B22388206B237461C42EF4AC0EB6641C9E0 (void);
-// 0x000005BD System.Void Panda.Examples.ChangeColor.MyCube::.ctor()
+// 0x000005C2 System.Void Panda.Examples.ChangeColor.MyCube::.ctor()
 extern void MyCube__ctor_m60A5F1B379C825E87A2DF63550B6A5CE828E752E (void);
-// 0x000005BE DungeonGen.Triangle DungeonGen.BowyerWatson::CalcSuperTriangle(System.Collections.Generic.IEnumerable`1<DungeonGen.Point>)
+// 0x000005C3 System.Void Lean.Touch.LeanCameraZoom::LateUpdate()
+extern void LeanCameraZoom_LateUpdate_m1D0D4A8F54C39757B31DC5DCE823441553B270B8 (void);
+// 0x000005C4 System.Void Lean.Touch.LeanCameraZoom::SetZoom(System.Single)
+extern void LeanCameraZoom_SetZoom_m985EF5D66C1C5F44EFA8B6803E4C42215F28F6AF (void);
+// 0x000005C5 System.Void Lean.Touch.LeanCameraZoom::.ctor()
+extern void LeanCameraZoom__ctor_m8B39113E17495F142437AC714E07289D6D15E74C (void);
+// 0x000005C6 DungeonGen.Triangle DungeonGen.BowyerWatson::CalcSuperTriangle(System.Collections.Generic.IEnumerable`1<DungeonGen.Point>)
 extern void BowyerWatson_CalcSuperTriangle_mE6A6173D3E25C44567C4699B4431B6C00EB7D7A7 (void);
-// 0x000005BF System.Collections.Generic.HashSet`1<DungeonGen.Triangle> DungeonGen.BowyerWatson::Triangulate(System.Collections.Generic.IEnumerable`1<DungeonGen.Point>)
+// 0x000005C7 System.Collections.Generic.HashSet`1<DungeonGen.Triangle> DungeonGen.BowyerWatson::Triangulate(System.Collections.Generic.IEnumerable`1<DungeonGen.Point>)
 extern void BowyerWatson_Triangulate_mCA07B236B46BB01FC501B1AC02D9B202F9C9146F (void);
-// 0x000005C0 System.Void DungeonGen.BowyerWatson/<>c__DisplayClass1_0::.ctor()
+// 0x000005C8 System.Void DungeonGen.BowyerWatson/<>c__DisplayClass1_0::.ctor()
 extern void U3CU3Ec__DisplayClass1_0__ctor_mA90B89AE7870D607F59E5C17DD61F48162E91AD3 (void);
-// 0x000005C1 System.Boolean DungeonGen.BowyerWatson/<>c__DisplayClass1_0::<Triangulate>b__0(DungeonGen.Triangle)
+// 0x000005C9 System.Boolean DungeonGen.BowyerWatson/<>c__DisplayClass1_0::<Triangulate>b__0(DungeonGen.Triangle)
 extern void U3CU3Ec__DisplayClass1_0_U3CTriangulateU3Eb__0_mD086EFF56CED75B675B5D542AE3DDDCA692E3DB8 (void);
-// 0x000005C2 System.Single DungeonGen.Edge::get_Length()
+// 0x000005CA System.Single DungeonGen.Edge::get_Length()
 extern void Edge_get_Length_m345E9BB343EF7077CA93749F1E5989C8DFFF93DB (void);
-// 0x000005C3 System.Void DungeonGen.Edge::.ctor(DungeonGen.Point,DungeonGen.Point)
+// 0x000005CB System.Void DungeonGen.Edge::.ctor(DungeonGen.Point,DungeonGen.Point)
 extern void Edge__ctor_mAC6F63888B6E9C43F1136AC51864C1C13919977E (void);
-// 0x000005C4 System.Boolean DungeonGen.Edge::Equals(System.Object)
+// 0x000005CC System.Boolean DungeonGen.Edge::Equals(System.Object)
 extern void Edge_Equals_mB0B07CD7E31DA00C70108BA87463A2A472D9B66B (void);
-// 0x000005C5 System.Int32 DungeonGen.Edge::GetHashCode()
+// 0x000005CD System.Int32 DungeonGen.Edge::GetHashCode()
 extern void Edge_GetHashCode_mA134B66255B8F73E44F670E1BC255B7122353DCB (void);
-// 0x000005C6 System.String DungeonGen.Edge::ToString()
+// 0x000005CE System.String DungeonGen.Edge::ToString()
 extern void Edge_ToString_m8985042E82586E9207F9D7B56510B3385A80218D (void);
-// 0x000005C7 System.Int32 DungeonGen.Edge::LengthComparison(DungeonGen.Edge,DungeonGen.Edge)
+// 0x000005CF System.Int32 DungeonGen.Edge::LengthComparison(DungeonGen.Edge,DungeonGen.Edge)
 extern void Edge_LengthComparison_m2D73DB8D6B724DD1084F7D1F561253912998C4EB (void);
-// 0x000005C8 System.Void DungeonGen.DuplicatePointException::.ctor(DungeonGen.Point,DungeonGen.Point)
+// 0x000005D0 System.Void DungeonGen.DuplicatePointException::.ctor(DungeonGen.Point,DungeonGen.Point)
 extern void DuplicatePointException__ctor_m1C18C658EB01BBA5D731B1055C011DE42BE228ED (void);
-// 0x000005C9 System.Collections.Generic.List`1<DungeonGen.Edge> DungeonGen.Kruskal::MinimumSpanningTree(System.Collections.Generic.IEnumerable`1<DungeonGen.Edge>)
+// 0x000005D1 System.Collections.Generic.List`1<DungeonGen.Edge> DungeonGen.Kruskal::MinimumSpanningTree(System.Collections.Generic.IEnumerable`1<DungeonGen.Edge>)
 extern void Kruskal_MinimumSpanningTree_mE15D031D2776E8DAF1BCBA2E4228D9DF47D11927 (void);
-// 0x000005CA DungeonGen.Point DungeonGen.Kruskal::<MinimumSpanningTree>g__UnionFind|0_0(DungeonGen.Point,DungeonGen.Kruskal/<>c__DisplayClass0_0&)
+// 0x000005D2 DungeonGen.Point DungeonGen.Kruskal::<MinimumSpanningTree>g__UnionFind|0_0(DungeonGen.Point,DungeonGen.Kruskal/<>c__DisplayClass0_0&)
 extern void Kruskal_U3CMinimumSpanningTreeU3Eg__UnionFindU7C0_0_mD9811F1899BE2E9BC8FB83BDB5C4F5A3FB9FBFC0 (void);
-// 0x000005CB System.Void DungeonGen.Point::.ctor(System.Int32,System.Int32)
+// 0x000005D3 System.Void DungeonGen.Point::.ctor(System.Int32,System.Int32)
 extern void Point__ctor_m1EAF81DD378DD702545BC237A7DFAF636C207A67 (void);
-// 0x000005CC System.Boolean DungeonGen.Point::Equals(System.Object)
+// 0x000005D4 System.Boolean DungeonGen.Point::Equals(System.Object)
 extern void Point_Equals_m9686A77426ACB0A35603BA0EEE22FFA55024241E (void);
-// 0x000005CD System.Int32 DungeonGen.Point::GetHashCode()
+// 0x000005D5 System.Int32 DungeonGen.Point::GetHashCode()
 extern void Point_GetHashCode_m12AFC27889A089AC17B9BBF86406DED0322B6A40 (void);
-// 0x000005CE System.String DungeonGen.Point::ToString()
+// 0x000005D6 System.String DungeonGen.Point::ToString()
 extern void Point_ToString_mF2F83DF0533339DB907F7A09EEFA6142B8FC2ED3 (void);
-// 0x000005CF System.Boolean DungeonGen.Point::op_LessThan(DungeonGen.Point,DungeonGen.Point)
+// 0x000005D7 System.Boolean DungeonGen.Point::op_LessThan(DungeonGen.Point,DungeonGen.Point)
 extern void Point_op_LessThan_m7FE86C98726C249C7012623949677003F858F1E0 (void);
-// 0x000005D0 System.Boolean DungeonGen.Point::op_GreaterThan(DungeonGen.Point,DungeonGen.Point)
+// 0x000005D8 System.Boolean DungeonGen.Point::op_GreaterThan(DungeonGen.Point,DungeonGen.Point)
 extern void Point_op_GreaterThan_m2079122B9F096ED86AA9F7E3DC7B4AD8E6E050D6 (void);
-// 0x000005D1 System.Void DungeonGen.Triangle::.ctor(DungeonGen.Point,DungeonGen.Point,DungeonGen.Point)
+// 0x000005D9 System.Void DungeonGen.Triangle::.ctor(DungeonGen.Point,DungeonGen.Point,DungeonGen.Point)
 extern void Triangle__ctor_m5B4FE44D94D53C95C7337ACD13A6AA767E20ECEA (void);
-// 0x000005D2 System.Boolean DungeonGen.Triangle::Equals(System.Object)
+// 0x000005DA System.Boolean DungeonGen.Triangle::Equals(System.Object)
 extern void Triangle_Equals_m551A4115F0932F69AB89C1A0451401516C9555CF (void);
-// 0x000005D3 System.Int32 DungeonGen.Triangle::GetHashCode()
+// 0x000005DB System.Int32 DungeonGen.Triangle::GetHashCode()
 extern void Triangle_GetHashCode_m3371E61B8CACDD3289E81F9395D0875DBDEA157B (void);
-// 0x000005D4 System.String DungeonGen.Triangle::ToString()
+// 0x000005DC System.String DungeonGen.Triangle::ToString()
 extern void Triangle_ToString_m6ACEF6C3E681725DFB0535B31B68DBCEA946CE07 (void);
-// 0x000005D5 System.Boolean DungeonGen.Triangle::HasEdge(DungeonGen.Edge)
+// 0x000005DD System.Boolean DungeonGen.Triangle::HasEdge(DungeonGen.Edge)
 extern void Triangle_HasEdge_m0CBD83E268AB1F9B752CD82CCD26EDA3DB56DAE5 (void);
-// 0x000005D6 System.Boolean DungeonGen.Triangle::HasVertex(DungeonGen.Point)
+// 0x000005DE System.Boolean DungeonGen.Triangle::HasVertex(DungeonGen.Point)
 extern void Triangle_HasVertex_m6F903711D84F5BEF9A9C707BB4CA4549104A68CF (void);
-// 0x000005D7 System.Boolean DungeonGen.Triangle::HasVertexFrom(DungeonGen.Triangle)
+// 0x000005DF System.Boolean DungeonGen.Triangle::HasVertexFrom(DungeonGen.Triangle)
 extern void Triangle_HasVertexFrom_m62958E5BDB7B5698111F8D11956843039CF9D390 (void);
-// 0x000005D8 System.Boolean DungeonGen.Triangle::CircumCircleContains(DungeonGen.Point)
+// 0x000005E0 System.Boolean DungeonGen.Triangle::CircumCircleContains(DungeonGen.Point)
 extern void Triangle_CircumCircleContains_mF38E11664956CD2EA378B7C18FFB22217E9201D7 (void);
-// 0x000005D9 System.Boolean FunkyCode.DayLightCollider2D::get_isStatic()
+// 0x000005E1 System.Boolean FunkyCode.DayLightCollider2D::get_isStatic()
 extern void DayLightCollider2D_get_isStatic_m8AC69FBBC5B4D7B9B2DEFAAD0B12ED88654E214E (void);
-// 0x000005DA System.Void FunkyCode.DayLightCollider2D::OnEnable()
+// 0x000005E2 System.Void FunkyCode.DayLightCollider2D::OnEnable()
 extern void DayLightCollider2D_OnEnable_m8D81EA49E0144A315ABE8E663509870FA6AD8EFA (void);
-// 0x000005DB System.Void FunkyCode.DayLightCollider2D::OnDisable()
+// 0x000005E3 System.Void FunkyCode.DayLightCollider2D::OnDisable()
 extern void DayLightCollider2D_OnDisable_mB5855F9BABF441C7EF6754FF75154FF4033A35CC (void);
-// 0x000005DC System.Int32 FunkyCode.DayLightCollider2D::GetDepth()
+// 0x000005E4 System.Int32 FunkyCode.DayLightCollider2D::GetDepth()
 extern void DayLightCollider2D_GetDepth_mEBCC6CE1B0AC80313335B46B5CD36C176446449F (void);
-// 0x000005DD System.Boolean FunkyCode.DayLightCollider2D::InAnyCamera()
+// 0x000005E5 System.Boolean FunkyCode.DayLightCollider2D::InAnyCamera()
 extern void DayLightCollider2D_InAnyCamera_m926A8F71832B785BE2E2BC5BB873A68988D786EC (void);
-// 0x000005DE System.Void FunkyCode.DayLightCollider2D::ForceUpdateAll()
+// 0x000005E6 System.Void FunkyCode.DayLightCollider2D::ForceUpdateAll()
 extern void DayLightCollider2D_ForceUpdateAll_mD5540584E449240AC6B941B57D5DBBEFAB57A3AD (void);
-// 0x000005DF System.Void FunkyCode.DayLightCollider2D::ForceUpdate()
+// 0x000005E7 System.Void FunkyCode.DayLightCollider2D::ForceUpdate()
 extern void DayLightCollider2D_ForceUpdate_m644FEAD90FC3540D7C6201F26682FF530A981220 (void);
-// 0x000005E0 System.Void FunkyCode.DayLightCollider2D::UpdateLoop()
+// 0x000005E8 System.Void FunkyCode.DayLightCollider2D::UpdateLoop()
 extern void DayLightCollider2D_UpdateLoop_mF5610674A0A1C3D8C188C742A64D2D6810174DA5 (void);
-// 0x000005E1 System.Void FunkyCode.DayLightCollider2D::Initialize()
+// 0x000005E9 System.Void FunkyCode.DayLightCollider2D::Initialize()
 extern void DayLightCollider2D_Initialize_m169AA13A2525EAB38097F625F5F2DB2EC9FE41C9 (void);
-// 0x000005E2 System.Void FunkyCode.DayLightCollider2D::OnDrawGizmosSelected()
+// 0x000005EA System.Void FunkyCode.DayLightCollider2D::OnDrawGizmosSelected()
 extern void DayLightCollider2D_OnDrawGizmosSelected_mB29154128AD7CF9012F520826B9BB31271437E5A (void);
-// 0x000005E3 System.Void FunkyCode.DayLightCollider2D::OnDrawGizmos()
+// 0x000005EB System.Void FunkyCode.DayLightCollider2D::OnDrawGizmos()
 extern void DayLightCollider2D_OnDrawGizmos_mF82E38F6E0043B63ADDA5AF61A28CD4F8D2D5FAF (void);
-// 0x000005E4 System.Void FunkyCode.DayLightCollider2D::DrawGizmos()
+// 0x000005EC System.Void FunkyCode.DayLightCollider2D::DrawGizmos()
 extern void DayLightCollider2D_DrawGizmos_m06C9B52BD910950D85CC616678AFCB279691461A (void);
-// 0x000005E5 System.Void FunkyCode.DayLightCollider2D::.ctor()
+// 0x000005ED System.Void FunkyCode.DayLightCollider2D::.ctor()
 extern void DayLightCollider2D__ctor_m7A7B6108DDEF3EDC9D0789D829ABD5F43529DF80 (void);
-// 0x000005E6 System.Void FunkyCode.DayLightCollider2D::.cctor()
+// 0x000005EE System.Void FunkyCode.DayLightCollider2D::.cctor()
 extern void DayLightCollider2D__cctor_m148D8938D7DC9E90809121EFF64ED97B8A0984AC (void);
-// 0x000005E7 UnityEngine.Rect FunkyCode.DayLightingTile::GetDayRect()
+// 0x000005EF UnityEngine.Rect FunkyCode.DayLightingTile::GetDayRect()
 extern void DayLightingTile_GetDayRect_m3D878825C5F6D06E160D5C0DD5E43B88F115F4B7 (void);
-// 0x000005E8 System.Boolean FunkyCode.DayLightingTile::InCamera(UnityEngine.Camera)
+// 0x000005F0 System.Boolean FunkyCode.DayLightingTile::InCamera(UnityEngine.Camera)
 extern void DayLightingTile_InCamera_m6054D7C52833A9CE3758F12FAFB9DD0F86AC1421 (void);
-// 0x000005E9 System.Void FunkyCode.DayLightingTile::.ctor()
+// 0x000005F1 System.Void FunkyCode.DayLightingTile::.ctor()
 extern void DayLightingTile__ctor_m37EE0694A4CA7BA6CC61F6021199723F85C5C695 (void);
-// 0x000005EA System.Collections.Generic.List`1<FunkyCode.DayLightTilemapCollider2D> FunkyCode.DayLightTilemapCollider2D::get_List()
+// 0x000005F2 System.Collections.Generic.List`1<FunkyCode.DayLightTilemapCollider2D> FunkyCode.DayLightTilemapCollider2D::get_List()
 extern void DayLightTilemapCollider2D_get_List_mA2BC08B063C810E9A78A555ED62BA7A01C55E55D (void);
-// 0x000005EB System.Boolean FunkyCode.DayLightTilemapCollider2D::ShadowsDisabled()
+// 0x000005F3 System.Boolean FunkyCode.DayLightTilemapCollider2D::ShadowsDisabled()
 extern void DayLightTilemapCollider2D_ShadowsDisabled_m9430E7129DF3E5FA9B2A5F263C57ED79F0116544 (void);
-// 0x000005EC System.Boolean FunkyCode.DayLightTilemapCollider2D::MasksDisabled()
+// 0x000005F4 System.Boolean FunkyCode.DayLightTilemapCollider2D::MasksDisabled()
 extern void DayLightTilemapCollider2D_MasksDisabled_m0DA94E5B67B6246CD50D6C7929891F462E40A99B (void);
-// 0x000005ED System.Void FunkyCode.DayLightTilemapCollider2D::OnEnable()
+// 0x000005F5 System.Void FunkyCode.DayLightTilemapCollider2D::OnEnable()
 extern void DayLightTilemapCollider2D_OnEnable_m98D3CE715D454AB19E6C7B2CCC4F9B5DBECD75D5 (void);
-// 0x000005EE System.Void FunkyCode.DayLightTilemapCollider2D::OnDisable()
+// 0x000005F6 System.Void FunkyCode.DayLightTilemapCollider2D::OnDisable()
 extern void DayLightTilemapCollider2D_OnDisable_mECED86EDEE2DE3DF5B6A077581232DE7C85388F9 (void);
-// 0x000005EF System.Void FunkyCode.DayLightTilemapCollider2D::Update()
+// 0x000005F7 System.Void FunkyCode.DayLightTilemapCollider2D::Update()
 extern void DayLightTilemapCollider2D_Update_m5810C343BD2222F9D661724B1601F0B4B7B6CA9B (void);
-// 0x000005F0 FunkyCode.LightTilemapCollider.Base FunkyCode.DayLightTilemapCollider2D::GetCurrentTilemap()
+// 0x000005F8 FunkyCode.LightTilemapCollider.Base FunkyCode.DayLightTilemapCollider2D::GetCurrentTilemap()
 extern void DayLightTilemapCollider2D_GetCurrentTilemap_m42520D9CDFE4B0FF3220AF0B73A09E0A2C70DBB8 (void);
-// 0x000005F1 System.Void FunkyCode.DayLightTilemapCollider2D::Initialize()
+// 0x000005F9 System.Void FunkyCode.DayLightTilemapCollider2D::Initialize()
 extern void DayLightTilemapCollider2D_Initialize_m4BC39D4CFA9C212D3222EE343D21D24952FB7FE4 (void);
-// 0x000005F2 System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.DayLightTilemapCollider2D::GetTileList()
+// 0x000005FA System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.DayLightTilemapCollider2D::GetTileList()
 extern void DayLightTilemapCollider2D_GetTileList_mF45AAAD385C8C8CB0B1EE58D08FC9F6D50C8017D (void);
-// 0x000005F3 FunkyCode.TilemapProperties FunkyCode.DayLightTilemapCollider2D::GetTilemapProperties()
+// 0x000005FB FunkyCode.TilemapProperties FunkyCode.DayLightTilemapCollider2D::GetTilemapProperties()
 extern void DayLightTilemapCollider2D_GetTilemapProperties_mD30426B5BBF056BBBBCE2372E5D24AD490C38D46 (void);
-// 0x000005F4 System.Void FunkyCode.DayLightTilemapCollider2D::OnDrawGizmosSelected()
+// 0x000005FC System.Void FunkyCode.DayLightTilemapCollider2D::OnDrawGizmosSelected()
 extern void DayLightTilemapCollider2D_OnDrawGizmosSelected_m7B62556AF7BBBA390586FD5AB72DFB2AEBB4D37D (void);
-// 0x000005F5 System.Void FunkyCode.DayLightTilemapCollider2D::OnDrawGizmos()
+// 0x000005FD System.Void FunkyCode.DayLightTilemapCollider2D::OnDrawGizmos()
 extern void DayLightTilemapCollider2D_OnDrawGizmos_mFEBC0ECEA2597D184B9C3645A34D8B56091F0F7C (void);
-// 0x000005F6 System.Void FunkyCode.DayLightTilemapCollider2D::DrawGizmos()
+// 0x000005FE System.Void FunkyCode.DayLightTilemapCollider2D::DrawGizmos()
 extern void DayLightTilemapCollider2D_DrawGizmos_mC8CE049967BCE65B27DEC24507B4E74B4424952D (void);
-// 0x000005F7 System.Void FunkyCode.DayLightTilemapCollider2D::.ctor()
+// 0x000005FF System.Void FunkyCode.DayLightTilemapCollider2D::.ctor()
 extern void DayLightTilemapCollider2D__ctor_mF2D8E2C836C4E302A6C179C6C3BF8A2A52B23EE7 (void);
-// 0x000005F8 System.Void FunkyCode.DayLightTilemapCollider2D::.cctor()
+// 0x00000600 System.Void FunkyCode.DayLightTilemapCollider2D::.cctor()
 extern void DayLightTilemapCollider2D__cctor_m36AC3328346496069275E4E76DFF458C9DE00A64 (void);
-// 0x000005F9 System.Void FunkyCode.LightBlink::Start()
+// 0x00000601 System.Void FunkyCode.LightBlink::Start()
 extern void LightBlink_Start_m8C8A0223E30DFD42B1113C080A3F3332E06EBA49 (void);
-// 0x000005FA System.Void FunkyCode.LightBlink::Update()
+// 0x00000602 System.Void FunkyCode.LightBlink::Update()
 extern void LightBlink_Update_mD548A32AF79DA146CA783CDD3F0651F824175589 (void);
-// 0x000005FB System.Void FunkyCode.LightBlink::.ctor()
+// 0x00000603 System.Void FunkyCode.LightBlink::.ctor()
 extern void LightBlink__ctor_mC871D92545A6EB18E79D51CDA86E0F6B0D298FA8 (void);
-// 0x000005FC System.Void FunkyCode.LightCycleBuffer::.ctor()
+// 0x00000604 System.Void FunkyCode.LightCycleBuffer::.ctor()
 extern void LightCycleBuffer__ctor_mACF59B50C25CC04157D215AB855E0D91B7BCB1D1 (void);
-// 0x000005FD System.Void FunkyCode.LightDayProperties::.ctor()
+// 0x00000605 System.Void FunkyCode.LightDayProperties::.ctor()
 extern void LightDayProperties__ctor_m02C6DF96C709AE3ACB4AB55DB3578C38616598E5 (void);
-// 0x000005FE System.Void FunkyCode.LightCycle::SetTime(System.Single)
+// 0x00000606 System.Void FunkyCode.LightCycle::SetTime(System.Single)
 extern void LightCycle_SetTime_m780320A75B3DBE79BA5D5C11999FC8C44E1872DB (void);
-// 0x000005FF System.Void FunkyCode.LightCycle::LateUpdate()
+// 0x00000607 System.Void FunkyCode.LightCycle::LateUpdate()
 extern void LightCycle_LateUpdate_mA922553A64F42243DD6E80860399D082CBB6F421 (void);
-// 0x00000600 System.Void FunkyCode.LightCycle::.ctor()
+// 0x00000608 System.Void FunkyCode.LightCycle::.ctor()
 extern void LightCycle__ctor_mDFE66929B2FA59CE438D574EE6E081424EE7084C (void);
-// 0x00000601 System.Void FunkyCode.LightFlicker::Start()
+// 0x00000609 System.Void FunkyCode.LightFlicker::Start()
 extern void LightFlicker_Start_m6776F8A7078C08020EA4461E77039D5E98E21E68 (void);
-// 0x00000602 System.Void FunkyCode.LightFlicker::Update()
+// 0x0000060A System.Void FunkyCode.LightFlicker::Update()
 extern void LightFlicker_Update_m2E9E6ACCD9360FC4932A6F241313C5C30715C579 (void);
-// 0x00000603 System.Void FunkyCode.LightFlicker::.ctor()
+// 0x0000060B System.Void FunkyCode.LightFlicker::.ctor()
 extern void LightFlicker__ctor_m9C5DB3ACF17B017AC125E6CCC8C0FB142B8A6FA0 (void);
-// 0x00000604 System.Void FunkyCode.LightEventListener::OnEnable()
+// 0x0000060C System.Void FunkyCode.LightEventListener::OnEnable()
 extern void LightEventListener_OnEnable_m722D188A159E6C5AD226FBBB445E5FE54A2A8369 (void);
-// 0x00000605 System.Void FunkyCode.LightEventListener::OnDisable()
+// 0x0000060D System.Void FunkyCode.LightEventListener::OnDisable()
 extern void LightEventListener_OnDisable_mE4908AFE7858C4490B55D26E37A00E623F50BAD1 (void);
-// 0x00000606 System.Void FunkyCode.LightEventListener::CollisionEvent(FunkyCode.LightCollision2D)
+// 0x0000060E System.Void FunkyCode.LightEventListener::CollisionEvent(FunkyCode.LightCollision2D)
 extern void LightEventListener_CollisionEvent_mEBC48AB0E91367BCCDA5A32884D5DFDEE7162E24 (void);
-// 0x00000607 System.Void FunkyCode.LightEventListener::Update()
+// 0x0000060F System.Void FunkyCode.LightEventListener::Update()
 extern void LightEventListener_Update_m6C0D371AFC192C7EB32001E23F84789B08CE3BEA (void);
-// 0x00000608 System.Void FunkyCode.LightEventListener::.ctor()
+// 0x00000610 System.Void FunkyCode.LightEventListener::.ctor()
 extern void LightEventListener__ctor_m0483A8BD28A98428B64F89BFF764F520881DF074 (void);
-// 0x00000609 System.Void FunkyCode.LightEventListenerCount::OnEnable()
+// 0x00000611 System.Void FunkyCode.LightEventListenerCount::OnEnable()
 extern void LightEventListenerCount_OnEnable_mFFD22609CA8FCDD9C433ACB7C9DEE4E57FE2AF8C (void);
-// 0x0000060A System.Void FunkyCode.LightEventListenerCount::OnDisable()
+// 0x00000612 System.Void FunkyCode.LightEventListenerCount::OnDisable()
 extern void LightEventListenerCount_OnDisable_mAC2ABDAB155339A4D09497830D9C1F6A6E4D01CB (void);
-// 0x0000060B System.Void FunkyCode.LightEventListenerCount::CollisionEvent(FunkyCode.LightCollision2D)
+// 0x00000613 System.Void FunkyCode.LightEventListenerCount::CollisionEvent(FunkyCode.LightCollision2D)
 extern void LightEventListenerCount_CollisionEvent_m5A5A1B385D0FCDCDB77D76DDFC727F324E8BF1FC (void);
-// 0x0000060C System.Void FunkyCode.LightEventListenerCount::.ctor()
+// 0x00000614 System.Void FunkyCode.LightEventListenerCount::.ctor()
 extern void LightEventListenerCount__ctor_mCD93ED2FFF7B5753B1D8CE198BA0FD359F0ADC6E (void);
-// 0x0000060D System.Void FunkyCode.LightEventListenerCountGUI::OnEnable()
+// 0x00000615 System.Void FunkyCode.LightEventListenerCountGUI::OnEnable()
 extern void LightEventListenerCountGUI_OnEnable_mB78C864BEB26F613499E9812B56C633D878CE126 (void);
-// 0x0000060E System.Void FunkyCode.LightEventListenerCountGUI::OnGUI()
+// 0x00000616 System.Void FunkyCode.LightEventListenerCountGUI::OnGUI()
 extern void LightEventListenerCountGUI_OnGUI_m2863AC3474E1D7016857723E95560C497233357B (void);
-// 0x0000060F System.Void FunkyCode.LightEventListenerCountGUI::.ctor()
+// 0x00000617 System.Void FunkyCode.LightEventListenerCountGUI::.ctor()
 extern void LightEventListenerCountGUI__ctor_m67695AFCA910A2241EF3DD5D4DC95AE3CAAAC228 (void);
-// 0x00000610 System.Void FunkyCode.LightEventListenerGUI::OnEnable()
+// 0x00000618 System.Void FunkyCode.LightEventListenerGUI::OnEnable()
 extern void LightEventListenerGUI_OnEnable_m7A1C00464F63DD654551D886F9B6367ED9D5D815 (void);
-// 0x00000611 UnityEngine.Texture FunkyCode.LightEventListenerGUI::GetPointTexture()
+// 0x00000619 UnityEngine.Texture FunkyCode.LightEventListenerGUI::GetPointTexture()
 extern void LightEventListenerGUI_GetPointTexture_mD333E02CA6650C563723FDED8F74EC15EEFAC672 (void);
-// 0x00000612 System.Void FunkyCode.LightEventListenerGUI::OnGUI()
+// 0x0000061A System.Void FunkyCode.LightEventListenerGUI::OnGUI()
 extern void LightEventListenerGUI_OnGUI_mFA8BEB5056A45FE35BB73CD4075BB9C257A26451 (void);
-// 0x00000613 System.Void FunkyCode.LightEventListenerGUI::.ctor()
+// 0x0000061B System.Void FunkyCode.LightEventListenerGUI::.ctor()
 extern void LightEventListenerGUI__ctor_m9BDE8463D67D580610D649658081F4F100D89C06 (void);
-// 0x00000614 System.Boolean FunkyCode.LightCollider2D::get_isStatic()
+// 0x0000061C System.Boolean FunkyCode.LightCollider2D::get_isStatic()
 extern void LightCollider2D_get_isStatic_mE9A4A11AB29657F23CFAF87A02A932B9BBA8EE59 (void);
-// 0x00000615 System.Void FunkyCode.LightCollider2D::add_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x0000061D System.Void FunkyCode.LightCollider2D::add_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
 extern void LightCollider2D_add_collisionEvents_mCFA6E12F2DF60E5251D3A16500F477D30A0DFBB8 (void);
-// 0x00000616 System.Void FunkyCode.LightCollider2D::remove_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x0000061E System.Void FunkyCode.LightCollider2D::remove_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
 extern void LightCollider2D_remove_collisionEvents_m86ED23F9D6F27829B1535E36656063E36E311093 (void);
-// 0x00000617 System.Boolean FunkyCode.LightCollider2D::ShadowDisabled()
+// 0x0000061F System.Boolean FunkyCode.LightCollider2D::ShadowDisabled()
 extern void LightCollider2D_ShadowDisabled_mB29F92FBA280BAE9E734CA5A8AF4B735558F2C20 (void);
-// 0x00000618 System.Void FunkyCode.LightCollider2D::AddEventOnEnter(UnityEngine.Events.UnityAction`1<FunkyCode.Light2D>)
+// 0x00000620 System.Void FunkyCode.LightCollider2D::AddEventOnEnter(UnityEngine.Events.UnityAction`1<FunkyCode.Light2D>)
 extern void LightCollider2D_AddEventOnEnter_mE297B743B3153D81E29CCD3B0DB9E335B9F12486 (void);
-// 0x00000619 System.Void FunkyCode.LightCollider2D::AddEventOnExit(UnityEngine.Events.UnityAction`1<FunkyCode.Light2D>)
+// 0x00000621 System.Void FunkyCode.LightCollider2D::AddEventOnExit(UnityEngine.Events.UnityAction`1<FunkyCode.Light2D>)
 extern void LightCollider2D_AddEventOnExit_mDD54D95FEAE410504DC09270097254295CC969C7 (void);
-// 0x0000061A System.Void FunkyCode.LightCollider2D::AddEvent(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x00000622 System.Void FunkyCode.LightCollider2D::AddEvent(FunkyCode.EventHandling.CollisionEvent2D)
 extern void LightCollider2D_AddEvent_m73E8671DE46F1ADD1CB714F750C49C2B365F3D74 (void);
-// 0x0000061B System.Void FunkyCode.LightCollider2D::RemoveEvent(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x00000623 System.Void FunkyCode.LightCollider2D::RemoveEvent(FunkyCode.EventHandling.CollisionEvent2D)
 extern void LightCollider2D_RemoveEvent_m9522C0F08BBCB540BBDEE00D409BEDEBFA0B545B (void);
-// 0x0000061C System.Void FunkyCode.LightCollider2D::ForceUpdateAll()
+// 0x00000624 System.Void FunkyCode.LightCollider2D::ForceUpdateAll()
 extern void LightCollider2D_ForceUpdateAll_m4E2A04989D54F2A5DEB39CA470A009D0ACAED959 (void);
-// 0x0000061D System.Void FunkyCode.LightCollider2D::OnEnable()
+// 0x00000625 System.Void FunkyCode.LightCollider2D::OnEnable()
 extern void LightCollider2D_OnEnable_m2AE0465EDACCD50556981B1A6A68B1DF7B3A5B4E (void);
-// 0x0000061E System.Void FunkyCode.LightCollider2D::OnDisable()
+// 0x00000626 System.Void FunkyCode.LightCollider2D::OnDisable()
 extern void LightCollider2D_OnDisable_m1374D4720379EF45732BD2FCCBC1CDBD1D85EE66 (void);
-// 0x0000061F System.Void FunkyCode.LightCollider2D::OnDestroy()
+// 0x00000627 System.Void FunkyCode.LightCollider2D::OnDestroy()
 extern void LightCollider2D_OnDestroy_m48CCF0C21B9F938519D7FF5A8C079924AB5D81A7 (void);
-// 0x00000620 System.Void FunkyCode.LightCollider2D::ClearLayerList()
+// 0x00000628 System.Void FunkyCode.LightCollider2D::ClearLayerList()
 extern void LightCollider2D_ClearLayerList_mE6518DF4A2F553D17E65322FF4A2A2C67DD9408C (void);
-// 0x00000621 System.Void FunkyCode.LightCollider2D::UpdateLayerList()
+// 0x00000629 System.Void FunkyCode.LightCollider2D::UpdateLayerList()
 extern void LightCollider2D_UpdateLayerList_m7A6F37147AF52931A0CBAC322A679FC2842D81F0 (void);
-// 0x00000622 System.Collections.Generic.List`1<FunkyCode.LightCollider2D> FunkyCode.LightCollider2D::GetMaskList(System.Int32)
+// 0x0000062A System.Collections.Generic.List`1<FunkyCode.LightCollider2D> FunkyCode.LightCollider2D::GetMaskList(System.Int32)
 extern void LightCollider2D_GetMaskList_m5BB0C5F1BBEB1FE9BBAF8807731FBFE2E5113A8D (void);
-// 0x00000623 System.Collections.Generic.List`1<FunkyCode.LightCollider2D> FunkyCode.LightCollider2D::GetShadowList(System.Int32)
+// 0x0000062B System.Collections.Generic.List`1<FunkyCode.LightCollider2D> FunkyCode.LightCollider2D::GetShadowList(System.Int32)
 extern void LightCollider2D_GetShadowList_m0B3D441A38A601F005A614F62AF8C5B82724AAA6 (void);
-// 0x00000624 System.Void FunkyCode.LightCollider2D::CollisionEvent(FunkyCode.LightCollision2D)
+// 0x0000062C System.Void FunkyCode.LightCollider2D::CollisionEvent(FunkyCode.LightCollision2D)
 extern void LightCollider2D_CollisionEvent_m106DB4AF801AC4CECDB11780382D16B2A0E5E6AC (void);
-// 0x00000625 System.Boolean FunkyCode.LightCollider2D::InLight(FunkyCode.Light2D)
+// 0x0000062D System.Boolean FunkyCode.LightCollider2D::InLight(FunkyCode.Light2D)
 extern void LightCollider2D_InLight_m4D3474FA29843664B96BFC70EEB4AAFC14E22E38 (void);
-// 0x00000626 System.Void FunkyCode.LightCollider2D::UpdateNearbyLights()
+// 0x0000062E System.Void FunkyCode.LightCollider2D::UpdateNearbyLights()
 extern void LightCollider2D_UpdateNearbyLights_m512E365254D7CC2F8C8115B1540230D86FB7ABBE (void);
-// 0x00000627 System.Void FunkyCode.LightCollider2D::Initialize()
+// 0x0000062F System.Void FunkyCode.LightCollider2D::Initialize()
 extern void LightCollider2D_Initialize_m0CE260CBB1D055A19A43F81AD717B5BF6A809440 (void);
-// 0x00000628 System.Void FunkyCode.LightCollider2D::UpdateLoop()
+// 0x00000630 System.Void FunkyCode.LightCollider2D::UpdateLoop()
 extern void LightCollider2D_UpdateLoop_m3C7D53C59273B8F5723DCF3B0F2AF3058189CA42 (void);
-// 0x00000629 System.Void FunkyCode.LightCollider2D::OnDrawGizmosSelected()
+// 0x00000631 System.Void FunkyCode.LightCollider2D::OnDrawGizmosSelected()
 extern void LightCollider2D_OnDrawGizmosSelected_m23EEF797767A63F2B2654B8C8910D6C7ADCCC5BE (void);
-// 0x0000062A System.Void FunkyCode.LightCollider2D::OnDrawGizmos()
+// 0x00000632 System.Void FunkyCode.LightCollider2D::OnDrawGizmos()
 extern void LightCollider2D_OnDrawGizmos_mF19E9B6584C18F2C0986B1E7A1EBEAFEDC404A20 (void);
-// 0x0000062B System.Void FunkyCode.LightCollider2D::DrawGizmos()
+// 0x00000633 System.Void FunkyCode.LightCollider2D::DrawGizmos()
 extern void LightCollider2D_DrawGizmos_mEE4ADF66962B59F474EC59FAC34E7B9F2D761946 (void);
-// 0x0000062C System.Void FunkyCode.LightCollider2D::.ctor()
+// 0x00000634 System.Void FunkyCode.LightCollider2D::.ctor()
 extern void LightCollider2D__ctor_mB9E16EE1DC0AA25AE17D7D4CEAFF58ECD614983F (void);
-// 0x0000062D System.Void FunkyCode.LightCollider2D::.cctor()
+// 0x00000635 System.Void FunkyCode.LightCollider2D::.cctor()
 extern void LightCollider2D__cctor_m323F8D2B21E8E265FCF76873CFAC9C9C08C012FD (void);
-// 0x0000062E System.Collections.Generic.List`1<FunkyCode.LightTilemapCollider2D> FunkyCode.LightTilemapCollider2D::GetMaskList(System.Int32)
+// 0x00000636 System.Collections.Generic.List`1<FunkyCode.LightTilemapCollider2D> FunkyCode.LightTilemapCollider2D::GetMaskList(System.Int32)
 extern void LightTilemapCollider2D_GetMaskList_mD560364F96A18F8D146AB4E3D2F6A76AADBCEE54 (void);
-// 0x0000062F System.Collections.Generic.List`1<FunkyCode.LightTilemapCollider2D> FunkyCode.LightTilemapCollider2D::GetShadowList(System.Int32)
+// 0x00000637 System.Collections.Generic.List`1<FunkyCode.LightTilemapCollider2D> FunkyCode.LightTilemapCollider2D::GetShadowList(System.Int32)
 extern void LightTilemapCollider2D_GetShadowList_mBDE9ABC139F0C1F1DD9BD1C58B01CA34B231A413 (void);
-// 0x00000630 System.Void FunkyCode.LightTilemapCollider2D::ClearLayerList()
+// 0x00000638 System.Void FunkyCode.LightTilemapCollider2D::ClearLayerList()
 extern void LightTilemapCollider2D_ClearLayerList_mCF1A6B12B21C7A69259602A13F2FC3D755CB528E (void);
-// 0x00000631 System.Void FunkyCode.LightTilemapCollider2D::UpdateLayerList()
+// 0x00000639 System.Void FunkyCode.LightTilemapCollider2D::UpdateLayerList()
 extern void LightTilemapCollider2D_UpdateLayerList_m3A83F010FABBD0661D453A2504CB68745DE1E105 (void);
-// 0x00000632 System.Boolean FunkyCode.LightTilemapCollider2D::ShadowsDisabled()
+// 0x0000063A System.Boolean FunkyCode.LightTilemapCollider2D::ShadowsDisabled()
 extern void LightTilemapCollider2D_ShadowsDisabled_m5EF9F6495CC31543A0254646BC2CFF3FAF11F72B (void);
-// 0x00000633 System.Boolean FunkyCode.LightTilemapCollider2D::MasksDisabled()
+// 0x0000063B System.Boolean FunkyCode.LightTilemapCollider2D::MasksDisabled()
 extern void LightTilemapCollider2D_MasksDisabled_mD03408080C5CFC2C77ADA61B0DEEE8D99D0159DC (void);
-// 0x00000634 System.Boolean FunkyCode.LightTilemapCollider2D::InLight(FunkyCode.Light2D)
+// 0x0000063C System.Boolean FunkyCode.LightTilemapCollider2D::InLight(FunkyCode.Light2D)
 extern void LightTilemapCollider2D_InLight_m20656156CF285017F74D81283F8CFB3B98A9EE98 (void);
-// 0x00000635 System.Void FunkyCode.LightTilemapCollider2D::RefreshTile(UnityEngine.Vector3Int)
+// 0x0000063D System.Void FunkyCode.LightTilemapCollider2D::RefreshTile(UnityEngine.Vector3Int)
 extern void LightTilemapCollider2D_RefreshTile_m24F0714AA92C0E630F8B7924964C4B668A3130C7 (void);
-// 0x00000636 System.Void FunkyCode.LightTilemapCollider2D::OnEnable()
+// 0x0000063E System.Void FunkyCode.LightTilemapCollider2D::OnEnable()
 extern void LightTilemapCollider2D_OnEnable_mA62B79A0BF184A89B55E48864D456DF88D77DF7C (void);
-// 0x00000637 System.Void FunkyCode.LightTilemapCollider2D::OnDisable()
+// 0x0000063F System.Void FunkyCode.LightTilemapCollider2D::OnDisable()
 extern void LightTilemapCollider2D_OnDisable_m09CD8B4EF3BA21A505AC1D515AFFCE8914A5EA32 (void);
-// 0x00000638 System.Void FunkyCode.LightTilemapCollider2D::Update()
+// 0x00000640 System.Void FunkyCode.LightTilemapCollider2D::Update()
 extern void LightTilemapCollider2D_Update_mE64D1DDC1B8E76C6AD6286EB56F848E2DFEA2076 (void);
-// 0x00000639 FunkyCode.LightTilemapCollider.Base FunkyCode.LightTilemapCollider2D::GetCurrentTilemap()
+// 0x00000641 FunkyCode.LightTilemapCollider.Base FunkyCode.LightTilemapCollider2D::GetCurrentTilemap()
 extern void LightTilemapCollider2D_GetCurrentTilemap_m5F932BB86A69EC845535017923E6CD22E60C9576 (void);
-// 0x0000063A System.Void FunkyCode.LightTilemapCollider2D::Initialize()
+// 0x00000642 System.Void FunkyCode.LightTilemapCollider2D::Initialize()
 extern void LightTilemapCollider2D_Initialize_m5098FCC7CA8EF677978684D7D98F7E053859C585 (void);
-// 0x0000063B System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.LightTilemapCollider2D::GetTileList()
+// 0x00000643 System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.LightTilemapCollider2D::GetTileList()
 extern void LightTilemapCollider2D_GetTileList_m0B3B635EE35B98B355F799815AEAC08D7A10F016 (void);
-// 0x0000063C FunkyCode.TilemapProperties FunkyCode.LightTilemapCollider2D::GetTilemapProperties()
+// 0x00000644 FunkyCode.TilemapProperties FunkyCode.LightTilemapCollider2D::GetTilemapProperties()
 extern void LightTilemapCollider2D_GetTilemapProperties_m5732E87C7345B8815D3C89BA9A42706D07EE78C9 (void);
-// 0x0000063D System.Void FunkyCode.LightTilemapCollider2D::OnDrawGizmosSelected()
+// 0x00000645 System.Void FunkyCode.LightTilemapCollider2D::OnDrawGizmosSelected()
 extern void LightTilemapCollider2D_OnDrawGizmosSelected_mDA79F2491BB02DFB61A638265E9D1F75CED784B9 (void);
-// 0x0000063E System.Void FunkyCode.LightTilemapCollider2D::OnDrawGizmos()
+// 0x00000646 System.Void FunkyCode.LightTilemapCollider2D::OnDrawGizmos()
 extern void LightTilemapCollider2D_OnDrawGizmos_m49135E0EF3F71A8A211F73DB92BBBF2ABE6D57FF (void);
-// 0x0000063F System.Void FunkyCode.LightTilemapCollider2D::DrawGizmos()
+// 0x00000647 System.Void FunkyCode.LightTilemapCollider2D::DrawGizmos()
 extern void LightTilemapCollider2D_DrawGizmos_m2BB1B1E54D7AC849D7B5A1E1D7154B13741F6A97 (void);
-// 0x00000640 System.Void FunkyCode.LightTilemapCollider2D::.ctor()
+// 0x00000648 System.Void FunkyCode.LightTilemapCollider2D::.ctor()
 extern void LightTilemapCollider2D__ctor_m9C4D170BDD126A1738226F5916A52A68D7E848F1 (void);
-// 0x00000641 System.Void FunkyCode.LightTilemapCollider2D::.cctor()
+// 0x00000649 System.Void FunkyCode.LightTilemapCollider2D::.cctor()
 extern void LightTilemapCollider2D__cctor_mA8536B5BE8891F4E43B57097CC1D0C563D99EEC1 (void);
-// 0x00000642 FunkyCode.LightBuffer2D FunkyCode.Light2D::get_Buffer()
+// 0x0000064A FunkyCode.LightBuffer2D FunkyCode.Light2D::get_Buffer()
 extern void Light2D_get_Buffer_m1598ED1E7221DB71EC6ED21450D0321FBC92A1BF (void);
-// 0x00000643 System.Void FunkyCode.Light2D::set_Buffer(FunkyCode.LightBuffer2D)
+// 0x0000064B System.Void FunkyCode.Light2D::set_Buffer(FunkyCode.LightBuffer2D)
 extern void Light2D_set_Buffer_m359FDB85E1983C7CD7F2FF795B921BB2378AAFE9 (void);
-// 0x00000644 System.Void FunkyCode.Light2D::AddEvent(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x0000064C System.Void FunkyCode.Light2D::AddEvent(FunkyCode.EventHandling.CollisionEvent2D)
 extern void Light2D_AddEvent_m308DADC69B999AF6537E9EBA1CEB92159E798CDF (void);
-// 0x00000645 System.Void FunkyCode.Light2D::AddCollider(FunkyCode.LightCollider2D)
+// 0x0000064D System.Void FunkyCode.Light2D::AddCollider(FunkyCode.LightCollider2D)
 extern void Light2D_AddCollider_m7FE42F6A221A911B52D0445B4B70D72C9E82A027 (void);
-// 0x00000646 FunkyCode.LayerSetting[] FunkyCode.Light2D::GetLightPresetLayers()
+// 0x0000064E FunkyCode.LayerSetting[] FunkyCode.Light2D::GetLightPresetLayers()
 extern void Light2D_GetLightPresetLayers_mDBF59FB8009C716C371205D18AA49881D3946A75 (void);
-// 0x00000647 FunkyCode.LayerSetting[] FunkyCode.Light2D::GetTranslucencyPresetLayers()
+// 0x0000064F FunkyCode.LayerSetting[] FunkyCode.Light2D::GetTranslucencyPresetLayers()
 extern void Light2D_GetTranslucencyPresetLayers_mEB475D10076D217F955F8761399523ED4692321C (void);
-// 0x00000648 FunkyCode.LightingSettings.EventPreset FunkyCode.Light2D::GetEventPreset()
+// 0x00000650 FunkyCode.LightingSettings.EventPreset FunkyCode.Light2D::GetEventPreset()
 extern void Light2D_GetEventPreset_m381170193495E4419CCA9AC86C20E0639487B23C (void);
-// 0x00000649 UnityEngine.Sprite FunkyCode.Light2D::GetDefaultSprite()
+// 0x00000651 UnityEngine.Sprite FunkyCode.Light2D::GetDefaultSprite()
 extern void Light2D_GetDefaultSprite_mF57505721057BD476866BB7DC864B3428743B81A (void);
-// 0x0000064A UnityEngine.Sprite FunkyCode.Light2D::GetSprite()
+// 0x00000652 UnityEngine.Sprite FunkyCode.Light2D::GetSprite()
 extern void Light2D_GetSprite_mE8044ADDDAAE6371BC30C9B6257E4D354D33490A (void);
-// 0x0000064B System.Void FunkyCode.Light2D::ForceUpdate()
+// 0x00000653 System.Void FunkyCode.Light2D::ForceUpdate()
 extern void Light2D_ForceUpdate_m8B41384831FCCE3DA9277629825AFC8860B72E4D (void);
-// 0x0000064C System.Void FunkyCode.Light2D::ForceUpdateAll()
+// 0x00000654 System.Void FunkyCode.Light2D::ForceUpdateAll()
 extern void Light2D_ForceUpdateAll_mEB191EDD5FF0B7490742EEE1EBCCAC5F9994BA4C (void);
-// 0x0000064D System.Void FunkyCode.Light2D::OnEnable()
+// 0x00000655 System.Void FunkyCode.Light2D::OnEnable()
 extern void Light2D_OnEnable_mC38E937FA7BA6ABAF595AAD65270E2C1E3D59E94 (void);
-// 0x0000064E System.Void FunkyCode.Light2D::OnDisable()
+// 0x00000656 System.Void FunkyCode.Light2D::OnDisable()
 extern void Light2D_OnDisable_mB983E0CDC14580C5FB87360E1DD4B721B8EB06BC (void);
-// 0x0000064F System.Void FunkyCode.Light2D::Free()
+// 0x00000657 System.Void FunkyCode.Light2D::Free()
 extern void Light2D_Free_mB40A31A2A22EC6971BBABA9C8D39B6A9D39AC9CA (void);
-// 0x00000650 System.Boolean FunkyCode.Light2D::InCameras()
+// 0x00000658 System.Boolean FunkyCode.Light2D::InCameras()
 extern void Light2D_InCameras_m19ECE86AB7325FACDE8D1CE9800F83895A3F0536 (void);
-// 0x00000651 System.Boolean FunkyCode.Light2D::InCamera(UnityEngine.Camera)
+// 0x00000659 System.Boolean FunkyCode.Light2D::InCamera(UnityEngine.Camera)
 extern void Light2D_InCamera_m5FC8C24A6CBABD6A44B2D5381B490F09A9E55A2A (void);
-// 0x00000652 System.Boolean FunkyCode.Light2D::IfDrawLightCollider(FunkyCode.LightCollider2D)
+// 0x0000065A System.Boolean FunkyCode.Light2D::IfDrawLightCollider(FunkyCode.LightCollider2D)
 extern void Light2D_IfDrawLightCollider_m02105B2B1BA35599630CA1854F5563C4FFF78656 (void);
-// 0x00000653 UnityEngine.Vector2Int FunkyCode.Light2D::GetTextureSize()
+// 0x0000065B UnityEngine.Vector2Int FunkyCode.Light2D::GetTextureSize()
 extern void Light2D_GetTextureSize_mA0047C6AB2F5B027C44ABDF9F2A8265F1D7B9DC9 (void);
-// 0x00000654 System.Boolean FunkyCode.Light2D::IsPixelPerfect()
+// 0x0000065C System.Boolean FunkyCode.Light2D::IsPixelPerfect()
 extern void Light2D_IsPixelPerfect_m0801D9C9461FF9F721559B32BE0F1B259DB91092 (void);
-// 0x00000655 FunkyCode.LightBuffer2D FunkyCode.Light2D::GetBuffer()
+// 0x0000065D FunkyCode.LightBuffer2D FunkyCode.Light2D::GetBuffer()
 extern void Light2D_GetBuffer_mACB0272C6162D6C7EEF696F1DDA06420BD88CC28 (void);
-// 0x00000656 System.Void FunkyCode.Light2D::UpdateLoop()
+// 0x0000065E System.Void FunkyCode.Light2D::UpdateLoop()
 extern void Light2D_UpdateLoop_m0D090E85E3BE66A18F3BFC668D0EB2C1D9EA918E (void);
-// 0x00000657 System.Void FunkyCode.Light2D::BufferUpdate()
+// 0x0000065F System.Void FunkyCode.Light2D::BufferUpdate()
 extern void Light2D_BufferUpdate_m44B2F99E8D6E277080E7A7E4B706386227C4F785 (void);
-// 0x00000658 System.Void FunkyCode.Light2D::UpdateCollidersInside()
+// 0x00000660 System.Void FunkyCode.Light2D::UpdateCollidersInside()
 extern void Light2D_UpdateCollidersInside_m773D95B515FC8856D838E2D3CF0B577E719F86DE (void);
-// 0x00000659 System.Void FunkyCode.Light2D::UpdateBuffer()
+// 0x00000661 System.Void FunkyCode.Light2D::UpdateBuffer()
 extern void Light2D_UpdateBuffer_m7CA3BC99C173A57BC08E8538078BC690FDE8C331 (void);
-// 0x0000065A System.Void FunkyCode.Light2D::DrawMeshMode()
+// 0x00000662 System.Void FunkyCode.Light2D::DrawMeshMode()
 extern void Light2D_DrawMeshMode_m8A257EB398D4E76DD75F44C5C5D6BEAC13EA3A92 (void);
-// 0x0000065B System.Void FunkyCode.Light2D::OnDrawGizmosSelected()
+// 0x00000663 System.Void FunkyCode.Light2D::OnDrawGizmosSelected()
 extern void Light2D_OnDrawGizmosSelected_mA7A6AC930AE49701DA4543CCF78EBF21D80D1E6D (void);
-// 0x0000065C System.Void FunkyCode.Light2D::OnDrawGizmos()
+// 0x00000664 System.Void FunkyCode.Light2D::OnDrawGizmos()
 extern void Light2D_OnDrawGizmos_m74CCD7FA926128A7271C6B4056C04FA1DDA7F737 (void);
-// 0x0000065D System.Void FunkyCode.Light2D::Draw()
+// 0x00000665 System.Void FunkyCode.Light2D::Draw()
 extern void Light2D_Draw_mBB43F5FAB84B5E8812A3C8537FBEFF221AD1E851 (void);
-// 0x0000065E System.Void FunkyCode.Light2D::.ctor()
+// 0x00000666 System.Void FunkyCode.Light2D::.ctor()
 extern void Light2D__ctor_m53022F0DFF17238C33AD54752D9A25534A2CE7E5 (void);
-// 0x0000065F System.Void FunkyCode.Light2D::.cctor()
+// 0x00000667 System.Void FunkyCode.Light2D::.cctor()
 extern void Light2D__cctor_mBD1D1A3C88DE475A4782A9644A8509F5C77C691D (void);
-// 0x00000660 System.Void FunkyCode.Light2D/LightEventHandling::.ctor()
+// 0x00000668 System.Void FunkyCode.Light2D/LightEventHandling::.ctor()
 extern void LightEventHandling__ctor_mFE75432E7F2183E6520F69EF810DD24B53F4FBB1 (void);
-// 0x00000661 System.Void FunkyCode.Light2D/BumpMap::.ctor()
+// 0x00000669 System.Void FunkyCode.Light2D/BumpMap::.ctor()
 extern void BumpMap__ctor_m3CCEDAB40C99909ECF90CD0974BFFBEF741AAF31 (void);
-// 0x00000662 System.Void FunkyCode.LightParticleSystem2D::OnEnable()
+// 0x0000066A System.Void FunkyCode.LightParticleSystem2D::OnEnable()
 extern void LightParticleSystem2D_OnEnable_m9A388CF7B2B1DF58FE1811A5D4FA4F4B9594F129 (void);
-// 0x00000663 System.Void FunkyCode.LightParticleSystem2D::OnDisable()
+// 0x0000066B System.Void FunkyCode.LightParticleSystem2D::OnDisable()
 extern void LightParticleSystem2D_OnDisable_m0F3DE96496DD3F2A973F3B6293A53FEE6653A22C (void);
-// 0x00000664 UnityEngine.ParticleSystem FunkyCode.LightParticleSystem2D::GetParticleSystem()
+// 0x0000066C UnityEngine.ParticleSystem FunkyCode.LightParticleSystem2D::GetParticleSystem()
 extern void LightParticleSystem2D_GetParticleSystem_mB3DDF2F31DC6EFA8C95C30D95A37721DE2ECAE77 (void);
-// 0x00000665 UnityEngine.ParticleSystemRenderer FunkyCode.LightParticleSystem2D::GetParticleSystemRenderer()
+// 0x0000066D UnityEngine.ParticleSystemRenderer FunkyCode.LightParticleSystem2D::GetParticleSystemRenderer()
 extern void LightParticleSystem2D_GetParticleSystemRenderer_mB5099F70C8C67FCEDC2970732EEF8C0C37B7A402 (void);
-// 0x00000666 System.Void FunkyCode.LightParticleSystem2D::.ctor()
+// 0x0000066E System.Void FunkyCode.LightParticleSystem2D::.ctor()
 extern void LightParticleSystem2D__ctor_m3C506EA7087CCD84E844A8B7875A3C6820E89DB4 (void);
-// 0x00000667 System.Void FunkyCode.LightParticleSystem2D::.cctor()
+// 0x0000066F System.Void FunkyCode.LightParticleSystem2D::.cctor()
 extern void LightParticleSystem2D__cctor_m6D9D5C1BFEE4E9CF297BCD8C4F2485F2EDDC342C (void);
-// 0x00000668 System.Void FunkyCode.LightRoom2D::OnEnable()
+// 0x00000670 System.Void FunkyCode.LightRoom2D::OnEnable()
 extern void LightRoom2D_OnEnable_m9ED9F8EAF68F57F54CDB2BB2A5E68437492BBB03 (void);
-// 0x00000669 System.Void FunkyCode.LightRoom2D::OnDisable()
+// 0x00000671 System.Void FunkyCode.LightRoom2D::OnDisable()
 extern void LightRoom2D_OnDisable_m5A0B2B77F9AE437E59DED73C8CB5214DF9F56F5E (void);
-// 0x0000066A System.Void FunkyCode.LightRoom2D::Awake()
+// 0x00000672 System.Void FunkyCode.LightRoom2D::Awake()
 extern void LightRoom2D_Awake_m2970CA039F59A320D2F0A85183AA2434479B0314 (void);
-// 0x0000066B System.Void FunkyCode.LightRoom2D::Initialize()
+// 0x00000673 System.Void FunkyCode.LightRoom2D::Initialize()
 extern void LightRoom2D_Initialize_mAA884C3A3758FDB42DD61C7618D1D5BEE57F6EBE (void);
-// 0x0000066C System.Void FunkyCode.LightRoom2D::.ctor()
+// 0x00000674 System.Void FunkyCode.LightRoom2D::.ctor()
 extern void LightRoom2D__ctor_m23237380AC28E60F05F7388F3C6854DE138B659A (void);
-// 0x0000066D System.Void FunkyCode.LightRoom2D::.cctor()
+// 0x00000675 System.Void FunkyCode.LightRoom2D::.cctor()
 extern void LightRoom2D__cctor_m05FA9B306EA5C2D64C4E4485505636D4166F0EF7 (void);
-// 0x0000066E System.Void FunkyCode.LightSprite2D::OnEnable()
+// 0x00000676 System.Void FunkyCode.LightSprite2D::OnEnable()
 extern void LightSprite2D_OnEnable_mA4392D1302396E7E91D22AA3D4F53A8F2DA5EA7A (void);
-// 0x0000066F System.Void FunkyCode.LightSprite2D::OnDisable()
+// 0x00000677 System.Void FunkyCode.LightSprite2D::OnDisable()
 extern void LightSprite2D_OnDisable_m8895048F03971369E8D6B5F193974A3E0CAC0C0D (void);
-// 0x00000670 System.Boolean FunkyCode.LightSprite2D::InCamera(UnityEngine.Camera)
+// 0x00000678 System.Boolean FunkyCode.LightSprite2D::InCamera(UnityEngine.Camera)
 extern void LightSprite2D_InCamera_m48D4F8E9A3532A93F76E86A9F1734AD96855D677 (void);
-// 0x00000671 UnityEngine.Sprite FunkyCode.LightSprite2D::GetDefaultSprite()
+// 0x00000679 UnityEngine.Sprite FunkyCode.LightSprite2D::GetDefaultSprite()
 extern void LightSprite2D_GetDefaultSprite_m999F5E6A63193A69AEB8D200686AE78242B03E71 (void);
-// 0x00000672 UnityEngine.Sprite FunkyCode.LightSprite2D::GetSprite()
+// 0x0000067A UnityEngine.Sprite FunkyCode.LightSprite2D::GetSprite()
 extern void LightSprite2D_GetSprite_m09904079734047205574ABB1F703682336373CFA (void);
-// 0x00000673 UnityEngine.Sprite FunkyCode.LightSprite2D::GetSpriteOrigin()
+// 0x0000067B UnityEngine.Sprite FunkyCode.LightSprite2D::GetSpriteOrigin()
 extern void LightSprite2D_GetSpriteOrigin_m6E0416E0B65AFE6E5E18C2377FF014CA8D36FCE0 (void);
-// 0x00000674 UnityEngine.SpriteRenderer FunkyCode.LightSprite2D::GetSpriteRenderer()
+// 0x0000067C UnityEngine.SpriteRenderer FunkyCode.LightSprite2D::GetSpriteRenderer()
 extern void LightSprite2D_GetSpriteRenderer_mE8AE357C092290534EFAF27D89ECB6025B5C73C8 (void);
-// 0x00000675 System.Void FunkyCode.LightSprite2D::UpdateLoop()
+// 0x0000067D System.Void FunkyCode.LightSprite2D::UpdateLoop()
 extern void LightSprite2D_UpdateLoop_m88FFDFE0EA8D365BB3E6482CD08AD7F3E61673A4 (void);
-// 0x00000676 System.Void FunkyCode.LightSprite2D::DrawMesh()
+// 0x0000067E System.Void FunkyCode.LightSprite2D::DrawMesh()
 extern void LightSprite2D_DrawMesh_mF6A8F9D3388207C43E366326880F99DACC06BA31 (void);
-// 0x00000677 System.Void FunkyCode.LightSprite2D::OnDrawGizmosSelected()
+// 0x0000067F System.Void FunkyCode.LightSprite2D::OnDrawGizmosSelected()
 extern void LightSprite2D_OnDrawGizmosSelected_m070ABA15F732077708CC89F937846E15BE46900C (void);
-// 0x00000678 System.Void FunkyCode.LightSprite2D::OnDrawGizmos()
+// 0x00000680 System.Void FunkyCode.LightSprite2D::OnDrawGizmos()
 extern void LightSprite2D_OnDrawGizmos_mC5B6BF9ECAB27FCAB6336F4B8CD150A9FE1C0FA1 (void);
-// 0x00000679 System.Void FunkyCode.LightSprite2D::Draw()
+// 0x00000681 System.Void FunkyCode.LightSprite2D::Draw()
 extern void LightSprite2D_Draw_m3B87CFB0AAFB65BFF5D67E4A3AE5878A32643465 (void);
-// 0x0000067A System.Void FunkyCode.LightSprite2D::.ctor()
+// 0x00000682 System.Void FunkyCode.LightSprite2D::.ctor()
 extern void LightSprite2D__ctor_mCC4F92DA21BAA0D28D3EADEE61A3697D3F91B269 (void);
-// 0x0000067B System.Void FunkyCode.LightSprite2D::.cctor()
+// 0x00000683 System.Void FunkyCode.LightSprite2D::.cctor()
 extern void LightSprite2D__cctor_m274FDB6F4E8CE4F6EB2C429B9E416AE83945113A (void);
-// 0x0000067C System.Void FunkyCode.LightTexture2D::OnEnable()
+// 0x00000684 System.Void FunkyCode.LightTexture2D::OnEnable()
 extern void LightTexture2D_OnEnable_mE5DD25289DA7BE01CB6D66C294EF0C8D8ADCB394 (void);
-// 0x0000067D System.Void FunkyCode.LightTexture2D::OnDisable()
+// 0x00000685 System.Void FunkyCode.LightTexture2D::OnDisable()
 extern void LightTexture2D_OnDisable_mA61D6DF59152915747AE20B51DFC07C19E7D44A6 (void);
-// 0x0000067E System.Boolean FunkyCode.LightTexture2D::InCamera(UnityEngine.Camera)
+// 0x00000686 System.Boolean FunkyCode.LightTexture2D::InCamera(UnityEngine.Camera)
 extern void LightTexture2D_InCamera_m5E31862D2EEED9D7380BA8304CD38B4F80797022 (void);
-// 0x0000067F System.Void FunkyCode.LightTexture2D::.ctor()
+// 0x00000687 System.Void FunkyCode.LightTexture2D::.ctor()
 extern void LightTexture2D__ctor_m8E001D56A522A5470CB9E57930DAC3637756C8CA (void);
-// 0x00000680 System.Void FunkyCode.LightTexture2D::.cctor()
+// 0x00000688 System.Void FunkyCode.LightTexture2D::.cctor()
 extern void LightTexture2D__cctor_m1495061FD3BB96D564A175D24AE993E95A88B5C3 (void);
-// 0x00000681 System.Void FunkyCode.LightTilemapRoom2D::OnEnable()
+// 0x00000689 System.Void FunkyCode.LightTilemapRoom2D::OnEnable()
 extern void LightTilemapRoom2D_OnEnable_mBC7DA411CE2622DCFCDDC12EC781C6B8010F2A1E (void);
-// 0x00000682 System.Void FunkyCode.LightTilemapRoom2D::OnDisable()
+// 0x0000068A System.Void FunkyCode.LightTilemapRoom2D::OnDisable()
 extern void LightTilemapRoom2D_OnDisable_m450DC6F06325302E6BBBBCE75D5A81E5AAC23C6D (void);
-// 0x00000683 FunkyCode.LightTilemapCollider.Base FunkyCode.LightTilemapRoom2D::GetCurrentTilemap()
+// 0x0000068B FunkyCode.LightTilemapCollider.Base FunkyCode.LightTilemapRoom2D::GetCurrentTilemap()
 extern void LightTilemapRoom2D_GetCurrentTilemap_m31165D85E54C660F1D45347983BC5E6B086DCDD8 (void);
-// 0x00000684 System.Void FunkyCode.LightTilemapRoom2D::Initialize()
+// 0x0000068C System.Void FunkyCode.LightTilemapRoom2D::Initialize()
 extern void LightTilemapRoom2D_Initialize_m10692FF350F1F2B5C1B18F87F14676CF257BEAAE (void);
-// 0x00000685 System.Void FunkyCode.LightTilemapRoom2D::Update()
+// 0x0000068D System.Void FunkyCode.LightTilemapRoom2D::Update()
 extern void LightTilemapRoom2D_Update_m08761BDB5AF57B4350287E35BCB8199909563B7B (void);
-// 0x00000686 FunkyCode.TilemapProperties FunkyCode.LightTilemapRoom2D::GetTilemapProperties()
+// 0x0000068E FunkyCode.TilemapProperties FunkyCode.LightTilemapRoom2D::GetTilemapProperties()
 extern void LightTilemapRoom2D_GetTilemapProperties_mAC66A7024C874261D7171EE28520BC8D1D55406B (void);
-// 0x00000687 System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.LightTilemapRoom2D::GetTileList()
+// 0x0000068F System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.LightTilemapRoom2D::GetTileList()
 extern void LightTilemapRoom2D_GetTileList_m8305222B75F8ED93A7E348B34E689AFD5FED04F0 (void);
-// 0x00000688 System.Single FunkyCode.LightTilemapRoom2D::GetRadius()
+// 0x00000690 System.Single FunkyCode.LightTilemapRoom2D::GetRadius()
 extern void LightTilemapRoom2D_GetRadius_m600E39827BBD01E61F7E5F2F82048BDDF61017AB (void);
-// 0x00000689 System.Void FunkyCode.LightTilemapRoom2D::OnDrawGizmosSelected()
+// 0x00000691 System.Void FunkyCode.LightTilemapRoom2D::OnDrawGizmosSelected()
 extern void LightTilemapRoom2D_OnDrawGizmosSelected_m04CB3C6920647B2A0CC2E88537FDB4FCE15FD3CC (void);
-// 0x0000068A System.Void FunkyCode.LightTilemapRoom2D::OnDrawGizmos()
+// 0x00000692 System.Void FunkyCode.LightTilemapRoom2D::OnDrawGizmos()
 extern void LightTilemapRoom2D_OnDrawGizmos_m16147DEFCD1B9EE4EC3AC2022D2DDD7F5AD7C817 (void);
-// 0x0000068B System.Void FunkyCode.LightTilemapRoom2D::DrawGizmos()
+// 0x00000693 System.Void FunkyCode.LightTilemapRoom2D::DrawGizmos()
 extern void LightTilemapRoom2D_DrawGizmos_mCD50737157CCB337BDFA71070BEC1BDBE10C2F49 (void);
-// 0x0000068C System.Void FunkyCode.LightTilemapRoom2D::.ctor()
+// 0x00000694 System.Void FunkyCode.LightTilemapRoom2D::.ctor()
 extern void LightTilemapRoom2D__ctor_m0D7C0DBE5CEC7920185CA11DA2281CC16E26E717 (void);
-// 0x0000068D System.Void FunkyCode.LightTilemapRoom2D::.cctor()
+// 0x00000695 System.Void FunkyCode.LightTilemapRoom2D::.cctor()
 extern void LightTilemapRoom2D__cctor_m581BC23F124DCA7802118D3C73A4B6C96ABD9002 (void);
-// 0x0000068E UnityEngine.Camera FunkyCode.LightingManager2D::GetCamera(System.Int32)
+// 0x00000696 UnityEngine.Camera FunkyCode.LightingManager2D::GetCamera(System.Int32)
 extern void LightingManager2D_GetCamera_m531CF8DAC407ACF13276A664619B68B3933DDDD8 (void);
-// 0x0000068F System.Void FunkyCode.LightingManager2D::ForceUpdate()
+// 0x00000697 System.Void FunkyCode.LightingManager2D::ForceUpdate()
 extern void LightingManager2D_ForceUpdate_m89755E0BD433C1FA42859F28039EC8D9D2C0F5EB (void);
-// 0x00000690 FunkyCode.LightingManager2D FunkyCode.LightingManager2D::Get()
+// 0x00000698 FunkyCode.LightingManager2D FunkyCode.LightingManager2D::Get()
 extern void LightingManager2D_Get_m5E93F8C8ECD938788EABAA95999E6346AA1D4D1E (void);
-// 0x00000691 System.Void FunkyCode.LightingManager2D::Awake()
+// 0x00000699 System.Void FunkyCode.LightingManager2D::Awake()
 extern void LightingManager2D_Awake_m9BBDAA3DBA204BB513CC9DC37C1E8E940728288A (void);
-// 0x00000692 System.Void FunkyCode.LightingManager2D::Update()
+// 0x0000069A System.Void FunkyCode.LightingManager2D::Update()
 extern void LightingManager2D_Update_mDD8B3BF72756CDBC566C344C4E0CBE5C12A0F208 (void);
-// 0x00000693 System.Void FunkyCode.LightingManager2D::FixTransform()
+// 0x0000069B System.Void FunkyCode.LightingManager2D::FixTransform()
 extern void LightingManager2D_FixTransform_m3DC53DED697117A3A9963E824F0F4347100F47D6 (void);
-// 0x00000694 System.Void FunkyCode.LightingManager2D::LateUpdate()
+// 0x0000069C System.Void FunkyCode.LightingManager2D::LateUpdate()
 extern void LightingManager2D_LateUpdate_mA22ED9ACF4A3E4AC30C8E43F675D56CE72A2C014 (void);
-// 0x00000695 System.Void FunkyCode.LightingManager2D::SetupProfile()
+// 0x0000069D System.Void FunkyCode.LightingManager2D::SetupProfile()
 extern void LightingManager2D_SetupProfile_m6E158890EB26427E2EF3EFBD37E3496B4F56BB4F (void);
-// 0x00000696 System.Void FunkyCode.LightingManager2D::UpdateInternal()
+// 0x0000069E System.Void FunkyCode.LightingManager2D::UpdateInternal()
 extern void LightingManager2D_UpdateInternal_m9AA53C9C56E16A53B5A2B1AC1032CB36F861BA95 (void);
-// 0x00000697 System.Void FunkyCode.LightingManager2D::OnDestroy()
+// 0x0000069F System.Void FunkyCode.LightingManager2D::OnDestroy()
 extern void LightingManager2D_OnDestroy_m6F40508249B3D289D5DBE761B34619DD179EFDBF (void);
-// 0x00000698 System.Void FunkyCode.LightingManager2D::OnDisable()
+// 0x000006A0 System.Void FunkyCode.LightingManager2D::OnDisable()
 extern void LightingManager2D_OnDisable_mE5AA37C421A8721E363B5FD356E1BF9B17958343 (void);
-// 0x00000699 System.Void FunkyCode.LightingManager2D::UpdateProfile()
+// 0x000006A1 System.Void FunkyCode.LightingManager2D::UpdateProfile()
 extern void LightingManager2D_UpdateProfile_m2347CE18B9898A28F480F364A8FD6F7F8E7B97CB (void);
-// 0x0000069A System.Void FunkyCode.LightingManager2D::OnEnable()
+// 0x000006A2 System.Void FunkyCode.LightingManager2D::OnEnable()
 extern void LightingManager2D_OnEnable_m798534FEC6FF61F7C4DBC5B0D2331E04394FFA86 (void);
-// 0x0000069B System.Void FunkyCode.LightingManager2D::OnRenderObject()
+// 0x000006A3 System.Void FunkyCode.LightingManager2D::OnRenderObject()
 extern void LightingManager2D_OnRenderObject_mEA3AD39F7C2E42B9546AB1A31767727A662BA0D9 (void);
-// 0x0000069C System.Void FunkyCode.LightingManager2D::OnDrawGizmos()
+// 0x000006A4 System.Void FunkyCode.LightingManager2D::OnDrawGizmos()
 extern void LightingManager2D_OnDrawGizmos_m136D3F5CF859B671EC35509E04588D9C6021DEBC (void);
-// 0x0000069D System.Void FunkyCode.LightingManager2D::DrawGizmos()
+// 0x000006A5 System.Void FunkyCode.LightingManager2D::DrawGizmos()
 extern void LightingManager2D_DrawGizmos_m39E466DE3666B06FA32195831DE4D674066E77B5 (void);
-// 0x0000069E System.Void FunkyCode.LightingManager2D::.ctor()
+// 0x000006A6 System.Void FunkyCode.LightingManager2D::.ctor()
 extern void LightingManager2D__ctor_mEBD6263901DC23B34FBB2159A3ECADCC3FF7D4F9 (void);
-// 0x0000069F System.Collections.Generic.List`1<FunkyCode.LightingMeshRenderer> FunkyCode.LightingMeshRenderer::get_List()
+// 0x000006A7 System.Collections.Generic.List`1<FunkyCode.LightingMeshRenderer> FunkyCode.LightingMeshRenderer::get_List()
 extern void LightingMeshRenderer_get_List_mA8652F3D64713CC195C1097B4B79FE4F81F8323E (void);
-// 0x000006A0 System.Boolean FunkyCode.LightingMeshRenderer::get_Free()
+// 0x000006A8 System.Boolean FunkyCode.LightingMeshRenderer::get_Free()
 extern void LightingMeshRenderer_get_Free_m396BEEDCA0CB81C88CF1C09417C14A6029CF8A26 (void);
-// 0x000006A1 UnityEngine.Material[] FunkyCode.LightingMeshRenderer::GetMaterials()
+// 0x000006A9 UnityEngine.Material[] FunkyCode.LightingMeshRenderer::GetMaterials()
 extern void LightingMeshRenderer_GetMaterials_m6FE331DB280495E652B36489D1CDC11FFE8AC448 (void);
-// 0x000006A2 System.Int32 FunkyCode.LightingMeshRenderer::GetCount()
+// 0x000006AA System.Int32 FunkyCode.LightingMeshRenderer::GetCount()
 extern void LightingMeshRenderer_GetCount_m5B86FA33F577DD8834F3AAC64CE247941029AB96 (void);
-// 0x000006A3 System.Void FunkyCode.LightingMeshRenderer::OnEnable()
+// 0x000006AB System.Void FunkyCode.LightingMeshRenderer::OnEnable()
 extern void LightingMeshRenderer_OnEnable_m0ACE3E4CE21E0E1DC9355B4DC3CA92F5B41C8F09 (void);
-// 0x000006A4 System.Void FunkyCode.LightingMeshRenderer::OnDisable()
+// 0x000006AC System.Void FunkyCode.LightingMeshRenderer::OnDisable()
 extern void LightingMeshRenderer_OnDisable_m8DA4CFAA2C4349BFBEA8D674438678DDF45B1BC2 (void);
-// 0x000006A5 System.Void FunkyCode.LightingMeshRenderer::Initialize()
+// 0x000006AD System.Void FunkyCode.LightingMeshRenderer::Initialize()
 extern void LightingMeshRenderer_Initialize_m3BB85A4DE2280DA901B68E29A1D8DA4FA8A5E661 (void);
-// 0x000006A6 System.Void FunkyCode.LightingMeshRenderer::Reset()
+// 0x000006AE System.Void FunkyCode.LightingMeshRenderer::Reset()
 extern void LightingMeshRenderer_Reset_m22813A0E7F27A4B0069881DC3B1905ED35B2D1F6 (void);
-// 0x000006A7 System.Void FunkyCode.LightingMeshRenderer::LateUpdate()
+// 0x000006AF System.Void FunkyCode.LightingMeshRenderer::LateUpdate()
 extern void LightingMeshRenderer_LateUpdate_mF34D87039ADE31AA099E1CE42B91B4006BD78C56 (void);
-// 0x000006A8 System.Boolean FunkyCode.LightingMeshRenderer::IsRendered()
+// 0x000006B0 System.Boolean FunkyCode.LightingMeshRenderer::IsRendered()
 extern void LightingMeshRenderer_IsRendered_mBE5E5120316B7A8B76FFE348B70D46E3178BB174 (void);
-// 0x000006A9 System.Void FunkyCode.LightingMeshRenderer::ClearMaterial()
+// 0x000006B1 System.Void FunkyCode.LightingMeshRenderer::ClearMaterial()
 extern void LightingMeshRenderer_ClearMaterial_mB733083CB711428BAD92EDA15A6E338D05BE7BC6 (void);
-// 0x000006AA System.Void FunkyCode.LightingMeshRenderer::UpdateLight(FunkyCode.Light2D,FunkyCode.LightingSettings.MeshMode)
+// 0x000006B2 System.Void FunkyCode.LightingMeshRenderer::UpdateLight(FunkyCode.Light2D,FunkyCode.LightingSettings.MeshMode)
 extern void LightingMeshRenderer_UpdateLight_mFEC4CEB14C8D5EA8D3DCD4C7B4433036A2317CAB (void);
-// 0x000006AB System.Void FunkyCode.LightingMeshRenderer::UpdateLightSprite(FunkyCode.LightSprite2D,FunkyCode.LightingSettings.MeshMode)
+// 0x000006B3 System.Void FunkyCode.LightingMeshRenderer::UpdateLightSprite(FunkyCode.LightSprite2D,FunkyCode.LightingSettings.MeshMode)
 extern void LightingMeshRenderer_UpdateLightSprite_m62C78D81B656B8E7BEA15054FF3C1118178B075D (void);
-// 0x000006AC UnityEngine.Mesh FunkyCode.LightingMeshRenderer::GetMeshSprite()
+// 0x000006B4 UnityEngine.Mesh FunkyCode.LightingMeshRenderer::GetMeshSprite()
 extern void LightingMeshRenderer_GetMeshSprite_m436197D9B79CA5657B909DF920176A9A48FBFA11 (void);
-// 0x000006AD UnityEngine.Mesh FunkyCode.LightingMeshRenderer::GetMeshLight()
+// 0x000006B5 UnityEngine.Mesh FunkyCode.LightingMeshRenderer::GetMeshLight()
 extern void LightingMeshRenderer_GetMeshLight_mFAB1EDD1B133C5236A879327EB4213B0C0F2053D (void);
-// 0x000006AE System.Void FunkyCode.LightingMeshRenderer::.ctor()
+// 0x000006B6 System.Void FunkyCode.LightingMeshRenderer::.ctor()
 extern void LightingMeshRenderer__ctor_m76BC152620C26BA94BB9352806534084F9316182 (void);
-// 0x000006AF System.Void FunkyCode.LightingMeshRenderer::.cctor()
+// 0x000006B7 System.Void FunkyCode.LightingMeshRenderer::.cctor()
 extern void LightingMeshRenderer__cctor_m730F80F8D963EC052D232E5BBBFFAF36C463F3EA (void);
-// 0x000006B0 System.Void FunkyCode.OnRenderMode::OnEnable()
+// 0x000006B8 System.Void FunkyCode.OnRenderMode::OnEnable()
 extern void OnRenderMode_OnEnable_mFA14357F37D25CCFCDB210C357D653452A572CB6 (void);
-// 0x000006B1 System.Void FunkyCode.OnRenderMode::OnDisable()
+// 0x000006B9 System.Void FunkyCode.OnRenderMode::OnDisable()
 extern void OnRenderMode_OnDisable_m57CE4308F43E911993F2718F82B22586547DBF94 (void);
-// 0x000006B2 FunkyCode.OnRenderMode FunkyCode.OnRenderMode::Get(FunkyCode.LightMainBuffer2D)
+// 0x000006BA FunkyCode.OnRenderMode FunkyCode.OnRenderMode::Get(FunkyCode.LightMainBuffer2D)
 extern void OnRenderMode_Get_m41C81EAFC06679C97834B21D7514F1F3619A639C (void);
-// 0x000006B3 System.Void FunkyCode.OnRenderMode::Initialize(FunkyCode.LightMainBuffer2D)
+// 0x000006BB System.Void FunkyCode.OnRenderMode::Initialize(FunkyCode.LightMainBuffer2D)
 extern void OnRenderMode_Initialize_mCD49D990A03820275AEBA778561244F2366F78A3 (void);
-// 0x000006B4 System.Void FunkyCode.OnRenderMode::Update()
+// 0x000006BC System.Void FunkyCode.OnRenderMode::Update()
 extern void OnRenderMode_Update_mD50708D403FE1D9C0ABBB9D480238BC336CA93F5 (void);
-// 0x000006B5 System.Void FunkyCode.OnRenderMode::UpdateLoop()
+// 0x000006BD System.Void FunkyCode.OnRenderMode::UpdateLoop()
 extern void OnRenderMode_UpdateLoop_m1ED5DECD66D94F44440C331310C58A0FAF1F25B4 (void);
-// 0x000006B6 System.Void FunkyCode.OnRenderMode::UpdateLayer()
+// 0x000006BE System.Void FunkyCode.OnRenderMode::UpdateLayer()
 extern void OnRenderMode_UpdateLayer_mEACE3498E17039E8FA90D72CEBD04495F7700427 (void);
-// 0x000006B7 System.Void FunkyCode.OnRenderMode::UpdatePosition()
+// 0x000006BF System.Void FunkyCode.OnRenderMode::UpdatePosition()
 extern void OnRenderMode_UpdatePosition_m07ECDA7F8EA740B01AF401E69B2F6AF7ECAAB12B (void);
-// 0x000006B8 System.Void FunkyCode.OnRenderMode::.ctor()
+// 0x000006C0 System.Void FunkyCode.OnRenderMode::.ctor()
 extern void OnRenderMode__ctor_m55FD942E9395FBC4417323B8840119AABD5DF457 (void);
-// 0x000006B9 System.Void FunkyCode.OnRenderMode::.cctor()
+// 0x000006C1 System.Void FunkyCode.OnRenderMode::.cctor()
 extern void OnRenderMode__cctor_m6D4F0891DD62EDEF03C7AE21C68430A77579860B (void);
-// 0x000006BA UnityEngine.GameObject FunkyCode.LightOcclusion2D::GetOcclusionGameObject()
+// 0x000006C2 UnityEngine.GameObject FunkyCode.LightOcclusion2D::GetOcclusionGameObject()
 extern void LightOcclusion2D_GetOcclusionGameObject_m1BDCC1DCD9245CFA221DEA419FFD4C9A9E73CDE9 (void);
-// 0x000006BB UnityEngine.MeshFilter FunkyCode.LightOcclusion2D::GetMeshFilter()
+// 0x000006C3 UnityEngine.MeshFilter FunkyCode.LightOcclusion2D::GetMeshFilter()
 extern void LightOcclusion2D_GetMeshFilter_m010F7325340A15F7DF077E646ACF3D83BC842844 (void);
-// 0x000006BC UnityEngine.MeshRenderer FunkyCode.LightOcclusion2D::GetMeshRenderer()
+// 0x000006C4 UnityEngine.MeshRenderer FunkyCode.LightOcclusion2D::GetMeshRenderer()
 extern void LightOcclusion2D_GetMeshRenderer_mD5D159D832504610406A2FE074AB9F717A3C8303 (void);
-// 0x000006BD FunkyCode.LightingOcclussion FunkyCode.LightOcclusion2D::GetOcclusionShape()
+// 0x000006C5 FunkyCode.LightingOcclussion FunkyCode.LightOcclusion2D::GetOcclusionShape()
 extern void LightOcclusion2D_GetOcclusionShape_m7DDD2E15273981960348652A1A4DDED078451357 (void);
-// 0x000006BE System.Void FunkyCode.LightOcclusion2D::OnEnable()
+// 0x000006C6 System.Void FunkyCode.LightOcclusion2D::OnEnable()
 extern void LightOcclusion2D_OnEnable_m065BA12FDE19B43304494CAF79B840AC3095E8F0 (void);
-// 0x000006BF System.Void FunkyCode.LightOcclusion2D::Initialize()
+// 0x000006C7 System.Void FunkyCode.LightOcclusion2D::Initialize()
 extern void LightOcclusion2D_Initialize_m80E10F6B792A3B4F4B5C274DCB76C4FCBF3D3021 (void);
-// 0x000006C0 System.Void FunkyCode.LightOcclusion2D::Update()
+// 0x000006C8 System.Void FunkyCode.LightOcclusion2D::Update()
 extern void LightOcclusion2D_Update_mA94C645EA0DAE22A9F88B48757432217A1137AC2 (void);
-// 0x000006C1 System.Void FunkyCode.LightOcclusion2D::GenerateMesh_Hard()
+// 0x000006C9 System.Void FunkyCode.LightOcclusion2D::GenerateMesh_Hard()
 extern void LightOcclusion2D_GenerateMesh_Hard_mB8566332DE890980682D9B9C14D3C79A31A75DDE (void);
-// 0x000006C2 System.Void FunkyCode.LightOcclusion2D::GenerateMesh_Soft()
+// 0x000006CA System.Void FunkyCode.LightOcclusion2D::GenerateMesh_Soft()
 extern void LightOcclusion2D_GenerateMesh_Soft_m178CD28F808A2CCCF9F8AD65C22CF3F4F606B47B (void);
-// 0x000006C3 System.Void FunkyCode.LightOcclusion2D::.ctor()
+// 0x000006CB System.Void FunkyCode.LightOcclusion2D::.ctor()
 extern void LightOcclusion2D__ctor_m24093E541D75786684985792F1FFC4FB04802747 (void);
-// 0x000006C4 System.Void FunkyCode.LightTilemapOcclusion2D::OnEnable()
+// 0x000006CC System.Void FunkyCode.LightTilemapOcclusion2D::OnEnable()
 extern void LightTilemapOcclusion2D_OnEnable_m813A75C4F74B00574F583C50B9B5B827DD5BED24 (void);
-// 0x000006C5 System.Void FunkyCode.LightTilemapOcclusion2D::Initialize()
+// 0x000006CD System.Void FunkyCode.LightTilemapOcclusion2D::Initialize()
 extern void LightTilemapOcclusion2D_Initialize_m5B485F8DC8D6D7A5DD96A5FBEEC0BEBE24A2B8BF (void);
-// 0x000006C6 System.Void FunkyCode.LightTilemapOcclusion2D::Update()
+// 0x000006CE System.Void FunkyCode.LightTilemapOcclusion2D::Update()
 extern void LightTilemapOcclusion2D_Update_mE2B6FC930212ECFED7698FAAA41273B297B2B9BC (void);
-// 0x000006C7 System.Void FunkyCode.LightTilemapOcclusion2D::SetupMap()
+// 0x000006CF System.Void FunkyCode.LightTilemapOcclusion2D::SetupMap()
 extern void LightTilemapOcclusion2D_SetupMap_m45C6A7D8A4CD5EFDC3A3DD88530817794AA55D61 (void);
-// 0x000006C8 System.Void FunkyCode.LightTilemapOcclusion2D::GenerateMesh()
+// 0x000006D0 System.Void FunkyCode.LightTilemapOcclusion2D::GenerateMesh()
 extern void LightTilemapOcclusion2D_GenerateMesh_m56C39151B3AD682B3A0291F38F010CBBAF8F9CE6 (void);
-// 0x000006C9 System.Void FunkyCode.LightTilemapOcclusion2D::AddTile(System.Int32,UnityEngine.Vector2Int,FunkyCode.OcclusionTileset/TileRotation,System.Boolean,System.Boolean)
+// 0x000006D1 System.Void FunkyCode.LightTilemapOcclusion2D::AddTile(System.Int32,UnityEngine.Vector2Int,FunkyCode.OcclusionTileset/TileRotation,System.Boolean,System.Boolean)
 extern void LightTilemapOcclusion2D_AddTile_mB4F6361DC7965BCC24448C11DBB56CDF9259D8D0 (void);
-// 0x000006CA System.Void FunkyCode.LightTilemapOcclusion2D::ExportMesh()
+// 0x000006D2 System.Void FunkyCode.LightTilemapOcclusion2D::ExportMesh()
 extern void LightTilemapOcclusion2D_ExportMesh_m4C643508EBAB43E247EAE292464F8E7031865896 (void);
-// 0x000006CB UnityEngine.GameObject FunkyCode.LightTilemapOcclusion2D::GetChild()
+// 0x000006D3 UnityEngine.GameObject FunkyCode.LightTilemapOcclusion2D::GetChild()
 extern void LightTilemapOcclusion2D_GetChild_mF098CAE74EED6E30D951A12A044698F7AAE9203F (void);
-// 0x000006CC System.Void FunkyCode.LightTilemapOcclusion2D::.ctor()
+// 0x000006D4 System.Void FunkyCode.LightTilemapOcclusion2D::.ctor()
 extern void LightTilemapOcclusion2D__ctor_mEB112E1E5B1CDA4A75ED5BDA1470A1C391FBC9A4 (void);
-// 0x000006CD System.Int32 FunkyCode.LightTilemapOcclusion2D/RectangleMap::GetUnwalkableInt(System.Int32,System.Int32)
+// 0x000006D5 System.Int32 FunkyCode.LightTilemapOcclusion2D/RectangleMap::GetUnwalkableInt(System.Int32,System.Int32)
 extern void RectangleMap_GetUnwalkableInt_m650B138A737B90934F1CB990FD097113DAB0E7BC (void);
-// 0x000006CE System.Void FunkyCode.LightTilemapOcclusion2D/RectangleMap::Init()
+// 0x000006D6 System.Void FunkyCode.LightTilemapOcclusion2D/RectangleMap::Init()
 extern void RectangleMap_Init_mCE37A189A4BA36C4D24EBA10A31E31B1F7B6BA1A (void);
-// 0x000006CF System.Void FunkyCode.LightTilemapOcclusion2D/RectangleMap::.ctor()
+// 0x000006D7 System.Void FunkyCode.LightTilemapOcclusion2D/RectangleMap::.ctor()
 extern void RectangleMap__ctor_m4C952022E3C53EEAA507F163FB63ACAAC7458581 (void);
-// 0x000006D0 System.Void FunkyCode.LightTilemapOcclusion2D/RectangleTile::.ctor()
+// 0x000006D8 System.Void FunkyCode.LightTilemapOcclusion2D/RectangleTile::.ctor()
 extern void RectangleTile__ctor_m9E182AE71D8CA66E61FBB436CAEB79D04B5664F6 (void);
-// 0x000006D1 System.Void FunkyCode.CameraLightmap::.ctor(System.Int32)
+// 0x000006D9 System.Void FunkyCode.CameraLightmap::.ctor(System.Int32)
 extern void CameraLightmap__ctor_m7D558175B2A08AE350C8BA5FED97DD3CD8550463 (void);
-// 0x000006D2 FunkyCode.LightmapMaterials FunkyCode.CameraLightmap::GetMaterials()
+// 0x000006DA FunkyCode.LightmapMaterials FunkyCode.CameraLightmap::GetMaterials()
 extern void CameraLightmap_GetMaterials_m8659077084A7E9AF901A288293E2D02DE84074EB (void);
-// 0x000006D3 UnityEngine.Material FunkyCode.CameraLightmap::GetMaterial()
+// 0x000006DB UnityEngine.Material FunkyCode.CameraLightmap::GetMaterial()
 extern void CameraLightmap_GetMaterial_m08180DBF1EB8DDF796294E473A92AB47FDF0041A (void);
-// 0x000006D4 FunkyCode.CameraLightmap[] FunkyCode.CameraSettings::get_Lightmaps()
+// 0x000006DC FunkyCode.CameraLightmap[] FunkyCode.CameraSettings::get_Lightmaps()
 extern void CameraSettings_get_Lightmaps_m1BACDAA4A71F003E9811571D06892E8DD2F0A8B0 (void);
-// 0x000006D5 System.Void FunkyCode.CameraSettings::set_Lightmaps(FunkyCode.CameraLightmap[])
+// 0x000006DD System.Void FunkyCode.CameraSettings::set_Lightmaps(FunkyCode.CameraLightmap[])
 extern void CameraSettings_set_Lightmaps_m3383BEA9CE956B256749F4570CC43B6A38FEED07 (void);
-// 0x000006D6 FunkyCode.CameraLightmap FunkyCode.CameraSettings::GetLightmap(System.Int32)
+// 0x000006DE FunkyCode.CameraLightmap FunkyCode.CameraSettings::GetLightmap(System.Int32)
 extern void CameraSettings_GetLightmap_m7A0B37F12FB35B36ECE7532E678488A8CD19EB2E (void);
-// 0x000006D7 System.String FunkyCode.CameraSettings::GetTypeName()
+// 0x000006DF System.String FunkyCode.CameraSettings::GetTypeName()
 extern void CameraSettings_GetTypeName_m484B59622140205D64BD7E5F9BEC693C3BA91448 (void);
-// 0x000006D8 System.Int32 FunkyCode.CameraSettings::GetLayerId(System.Int32)
+// 0x000006E0 System.Int32 FunkyCode.CameraSettings::GetLayerId(System.Int32)
 extern void CameraSettings_GetLayerId_m8E9C95825A3D1590B780313DB7E57890E2DDF898 (void);
-// 0x000006D9 System.Void FunkyCode.CameraSettings::.ctor(System.Int32)
+// 0x000006E1 System.Void FunkyCode.CameraSettings::.ctor(System.Int32)
 extern void CameraSettings__ctor_mB19AB0973210E507A8758E1EEF6DEE28471AA9D7 (void);
-// 0x000006DA UnityEngine.Camera FunkyCode.CameraSettings::GetCamera()
+// 0x000006E2 UnityEngine.Camera FunkyCode.CameraSettings::GetCamera()
 extern void CameraSettings_GetCamera_m1B3591067ACC5A102EC00A6B7154FB62B322EAEC (void);
-// 0x000006DB System.Int32 FunkyCode.CameraSettings::GetHashCode()
+// 0x000006E3 System.Int32 FunkyCode.CameraSettings::GetHashCode()
 extern void CameraSettings_GetHashCode_m7EE817CCCDBA4FDC45C5C2A4DBCDA85E9EF2877F (void);
-// 0x000006DC System.Int32 FunkyCode.LightingCameras::get_Length()
+// 0x000006E4 System.Int32 FunkyCode.LightingCameras::get_Length()
 extern void LightingCameras_get_Length_m3EC10F5E7506C2CDADA70A145C22FCC075B40166 (void);
-// 0x000006DD System.Void FunkyCode.LightingCameras::.ctor()
+// 0x000006E5 System.Void FunkyCode.LightingCameras::.ctor()
 extern void LightingCameras__ctor_mD4A25B69F9BE8C7B3E885F33FD361E266F32636F (void);
-// 0x000006DE FunkyCode.CameraSettings FunkyCode.LightingCameras::Get(System.Int32)
+// 0x000006E6 FunkyCode.CameraSettings FunkyCode.LightingCameras::Get(System.Int32)
 extern void LightingCameras_Get_m07F09F396DA137052824B9FF020C427EF4D57B72 (void);
-// 0x000006DF System.Void FunkyCode.LightingCameras::Set(System.Int32,FunkyCode.CameraSettings)
+// 0x000006E7 System.Void FunkyCode.LightingCameras::Set(System.Int32,FunkyCode.CameraSettings)
 extern void LightingCameras_Set_m7B6F6535EA1CCE032C0078E16CD97276C56CF381 (void);
-// 0x000006E0 System.Void FunkyCode.LightmapMaterials::ClearMaterial(UnityEngine.Material)
+// 0x000006E8 System.Void FunkyCode.LightmapMaterials::ClearMaterial(UnityEngine.Material)
 extern void LightmapMaterials_ClearMaterial_m077C267FF71B205D41A054EEFB06D80EE349D7C3 (void);
-// 0x000006E1 System.Void FunkyCode.LightmapMaterials::SetMaterial(System.Int32,FunkyCode.MaterialPass)
+// 0x000006E9 System.Void FunkyCode.LightmapMaterials::SetMaterial(System.Int32,FunkyCode.MaterialPass)
 extern void LightmapMaterials_SetMaterial_m2388BCF9CADD7B81B8F4D7430A3C098E074320EA (void);
-// 0x000006E2 System.Void FunkyCode.LightmapMaterials::SetDayLight()
+// 0x000006EA System.Void FunkyCode.LightmapMaterials::SetDayLight()
 extern void LightmapMaterials_SetDayLight_m1F1EFA0548223206225CB8A0C4C2D82150A08DDC (void);
-// 0x000006E3 System.Void FunkyCode.LightmapMaterials::Add(UnityEngine.Material)
+// 0x000006EB System.Void FunkyCode.LightmapMaterials::Add(UnityEngine.Material)
 extern void LightmapMaterials_Add_m9079E78E6C9E6CCB0D08C1AB23371913175DC5B4 (void);
-// 0x000006E4 System.Void FunkyCode.LightmapMaterials::Remove(UnityEngine.Material)
+// 0x000006EC System.Void FunkyCode.LightmapMaterials::Remove(UnityEngine.Material)
 extern void LightmapMaterials_Remove_m054A9C1AE1E1935FB09B220C4876724A5F501A61 (void);
-// 0x000006E5 System.Void FunkyCode.LightmapMaterials::.ctor()
+// 0x000006ED System.Void FunkyCode.LightmapMaterials::.ctor()
 extern void LightmapMaterials__ctor_mB8A549D3B8A11867FEBD648B4B4AED6B78CAA2B6 (void);
-// 0x000006E6 UnityEngine.Texture FunkyCode.LightmapShaders::GetPreviewTexture()
+// 0x000006EE UnityEngine.Texture FunkyCode.LightmapShaders::GetPreviewTexture()
 extern void LightmapShaders_GetPreviewTexture_m97FBAC09442B6D22F5FE810F123A27704DEAE6F6 (void);
-// 0x000006E7 System.Void FunkyCode.LightmapShaders::ResetShaders()
+// 0x000006EF System.Void FunkyCode.LightmapShaders::ResetShaders()
 extern void LightmapShaders_ResetShaders_mF5F88B569693474FDFA8BF571CF09F1C02D33ACB (void);
-// 0x000006E8 System.Void FunkyCode.LightmapShaders::SetShaders(System.Boolean,System.Int32,UnityEngine.Camera,FunkyCode.LightTexture,FunkyCode.LightingSettings.LightmapPreset)
+// 0x000006F0 System.Void FunkyCode.LightmapShaders::SetShaders(System.Boolean,System.Int32,UnityEngine.Camera,FunkyCode.LightTexture,FunkyCode.LightingSettings.LightmapPreset)
 extern void LightmapShaders_SetShaders_mF7A993B042B1AD8591BA01955B6EFA4E3688BD73 (void);
-// 0x000006E9 System.Void FunkyCode.LightmapShaders::SetDayLight()
+// 0x000006F1 System.Void FunkyCode.LightmapShaders::SetDayLight()
 extern void LightmapShaders_SetDayLight_m7ADAC7BFFF85DDBC76F5CD1D8C90424C5237042D (void);
-// 0x000006EA System.Void FunkyCode.LightmapShaders::.cctor()
+// 0x000006F2 System.Void FunkyCode.LightmapShaders::.cctor()
 extern void LightmapShaders__cctor_m75B13BA8C447F25DEBC0B727B5FC5BF159AB6403 (void);
-// 0x000006EB UnityEngine.Camera FunkyCode.CameraTransform::get_Camera()
+// 0x000006F3 UnityEngine.Camera FunkyCode.CameraTransform::get_Camera()
 extern void CameraTransform_get_Camera_m7759DBA875F970F74FEF5957EE44E3D0E0A40AD5 (void);
-// 0x000006EC System.Void FunkyCode.CameraTransform::Update()
+// 0x000006F4 System.Void FunkyCode.CameraTransform::Update()
 extern void CameraTransform_Update_mC39C7772B64BBD644D7DD581B3DE395564DBC9C8 (void);
-// 0x000006ED System.Single FunkyCode.CameraTransform::GetRadius(UnityEngine.Camera)
+// 0x000006F5 System.Single FunkyCode.CameraTransform::GetRadius(UnityEngine.Camera)
 extern void CameraTransform_GetRadius_m991E6DA4B0DB50EA4A11ED262ABC3A6E06D045EA (void);
-// 0x000006EE UnityEngine.Rect FunkyCode.CameraTransform::GetWorldRect(UnityEngine.Camera)
+// 0x000006F6 UnityEngine.Rect FunkyCode.CameraTransform::GetWorldRect(UnityEngine.Camera)
 extern void CameraTransform_GetWorldRect_mC65B54948BB9D987E2D6DF2CD71C8C742C7EAFE5 (void);
-// 0x000006EF FunkyCode.CameraTransform FunkyCode.CameraTransform::GetCamera(UnityEngine.Camera)
+// 0x000006F7 FunkyCode.CameraTransform FunkyCode.CameraTransform::GetCamera(UnityEngine.Camera)
 extern void CameraTransform_GetCamera_mBA357C71D4E4A0CF19CD7E2F8006E353C7E9FAC8 (void);
-// 0x000006F0 System.Void FunkyCode.CameraTransform::Update(System.Boolean)
+// 0x000006F8 System.Void FunkyCode.CameraTransform::Update(System.Boolean)
 extern void CameraTransform_Update_m62AC112AD1E7952CB3AA59AF1592CC337535475D (void);
-// 0x000006F1 UnityEngine.Rect FunkyCode.CameraTransform::WorldRect()
+// 0x000006F9 UnityEngine.Rect FunkyCode.CameraTransform::WorldRect()
 extern void CameraTransform_WorldRect_m37BC62A74D1319995E5526DCE3D1F0DA3D26FC6C (void);
-// 0x000006F2 UnityEngine.Rect FunkyCode.CameraTransform::WorldRectGenerate()
+// 0x000006FA UnityEngine.Rect FunkyCode.CameraTransform::WorldRectGenerate()
 extern void CameraTransform_WorldRectGenerate_m30A7231913EBAE69C770B976EBD459AFD39913A3 (void);
-// 0x000006F3 FunkyCode.Utilities.Polygon2 FunkyCode.CameraTransform::Polygon()
+// 0x000006FB FunkyCode.Utilities.Polygon2 FunkyCode.CameraTransform::Polygon()
 extern void CameraTransform_Polygon_m4593B559247A0ADBB457D4DC523B5866332AE457 (void);
-// 0x000006F4 System.Void FunkyCode.CameraTransform::.ctor()
+// 0x000006FC System.Void FunkyCode.CameraTransform::.ctor()
 extern void CameraTransform__ctor_mE5259E21D007A876A92E8078EDA4DA98F2671ED4 (void);
-// 0x000006F5 System.Void FunkyCode.CameraTransform::.cctor()
+// 0x000006FD System.Void FunkyCode.CameraTransform::.cctor()
 extern void CameraTransform__cctor_m56074F743C4140AF88EAE100B1E0383CDFE4D329 (void);
-// 0x000006F6 System.Void FunkyCode.CameraTransform/<>c__DisplayClass15_0::.ctor()
+// 0x000006FE System.Void FunkyCode.CameraTransform/<>c__DisplayClass15_0::.ctor()
 extern void U3CU3Ec__DisplayClass15_0__ctor_m2655FC4C20FA47BD52BA33DBF2EBA98C716444A4 (void);
-// 0x000006F7 System.Boolean FunkyCode.CameraTransform/<>c__DisplayClass15_0::<GetCamera>b__0(FunkyCode.CameraTransform)
+// 0x000006FF System.Boolean FunkyCode.CameraTransform/<>c__DisplayClass15_0::<GetCamera>b__0(FunkyCode.CameraTransform)
 extern void U3CU3Ec__DisplayClass15_0_U3CGetCameraU3Eb__0_mC91F5A1257EC2A4F59D7C5CB16D333CD981E3AEA (void);
-// 0x000006F8 System.Void FunkyCode.DayLightColliderShape::SetTransform(UnityEngine.Transform)
+// 0x00000700 System.Void FunkyCode.DayLightColliderShape::SetTransform(UnityEngine.Transform)
 extern void DayLightColliderShape_SetTransform_m14D3AFA3D7CEF92FBA64B340923219805C4E2A21 (void);
-// 0x000006F9 System.Void FunkyCode.DayLightColliderShape::ResetLocal()
+// 0x00000701 System.Void FunkyCode.DayLightColliderShape::ResetLocal()
 extern void DayLightColliderShape_ResetLocal_m13E8F1BECCF6D3B90D6840BD5C3CDFABC2F7CF40 (void);
-// 0x000006FA System.Void FunkyCode.DayLightColliderShape::ResetWorld()
+// 0x00000702 System.Void FunkyCode.DayLightColliderShape::ResetWorld()
 extern void DayLightColliderShape_ResetWorld_m5EA9AA0E1471A37641D24C146A7079A9D47EFF97 (void);
-// 0x000006FB System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.DayLightColliderShape::GetMeshes()
+// 0x00000703 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.DayLightColliderShape::GetMeshes()
 extern void DayLightColliderShape_GetMeshes_m6DC81705DFCFDCEBF431851B47518041D2D48772 (void);
-// 0x000006FC System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.DayLightColliderShape::GetPolygonsLocal()
+// 0x00000704 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.DayLightColliderShape::GetPolygonsLocal()
 extern void DayLightColliderShape_GetPolygonsLocal_m70D64641A5ECA7CF836DBCAACC579D2C268C5C58 (void);
-// 0x000006FD System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.DayLightColliderShape::GetPolygonsWorld()
+// 0x00000705 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.DayLightColliderShape::GetPolygonsWorld()
 extern void DayLightColliderShape_GetPolygonsWorld_m99B127753891881C1D3741958768EBA8962DEE42 (void);
-// 0x000006FE UnityEngine.Rect FunkyCode.DayLightColliderShape::GetShadowBounds()
+// 0x00000706 UnityEngine.Rect FunkyCode.DayLightColliderShape::GetShadowBounds()
 extern void DayLightColliderShape_GetShadowBounds_m89962537391D2CDC449A013470CC8F05E581C9CE (void);
-// 0x000006FF System.Void FunkyCode.DayLightColliderShape::.ctor()
+// 0x00000707 System.Void FunkyCode.DayLightColliderShape::.ctor()
 extern void DayLightColliderShape__ctor_m4E02713FBC6D219BCC97D49EBE42500901E217FB (void);
-// 0x00000700 System.Void FunkyCode.DayLightingColliderTransform::Reset()
+// 0x00000708 System.Void FunkyCode.DayLightingColliderTransform::Reset()
 extern void DayLightingColliderTransform_Reset_m32E718834B9E0D39DB2DD21AC20A9C39F6B6AE7E (void);
-// 0x00000701 System.Void FunkyCode.DayLightingColliderTransform::SetShape(FunkyCode.DayLightColliderShape)
+// 0x00000709 System.Void FunkyCode.DayLightingColliderTransform::SetShape(FunkyCode.DayLightColliderShape)
 extern void DayLightingColliderTransform_SetShape_m332E2E5502D0237E178D8DF9D4AAF9A2231CCA9D (void);
-// 0x00000702 System.Void FunkyCode.DayLightingColliderTransform::Update()
+// 0x0000070A System.Void FunkyCode.DayLightingColliderTransform::Update()
 extern void DayLightingColliderTransform_Update_mF70357C551CA3386B2E927FE5396BDA31EC19A88 (void);
-// 0x00000703 System.Void FunkyCode.DayLightingColliderTransform::.ctor()
+// 0x0000070B System.Void FunkyCode.DayLightingColliderTransform::.ctor()
 extern void DayLightingColliderTransform__ctor_m581DD294B62171860B5CCAED4273AD4452E4DB88 (void);
-// 0x00000704 System.Void FunkyCode.DayLightTilemapColliderTransform::Update(FunkyCode.DayLightTilemapCollider2D)
+// 0x0000070C System.Void FunkyCode.DayLightTilemapColliderTransform::Update(FunkyCode.DayLightTilemapCollider2D)
 extern void DayLightTilemapColliderTransform_Update_m44D56059E7F891C409BA388D9FF039631B3B60A0 (void);
-// 0x00000705 System.Void FunkyCode.DayLightTilemapColliderTransform::.ctor()
+// 0x0000070D System.Void FunkyCode.DayLightTilemapColliderTransform::.ctor()
 extern void DayLightTilemapColliderTransform__ctor_m0BE349DAC47EDF81A91D3B2C7D8CA71D0471C06F (void);
-// 0x00000706 System.Void FunkyCode.FreeFormPoints::.ctor()
+// 0x0000070E System.Void FunkyCode.FreeFormPoints::.ctor()
 extern void FreeFormPoints__ctor_m007FF5C3F21653ED301D42FCFD7DD433C0C6B123 (void);
-// 0x00000707 System.Void FunkyCode.LightFreeForm::ForceUpdate()
+// 0x0000070F System.Void FunkyCode.LightFreeForm::ForceUpdate()
 extern void LightFreeForm_ForceUpdate_mB5B54C82695EE480B2481E8B3D7A81B695FF756B (void);
-// 0x00000708 System.Void FunkyCode.LightFreeForm::Update(FunkyCode.Light2D)
+// 0x00000710 System.Void FunkyCode.LightFreeForm::Update(FunkyCode.Light2D)
 extern void LightFreeForm_Update_mE7F4B19302DCABE5780080741F54F648BFC61257 (void);
-// 0x00000709 System.Void FunkyCode.LightFreeForm::.ctor()
+// 0x00000711 System.Void FunkyCode.LightFreeForm::.ctor()
 extern void LightFreeForm__ctor_m230048F27FC54D4BA6E981C4F69CE7ACF4C7AC42 (void);
-// 0x0000070A System.Boolean FunkyCode.LightTransform::get_UpdateNeeded()
+// 0x00000712 System.Boolean FunkyCode.LightTransform::get_UpdateNeeded()
 extern void LightTransform_get_UpdateNeeded_m650E48DB0FA4F624F1392E1465241083CA7DC5E6 (void);
-// 0x0000070B System.Void FunkyCode.LightTransform::ForceUpdate()
+// 0x00000713 System.Void FunkyCode.LightTransform::ForceUpdate()
 extern void LightTransform_ForceUpdate_m6075177C3D02BB3B74F00447EA241B54F1BE29FB (void);
-// 0x0000070C System.Void FunkyCode.LightTransform::ClearUpdate()
+// 0x00000714 System.Void FunkyCode.LightTransform::ClearUpdate()
 extern void LightTransform_ClearUpdate_mC04AFC3D0C9A5D1F288817BF2945E671822B3B9A (void);
-// 0x0000070D System.Void FunkyCode.LightTransform::Update(FunkyCode.Light2D)
+// 0x00000715 System.Void FunkyCode.LightTransform::Update(FunkyCode.Light2D)
 extern void LightTransform_Update_mC847744B42A9F57B4E1C756B29822E8FE8189B7B (void);
-// 0x0000070E System.Void FunkyCode.LightTransform::.ctor()
+// 0x00000716 System.Void FunkyCode.LightTransform::.ctor()
 extern void LightTransform__ctor_m97F2D03B4D2F2B184C645C5E73B542192DE93855 (void);
-// 0x0000070F System.Void FunkyCode.LightColliderLayer`1::.ctor()
-// 0x00000710 System.Int32 FunkyCode.LightColliderLayer`1::Update(System.Int32,System.Int32,T)
-// 0x00000711 System.Void FunkyCode.LightColliderLayer`1::Remove(System.Int32,T)
-// 0x00000712 FunkyCode.LightShape.Base FunkyCode.LightColliderShape::GetShadowShape()
+// 0x00000717 System.Void FunkyCode.LightColliderLayer`1::.ctor()
+// 0x00000718 System.Int32 FunkyCode.LightColliderLayer`1::Update(System.Int32,System.Int32,T)
+// 0x00000719 System.Void FunkyCode.LightColliderLayer`1::Remove(System.Int32,T)
+// 0x0000071A FunkyCode.LightShape.Base FunkyCode.LightColliderShape::GetShadowShape()
 extern void LightColliderShape_GetShadowShape_mDE6185D0A6541B50E6853869B81F10D8DB64A0DB (void);
-// 0x00000713 FunkyCode.LightShape.Base FunkyCode.LightColliderShape::GetMaskShape()
+// 0x0000071B FunkyCode.LightShape.Base FunkyCode.LightColliderShape::GetMaskShape()
 extern void LightColliderShape_GetMaskShape_mB724F8253E6E41014CEFE54B4ABFA321473E44F0 (void);
-// 0x00000714 System.Void FunkyCode.LightColliderShape::SetTransform(FunkyCode.LightCollider2D)
+// 0x0000071C System.Void FunkyCode.LightColliderShape::SetTransform(FunkyCode.LightCollider2D)
 extern void LightColliderShape_SetTransform_m7A2D6FCDAF2E7E136E8B059784AA66428B60E230 (void);
-// 0x00000715 System.Void FunkyCode.LightColliderShape::ResetLocal()
+// 0x0000071D System.Void FunkyCode.LightColliderShape::ResetLocal()
 extern void LightColliderShape_ResetLocal_mE9C8A3BCA833BA845107B8074886FA993F5DDBA6 (void);
-// 0x00000716 System.Void FunkyCode.LightColliderShape::ResetWorld()
+// 0x0000071E System.Void FunkyCode.LightColliderShape::ResetWorld()
 extern void LightColliderShape_ResetWorld_mA7C21EBF5AAD37766F5F47298A1B25078E077BC8 (void);
-// 0x00000717 System.Boolean FunkyCode.LightColliderShape::RectOverlap(UnityEngine.Rect)
+// 0x0000071F System.Boolean FunkyCode.LightColliderShape::RectOverlap(UnityEngine.Rect)
 extern void LightColliderShape_RectOverlap_m76753569267992531DB9211C448809750FFF61C8 (void);
-// 0x00000718 UnityEngine.Rect FunkyCode.LightColliderShape::GetWorldRect()
+// 0x00000720 UnityEngine.Rect FunkyCode.LightColliderShape::GetWorldRect()
 extern void LightColliderShape_GetWorldRect_m5857D128FD019233DB40BEC7FEFB8D2965A92C96 (void);
-// 0x00000719 System.Int32 FunkyCode.LightColliderShape::GetSortingOrder()
+// 0x00000721 System.Int32 FunkyCode.LightColliderShape::GetSortingOrder()
 extern void LightColliderShape_GetSortingOrder_m0E50A86584520C0C4416B1246E02F44901E3F94B (void);
-// 0x0000071A System.Int32 FunkyCode.LightColliderShape::GetSortingLayer()
+// 0x00000722 System.Int32 FunkyCode.LightColliderShape::GetSortingLayer()
 extern void LightColliderShape_GetSortingLayer_mE935FAAB4B4BDBC86F3995540ACE36ACFD2D3079 (void);
-// 0x0000071B UnityEngine.Rect FunkyCode.LightColliderShape::GetIsoWorldRect()
+// 0x00000723 UnityEngine.Rect FunkyCode.LightColliderShape::GetIsoWorldRect()
 extern void LightColliderShape_GetIsoWorldRect_m2927999CC34BF1A9B3F506921A1A11C2A0B56AE3 (void);
-// 0x0000071C System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightColliderShape::GetMeshes()
+// 0x00000724 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightColliderShape::GetMeshes()
 extern void LightColliderShape_GetMeshes_mA3AC37C4D123E81C4DF53C6E7E2D9D8562ECA2BA (void);
-// 0x0000071D System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightColliderShape::GetPolygonsLocal()
+// 0x00000725 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightColliderShape::GetPolygonsLocal()
 extern void LightColliderShape_GetPolygonsLocal_mAA349D0BD77D051E66F588E02A577C0752CF03A3 (void);
-// 0x0000071E System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightColliderShape::GetPolygonsWorld()
+// 0x00000726 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightColliderShape::GetPolygonsWorld()
 extern void LightColliderShape_GetPolygonsWorld_mD7422C50A08822CC0470E30DA2F2CFE391D67607 (void);
-// 0x0000071F UnityEngine.Vector2 FunkyCode.LightColliderShape::GetPivotPoint()
+// 0x00000727 UnityEngine.Vector2 FunkyCode.LightColliderShape::GetPivotPoint()
 extern void LightColliderShape_GetPivotPoint_m5E5F4D0296A259063ED5FB61A820EEB4AD421389 (void);
-// 0x00000720 System.Boolean FunkyCode.LightColliderShape::IsEdgeCollider()
+// 0x00000728 System.Boolean FunkyCode.LightColliderShape::IsEdgeCollider()
 extern void LightColliderShape_IsEdgeCollider_m12A1394AF382DF4E218A0B3CF49EFE8F0CF6379D (void);
-// 0x00000721 System.Void FunkyCode.LightColliderShape::.ctor()
+// 0x00000729 System.Void FunkyCode.LightColliderShape::.ctor()
 extern void LightColliderShape__ctor_mA436F8D8CA1EDA88C31A8A06633D48DD55D93A52 (void);
-// 0x00000722 System.Boolean FunkyCode.LightColliderTransform::get_UpdateNeeded()
+// 0x0000072A System.Boolean FunkyCode.LightColliderTransform::get_UpdateNeeded()
 extern void LightColliderTransform_get_UpdateNeeded_m2BC636BBAFF3F9693567CCF1563E9218EA4926BD (void);
-// 0x00000723 System.Void FunkyCode.LightColliderTransform::set_UpdateNeeded(System.Boolean)
+// 0x0000072B System.Void FunkyCode.LightColliderTransform::set_UpdateNeeded(System.Boolean)
 extern void LightColliderTransform_set_UpdateNeeded_m722FDFC2A0B947A1E54A04C1A464AE8825772F66 (void);
-// 0x00000724 System.Void FunkyCode.LightColliderTransform::set_Position(UnityEngine.Vector2)
+// 0x0000072C System.Void FunkyCode.LightColliderTransform::set_Position(UnityEngine.Vector2)
 extern void LightColliderTransform_set_Position_m17245DC0F37721E64D695486E95330B222E2F400 (void);
-// 0x00000725 UnityEngine.Vector2 FunkyCode.LightColliderTransform::get_Position()
+// 0x0000072D UnityEngine.Vector2 FunkyCode.LightColliderTransform::get_Position()
 extern void LightColliderTransform_get_Position_mF4E96AC6A29D35E3E718A6EFBCCAECBFD8CE1407 (void);
-// 0x00000726 System.Void FunkyCode.LightColliderTransform::set_Scale(UnityEngine.Vector2)
+// 0x0000072E System.Void FunkyCode.LightColliderTransform::set_Scale(UnityEngine.Vector2)
 extern void LightColliderTransform_set_Scale_m6396F02CF7BA56C8BCC369628126DB84647DB8C2 (void);
-// 0x00000727 UnityEngine.Vector2 FunkyCode.LightColliderTransform::get_Scale()
+// 0x0000072F UnityEngine.Vector2 FunkyCode.LightColliderTransform::get_Scale()
 extern void LightColliderTransform_get_Scale_m4A9B5772D43788E27363EF58896D4464B88B43F2 (void);
-// 0x00000728 System.Void FunkyCode.LightColliderTransform::set_Rotation(System.Single)
+// 0x00000730 System.Void FunkyCode.LightColliderTransform::set_Rotation(System.Single)
 extern void LightColliderTransform_set_Rotation_mD4B410403E8A15097D5C4D361B8D18C6E07DD441 (void);
-// 0x00000729 System.Single FunkyCode.LightColliderTransform::get_Rotation()
+// 0x00000731 System.Single FunkyCode.LightColliderTransform::get_Rotation()
 extern void LightColliderTransform_get_Rotation_m6DB4FAFAEFB80CE69361114891C8617995721D73 (void);
-// 0x0000072A System.Void FunkyCode.LightColliderTransform::.ctor()
+// 0x00000732 System.Void FunkyCode.LightColliderTransform::.ctor()
 extern void LightColliderTransform__ctor_m95F7144369FF0A678D7BC16C064789A500BA9086 (void);
-// 0x0000072B System.Void FunkyCode.LightColliderTransform::SetShape(FunkyCode.LightColliderShape,FunkyCode.LightCollider2D)
+// 0x00000733 System.Void FunkyCode.LightColliderTransform::SetShape(FunkyCode.LightColliderShape,FunkyCode.LightCollider2D)
 extern void LightColliderTransform_SetShape_mB818CF692629BC158B7331F3480BF612E4703F2A (void);
-// 0x0000072C System.Void FunkyCode.LightColliderTransform::Reset()
+// 0x00000734 System.Void FunkyCode.LightColliderTransform::Reset()
 extern void LightColliderTransform_Reset_m01F4AF760E224571DC17481EDF0020B28861AA19 (void);
-// 0x0000072D System.Void FunkyCode.LightColliderTransform::UpdateTransform(UnityEngine.Transform)
+// 0x00000735 System.Void FunkyCode.LightColliderTransform::UpdateTransform(UnityEngine.Transform)
 extern void LightColliderTransform_UpdateTransform_mCD58D6BBBBC86510CE576D08DAEAD8C975CEDCD4 (void);
-// 0x0000072E System.Void FunkyCode.LightColliderTransform::Update(System.Boolean)
+// 0x00000736 System.Void FunkyCode.LightColliderTransform::Update(System.Boolean)
 extern void LightColliderTransform_Update_m15D9088ACA5CE90937F42F6D0810CD8A51799CCE (void);
-// 0x0000072F System.Void FunkyCode.LightingOcclussion::.ctor(FunkyCode.LightingOcclusionShape,System.Single)
+// 0x00000737 System.Void FunkyCode.LightingOcclussion::.ctor(FunkyCode.LightingOcclusionShape,System.Single)
 extern void LightingOcclussion__ctor_m75A07D9ECB1884F91AD7227245BBC8EBECB6A3FA (void);
-// 0x00000730 FunkyCode.Utilities.Polygon2 FunkyCode.LightingOcclussion::PreparePolygon(FunkyCode.Utilities.Polygon2,System.Single)
+// 0x00000738 FunkyCode.Utilities.Polygon2 FunkyCode.LightingOcclussion::PreparePolygon(FunkyCode.Utilities.Polygon2,System.Single)
 extern void LightingOcclussion_PreparePolygon_m4B821506CBE7A87387199CAAD5811D0A823BA6F1 (void);
-// 0x00000731 System.Void FunkyCode.OcclusionMesh::.ctor(FunkyCode.OcclusionTileset)
+// 0x00000739 System.Void FunkyCode.OcclusionMesh::.ctor(FunkyCode.OcclusionTileset)
 extern void OcclusionMesh__ctor_m78F32757CE69091203459E84691E5989F1395BE0 (void);
-// 0x00000732 System.Void FunkyCode.OcclusionMesh::AddTile(System.Int32,UnityEngine.Vector2Int,FunkyCode.OcclusionTileset/TileRotation,UnityEngine.Color,System.Boolean,System.Boolean)
+// 0x0000073A System.Void FunkyCode.OcclusionMesh::AddTile(System.Int32,UnityEngine.Vector2Int,FunkyCode.OcclusionTileset/TileRotation,UnityEngine.Color,System.Boolean,System.Boolean)
 extern void OcclusionMesh_AddTile_m569DE6E7C101897C0339310B91A88B63E977D714 (void);
-// 0x00000733 UnityEngine.Mesh FunkyCode.OcclusionMesh::Export()
+// 0x0000073B UnityEngine.Mesh FunkyCode.OcclusionMesh::Export()
 extern void OcclusionMesh_Export_m86250216BFBECD09967DFC4EF49CA9DA8BD8E08D (void);
-// 0x00000734 System.Void FunkyCode.LightingRoomShape::SetTransform(UnityEngine.Transform)
+// 0x0000073C System.Void FunkyCode.LightingRoomShape::SetTransform(UnityEngine.Transform)
 extern void LightingRoomShape_SetTransform_mE90D4B74E4AD3E9B1319DBA40EFEA60708DC03FA (void);
-// 0x00000735 System.Void FunkyCode.LightingRoomShape::ResetLocal()
+// 0x0000073D System.Void FunkyCode.LightingRoomShape::ResetLocal()
 extern void LightingRoomShape_ResetLocal_m39C5D63B3666F456F83F759B4998D204F17C22BD (void);
-// 0x00000736 System.Void FunkyCode.LightingRoomShape::ResetWorld()
+// 0x0000073E System.Void FunkyCode.LightingRoomShape::ResetWorld()
 extern void LightingRoomShape_ResetWorld_m46C2877E0B90C004106EF064B46B1633C23D97F8 (void);
-// 0x00000737 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightingRoomShape::GetMeshes()
+// 0x0000073F System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightingRoomShape::GetMeshes()
 extern void LightingRoomShape_GetMeshes_mA005F8217BC2B3286816A8E09DF28E25B18AC94E (void);
-// 0x00000738 System.Void FunkyCode.LightingRoomShape::.ctor()
+// 0x00000740 System.Void FunkyCode.LightingRoomShape::.ctor()
 extern void LightingRoomShape__ctor_m57CAF3ABBEFA6A86911598A0BF4B591ECDD6E55C (void);
-// 0x00000739 System.Void FunkyCode.LightSpriteTransform::.ctor()
+// 0x00000741 System.Void FunkyCode.LightSpriteTransform::.ctor()
 extern void LightSpriteTransform__ctor_mB93DB3C68765916F3458BDF0E34FBA04EDA24D2F (void);
-// 0x0000073A System.Void FunkyCode.LightSpriteShape::Set(FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Transform,FunkyCode.LightSpriteTransform)
+// 0x00000742 System.Void FunkyCode.LightSpriteShape::Set(FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Transform,FunkyCode.LightSpriteTransform)
 extern void LightSpriteShape_Set_mA15246AA3330582764AAF8012A43CCAB63BE1F7F (void);
-// 0x0000073B System.Void FunkyCode.LightSpriteShape::Update()
+// 0x00000743 System.Void FunkyCode.LightSpriteShape::Update()
 extern void LightSpriteShape_Update_m044EF5FFA84A4EB00524AEEA8610F1E464B905FE (void);
-// 0x0000073C UnityEngine.Rect FunkyCode.LightSpriteShape::GetWorldRect()
+// 0x00000744 UnityEngine.Rect FunkyCode.LightSpriteShape::GetWorldRect()
 extern void LightSpriteShape_GetWorldRect_m5C1FB97F93E2F7278B4D0179718F6A0582BCA0BE (void);
-// 0x0000073D FunkyCode.Utilities.Polygon2 FunkyCode.LightSpriteShape::GetSpriteWorldPolygon()
+// 0x00000745 FunkyCode.Utilities.Polygon2 FunkyCode.LightSpriteShape::GetSpriteWorldPolygon()
 extern void LightSpriteShape_GetSpriteWorldPolygon_mD50454FF5DC6A140660627A630CBE663145A31BB (void);
-// 0x0000073E FunkyCode.Utilities.Polygon2 FunkyCode.LightSpriteShape::GetPolygon()
+// 0x00000746 FunkyCode.Utilities.Polygon2 FunkyCode.LightSpriteShape::GetPolygon()
 extern void LightSpriteShape_GetPolygon_m099A70AC333187E9E1106952751DEDBF7ECDEE3D (void);
-// 0x0000073F System.Void FunkyCode.LightSpriteShape::.ctor()
+// 0x00000747 System.Void FunkyCode.LightSpriteShape::.ctor()
 extern void LightSpriteShape__ctor_mFEF23FBB329A6207A64A2208EA9596BA4488B697 (void);
-// 0x00000740 System.Void FunkyCode.LightTile::SetSprite(UnityEngine.Sprite)
+// 0x00000748 System.Void FunkyCode.LightTile::SetSprite(UnityEngine.Sprite)
 extern void LightTile_SetSprite_m7285D1A97F9A07290FEC014B334DEEA6920FA912 (void);
-// 0x00000741 UnityEngine.Sprite FunkyCode.LightTile::GetSprite()
+// 0x00000749 UnityEngine.Sprite FunkyCode.LightTile::GetSprite()
 extern void LightTile_GetSprite_m54DDAA2AE7756CE9496DE2CE1126E7399E127F85 (void);
-// 0x00000742 System.Boolean FunkyCode.LightTile::NotInRange(UnityEngine.Vector2,System.Single)
+// 0x0000074A System.Boolean FunkyCode.LightTile::NotInRange(UnityEngine.Vector2,System.Single)
 extern void LightTile_NotInRange_mBF2F0FE2B2624C484640C056077CB2F8A2468CA8 (void);
-// 0x00000743 System.Void FunkyCode.LightTile::ResetLocal()
+// 0x0000074B System.Void FunkyCode.LightTile::ResetLocal()
 extern void LightTile_ResetLocal_m0E324801519B73B8296233980756A59E2B76E5DC (void);
-// 0x00000744 System.Void FunkyCode.LightTile::ResetWorld()
+// 0x0000074C System.Void FunkyCode.LightTile::ResetWorld()
 extern void LightTile_ResetWorld_m0521E36AA2E6CA0E283B475C8F8B94BC64B9CFC4 (void);
-// 0x00000745 System.Void FunkyCode.LightTile::UpdateTransform(FunkyCode.LightTilemapCollider.Base)
+// 0x0000074D System.Void FunkyCode.LightTile::UpdateTransform(FunkyCode.LightTilemapCollider.Base)
 extern void LightTile_UpdateTransform_m72610483E09ABCE27E1F06EC755A2FD289E4D6EA (void);
-// 0x00000746 UnityEngine.Vector2 FunkyCode.LightTile::GetWorldPosition(FunkyCode.LightTilemapCollider.Base)
+// 0x0000074E UnityEngine.Vector2 FunkyCode.LightTile::GetWorldPosition(FunkyCode.LightTilemapCollider.Base)
 extern void LightTile_GetWorldPosition_mFFC4031CCB1CD2D3932A86168740E9F80DEE5BF5 (void);
-// 0x00000747 System.Void FunkyCode.LightTile::SetLocalPolygons(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
+// 0x0000074F System.Void FunkyCode.LightTile::SetLocalPolygons(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
 extern void LightTile_SetLocalPolygons_m892C6DEC2D559017ACB8CC2617406E4B19B5CF7B (void);
-// 0x00000748 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightTile::GetWorldPolygons(FunkyCode.LightTilemapCollider.Base)
+// 0x00000750 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightTile::GetWorldPolygons(FunkyCode.LightTilemapCollider.Base)
 extern void LightTile_GetWorldPolygons_m01069002D6C5DCB8B5034D84EE07EB9380468F09 (void);
-// 0x00000749 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightTile::GetLocalPolygons(FunkyCode.LightTilemapCollider.Base)
+// 0x00000751 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightTile::GetLocalPolygons(FunkyCode.LightTilemapCollider.Base)
 extern void LightTile_GetLocalPolygons_mB6C28A7A923823FFAEFC262BBB5CEFC1BD3EA817 (void);
-// 0x0000074A System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightTile::GetPhysicsShapePolygons()
+// 0x00000752 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightTile::GetPhysicsShapePolygons()
 extern void LightTile_GetPhysicsShapePolygons_mFB8036FDF9C1E8BEAECB6012B9AB703A6A7041DD (void);
-// 0x0000074B FunkyCode.MeshObject FunkyCode.LightTile::GetDynamicMesh()
+// 0x00000753 FunkyCode.MeshObject FunkyCode.LightTile::GetDynamicMesh()
 extern void LightTile_GetDynamicMesh_mE6C0E36FE7D6CA32F5FA7D15A82F698003794206 (void);
-// 0x0000074C FunkyCode.MeshObject FunkyCode.LightTile::GetStaticMesh(FunkyCode.LightTilemapCollider.Base)
+// 0x00000754 FunkyCode.MeshObject FunkyCode.LightTile::GetStaticMesh(FunkyCode.LightTilemapCollider.Base)
 extern void LightTile_GetStaticMesh_mE76C6ED0DE47776CF9F7636BF639794083779816 (void);
-// 0x0000074D System.Void FunkyCode.LightTile::.ctor()
+// 0x00000755 System.Void FunkyCode.LightTile::.ctor()
 extern void LightTile__ctor_m2ED6AA336B8F469FC356A44CB4368527804602EB (void);
-// 0x0000074E FunkyCode.MeshObject FunkyCode.LightTile/Rectangle::GetStaticMesh()
+// 0x00000756 FunkyCode.MeshObject FunkyCode.LightTile/Rectangle::GetStaticMesh()
 extern void Rectangle_GetStaticMesh_mB92EAF136EAD2DFED43CE25AC3929C1C02E97841 (void);
-// 0x0000074F System.Void FunkyCode.LightTile/Rectangle::.ctor()
+// 0x00000757 System.Void FunkyCode.LightTile/Rectangle::.ctor()
 extern void Rectangle__ctor_m9132B6226C382DDC92531357A7B00C7D02D94B57 (void);
-// 0x00000750 FunkyCode.MeshObject FunkyCode.LightTile/Isometric::GetStaticMesh()
+// 0x00000758 FunkyCode.MeshObject FunkyCode.LightTile/Isometric::GetStaticMesh()
 extern void Isometric_GetStaticMesh_mDC1BF7FD8F259D21F4EF67408CB2003721DA36AA (void);
-// 0x00000751 FunkyCode.MeshObject FunkyCode.LightTile/Hexagon::GetStaticMesh()
+// 0x00000759 FunkyCode.MeshObject FunkyCode.LightTile/Hexagon::GetStaticMesh()
 extern void Hexagon_GetStaticMesh_m7BC5134290697EF1F3D769C2C06BEEC3872F34E3 (void);
-// 0x00000752 FunkyCode.MeshObject FunkyCode.LightTile/STE::GetStaticMesh()
+// 0x0000075A FunkyCode.MeshObject FunkyCode.LightTile/STE::GetStaticMesh()
 extern void STE_GetStaticMesh_m915A85947DF19831CF2AB8A10E703B3E5FE1530E (void);
-// 0x00000753 System.Boolean FunkyCode.LightTilemapTransform::get_UpdateNeeded()
+// 0x0000075B System.Boolean FunkyCode.LightTilemapTransform::get_UpdateNeeded()
 extern void LightTilemapTransform_get_UpdateNeeded_m75F288676A3CD709A3ED1B125C811EE513EEBA31 (void);
-// 0x00000754 System.Void FunkyCode.LightTilemapTransform::set_UpdateNeeded(System.Boolean)
+// 0x0000075C System.Void FunkyCode.LightTilemapTransform::set_UpdateNeeded(System.Boolean)
 extern void LightTilemapTransform_set_UpdateNeeded_mE80449D3658CFAE4C1057F8D6643BE9E80CA8A10 (void);
-// 0x00000755 System.Void FunkyCode.LightTilemapTransform::Update(FunkyCode.LightTilemapCollider2D)
+// 0x0000075D System.Void FunkyCode.LightTilemapTransform::Update(FunkyCode.LightTilemapCollider2D)
 extern void LightTilemapTransform_Update_m6B052FB96E08217596EEF3C5CEF59BA93DEA81DB (void);
-// 0x00000756 UnityEngine.Tilemaps.TilemapRenderer FunkyCode.LightTilemapTransform::GetTilemapRenderer(UnityEngine.GameObject)
+// 0x0000075E UnityEngine.Tilemaps.TilemapRenderer FunkyCode.LightTilemapTransform::GetTilemapRenderer(UnityEngine.GameObject)
 extern void LightTilemapTransform_GetTilemapRenderer_mBED12482FBAEF6195B82E806AA6EBBA2056EDDFA (void);
-// 0x00000757 UnityEngine.Tilemaps.Tilemap FunkyCode.LightTilemapTransform::GetTilemap(UnityEngine.GameObject)
+// 0x0000075F UnityEngine.Tilemaps.Tilemap FunkyCode.LightTilemapTransform::GetTilemap(UnityEngine.GameObject)
 extern void LightTilemapTransform_GetTilemap_m0693BF03B62E5AF1C2F2193C5F0157971F26FCD1 (void);
-// 0x00000758 UnityEngine.Grid FunkyCode.LightTilemapTransform::GetGrid(UnityEngine.GameObject)
+// 0x00000760 UnityEngine.Grid FunkyCode.LightTilemapTransform::GetGrid(UnityEngine.GameObject)
 extern void LightTilemapTransform_GetGrid_m13692507B7DBE07FE73AE6D39FCB5FFE93EA75E4 (void);
-// 0x00000759 System.Void FunkyCode.LightTilemapTransform::.ctor()
+// 0x00000761 System.Void FunkyCode.LightTilemapTransform::.ctor()
 extern void LightTilemapTransform__ctor_m2B6792FF45E3ACEC023C6532B890E11F905C1F7A (void);
-// 0x0000075A System.Void FunkyCode.TilemapEvents::Initialize()
+// 0x00000762 System.Void FunkyCode.TilemapEvents::Initialize()
 extern void TilemapEvents_Initialize_m7BCAAF4A2497C3C8D467A0B0BBDAA362817B930A (void);
-// 0x0000075B System.Void FunkyCode.TilemapEvents::.ctor()
+// 0x00000763 System.Void FunkyCode.TilemapEvents::.ctor()
 extern void TilemapEvents__ctor_m685C72C3CB24798B118BEEF8641D4804AC66F651 (void);
-// 0x0000075C System.Void FunkyCode.TilemapProperties::.ctor()
+// 0x00000764 System.Void FunkyCode.TilemapProperties::.ctor()
 extern void TilemapProperties__ctor_m626D39074CC03E0A949CED75CBA9B1ED50E0D46D (void);
-// 0x0000075D FunkyCode.OcclusionTileset FunkyCode.OcclusionTileset::Load(System.String)
+// 0x00000765 FunkyCode.OcclusionTileset FunkyCode.OcclusionTileset::Load(System.String)
 extern void OcclusionTileset_Load_m4B757E0288567EEFCC0C6FBD597CFD98F270DEA2 (void);
-// 0x0000075E System.Void FunkyCode.OcclusionTileset::LoadSelf(System.String)
+// 0x00000766 System.Void FunkyCode.OcclusionTileset::LoadSelf(System.String)
 extern void OcclusionTileset_LoadSelf_mA59FD18690DF90A22BD95459980F6768FE792F85 (void);
-// 0x0000075F System.Void FunkyCode.OcclusionTileset::.ctor()
+// 0x00000767 System.Void FunkyCode.OcclusionTileset::.ctor()
 extern void OcclusionTileset__ctor_m168789E79EFFA8C29E033000CC5F55793989583B (void);
-// 0x00000760 System.Void FunkyCode.OcclusionTileset/TileUV::.ctor()
+// 0x00000768 System.Void FunkyCode.OcclusionTileset/TileUV::.ctor()
 extern void TileUV__ctor_m9AD9DF4728E8B753B130480E60A97D705A8912F4 (void);
-// 0x00000761 System.Boolean FunkyCode.LightingTilemapRoomTransform::get_UpdateNeeded()
+// 0x00000769 System.Boolean FunkyCode.LightingTilemapRoomTransform::get_UpdateNeeded()
 extern void LightingTilemapRoomTransform_get_UpdateNeeded_m5A4097419E9A10A46E9660421AA9EF05B3C1D9E6 (void);
-// 0x00000762 System.Void FunkyCode.LightingTilemapRoomTransform::set_UpdateNeeded(System.Boolean)
+// 0x0000076A System.Void FunkyCode.LightingTilemapRoomTransform::set_UpdateNeeded(System.Boolean)
 extern void LightingTilemapRoomTransform_set_UpdateNeeded_mBE6CE061B4C4E87FCC38CF1967EA006DCD3BF6C6 (void);
-// 0x00000763 System.Void FunkyCode.LightingTilemapRoomTransform::Update(FunkyCode.LightTilemapRoom2D)
+// 0x0000076B System.Void FunkyCode.LightingTilemapRoomTransform::Update(FunkyCode.LightTilemapRoom2D)
 extern void LightingTilemapRoomTransform_Update_m623855472F1C0C37C82BB76FC6D45EF296D09708 (void);
-// 0x00000764 UnityEngine.Tilemaps.Tilemap FunkyCode.LightingTilemapRoomTransform::GetTilemap(UnityEngine.GameObject)
+// 0x0000076C UnityEngine.Tilemaps.Tilemap FunkyCode.LightingTilemapRoomTransform::GetTilemap(UnityEngine.GameObject)
 extern void LightingTilemapRoomTransform_GetTilemap_mEDDA2B91B4693548E892C8564497B708DB289A89 (void);
-// 0x00000765 UnityEngine.Grid FunkyCode.LightingTilemapRoomTransform::GetGrid(UnityEngine.GameObject)
+// 0x0000076D UnityEngine.Grid FunkyCode.LightingTilemapRoomTransform::GetGrid(UnityEngine.GameObject)
 extern void LightingTilemapRoomTransform_GetGrid_mDAF6AC650EA2970BB737B3FFC524CC1EC3FC1DC3 (void);
-// 0x00000766 System.Void FunkyCode.LightingTilemapRoomTransform::.ctor()
+// 0x0000076E System.Void FunkyCode.LightingTilemapRoomTransform::.ctor()
 extern void LightingTilemapRoomTransform__ctor_mA7902CF96A494B1ADAE6578CAC61406AC6B17434 (void);
-// 0x00000767 System.Void FunkyCode.LightingDebug::OnGUI()
+// 0x0000076F System.Void FunkyCode.LightingDebug::OnGUI()
 extern void LightingDebug_OnGUI_mD5A3E2C5A98AE57E2060535CA4758003922EFF68 (void);
-// 0x00000768 System.Void FunkyCode.LightingDebug::RightBottomPanel()
+// 0x00000770 System.Void FunkyCode.LightingDebug::RightBottomPanel()
 extern void LightingDebug_RightBottomPanel_m0BCF4B92313987CC16F1C8AE9CF468C1B1F69718 (void);
-// 0x00000769 System.Void FunkyCode.LightingDebug::SecondUpdate()
+// 0x00000771 System.Void FunkyCode.LightingDebug::SecondUpdate()
 extern void LightingDebug_SecondUpdate_m85068E155611764F79953428CE54300BB0066E92 (void);
-// 0x0000076A System.Void FunkyCode.LightingDebug::.ctor()
+// 0x00000772 System.Void FunkyCode.LightingDebug::.ctor()
 extern void LightingDebug__ctor_m11087924D317710072E8DDD5389CA050E14AA33F (void);
-// 0x0000076B System.Void FunkyCode.LightCollision2D::.ctor(FunkyCode.LightCollision2D/State)
+// 0x00000773 System.Void FunkyCode.LightCollision2D::.ctor(FunkyCode.LightCollision2D/State)
 extern void LightCollision2D__ctor_m46417B132558A081EAF7553240A1FE3236C61ACC (void);
-// 0x0000076C System.Void FunkyCode.LightingOcclusionShape::SetTransform(UnityEngine.Transform)
+// 0x00000774 System.Void FunkyCode.LightingOcclusionShape::SetTransform(UnityEngine.Transform)
 extern void LightingOcclusionShape_SetTransform_m94C99BAD159EBFDF7813E9F90B6ABEAF802D2F3C (void);
-// 0x0000076D System.Void FunkyCode.LightingOcclusionShape::ResetLocal()
+// 0x00000775 System.Void FunkyCode.LightingOcclusionShape::ResetLocal()
 extern void LightingOcclusionShape_ResetLocal_m5B13A0D179B04C27D5D18D4DABCE17489DBA18D3 (void);
-// 0x0000076E System.Void FunkyCode.LightingOcclusionShape::ResetWorld()
+// 0x00000776 System.Void FunkyCode.LightingOcclusionShape::ResetWorld()
 extern void LightingOcclusionShape_ResetWorld_m8EF5E1F6EE5BE7A721EC56971249D8DE2B3CE133 (void);
-// 0x0000076F System.Boolean FunkyCode.LightingOcclusionShape::IsEdgeCollider()
+// 0x00000777 System.Boolean FunkyCode.LightingOcclusionShape::IsEdgeCollider()
 extern void LightingOcclusionShape_IsEdgeCollider_m1C08115FD26AC4B206792483FF6782F116EF5D07 (void);
-// 0x00000770 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightingOcclusionShape::GetMeshes()
+// 0x00000778 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightingOcclusionShape::GetMeshes()
 extern void LightingOcclusionShape_GetMeshes_mC5C5235EB5173CAE8D025DFFE12EBA8E38D27153 (void);
-// 0x00000771 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightingOcclusionShape::GetPolygonsLocal()
+// 0x00000779 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightingOcclusionShape::GetPolygonsLocal()
 extern void LightingOcclusionShape_GetPolygonsLocal_m408FEA4B67929A184097F2002E00F02889EB3B92 (void);
-// 0x00000772 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightingOcclusionShape::GetPolygonsWorld()
+// 0x0000077A System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightingOcclusionShape::GetPolygonsWorld()
 extern void LightingOcclusionShape_GetPolygonsWorld_m6422DC64CC980ECCA6A1B267A459B98B0824AA23 (void);
-// 0x00000773 System.Void FunkyCode.LightingOcclusionShape::.ctor()
+// 0x0000077B System.Void FunkyCode.LightingOcclusionShape::.ctor()
 extern void LightingOcclusionShape__ctor_m24408F46E7F199BB651D5253318A372353E147CD (void);
-// 0x00000774 System.Boolean FunkyCode.Lighting2DMaterials::Initialize()
+// 0x0000077C System.Boolean FunkyCode.Lighting2DMaterials::Initialize()
 extern void Lighting2DMaterials_Initialize_m4649F78BA929AB689D015A23BA6976F76303B845 (void);
-// 0x00000775 System.Void FunkyCode.Lighting2DMaterials::Reset()
+// 0x0000077D System.Void FunkyCode.Lighting2DMaterials::Reset()
 extern void Lighting2DMaterials_Reset_m3175CB9C7BEB56830D07B194620D5E82376A80B9 (void);
-// 0x00000776 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetLightSprite()
+// 0x0000077E UnityEngine.Material FunkyCode.Lighting2DMaterials::GetLightSprite()
 extern void Lighting2DMaterials_GetLightSprite_m8D10CC28D5D5E7192F8D97D42E9D411CCCFD7D52 (void);
-// 0x00000777 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetMaskBlurVertical()
+// 0x0000077F UnityEngine.Material FunkyCode.Lighting2DMaterials::GetMaskBlurVertical()
 extern void Lighting2DMaterials_GetMaskBlurVertical_m3DB816189C07102BD9210EF185A5D9EFB1477A11 (void);
-// 0x00000778 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetMaskBlurHorizontal()
+// 0x00000780 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetMaskBlurHorizontal()
 extern void Lighting2DMaterials_GetMaskBlurHorizontal_mBC869099DAB10B2C16118DBD46AC846C0B5F2503 (void);
-// 0x00000779 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetAdditive()
+// 0x00000781 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetAdditive()
 extern void Lighting2DMaterials_GetAdditive_mD64E044E06A223A98C9EFF421622306F58B7F359 (void);
-// 0x0000077A UnityEngine.Material FunkyCode.Lighting2DMaterials::GetMultiplyHDR()
+// 0x00000782 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetMultiplyHDR()
 extern void Lighting2DMaterials_GetMultiplyHDR_m1584D4C624E11C1FB22FD06D2A61EDC645CD9706 (void);
-// 0x0000077B UnityEngine.Material FunkyCode.Lighting2DMaterials::GetAlphaColor()
+// 0x00000783 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetAlphaColor()
 extern void Lighting2DMaterials_GetAlphaColor_m058DB0CC5897E1D075A3C6DDA6EF613B21F6C096 (void);
-// 0x0000077C UnityEngine.Material FunkyCode.Lighting2DMaterials::GetOcclusionEdge()
+// 0x00000784 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetOcclusionEdge()
 extern void Lighting2DMaterials_GetOcclusionEdge_m55BDA22DE9BB46E1354013EBBAE157352DBD64DD (void);
-// 0x0000077D UnityEngine.Material FunkyCode.Lighting2DMaterials::GetOcclusionBlur()
+// 0x00000785 UnityEngine.Material FunkyCode.Lighting2DMaterials::GetOcclusionBlur()
 extern void Lighting2DMaterials_GetOcclusionBlur_mD41D9B0F0154EA7DDF1A41F2CCD99B5B49A26462 (void);
-// 0x0000077E System.Void FunkyCode.Lighting2DMaterials::.ctor()
+// 0x00000786 System.Void FunkyCode.Lighting2DMaterials::.ctor()
 extern void Lighting2DMaterials__ctor_m473D78BA8E1B1D8764E0546284BD2F200528072A (void);
-// 0x0000077F FunkyCode.LightingMaterial FunkyCode.LightingMaterial::Load(UnityEngine.Material)
+// 0x00000787 FunkyCode.LightingMaterial FunkyCode.LightingMaterial::Load(UnityEngine.Material)
 extern void LightingMaterial_Load_m988318DC753D18F59602E3AB567B7973F6FBA3B9 (void);
-// 0x00000780 FunkyCode.LightingMaterial FunkyCode.LightingMaterial::Load(System.String)
+// 0x00000788 FunkyCode.LightingMaterial FunkyCode.LightingMaterial::Load(System.String)
 extern void LightingMaterial_Load_m7C5F729CBB06D44014D88E3D51F4CB1FA4B7205F (void);
-// 0x00000781 System.Void FunkyCode.LightingMaterial::SetTexture(System.String)
+// 0x00000789 System.Void FunkyCode.LightingMaterial::SetTexture(System.String)
 extern void LightingMaterial_SetTexture_m2B25A8EDB9B3C3D9090E577F87E24D0A1B4701D2 (void);
-// 0x00000782 System.Void FunkyCode.LightingMaterial::SetTexture(UnityEngine.Texture)
+// 0x0000078A System.Void FunkyCode.LightingMaterial::SetTexture(UnityEngine.Texture)
 extern void LightingMaterial_SetTexture_m1D7C341060300D76252EDDFDF8C81CF428F623B8 (void);
-// 0x00000783 UnityEngine.Material FunkyCode.LightingMaterial::Get()
+// 0x0000078B UnityEngine.Material FunkyCode.LightingMaterial::Get()
 extern void LightingMaterial_Get_mEAB6060D2B0169282E05ED9201128E43F37F0737 (void);
-// 0x00000784 System.Void FunkyCode.LightingMaterial::.ctor()
+// 0x0000078C System.Void FunkyCode.LightingMaterial::.ctor()
 extern void LightingMaterial__ctor_m67EE73FB9437E8B5A0549E568A2DFA5528412881 (void);
-// 0x00000785 FunkyCode.LightingMeshRenderer FunkyCode.MeshRendererManager::AddBuffer(UnityEngine.Object)
+// 0x0000078D FunkyCode.LightingMeshRenderer FunkyCode.MeshRendererManager::AddBuffer(UnityEngine.Object)
 extern void MeshRendererManager_AddBuffer_m52C20A8848A6BC78E667D7EF0CEA646F8FEB4DBF (void);
-// 0x00000786 FunkyCode.LightingMeshRenderer FunkyCode.MeshRendererManager::Pull(UnityEngine.Object)
+// 0x0000078E FunkyCode.LightingMeshRenderer FunkyCode.MeshRendererManager::Pull(UnityEngine.Object)
 extern void MeshRendererManager_Pull_m88E6264809D5FC3C9BFC0C8C1EF80BF9129D5224 (void);
-// 0x00000787 System.Void FunkyCode.MeshRendererManager::.ctor()
+// 0x0000078F System.Void FunkyCode.MeshRendererManager::.ctor()
 extern void MeshRendererManager__ctor_mEC36E996E7A2BC13EC366DAF5B064FEF35E98A47 (void);
-// 0x00000788 System.Void FunkyCode.MeshRendererManager/<>c__DisplayClass1_0::.ctor()
+// 0x00000790 System.Void FunkyCode.MeshRendererManager/<>c__DisplayClass1_0::.ctor()
 extern void U3CU3Ec__DisplayClass1_0__ctor_mBB8DF93F518D10A2EF3D148C29304C1E6E106201 (void);
-// 0x00000789 System.Boolean FunkyCode.MeshRendererManager/<>c__DisplayClass1_0::<Pull>b__0(FunkyCode.LightingMeshRenderer)
+// 0x00000791 System.Boolean FunkyCode.MeshRendererManager/<>c__DisplayClass1_0::<Pull>b__0(FunkyCode.LightingMeshRenderer)
 extern void U3CU3Ec__DisplayClass1_0_U3CPullU3Eb__0_m5CEEB9A7C876BF942F4AC9C96BDF66A5AA8A4D8B (void);
-// 0x0000078A System.Void FunkyCode.MeshRendererManager/<>c::.cctor()
+// 0x00000792 System.Void FunkyCode.MeshRendererManager/<>c::.cctor()
 extern void U3CU3Ec__cctor_m70109A4AADD870CCAC8B2B0A025EEDC59481AB61 (void);
-// 0x0000078B System.Void FunkyCode.MeshRendererManager/<>c::.ctor()
+// 0x00000793 System.Void FunkyCode.MeshRendererManager/<>c::.ctor()
 extern void U3CU3Ec__ctor_mDB1F37EB9DCEDD58F04006BBF9A7F16315D5FF0B (void);
-// 0x0000078C System.Boolean FunkyCode.MeshRendererManager/<>c::<Pull>b__1_1(FunkyCode.LightingMeshRenderer)
+// 0x00000794 System.Boolean FunkyCode.MeshRendererManager/<>c::<Pull>b__1_1(FunkyCode.LightingMeshRenderer)
 extern void U3CU3Ec_U3CPullU3Eb__1_1_m0FBE84942A5E372E3A6EBCB70F13EED438CEDBA5 (void);
-// 0x0000078D System.Void FunkyCode.GizmosHelper::DrawRect(UnityEngine.Vector3,UnityEngine.Rect)
+// 0x00000795 System.Void FunkyCode.GizmosHelper::DrawRect(UnityEngine.Vector3,UnityEngine.Rect)
 extern void GizmosHelper_DrawRect_m784FF2F0D52C6118AFF85C329511C3605654F172 (void);
-// 0x0000078E UnityEngine.Vector3 FunkyCode.GizmosHelper::IsoConvert(UnityEngine.Vector3)
+// 0x00000796 UnityEngine.Vector3 FunkyCode.GizmosHelper::IsoConvert(UnityEngine.Vector3)
 extern void GizmosHelper_IsoConvert_m8F24E3AF6B87EC8869478A16256933F1F8C9D2E3 (void);
-// 0x0000078F System.Void FunkyCode.GizmosHelper::DrawIsoRect(UnityEngine.Vector3,UnityEngine.Rect)
+// 0x00000797 System.Void FunkyCode.GizmosHelper::DrawIsoRect(UnityEngine.Vector3,UnityEngine.Rect)
 extern void GizmosHelper_DrawIsoRect_mF25B49496FEA3EFCBB58A094455133847B73BCA8 (void);
-// 0x00000790 System.Void FunkyCode.GizmosHelper::DrawCircle(UnityEngine.Vector3,System.Single,System.Single,System.Single)
+// 0x00000798 System.Void FunkyCode.GizmosHelper::DrawCircle(UnityEngine.Vector3,System.Single,System.Single,System.Single)
 extern void GizmosHelper_DrawCircle_m118E93700E95A66375B2F66EFB39DD879824D153 (void);
-// 0x00000791 System.Void FunkyCode.GizmosHelper::DrawPolygons(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,UnityEngine.Vector3)
+// 0x00000799 System.Void FunkyCode.GizmosHelper::DrawPolygons(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,UnityEngine.Vector3)
 extern void GizmosHelper_DrawPolygons_m0D01F06FBAB3ACE3606E5F4AB80B05E8659D7248 (void);
-// 0x00000792 System.Void FunkyCode.GizmosHelper::DrawPolygon(FunkyCode.Utilities.Polygon2,UnityEngine.Vector3)
+// 0x0000079A System.Void FunkyCode.GizmosHelper::DrawPolygon(FunkyCode.Utilities.Polygon2,UnityEngine.Vector3)
 extern void GizmosHelper_DrawPolygon_m3C0AD9CD1A2805A3AEBF9538687EEF2958FE5CF1 (void);
-// 0x00000793 System.Void FunkyCode.LightingMonoBehaviour::DestroySelf()
+// 0x0000079B System.Void FunkyCode.LightingMonoBehaviour::DestroySelf()
 extern void LightingMonoBehaviour_DestroySelf_m079A5A7A3BAE86C6AA3AB9CCE0279585241EBEB1 (void);
-// 0x00000794 System.Void FunkyCode.LightingMonoBehaviour::.ctor()
+// 0x0000079C System.Void FunkyCode.LightingMonoBehaviour::.ctor()
 extern void LightingMonoBehaviour__ctor_m8340FB95BCFCC88FFA7342FF8BD64E7DEB269141 (void);
-// 0x00000795 UnityEngine.Vector2 FunkyCode.LightingPosition::GetPosition2D(UnityEngine.Vector3)
+// 0x0000079D UnityEngine.Vector2 FunkyCode.LightingPosition::GetPosition2D(UnityEngine.Vector3)
 extern void LightingPosition_GetPosition2D_m136DDE137FECB111D5AA0331700EC8BBC59BE52D (void);
-// 0x00000796 UnityEngine.Vector3 FunkyCode.LightingPosition::GetPosition3D(UnityEngine.Vector2)
+// 0x0000079E UnityEngine.Vector3 FunkyCode.LightingPosition::GetPosition3D(UnityEngine.Vector2)
 extern void LightingPosition_GetPosition3D_m96E539FB9BA123D67C9A186B342E98512A6A075C (void);
-// 0x00000797 UnityEngine.Vector3 FunkyCode.LightingPosition::GetPosition3D(UnityEngine.Vector2,UnityEngine.Vector3)
+// 0x0000079F UnityEngine.Vector3 FunkyCode.LightingPosition::GetPosition3D(UnityEngine.Vector2,UnityEngine.Vector3)
 extern void LightingPosition_GetPosition3D_m1BF150CF1FB6F9AA04DBFF1A0C70792A4344FBFD (void);
-// 0x00000798 UnityEngine.Vector3 FunkyCode.LightingPosition::GetPosition3DWorld(UnityEngine.Vector2,UnityEngine.Vector3)
+// 0x000007A0 UnityEngine.Vector3 FunkyCode.LightingPosition::GetPosition3DWorld(UnityEngine.Vector2,UnityEngine.Vector3)
 extern void LightingPosition_GetPosition3DWorld_m4D865205BD9C6282D4F461DC57481096270E2E57 (void);
-// 0x00000799 System.Single FunkyCode.LightingPosition::GetRotation2D(UnityEngine.Transform)
+// 0x000007A1 System.Single FunkyCode.LightingPosition::GetRotation2D(UnityEngine.Transform)
 extern void LightingPosition_GetRotation2D_m61A1FCD9E469A5F8E7FB60F25FE8ABA984EBAE98 (void);
-// 0x0000079A UnityEngine.Vector3 FunkyCode.LightingPosition::GetCameraPlanePosition(UnityEngine.Camera)
+// 0x000007A2 UnityEngine.Vector3 FunkyCode.LightingPosition::GetCameraPlanePosition(UnityEngine.Camera)
 extern void LightingPosition_GetCameraPlanePosition_m2F3C3801534821E2026E17F3DFE71D805F5A561C (void);
-// 0x0000079B UnityEngine.Vector3 FunkyCode.LightingPosition::GetCameraCustomPosition(UnityEngine.Camera,System.Single)
+// 0x000007A3 UnityEngine.Vector3 FunkyCode.LightingPosition::GetCameraCustomPosition(UnityEngine.Camera,System.Single)
 extern void LightingPosition_GetCameraCustomPosition_m91B1E6C0F2ED875D4E096C0844AAB4C6BAF981D2 (void);
-// 0x0000079C System.Single FunkyCode.LightingPosition::GetCameraRotation(UnityEngine.Camera)
+// 0x000007A4 System.Single FunkyCode.LightingPosition::GetCameraRotation(UnityEngine.Camera)
 extern void LightingPosition_GetCameraRotation_m292301C66F6E7FAF8D085B56E115EBB4BD851FBD (void);
-// 0x0000079D System.Void FunkyCode.LightingPosition::.ctor()
+// 0x000007A5 System.Void FunkyCode.LightingPosition::.ctor()
 extern void LightingPosition__ctor_mEB21690C3258649ED5512DABEA4C605F3008D81B (void);
-// 0x0000079E UnityEngine.Mesh FunkyCode.LightingRender2D::GetMesh()
+// 0x000007A6 UnityEngine.Mesh FunkyCode.LightingRender2D::GetMesh()
 extern void LightingRender2D_GetMesh_m9B6E30EC800EAC75D8EEA846D6FF817585B32BD0 (void);
-// 0x0000079F UnityEngine.Vector2Int FunkyCode.LightingRender2D::GetTextureSize(FunkyCode.LightingSettings.LightingSourceTextureSize)
+// 0x000007A7 UnityEngine.Vector2Int FunkyCode.LightingRender2D::GetTextureSize(FunkyCode.LightingSettings.LightingSourceTextureSize)
 extern void LightingRender2D_GetTextureSize_m9C64B55736378E6903D15AC9EB43DDF81F5045C2 (void);
-// 0x000007A0 UnityEngine.Vector3 FunkyCode.LightingRender2D::GetSize(UnityEngine.Camera)
+// 0x000007A8 UnityEngine.Vector3 FunkyCode.LightingRender2D::GetSize(UnityEngine.Camera)
 extern void LightingRender2D_GetSize_m2BB8C13EFCB49A35D7C53EEDE30C16A4B2B17BE1 (void);
-// 0x000007A1 System.Void FunkyCode.LightingRender2D::PostRender(FunkyCode.LightMainBuffer2D)
+// 0x000007A9 System.Void FunkyCode.LightingRender2D::PostRender(FunkyCode.LightMainBuffer2D)
 extern void LightingRender2D_PostRender_m9E3381AD53537534EC76AE1C2C08174BE8F33C7A (void);
-// 0x000007A2 System.Void FunkyCode.LightingRender2D::OnRender(FunkyCode.LightMainBuffer2D)
+// 0x000007AA System.Void FunkyCode.LightingRender2D::OnRender(FunkyCode.LightMainBuffer2D)
 extern void LightingRender2D_OnRender_mD4787E88700474CF6F4F45688C57533E56C485B8 (void);
-// 0x000007A3 System.Void FunkyCode.LightingRender2D::PreRender(FunkyCode.LightMainBuffer2D)
+// 0x000007AB System.Void FunkyCode.LightingRender2D::PreRender(FunkyCode.LightMainBuffer2D)
 extern void LightingRender2D_PreRender_m05E3BDE42C4EECA6D6D78BE3F29034C8621B92A8 (void);
-// 0x000007A4 System.Void FunkyCode.LightingRender2D::.ctor()
+// 0x000007AC System.Void FunkyCode.LightingRender2D::.ctor()
 extern void LightingRender2D__ctor_m3B77829290801E683BB9DEAFCD943EC67175FF44 (void);
-// 0x000007A5 System.Void FunkyCode.LightTexture::.ctor(System.Int32,System.Int32,System.Int32,UnityEngine.RenderTextureFormat)
+// 0x000007AD System.Void FunkyCode.LightTexture::.ctor(System.Int32,System.Int32,System.Int32,UnityEngine.RenderTextureFormat)
 extern void LightTexture__ctor_m56FEA673A9779AF031B8277D8A051693ABDF9662 (void);
-// 0x000007A6 System.Void FunkyCode.LightTexture::.ctor(System.Int32,System.Int32,System.Int32)
+// 0x000007AE System.Void FunkyCode.LightTexture::.ctor(System.Int32,System.Int32,System.Int32)
 extern void LightTexture__ctor_mB4B679F2C5A7FD62C77FB6C4384E75F6DD6F6AC1 (void);
-// 0x000007A7 System.Void FunkyCode.LightTexture::Create()
+// 0x000007AF System.Void FunkyCode.LightTexture::Create()
 extern void LightTexture_Create_m61B91D4E3F1072FDCBA50B1759E4DA419473E999 (void);
-// 0x000007A8 System.Void FunkyCode.MeshBrush::.ctor()
+// 0x000007B0 System.Void FunkyCode.MeshBrush::.ctor()
 extern void MeshBrush__ctor_m0054B9BFFF1F4AE4390A0D4304C8C3516A75FD34 (void);
-// 0x000007A9 System.Void FunkyCode.MeshBrush::Clear()
+// 0x000007B1 System.Void FunkyCode.MeshBrush::Clear()
 extern void MeshBrush_Clear_m8891F12B7688675ACFB27C2D58E58DD870B5EA00 (void);
-// 0x000007AA System.Void FunkyCode.MeshBrush::AddMesh(UnityEngine.Mesh,UnityEngine.Vector3)
+// 0x000007B2 System.Void FunkyCode.MeshBrush::AddMesh(UnityEngine.Mesh,UnityEngine.Vector3)
 extern void MeshBrush_AddMesh_m8AE58E36F3FD23F5DA3FD8BE623F21D2DAB89468 (void);
-// 0x000007AB UnityEngine.Mesh FunkyCode.MeshBrush::Export()
+// 0x000007B3 UnityEngine.Mesh FunkyCode.MeshBrush::Export()
 extern void MeshBrush_Export_m6FF249CAA9B1C845640F195F353130E1DD61B41B (void);
-// 0x000007AC FunkyCode.MeshObject FunkyCode.MeshObject::Get(UnityEngine.Mesh)
+// 0x000007B4 FunkyCode.MeshObject FunkyCode.MeshObject::Get(UnityEngine.Mesh)
 extern void MeshObject_Get_m92D15EB001A8D4835EA235E67D87C1789FE792EC (void);
-// 0x000007AD System.Void FunkyCode.MeshObject::.ctor()
+// 0x000007B5 System.Void FunkyCode.MeshObject::.ctor()
 extern void MeshObject__ctor_m2336C98651A0DFD6DB1F08DFC07748F3CEF64EF1 (void);
-// 0x000007AE System.Void FunkyCode.SpriteTransform::.ctor(FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x000007B6 System.Void FunkyCode.SpriteTransform::.ctor(FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void SpriteTransform__ctor_m8C5BCCD58E556BDBD2ED704514DB300733E9C91E (void);
-// 0x000007AF FunkyCode.Light2D FunkyCode.LightBuffer2D::get_Light()
+// 0x000007B7 FunkyCode.Light2D FunkyCode.LightBuffer2D::get_Light()
 extern void LightBuffer2D_get_Light_m34DF8549D4351ECB8570B0D1207DC3C79E0923ED (void);
-// 0x000007B0 System.Void FunkyCode.LightBuffer2D::set_Light(FunkyCode.Light2D)
+// 0x000007B8 System.Void FunkyCode.LightBuffer2D::set_Light(FunkyCode.Light2D)
 extern void LightBuffer2D_set_Light_m8702BF8DF953B6166616FA7F92350A87A8DB726E (void);
-// 0x000007B1 System.Boolean FunkyCode.LightBuffer2D::get_Free()
+// 0x000007B9 System.Boolean FunkyCode.LightBuffer2D::get_Free()
 extern void LightBuffer2D_get_Free_mECE91C64DC709443B70C14EF1ADEC4228737E511 (void);
-// 0x000007B2 System.Void FunkyCode.LightBuffer2D::.ctor()
+// 0x000007BA System.Void FunkyCode.LightBuffer2D::.ctor()
 extern void LightBuffer2D__ctor_mA59C7D8F3C547AF4916FC6BCDAE4330F2F30BD85 (void);
-// 0x000007B3 System.Void FunkyCode.LightBuffer2D::Clear()
+// 0x000007BB System.Void FunkyCode.LightBuffer2D::Clear()
 extern void LightBuffer2D_Clear_mFAD5F9C33B451A54D20033DAD51D481A5D3A30DB (void);
-// 0x000007B4 System.Void FunkyCode.LightBuffer2D::DestroySelf()
+// 0x000007BC System.Void FunkyCode.LightBuffer2D::DestroySelf()
 extern void LightBuffer2D_DestroySelf_mA942C48BC1B38A6A4E55B5B7FEF2040BADFDEDA6 (void);
-// 0x000007B5 System.Void FunkyCode.LightBuffer2D::Initiate(UnityEngine.Vector2Int)
+// 0x000007BD System.Void FunkyCode.LightBuffer2D::Initiate(UnityEngine.Vector2Int)
 extern void LightBuffer2D_Initiate_mE437B09AA61516FAE4988DF1B8EE355CF94BD61E (void);
-// 0x000007B6 System.Void FunkyCode.LightBuffer2D::Render()
+// 0x000007BE System.Void FunkyCode.LightBuffer2D::Render()
 extern void LightBuffer2D_Render_m843A06A1AE49D2B061467E149CF76A66FCB9AE80 (void);
-// 0x000007B7 System.Void FunkyCode.LightBuffer2D::.cctor()
+// 0x000007BF System.Void FunkyCode.LightBuffer2D::.cctor()
 extern void LightBuffer2D__cctor_m5E24D11507DEDDCC9493EF6814F3A1BDF7106AB3 (void);
-// 0x000007B8 System.Boolean FunkyCode.LightMainBuffer2D::get_IsActive()
+// 0x000007C0 System.Boolean FunkyCode.LightMainBuffer2D::get_IsActive()
 extern void LightMainBuffer2D_get_IsActive_m33140BAEC2A598D00C477A12E3F6CD26257F5207 (void);
-// 0x000007B9 System.Void FunkyCode.LightMainBuffer2D::.ctor(System.Boolean,FunkyCode.LightMainBuffer2D/Type,FunkyCode.LightingSettings.HDR,FunkyCode.CameraSettings,FunkyCode.CameraLightmap)
+// 0x000007C1 System.Void FunkyCode.LightMainBuffer2D::.ctor(System.Boolean,FunkyCode.LightMainBuffer2D/Type,FunkyCode.LightingSettings.HDR,FunkyCode.CameraSettings,FunkyCode.CameraLightmap)
 extern void LightMainBuffer2D__ctor_m5512E01F93249E9325504F3D4E4ACFD7AE630830 (void);
-// 0x000007BA System.Void FunkyCode.LightMainBuffer2D::Clear()
+// 0x000007C2 System.Void FunkyCode.LightMainBuffer2D::Clear()
 extern void LightMainBuffer2D_Clear_m38D601C466BF63B3DCFA524483256C46BE6DCFF8 (void);
-// 0x000007BB System.Void FunkyCode.LightMainBuffer2D::DestroySelf()
+// 0x000007C3 System.Void FunkyCode.LightMainBuffer2D::DestroySelf()
 extern void LightMainBuffer2D_DestroySelf_m1D3DE8D5D464CD60860E8C658C5B87F95EA81E08 (void);
-// 0x000007BC FunkyCode.LightMainBuffer2D FunkyCode.LightMainBuffer2D::Get(System.Boolean,FunkyCode.CameraSettings,FunkyCode.CameraLightmap,FunkyCode.LightingSettings.LightmapPreset)
+// 0x000007C4 FunkyCode.LightMainBuffer2D FunkyCode.LightMainBuffer2D::Get(System.Boolean,FunkyCode.CameraSettings,FunkyCode.CameraLightmap,FunkyCode.LightingSettings.LightmapPreset)
 extern void LightMainBuffer2D_Get_m9401FF2F439FC8B0DE1982984CAD8D848EBCB915 (void);
-// 0x000007BD FunkyCode.LightingSettings.LightmapPreset FunkyCode.LightMainBuffer2D::GetLightmapPreset()
+// 0x000007C5 FunkyCode.LightingSettings.LightmapPreset FunkyCode.LightMainBuffer2D::GetLightmapPreset()
 extern void LightMainBuffer2D_GetLightmapPreset_m32D483C5692D898FE079D10555D1EE4AE2CEA636 (void);
-// 0x000007BE System.Void FunkyCode.LightMainBuffer2D::ClearMaterial()
+// 0x000007C6 System.Void FunkyCode.LightMainBuffer2D::ClearMaterial()
 extern void LightMainBuffer2D_ClearMaterial_m3C2893EDF0EB197896472C41DDCEC1A542095914 (void);
-// 0x000007BF UnityEngine.Material FunkyCode.LightMainBuffer2D::GetMaterial()
+// 0x000007C7 UnityEngine.Material FunkyCode.LightMainBuffer2D::GetMaterial()
 extern void LightMainBuffer2D_GetMaterial_m1D66521C6DA193340265A778F0B63264F7AA677B (void);
-// 0x000007C0 System.Void FunkyCode.LightMainBuffer2D::Update()
+// 0x000007C8 System.Void FunkyCode.LightMainBuffer2D::Update()
 extern void LightMainBuffer2D_Update_mD9C6A1329AFD5662FDC971E3CB289614A7C7E7C6 (void);
-// 0x000007C1 System.Void FunkyCode.LightMainBuffer2D::Render()
+// 0x000007C9 System.Void FunkyCode.LightMainBuffer2D::Render()
 extern void LightMainBuffer2D_Render_mB25C002FCB20DB2B1A7B965A398FD8138A48C047 (void);
-// 0x000007C2 System.Void FunkyCode.LightMainBuffer2D::.cctor()
+// 0x000007CA System.Void FunkyCode.LightMainBuffer2D::.cctor()
 extern void LightMainBuffer2D__cctor_m28E92602614BFE2E5611F4EA061EF9661F13D69D (void);
-// 0x000007C3 System.Void FunkyCode.SoftShadowSorter::Set(FunkyCode.Utilities.Polygon2,FunkyCode.Light2D)
+// 0x000007CB System.Void FunkyCode.SoftShadowSorter::Set(FunkyCode.Utilities.Polygon2,FunkyCode.Light2D)
 extern void SoftShadowSorter_Set_m412B552456FD2CC9AD9C035CBF2537E40AA6F5EA (void);
-// 0x000007C4 System.Void FunkyCode.EdgePass::SetVars()
+// 0x000007CC System.Void FunkyCode.EdgePass::SetVars()
 extern void EdgePass_SetVars_mBFF431F83B8E274C615024B33F15E61249F34436 (void);
-// 0x000007C5 System.Void FunkyCode.EdgePass::Generate()
+// 0x000007CD System.Void FunkyCode.EdgePass::Generate()
 extern void EdgePass_Generate_m6689D5C16ADB83E6341FB744E7CE556823CB4286 (void);
-// 0x000007C6 System.Void FunkyCode.EdgePass::Draw()
+// 0x000007CE System.Void FunkyCode.EdgePass::Draw()
 extern void EdgePass_Draw_mBEBFD7FBE4A5D9E66596B8DD25D653A5A69E08CD (void);
-// 0x000007C7 System.Void FunkyCode.EdgePass::.ctor()
+// 0x000007CF System.Void FunkyCode.EdgePass::.ctor()
 extern void EdgePass__ctor_m1BF162F6ED0BCDB1D3B223E31E7D90D59D808EF9 (void);
-// 0x000007C8 System.Void FunkyCode.MaterialSystem::Clear()
+// 0x000007D0 System.Void FunkyCode.MaterialSystem::Clear()
 extern void MaterialSystem_Clear_mAB1C62FBB03CB8390BDEBD3BF3ADAD934271D1A7 (void);
-// 0x000007C9 System.Void FunkyCode.MaterialSystem::Add(UnityEngine.Material,System.Boolean,System.Int32,UnityEngine.Camera,FunkyCode.LightTexture,FunkyCode.LightingSettings.LightmapPreset)
+// 0x000007D1 System.Void FunkyCode.MaterialSystem::Add(UnityEngine.Material,System.Boolean,System.Int32,UnityEngine.Camera,FunkyCode.LightTexture,FunkyCode.LightingSettings.LightmapPreset)
 extern void MaterialSystem_Add_mDA2755E57340BCF37AF776FB0CA85CC7F122C0B0 (void);
-// 0x000007CA System.Void FunkyCode.MaterialSystem::.cctor()
+// 0x000007D2 System.Void FunkyCode.MaterialSystem::.cctor()
 extern void MaterialSystem__cctor_m9F6F891260901BB528EC5D4864EB4B75B0CC1436 (void);
-// 0x000007CB System.Void FunkyCode.GLExtended::ResetColor()
+// 0x000007D3 System.Void FunkyCode.GLExtended::ResetColor()
 extern void GLExtended_ResetColor_m6D438925064CA41F4A4B1CFDBEB29B3A2DA3CB34 (void);
-// 0x000007CC System.Void FunkyCode.GLExtended::DrawMeshPass(FunkyCode.MeshObject,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
+// 0x000007D4 System.Void FunkyCode.GLExtended::DrawMeshPass(FunkyCode.MeshObject,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
 extern void GLExtended_DrawMeshPass_m99D72710AEED7266D85A8FABA2A3C5DD1EBB37DD (void);
-// 0x000007CD System.Void FunkyCode.GLExtended::DrawMeshPass(FunkyCode.MeshObject)
+// 0x000007D5 System.Void FunkyCode.GLExtended::DrawMeshPass(FunkyCode.MeshObject)
 extern void GLExtended_DrawMeshPass_mBAFE56257B2CEAE33E24F86E2A491A263589D9AF (void);
-// 0x000007CE System.Void FunkyCode.GLExtended::DrawMeshPass(System.Collections.Generic.List`1<FunkyCode.MeshObject>,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
+// 0x000007D6 System.Void FunkyCode.GLExtended::DrawMeshPass(System.Collections.Generic.List`1<FunkyCode.MeshObject>,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
 extern void GLExtended_DrawMeshPass_m6001AE2ECAAC58164B474049DCEF9F61095B4A74 (void);
-// 0x000007CF System.Void FunkyCode.GLExtended::DrawMesh(FunkyCode.MeshObject,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
+// 0x000007D7 System.Void FunkyCode.GLExtended::DrawMesh(FunkyCode.MeshObject,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
 extern void GLExtended_DrawMesh_m0DC1C1911ED4B10950AD764B094137F573A6D6C3 (void);
-// 0x000007D0 System.Void FunkyCode.GLExtended::DrawMesh(System.Collections.Generic.List`1<FunkyCode.MeshObject>,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
+// 0x000007D8 System.Void FunkyCode.GLExtended::DrawMesh(System.Collections.Generic.List`1<FunkyCode.MeshObject>,UnityEngine.Vector3,UnityEngine.Vector2,System.Single)
 extern void GLExtended_DrawMesh_m2CCE4108F1921FF9CFFCECC5DA2F3E634EFE33B9 (void);
-// 0x000007D1 System.Void FunkyCode.GLExtended::.ctor()
+// 0x000007D9 System.Void FunkyCode.GLExtended::.ctor()
 extern void GLExtended__ctor_m2C56894BDC44389D037B02D9040040D840AE02D0 (void);
-// 0x000007D2 System.Void FunkyCode.GLExtended::.cctor()
+// 0x000007DA System.Void FunkyCode.GLExtended::.cctor()
 extern void GLExtended__cctor_m655AB258700F585E4A0DA0F503F43CDD10BAE680 (void);
-// 0x000007D3 System.Void FunkyCode.SceneView::.ctor()
+// 0x000007DB System.Void FunkyCode.SceneView::.ctor()
 extern void SceneView__ctor_mDA61389A9ADB9C696B29EFB57AE5C3B1CEFBEA15 (void);
-// 0x000007D4 System.Void FunkyCode.SceneView::OnDisable()
+// 0x000007DC System.Void FunkyCode.SceneView::OnDisable()
 extern void SceneView_OnDisable_m47F500F7D1C995DE4C7AA141871687AC4963DFB5 (void);
-// 0x000007D5 System.Void FunkyCode.SceneView::OnEnable()
+// 0x000007DD System.Void FunkyCode.SceneView::OnEnable()
 extern void SceneView_OnEnable_m2EC347C36F5FB38BA4D33F14682F420355D1A5F6 (void);
-// 0x000007D6 System.Boolean FunkyCode.SceneView::IsSceneViewActive()
+// 0x000007DE System.Boolean FunkyCode.SceneView::IsSceneViewActive()
 extern void SceneView_IsSceneViewActive_mDDE1CC6F39C3E2F0B5CACA4D1FA06B607B3697BB (void);
-// 0x000007D7 System.Int32 FunkyCode.LayerSetting::GetLayerID()
+// 0x000007DF System.Int32 FunkyCode.LayerSetting::GetLayerID()
 extern void LayerSetting_GetLayerID_m7EB63167B80F7B4340611D5F1A8D6FE86A4AA221 (void);
-// 0x000007D8 System.Void FunkyCode.LayerSetting::.ctor()
+// 0x000007E0 System.Void FunkyCode.LayerSetting::.ctor()
 extern void LayerSetting__ctor_mAF65360FCFAA5C10746BA6ABB3B9161D235DE8F6 (void);
-// 0x000007D9 UnityEngine.Color FunkyCode.DayMaskColor::Get(FunkyCode.DayLightCollider2D)
+// 0x000007E1 UnityEngine.Color FunkyCode.DayMaskColor::Get(FunkyCode.DayLightCollider2D)
 extern void DayMaskColor_Get_m72D7C9830D90F0F2A1D042E2A72E1300732A8A40 (void);
-// 0x000007DA UnityEngine.Color FunkyCode.DayMaskColor::LitAbove()
+// 0x000007E2 UnityEngine.Color FunkyCode.DayMaskColor::LitAbove()
 extern void DayMaskColor_LitAbove_mEF243E4B97D00D19AA2D21DBF034210DC8966936 (void);
-// 0x000007DB System.Void FunkyCode.DayMaskColor::.ctor()
+// 0x000007E3 System.Void FunkyCode.DayMaskColor::.ctor()
 extern void DayMaskColor__ctor_m2E06A970031C97A3AC3C52ADF7EAB8C2125DF80A (void);
-// 0x000007DC UnityEngine.Color FunkyCode.LayerSettingColor::Get(FunkyCode.LightColliderShape,UnityEngine.Vector2,FunkyCode.LayerSetting,FunkyCode.LightSettings.MaskLit,System.Single,System.Single)
+// 0x000007E4 UnityEngine.Color FunkyCode.LayerSettingColor::Get(FunkyCode.LightColliderShape,UnityEngine.Vector2,FunkyCode.LayerSetting,FunkyCode.LightSettings.MaskLit,System.Single,System.Single)
 extern void LayerSettingColor_Get_m0D3B32FDD7761A8543BFFB4143A17A50C9A17C26 (void);
-// 0x000007DD UnityEngine.Color FunkyCode.LayerSettingColor::Get(UnityEngine.Vector2,FunkyCode.LayerSetting,FunkyCode.LightSettings.MaskLit,System.Single,System.Single)
+// 0x000007E5 UnityEngine.Color FunkyCode.LayerSettingColor::Get(UnityEngine.Vector2,FunkyCode.LayerSetting,FunkyCode.LightSettings.MaskLit,System.Single,System.Single)
 extern void LayerSettingColor_Get_m5775E43A443BDB23AB7011FBC604DB26133E9843 (void);
-// 0x000007DE UnityEngine.Color FunkyCode.LayerSettingColor::LitAbove(System.Single,FunkyCode.LayerSetting)
+// 0x000007E6 UnityEngine.Color FunkyCode.LayerSettingColor::LitAbove(System.Single,FunkyCode.LayerSetting)
 extern void LayerSettingColor_LitAbove_mC7BB8086E13D49849FE800254753529ADEC3769A (void);
-// 0x000007DF System.Void FunkyCode.LayerSettingColor::.ctor()
+// 0x000007E7 System.Void FunkyCode.LayerSettingColor::.ctor()
 extern void LayerSettingColor__ctor_mDFDD8EB6BB04B1D1359B905D2B118E961E2DE303 (void);
-// 0x000007E0 System.Boolean FunkyCode.Lighting2D::get_Disable()
+// 0x000007E8 System.Boolean FunkyCode.Lighting2D::get_Disable()
 extern void Lighting2D_get_Disable_mCC9806CDB2F7682F2B5DF5727CDF79B645EFA948 (void);
-// 0x000007E1 FunkyCode.LightingSettings.LightmapPreset[] FunkyCode.Lighting2D::get_LightmapPresets()
+// 0x000007E9 FunkyCode.LightingSettings.LightmapPreset[] FunkyCode.Lighting2D::get_LightmapPresets()
 extern void Lighting2D_get_LightmapPresets_m26B0E07EE1E5319ECEDB05CD004C91DFF4F0EA69 (void);
-// 0x000007E2 FunkyCode.LightingSettings.QualitySettings FunkyCode.Lighting2D::get_QualitySettings()
+// 0x000007EA FunkyCode.LightingSettings.QualitySettings FunkyCode.Lighting2D::get_QualitySettings()
 extern void Lighting2D_get_QualitySettings_m3C1BFADA8FB0346C6F59C08EBF10855F5AF9011E (void);
-// 0x000007E3 FunkyCode.LightingSettings.DayLightingSettings FunkyCode.Lighting2D::get_DayLightingSettings()
+// 0x000007EB FunkyCode.LightingSettings.DayLightingSettings FunkyCode.Lighting2D::get_DayLightingSettings()
 extern void Lighting2D_get_DayLightingSettings_m0B99D0DCA5AE6DBE6A42BEBB57FF4A2B56420231 (void);
-// 0x000007E4 FunkyCode.LightingSettings.RenderingMode FunkyCode.Lighting2D::get_RenderingMode()
+// 0x000007EC FunkyCode.LightingSettings.RenderingMode FunkyCode.Lighting2D::get_RenderingMode()
 extern void Lighting2D_get_RenderingMode_m9EBCE77E8F4A2D5296A22BF15EBA0A53E84EC9F6 (void);
-// 0x000007E5 FunkyCode.LightingSettings.CoreAxis FunkyCode.Lighting2D::get_CoreAxis()
+// 0x000007ED FunkyCode.LightingSettings.CoreAxis FunkyCode.Lighting2D::get_CoreAxis()
 extern void Lighting2D_get_CoreAxis_m90DC46A84269F19BAFA19CF8DAA2050954CE71B8 (void);
-// 0x000007E6 System.Void FunkyCode.Lighting2D::set_DarknessColor(UnityEngine.Color)
+// 0x000007EE System.Void FunkyCode.Lighting2D::set_DarknessColor(UnityEngine.Color)
 extern void Lighting2D_set_DarknessColor_mF429C7A0E66F24353B50F3014D7B99CDE696E137 (void);
-// 0x000007E7 UnityEngine.Color FunkyCode.Lighting2D::get_DarknessColor()
+// 0x000007EF UnityEngine.Color FunkyCode.Lighting2D::get_DarknessColor()
 extern void Lighting2D_get_DarknessColor_m78F8830E82308E6FEB6E10FDBC9B087457D8189E (void);
-// 0x000007E8 System.Void FunkyCode.Lighting2D::set_Resolution(System.Single)
+// 0x000007F0 System.Void FunkyCode.Lighting2D::set_Resolution(System.Single)
 extern void Lighting2D_set_Resolution_m46758073161D5A66BE176CFC0CD507778FD991BE (void);
-// 0x000007E9 System.Single FunkyCode.Lighting2D::get_Resolution()
+// 0x000007F1 System.Single FunkyCode.Lighting2D::get_Resolution()
 extern void Lighting2D_get_Resolution_mC10CDB3ADF0622167F1B8E56C87204FB6266B69A (void);
-// 0x000007EA System.Void FunkyCode.Lighting2D::UpdateByProfile(FunkyCode.LightingSettings.Profile)
+// 0x000007F2 System.Void FunkyCode.Lighting2D::UpdateByProfile(FunkyCode.LightingSettings.Profile)
 extern void Lighting2D_UpdateByProfile_m0E7C752CA64FABBC3603A27591B98A53EC222402 (void);
-// 0x000007EB System.Void FunkyCode.Lighting2D::RemoveProfile()
+// 0x000007F3 System.Void FunkyCode.Lighting2D::RemoveProfile()
 extern void Lighting2D_RemoveProfile_m92B79F1E7A1CE018C6260318BA031048361D9104 (void);
-// 0x000007EC FunkyCode.LightingSettings.Profile FunkyCode.Lighting2D::get_Profile()
+// 0x000007F4 FunkyCode.LightingSettings.Profile FunkyCode.Lighting2D::get_Profile()
 extern void Lighting2D_get_Profile_m36A3403F3BD510CDBB4E94D00EA40438ED91ED2A (void);
-// 0x000007ED FunkyCode.LightingSettings.ProjectSettings FunkyCode.Lighting2D::get_ProjectSettings()
+// 0x000007F5 FunkyCode.LightingSettings.ProjectSettings FunkyCode.Lighting2D::get_ProjectSettings()
 extern void Lighting2D_get_ProjectSettings_m05BDEDB17C8D70E579B4DEBDA2FA481B15478481 (void);
-// 0x000007EE System.Void FunkyCode.Lighting2D::.cctor()
+// 0x000007F6 System.Void FunkyCode.Lighting2D::.cctor()
 extern void Lighting2D__cctor_mE68B65418BB4635B13BC27C799477A3ED33A66FE (void);
-// 0x000007EF FunkyCode.SpriteTiledMesh FunkyCode.SpriteMeshObject::GetTiledMesh()
+// 0x000007F7 FunkyCode.SpriteTiledMesh FunkyCode.SpriteMeshObject::GetTiledMesh()
 extern void SpriteMeshObject_GetTiledMesh_m0A4A4109960A0D9F2A10435280F5C7829C10029D (void);
-// 0x000007F0 System.Void FunkyCode.SpriteMeshObject::.ctor()
+// 0x000007F8 System.Void FunkyCode.SpriteMeshObject::.ctor()
 extern void SpriteMeshObject__ctor_m7294A979233388292A6353432EE6C3096423E512 (void);
-// 0x000007F1 System.Void FunkyCode.SpriteTiledMesh::.ctor()
+// 0x000007F9 System.Void FunkyCode.SpriteTiledMesh::.ctor()
 extern void SpriteTiledMesh__ctor_m853ADC570D1AE580C779A28B8ECBC85953089071 (void);
-// 0x000007F2 FunkyCode.MeshObject FunkyCode.SpriteTiledMesh::GetMesh(UnityEngine.SpriteRenderer)
+// 0x000007FA FunkyCode.MeshObject FunkyCode.SpriteTiledMesh::GetMesh(UnityEngine.SpriteRenderer)
 extern void SpriteTiledMesh_GetMesh_m5FC9391838943FAFF2D80D0832FED227E9A2D183 (void);
-// 0x000007F3 UnityEngine.Mesh FunkyCode.SpriteTiledMesh::Generate(UnityEngine.SpriteRenderer)
+// 0x000007FB UnityEngine.Mesh FunkyCode.SpriteTiledMesh::Generate(UnityEngine.SpriteRenderer)
 extern void SpriteTiledMesh_Generate_mF6DBC0BF59B575EE1B62A9BFFFB368330B25FE0C (void);
-// 0x000007F4 System.Void FunkyCode.Utilities.Mesh2D::Initialize()
+// 0x000007FC System.Void FunkyCode.Utilities.Mesh2D::Initialize()
 extern void Mesh2D_Initialize_m32C26DBE712EE8352279F8A6463A40C142E9BD65 (void);
-// 0x000007F5 System.Void FunkyCode.Utilities.Mesh2D::OnEnable()
+// 0x000007FD System.Void FunkyCode.Utilities.Mesh2D::OnEnable()
 extern void Mesh2D_OnEnable_m17A798CD9D5010DE5433A0318BFB862BDA40722A (void);
-// 0x000007F6 System.Void FunkyCode.Utilities.Mesh2D::Update()
+// 0x000007FE System.Void FunkyCode.Utilities.Mesh2D::Update()
 extern void Mesh2D_Update_m94676797F259ED453C1A027DE0DBB833E5001E49 (void);
-// 0x000007F7 System.Void FunkyCode.Utilities.Mesh2D::.ctor()
+// 0x000007FF System.Void FunkyCode.Utilities.Mesh2D::.ctor()
 extern void Mesh2D__ctor_m9F5C1236E4239FDBC26EA05A8557505F28BC025D (void);
-// 0x000007F8 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetVertexLit()
+// 0x00000800 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetVertexLit()
 extern void MaterialManager_GetVertexLit_m34933B0C0B7CF7BE6A251401DFDF4119AA639915 (void);
-// 0x000007F9 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAdditive()
+// 0x00000801 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAdditive()
 extern void MaterialManager_GetAdditive_m066E5D846DC0AA95AEDA0B223FCF601BA6281F46 (void);
-// 0x000007FA FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAlpha()
+// 0x00000802 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAlpha()
 extern void MaterialManager_GetAlpha_mC90EA9077DE198AD3E511B1F9A2123FA04B0264F (void);
-// 0x000007FB FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetSprite()
+// 0x00000803 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetSprite()
 extern void MaterialManager_GetSprite_m8B3641718DBFEAB8B37C327AC0246C820529325A (void);
-// 0x000007FC FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetVertexLitCopy()
+// 0x00000804 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetVertexLitCopy()
 extern void MaterialManager_GetVertexLitCopy_m310BE1FAE6CBED309665B7FD86C19F6A039FAE9A (void);
-// 0x000007FD FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAdditiveCopy()
+// 0x00000805 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAdditiveCopy()
 extern void MaterialManager_GetAdditiveCopy_m5703D436F26A104F8B1AF15E7718EC04384329B4 (void);
-// 0x000007FE FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAlphaCopy()
+// 0x00000806 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetAlphaCopy()
 extern void MaterialManager_GetAlphaCopy_mFBD6D2C04E32F6F477CF40BFA857AD4D9176C986 (void);
-// 0x000007FF FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetSpriteCopy()
+// 0x00000807 FunkyCode.Utilities.SmartMaterial FunkyCode.Utilities.MaterialManager::GetSpriteCopy()
 extern void MaterialManager_GetSpriteCopy_m92C106628DD345B2D35865631F723A6476A742B4 (void);
-// 0x00000800 System.Void FunkyCode.Utilities.MaterialManager::.ctor()
+// 0x00000808 System.Void FunkyCode.Utilities.MaterialManager::.ctor()
 extern void MaterialManager__ctor_mB664AC6711B9377BD542C976B093C351F60099F0 (void);
-// 0x00000801 System.Void FunkyCode.Utilities.Max2D::DrawTriangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,UnityEngine.Vector2,System.Single)
+// 0x00000809 System.Void FunkyCode.Utilities.Max2D::DrawTriangle(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,UnityEngine.Vector2,System.Single)
 extern void Max2D_DrawTriangle_m5DAAFD6E7CFF0F27AD807E7350B9F788A639940C (void);
-// 0x00000802 System.Void FunkyCode.Utilities.Max2D::DrawTriangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x0000080A System.Void FunkyCode.Utilities.Max2D::DrawTriangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Max2D_DrawTriangle_m701232CDD963AA013764E08C39011DD3D7EB626B (void);
-// 0x00000803 System.Void FunkyCode.Utilities.Max2D::DrawTriangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x0000080B System.Void FunkyCode.Utilities.Max2D::DrawTriangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Max2D_DrawTriangle_m86C13EBB7C5FE93C5728E2BCF12768279DCA564F (void);
-// 0x00000804 System.Void FunkyCode.Utilities.Max2D::DrawQuad(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x0000080C System.Void FunkyCode.Utilities.Max2D::DrawQuad(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Max2D_DrawQuad_m3AF6438AB7D8F003B1EB119C006580F4A0D5784C (void);
-// 0x00000805 System.Void FunkyCode.Utilities.Max2D::.ctor()
+// 0x0000080D System.Void FunkyCode.Utilities.Max2D::.ctor()
 extern void Max2D__ctor_mF48EA8F7BA8216FB9D39AD59C3912F0300B40256 (void);
-// 0x00000806 System.Void FunkyCode.Utilities.Max2D::.cctor()
+// 0x0000080E System.Void FunkyCode.Utilities.Max2D::.cctor()
 extern void Max2D__cctor_mC31C36FFC3F8093F44DC99A6328305CD41E65F14 (void);
-// 0x00000807 System.Void FunkyCode.Utilities.Mesh2DSubmesh::.ctor(System.Int32)
+// 0x0000080F System.Void FunkyCode.Utilities.Mesh2DSubmesh::.ctor(System.Int32)
 extern void Mesh2DSubmesh__ctor_mD0E66BE2DBB01B3704F7DE9E5F18A41C95656182 (void);
-// 0x00000808 System.Void FunkyCode.Utilities.Mesh2DMesh::Add(FunkyCode.Utilities.Mesh2DSubmesh)
+// 0x00000810 System.Void FunkyCode.Utilities.Mesh2DMesh::Add(FunkyCode.Utilities.Mesh2DSubmesh)
 extern void Mesh2DMesh_Add_mB65776B924DCBBB890F3E2234C6C5FFB03B6D46B (void);
-// 0x00000809 System.Void FunkyCode.Utilities.Mesh2DMesh::.ctor()
+// 0x00000811 System.Void FunkyCode.Utilities.Mesh2DMesh::.ctor()
 extern void Mesh2DMesh__ctor_mC29F036EB37801B81FD2F31D4A04B68FFEF98831 (void);
-// 0x0000080A System.Void FunkyCode.Utilities.Max2DMesh::Draw(UnityEngine.Mesh,UnityEngine.Transform,UnityEngine.Material)
+// 0x00000812 System.Void FunkyCode.Utilities.Max2DMesh::Draw(UnityEngine.Mesh,UnityEngine.Transform,UnityEngine.Material)
 extern void Max2DMesh_Draw_mB0CE846296D1E6F2232CCB83E071D9319879F215 (void);
-// 0x0000080B System.Void FunkyCode.Utilities.Max2DMesh::Draw(UnityEngine.Mesh,UnityEngine.Material)
+// 0x00000813 System.Void FunkyCode.Utilities.Max2DMesh::Draw(UnityEngine.Mesh,UnityEngine.Material)
 extern void Max2DMesh_Draw_m3BC77664FE89FB3FFDC1336FA9C2F165D9F5E632 (void);
-// 0x0000080C UnityEngine.Mesh FunkyCode.Utilities.Max2DMesh::CreatePolygon(UnityEngine.Transform,FunkyCode.Utilities.Polygon2D,System.Single,System.Single,System.Boolean)
+// 0x00000814 UnityEngine.Mesh FunkyCode.Utilities.Max2DMesh::CreatePolygon(UnityEngine.Transform,FunkyCode.Utilities.Polygon2D,System.Single,System.Single,System.Boolean)
 extern void Max2DMesh_CreatePolygon_m60812B97D8A2D61C09CABBFAFB347CDC3B11E393 (void);
-// 0x0000080D FunkyCode.Utilities.Mesh2DSubmesh FunkyCode.Utilities.Max2DMesh::CreateLine(FunkyCode.Utilities.Pair2D,UnityEngine.Vector3,System.Single,System.Single)
+// 0x00000815 FunkyCode.Utilities.Mesh2DSubmesh FunkyCode.Utilities.Max2DMesh::CreateLine(FunkyCode.Utilities.Pair2D,UnityEngine.Vector3,System.Single,System.Single)
 extern void Max2DMesh_CreateLine_m7F62ADF87A9A52472FF26EFB014ED0B1ED730275 (void);
-// 0x0000080E UnityEngine.Mesh FunkyCode.Utilities.Max2DMesh::Export(FunkyCode.Utilities.Mesh2DMesh)
+// 0x00000816 UnityEngine.Mesh FunkyCode.Utilities.Max2DMesh::Export(FunkyCode.Utilities.Mesh2DMesh)
 extern void Max2DMesh_Export_mD09C0583C299FB2919E65CDC9991180C899A4035 (void);
-// 0x0000080F System.Void FunkyCode.Utilities.Max2DMesh::.ctor()
+// 0x00000817 System.Void FunkyCode.Utilities.Max2DMesh::.ctor()
 extern void Max2DMesh__ctor_m980DD10999DE3FF14006F46135C5327AC2326A16 (void);
-// 0x00000810 System.Void FunkyCode.Utilities.Max2DMesh::.cctor()
+// 0x00000818 System.Void FunkyCode.Utilities.Max2DMesh::.cctor()
 extern void Max2DMesh__cctor_m479EC6C0D0E738511E9EF3B8364ED4CCB5CABFF1 (void);
-// 0x00000811 FunkyCode.Utilities.Mesh2DSubmesh FunkyCode.Utilities.Max2DMesh/Legacy::CreateBox(System.Single)
+// 0x00000819 FunkyCode.Utilities.Mesh2DSubmesh FunkyCode.Utilities.Max2DMesh/Legacy::CreateBox(System.Single)
 extern void Legacy_CreateBox_m18772E2FE697056A8542D037E9603B31509A41DC (void);
-// 0x00000812 System.Void FunkyCode.Utilities.Max2DMesh/Legacy::.ctor()
+// 0x0000081A System.Void FunkyCode.Utilities.Max2DMesh/Legacy::.ctor()
 extern void Legacy__ctor_m8FF0DD2B95631C3BC0B7FCB7C3B69C32CCAF7B0C (void);
-// 0x00000813 System.Void FunkyCode.Utilities.SmartMaterial::.ctor(System.String)
+// 0x0000081B System.Void FunkyCode.Utilities.SmartMaterial::.ctor(System.String)
 extern void SmartMaterial__ctor_mBA8A629EABD7980DFCA112DC6E520A459DC88846 (void);
-// 0x00000814 System.Void FunkyCode.Utilities.SmartMaterial::.ctor(FunkyCode.Utilities.SmartMaterial)
+// 0x0000081C System.Void FunkyCode.Utilities.SmartMaterial::.ctor(FunkyCode.Utilities.SmartMaterial)
 extern void SmartMaterial__ctor_m4E7AFDCEE5E26D42EEDEBA99BD16EF8ED33CDBF3 (void);
-// 0x00000815 UnityEngine.Shader FunkyCode.Utilities.SmartMaterial::LoadShader(System.String)
+// 0x0000081D UnityEngine.Shader FunkyCode.Utilities.SmartMaterial::LoadShader(System.String)
 extern void SmartMaterial_LoadShader_mCBF98F406A203BE05E4298D453FD0AAEA509FFEB (void);
-// 0x00000816 System.Void FunkyCode.Utilities.SmartMaterial::SetTexture(UnityEngine.Texture)
+// 0x0000081E System.Void FunkyCode.Utilities.SmartMaterial::SetTexture(UnityEngine.Texture)
 extern void SmartMaterial_SetTexture_mC2664BB21C60456566B866D87777503413767FFB (void);
-// 0x00000817 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint> FunkyCode.Utilities.TriangulationWrapper::ConvertPoints(System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Collections.Generic.Dictionary`2<System.UInt32,UnityEngine.Vector2>)
+// 0x0000081F System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint> FunkyCode.Utilities.TriangulationWrapper::ConvertPoints(System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Collections.Generic.Dictionary`2<System.UInt32,UnityEngine.Vector2>)
 extern void TriangulationWrapper_ConvertPoints_mA257E49930E63075398543FB338EC8ED729A80C4 (void);
-// 0x00000818 UnityEngine.Mesh FunkyCode.Utilities.TriangulationWrapper::CreateMesh(FunkyCode.Utilities.TriangulationWrapper/Polygon)
+// 0x00000820 UnityEngine.Mesh FunkyCode.Utilities.TriangulationWrapper::CreateMesh(FunkyCode.Utilities.TriangulationWrapper/Polygon)
 extern void TriangulationWrapper_CreateMesh_m229398613BFE03A34F8EB5560C7D6CC24E42D996 (void);
-// 0x00000819 UnityEngine.Mesh FunkyCode.Utilities.TriangulationWrapper::CreateTriangle(FunkyCode.Utilities.TriangulationWrapper/Polygon)
+// 0x00000821 UnityEngine.Mesh FunkyCode.Utilities.TriangulationWrapper::CreateTriangle(FunkyCode.Utilities.TriangulationWrapper/Polygon)
 extern void TriangulationWrapper_CreateTriangle_mB547B7E9646904CAC079D79A7801276119115DA8 (void);
-// 0x0000081A UnityEngine.Mesh FunkyCode.Utilities.TriangulationWrapper::CreateMesh(UnityEngine.Vector2[],System.Int32[],UnityEngine.Vector2[])
+// 0x00000822 UnityEngine.Mesh FunkyCode.Utilities.TriangulationWrapper::CreateMesh(UnityEngine.Vector2[],System.Int32[],UnityEngine.Vector2[])
 extern void TriangulationWrapper_CreateMesh_m08C51782EF0D660142251CEC341D47F7528ADC6A (void);
-// 0x0000081B System.Void FunkyCode.Utilities.TriangulationWrapper/Polygon::.ctor()
+// 0x00000823 System.Void FunkyCode.Utilities.TriangulationWrapper/Polygon::.ctor()
 extern void Polygon__ctor_m46779103430DC5AD70CD6306677F7540852508AF (void);
-// 0x0000081C UnityEngine.Vector2 FunkyCode.Utilities.TriangulationWrapper/Polygon::ClosestUV(UnityEngine.Vector2)
+// 0x00000824 UnityEngine.Vector2 FunkyCode.Utilities.TriangulationWrapper/Polygon::ClosestUV(UnityEngine.Vector2)
 extern void Polygon_ClosestUV_m0154B6A5B21168FF95F7C4688047D8DE8365AB43 (void);
-// 0x0000081D System.Void FunkyCode.Utilities.UnityDefaultTriangulator::.ctor(UnityEngine.Vector2[])
+// 0x00000825 System.Void FunkyCode.Utilities.UnityDefaultTriangulator::.ctor(UnityEngine.Vector2[])
 extern void UnityDefaultTriangulator__ctor_m07D8E084AA340BFE4DEF8EE4F084327A183ABD8F (void);
-// 0x0000081E UnityEngine.Mesh FunkyCode.Utilities.UnityDefaultTriangulator::Create(UnityEngine.Vector2[])
+// 0x00000826 UnityEngine.Mesh FunkyCode.Utilities.UnityDefaultTriangulator::Create(UnityEngine.Vector2[])
 extern void UnityDefaultTriangulator_Create_mB3CF3327AA78B43E6ADD963AEC69038FB1A759F9 (void);
-// 0x0000081F System.Int32[] FunkyCode.Utilities.UnityDefaultTriangulator::Triangulate()
+// 0x00000827 System.Int32[] FunkyCode.Utilities.UnityDefaultTriangulator::Triangulate()
 extern void UnityDefaultTriangulator_Triangulate_mAE24E3111D682A4A3CA2F25B6BA2A4C0DB6060D1 (void);
-// 0x00000820 System.Single FunkyCode.Utilities.UnityDefaultTriangulator::Area()
+// 0x00000828 System.Single FunkyCode.Utilities.UnityDefaultTriangulator::Area()
 extern void UnityDefaultTriangulator_Area_m623F6393DE86104C7863DFF5ACD747A13DD51DF6 (void);
-// 0x00000821 System.Boolean FunkyCode.Utilities.UnityDefaultTriangulator::Snip(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])
+// 0x00000829 System.Boolean FunkyCode.Utilities.UnityDefaultTriangulator::Snip(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])
 extern void UnityDefaultTriangulator_Snip_mCBF4AB28910C85894559CD0B57A035E2B1E690B8 (void);
-// 0x00000822 System.Boolean FunkyCode.Utilities.UnityDefaultTriangulator::InsideTriangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x0000082A System.Boolean FunkyCode.Utilities.UnityDefaultTriangulator::InsideTriangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void UnityDefaultTriangulator_InsideTriangle_m977D16A79CE13353FBDE6F32388B15D12A904605 (void);
-// 0x00000823 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2D::TriangulateSimple(FunkyCode.Utilities.Polygon2D,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x0000082B UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2D::TriangulateSimple(FunkyCode.Utilities.Polygon2D,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void PolygonTriangulator2D_TriangulateSimple_m48E665B229B4432B49405EF85B170B936A1BCA2A (void);
-// 0x00000824 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2D::Triangulate(FunkyCode.Utilities.Polygon2D,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
+// 0x0000082C UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2D::Triangulate(FunkyCode.Utilities.Polygon2D,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
 extern void PolygonTriangulator2D_Triangulate_m18A6D04E28B81A84CC1294EE361F56A75FBA4BD8 (void);
-// 0x00000825 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2D::TriangulateAdvanced(FunkyCode.Utilities.Polygon2D,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x0000082D UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2D::TriangulateAdvanced(FunkyCode.Utilities.Polygon2D,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void PolygonTriangulator2D_TriangulateAdvanced_mB12F37EA39776E7592E5B1391F3C86D6FB5A5149 (void);
-// 0x00000826 System.Void FunkyCode.Utilities.PolygonTriangulator2D::.ctor()
+// 0x0000082E System.Void FunkyCode.Utilities.PolygonTriangulator2D::.ctor()
 extern void PolygonTriangulator2D__ctor_m8E8BC466CB5FD9B2A1A53E08A2C0A79D737F9FE3 (void);
-// 0x00000827 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2::TriangulateSimple(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x0000082F UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2::TriangulateSimple(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void PolygonTriangulator2_TriangulateSimple_mAEB5C73A6A7A70C33BED0E42F1D9E64A8B6A3089 (void);
-// 0x00000828 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2::Triangulate(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2/Triangulation)
+// 0x00000830 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2::Triangulate(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2/Triangulation)
 extern void PolygonTriangulator2_Triangulate_mE4C5F390599AD4BA2D19CECC6531D5F0CCB50D27 (void);
-// 0x00000829 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2::TriangulateAdvanced(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000831 UnityEngine.Mesh FunkyCode.Utilities.PolygonTriangulator2::TriangulateAdvanced(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void PolygonTriangulator2_TriangulateAdvanced_m9EDC5E35734E71F8D5389F34531425CC0577F36A (void);
-// 0x0000082A System.Void FunkyCode.Utilities.PolygonTriangulator2::.ctor()
+// 0x00000832 System.Void FunkyCode.Utilities.PolygonTriangulator2::.ctor()
 extern void PolygonTriangulator2__ctor_mB39348C2522F40E97DC73EC41E76EB3E62553737 (void);
-// 0x0000082B System.Void FunkyCode.Utilities.UICanvasScale::Start()
+// 0x00000833 System.Void FunkyCode.Utilities.UICanvasScale::Start()
 extern void UICanvasScale_Start_mF8D4B81E8A0EEF6DEF698D1BE400A74716817A8F (void);
-// 0x0000082C System.Void FunkyCode.Utilities.UICanvasScale::Update()
+// 0x00000834 System.Void FunkyCode.Utilities.UICanvasScale::Update()
 extern void UICanvasScale_Update_mE1847666695B0046910EC8B6B4E5DAFA77E4F2D8 (void);
-// 0x0000082D System.Void FunkyCode.Utilities.UICanvasScale::.ctor()
+// 0x00000835 System.Void FunkyCode.Utilities.UICanvasScale::.ctor()
 extern void UICanvasScale__ctor_m01119D5FB01E56BBFA6A7B344FFDC20BDEE1AFCA (void);
-// 0x0000082E System.Void FunkyCode.Utilities.UITextScale::Start()
+// 0x00000836 System.Void FunkyCode.Utilities.UITextScale::Start()
 extern void UITextScale_Start_m709B1271AD4CF0E45F07B0AFDC37E2643350413D (void);
-// 0x0000082F System.Void FunkyCode.Utilities.UITextScale::Update()
+// 0x00000837 System.Void FunkyCode.Utilities.UITextScale::Update()
 extern void UITextScale_Update_m697ABC308DEB1079280CEAD4555B52D170169CC1 (void);
-// 0x00000830 System.Void FunkyCode.Utilities.UITextScale::.ctor()
+// 0x00000838 System.Void FunkyCode.Utilities.UITextScale::.ctor()
 extern void UITextScale__ctor_mF0CA87178D63D83D23A3B876D20898A2AAD1F10E (void);
-// 0x00000831 UnityEngine.Rect FunkyCode.Utilities.Polygon2::GetRect()
+// 0x00000839 UnityEngine.Rect FunkyCode.Utilities.Polygon2::GetRect()
 extern void Polygon2_GetRect_m074E2CB85407096B95FD4B04F8C16AAC45DD6E97 (void);
-// 0x00000832 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::Copy()
+// 0x0000083A FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::Copy()
 extern void Polygon2_Copy_mA7D49F4272D3BE481E3E6D3540E088AF734639E8 (void);
-// 0x00000833 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::ToWorldSpace(UnityEngine.Transform)
+// 0x0000083B FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::ToWorldSpace(UnityEngine.Transform)
 extern void Polygon2_ToWorldSpace_m8DC611C0D8C40792013A36AA9B28F570FA2AFCFA (void);
-// 0x00000834 System.Void FunkyCode.Utilities.Polygon2::ToScaleSelf(UnityEngine.Vector2,System.Nullable`1<UnityEngine.Vector2>)
+// 0x0000083C System.Void FunkyCode.Utilities.Polygon2::ToScaleSelf(UnityEngine.Vector2,System.Nullable`1<UnityEngine.Vector2>)
 extern void Polygon2_ToScaleSelf_m3E8E98388D9BD81559F36FEACE59B2D7F1E3483D (void);
-// 0x00000835 System.Void FunkyCode.Utilities.Polygon2::ToRotationSelf(System.Single,System.Nullable`1<UnityEngine.Vector2>)
+// 0x0000083D System.Void FunkyCode.Utilities.Polygon2::ToRotationSelf(System.Single,System.Nullable`1<UnityEngine.Vector2>)
 extern void Polygon2_ToRotationSelf_m90EF52F0CCE45AB82A2EC229BD165CC91529D149 (void);
-// 0x00000836 System.Void FunkyCode.Utilities.Polygon2::.ctor(System.Collections.Generic.List`1<UnityEngine.Vector2>)
+// 0x0000083E System.Void FunkyCode.Utilities.Polygon2::.ctor(System.Collections.Generic.List`1<UnityEngine.Vector2>)
 extern void Polygon2__ctor_m46941BB263727804DB0231F07194F294623CBADD (void);
-// 0x00000837 System.Void FunkyCode.Utilities.Polygon2::.ctor(System.Int32)
+// 0x0000083F System.Void FunkyCode.Utilities.Polygon2::.ctor(System.Int32)
 extern void Polygon2__ctor_m330FF437D20FFEA831187CFEC36CD6AA51744F41 (void);
-// 0x00000838 System.Void FunkyCode.Utilities.Polygon2::.ctor(FunkyCode.Utilities.Polygon2D)
+// 0x00000840 System.Void FunkyCode.Utilities.Polygon2::.ctor(FunkyCode.Utilities.Polygon2D)
 extern void Polygon2__ctor_mE4A9C226DB9B4A44263E16BFEFC1D8C1C8A4DAAC (void);
-// 0x00000839 System.Void FunkyCode.Utilities.Polygon2::.ctor(UnityEngine.Vector2[])
+// 0x00000841 System.Void FunkyCode.Utilities.Polygon2::.ctor(UnityEngine.Vector2[])
 extern void Polygon2__ctor_mC87A4819DA3855B47A489238B742A686E8468A3D (void);
-// 0x0000083A System.Void FunkyCode.Utilities.Polygon2::ToOffsetSelf(UnityEngine.Vector2)
+// 0x00000842 System.Void FunkyCode.Utilities.Polygon2::ToOffsetSelf(UnityEngine.Vector2)
 extern void Polygon2_ToOffsetSelf_m4F00B2F74A601DAE56CDF2F3FED11E60CC234FCF (void);
-// 0x0000083B System.Boolean FunkyCode.Utilities.Polygon2::IsClockwise()
+// 0x00000843 System.Boolean FunkyCode.Utilities.Polygon2::IsClockwise()
 extern void Polygon2_IsClockwise_m298AECC3EEDB9F6DC6AEC5F465B610DBEE819CE1 (void);
-// 0x0000083C System.Void FunkyCode.Utilities.Polygon2::Normalize()
+// 0x00000844 System.Void FunkyCode.Utilities.Polygon2::Normalize()
 extern void Polygon2_Normalize_m3F19E90F7CF12CD4E6796197EF4C034CA9323DCD (void);
-// 0x0000083D FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::CreateRect(UnityEngine.Vector2)
+// 0x00000845 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::CreateRect(UnityEngine.Vector2)
 extern void Polygon2_CreateRect_m14E38F1972E5F183C511C477CF30085B97BDE678 (void);
-// 0x0000083E FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::CreateIsometric(UnityEngine.Vector2)
+// 0x00000846 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::CreateIsometric(UnityEngine.Vector2)
 extern void Polygon2_CreateIsometric_m8362E5264BBFD99ED15637B0990216748E481EBF (void);
-// 0x0000083F FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::CreateHexagon(UnityEngine.Vector2)
+// 0x00000847 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2::CreateHexagon(UnityEngine.Vector2)
 extern void Polygon2_CreateHexagon_m0CC62C3D3EEA057EE3762D3CAD3E3B80B27F927F (void);
-// 0x00000840 UnityEngine.Mesh FunkyCode.Utilities.Polygon2::CreateMesh(UnityEngine.GameObject,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2/Triangulation)
+// 0x00000848 UnityEngine.Mesh FunkyCode.Utilities.Polygon2::CreateMesh(UnityEngine.GameObject,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2/Triangulation)
 extern void Polygon2_CreateMesh_m1B9BF198AD29D78D2947A6FE42E56B8A4D525392 (void);
-// 0x00000841 UnityEngine.Mesh FunkyCode.Utilities.Polygon2::CreateMesh(UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2/Triangulation)
+// 0x00000849 UnityEngine.Mesh FunkyCode.Utilities.Polygon2::CreateMesh(UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2/Triangulation)
 extern void Polygon2_CreateMesh_m7C9915ABFE66272CBF9C565F97024442AA700F61 (void);
-// 0x00000842 System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfUNIVERSAL(UnityEngine.Transform)
+// 0x0000084A System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfUNIVERSAL(UnityEngine.Transform)
 extern void Polygon2_ToWorldSpaceSelfUNIVERSAL_m1CA0E88F73C6DE678DB80A48A749DF2E772433FE (void);
-// 0x00000843 System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfXY(UnityEngine.Transform)
+// 0x0000084B System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfXY(UnityEngine.Transform)
 extern void Polygon2_ToWorldSpaceSelfXY_m2521EB48807EE39958276DB87D7A38EFAE80B54D (void);
-// 0x00000844 System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfFlipped(UnityEngine.Transform)
+// 0x0000084C System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfFlipped(UnityEngine.Transform)
 extern void Polygon2_ToWorldSpaceSelfFlipped_mB5CFC3145B05AA9261CF169C862E41FD36FCB61A (void);
-// 0x00000845 System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfXZ(UnityEngine.Transform)
+// 0x0000084D System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfXZ(UnityEngine.Transform)
 extern void Polygon2_ToWorldSpaceSelfXZ_m5CE088333FF5ED7FB8F7895782C15385DBECC847 (void);
-// 0x00000846 System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfXZFlipped(UnityEngine.Transform)
+// 0x0000084E System.Void FunkyCode.Utilities.Polygon2::ToWorldSpaceSelfXZFlipped(UnityEngine.Transform)
 extern void Polygon2_ToWorldSpaceSelfXZFlipped_m15D673BA3752B8A2F7830A51162E26450F28AFA1 (void);
-// 0x00000847 System.Boolean FunkyCode.Utilities.Polygon2::PointInPoly(UnityEngine.Vector2)
+// 0x0000084F System.Boolean FunkyCode.Utilities.Polygon2::PointInPoly(UnityEngine.Vector2)
 extern void Polygon2_PointInPoly_mBC2AEDE6A80211C7061A360D40DCA38258288B18 (void);
-// 0x00000848 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2Collider2D::CreateFromCompositeCollider(UnityEngine.CompositeCollider2D)
+// 0x00000850 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2Collider2D::CreateFromCompositeCollider(UnityEngine.CompositeCollider2D)
 extern void Polygon2Collider2D_CreateFromCompositeCollider_m08D6500541F5206B032F36E50448EE3954B85719 (void);
-// 0x00000849 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromEdgeCollider(UnityEngine.EdgeCollider2D)
+// 0x00000851 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromEdgeCollider(UnityEngine.EdgeCollider2D)
 extern void Polygon2Collider2D_CreateFromEdgeCollider_m9911A1E31FB06886A2F49F561DD375FBEAFBD012 (void);
-// 0x0000084A FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromCircleCollider(UnityEngine.CircleCollider2D,System.Int32)
+// 0x00000852 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromCircleCollider(UnityEngine.CircleCollider2D,System.Int32)
 extern void Polygon2Collider2D_CreateFromCircleCollider_m2C2D5E5E0AF4562C13F4C0EEF1ABD78400E60CE2 (void);
-// 0x0000084B FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromBoxCollider(UnityEngine.BoxCollider2D)
+// 0x00000853 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromBoxCollider(UnityEngine.BoxCollider2D)
 extern void Polygon2Collider2D_CreateFromBoxCollider_m397565E6942E809770B5BFE614049AD66E426D81 (void);
-// 0x0000084C FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider2D,System.Int32)
+// 0x00000854 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider2D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider2D,System.Int32)
 extern void Polygon2Collider2D_CreateFromCapsuleCollider_m661DE2434443BC1884DF0BC45D4F1362BF2FA0C2 (void);
-// 0x0000084D System.Void FunkyCode.Utilities.Polygon2Collider2D::.ctor()
+// 0x00000855 System.Void FunkyCode.Utilities.Polygon2Collider2D::.ctor()
 extern void Polygon2Collider2D__ctor_mAC766921FF31785AD65478811115E9B636D5DBD4 (void);
-// 0x0000084E System.Void FunkyCode.Utilities.Polygon2Collider2D::.cctor()
+// 0x00000856 System.Void FunkyCode.Utilities.Polygon2Collider2D::.cctor()
 extern void Polygon2Collider2D__cctor_mD1282F03524C9A172BB73E5F3DFF0D764D7D7EE6 (void);
-// 0x0000084F FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromBoxCollider(UnityEngine.BoxCollider)
+// 0x00000857 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromBoxCollider(UnityEngine.BoxCollider)
 extern void Polygon2Collider3D_CreateFromBoxCollider_m6CE1C5C1ED995D038DE5D271DA6F169D14DFF76F (void);
-// 0x00000850 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2Collider3D::CreateFromMeshCollider(UnityEngine.MeshCollider)
+// 0x00000858 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2Collider3D::CreateFromMeshCollider(UnityEngine.MeshCollider)
 extern void Polygon2Collider3D_CreateFromMeshCollider_m133F68DA7BAB5C2525E1E564AE096276F4DAD759 (void);
-// 0x00000851 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromSphereCollider(UnityEngine.SphereCollider,System.Int32)
+// 0x00000859 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromSphereCollider(UnityEngine.SphereCollider,System.Int32)
 extern void Polygon2Collider3D_CreateFromSphereCollider_m165CC299C47BA3995E0040038D429D4272FD9DCC (void);
-// 0x00000852 FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider,System.Int32)
+// 0x0000085A FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider,System.Int32)
 extern void Polygon2Collider3D_CreateFromCapsuleCollider_mD32037F0109239DD88298F64B2F4469257CA0C8C (void);
-// 0x00000853 System.Void FunkyCode.Utilities.Polygon2Collider3D::.ctor()
+// 0x0000085B System.Void FunkyCode.Utilities.Polygon2Collider3D::.ctor()
 extern void Polygon2Collider3D__ctor_mB735D372C7393B15F72E954A5ABEA05486B5671D (void);
-// 0x00000854 System.Void FunkyCode.Utilities.Polygon2Collider3D::.cctor()
+// 0x0000085C System.Void FunkyCode.Utilities.Polygon2Collider3D::.cctor()
 extern void Polygon2Collider3D__cctor_m376811A4093485F673580E66EC2B8ABA1246B7DF (void);
-// 0x00000855 FunkyCode.Utilities.Pair2 FunkyCode.Utilities.Polygon2Helper::GetAxis(FunkyCode.Utilities.Polygon2,System.Single)
+// 0x0000085D FunkyCode.Utilities.Pair2 FunkyCode.Utilities.Polygon2Helper::GetAxis(FunkyCode.Utilities.Polygon2,System.Single)
 extern void Polygon2Helper_GetAxis_m2BB4E6F5E72BF9BA9FB2673FD65A0B297DCA7ABB (void);
-// 0x00000856 UnityEngine.Rect FunkyCode.Utilities.Polygon2Helper::GetRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
+// 0x0000085E UnityEngine.Rect FunkyCode.Utilities.Polygon2Helper::GetRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
 extern void Polygon2Helper_GetRect_mE292804BDE16B09EB4FE2D1E92FF1CDA43D86220 (void);
-// 0x00000857 UnityEngine.Rect FunkyCode.Utilities.Polygon2Helper::GetDayRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
+// 0x0000085F UnityEngine.Rect FunkyCode.Utilities.Polygon2Helper::GetDayRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
 extern void Polygon2Helper_GetDayRect_m385E960907D7BA88395D949BE02C8ECD8E1FF29B (void);
-// 0x00000858 UnityEngine.Rect FunkyCode.Utilities.Polygon2Helper::GetIsoRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
+// 0x00000860 UnityEngine.Rect FunkyCode.Utilities.Polygon2Helper::GetIsoRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
 extern void Polygon2Helper_GetIsoRect_m1F22AAADAD3C36076C360B96C556D3DA21B06E1A (void);
-// 0x00000859 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider2D::CreateFromGameObject(UnityEngine.GameObject)
+// 0x00000861 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider2D::CreateFromGameObject(UnityEngine.GameObject)
 extern void Polygon2ListCollider2D_CreateFromGameObject_m0926DF491B5ECCC86B1283FC12981CF1AD946816 (void);
-// 0x0000085A System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider2D::CreateFromPolygonColliderToWorldSpace(UnityEngine.PolygonCollider2D)
+// 0x00000862 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider2D::CreateFromPolygonColliderToWorldSpace(UnityEngine.PolygonCollider2D)
 extern void Polygon2ListCollider2D_CreateFromPolygonColliderToWorldSpace_m2F330C2B15D7FA629E2E2357A4DE74218E79DD9B (void);
-// 0x0000085B System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider2D::CreateFromPolygonColliderToLocalSpace(UnityEngine.PolygonCollider2D)
+// 0x00000863 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider2D::CreateFromPolygonColliderToLocalSpace(UnityEngine.PolygonCollider2D)
 extern void Polygon2ListCollider2D_CreateFromPolygonColliderToLocalSpace_m03C6FF135E9BC1087EA19E67468AD6BC6E0813D0 (void);
-// 0x0000085C System.Void FunkyCode.Utilities.Polygon2ListCollider2D::.ctor()
+// 0x00000864 System.Void FunkyCode.Utilities.Polygon2ListCollider2D::.ctor()
 extern void Polygon2ListCollider2D__ctor_mFDCFA864730BE3647A0EFA6B4C1229F93E8589C1 (void);
-// 0x0000085D System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider3D::CreateFromGameObject(UnityEngine.GameObject)
+// 0x00000865 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider3D::CreateFromGameObject(UnityEngine.GameObject)
 extern void Polygon2ListCollider3D_CreateFromGameObject_m7585C170B6CA1851BDDF53371D143E4B6A43837D (void);
-// 0x0000085E System.Void FunkyCode.Utilities.Polygon2ListCollider3D::.ctor()
+// 0x00000866 System.Void FunkyCode.Utilities.Polygon2ListCollider3D::.ctor()
 extern void Polygon2ListCollider3D__ctor_m48F4471F10868770FE4B9EF67494B02A89D4DDC9 (void);
-// 0x0000085F System.Single FunkyCode.Utilities.Vector2Extensions::Atan2(UnityEngine.Vector2)
+// 0x00000867 System.Single FunkyCode.Utilities.Vector2Extensions::Atan2(UnityEngine.Vector2)
 extern void Vector2Extensions_Atan2_mBE4AB9FA9022AAA1D7F4A5B00D8B2B5FBC1BD924 (void);
-// 0x00000860 System.Single FunkyCode.Utilities.Vector2Extensions::Atan2(UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000868 System.Single FunkyCode.Utilities.Vector2Extensions::Atan2(UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Vector2Extensions_Atan2_m548A3CAE80CDA1FB7AFE893E07F313347420A622 (void);
-// 0x00000861 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::Push(UnityEngine.Vector2,System.Single,System.Single)
+// 0x00000869 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::Push(UnityEngine.Vector2,System.Single,System.Single)
 extern void Vector2Extensions_Push_m18613DE074684B196F3A7D598207E5806D780CDF (void);
-// 0x00000862 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::RotToVec(UnityEngine.Vector2,System.Single,System.Single)
+// 0x0000086A UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::RotToVec(UnityEngine.Vector2,System.Single,System.Single)
 extern void Vector2Extensions_RotToVec_m1A0F398063F3FC3D77E0116FA72713862DB06F4D (void);
-// 0x00000863 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::RotToVec(UnityEngine.Vector2,System.Single)
+// 0x0000086B UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::RotToVec(UnityEngine.Vector2,System.Single)
 extern void Vector2Extensions_RotToVec_m6293604B52B20B22004108BB199E3BB4B12FFE1A (void);
-// 0x00000864 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXY(UnityEngine.Vector2,UnityEngine.Transform)
+// 0x0000086C UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXY(UnityEngine.Vector2,UnityEngine.Transform)
 extern void Vector2Extensions_TransformToWorldXY_m371AA25DB44E6886C622B3CD2E7617773548661A (void);
-// 0x00000865 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXYFlipped(UnityEngine.Vector2,UnityEngine.Transform)
+// 0x0000086D UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXYFlipped(UnityEngine.Vector2,UnityEngine.Transform)
 extern void Vector2Extensions_TransformToWorldXYFlipped_m034DD67734FBB3700EE4324B30511D86FDDCBE05 (void);
-// 0x00000866 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXZFlipped(UnityEngine.Vector2,UnityEngine.Transform)
+// 0x0000086E UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXZFlipped(UnityEngine.Vector2,UnityEngine.Transform)
 extern void Vector2Extensions_TransformToWorldXZFlipped_mC32682014E6C6E4308AFE00090071EC1373463EF (void);
-// 0x00000867 UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXZ(UnityEngine.Vector2,UnityEngine.Transform)
+// 0x0000086F UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXZ(UnityEngine.Vector2,UnityEngine.Transform)
 extern void Vector2Extensions_TransformToWorldXZ_m02BEF95623218C5D55E958A71B47AC921BE257C5 (void);
-// 0x00000868 System.Void FunkyCode.Utilities.DoublePair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000870 System.Void FunkyCode.Utilities.DoublePair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void DoublePair2__ctor_mF7D20AA459BB48C0E0391543249A96E0E1153615 (void);
-// 0x00000869 System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2> FunkyCode.Utilities.DoublePair2::GetList(UnityEngine.Vector2[],System.Boolean)
+// 0x00000871 System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2> FunkyCode.Utilities.DoublePair2::GetList(UnityEngine.Vector2[],System.Boolean)
 extern void DoublePair2_GetList_m192757F21082CA8B87993421CD307D56FA6E1BAB (void);
-// 0x0000086A System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2> FunkyCode.Utilities.DoublePair2::GetListCopy(System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Boolean)
+// 0x00000872 System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2> FunkyCode.Utilities.DoublePair2::GetListCopy(System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Boolean)
 extern void DoublePair2_GetListCopy_m8D4C865818F31C2313D99D71125D351F8C1F4134 (void);
-// 0x0000086B System.Single FunkyCode.Utilities.Math2D::Range(System.Single,System.Single,System.Single)
+// 0x00000873 System.Single FunkyCode.Utilities.Math2D::Range(System.Single,System.Single,System.Single)
 extern void Math2D_Range_m29C0ECFF24560429637FF61D656273DA2489DDBE (void);
-// 0x0000086C System.Single FunkyCode.Utilities.Math2D::NormalizeRotation(System.Single)
+// 0x00000874 System.Single FunkyCode.Utilities.Math2D::NormalizeRotation(System.Single)
 extern void Math2D_NormalizeRotation_m1DC78FC1D6EC415DF1EB43785B739ACE9BA24BEE (void);
-// 0x0000086D UnityEngine.Vector2 FunkyCode.Utilities.Math2D::ClosestPointOnLine(UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000875 UnityEngine.Vector2 FunkyCode.Utilities.Math2D::ClosestPointOnLine(UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Math2D_ClosestPointOnLine_m7B56B8BCAAE41F1C0CA185C9F3250CF2E30940D0 (void);
-// 0x0000086E UnityEngine.Vector2 FunkyCode.Utilities.Math2D::ClosestPointOnLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000876 UnityEngine.Vector2 FunkyCode.Utilities.Math2D::ClosestPointOnLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Math2D_ClosestPointOnLine_m7FFA8FA28127A1780E80D63B5B128902CBDE3323 (void);
-// 0x0000086F UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollRad(UnityEngine.Quaternion)
+// 0x00000877 UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollRad(UnityEngine.Quaternion)
 extern void Math2D_GetPitchYawRollRad_mF22278783BA92877E94698966BB1A66B5641A6E4 (void);
-// 0x00000870 UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollDeg(UnityEngine.Quaternion)
+// 0x00000878 UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollDeg(UnityEngine.Quaternion)
 extern void Math2D_GetPitchYawRollDeg_mA4665114B09AC85B0A3F7EB90D9EBD40987C0DD5 (void);
-// 0x00000871 UnityEngine.Rect FunkyCode.Utilities.Math2D::GetBounds(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x00000879 UnityEngine.Rect FunkyCode.Utilities.Math2D::GetBounds(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Math2D_GetBounds_m86EECFAF71ABDA05973CD85316D2579F0A4A8172 (void);
-// 0x00000872 UnityEngine.Rect FunkyCode.Utilities.Math2D::GetBounds(FunkyCode.Utilities.Pair2D)
+// 0x0000087A UnityEngine.Rect FunkyCode.Utilities.Math2D::GetBounds(FunkyCode.Utilities.Pair2D)
 extern void Math2D_GetBounds_m03591B51DD9B042A5FFE0A3F03758C5D8FAB2ECC (void);
-// 0x00000873 System.Boolean FunkyCode.Utilities.Math2D::PolyInPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+// 0x0000087B System.Boolean FunkyCode.Utilities.Math2D::PolyInPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_PolyInPoly_m2005B6C265E6BA23509F15F68164D719897E2857 (void);
-// 0x00000874 System.Boolean FunkyCode.Utilities.Math2D::PolyCollidePoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+// 0x0000087C System.Boolean FunkyCode.Utilities.Math2D::PolyCollidePoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_PolyCollidePoly_m0F9448D9F6B63F80023A1938DC9BFAFA9B36D68C (void);
-// 0x00000875 System.Boolean FunkyCode.Utilities.Math2D::PolyIntersectPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+// 0x0000087D System.Boolean FunkyCode.Utilities.Math2D::PolyIntersectPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_PolyIntersectPoly_m4BA3BE65B000565E829A2932C0F0CD6116436059 (void);
-// 0x00000876 System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectPoly(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Polygon2D)
+// 0x0000087E System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectPoly(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_SliceIntersectPoly_m6C81FE4D66B918A30587035C387AF1A81F93FCF0 (void);
-// 0x00000877 System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectSlice(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x0000087F System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectSlice(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Math2D_SliceIntersectSlice_mA8CAC5D91AF5959FAF8352DDD372198B8CE91B61 (void);
-// 0x00000878 System.Boolean FunkyCode.Utilities.Math2D::LineIntersectPoly(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Polygon2D)
+// 0x00000880 System.Boolean FunkyCode.Utilities.Math2D::LineIntersectPoly(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_LineIntersectPoly_m718DB089670360D9952D402A51617E935BCE4E29 (void);
-// 0x00000879 System.Boolean FunkyCode.Utilities.Math2D::LineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+// 0x00000881 System.Boolean FunkyCode.Utilities.Math2D::LineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
 extern void Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D (void);
-// 0x0000087A System.Boolean FunkyCode.Utilities.Math2D::PolygonIntersectItself(System.Collections.Generic.List`1<UnityEngine.Vector2>)
+// 0x00000882 System.Boolean FunkyCode.Utilities.Math2D::PolygonIntersectItself(System.Collections.Generic.List`1<UnityEngine.Vector2>)
 extern void Math2D_PolygonIntersectItself_mA3F76A75A3D9162A9E8DBCADA5CE67621F21BC21 (void);
-// 0x0000087B System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectItself(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x00000883 System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectItself(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Math2D_SliceIntersectItself_mA3DCEB7BD84D80FAEEA6E654F9FB2484CDFB9F38 (void);
-// 0x0000087C FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Math2D::GetPointLineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+// 0x00000884 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Math2D::GetPointLineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
 extern void Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1 (void);
-// 0x0000087D System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine2(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+// 0x00000885 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine2(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
 extern void Math2D_GetPointLineIntersectLine2_m3AD0CB15455C9022C4E2B9EBFED19CABD8425F13 (void);
-// 0x0000087E System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine3(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000886 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine3(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Math2D_GetPointLineIntersectLine3_mC183C70C56DB40C66F1A560E75D15639A238BE48 (void);
-// 0x0000087F System.Boolean FunkyCode.Utilities.Math2D::GetPointLineIntersectLine4(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000887 System.Boolean FunkyCode.Utilities.Math2D::GetPointLineIntersectLine4(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Math2D_GetPointLineIntersectLine4_m9FB9EA3E8DDE18923CB7D93C072A4E851C2096F3 (void);
-// 0x00000880 System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(UnityEngine.Vector2,FunkyCode.Utilities.Polygon2)
+// 0x00000888 System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(UnityEngine.Vector2,FunkyCode.Utilities.Polygon2)
 extern void Math2D_PointInPoly_mFC54791B078DDA70D69C102018FB55FAA49C99A1 (void);
-// 0x00000881 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectPoly(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Polygon2D)
+// 0x00000889 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectPoly(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_GetListLineIntersectPoly_m1F80809820CF316CE03077EB004F007C22F34913 (void);
-// 0x00000882 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectSlice(FunkyCode.Utilities.Pair2D,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x0000088A System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectSlice(FunkyCode.Utilities.Pair2D,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Math2D_GetListLineIntersectSlice_mAD5EC5EEAE8982CAB8891ABD5F46789BB8A991DE (void);
-// 0x00000883 System.Boolean FunkyCode.Utilities.Math2D::PolygonIntersectCircle(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Vector2D,System.Single)
+// 0x0000088B System.Boolean FunkyCode.Utilities.Math2D::PolygonIntersectCircle(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Vector2D,System.Single)
 extern void Math2D_PolygonIntersectCircle_m1553932EEAB542031B9658475A34D2F230CC3F1A (void);
-// 0x00000884 System.Boolean FunkyCode.Utilities.Math2D::LineIntersectCircle(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Vector2D,System.Single)
+// 0x0000088C System.Boolean FunkyCode.Utilities.Math2D::LineIntersectCircle(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Vector2D,System.Single)
 extern void Math2D_LineIntersectCircle_mD3026ECB83638C83386A44A0221939C639BE0B3E (void);
-// 0x00000885 System.Single FunkyCode.Utilities.Math2D::IsAPointLeftOfVectorOrOnTheLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x0000088D System.Single FunkyCode.Utilities.Math2D::IsAPointLeftOfVectorOrOnTheLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Math2D_IsAPointLeftOfVectorOrOnTheLine_m30524E6793AB7928EFB79993D79679EE73291894 (void);
-// 0x00000886 System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Polygon2D)
+// 0x0000088E System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Polygon2D)
 extern void Math2D_PointInPoly_m5618FCDE71970AD3DDAAD4567E63101C4D3FCFAA (void);
-// 0x00000887 System.Int32 FunkyCode.Utilities.Math2D::GetQuad(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+// 0x0000088F System.Int32 FunkyCode.Utilities.Math2D::GetQuad(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
 extern void Math2D_GetQuad_m50A6588EE4753E94B608487D55BED79576F4F83D (void);
-// 0x00000888 System.Void FunkyCode.Utilities.Math2D::.cctor()
+// 0x00000890 System.Void FunkyCode.Utilities.Math2D::.cctor()
 extern void Math2D__cctor_m416BEAC1324D85C0C988FDC616650946B89E54C2 (void);
-// 0x00000889 System.Double FunkyCode.Utilities.Mathd::Distance(System.Double,System.Double,System.Double,System.Double)
+// 0x00000891 System.Double FunkyCode.Utilities.Mathd::Distance(System.Double,System.Double,System.Double,System.Double)
 extern void Mathd_Distance_mBC1328C268F1AFDF74AB921F76E10A00F17D2561 (void);
-// 0x0000088A System.Void FunkyCode.Utilities.Mathd::.ctor()
+// 0x00000892 System.Void FunkyCode.Utilities.Mathd::.ctor()
 extern void Mathd__ctor_m95CB76E93ABD2325BB1739BE3EF6AC93B1153EC6 (void);
-// 0x0000088B System.Void FunkyCode.Utilities.Pair2D::.ctor(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+// 0x00000893 System.Void FunkyCode.Utilities.Pair2D::.ctor(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
 extern void Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11 (void);
-// 0x0000088C System.Void FunkyCode.Utilities.Pair2D::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000894 System.Void FunkyCode.Utilities.Pair2D::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Pair2D__ctor_m7E7D9554C47DA531248B3C81E4E6FA7D6564C5DD (void);
-// 0x0000088D System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D> FunkyCode.Utilities.Pair2D::GetList(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Boolean)
+// 0x00000895 System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D> FunkyCode.Utilities.Pair2D::GetList(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Boolean)
 extern void Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B (void);
-// 0x0000088E System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D> FunkyCode.Utilities.Pair2D::GetList(UnityEngine.Vector2[],System.Boolean)
+// 0x00000896 System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D> FunkyCode.Utilities.Pair2D::GetList(UnityEngine.Vector2[],System.Boolean)
 extern void Pair2D_GetList_m23267B4616359CEA93F2347C6FDD23F331D40F13 (void);
-// 0x0000088F FunkyCode.Utilities.Pair2D FunkyCode.Utilities.Pair2D::Zero()
+// 0x00000897 FunkyCode.Utilities.Pair2D FunkyCode.Utilities.Pair2D::Zero()
 extern void Pair2D_Zero_m61E30C11E2494BB93A2AEE0BC3DDA2C7FB97521B (void);
-// 0x00000890 System.Void FunkyCode.Utilities.Pair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000898 System.Void FunkyCode.Utilities.Pair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
 extern void Pair2__ctor_mB59A72EB114EF28EA453943745627230767314C2 (void);
-// 0x00000891 FunkyCode.Utilities.Pair2 FunkyCode.Utilities.Pair2::Zero()
+// 0x00000899 FunkyCode.Utilities.Pair2 FunkyCode.Utilities.Pair2::Zero()
 extern void Pair2_Zero_mA59EC73036BB19DE46798852BE116F0E15A6C2F7 (void);
-// 0x00000892 System.Void FunkyCode.Utilities.Polygon2D::AddPoint(FunkyCode.Utilities.Vector2D)
+// 0x0000089A System.Void FunkyCode.Utilities.Polygon2D::AddPoint(FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_AddPoint_mC493D66CAA0FE45685C9066DF21E5EB7F6E250BB (void);
-// 0x00000893 System.Void FunkyCode.Utilities.Polygon2D::AddPoint(UnityEngine.Vector2)
+// 0x0000089B System.Void FunkyCode.Utilities.Polygon2D::AddPoint(UnityEngine.Vector2)
 extern void Polygon2D_AddPoint_m9A1AB18A204DC98598BCA36D695AA4DAD6F4D5AE (void);
-// 0x00000894 System.Void FunkyCode.Utilities.Polygon2D::AddPoint(System.Single,System.Single)
+// 0x0000089C System.Void FunkyCode.Utilities.Polygon2D::AddPoint(System.Single,System.Single)
 extern void Polygon2D_AddPoint_m3364CA01DB038E7590B90C7EF4822940F50173E4 (void);
-// 0x00000895 System.Void FunkyCode.Utilities.Polygon2D::AddPoints(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x0000089D System.Void FunkyCode.Utilities.Polygon2D::AddPoints(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Polygon2D_AddPoints_m7C5C1D2510059BFD86F25CCF061A3E9B27C3AEAC (void);
-// 0x00000896 System.Void FunkyCode.Utilities.Polygon2D::.ctor()
+// 0x0000089E System.Void FunkyCode.Utilities.Polygon2D::.ctor()
 extern void Polygon2D__ctor_m0488C509A2EDFEF0EFD7C30518FA18F4CD4B569F (void);
-// 0x00000897 System.Void FunkyCode.Utilities.Polygon2D::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x0000089F System.Void FunkyCode.Utilities.Polygon2D::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Polygon2D__ctor_m50AC13E56127E58FF87740730664F37416CF83CB (void);
-// 0x00000898 System.Void FunkyCode.Utilities.Polygon2D::.ctor(FunkyCode.Utilities.Polygon2D)
+// 0x000008A0 System.Void FunkyCode.Utilities.Polygon2D::.ctor(FunkyCode.Utilities.Polygon2D)
 extern void Polygon2D__ctor_mB2EE82BC94AA1B3DE45E59192D2C5C44E403DE02 (void);
-// 0x00000899 System.Void FunkyCode.Utilities.Polygon2D::AddHole(FunkyCode.Utilities.Polygon2D)
+// 0x000008A1 System.Void FunkyCode.Utilities.Polygon2D::AddHole(FunkyCode.Utilities.Polygon2D)
 extern void Polygon2D_AddHole_mF5E9FAD2E9050EAC2D938CF085EAD00B9729D9D7 (void);
-// 0x0000089A System.Boolean FunkyCode.Utilities.Polygon2D::PointInPoly(FunkyCode.Utilities.Vector2D)
+// 0x000008A2 System.Boolean FunkyCode.Utilities.Polygon2D::PointInPoly(FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_PointInPoly_mF06BAD9E1D1141CECA7CAD5F01F4A63853906863 (void);
-// 0x0000089B System.Boolean FunkyCode.Utilities.Polygon2D::PointInPoly(UnityEngine.Vector2)
+// 0x000008A3 System.Boolean FunkyCode.Utilities.Polygon2D::PointInPoly(UnityEngine.Vector2)
 extern void Polygon2D_PointInPoly_mE69AAA354348AF43C5EF8270C69DA808EB2A9556 (void);
-// 0x0000089C System.Boolean FunkyCode.Utilities.Polygon2D::PolyInPoly(FunkyCode.Utilities.Polygon2D)
+// 0x000008A4 System.Boolean FunkyCode.Utilities.Polygon2D::PolyInPoly(FunkyCode.Utilities.Polygon2D)
 extern void Polygon2D_PolyInPoly_m19390FFD88F0A86D1D9184A206EC5B719C03C04A (void);
-// 0x0000089D FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::PointInHole(FunkyCode.Utilities.Vector2D)
+// 0x000008A5 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::PointInHole(FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_PointInHole_m059363AF2580CD61CD04DB225CA8311B30B41A5D (void);
-// 0x0000089E System.Boolean FunkyCode.Utilities.Polygon2D::IsClockwise()
+// 0x000008A6 System.Boolean FunkyCode.Utilities.Polygon2D::IsClockwise()
 extern void Polygon2D_IsClockwise_mE2FB3A9B740D8385FB54CCCAF4627EFCD47FE0BD (void);
-// 0x0000089F System.Void FunkyCode.Utilities.Polygon2D::Normalize()
+// 0x000008A7 System.Void FunkyCode.Utilities.Polygon2D::Normalize()
 extern void Polygon2D_Normalize_m28F69ABC3BF9E098A1BD87AEE850577AEEA8AEEB (void);
-// 0x000008A0 System.Double FunkyCode.Utilities.Polygon2D::GetArea()
+// 0x000008A8 System.Double FunkyCode.Utilities.Polygon2D::GetArea()
 extern void Polygon2D_GetArea_m4355176C0BC74FFC3D3D0CCDBB1441CC26AE6697 (void);
-// 0x000008A1 UnityEngine.Rect FunkyCode.Utilities.Polygon2D::GetRect()
+// 0x000008A9 UnityEngine.Rect FunkyCode.Utilities.Polygon2D::GetRect()
 extern void Polygon2D_GetRect_mD1AFE06EF3921BE3CC9B11CF5AB8EF7E8786E38F (void);
-// 0x000008A2 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2D::LineIntersectHoles(FunkyCode.Utilities.Pair2D)
+// 0x000008AA System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2D::LineIntersectHoles(FunkyCode.Utilities.Pair2D)
 extern void Polygon2D_LineIntersectHoles_m1EA46368DBCB0809849A2A8B2091105171E4559F (void);
-// 0x000008A3 System.Boolean FunkyCode.Utilities.Polygon2D::SliceIntersectPoly(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x000008AB System.Boolean FunkyCode.Utilities.Polygon2D::SliceIntersectPoly(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Polygon2D_SliceIntersectPoly_m115BB7C1737949B2DF80BB53B79D34C1196443A7 (void);
-// 0x000008A4 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2D::SliceIntersectHoles(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x000008AC System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2D::SliceIntersectHoles(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Polygon2D_SliceIntersectHoles_m33F514B9901AF42B08FB375CE6FA4EFD8EADE7D0 (void);
-// 0x000008A5 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Polygon2D::GetListLineIntersectPoly(FunkyCode.Utilities.Pair2D)
+// 0x000008AD System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Polygon2D::GetListLineIntersectPoly(FunkyCode.Utilities.Pair2D)
 extern void Polygon2D_GetListLineIntersectPoly_m9ADF6CCABFDB5B4A0C857316F0A39C573FCA3064 (void);
-// 0x000008A6 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::CreateRect(UnityEngine.Vector2)
+// 0x000008AE FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::CreateRect(UnityEngine.Vector2)
 extern void Polygon2D_CreateRect_mA15A0EAE85DAE1078D60484AD4DC9A2F9A324E16 (void);
-// 0x000008A7 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::CreateIsometric(UnityEngine.Vector2)
+// 0x000008AF FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::CreateIsometric(UnityEngine.Vector2)
 extern void Polygon2D_CreateIsometric_m0127B523F5E4584CD39CF7C07E3D518EE0B964D7 (void);
-// 0x000008A8 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::CreateHexagon(UnityEngine.Vector2)
+// 0x000008B0 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::CreateHexagon(UnityEngine.Vector2)
 extern void Polygon2D_CreateHexagon_mABE5810BE4166C90F745BAB911A613595228131A (void);
-// 0x000008A9 UnityEngine.Mesh FunkyCode.Utilities.Polygon2D::CreateMesh(UnityEngine.GameObject,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
+// 0x000008B1 UnityEngine.Mesh FunkyCode.Utilities.Polygon2D::CreateMesh(UnityEngine.GameObject,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
 extern void Polygon2D_CreateMesh_m034E0D69E05CF72DD78003591305FDD13AC97D0C (void);
-// 0x000008AA UnityEngine.Mesh FunkyCode.Utilities.Polygon2D::CreateMesh(UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
+// 0x000008B2 UnityEngine.Mesh FunkyCode.Utilities.Polygon2D::CreateMesh(UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
 extern void Polygon2D_CreateMesh_m04E04C1C3B4CE77F05262C35ED5CF9075B70F2D3 (void);
-// 0x000008AB UnityEngine.PolygonCollider2D FunkyCode.Utilities.Polygon2D::CreatePolygonCollider(UnityEngine.GameObject)
+// 0x000008B3 UnityEngine.PolygonCollider2D FunkyCode.Utilities.Polygon2D::CreatePolygonCollider(UnityEngine.GameObject)
 extern void Polygon2D_CreatePolygonCollider_m40F7BED8A3E2B5B7D9229DEF281C0A8B62AB0EBC (void);
-// 0x000008AC UnityEngine.EdgeCollider2D FunkyCode.Utilities.Polygon2D::CreateEdgeCollider(UnityEngine.GameObject)
+// 0x000008B4 UnityEngine.EdgeCollider2D FunkyCode.Utilities.Polygon2D::CreateEdgeCollider(UnityEngine.GameObject)
 extern void Polygon2D_CreateEdgeCollider_m040570A15CB983BEBBD7EDFECC7202B3A5B3EB85 (void);
-// 0x000008AD System.Void FunkyCode.Utilities.Polygon2D::SpriteToMesh(UnityEngine.GameObject,FunkyCode.Utilities.VirtualSpriteRenderer,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
+// 0x000008B5 System.Void FunkyCode.Utilities.Polygon2D::SpriteToMesh(UnityEngine.GameObject,FunkyCode.Utilities.VirtualSpriteRenderer,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
 extern void Polygon2D_SpriteToMesh_m1902BF46DA616D02104D086CD2DB5F50CCCE21CA (void);
-// 0x000008AE FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::Copy()
+// 0x000008B6 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::Copy()
 extern void Polygon2D_Copy_mD4E3446C822724D07EF34F06BE05966BDAF7E499 (void);
-// 0x000008AF FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToLocalSpace(UnityEngine.Transform)
+// 0x000008B7 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToLocalSpace(UnityEngine.Transform)
 extern void Polygon2D_ToLocalSpace_m6D3F55F7ABE1E955C3E2DA5FDE90D4D55E6B5EF1 (void);
-// 0x000008B0 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToWorldSpace(UnityEngine.Transform)
+// 0x000008B8 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToWorldSpace(UnityEngine.Transform)
 extern void Polygon2D_ToWorldSpace_m4B1F5F4C3B8C7F5B91704B4FB49CB19E47F2986E (void);
-// 0x000008B1 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToOffset(FunkyCode.Utilities.Vector2D)
+// 0x000008B9 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToOffset(FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_ToOffset_m857893D5CF50480B83ED969B85E89AC29B7A8098 (void);
-// 0x000008B2 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToScale(UnityEngine.Vector2,FunkyCode.Utilities.Vector2D)
+// 0x000008BA FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToScale(UnityEngine.Vector2,FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_ToScale_m153A27B7ACEBC8F848B496BC457FCD33F0C8C37B (void);
-// 0x000008B3 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToRotation(System.Single,FunkyCode.Utilities.Vector2D)
+// 0x000008BB FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2D::ToRotation(System.Single,FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_ToRotation_m40C62C94CDFADBF154DCF04CF7FCC317D7EADC22 (void);
-// 0x000008B4 System.Void FunkyCode.Utilities.Polygon2D::ToScaleItself(UnityEngine.Vector2,FunkyCode.Utilities.Vector2D)
+// 0x000008BC System.Void FunkyCode.Utilities.Polygon2D::ToScaleItself(UnityEngine.Vector2,FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_ToScaleItself_m7B593151C9E048E0B8AB0271F7F5F8FA88B81362 (void);
-// 0x000008B5 System.Void FunkyCode.Utilities.Polygon2D::ToRotationItself(System.Single,FunkyCode.Utilities.Vector2D)
+// 0x000008BD System.Void FunkyCode.Utilities.Polygon2D::ToRotationItself(System.Single,FunkyCode.Utilities.Vector2D)
 extern void Polygon2D_ToRotationItself_m0A9866692F28655D0AD3F87A80346CDE83E99BD3 (void);
-// 0x000008B6 System.Void FunkyCode.Utilities.Polygon2D::ToOffsetItself(UnityEngine.Vector2)
+// 0x000008BE System.Void FunkyCode.Utilities.Polygon2D::ToOffsetItself(UnityEngine.Vector2)
 extern void Polygon2D_ToOffsetItself_m135103EFF1DE37C0CF9BC271FF2CE9613DC79A06 (void);
-// 0x000008B7 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfUNIVERSAL(UnityEngine.Transform)
+// 0x000008BF System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfUNIVERSAL(UnityEngine.Transform)
 extern void Polygon2D_ToWorldSpaceItselfUNIVERSAL_mF2CB6F3D31055A2DDDF8B75974253B79FE5B7124 (void);
-// 0x000008B8 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItself(UnityEngine.Transform)
+// 0x000008C0 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItself(UnityEngine.Transform)
 extern void Polygon2D_ToWorldSpaceItself_m17AEFC3B5DEE060613F049BC8183A17F9C4EFF4B (void);
-// 0x000008B9 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfFlipped(UnityEngine.Transform)
+// 0x000008C1 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfFlipped(UnityEngine.Transform)
 extern void Polygon2D_ToWorldSpaceItselfFlipped_mEF5AD44387108913F24EF7324290DC50DE13F896 (void);
-// 0x000008BA System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfXZ(UnityEngine.Transform)
+// 0x000008C2 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfXZ(UnityEngine.Transform)
 extern void Polygon2D_ToWorldSpaceItselfXZ_m241C7BEC7B0FE97CB161A9B60817724F9CFC8597 (void);
-// 0x000008BB System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfXZFlipped(UnityEngine.Transform)
+// 0x000008C3 System.Void FunkyCode.Utilities.Polygon2D::ToWorldSpaceItselfXZFlipped(UnityEngine.Transform)
 extern void Polygon2D_ToWorldSpaceItselfXZFlipped_mFEFE2B7844D4663CF335C3351A0A4B8A73D755CD (void);
-// 0x000008BC System.Void FunkyCode.Utilities.Polygon2D::.cctor()
+// 0x000008C4 System.Void FunkyCode.Utilities.Polygon2D::.cctor()
 extern void Polygon2D__cctor_m330147D97D8A3FA5BC35960B24C010B852C9BEF3 (void);
-// 0x000008BD System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCompositeCollider(UnityEngine.CompositeCollider2D)
+// 0x000008C5 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCompositeCollider(UnityEngine.CompositeCollider2D)
 extern void Polygon2DCollider2D_CreateFromCompositeCollider_m88DC4886CF5DAEFE11582B26D3205D1E9C1EAC1C (void);
-// 0x000008BE FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromEdgeCollider(UnityEngine.EdgeCollider2D)
+// 0x000008C6 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromEdgeCollider(UnityEngine.EdgeCollider2D)
 extern void Polygon2DCollider2D_CreateFromEdgeCollider_m7FD53084683ABB273591AD81DDFE881738F42CE5 (void);
-// 0x000008BF FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCircleCollider(UnityEngine.CircleCollider2D,System.Int32)
+// 0x000008C7 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCircleCollider(UnityEngine.CircleCollider2D,System.Int32)
 extern void Polygon2DCollider2D_CreateFromCircleCollider_mA86F51E691FBB619062927F0AFEE84D9BA1A6AF2 (void);
-// 0x000008C0 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromBoxCollider(UnityEngine.BoxCollider2D)
+// 0x000008C8 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromBoxCollider(UnityEngine.BoxCollider2D)
 extern void Polygon2DCollider2D_CreateFromBoxCollider_mD737ABB0EBFA0C80BE0D681F36F86B024ABDD919 (void);
-// 0x000008C1 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider2D,System.Int32)
+// 0x000008C9 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider2D,System.Int32)
 extern void Polygon2DCollider2D_CreateFromCapsuleCollider_m18650D7858DA54D10D6E93516AE13A0BD731E4FA (void);
-// 0x000008C2 System.Void FunkyCode.Utilities.Polygon2DCollider2D::.ctor()
+// 0x000008CA System.Void FunkyCode.Utilities.Polygon2DCollider2D::.ctor()
 extern void Polygon2DCollider2D__ctor_m2680037FC60D735FACB2F93E514FBB9F934C47D5 (void);
-// 0x000008C3 System.Void FunkyCode.Utilities.Polygon2DCollider2D::.cctor()
+// 0x000008CB System.Void FunkyCode.Utilities.Polygon2DCollider2D::.cctor()
 extern void Polygon2DCollider2D__cctor_mCBD57223BF18831A428B2A8B8402A8EAF593B482 (void);
-// 0x000008C4 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromBoxCollider(UnityEngine.BoxCollider)
+// 0x000008CC FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromBoxCollider(UnityEngine.BoxCollider)
 extern void Polygon2DCollider3D_CreateFromBoxCollider_m02252A326D424B3ACB9F770735BFE0FD99B453B1 (void);
-// 0x000008C5 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DCollider3D::CreateFromMeshCollider(UnityEngine.MeshCollider)
+// 0x000008CD System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DCollider3D::CreateFromMeshCollider(UnityEngine.MeshCollider)
 extern void Polygon2DCollider3D_CreateFromMeshCollider_mF3C946B7AF4E9C41C6AB0C6F23C5026F3908D5FB (void);
-// 0x000008C6 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromSphereCollider(UnityEngine.SphereCollider,System.Int32)
+// 0x000008CE FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromSphereCollider(UnityEngine.SphereCollider,System.Int32)
 extern void Polygon2DCollider3D_CreateFromSphereCollider_m42FDC1305F02927CB8CD9F62D13CAB155363ED57 (void);
-// 0x000008C7 FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider,System.Int32)
+// 0x000008CF FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider,System.Int32)
 extern void Polygon2DCollider3D_CreateFromCapsuleCollider_mA846EA3C39F76416F2707E8F024B71D7DC79FEC9 (void);
-// 0x000008C8 System.Void FunkyCode.Utilities.Polygon2DCollider3D::.ctor()
+// 0x000008D0 System.Void FunkyCode.Utilities.Polygon2DCollider3D::.ctor()
 extern void Polygon2DCollider3D__ctor_mED725F31A6FCF0A58F1708D0EB8459A38410726C (void);
-// 0x000008C9 System.Void FunkyCode.Utilities.Polygon2DCollider3D::.cctor()
+// 0x000008D1 System.Void FunkyCode.Utilities.Polygon2DCollider3D::.cctor()
 extern void Polygon2DCollider3D__cctor_m9C5393B8FBD26F994D3DD0C0B77A03FA4349DBF3 (void);
-// 0x000008CA UnityEngine.Mesh FunkyCode.Utilities.Polygon2DHelper::CreateMesh(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>,UnityEngine.GameObject,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
+// 0x000008D2 UnityEngine.Mesh FunkyCode.Utilities.Polygon2DHelper::CreateMesh(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>,UnityEngine.GameObject,UnityEngine.Vector2,UnityEngine.Vector2,FunkyCode.Utilities.PolygonTriangulator2D/Triangulation)
 extern void Polygon2DHelper_CreateMesh_m78EA1B4D54A97FD96BC467B6EB4CBEE3A6482E29 (void);
-// 0x000008CB UnityEngine.Rect FunkyCode.Utilities.Polygon2DHelper::GetRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>)
+// 0x000008D3 UnityEngine.Rect FunkyCode.Utilities.Polygon2DHelper::GetRect(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>)
 extern void Polygon2DHelper_GetRect_mB4A904E88BF61E06FBE4CF9BCB1F9126812B6393 (void);
-// 0x000008CC System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider2D::CreateFromPolygonColliderToWorldSpace(UnityEngine.PolygonCollider2D)
+// 0x000008D4 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider2D::CreateFromPolygonColliderToWorldSpace(UnityEngine.PolygonCollider2D)
 extern void Polygon2DListCollider2D_CreateFromPolygonColliderToWorldSpace_mB2E38160777273DB093F191CD7C2856DE88F6C6D (void);
-// 0x000008CD System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider2D::CreateFromPolygonColliderToLocalSpace(UnityEngine.PolygonCollider2D)
+// 0x000008D5 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider2D::CreateFromPolygonColliderToLocalSpace(UnityEngine.PolygonCollider2D)
 extern void Polygon2DListCollider2D_CreateFromPolygonColliderToLocalSpace_m428A31EB8B8036D6C7B23E187DA722FCA39C543C (void);
-// 0x000008CE System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider2D::CreateFromGameObject(UnityEngine.GameObject)
+// 0x000008D6 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider2D::CreateFromGameObject(UnityEngine.GameObject)
 extern void Polygon2DListCollider2D_CreateFromGameObject_m9D9318063789F170E0E23A365C25AAD3E8E66A1D (void);
-// 0x000008CF System.Void FunkyCode.Utilities.Polygon2DListCollider2D::.ctor()
+// 0x000008D7 System.Void FunkyCode.Utilities.Polygon2DListCollider2D::.ctor()
 extern void Polygon2DListCollider2D__ctor_mE9DE6F12DB2C2B82EF16C54BCD95478828CFC3C4 (void);
-// 0x000008D0 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider3D::CreateFromGameObject(UnityEngine.GameObject)
+// 0x000008D8 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D> FunkyCode.Utilities.Polygon2DListCollider3D::CreateFromGameObject(UnityEngine.GameObject)
 extern void Polygon2DListCollider3D_CreateFromGameObject_m3D6C49A97AE5A7896E25EE76708189FE65957D3A (void);
-// 0x000008D1 System.Void FunkyCode.Utilities.Polygon2DListCollider3D::.ctor()
+// 0x000008D9 System.Void FunkyCode.Utilities.Polygon2DListCollider3D::.ctor()
 extern void Polygon2DListCollider3D__ctor_m44EDFCCA6326739D1AF27CB5AB9789301FE87D50 (void);
-// 0x000008D2 System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXY(UnityEngine.Transform)
+// 0x000008DA System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXY(UnityEngine.Transform)
 extern void Vector2D_TransformToWorldXY_mCF99D4FFAE2F58EFAB444B3EE0AA88E3D6736F67 (void);
-// 0x000008D3 System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXYFlipped(UnityEngine.Transform)
+// 0x000008DB System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXYFlipped(UnityEngine.Transform)
 extern void Vector2D_TransformToWorldXYFlipped_mB5D18A3E1E2D34E10D8E94423BE4A0B245B138E9 (void);
-// 0x000008D4 System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXZFlipped(UnityEngine.Transform)
+// 0x000008DC System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXZFlipped(UnityEngine.Transform)
 extern void Vector2D_TransformToWorldXZFlipped_m77E965AD9D5BCDA008F034F3D69536127EBE6447 (void);
-// 0x000008D5 System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXZ(UnityEngine.Transform)
+// 0x000008DD System.Void FunkyCode.Utilities.Vector2D::TransformToWorldXZ(UnityEngine.Transform)
 extern void Vector2D_TransformToWorldXZ_mD9172B0F4D8B3213D05CE547DC344307F6C587DC (void);
-// 0x000008D6 System.String FunkyCode.Utilities.Vector2D::ToString()
+// 0x000008DE System.String FunkyCode.Utilities.Vector2D::ToString()
 extern void Vector2D_ToString_m6BD26DF04A6E80C5C838DA0A54BE2E5353A6B419 (void);
-// 0x000008D7 System.Void FunkyCode.Utilities.Vector2D::.ctor(System.Double,System.Double)
+// 0x000008DF System.Void FunkyCode.Utilities.Vector2D::.ctor(System.Double,System.Double)
 extern void Vector2D__ctor_m4859523908C2D0693A21477878021C3FFA7B0B4F (void);
-// 0x000008D8 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::Zero()
+// 0x000008E0 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::Zero()
 extern void Vector2D_Zero_mA971A082EA6367CDB6C321FE91EBDAE1CC745C74 (void);
-// 0x000008D9 System.Void FunkyCode.Utilities.Vector2D::.ctor(FunkyCode.Utilities.Vector2D)
+// 0x000008E1 System.Void FunkyCode.Utilities.Vector2D::.ctor(FunkyCode.Utilities.Vector2D)
 extern void Vector2D__ctor_m4CBB6B6514F1C67B3CF53D317320786BB4FC9F58 (void);
-// 0x000008DA System.Void FunkyCode.Utilities.Vector2D::.ctor(UnityEngine.Vector2)
+// 0x000008E2 System.Void FunkyCode.Utilities.Vector2D::.ctor(UnityEngine.Vector2)
 extern void Vector2D__ctor_m719F414E728D86859EC8AD3A5DEAFFE788A02D8D (void);
-// 0x000008DB FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::Copy()
+// 0x000008E3 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::Copy()
 extern void Vector2D_Copy_m398D9A905C80AD4A9578B93ACB2EF6E23141E5B1 (void);
-// 0x000008DC System.Void FunkyCode.Utilities.Vector2D::Set(System.Double,System.Double)
+// 0x000008E4 System.Void FunkyCode.Utilities.Vector2D::Set(System.Double,System.Double)
 extern void Vector2D_Set_m5D5E3B10C4B53C0A856575F67B65C8F29B4E1F24 (void);
-// 0x000008DD System.Void FunkyCode.Utilities.Vector2D::Set(FunkyCode.Utilities.Vector2D)
+// 0x000008E5 System.Void FunkyCode.Utilities.Vector2D::Set(FunkyCode.Utilities.Vector2D)
 extern void Vector2D_Set_mADB2CE450701D922C0C56B87AEC4FD52EB592916 (void);
-// 0x000008DE System.Void FunkyCode.Utilities.Vector2D::Push(System.Double,System.Double)
+// 0x000008E6 System.Void FunkyCode.Utilities.Vector2D::Push(System.Double,System.Double)
 extern void Vector2D_Push_m72D3C946BBA5C680C9C99344D6F272FC4DC61F62 (void);
-// 0x000008DF System.Void FunkyCode.Utilities.Vector2D::Push(System.Double,System.Double,UnityEngine.Vector2)
+// 0x000008E7 System.Void FunkyCode.Utilities.Vector2D::Push(System.Double,System.Double,UnityEngine.Vector2)
 extern void Vector2D_Push_mE0CA57E30028DC0CC4D225D96934629401AD31F2 (void);
-// 0x000008E0 System.Void FunkyCode.Utilities.Vector2D::Inc(System.Double,System.Double)
+// 0x000008E8 System.Void FunkyCode.Utilities.Vector2D::Inc(System.Double,System.Double)
 extern void Vector2D_Inc_m0214B68EA4A8B4BF3F1A1CFA78A40453FFCB94FE (void);
-// 0x000008E1 System.Void FunkyCode.Utilities.Vector2D::Dec(System.Double,System.Double)
+// 0x000008E9 System.Void FunkyCode.Utilities.Vector2D::Dec(System.Double,System.Double)
 extern void Vector2D_Dec_m92F6A77BD58172F05BA9241CE6FB32EC1CE89DC6 (void);
-// 0x000008E2 System.Void FunkyCode.Utilities.Vector2D::Inc(FunkyCode.Utilities.Vector2D)
+// 0x000008EA System.Void FunkyCode.Utilities.Vector2D::Inc(FunkyCode.Utilities.Vector2D)
 extern void Vector2D_Inc_mE4280D0095F53432662C051DF31B2A81E5E9C342 (void);
-// 0x000008E3 System.Void FunkyCode.Utilities.Vector2D::Dec(FunkyCode.Utilities.Vector2D)
+// 0x000008EB System.Void FunkyCode.Utilities.Vector2D::Dec(FunkyCode.Utilities.Vector2D)
 extern void Vector2D_Dec_mBFF7C24321AED6F3E2CA4FB4354FFCA6FC45700A (void);
-// 0x000008E4 System.Void FunkyCode.Utilities.Vector2D::RotToVecItself(System.Double)
+// 0x000008EC System.Void FunkyCode.Utilities.Vector2D::RotToVecItself(System.Double)
 extern void Vector2D_RotToVecItself_m4BE5CE5A35F81725DDF580AEE43FCBF0DB0E367A (void);
-// 0x000008E5 System.Double FunkyCode.Utilities.Vector2D::Distance(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+// 0x000008ED System.Double FunkyCode.Utilities.Vector2D::Distance(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
 extern void Vector2D_Distance_m376E79AB3226A29925D1190087C5DE4300103703 (void);
-// 0x000008E6 System.Double FunkyCode.Utilities.Vector2D::Atan2(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+// 0x000008EE System.Double FunkyCode.Utilities.Vector2D::Atan2(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
 extern void Vector2D_Atan2_m4FBF296762B1E951B682A8E608007E4D8A6E14FC (void);
-// 0x000008E7 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::RotToVec(System.Double)
+// 0x000008EF FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::RotToVec(System.Double)
 extern void Vector2D_RotToVec_m8C938AF4CC5844B6D2F2738B596340930BFB598A (void);
-// 0x000008E8 System.Double FunkyCode.Utilities.Vector2D::VecToRot(UnityEngine.Vector2)
+// 0x000008F0 System.Double FunkyCode.Utilities.Vector2D::VecToRot(UnityEngine.Vector2)
 extern void Vector2D_VecToRot_m5022A96DDBDDE480BBAC5FF0CBE522D34A69F0A4 (void);
-// 0x000008E9 UnityEngine.Vector2 FunkyCode.Utilities.Vector2D::ToVector2()
+// 0x000008F1 UnityEngine.Vector2 FunkyCode.Utilities.Vector2D::ToVector2()
 extern void Vector2D_ToVector2_mEB207166459A5A41B39A46F44F8B66E228F9DA38 (void);
-// 0x000008EA UnityEngine.Vector3 FunkyCode.Utilities.Vector2D::ToVector3()
+// 0x000008F2 UnityEngine.Vector3 FunkyCode.Utilities.Vector2D::ToVector3()
 extern void Vector2D_ToVector3_m9C0146A2C5DA42F0682377677CCEA5A65CDBB000 (void);
-// 0x000008EB FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Addition(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+// 0x000008F3 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Addition(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
 extern void Vector2D_op_Addition_mB455D058E6394C9EB66C3C1B5B9FA9FEED8BAD27 (void);
-// 0x000008EC FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Subtraction(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+// 0x000008F4 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Subtraction(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
 extern void Vector2D_op_Subtraction_mAA0CEE97D05EBFFCD0A177AF98DAFD6AF1E5895D (void);
-// 0x000008ED FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Division(FunkyCode.Utilities.Vector2D,System.Single)
+// 0x000008F5 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Division(FunkyCode.Utilities.Vector2D,System.Single)
 extern void Vector2D_op_Division_m62FEE4B0AC1EDC52F310C64A975FA43B28117167 (void);
-// 0x000008EE FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Multiply(FunkyCode.Utilities.Vector2D,System.Single)
+// 0x000008F6 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Multiply(FunkyCode.Utilities.Vector2D,System.Single)
 extern void Vector2D_op_Multiply_m3BBF4B8D143F70CB1949CDD89A9D8513F2177FBD (void);
-// 0x000008EF FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Subtraction(FunkyCode.Utilities.Vector2D,System.Single)
+// 0x000008F7 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Subtraction(FunkyCode.Utilities.Vector2D,System.Single)
 extern void Vector2D_op_Subtraction_m39811D725B0895686B96765333FD61FFDB7262E0 (void);
-// 0x000008F0 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Addition(FunkyCode.Utilities.Vector2D,System.Single)
+// 0x000008F8 FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Vector2D::op_Addition(FunkyCode.Utilities.Vector2D,System.Single)
 extern void Vector2D_op_Addition_mDCEB242188F504B63BD95E6D9AD3F9CA43BA38AD (void);
-// 0x000008F1 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::ToWorldSpace(UnityEngine.Transform,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x000008F9 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::ToWorldSpace(UnityEngine.Transform,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Vector2DList_ToWorldSpace_m20A33617F9E1CBD47BD7610756D45A43FE69C732 (void);
-// 0x000008F2 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListSortedToPoint(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Vector2D)
+// 0x000008FA System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListSortedToPoint(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Vector2D)
 extern void Vector2DList_GetListSortedToPoint_m0CD656853290B66F0806688F5D9B75ED11321592 (void);
-// 0x000008F3 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListStartingPoint(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Vector2D)
+// 0x000008FB System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListStartingPoint(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Vector2D)
 extern void Vector2DList_GetListStartingPoint_mA52498AE18187ACEA0F04177BAD4A58D1E74F721 (void);
-// 0x000008F4 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListStartingIntersectLine(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Pair2D)
+// 0x000008FC System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListStartingIntersectLine(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Pair2D)
 extern void Vector2DList_GetListStartingIntersectLine_m46FE7B3B122B7C8681482656A6E51DD332CE8430 (void);
-// 0x000008F5 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListStartingIntersectSlice(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+// 0x000008FD System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Vector2DList::GetListStartingIntersectSlice(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 extern void Vector2DList_GetListStartingIntersectSlice_m3296F9B19242316DD039360C005D02DE8CAEE773 (void);
-// 0x000008F6 System.Void FunkyCode.Utilities.Vector2DList::.ctor()
+// 0x000008FE System.Void FunkyCode.Utilities.Vector2DList::.ctor()
 extern void Vector2DList__ctor_m728229304C68814FCD7C10B404FB17615EA2E7EB (void);
-// 0x000008F7 System.Void FunkyCode.Utilities.DestroyTimer::Start()
+// 0x000008FF System.Void FunkyCode.Utilities.DestroyTimer::Start()
 extern void DestroyTimer_Start_mD268E954AF13540CBF3301A5ADD8B90AE1A81342 (void);
-// 0x000008F8 System.Void FunkyCode.Utilities.DestroyTimer::Update()
+// 0x00000900 System.Void FunkyCode.Utilities.DestroyTimer::Update()
 extern void DestroyTimer_Update_m47D679553F697FEE04213566DD74EB54881B7D35 (void);
-// 0x000008F9 System.Void FunkyCode.Utilities.DestroyTimer::.ctor()
+// 0x00000901 System.Void FunkyCode.Utilities.DestroyTimer::.ctor()
 extern void DestroyTimer__ctor_m7998A31247DCF08245AA6FF468ABDBBA05802EC0 (void);
-// 0x000008FA System.Void FunkyCode.Utilities.TimerHelper::.ctor()
+// 0x00000902 System.Void FunkyCode.Utilities.TimerHelper::.ctor()
 extern void TimerHelper__ctor_m9F77F1DA15AA9BFC48857FACA51CF29DDD8D5C9C (void);
-// 0x000008FB System.Void FunkyCode.Utilities.TimerHelper::Reset()
+// 0x00000903 System.Void FunkyCode.Utilities.TimerHelper::Reset()
 extern void TimerHelper_Reset_mDFD8F6187EDAAA7C47244605E66F6714727697D1 (void);
-// 0x000008FC FunkyCode.Utilities.TimerHelper FunkyCode.Utilities.TimerHelper::Create()
+// 0x00000904 FunkyCode.Utilities.TimerHelper FunkyCode.Utilities.TimerHelper::Create()
 extern void TimerHelper_Create_mDE648548655A0A3E5EE0C5D7CFA6EF88DE48AA36 (void);
-// 0x000008FD System.Single FunkyCode.Utilities.TimerHelper::GetMillisecs()
+// 0x00000905 System.Single FunkyCode.Utilities.TimerHelper::GetMillisecs()
 extern void TimerHelper_GetMillisecs_mAB7FABDA6983AA70D8B1202896875F2909F1F58A (void);
-// 0x000008FE System.Single FunkyCode.Utilities.TimerHelper::Get()
+// 0x00000906 System.Single FunkyCode.Utilities.TimerHelper::Get()
 extern void TimerHelper_Get_m529E9090F9AEA24CE4051299D29C5AAD6D922F01 (void);
-// 0x000008FF System.Void FunkyCode.Utilities.VirtualSpriteRenderer::.ctor()
+// 0x00000907 System.Void FunkyCode.Utilities.VirtualSpriteRenderer::.ctor()
 extern void VirtualSpriteRenderer__ctor_mBEF46051FFF6C6C12389CD80C28F4EB9D3EC3E4D (void);
-// 0x00000900 System.Void FunkyCode.Utilities.VirtualSpriteRenderer::.ctor(UnityEngine.SpriteRenderer)
+// 0x00000908 System.Void FunkyCode.Utilities.VirtualSpriteRenderer::.ctor(UnityEngine.SpriteRenderer)
 extern void VirtualSpriteRenderer__ctor_mF046FE80A116BA90CE9A0CF14C10AAA1086B5EC5 (void);
-// 0x00000901 System.Void FunkyCode.Utilities.VirtualSpriteRenderer::Set(UnityEngine.SpriteRenderer)
+// 0x00000909 System.Void FunkyCode.Utilities.VirtualSpriteRenderer::Set(UnityEngine.SpriteRenderer)
 extern void VirtualSpriteRenderer_Set_mB384B4ECC39166B2F9949FEE31EB603B7E483695 (void);
-// 0x00000902 FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::get_EdgeIsConstrained()
+// 0x0000090A FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::get_EdgeIsConstrained()
 extern void DelaunayTriangle_get_EdgeIsConstrained_m7AEB031F0F9DCD85ED2263A1AFD8C91FECBEDE88 (void);
-// 0x00000903 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::get_IsInterior()
+// 0x0000090B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::get_IsInterior()
 extern void DelaunayTriangle_get_IsInterior_mEBEB20F52F8C3711B7EC2025254B5F4A0D497C56 (void);
-// 0x00000904 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::set_IsInterior(System.Boolean)
+// 0x0000090C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::set_IsInterior(System.Boolean)
 extern void DelaunayTriangle_set_IsInterior_m4DBAB945B6F0856DDE08DBE998A2825C1464BCB7 (void);
-// 0x00000905 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000090D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle__ctor_mEFDABD86CC9D41F70F1065119A14295D12062535 (void);
-// 0x00000906 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000090E System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_IndexOf_mAFFA7686C363EE72714A5BF6478E5C0538653C7F (void);
-// 0x00000907 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::IndexCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000090F System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::IndexCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_IndexCWFrom_m0796137EBA28064650E2F7CF88CFF1E9FD26A4DD (void);
-// 0x00000908 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::IndexCCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000910 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::IndexCCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_IndexCCWFrom_m207362E3CDD71EF741A1491E85E2271B8F81577C (void);
-// 0x00000909 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000911 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_Contains_mDE609568FE4A7F7FEF8D95993A659EC71CCC9C3A (void);
-// 0x0000090A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkNeighbor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000912 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkNeighbor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DelaunayTriangle_MarkNeighbor_m02B215A9A10ABF08CA363F44FD0505C7F50A06AA (void);
-// 0x0000090B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkNeighbor(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000913 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkNeighbor(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DelaunayTriangle_MarkNeighbor_m014D41563394B4B3CE62F0D37EEAB0E084C3DFB7 (void);
-// 0x0000090C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::ClearNeighbors()
+// 0x00000914 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::ClearNeighbors()
 extern void DelaunayTriangle_ClearNeighbors_m23D64540D81E1AD14B0F704BD353EC3AA4AE20D1 (void);
-// 0x0000090D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::ClearNeighbor(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000915 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::ClearNeighbor(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DelaunayTriangle_ClearNeighbor_m9259C47908F146B3E2DB3311DD47F476516CBC78 (void);
-// 0x0000090E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Clear()
+// 0x00000916 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Clear()
 extern void DelaunayTriangle_Clear_mC6330D3F2EFF87B73BF800D8B01384A34178E5D4 (void);
-// 0x0000090F FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::OppositePoint(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000917 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::OppositePoint(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_OppositePoint_mB9920A29F18CEA0FE9F9FB0E7190697EF0B69371 (void);
-// 0x00000910 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::NeighborCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000918 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::NeighborCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_NeighborCWFrom_mAE8C5EF2183684A96B91734004688850F42760E4 (void);
-// 0x00000911 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::NeighborCCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000919 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::NeighborCCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_NeighborCCWFrom_m79EAA4DE9A9997A0CBF363A726BAAD7C60F4A89F (void);
-// 0x00000912 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::NeighborAcrossFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000091A FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::NeighborAcrossFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_NeighborAcrossFrom_m916F0F62DCAF010114F21D7EFE1C2B409B548CF5 (void);
-// 0x00000913 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::PointCCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000091B FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::PointCCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_PointCCWFrom_m13FDF9059D97CEC81C1C115A5C9F20D9954B4AC8 (void);
-// 0x00000914 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::PointCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000091C FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::PointCWFrom(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_PointCWFrom_mE215314DB71CDB8C7241299A8B5261C50E9FB7F0 (void);
-// 0x00000915 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::RotateCW()
+// 0x0000091D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::RotateCW()
 extern void DelaunayTriangle_RotateCW_mB678DB9364A20D666E43D37FCE285F6CD2BFF5E5 (void);
-// 0x00000916 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Legalize(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000091E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Legalize(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_Legalize_mF2F25CFFE6C9F221175F65FA8E4DB1FE67B93217 (void);
-// 0x00000917 System.String FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::ToString()
+// 0x0000091F System.String FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::ToString()
 extern void DelaunayTriangle_ToString_mC0169B99D0405000213B53E9C8020FCF641DFED1 (void);
-// 0x00000918 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkNeighborEdges()
+// 0x00000920 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkNeighborEdges()
 extern void DelaunayTriangle_MarkNeighborEdges_m9D69192B5E360E62E803F08E303806D5531DFA41 (void);
-// 0x00000919 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkEdge(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000921 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkEdge(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DelaunayTriangle_MarkEdge_m98C0E2F687C25FF5617677DFAEE87717E4AE5A37 (void);
-// 0x0000091A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkEdge(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x00000922 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkEdge(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
 extern void DelaunayTriangle_MarkEdge_m03602A20FC307ABE0385D01C314B0AE444A64B26 (void);
-// 0x0000091B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkConstrainedEdge(System.Int32)
+// 0x00000923 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkConstrainedEdge(System.Int32)
 extern void DelaunayTriangle_MarkConstrainedEdge_m63C280C67E374068A1A4675E164D4224374824D0 (void);
-// 0x0000091C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkConstrainedEdge(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint)
+// 0x00000924 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkConstrainedEdge(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint)
 extern void DelaunayTriangle_MarkConstrainedEdge_m109340DEEB621AAA88F250E7D72A7EDA41029621 (void);
-// 0x0000091D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkConstrainedEdge(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000925 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::MarkConstrainedEdge(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_MarkConstrainedEdge_mE66FBD7F842A4D6E9AC20140A39D3B70D2403C2B (void);
-// 0x0000091E System.Double FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Area()
+// 0x00000926 System.Double FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Area()
 extern void DelaunayTriangle_Area_m44096D8621131C3AC4F0BD572D11693E466B6FBF (void);
-// 0x0000091F FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Centroid()
+// 0x00000927 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::Centroid()
 extern void DelaunayTriangle_Centroid_m988D732DA6F636849BB918FE3BF5327F12421259 (void);
-// 0x00000920 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::EdgeIndex(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000928 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::EdgeIndex(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_EdgeIndex_m2F3FA0ECA96B257090A3906EA472B5DA4E80805F (void);
-// 0x00000921 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetConstrainedEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000929 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetConstrainedEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_GetConstrainedEdgeCCW_m581B194DC26B80382E59F31F215A4B3463435239 (void);
-// 0x00000922 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetConstrainedEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000092A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetConstrainedEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_GetConstrainedEdgeCW_m3B989827BCDAAEEFB962FD02B752ACAC5EBCD34E (void);
-// 0x00000923 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetConstrainedEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000092B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetConstrainedEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_GetConstrainedEdgeAcross_m8B2E73582FE6C4CE6C3A04D46DE658729CCDC2C8 (void);
-// 0x00000924 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdge(System.Int32,System.Boolean)
+// 0x0000092C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdge(System.Int32,System.Boolean)
 extern void DelaunayTriangle_SetConstrainedEdge_m3DFF961CE5FD8C63D7F9BA1AC3FFEDCDD954DF58 (void);
-// 0x00000925 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
+// 0x0000092D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
 extern void DelaunayTriangle_SetConstrainedEdgeCCW_mD0D9D9D1E7EC50D3CB0C1E48CA08191151548508 (void);
-// 0x00000926 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
+// 0x0000092E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
 extern void DelaunayTriangle_SetConstrainedEdgeCW_m542DA9D9F08D281E112605C94FA2595E222CEE1D (void);
-// 0x00000927 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
+// 0x0000092F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetConstrainedEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
 extern void DelaunayTriangle_SetConstrainedEdgeAcross_m57DF36CADA7C6D33D1A5793167A5C3F1785A8CA6 (void);
-// 0x00000928 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetDelaunayEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000930 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetDelaunayEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_GetDelaunayEdgeCCW_mC095449547B978D41EC82D7C8C293C854EDBBA48 (void);
-// 0x00000929 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetDelaunayEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000931 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetDelaunayEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_GetDelaunayEdgeCW_mDDBBEB57C5E18AB056043AF9948B5779D91060BD (void);
-// 0x0000092A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetDelaunayEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000932 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetDelaunayEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DelaunayTriangle_GetDelaunayEdgeAcross_m6E57B9573875E3E08112EA136ADBDB25B56E0182 (void);
-// 0x0000092B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetDelaunayEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
+// 0x00000933 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetDelaunayEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
 extern void DelaunayTriangle_SetDelaunayEdgeCCW_mF130582DC760DAB53EF0225B288D0FEC1204582D (void);
-// 0x0000092C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetDelaunayEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
+// 0x00000934 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetDelaunayEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
 extern void DelaunayTriangle_SetDelaunayEdgeCW_mA1FE131E0B14AB9AEE449BAE3662DE7B07239E72 (void);
-// 0x0000092D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetDelaunayEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
+// 0x00000935 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::SetDelaunayEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Boolean)
 extern void DelaunayTriangle_SetDelaunayEdgeAcross_mD106935AE9F92E6B6FE91A9632B4475F4197C1BE (void);
-// 0x0000092E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdge(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
+// 0x00000936 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdge(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
 extern void DelaunayTriangle_GetEdge_m8F261A5297801AE6B908309731D1F4E8A0DC5C85 (void);
-// 0x0000092F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
+// 0x00000937 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdgeCCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
 extern void DelaunayTriangle_GetEdgeCCW_mC9EB520B2C0495D10A892A582EAF8F853B7931E0 (void);
-// 0x00000930 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
+// 0x00000938 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdgeCW(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
 extern void DelaunayTriangle_GetEdgeCW_m2A5742A6D906A7EFDE3B685B7724F3EE6C88D63D (void);
-// 0x00000931 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
+// 0x00000939 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::GetEdgeAcross(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
 extern void DelaunayTriangle_GetEdgeAcross_m7341827FE3B4A0439A5213FAAF6E5FAE998BFF6C (void);
-// 0x00000932 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Triangulate(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x0000093A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Triangulate(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweep_Triangulate_mF636296848A88D2F7684EA92D26FCA9A5E73FB29 (void);
-// 0x00000933 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Sweep(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x0000093B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Sweep(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweep_Sweep_m34B2125D78C7D75DA83530EDB3201107F9D20FC0 (void);
-// 0x00000934 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FixupConstrainedEdges(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x0000093C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FixupConstrainedEdges(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweep_FixupConstrainedEdges_m5F38E56D6EE5A50E43472130F16FBCFFF503FFCA (void);
-// 0x00000935 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FinalizationConvexHull(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x0000093D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FinalizationConvexHull(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweep_FinalizationConvexHull_mD47AC07491D23304CE616CFDA9FF357F991C6548 (void);
-// 0x00000936 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::TurnAdvancingFrontConvex(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000093E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::TurnAdvancingFrontConvex(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_TurnAdvancingFrontConvex_m437581E3D452CC9D5D7FCB07992A28AABFE4ED65 (void);
-// 0x00000937 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FinalizationPolygon(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x0000093F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FinalizationPolygon(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweep_FinalizationPolygon_mCC0C363A5DB467F1EB0DD857DC3DEEB833F3271E (void);
-// 0x00000938 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FinalizationConstraints(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x00000940 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FinalizationConstraints(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweep_FinalizationConstraints_m2E7D56DFE0114D7E1AE7B5E5899A98A176DC9637 (void);
-// 0x00000939 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::PointEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000941 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::PointEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_PointEvent_mDEE77692D3E0C56C5C6F1183BBEA45E663D92D6A (void);
-// 0x0000093A FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::NewFrontTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000942 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::NewFrontTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_NewFrontTriangle_m20A90B8288A7AA2401BEADD261AD417F0A3BBBED (void);
-// 0x0000093B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::EdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000943 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::EdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_EdgeEvent_m771BEBE51F303384DD0B09A8D64D134726247865 (void);
-// 0x0000093C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000944 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillEdgeEvent_m0B255C9DEBA659672654B8F74BB1DE8E72BB7642 (void);
-// 0x0000093D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightConcaveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000945 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightConcaveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillRightConcaveEdgeEvent_m4C058DE1A20952C464A3B3851A93C81560C0337D (void);
-// 0x0000093E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightConvexEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000946 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightConvexEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillRightConvexEdgeEvent_m0445AAE3E79E619C8646BE4E87C6BD5D3183DCBF (void);
-// 0x0000093F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightBelowEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000947 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightBelowEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillRightBelowEdgeEvent_mF7442C255CA54B984B45259A63523819DA824012 (void);
-// 0x00000940 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightAboveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000948 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillRightAboveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillRightAboveEdgeEvent_m8CD216462F75D2AAACD5CC02CF92C0F117188135 (void);
-// 0x00000941 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftConvexEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000949 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftConvexEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillLeftConvexEdgeEvent_m9BEDF56283FB6A3BD60A09434A7842676310B0EA (void);
-// 0x00000942 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftConcaveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000094A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftConcaveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillLeftConcaveEdgeEvent_m9B2839E824861399321F0976570D3C322C07CB02 (void);
-// 0x00000943 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftBelowEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000094B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftBelowEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillLeftBelowEdgeEvent_m1A1C34D95DC65300A720C1F70D78E4DB2BEB2553 (void);
-// 0x00000944 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftAboveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000094C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillLeftAboveEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillLeftAboveEdgeEvent_mCBFE0F9CF2B0ABD10609F612E7F5123AB2C6E8DF (void);
-// 0x00000945 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::IsEdgeSideOfTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000094D System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::IsEdgeSideOfTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_IsEdgeSideOfTriangle_m0E5AB6D0C4B2B999AF3092A73FDBD327BCB94F58 (void);
-// 0x00000946 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::EdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000094E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::EdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_EdgeEvent_mA96004B3093A792D0EED9F063217AA2EE572F893 (void);
-// 0x00000947 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FlipEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000094F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FlipEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_FlipEdgeEvent_m94A4185637D16390C8B25C6ACE28E874EF8AA492 (void);
-// 0x00000948 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::NextFlipPoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint&)
+// 0x00000950 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::NextFlipPoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint&)
 extern void DTSweep_NextFlipPoint_m6E5E06554DFB72E175E63F10784865EFA121F69D (void);
-// 0x00000949 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::NextFlipTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.Orientation,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000951 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::NextFlipTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.Orientation,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_NextFlipTriangle_m9101BAF45464472ADDBE2DAD8DF6C6712553C760 (void);
-// 0x0000094A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FlipScanEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000952 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FlipScanEdgeEvent(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_FlipScanEdgeEvent_m6322FEAB1D9DC405220A6ADB0224ED8E59AC49A2 (void);
-// 0x0000094B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillAdvancingFront(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000953 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillAdvancingFront(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillAdvancingFront_m6543FA4FCBAADBF21D63A4E073B52E9F97782858 (void);
-// 0x0000094C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillBasin(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000954 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillBasin(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillBasin_mEA016E63C1A4246CCBE23B3CF9F7368684A44FB0 (void);
-// 0x0000094D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillBasinReq(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000955 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::FillBasinReq(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_FillBasinReq_m81778E8F31700049682CDD6D79003F3C2F5B56E2 (void);
-// 0x0000094E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::IsShallow(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000956 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::IsShallow(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_IsShallow_m5E0187771C2F3BD7B517A2BDBE8622FE5767D9F7 (void);
-// 0x0000094F System.Double FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::HoleAngle(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000957 System.Double FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::HoleAngle(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_HoleAngle_m641C136ACFF551EBAE06A7961A8BC23B76597613 (void);
-// 0x00000950 System.Double FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::BasinAngle(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000958 System.Double FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::BasinAngle(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_BasinAngle_m1318BF74035EAB0C877F387336EBD827F17CA6F8 (void);
-// 0x00000951 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Fill(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000959 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Fill(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweep_Fill_mA7166FFE165F24E3FF0905C506FD57A71CD90304 (void);
-// 0x00000952 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Legalize(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x0000095A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::Legalize(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweep_Legalize_m9198C99EF115892066DF895ECE81642CE1D615F5 (void);
-// 0x00000953 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::RotateTrianglePair(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000095B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweep::RotateTrianglePair(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweep_RotateTrianglePair_m4CBF18F8D01C52F8C94F5B325620400DDD5E87D7 (void);
-// 0x00000954 System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000095C System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode,FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void AdvancingFront__ctor_mFF92E9F851605B640F81402C93737F8DCE7376C1 (void);
-// 0x00000955 System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::AddNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000095D System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::AddNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void AdvancingFront_AddNode_m95A91FCFD440B81F69CD1226AF43CE31E1847C79 (void);
-// 0x00000956 System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::RemoveNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x0000095E System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::RemoveNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void AdvancingFront_RemoveNode_m93F48DC7B3F9B06C832605CB676CB255F23AB99D (void);
-// 0x00000957 System.String FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::ToString()
+// 0x0000095F System.String FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::ToString()
 extern void AdvancingFront_ToString_m1B6CD646AAABE46CDE3686914AE4986783D50878 (void);
-// 0x00000958 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::FindSearchNode(System.Double)
+// 0x00000960 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::FindSearchNode(System.Double)
 extern void AdvancingFront_FindSearchNode_mF5D170232CDC6DD46F95D9C1D5FC2E2369519053 (void);
-// 0x00000959 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::LocateNode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000961 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::LocateNode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void AdvancingFront_LocateNode_mE6AAE7DB70B25E4A689BE0D679D20CBEFF85A03D (void);
-// 0x0000095A FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::LocateNode(System.Double)
+// 0x00000962 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::LocateNode(System.Double)
 extern void AdvancingFront_LocateNode_m54622E064A5747BC0A8D0B5920C1970FF54F9DF2 (void);
-// 0x0000095B FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::LocatePoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000963 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFront::LocatePoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void AdvancingFront_LocatePoint_m133D724870C75089606A447A8272176BCF6C7D02 (void);
-// 0x0000095C System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000964 System.Void FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void AdvancingFrontNode__ctor_mBF00097C64DB2E8EFC52E6C36C33BAF06C99F615 (void);
-// 0x0000095D System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode::get_HasNext()
+// 0x00000965 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode::get_HasNext()
 extern void AdvancingFrontNode_get_HasNext_m37332148EC93EEFC864D6666BAB43B5880B56D33 (void);
-// 0x0000095E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode::get_HasPrev()
+// 0x00000966 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode::get_HasPrev()
 extern void AdvancingFrontNode_get_HasPrev_mB814262BB150AF0B2AB0F899FE0039202ECAACAA (void);
-// 0x0000095F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepBasin::.ctor()
+// 0x00000967 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepBasin::.ctor()
 extern void DTSweepBasin__ctor_m72E7D87B8082EB0D6F866F262722B64C8F66457F (void);
-// 0x00000960 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000968 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepConstraint__ctor_mA37997CEAA3A5E4B17F918C2CF39D8FD6A5C0938 (void);
-// 0x00000961 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_PrimaryTriangle()
+// 0x00000969 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_PrimaryTriangle()
 extern void DTSweepDebugContext_get_PrimaryTriangle_m94F8C1FAECE678706695BFAAA930FB53168F76AF (void);
-// 0x00000962 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_PrimaryTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x0000096A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_PrimaryTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweepDebugContext_set_PrimaryTriangle_m2B400F2813DB65A49F32690ABD4248FBE1DCF1DC (void);
-// 0x00000963 FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_SecondaryTriangle()
+// 0x0000096B FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_SecondaryTriangle()
 extern void DTSweepDebugContext_get_SecondaryTriangle_mC901669106CD4D4CD4B1893B429EA22C192CDA07 (void);
-// 0x00000964 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_SecondaryTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x0000096C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_SecondaryTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweepDebugContext_set_SecondaryTriangle_m31C9BBA80A884E2080C861C4C85150898D9CF001 (void);
-// 0x00000965 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_ActivePoint()
+// 0x0000096D FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_ActivePoint()
 extern void DTSweepDebugContext_get_ActivePoint_m652963594EE05C3D32FB67D08EB09893167303E7 (void);
-// 0x00000966 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_ActivePoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000096E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_ActivePoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepDebugContext_set_ActivePoint_m03EA423FEC0E72B7F6AD6EB973C32EC0237A9E0E (void);
-// 0x00000967 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_ActiveNode()
+// 0x0000096F FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_ActiveNode()
 extern void DTSweepDebugContext_get_ActiveNode_mF525C8604CC79165CFFB4ED243D730D4794264E7 (void);
-// 0x00000968 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_ActiveNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000970 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_ActiveNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweepDebugContext_set_ActiveNode_m5C1E60679E7B7B02380573D0DF311B24C5E81F6A (void);
-// 0x00000969 FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_ActiveConstraint()
+// 0x00000971 FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_ActiveConstraint()
 extern void DTSweepDebugContext_get_ActiveConstraint_m919DD989E5A37BD82B4DE18B4E60F17AF9720FBD (void);
-// 0x0000096A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_ActiveConstraint(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint)
+// 0x00000972 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::set_ActiveConstraint(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint)
 extern void DTSweepDebugContext_set_ActiveConstraint_m4BA20A976D3D0B4B20B61AE997E47C301250ED18 (void);
-// 0x0000096B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
+// 0x00000973 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext)
 extern void DTSweepDebugContext__ctor_m066CDC55DD6AF0F569E2EDD99AF04309A52C94B6 (void);
-// 0x0000096C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_IsDebugContext()
+// 0x00000974 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::get_IsDebugContext()
 extern void DTSweepDebugContext_get_IsDebugContext_m56192115078F42E5427191B0F589297F097AE799 (void);
-// 0x0000096D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::Clear()
+// 0x00000975 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext::Clear()
 extern void DTSweepDebugContext_Clear_m8C0EC825B1C3860E850341072A2BC381C77D8B5C (void);
-// 0x0000096E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepEdgeEvent::.ctor()
+// 0x00000976 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepEdgeEvent::.ctor()
 extern void DTSweepEdgeEvent__ctor_m356AACCC884F5EF3EA4CEBE727BAF065EA953574 (void);
-// 0x0000096F System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DTSweepPointComparator::Compare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000977 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.DTSweepPointComparator::Compare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepPointComparator_Compare_m2650998E87B0141538F7B2435A8777A7E50250C6 (void);
-// 0x00000970 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepPointComparator::.ctor()
+// 0x00000978 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepPointComparator::.ctor()
 extern void DTSweepPointComparator__ctor_m2BDA337C2AB9EE027C7875042A35334111FC41CC (void);
-// 0x00000971 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointOnEdgeException::.ctor(System.String,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000979 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointOnEdgeException::.ctor(System.String,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointOnEdgeException__ctor_mEE8D3E43171F569B0F55AB8C979AF9155F774198 (void);
-// 0x00000972 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_Head()
+// 0x0000097A FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_Head()
 extern void DTSweepContext_get_Head_m5182CD6B634725236ADC5B8669D9B349B8C4C457 (void);
-// 0x00000973 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::set_Head(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000097B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::set_Head(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepContext_set_Head_m060BACD849E5EEAB90C33DE223229429185FB091 (void);
-// 0x00000974 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_Tail()
+// 0x0000097C FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_Tail()
 extern void DTSweepContext_get_Tail_m98204A7D3836BCAC68AB9B436D3A8731DE0E51A3 (void);
-// 0x00000975 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::set_Tail(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000097D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::set_Tail(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepContext_set_Tail_m2E26738D1EB76C408DB9041ECA9E12864FEABACD (void);
-// 0x00000976 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationAlgorithm FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_Algorithm()
+// 0x0000097E FunkyCode.Utilities.Polygon2DTriangulation.TriangulationAlgorithm FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_Algorithm()
 extern void DTSweepContext_get_Algorithm_m1A8ECEC8498AA88BD82341CDC340004AF318F2D0 (void);
-// 0x00000977 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::.ctor()
+// 0x0000097F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::.ctor()
 extern void DTSweepContext__ctor_mAB058A5C1653D435A1EEA9BC5C32B36BE8433BD5 (void);
-// 0x00000978 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_IsDebugEnabled()
+// 0x00000980 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::get_IsDebugEnabled()
 extern void DTSweepContext_get_IsDebugEnabled_mB8CCD074650881EEDF726E4DBDE56AB241BF5B7A (void);
-// 0x00000979 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::set_IsDebugEnabled(System.Boolean)
+// 0x00000981 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::set_IsDebugEnabled(System.Boolean)
 extern void DTSweepContext_set_IsDebugEnabled_mA8BFA6FD10E968175173B6DCB8B7A0E21B8F62D1 (void);
-// 0x0000097A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::RemoveFromList(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000982 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::RemoveFromList(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweepContext_RemoveFromList_m59F0874E0811D7BDB1F5669BB6C30BF977946AA1 (void);
-// 0x0000097B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::MeshClean(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000983 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::MeshClean(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweepContext_MeshClean_m4E233C751FF222E9BFEA55E26BC8642760E0107A (void);
-// 0x0000097C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::MeshCleanReq(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000984 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::MeshCleanReq(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweepContext_MeshCleanReq_m80AC7D6292C4710FC99F640CB41A21807C8C43EE (void);
-// 0x0000097D System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::Clear()
+// 0x00000985 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::Clear()
 extern void DTSweepContext_Clear_m3EFC4B08FFC22308E6B9ED1F0D08E34D85A6BBAD (void);
-// 0x0000097E System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::AddNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000986 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::AddNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweepContext_AddNode_m3A135D03000938F1907068EF3E5BE879E1BB3FFA (void);
-// 0x0000097F System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::RemoveNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
+// 0x00000987 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::RemoveNode(FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode)
 extern void DTSweepContext_RemoveNode_m68027576544E36BF0BB9A98001DD14B1F784E5D2 (void);
-// 0x00000980 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::LocateNode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000988 FunkyCode.Utilities.Polygon2DTriangulation.AdvancingFrontNode FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::LocateNode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepContext_LocateNode_m56D814B1DC796055AA3C68748919BECB36ECBAE2 (void);
-// 0x00000981 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::CreateAdvancingFront()
+// 0x00000989 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::CreateAdvancingFront()
 extern void DTSweepContext_CreateAdvancingFront_m967028352722ED5E9DF9F81D65F4C5FA10940B9A (void);
-// 0x00000982 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::MapTriangleToNodes(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x0000098A System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::MapTriangleToNodes(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void DTSweepContext_MapTriangleToNodes_m3DFFECFBAE5F443F049EADDF06F91B3713C4186A (void);
-// 0x00000983 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::PrepareTriangulation(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
+// 0x0000098B System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::PrepareTriangulation(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
 extern void DTSweepContext_PrepareTriangulation_m52B224C8AAF4356DC1E9078CAE5485314731593D (void);
-// 0x00000984 System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::FinalizeTriangulation()
+// 0x0000098C System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::FinalizeTriangulation()
 extern void DTSweepContext_FinalizeTriangulation_m88F65839431063C11B0EA2114EDEF4BAA1CB7659 (void);
-// 0x00000985 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::NewConstraint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x0000098D FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint FunkyCode.Utilities.Polygon2DTriangulation.DTSweepContext::NewConstraint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void DTSweepContext_NewConstraint_mD69FC233E8E18E2CF3B37E73A674DDC0BA468295 (void);
-// 0x00000986 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::CalculateWindingOrder(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
+// 0x0000098E FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::CalculateWindingOrder(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
 extern void PolygonUtil_CalculateWindingOrder_m488F5012DAA0C0ADB54864623889792323811123 (void);
-// 0x00000987 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsAreSame2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
+// 0x0000098F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsAreSame2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
 extern void PolygonUtil_PolygonsAreSame2D_m785F4EEDD4B0A932B112F8BDF64846369723AB99 (void);
-// 0x00000988 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PointInPolygon2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000990 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PointInPolygon2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void PolygonUtil_PointInPolygon2D_mB3926F32311A0C29309C8BAC79F9450D0A2FF9C2 (void);
-// 0x00000989 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsIntersect2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000991 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsIntersect2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void PolygonUtil_PolygonsIntersect2D_mE55448188CD69B5E14CF00380C00992C87F6801E (void);
-// 0x0000098A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000992 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void PolygonUtil_PolygonContainsPolygon_m037ABEE9CC26AC657EBE4A3CDACE5FBF56AC9DDF (void);
-// 0x0000098B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Boolean)
+// 0x00000993 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Boolean)
 extern void PolygonUtil_PolygonContainsPolygon_m9113E7289EF94169A4D5A06A25EC89721FB248AA (void);
-// 0x0000098C System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToEdge2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
+// 0x00000994 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToEdge2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
 extern void PolygonUtil_ClipPolygonToEdge2D_m0FC8B827C15506FA367B459402E6AC125F6DDF10 (void);
-// 0x0000098D System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
+// 0x00000995 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
 extern void PolygonUtil_ClipPolygonToPolygon_m7084BFB0E91AD364F879AA9A6435F34484179390 (void);
-// 0x0000098E FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnion(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
+// 0x00000996 FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnion(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
 extern void PolygonUtil_PolygonUnion_m3BD23968F4C4B7DAB90A29A60B51FA299AEB841A (void);
-// 0x0000098F System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnionInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
+// 0x00000997 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnionInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
 extern void PolygonUtil_PolygonUnionInternal_mB3CF2221B2277D9742E751964A135986A5885E15 (void);
-// 0x00000990 FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
+// 0x00000998 FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
 extern void PolygonUtil_PolygonIntersect_m1E5AD6DC66A18A5FFBC467DAFB3992A9B734ADF0 (void);
-// 0x00000991 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersectInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
+// 0x00000999 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersectInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
 extern void PolygonUtil_PolygonIntersectInternal_mB557E56124ABCEFF07096E98243B65A741AC76E3 (void);
-// 0x00000992 FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtract(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
+// 0x0000099A FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtract(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
 extern void PolygonUtil_PolygonSubtract_mD2DEF683A03A03CCB1BB24ADD4473A0E3659CCB3 (void);
-// 0x00000993 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtractInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
+// 0x0000099B System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtractInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
 extern void PolygonUtil_PolygonSubtractInternal_m4634E315D34363A1CC01DA1E8F4DE2869BFB0009 (void);
-// 0x00000994 FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Collections.Generic.Dictionary`2<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>&)
+// 0x0000099C FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Collections.Generic.Dictionary`2<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>&)
 extern void PolygonUtil_PolygonOperation_mE6ED2C8BAB2EAF27619702769FCEF32EA57B8B69 (void);
-// 0x00000995 FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
+// 0x0000099D FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
 extern void PolygonUtil_PolygonOperation_mF8ABE88E1EE67F27AB272175C680E61145D1F745 (void);
-// 0x00000996 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygon(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Double)
+// 0x0000099E System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygon(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Double)
 extern void PolygonUtil_SplitComplexPolygon_m06C203214FC1CF955CBB5EAF036344C09D6B5D0C (void);
-// 0x00000997 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygonCleanup(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
+// 0x0000099F System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygonCleanup(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
 extern void PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA (void);
-// 0x00000998 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::.ctor()
+// 0x000009A0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::.ctor()
 extern void PolygonUtil__ctor_m3BC8CD33009DB203378DC0FC0C484DA4A52C4DF3 (void);
-// 0x00000999 System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Edge,FunkyCode.Utilities.Polygon2DTriangulation.Edge,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009A1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Edge,FunkyCode.Utilities.Polygon2DTriangulation.Edge,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void EdgeIntersectInfo__ctor_m6F1AA41B52E041876BFB2FCF48BEB437FF8E1732 (void);
-// 0x0000099A FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_EdgeOne()
+// 0x000009A2 FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_EdgeOne()
 extern void EdgeIntersectInfo_get_EdgeOne_m7159A3D500A533264357E4A73749E15B0A23A7B5 (void);
-// 0x0000099B System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeOne(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
+// 0x000009A3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeOne(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
 extern void EdgeIntersectInfo_set_EdgeOne_mCA3EED47239C3DBA9147802E999F12243BCB5369 (void);
-// 0x0000099C FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_EdgeTwo()
+// 0x000009A4 FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_EdgeTwo()
 extern void EdgeIntersectInfo_get_EdgeTwo_mA83E6FC96886E8F4787153D66939D9D4B7066EDA (void);
-// 0x0000099D System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeTwo(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
+// 0x000009A5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeTwo(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
 extern void EdgeIntersectInfo_set_EdgeTwo_m01A5D4981077187330C8691F6BDA1FFDE29A87F6 (void);
-// 0x0000099E FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_IntersectionPoint()
+// 0x000009A6 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_IntersectionPoint()
 extern void EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5 (void);
-// 0x0000099F System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_IntersectionPoint(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009A7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_IntersectionPoint(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void EdgeIntersectInfo_set_IntersectionPoint_m3947A1EAC204D859646D60100A77D2266B66712B (void);
-// 0x000009A0 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_NumConnected()
+// 0x000009A8 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_NumConnected()
 extern void SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610 (void);
-// 0x000009A1 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Position()
+// 0x000009A9 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Position()
 extern void SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90 (void);
-// 0x000009A2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::set_Position(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009AA System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::set_Position(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void SplitComplexPolygonNode_set_Position_m58E2616ACE3D13C853E668B03C4FCC1CAB15DD46 (void);
-// 0x000009A3 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Item(System.Int32)
+// 0x000009AB FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Item(System.Int32)
 extern void SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6 (void);
-// 0x000009A4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor()
+// 0x000009AC System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor()
 extern void SplitComplexPolygonNode__ctor_mFD846CCDEA76E55BB6FFC24CA1C3E920DF976B75 (void);
-// 0x000009A5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009AD System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void SplitComplexPolygonNode__ctor_mC7301E92627CB66FC67164FCAB1E7C9B8C85B107 (void);
-// 0x000009A6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(System.Object)
+// 0x000009AE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(System.Object)
 extern void SplitComplexPolygonNode_Equals_m1CFF781B1F37FDCEE53BA5406D3D1749D5213154 (void);
-// 0x000009A7 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009AF System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_Equals_mF31DF80B54BFDD8BF46B8A6B83E86027E7E7D06B (void);
-// 0x000009A8 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetHashCode()
+// 0x000009B0 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetHashCode()
 extern void SplitComplexPolygonNode_GetHashCode_m4D805E5902DFC72560DB3D86B1BBF7002CA51CC6 (void);
-// 0x000009A9 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Equality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009B1 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Equality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191 (void);
-// 0x000009AA System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Inequality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009B2 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Inequality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA (void);
-// 0x000009AB System.String FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ToString()
+// 0x000009B3 System.String FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ToString()
 extern void SplitComplexPolygonNode_ToString_mBF4950CF80F77B7F93FA33478CD9DC808B3324A3 (void);
-// 0x000009AC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsRighter(System.Double,System.Double,System.Double,System.Double)
+// 0x000009B4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsRighter(System.Double,System.Double,System.Double,System.Double)
 extern void SplitComplexPolygonNode_IsRighter_m2B8372480D3798C57D87CB414576746E82C2E3B9 (void);
-// 0x000009AD System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::remainder(System.Int32,System.Int32)
+// 0x000009B5 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::remainder(System.Int32,System.Int32)
 extern void SplitComplexPolygonNode_remainder_m53EBBC63C72E18C6F8D785E82307B8B0B586416B (void);
-// 0x000009AE System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::AddConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009B6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::AddConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3 (void);
-// 0x000009AF System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009B7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1 (void);
-// 0x000009B0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnectionByIndex(System.Int32)
+// 0x000009B8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnectionByIndex(System.Int32)
 extern void SplitComplexPolygonNode_RemoveConnectionByIndex_m7D545A542843F7B4FABA498FCC1B23F21EF73ACC (void);
-// 0x000009B1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ClearConnections()
+// 0x000009B9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ClearConnections()
 extern void SplitComplexPolygonNode_ClearConnections_m097D34EE8CAABE650FF1611D9EBCAE8F23DA29DB (void);
-// 0x000009B2 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsConnectedTo(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009BA System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsConnectedTo(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_IsConnectedTo_mA63002B3B52F37B704919C8ADDD6661829C99BD1 (void);
-// 0x000009B3 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
+// 0x000009BB FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
 extern void SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119 (void);
-// 0x000009B4 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009BC FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void SplitComplexPolygonNode_GetRightestConnection_mFE4AD9029A6513EFCC92800C388E88A76FACC6F4 (void);
-// 0x000009B5 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Union()
+// 0x000009BD FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Union()
 extern void PolygonOperationContext_get_Union_m59F5A017BDEEFE4AB0EE08937CDEDB7400782C5B (void);
-// 0x000009B6 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Intersect()
+// 0x000009BE FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Intersect()
 extern void PolygonOperationContext_get_Intersect_m0E5BE87297178A57E0BAC47EFF4125A49BFE3748 (void);
-// 0x000009B7 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Subtract()
+// 0x000009BF FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Subtract()
 extern void PolygonOperationContext_get_Subtract_m22833F3C8276525F022A146A2A950051718A430E (void);
-// 0x000009B8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::.ctor()
+// 0x000009C0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::.ctor()
 extern void PolygonOperationContext__ctor_m4C8C08A108AF5B6F1B532AA319F5F248A9B26F74 (void);
-// 0x000009B9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::Clear()
+// 0x000009C1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::Clear()
 extern void PolygonOperationContext_Clear_mDC0E879F752555E080D7A9017D016454CCC4A929 (void);
-// 0x000009BA System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::Init(FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
+// 0x000009C2 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::Init(FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
 extern void PolygonOperationContext_Init_m24D7F378AFEF35EA6E5A673D57FC0B5164DE345A (void);
-// 0x000009BB System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::VerticesIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>&)
+// 0x000009C3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::VerticesIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>&)
 extern void PolygonOperationContext_VerticesIntersect_m5861C4E704ACB0AF2C0F0CB16D381792417193B2 (void);
-// 0x000009BC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::PointInPolygonAngle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
+// 0x000009C4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::PointInPolygonAngle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
 extern void PolygonOperationContext_PointInPolygonAngle_m4B73907865E7713D7DD70EC52AABE8B0D2DAB59F (void);
-// 0x000009BD System.Double FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::VectorAngle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009C5 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::VectorAngle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void PolygonOperationContext_VectorAngle_m763DDEC219693CC8C3DEF38A31265B685B46D29A (void);
-// 0x000009BE FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Item(System.Int32)
+// 0x000009C6 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Item(System.Int32)
 extern void Contour_get_Item_mBE687048B14FCD9A52E8AEF0802BCC9FCD3AC16D (void);
-// 0x000009BF System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x000009C7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Contour_set_Item_mEEE6BBC5CEC67F8F5F6C8469C0F455B77E41BD14 (void);
-// 0x000009C0 System.String FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Name()
+// 0x000009C8 System.String FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Name()
 extern void Contour_get_Name_mD8A963EDEA9AA27B39B2C14B62B671AE5EA93BCC (void);
-// 0x000009C1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Name(System.String)
+// 0x000009C9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Name(System.String)
 extern void Contour_set_Name_mFA4B805FAE9FE144EE2545F9B95AA14043CEA91A (void);
-// 0x000009C2 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Triangles()
+// 0x000009CA System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Triangles()
 extern void Contour_get_Triangles_m8345B9F1AEA76BB89EBBDFD54C92554B7182C142 (void);
-// 0x000009C3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Triangles(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x000009CB System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Triangles(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
 extern void Contour_set_Triangles_mD37969B81E337BAA058264F211C631A94F2AECE7 (void);
-// 0x000009C4 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_TriangulationMode()
+// 0x000009CC FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_TriangulationMode()
 extern void Contour_get_TriangulationMode_m8C97C2E2CFEEA31B0855C5F4B3849394C2242AC2 (void);
-// 0x000009C5 System.String FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_FileName()
+// 0x000009CD System.String FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_FileName()
 extern void Contour_get_FileName_m98DE63DF8FB66954F6EB015173EA8ED7D4B61850 (void);
-// 0x000009C6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_FileName(System.String)
+// 0x000009CE System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_FileName(System.String)
 extern void Contour_set_FileName_m036C01D60E7BCCF47E3BD7D73739639AE4022047 (void);
-// 0x000009C7 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_DisplayFlipX()
+// 0x000009CF System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_DisplayFlipX()
 extern void Contour_get_DisplayFlipX_mB0A23BBBB3044C60B6725DBCA9C2F912979A6F61 (void);
-// 0x000009C8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_DisplayFlipX(System.Boolean)
+// 0x000009D0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_DisplayFlipX(System.Boolean)
 extern void Contour_set_DisplayFlipX_m38AA6A6C3452E299E2ED9616788C72482FC8DCF0 (void);
-// 0x000009C9 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_DisplayFlipY()
+// 0x000009D1 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_DisplayFlipY()
 extern void Contour_get_DisplayFlipY_mFA2CC22D4599950BE0A6437970A042A48FB74C82 (void);
-// 0x000009CA System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_DisplayFlipY(System.Boolean)
+// 0x000009D2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_DisplayFlipY(System.Boolean)
 extern void Contour_set_DisplayFlipY_m811D7BF16072B23AAF3EF1316CE83C6F961C9E22 (void);
-// 0x000009CB System.Single FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_DisplayRotate()
+// 0x000009D3 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_DisplayRotate()
 extern void Contour_get_DisplayRotate_m2099327EE3989ABBA39F298FD561C39458499914 (void);
-// 0x000009CC System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_DisplayRotate(System.Single)
+// 0x000009D4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_DisplayRotate(System.Single)
 extern void Contour_set_DisplayRotate_mD84431751381871A25442D28D0A88F3DF9E8DFED (void);
-// 0x000009CD System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Precision()
+// 0x000009D5 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Precision()
 extern void Contour_get_Precision_mBEAB45C33B76DC5BAED57FCBD94C86BE2BAED8C1 (void);
-// 0x000009CE System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Precision(System.Double)
+// 0x000009D6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::set_Precision(System.Double)
 extern void Contour_set_Precision_mBE3FB5BABEB97AD2641CDAFEA8C869EDFD8BAE8F (void);
-// 0x000009CF System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MinX()
+// 0x000009D7 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MinX()
 extern void Contour_get_MinX_mFC091A8C9B41FB41206498197D9AA61E04D66DE0 (void);
-// 0x000009D0 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MaxX()
+// 0x000009D8 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MaxX()
 extern void Contour_get_MaxX_mFD8BD2C72E517172CCB436E3E6E905D99872E59B (void);
-// 0x000009D1 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MinY()
+// 0x000009D9 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MinY()
 extern void Contour_get_MinY_mF1D00F2E083BBC3181D992D9F22AB7698778EE46 (void);
-// 0x000009D2 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MaxY()
+// 0x000009DA System.Double FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_MaxY()
 extern void Contour_get_MaxY_mD6A91F18058FA2E1198AA4BFC16AEFD475A2A94B (void);
-// 0x000009D3 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Bounds()
+// 0x000009DB FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Contour::get_Bounds()
 extern void Contour_get_Bounds_mA2358D0D5643C06404C994222CC9D32724AD73A2 (void);
-// 0x000009D4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
+// 0x000009DC System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
 extern void Contour__ctor_mD77AA0EC3D6BF02DCCE9E21CB41EEDB3B5EDB6D4 (void);
-// 0x000009D5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x000009DD System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Contour__ctor_m4ED4AA421D1F9B4D4CD36BB6F7E87A0854CF1A7E (void);
-// 0x000009D6 System.String FunkyCode.Utilities.Polygon2DTriangulation.Contour::ToString()
+// 0x000009DE System.String FunkyCode.Utilities.Polygon2DTriangulation.Contour::ToString()
 extern void Contour_ToString_mE6754C520DC3C0425B35B113694F7AE44A1B832C (void);
-// 0x000009D7 System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.Contour::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>.GetEnumerator()
+// 0x000009DF System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.Contour::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>.GetEnumerator()
 extern void Contour_System_Collections_Generic_IEnumerableU3CFunkyCode_Utilities_Polygon2DTriangulation_TriangulationPointU3E_GetEnumerator_m6FB6687DFE77A1AFA5A936B4F5AAD4AE633431A0 (void);
-// 0x000009D8 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Contour::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x000009E0 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Contour::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Contour_IndexOf_mDE0B6A1E2C96BCC3E427C3177052D422D438D6F9 (void);
-// 0x000009D9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x000009E1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Contour_Add_mC42B9C5AAAD936522F00B55AF762C3FFC98B8C07 (void);
-// 0x000009DA System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
+// 0x000009E2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
 extern void Contour_Add_mB5EEADFC158689E30661F195E67C150E0E305B93 (void);
-// 0x000009DB System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddRange(System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x000009E3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddRange(System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Contour_AddRange_mC0A8360DCD902B936961728A14B942366A914091 (void);
-// 0x000009DC System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddRange(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x000009E4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddRange(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Contour_AddRange_m1376D9C8FCED3B16859D9379276B6207701E07CA (void);
-// 0x000009DD System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x000009E5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Contour_Insert_mFB42A61F58F05D32C686C4CA26A70477E1AA89BD (void);
-// 0x000009DE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::Remove(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x000009E6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::Remove(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Contour_Remove_m2A71DF0F2813E2639855E6613FB8DD7DC0F2273F (void);
-// 0x000009DF System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x000009E7 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Contour_Contains_mE78E677A0323C07B72C44706B7FFEC50B9ACD41B (void);
-// 0x000009E0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint[],System.Int32)
+// 0x000009E8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint[],System.Int32)
 extern void Contour_CopyTo_m12A3E1A5D47FEFEFB5CBCE763CD320FC0A83FCAD (void);
-// 0x000009E1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddHole(FunkyCode.Utilities.Polygon2DTriangulation.Contour)
+// 0x000009E9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddHole(FunkyCode.Utilities.Polygon2DTriangulation.Contour)
 extern void Contour_AddHole_m2F94A36724B3543B6FDF0EBE756FB760B32EDD57 (void);
-// 0x000009E2 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetNumHoles(System.Boolean)
+// 0x000009EA System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetNumHoles(System.Boolean)
 extern void Contour_GetNumHoles_m98935832A2164170E1795EF99AC9472450713A90 (void);
-// 0x000009E3 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetNumHoles()
+// 0x000009EB System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetNumHoles()
 extern void Contour_GetNumHoles_mB51148FDA1C0E91840F1B4E5B0830A8390491FD4 (void);
-// 0x000009E4 FunkyCode.Utilities.Polygon2DTriangulation.Contour FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetHole(System.Int32)
+// 0x000009EC FunkyCode.Utilities.Polygon2DTriangulation.Contour FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetHole(System.Int32)
 extern void Contour_GetHole_mF595F6917E42560EFEA0F5E71B379CBCD37CA6E4 (void);
-// 0x000009E5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetActualHoles(System.Boolean,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Contour>&)
+// 0x000009ED System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetActualHoles(System.Boolean,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Contour>&)
 extern void Contour_GetActualHoles_m1B0ADC2AE1960C93FCB7BD27FBC1ADD5429A44D9 (void);
-// 0x000009E6 System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.Contour> FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetHoleEnumerator()
+// 0x000009EE System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.Contour> FunkyCode.Utilities.Polygon2DTriangulation.Contour::GetHoleEnumerator()
 extern void Contour_GetHoleEnumerator_m30D0E0049837B7BF4C1CB643164A65221B7B3C8C (void);
-// 0x000009E7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::InitializeHoles(FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet)
+// 0x000009EF System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::InitializeHoles(FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet)
 extern void Contour_InitializeHoles_mA2A744291D7D10AE5B7FBDA96A9B975366695CF6 (void);
-// 0x000009E8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::InitializeHoles(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Contour>,FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable,FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet)
+// 0x000009F0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::InitializeHoles(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Contour>,FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable,FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet)
 extern void Contour_InitializeHoles_mA8F85DD9CC8BA827A370F853B1513D3AA9F50159 (void);
-// 0x000009E9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
+// 0x000009F1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
 extern void Contour_Prepare_mB6239B51342D991BF046CD139589FE9C3C61766C (void);
-// 0x000009EA System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x000009F2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void Contour_AddTriangle_mEF2297807D77DA946F323A38F7A96EDC1401A687 (void);
-// 0x000009EB System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x000009F3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
 extern void Contour_AddTriangles_mDED537CE5E0FB46D252AC01BF01E994F55D93954 (void);
-// 0x000009EC System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::ClearTriangles()
+// 0x000009F4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Contour::ClearTriangles()
 extern void Contour_ClearTriangles_m231277867D9601C0B0812438C65D0CA249A6551C (void);
-// 0x000009ED FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Contour::FindPointInContour()
+// 0x000009F5 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Contour::FindPointInContour()
 extern void Contour_FindPointInContour_mF7644073701B2A174D78B6293D01C46A3926D9DF (void);
-// 0x000009EE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::IsPointInsideContour(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x000009F6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Contour::IsPointInsideContour(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Contour_IsPointInsideContour_m78E75B677D82D07A8BFBC1783BD82B66029071E9 (void);
-// 0x000009EF System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Points()
+// 0x000009F7 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Points()
 extern void Polygon_get_Points_m483C1E0394846DCC1BC88AD25478706AAD5397B2 (void);
-// 0x000009F0 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Triangles()
+// 0x000009F8 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Triangles()
 extern void Polygon_get_Triangles_m63A007DD631BFE78696A619FA51B60197961F78E (void);
-// 0x000009F1 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_TriangulationMode()
+// 0x000009F9 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_TriangulationMode()
 extern void Polygon_get_TriangulationMode_m990E15BB598515C4911F67CC02364A8165003617 (void);
-// 0x000009F2 System.String FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_FileName()
+// 0x000009FA System.String FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_FileName()
 extern void Polygon_get_FileName_m3B47180A5047E7A9027BF4915812823FAF41191D (void);
-// 0x000009F3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_FileName(System.String)
+// 0x000009FB System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_FileName(System.String)
 extern void Polygon_set_FileName_mA54CF6146162BE04B4084BB17BA434041A57F95A (void);
-// 0x000009F4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_DisplayFlipX()
+// 0x000009FC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_DisplayFlipX()
 extern void Polygon_get_DisplayFlipX_m002B76C79212CABF668BF2ABB43CF457EB1744E0 (void);
-// 0x000009F5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_DisplayFlipX(System.Boolean)
+// 0x000009FD System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_DisplayFlipX(System.Boolean)
 extern void Polygon_set_DisplayFlipX_mDBE5E07795B95FCE978A7C759807427BB41A0781 (void);
-// 0x000009F6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_DisplayFlipY()
+// 0x000009FE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_DisplayFlipY()
 extern void Polygon_get_DisplayFlipY_mCEB2E74E06880425BCFF0572376FCAD0E3B1CA09 (void);
-// 0x000009F7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_DisplayFlipY(System.Boolean)
+// 0x000009FF System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_DisplayFlipY(System.Boolean)
 extern void Polygon_set_DisplayFlipY_m60DB83CB8D9DC29DCC77E1945C8425A072A67B66 (void);
-// 0x000009F8 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_DisplayRotate()
+// 0x00000A00 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_DisplayRotate()
 extern void Polygon_get_DisplayRotate_mA0F59EE9CF417B8B1451551594460345936417D0 (void);
-// 0x000009F9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_DisplayRotate(System.Single)
+// 0x00000A01 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_DisplayRotate(System.Single)
 extern void Polygon_set_DisplayRotate_m77DC171F7C3CE62A40AD6C262725C70186ABD072 (void);
-// 0x000009FA System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Precision()
+// 0x00000A02 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Precision()
 extern void Polygon_get_Precision_mD5C1AAACB208FBDB4380A708EC8D821D7493BBA3 (void);
-// 0x000009FB System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_Precision(System.Double)
+// 0x00000A03 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_Precision(System.Double)
 extern void Polygon_set_Precision_m6F746AAD27281AB42D2AE9E7520DCF67A07EDF43 (void);
-// 0x000009FC System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MinX()
+// 0x00000A04 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MinX()
 extern void Polygon_get_MinX_m9D4C635ED6D12C94BC5700F3AFC06831B88FB009 (void);
-// 0x000009FD System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MaxX()
+// 0x00000A05 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MaxX()
 extern void Polygon_get_MaxX_m6D8C3B87DC3B477D8EF083DE5AEF819843F1534E (void);
-// 0x000009FE System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MinY()
+// 0x00000A06 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MinY()
 extern void Polygon_get_MinY_m0E47152167A204D8214F3442E6BB0471F7D4ED49 (void);
-// 0x000009FF System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MaxY()
+// 0x00000A07 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_MaxY()
 extern void Polygon_get_MaxY_m2CC2FB90F77053421A4E390CBA67D5A32C84A6FE (void);
-// 0x00000A00 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Bounds()
+// 0x00000A08 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Bounds()
 extern void Polygon_get_Bounds_mF56238D366A8C8AEB8EB01C2F1047178B05653EA (void);
-// 0x00000A01 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Item(System.Int32)
+// 0x00000A09 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Item(System.Int32)
 extern void Polygon_get_Item_mD29B8861E02ADA9A5238360D952C71B286A5CC09 (void);
-// 0x00000A02 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A0A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_set_Item_m30B350B3B5F93F5D26C014FE44752459B27263C6 (void);
-// 0x00000A03 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Polygon> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Holes()
+// 0x00000A0B System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Polygon> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::get_Holes()
 extern void Polygon_get_Holes_m98945B31A5EE0E61FCD51FB427B3748D12E79F2D (void);
-// 0x00000A04 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint>)
+// 0x00000A0C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint>)
 extern void Polygon__ctor_m6C52F4063483778736277E4706AE9529FC347AFB (void);
-// 0x00000A05 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::.ctor(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint>)
+// 0x00000A0D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::.ctor(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint>)
 extern void Polygon__ctor_m459355323817CDEE13FA1BA7C0D8345E52C28130 (void);
-// 0x00000A06 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint[])
+// 0x00000A0E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint[])
 extern void Polygon__ctor_m0C135140CBAD236B73114B44F6D4BB9FD577FA55 (void);
-// 0x00000A07 System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>.GetEnumerator()
+// 0x00000A0F System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.Polygon::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>.GetEnumerator()
 extern void Polygon_System_Collections_Generic_IEnumerableU3CFunkyCode_Utilities_Polygon2DTriangulation_TriangulationPointU3E_GetEnumerator_mD5BCD6D37D281D80114F8F759CBB9654BF578DD8 (void);
-// 0x00000A08 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Polygon::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A10 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Polygon::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_IndexOf_m679A534CF352A5ABD4BAE55C1E53BC36FBF21268 (void);
-// 0x00000A09 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A11 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Polygon_Add_m12A5A346B960ED77DED7782C75BF186C922158BE (void);
-// 0x00000A0A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A12 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_Add_mF038878ECA2C11583C6DC1A45FEEC799F19F68CB (void);
-// 0x00000A0B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
+// 0x00000A13 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
 extern void Polygon_Add_mD3342FCB8FC0A5EDB5ADE74BB833E037126E19BE (void);
-// 0x00000A0C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
+// 0x00000A14 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
 extern void Polygon_Add_mA20CE2E8D37703227B5D6875A5CFAC8363D65CA4 (void);
-// 0x00000A0D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddRange(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x00000A15 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddRange(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Polygon_AddRange_m6F3A52316FC709FD922131FFBF6B89AE951488FB (void);
-// 0x00000A0E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddRange(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x00000A16 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddRange(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Polygon_AddRange_m7F6FB6E8C7E0B5ABD9878C61BFA2749C0F56C6B6 (void);
-// 0x00000A0F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A17 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_Insert_mD68D9DC6EEB809877E49DCA8E812937853A7A802 (void);
-// 0x00000A10 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Remove(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A18 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Remove(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_Remove_m044BE7A074A2F9E1088E1C1EF00676FCCD92A4C6 (void);
-// 0x00000A11 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::RemovePoint(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
+// 0x00000A19 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::RemovePoint(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
 extern void Polygon_RemovePoint_m6CA2346EB53F8C71D6E8F90FA1510B76C71F0FEB (void);
-// 0x00000A12 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A1A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_Contains_m5CC4BE397B7233CFD2E84950FFCC71975D67D95D (void);
-// 0x00000A13 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint[],System.Int32)
+// 0x00000A1B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint[],System.Int32)
 extern void Polygon_CopyTo_m66B21D537F103993CB302FA6372C23B6D64EA3FF (void);
-// 0x00000A14 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddSteinerPoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A1C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddSteinerPoint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_AddSteinerPoint_mCA0FF5DE17649187DD369092D6457A48AADD3B6F (void);
-// 0x00000A15 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddSteinerPoints(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
+// 0x00000A1D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddSteinerPoints(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
 extern void Polygon_AddSteinerPoints_m2CA65D33DD0478074F4A7A8BA257512904261E0B (void);
-// 0x00000A16 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::ClearSteinerPoints()
+// 0x00000A1E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::ClearSteinerPoints()
 extern void Polygon_ClearSteinerPoints_m9617E141127E6A892AC07C543B63F8B44F4544D6 (void);
-// 0x00000A17 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddHole(FunkyCode.Utilities.Polygon2DTriangulation.Polygon)
+// 0x00000A1F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddHole(FunkyCode.Utilities.Polygon2DTriangulation.Polygon)
 extern void Polygon_AddHole_m3E350CA231D9067AA2C906D707BE6C08316E7141 (void);
-// 0x00000A18 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000A20 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void Polygon_AddTriangle_m3CF140D07A1949AD0A97B2CAAAC72A41C083792A (void);
-// 0x00000A19 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x00000A21 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
 extern void Polygon_AddTriangles_mE9EBB371FABB88D213C2D564BF0B9C655D7845A7 (void);
-// 0x00000A1A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::ClearTriangles()
+// 0x00000A22 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::ClearTriangles()
 extern void Polygon_ClearTriangles_mAA333CBEACA5F015CA29C3A6BB69887BD908925E (void);
-// 0x00000A1B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::IsPointInside(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A23 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Polygon::IsPointInside(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void Polygon_IsPointInside_mE2C9A00A1B4CA03EF204E603578B373A6A7AEB2C (void);
-// 0x00000A1C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
+// 0x00000A24 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Polygon::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
 extern void Polygon_Prepare_mCF1CF35924A0C0049038814C60389B3922235AEE (void);
-// 0x00000A1D System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::.ctor(System.Double,System.Double)
+// 0x00000A25 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::.ctor(System.Double,System.Double)
 extern void PolygonPoint__ctor_m58F7D4C8F5D51198CE94FF623CC28AF51F60C5E0 (void);
-// 0x00000A1E FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::get_Next()
+// 0x00000A26 FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::get_Next()
 extern void PolygonPoint_get_Next_m834A326BEC0C7C0808FB617B57C6211E2EC5FC75 (void);
-// 0x00000A1F System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::set_Next(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
+// 0x00000A27 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::set_Next(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
 extern void PolygonPoint_set_Next_m76A1C879A4F1B1DD631EED59814C1D483E178342 (void);
-// 0x00000A20 FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::get_Previous()
+// 0x00000A28 FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::get_Previous()
 extern void PolygonPoint_get_Previous_m05F974962B9ABC63CFA9CB49AC5A3D109BB8AE98 (void);
-// 0x00000A21 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::set_Previous(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
+// 0x00000A29 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::set_Previous(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
 extern void PolygonPoint_set_Previous_m4E9D0BE42F3EDCA7D5F00911DDEEAEA47B710091 (void);
-// 0x00000A22 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::ToBasePoint(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
+// 0x00000A2A FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::ToBasePoint(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
 extern void PolygonPoint_ToBasePoint_mBAB770F8227BB876CC9DA2173E4AEB8E8F54A253 (void);
-// 0x00000A23 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::ToTriangulationPoint(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
+// 0x00000A2B FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint::ToTriangulationPoint(FunkyCode.Utilities.Polygon2DTriangulation.PolygonPoint)
 extern void PolygonPoint_ToTriangulationPoint_mB052E0A20434B5B3EB7C171256B78E97A78FD783 (void);
-// 0x00000A24 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::.ctor()
+// 0x00000A2C System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::.ctor()
 extern void PolygonSet__ctor_mC61A8066475A30D8CC77469453C632ACFADC39BA (void);
-// 0x00000A25 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Polygon)
+// 0x00000A2D System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Polygon)
 extern void PolygonSet__ctor_m8A250103D38DA243BCD2A18569CD8105626484D9 (void);
-// 0x00000A26 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Polygon)
+// 0x00000A2E System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Polygon)
 extern void PolygonSet_Add_m4593FD33B6A0CA9A24A9801E9A5CD0ABA8DF79E0 (void);
-// 0x00000A27 System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.Polygon> FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::get_Polygons()
+// 0x00000A2F System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.Polygon> FunkyCode.Utilities.Polygon2DTriangulation.PolygonSet::get_Polygons()
 extern void PolygonSet_get_Polygons_m613765EC52C1A46B70DDD1589AF013BAECD1EE88 (void);
-// 0x00000A28 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_Triangles()
-// 0x00000A29 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_TriangulationMode()
-// 0x00000A2A System.String FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_FileName()
-// 0x00000A2B System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_FileName(System.String)
-// 0x00000A2C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_DisplayFlipX()
-// 0x00000A2D System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_DisplayFlipX(System.Boolean)
-// 0x00000A2E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_DisplayFlipY()
-// 0x00000A2F System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_DisplayFlipY(System.Boolean)
-// 0x00000A30 System.Single FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_DisplayRotate()
-// 0x00000A31 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_DisplayRotate(System.Single)
-// 0x00000A32 System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_Precision()
-// 0x00000A33 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_Precision(System.Double)
-// 0x00000A34 System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MinX()
-// 0x00000A35 System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MaxX()
-// 0x00000A36 System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MinY()
-// 0x00000A37 System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MaxY()
-// 0x00000A38 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_Bounds()
-// 0x00000A39 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
-// 0x00000A3A System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
-// 0x00000A3B System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
-// 0x00000A3C System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::ClearTriangles()
-// 0x00000A3D FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Edge::get_EdgeStart()
+// 0x00000A30 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_Triangles()
+// 0x00000A31 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_TriangulationMode()
+// 0x00000A32 System.String FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_FileName()
+// 0x00000A33 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_FileName(System.String)
+// 0x00000A34 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_DisplayFlipX()
+// 0x00000A35 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_DisplayFlipX(System.Boolean)
+// 0x00000A36 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_DisplayFlipY()
+// 0x00000A37 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_DisplayFlipY(System.Boolean)
+// 0x00000A38 System.Single FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_DisplayRotate()
+// 0x00000A39 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_DisplayRotate(System.Single)
+// 0x00000A3A System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_Precision()
+// 0x00000A3B System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::set_Precision(System.Double)
+// 0x00000A3C System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MinX()
+// 0x00000A3D System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MaxX()
+// 0x00000A3E System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MinY()
+// 0x00000A3F System.Double FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_MaxY()
+// 0x00000A40 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::get_Bounds()
+// 0x00000A41 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
+// 0x00000A42 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000A43 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x00000A44 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable::ClearTriangles()
+// 0x00000A45 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Edge::get_EdgeStart()
 extern void Edge_get_EdgeStart_mBB424A69AA8E5EFAEAC78A8FA6362578F588B186 (void);
-// 0x00000A3E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::set_EdgeStart(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A46 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::set_EdgeStart(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Edge_set_EdgeStart_m6860483696200C7F8189621F6894756DB3987D5C (void);
-// 0x00000A3F FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Edge::get_EdgeEnd()
+// 0x00000A47 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Edge::get_EdgeEnd()
 extern void Edge_get_EdgeEnd_mC207555A95A5BF8829350955DB3E5CE228614BBB (void);
-// 0x00000A40 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::set_EdgeEnd(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A48 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::set_EdgeEnd(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Edge_set_EdgeEnd_m4132AC992F99752AF490719FD3A13028E0C3D6DE (void);
-// 0x00000A41 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::.ctor()
+// 0x00000A49 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::.ctor()
 extern void Edge__ctor_m09EF5A3CD42454EBC0B2EB223BA560D2315C5AF2 (void);
-// 0x00000A42 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A4A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Edge::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Edge__ctor_mEBFA7881075189D038FDDFC5960FBEB73A5B6539 (void);
-// 0x00000A43 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::get_P()
+// 0x00000A4B FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::get_P()
 extern void TriangulationConstraint_get_P_mE06E93426D37AD1B7561D09DF09848468422760C (void);
-// 0x00000A44 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::set_P(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A4C System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::set_P(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void TriangulationConstraint_set_P_m1801F7756EF037256F9702F2865395865FD689F5 (void);
-// 0x00000A45 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::get_Q()
+// 0x00000A4D FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::get_Q()
 extern void TriangulationConstraint_get_Q_m7F1B3625C3D5AED2CA3BC53410FCB25FF5FBEDA4 (void);
-// 0x00000A46 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::set_Q(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A4E System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::set_Q(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void TriangulationConstraint_set_Q_mE08043403C8806D16C07A2684281E60BC9D9F081 (void);
-// 0x00000A47 System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::get_ConstraintCode()
+// 0x00000A4F System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::get_ConstraintCode()
 extern void TriangulationConstraint_get_ConstraintCode_m05BB332A8BE9789D0E9F3E47C0043031143843C4 (void);
-// 0x00000A48 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A50 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void TriangulationConstraint__ctor_m236493FC062B54BB3C031AE5480700483AC76425 (void);
-// 0x00000A49 System.String FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::ToString()
+// 0x00000A51 System.String FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::ToString()
 extern void TriangulationConstraint_ToString_mBFE6CE2DD6D163C820FEA09EB8D43EBAC9FF6B48 (void);
-// 0x00000A4A System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::CalculateContraintCode()
+// 0x00000A52 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::CalculateContraintCode()
 extern void TriangulationConstraint_CalculateContraintCode_m957125EB55D07CF853C400FDA2F9717D9EA43CC8 (void);
-// 0x00000A4B System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::CalculateContraintCode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A53 System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint::CalculateContraintCode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void TriangulationConstraint_CalculateContraintCode_mF8309FDBB039F701402C09EA1AA7BDA9D1A4A976 (void);
-// 0x00000A4C FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_DebugContext()
+// 0x00000A54 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_DebugContext()
 extern void TriangulationContext_get_DebugContext_m97090545994BC42515B3474E9E035615AFAB82DC (void);
-// 0x00000A4D System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_DebugContext(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext)
+// 0x00000A55 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_DebugContext(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext)
 extern void TriangulationContext_set_DebugContext_m27B3EC03FF04252DB17327B535CD6F32B810E52F (void);
-// 0x00000A4E FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_TriangulationMode()
+// 0x00000A56 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_TriangulationMode()
 extern void TriangulationContext_get_TriangulationMode_m76DD7C8DC62A9E4590F53368E013EE654CB8BC7A (void);
-// 0x00000A4F System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_TriangulationMode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode)
+// 0x00000A57 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_TriangulationMode(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode)
 extern void TriangulationContext_set_TriangulationMode_m88FAE4F56D67301FB278D5D6357AFFB9ECBC6320 (void);
-// 0x00000A50 FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_Triangulatable()
+// 0x00000A58 FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_Triangulatable()
 extern void TriangulationContext_get_Triangulatable_m878EB6AB39D538217DEE23AAD9577178FC0F84D8 (void);
-// 0x00000A51 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_Triangulatable(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
+// 0x00000A59 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_Triangulatable(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
 extern void TriangulationContext_set_Triangulatable_mBB49A9787FC174AA80A30A83A1726E04C7E2E672 (void);
-// 0x00000A52 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_StepCount()
+// 0x00000A5A System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_StepCount()
 extern void TriangulationContext_get_StepCount_m7376406B1C751C0EDEDB531E687DBF3846ECF53C (void);
-// 0x00000A53 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_StepCount(System.Int32)
+// 0x00000A5B System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_StepCount(System.Int32)
 extern void TriangulationContext_set_StepCount_mC8A20B2434165A2A7BF2AFF417A71DCB36A6E918 (void);
-// 0x00000A54 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::Done()
+// 0x00000A5C System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::Done()
 extern void TriangulationContext_Done_m94DFB807A456C7E39906D07FA999ECE81C74A8FA (void);
-// 0x00000A55 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationAlgorithm FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_Algorithm()
-// 0x00000A56 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::PrepareTriangulation(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
+// 0x00000A5D FunkyCode.Utilities.Polygon2DTriangulation.TriangulationAlgorithm FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_Algorithm()
+// 0x00000A5E System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::PrepareTriangulation(FunkyCode.Utilities.Polygon2DTriangulation.ITriangulatable)
 extern void TriangulationContext_PrepareTriangulation_m4B71D215C3D9F9BAE360AB065779A064E15445EF (void);
-// 0x00000A57 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::NewConstraint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
-// 0x00000A58 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::Update(System.String)
+// 0x00000A5F FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::NewConstraint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A60 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::Update(System.String)
 extern void TriangulationContext_Update_mE76ECE81D5AD4AC9168B61AFF7A9A9D288E02F2C (void);
-// 0x00000A59 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::Clear()
+// 0x00000A61 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::Clear()
 extern void TriangulationContext_Clear_m666CECE50CE1B4657F69C8D94ECE06071D0D44AF (void);
-// 0x00000A5A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_IsDebugEnabled()
+// 0x00000A62 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_IsDebugEnabled()
 extern void TriangulationContext_get_IsDebugEnabled_mF4B67E8C1402289199B897F638C129C3FE276B1C (void);
-// 0x00000A5B System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_IsDebugEnabled(System.Boolean)
+// 0x00000A63 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::set_IsDebugEnabled(System.Boolean)
 extern void TriangulationContext_set_IsDebugEnabled_mA701827098F995B3E44EB609EA464BA82A4B7E63 (void);
-// 0x00000A5C FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_DTDebugContext()
+// 0x00000A64 FunkyCode.Utilities.Polygon2DTriangulation.DTSweepDebugContext FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::get_DTDebugContext()
 extern void TriangulationContext_get_DTDebugContext_m20C850DCFCAEA5DF7AA63AE005DAAE4C9D496791 (void);
-// 0x00000A5D System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::.ctor()
+// 0x00000A65 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext::.ctor()
 extern void TriangulationContext__ctor_m8083ED59ABECA0ACC8B7A3E194E2C37CCB35EFB9 (void);
-// 0x00000A5E System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
+// 0x00000A66 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
 extern void TriangulationDebugContext__ctor_m9CF7FEAE5DC79D6AD4A3389F6BED436BA2C0C4A7 (void);
-// 0x00000A5F System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext::Clear()
-// 0x00000A60 System.Double FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_X()
+// 0x00000A67 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationDebugContext::Clear()
+// 0x00000A68 System.Double FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_X()
 extern void TriangulationPoint_get_X_mD5B774A4BD0DD1D8DE662B558FDF9782FA97A9FE (void);
-// 0x00000A61 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::set_X(System.Double)
+// 0x00000A69 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::set_X(System.Double)
 extern void TriangulationPoint_set_X_mCC98BDFB32CC7FA9AF32FE447209F410B2EF2525 (void);
-// 0x00000A62 System.Double FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_Y()
+// 0x00000A6A System.Double FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_Y()
 extern void TriangulationPoint_get_Y_mB0BA899C81F0440098880716A6AA1CAFA0590765 (void);
-// 0x00000A63 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::set_Y(System.Double)
+// 0x00000A6B System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::set_Y(System.Double)
 extern void TriangulationPoint_set_Y_m8836EE99EFF8E4F5129E9B9C627828754A1903FB (void);
-// 0x00000A64 System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_VertexCode()
+// 0x00000A6C System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_VertexCode()
 extern void TriangulationPoint_get_VertexCode_m1F3813B3C83D19A5F161D8063EB58928011F11E8 (void);
-// 0x00000A65 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint> FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_Edges()
+// 0x00000A6D System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint> FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_Edges()
 extern void TriangulationPoint_get_Edges_mBD38DDDE6EF934899BA0E09413D7C66F5DAB8AA7 (void);
-// 0x00000A66 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::set_Edges(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint>)
+// 0x00000A6E System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::set_Edges(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint>)
 extern void TriangulationPoint_set_Edges_m7D1AF198CB8248411E46F43CAB89067651F26D2C (void);
-// 0x00000A67 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_HasEdges()
+// 0x00000A6F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::get_HasEdges()
 extern void TriangulationPoint_get_HasEdges_m4180808DF21C2EF1986BD96BF948E1B237B3A1D7 (void);
-// 0x00000A68 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::.ctor(System.Double,System.Double)
+// 0x00000A70 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::.ctor(System.Double,System.Double)
 extern void TriangulationPoint__ctor_m9B37F0FD75F4D2F5AF7E512528D68D54B00701DE (void);
-// 0x00000A69 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::.ctor(System.Double,System.Double,System.Double)
+// 0x00000A71 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::.ctor(System.Double,System.Double,System.Double)
 extern void TriangulationPoint__ctor_mAE5FE6939DB737BC823BA56E151B54D750B919D0 (void);
-// 0x00000A6A System.String FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::ToString()
+// 0x00000A72 System.String FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::ToString()
 extern void TriangulationPoint_ToString_m479773E52AF22DF41ECEEE7B8D0096F56798E725 (void);
-// 0x00000A6B System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::GetHashCode()
+// 0x00000A73 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::GetHashCode()
 extern void TriangulationPoint_GetHashCode_m708EC330490F3B5F700EAF159EB0CA7415E36660 (void);
-// 0x00000A6C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::Equals(System.Object)
+// 0x00000A74 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::Equals(System.Object)
 extern void TriangulationPoint_Equals_m86941FF9AFB806BFE09741FE5494111F5DA68A3D (void);
-// 0x00000A6D System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::Set(System.Double,System.Double)
+// 0x00000A75 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::Set(System.Double,System.Double)
 extern void TriangulationPoint_Set_m145B78DF9C69CC330761C5B191B96796DA55CC49 (void);
-// 0x00000A6E System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::CreateVertexCode(System.Double,System.Double,System.Double)
+// 0x00000A76 System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::CreateVertexCode(System.Double,System.Double,System.Double)
 extern void TriangulationPoint_CreateVertexCode_mC57DC2BE1F9CCA3927291EE3AAA3D6665523113C (void);
-// 0x00000A6F System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::AddEdge(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint)
+// 0x00000A77 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::AddEdge(FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint)
 extern void TriangulationPoint_AddEdge_m6FB227E8DFFA7D58B3362FE7BF3E8C8D4A6E56CF (void);
-// 0x00000A70 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::HasEdge(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A78 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::HasEdge(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void TriangulationPoint_HasEdge_m295ED9E4E0565F35BD824963241175775146EFB0 (void);
-// 0x00000A71 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::GetEdge(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
+// 0x00000A79 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::GetEdge(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint&)
 extern void TriangulationPoint_GetEdge_m3355131CDFA5C1C3AE3BECC580F895EC3F297077 (void);
-// 0x00000A72 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::ToPoint2D(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000A7A FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::ToPoint2D(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void TriangulationPoint_ToPoint2D_m9AB2AA5ED34BF50B0125AC91D63B26FCFBDDA36C (void);
-// 0x00000A73 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::.cctor()
+// 0x00000A7B System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint::.cctor()
 extern void TriangulationPoint__cctor_m45BA9A63DBD4EBC20D26C0D1E33A11E36B2C725A (void);
-// 0x00000A74 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
+// 0x00000A7C System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
 extern void TriangulationPointEnumerator__ctor_m027613A8FBAD13FA4EFD125AFCB6A33968AFA278 (void);
-// 0x00000A75 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::MoveNext()
+// 0x00000A7D System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::MoveNext()
 extern void TriangulationPointEnumerator_MoveNext_m5FAAA7CF4F67D264FC8B6561F3808DC9FDDE5C88 (void);
-// 0x00000A76 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::Reset()
+// 0x00000A7E System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::Reset()
 extern void TriangulationPointEnumerator_Reset_mF7FB218FEEAB9BC28FC6479B6CAC5307C3FDF89A (void);
-// 0x00000A77 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::System.IDisposable.Dispose()
+// 0x00000A7F System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::System.IDisposable.Dispose()
 extern void TriangulationPointEnumerator_System_IDisposable_Dispose_mF1E22965AC1DB248C8CC600F3E233FA3F9F6597A (void);
-// 0x00000A78 System.Object FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::System.Collections.IEnumerator.get_Current()
+// 0x00000A80 System.Object FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::System.Collections.IEnumerator.get_Current()
 extern void TriangulationPointEnumerator_System_Collections_IEnumerator_get_Current_m6AA9828C586E1D0DD7B8264F0FD05E4D61998B7E (void);
-// 0x00000A79 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::get_Current()
+// 0x00000A81 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointEnumerator::get_Current()
 extern void TriangulationPointEnumerator_get_Current_mDB64C412662D4AB48954C8ED57C2D89948E5DCCD (void);
-// 0x00000A7A System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointList::.ctor()
+// 0x00000A82 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPointList::.ctor()
 extern void TriangulationPointList__ctor_mCB0DAA142E8BA88C24D68AEE81DD103C2F0085E9 (void);
-// 0x00000A7B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::SmartIncircle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A83 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::SmartIncircle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void TriangulationUtil_SmartIncircle_mED7760F04EBD3DF45FD863064C4EA9D2C531C49E (void);
-// 0x00000A7C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::InScanArea(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A84 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::InScanArea(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void TriangulationUtil_InScanArea_m23E05336AD8807D45826A578A18CB1DF073E1E1F (void);
-// 0x00000A7D FunkyCode.Utilities.Polygon2DTriangulation.Orientation FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::Orient2d(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A85 FunkyCode.Utilities.Polygon2DTriangulation.Orientation FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::Orient2d(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void TriangulationUtil_Orient2d_m7457FCAA2EDCDB2A5F163610BFDE276E2199B3B4 (void);
-// 0x00000A7E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::PointInBoundingBox(System.Double,System.Double,System.Double,System.Double,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A86 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::PointInBoundingBox(System.Double,System.Double,System.Double,System.Double,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void TriangulationUtil_PointInBoundingBox_m6CDC28AB4B9F013443378F37C64BB657AE16284B (void);
-// 0x00000A7F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::PointOnLineSegment2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000A87 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::PointOnLineSegment2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void TriangulationUtil_PointOnLineSegment2D_m625C9F8274E2D07EBC754E47837C91791CCF854B (void);
-// 0x00000A80 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::PointOnLineSegment2D(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
+// 0x00000A88 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::PointOnLineSegment2D(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)
 extern void TriangulationUtil_PointOnLineSegment2D_m32540E261FF3057FF374DBDC9CED176EF644CB10 (void);
-// 0x00000A81 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::RectsIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000A89 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::RectsIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void TriangulationUtil_RectsIntersect_m11786093D580B9E034DE6C518462672CA233FC40 (void);
-// 0x00000A82 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LinesIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Boolean,System.Boolean,System.Boolean,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&,System.Double)
+// 0x00000A8A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LinesIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Boolean,System.Boolean,System.Boolean,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&,System.Double)
 extern void TriangulationUtil_LinesIntersect2D_m6CB40306F9BF524A890749C1D58B4FF400B51222 (void);
-// 0x00000A83 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LinesIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&,System.Double)
+// 0x00000A8B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LinesIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&,System.Double)
 extern void TriangulationUtil_LinesIntersect2D_m3F728959DC9795375DDCACA82B1507A01D8B5612 (void);
-// 0x00000A84 System.Double FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LI2DDotProduct(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000A8C System.Double FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LI2DDotProduct(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void TriangulationUtil_LI2DDotProduct_m62468A5DD5E6E6FD04845B08C9612DAE4E3B1222 (void);
-// 0x00000A85 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::RaysIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&)
+// 0x00000A8D System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::RaysIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&)
 extern void TriangulationUtil_RaysIntersect2D_m0F3A5E30E31F45937E08ADA24A7FEBB89FE5052A (void);
-// 0x00000A86 System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::.ctor()
+// 0x00000A8E System.Void FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::.ctor()
 extern void TriangulationUtil__ctor_m78BABA4BF05397792CD504FD8B62605E3A25A631 (void);
-// 0x00000A87 FunkyCode.Utilities.Polygon2DTriangulation.Polygon FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::RandomCircleSweep(System.Double,System.Int32)
+// 0x00000A8F FunkyCode.Utilities.Polygon2DTriangulation.Polygon FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::RandomCircleSweep(System.Double,System.Int32)
 extern void PolygonGenerator_RandomCircleSweep_mEAF85A226CE36F79AE73B2507C3FA4A73BAB27A7 (void);
-// 0x00000A88 FunkyCode.Utilities.Polygon2DTriangulation.Polygon FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::RandomCircleSweep2(System.Double,System.Int32)
+// 0x00000A90 FunkyCode.Utilities.Polygon2DTriangulation.Polygon FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::RandomCircleSweep2(System.Double,System.Int32)
 extern void PolygonGenerator_RandomCircleSweep2_m5473F01E94AC59A0573EC21936B710B8732873D3 (void);
-// 0x00000A89 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::.ctor()
+// 0x00000A91 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::.ctor()
 extern void PolygonGenerator__ctor_m516EE23154A9A7CA30840EFBE0663576BC6A6B61 (void);
-// 0x00000A8A System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::.cctor()
+// 0x00000A92 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonGenerator::.cctor()
 extern void PolygonGenerator__cctor_m7B4C3DC5929E9777588BD9409FC1BDE0608466C3 (void);
-// 0x00000A8B System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::UniformDistribution(System.Int32,System.Double)
+// 0x00000A93 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::UniformDistribution(System.Int32,System.Double)
 extern void PointGenerator_UniformDistribution_m48A87DFEB6E3FAB0AF835FBBEC7AC6F192B6250D (void);
-// 0x00000A8C System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::UniformGrid(System.Int32,System.Double)
+// 0x00000A94 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::UniformGrid(System.Int32,System.Double)
 extern void PointGenerator_UniformGrid_m39D8E840ECE09E3CD1F0D02B3BD3619435B9C877 (void);
-// 0x00000A8D System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::.ctor()
+// 0x00000A95 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::.ctor()
 extern void PointGenerator__ctor_mB7E0FA798354289359F2A24447AC638ED7DFB351 (void);
-// 0x00000A8E System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::.cctor()
+// 0x00000A96 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointGenerator::.cctor()
 extern void PointGenerator__cctor_m6B863DE261C3E39A1034E784A650703B7E5934E0 (void);
-// 0x00000A8F System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Points()
+// 0x00000A97 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Points()
 extern void PointSet_get_Points_m21B1DDAA15A556090748021563F581694C128EDA (void);
-// 0x00000A90 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Points(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
+// 0x00000A98 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Points(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
 extern void PointSet_set_Points_m4971A8DEF3455DDA47AC009EF83C3D8E12CBA431 (void);
-// 0x00000A91 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Triangles()
+// 0x00000A99 System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle> FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Triangles()
 extern void PointSet_get_Triangles_mF8E97E9E5310B33F90E92C1932BBDC7941913729 (void);
-// 0x00000A92 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Triangles(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x00000A9A System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Triangles(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
 extern void PointSet_set_Triangles_mC2DC89C9160E06C22C50C957A2112294EFAFE12B (void);
-// 0x00000A93 System.String FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_FileName()
+// 0x00000A9B System.String FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_FileName()
 extern void PointSet_get_FileName_mC569CAC78BC21CC5F4D921F62F900ADCFD9812E7 (void);
-// 0x00000A94 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_FileName(System.String)
+// 0x00000A9C System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_FileName(System.String)
 extern void PointSet_set_FileName_m47EC3594F91DAB73C6A34E29A4A3265A353A0C29 (void);
-// 0x00000A95 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_DisplayFlipX()
+// 0x00000A9D System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_DisplayFlipX()
 extern void PointSet_get_DisplayFlipX_m8FC20D616CD605009DC811AE82A51C165735514F (void);
-// 0x00000A96 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_DisplayFlipX(System.Boolean)
+// 0x00000A9E System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_DisplayFlipX(System.Boolean)
 extern void PointSet_set_DisplayFlipX_m38B3AB93CA6987BEA530B87210D95B6947E142AC (void);
-// 0x00000A97 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_DisplayFlipY()
+// 0x00000A9F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_DisplayFlipY()
 extern void PointSet_get_DisplayFlipY_m8272927A2C64D341C84AB293838EBC5F64BA0AA6 (void);
-// 0x00000A98 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_DisplayFlipY(System.Boolean)
+// 0x00000AA0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_DisplayFlipY(System.Boolean)
 extern void PointSet_set_DisplayFlipY_m52CB5606BA5BB0EEB1DF706F1F04AD6F6F93BB8A (void);
-// 0x00000A99 System.Single FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_DisplayRotate()
+// 0x00000AA1 System.Single FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_DisplayRotate()
 extern void PointSet_get_DisplayRotate_mA6E165FA2658F49D5E1D76978040CA65E7512230 (void);
-// 0x00000A9A System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_DisplayRotate(System.Single)
+// 0x00000AA2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_DisplayRotate(System.Single)
 extern void PointSet_set_DisplayRotate_m906207A6CC213115827B4152BE821EBCEB821E25 (void);
-// 0x00000A9B System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Precision()
+// 0x00000AA3 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Precision()
 extern void PointSet_get_Precision_mA21D670A7C44ED34AEC229F87FCB5870A4391367 (void);
-// 0x00000A9C System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Precision(System.Double)
+// 0x00000AA4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Precision(System.Double)
 extern void PointSet_set_Precision_m382DA1EC497EA91600B814C96B13FAC45B702087 (void);
-// 0x00000A9D System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MinX()
+// 0x00000AA5 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MinX()
 extern void PointSet_get_MinX_m9F5912EE33560BF32FD9D978177D86E7D8A577B7 (void);
-// 0x00000A9E System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MaxX()
+// 0x00000AA6 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MaxX()
 extern void PointSet_get_MaxX_m303F4C5C230CEF11E4E6A6EB667B06C91C87C1F7 (void);
-// 0x00000A9F System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MinY()
+// 0x00000AA7 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MinY()
 extern void PointSet_get_MinY_mC6982D48B358D278B9CA5425E014722867DA31CE (void);
-// 0x00000AA0 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MaxY()
+// 0x00000AA8 System.Double FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_MaxY()
 extern void PointSet_get_MaxY_mFD5831CA589FAEA8D670F74709753F5C24B54F3A (void);
-// 0x00000AA1 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Bounds()
+// 0x00000AA9 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Bounds()
 extern void PointSet_get_Bounds_m7ECAD4ADB61FE7FC778B99E2A77BFF577FA605E3 (void);
-// 0x00000AA2 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_TriangulationMode()
+// 0x00000AAA FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_TriangulationMode()
 extern void PointSet_get_TriangulationMode_mDFA8939751846D07DF8022ED2C3DA3A393F9217A (void);
-// 0x00000AA3 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Item(System.Int32)
+// 0x00000AAB FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint FunkyCode.Utilities.Polygon2DTriangulation.PointSet::get_Item(System.Int32)
 extern void PointSet_get_Item_mADE4D47B57A00ACB52D49B05A2E479B750746A55 (void);
-// 0x00000AA4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000AAC System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_set_Item_mFC6E1C6BA2EF41AA55A584E7F5513837386740DA (void);
-// 0x00000AA5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
+// 0x00000AAD System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
 extern void PointSet__ctor_m21E9A7DF85F050ECD17CAD8A31DB6EFFE06D4AEA (void);
-// 0x00000AA6 System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointSet::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>.GetEnumerator()
+// 0x00000AAE System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint> FunkyCode.Utilities.Polygon2DTriangulation.PointSet::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>.GetEnumerator()
 extern void PointSet_System_Collections_Generic_IEnumerableU3CFunkyCode_Utilities_Polygon2DTriangulation_TriangulationPointU3E_GetEnumerator_m6D4137F575A411B82CEEA1C77863632873F2EB51 (void);
-// 0x00000AA7 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.PointSet::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000AAF System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.PointSet::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_IndexOf_mDE1630993E100038DE9FDD7E65BA26E51199ECC1 (void);
-// 0x00000AA8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000AB0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void PointSet_Add_m67ECD62EFD647083DEA305E8ECDC0CA166CC343A (void);
-// 0x00000AA9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000AB1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_Add_mA06C2B561C313D9562096745C4D75C238FAD9C98 (void);
-// 0x00000AAA System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
+// 0x00000AB2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
 extern void PointSet_Add_m727A9DF469E0243188231450C3CEB99A58A1E916 (void);
-// 0x00000AAB System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Int32,System.Boolean)
+// 0x00000AB3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,System.Int32,System.Boolean)
 extern void PointSet_Add_m5082671D40C3C911D31C82CD8280990B197A51FC (void);
-// 0x00000AAC System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddRange(System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x00000AB4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddRange(System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void PointSet_AddRange_m4B1EC73F7E46DC4919ED4E490BA6512782129B94 (void);
-// 0x00000AAD System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddRange(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
+// 0x00000AB5 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddRange(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
 extern void PointSet_AddRange_mD34E1A9BAA6267A3094EA1B3BDF856A2D2FB7956 (void);
-// 0x00000AAE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::TryGetPoint(System.Double,System.Double,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint&)
+// 0x00000AB6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::TryGetPoint(System.Double,System.Double,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint&)
 extern void PointSet_TryGetPoint_mAF6EB11B5A5A781C008A4646037325F1BC8FABB9 (void);
-// 0x00000AAF System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000AB7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_Insert_mDA01CE7983D87A2AD28D1C6C83C251994F09679B (void);
-// 0x00000AB0 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Remove(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000AB8 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Remove(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void PointSet_Remove_m3001EF9E61BFA655856A215C4D5BF1A5A37312C4 (void);
-// 0x00000AB1 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Remove(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000AB9 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Remove(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_Remove_m2D4C538B6123EA385F79E62388E2F77B5485477C (void);
-// 0x00000AB2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::RemoveAt(System.Int32)
+// 0x00000ABA System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::RemoveAt(System.Int32)
 extern void PointSet_RemoveAt_m21D7F151DCC6A74DA9BE2288901B115BDBFEF2DC (void);
-// 0x00000AB3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000ABB System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Contains(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_Contains_m18993ADF67CB55E7957BAEA36C3B8ABBBE4B73B0 (void);
-// 0x00000AB4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint[],System.Int32)
+// 0x00000ABC System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint[],System.Int32)
 extern void PointSet_CopyTo_m849955DF3BBCC880FDDF138FFFDE1CB867899CA9 (void);
-// 0x00000AB5 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::ConstrainPointToBounds(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000ABD System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::ConstrainPointToBounds(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void PointSet_ConstrainPointToBounds_mB75DF72ADDF95747BBA623701DA944CDB779A893 (void);
-// 0x00000AB6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::ConstrainPointToBounds(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000ABE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::ConstrainPointToBounds(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void PointSet_ConstrainPointToBounds_m474B8B97418F05EF6D72F88B67B36248D41C8193 (void);
-// 0x00000AB7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000ABF System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void PointSet_AddTriangle_mD06566997EF1BA935313C2DFE9D4B86EDCD75C0E (void);
-// 0x00000AB8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
+// 0x00000AC0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::AddTriangles(System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>)
 extern void PointSet_AddTriangles_m659F47757CC62C38384246FDC90AB68D048187AC (void);
-// 0x00000AB9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::ClearTriangles()
+// 0x00000AC1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::ClearTriangles()
 extern void PointSet_ClearTriangles_mA5D728AF2B25FC0CE6E4F6E16E5BA799FEC22A4A (void);
-// 0x00000ABA System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Initialize()
+// 0x00000AC2 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Initialize()
 extern void PointSet_Initialize_m3444D5564AAC3DAD4B8EE74FAB01283A09B715BC (void);
-// 0x00000ABB System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
+// 0x00000AC3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.PointSet::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
 extern void PointSet_Prepare_m44067A2D2F865C4044AADDC7155009157A36B480 (void);
-// 0x00000ABC FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::get_TriangulationMode()
+// 0x00000AC4 FunkyCode.Utilities.Polygon2DTriangulation.TriangulationMode FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::get_TriangulationMode()
 extern void ConstrainedPointSet_get_TriangulationMode_m5704E032536C03EB998686209FD14D97561741C6 (void);
-// 0x00000ABD System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
+// 0x00000AC5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
 extern void ConstrainedPointSet__ctor_mEEEE60B91EEBC250DC841004948A788A21AC5F3C (void);
-// 0x00000ABE System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint>)
+// 0x00000AC6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint>)
 extern void ConstrainedPointSet__ctor_m8F67540F549252E2F17C54BF8031F603EC2A1556 (void);
-// 0x00000ABF System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,System.Int32[])
+// 0x00000AC7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::.ctor(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,System.Int32[])
 extern void ConstrainedPointSet__ctor_m55C62DB34918FCCDB8B58C2AE9AC147C8955E249 (void);
-// 0x00000AC0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddBoundaryConstraints()
+// 0x00000AC8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddBoundaryConstraints()
 extern void ConstrainedPointSet_AddBoundaryConstraints_mACCDC9B07C23241ED22B94ECE8034B470634574C (void);
-// 0x00000AC1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000AC9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void ConstrainedPointSet_Add_mEF763B38C42E4F7B25A9E87EB7F901FFA7327B63 (void);
-// 0x00000AC2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
+// 0x00000ACA System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Add(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 extern void ConstrainedPointSet_Add_mCAC0FE01FBC3900449FAC9F733F761F7B5AD4034 (void);
-// 0x00000AC3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddRange(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
+// 0x00000ACB System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddRange(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>)
 extern void ConstrainedPointSet_AddRange_mEFB2CA14858DFD15E8B77E6C5B7FA416136F970D (void);
-// 0x00000AC4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddHole(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,System.String)
+// 0x00000ACC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddHole(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>,System.String)
 extern void ConstrainedPointSet_AddHole_m4BCFB9DC7DCFFFA3DC01B8476890E9A3ED5D3106 (void);
-// 0x00000AC5 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddConstraints(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint>)
+// 0x00000ACD System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddConstraints(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint>)
 extern void ConstrainedPointSet_AddConstraints_m9285B262A790DBF678D74DEE1A3F1E8CD374B54D (void);
-// 0x00000AC6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddConstraint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint)
+// 0x00000ACE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddConstraint(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint)
 extern void ConstrainedPointSet_AddConstraint_mF1CD3152EC0B44C0343AE078428F51C69F9AFF5A (void);
-// 0x00000AC7 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::TryGetConstraint(System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint&)
+// 0x00000ACF System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::TryGetConstraint(System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint&)
 extern void ConstrainedPointSet_TryGetConstraint_m07FD562113F88720368A127ACF653A2C8ED0EF84 (void);
-// 0x00000AC8 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetNumConstraints()
+// 0x00000AD0 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetNumConstraints()
 extern void ConstrainedPointSet_GetNumConstraints_m72BDF97D1F445791494395793E9F34A93A2CB08F (void);
-// 0x00000AC9 System.Collections.Generic.Dictionary`2/Enumerator<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint> FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetConstraintEnumerator()
+// 0x00000AD1 System.Collections.Generic.Dictionary`2/Enumerator<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationConstraint> FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetConstraintEnumerator()
 extern void ConstrainedPointSet_GetConstraintEnumerator_m2256EBAE1598A4C94C4ECA5D283CECECF0316851 (void);
-// 0x00000ACA System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetNumHoles()
+// 0x00000AD2 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetNumHoles()
 extern void ConstrainedPointSet_GetNumHoles_m750859086C696801746B973CBAE67785B268C6B7 (void);
-// 0x00000ACB FunkyCode.Utilities.Polygon2DTriangulation.Contour FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetHole(System.Int32)
+// 0x00000AD3 FunkyCode.Utilities.Polygon2DTriangulation.Contour FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetHole(System.Int32)
 extern void ConstrainedPointSet_GetHole_m1248F6F76D1060791DAF78851CC7DCB1BD92BD98 (void);
-// 0x00000ACC System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetActualHoles(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Contour>&)
+// 0x00000AD4 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::GetActualHoles(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Contour>&)
 extern void ConstrainedPointSet_GetActualHoles_m6036525967659EA062D51DF096F2310F6357E8B6 (void);
-// 0x00000ACD System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::InitializeHoles()
+// 0x00000AD5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::InitializeHoles()
 extern void ConstrainedPointSet_InitializeHoles_mE4A151EDC5336627FB23A6CE15CED4E2AAFB3316 (void);
-// 0x00000ACE System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Initialize()
+// 0x00000AD6 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Initialize()
 extern void ConstrainedPointSet_Initialize_mBDD825C01D87C3590A54B080DC12B0256F75B717 (void);
-// 0x00000ACF System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
+// 0x00000AD7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::Prepare(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationContext)
 extern void ConstrainedPointSet_Prepare_m2268D44CC22D6CE57197B4991DC405A51855E085 (void);
-// 0x00000AD0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
+// 0x00000AD8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.ConstrainedPointSet::AddTriangle(FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle)
 extern void ConstrainedPointSet_AddTriangle_m428E80E8DBA4631594FDC2983D18CFAFE100D0DC (void);
-// 0x00000AD1 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::get_Item(System.Int32)
+// 0x00000AD9 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::get_Item(System.Int32)
 extern void FixedBitArray3_get_Item_mA084FDFBAE6BF93221583D00C7E11E692EAB3768 (void);
-// 0x00000AD2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::set_Item(System.Int32,System.Boolean)
+// 0x00000ADA System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::set_Item(System.Int32,System.Boolean)
 extern void FixedBitArray3_set_Item_mAB2D7E431AF9D0ADF66337175CBFE6F618185235 (void);
-// 0x00000AD3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Contains(System.Boolean)
+// 0x00000ADB System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Contains(System.Boolean)
 extern void FixedBitArray3_Contains_mD752A3BA6B90F64C49B3D9519316C2752E118285 (void);
-// 0x00000AD4 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::IndexOf(System.Boolean)
+// 0x00000ADC System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::IndexOf(System.Boolean)
 extern void FixedBitArray3_IndexOf_m3DFD04CA30732B31868199DF0B80EC6FF05047E7 (void);
-// 0x00000AD5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Clear()
+// 0x00000ADD System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Clear()
 extern void FixedBitArray3_Clear_m3E93B2AC706412361D2EED721793F49FECBFC07A (void);
-// 0x00000AD6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Clear(System.Boolean)
+// 0x00000ADE System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Clear(System.Boolean)
 extern void FixedBitArray3_Clear_m4CD45ECA86EE92D888EA77A54DE05483BCB9759F (void);
-// 0x00000AD7 System.Collections.Generic.IEnumerable`1<System.Boolean> FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Enumerate()
+// 0x00000ADF System.Collections.Generic.IEnumerable`1<System.Boolean> FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::Enumerate()
 extern void FixedBitArray3_Enumerate_m1AD3B0162E55A42D88069993B3E6E34CC1A4C950 (void);
-// 0x00000AD8 System.Collections.Generic.IEnumerator`1<System.Boolean> FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::GetEnumerator()
+// 0x00000AE0 System.Collections.Generic.IEnumerator`1<System.Boolean> FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::GetEnumerator()
 extern void FixedBitArray3_GetEnumerator_m12A72A3886DD437D898E9F27879775A031256714 (void);
-// 0x00000AD9 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::System.Collections.IEnumerable.GetEnumerator()
+// 0x00000AE1 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3::System.Collections.IEnumerable.GetEnumerator()
 extern void FixedBitArray3_System_Collections_IEnumerable_GetEnumerator_m50AF62F6F306BCFBB17758CC681A68BB4F8B16F2 (void);
-// 0x00000ADA System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::.ctor(System.Int32)
+// 0x00000AE2 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::.ctor(System.Int32)
 extern void U3CEnumerateU3Ed__10__ctor_m0516BE31F44737FEC04BB894CE53F1280ED0DC0B (void);
-// 0x00000ADB System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.IDisposable.Dispose()
+// 0x00000AE3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.IDisposable.Dispose()
 extern void U3CEnumerateU3Ed__10_System_IDisposable_Dispose_m30FB84DA07CFD9B93580B846A2DCEDA8A1FDD507 (void);
-// 0x00000ADC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::MoveNext()
+// 0x00000AE4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::MoveNext()
 extern void U3CEnumerateU3Ed__10_MoveNext_mF3D09614A1841C0A504BDCF65558F7EB0821F0DE (void);
-// 0x00000ADD System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.Generic.IEnumerator<System.Boolean>.get_Current()
+// 0x00000AE5 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.Generic.IEnumerator<System.Boolean>.get_Current()
 extern void U3CEnumerateU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_BooleanU3E_get_Current_m50EC3C242CA3C0F85AECC757B45246037B8F8B37 (void);
-// 0x00000ADE System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.IEnumerator.Reset()
+// 0x00000AE6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.IEnumerator.Reset()
 extern void U3CEnumerateU3Ed__10_System_Collections_IEnumerator_Reset_m8F17D8CDBAF2B97F2C224894885ADD6BE07FB976 (void);
-// 0x00000ADF System.Object FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.IEnumerator.get_Current()
+// 0x00000AE7 System.Object FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.IEnumerator.get_Current()
 extern void U3CEnumerateU3Ed__10_System_Collections_IEnumerator_get_Current_m6AC53992D8E94C58E98D08038F6E69FAD2579635 (void);
-// 0x00000AE0 System.Collections.Generic.IEnumerator`1<System.Boolean> FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.Generic.IEnumerable<System.Boolean>.GetEnumerator()
+// 0x00000AE8 System.Collections.Generic.IEnumerator`1<System.Boolean> FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.Generic.IEnumerable<System.Boolean>.GetEnumerator()
 extern void U3CEnumerateU3Ed__10_System_Collections_Generic_IEnumerableU3CSystem_BooleanU3E_GetEnumerator_m595D221580D4EEAEA267660B7D6CEF233386DFF0 (void);
-// 0x00000AE1 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.IEnumerable.GetEnumerator()
+// 0x00000AE9 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedBitArray3/<Enumerate>d__10::System.Collections.IEnumerable.GetEnumerator()
 extern void U3CEnumerateU3Ed__10_System_Collections_IEnumerable_GetEnumerator_m4B7F1160069965EB089401735C0D67A481F77135 (void);
-// 0x00000AE2 T FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::get_Item(System.Int32)
-// 0x00000AE3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::set_Item(System.Int32,T)
-// 0x00000AE4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Contains(T)
-// 0x00000AE5 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::IndexOf(T)
-// 0x00000AE6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Clear()
-// 0x00000AE7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Clear(T)
-// 0x00000AE8 System.Collections.Generic.IEnumerable`1<T> FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Enumerate()
-// 0x00000AE9 System.Collections.Generic.IEnumerator`1<T> FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::GetEnumerator()
-// 0x00000AEA System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::System.Collections.IEnumerable.GetEnumerator()
-// 0x00000AEB System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::.ctor(System.Int32)
-// 0x00000AEC System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.IDisposable.Dispose()
-// 0x00000AED System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::MoveNext()
-// 0x00000AEE T FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.Generic.IEnumerator<T>.get_Current()
-// 0x00000AEF System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.IEnumerator.Reset()
-// 0x00000AF0 System.Object FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.IEnumerator.get_Current()
-// 0x00000AF1 System.Collections.Generic.IEnumerator`1<T> FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.Generic.IEnumerable<T>.GetEnumerator()
-// 0x00000AF2 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.IEnumerable.GetEnumerator()
-// 0x00000AF3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::AreValuesEqual(System.Double,System.Double)
+// 0x00000AEA T FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::get_Item(System.Int32)
+// 0x00000AEB System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::set_Item(System.Int32,T)
+// 0x00000AEC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Contains(T)
+// 0x00000AED System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::IndexOf(T)
+// 0x00000AEE System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Clear()
+// 0x00000AEF System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Clear(T)
+// 0x00000AF0 System.Collections.Generic.IEnumerable`1<T> FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::Enumerate()
+// 0x00000AF1 System.Collections.Generic.IEnumerator`1<T> FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::GetEnumerator()
+// 0x00000AF2 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1::System.Collections.IEnumerable.GetEnumerator()
+// 0x00000AF3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::.ctor(System.Int32)
+// 0x00000AF4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.IDisposable.Dispose()
+// 0x00000AF5 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::MoveNext()
+// 0x00000AF6 T FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.Generic.IEnumerator<T>.get_Current()
+// 0x00000AF7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.IEnumerator.Reset()
+// 0x00000AF8 System.Object FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.IEnumerator.get_Current()
+// 0x00000AF9 System.Collections.Generic.IEnumerator`1<T> FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+// 0x00000AFA System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.FixedArray3`1/<Enumerate>d__10::System.Collections.IEnumerable.GetEnumerator()
+// 0x00000AFB System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::AreValuesEqual(System.Double,System.Double)
 extern void MathUtil_AreValuesEqual_m6E891A8EF29DC04A07FA1DC18F7FD9EAC161A653 (void);
-// 0x00000AF4 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::AreValuesEqual(System.Double,System.Double,System.Double)
+// 0x00000AFC System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::AreValuesEqual(System.Double,System.Double,System.Double)
 extern void MathUtil_AreValuesEqual_m92D53EA39D479C6BA71504A27439F2A02B2DD2FE (void);
-// 0x00000AF5 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::IsValueBetween(System.Double,System.Double,System.Double,System.Double)
+// 0x00000AFD System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::IsValueBetween(System.Double,System.Double,System.Double,System.Double)
 extern void MathUtil_IsValueBetween_m37D5C6C6668CAFF57FC7E55FD29159F5DFF39785 (void);
-// 0x00000AF6 System.Double FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::RoundWithPrecision(System.Double,System.Double)
+// 0x00000AFE System.Double FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::RoundWithPrecision(System.Double,System.Double)
 extern void MathUtil_RoundWithPrecision_mD5A19E1B22A0A18EF3371043B1072DFDFB96E4B7 (void);
-// 0x00000AF7 System.Double FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::Clamp(System.Double,System.Double,System.Double)
+// 0x00000AFF System.Double FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::Clamp(System.Double,System.Double,System.Double)
 extern void MathUtil_Clamp_m6E434AEAD18AA3822CB51E7E2E6B970680CFA668 (void);
-// 0x00000AF8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::Swap(T&,T&)
-// 0x00000AF9 System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::Jenkins32Hash(System.Byte[],System.UInt32)
+// 0x00000B00 System.Void FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::Swap(T&,T&)
+// 0x00000B01 System.UInt32 FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::Jenkins32Hash(System.Byte[],System.UInt32)
 extern void MathUtil_Jenkins32Hash_m70085827D025250156F493B87B07A9DF16BF99E5 (void);
-// 0x00000AFA System.Void FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::.ctor()
+// 0x00000B02 System.Void FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::.ctor()
 extern void MathUtil__ctor_mCE682114001BEDECAB9D040C5E4FA95CA62993AF (void);
-// 0x00000AFB System.Void FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::.cctor()
+// 0x00000B03 System.Void FunkyCode.Utilities.Polygon2DTriangulation.MathUtil::.cctor()
 extern void MathUtil__cctor_m5B054A32B9109448140B51401B78D4E456436D31 (void);
-// 0x00000AFC System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X()
+// 0x00000B04 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X()
 extern void Point2D_get_X_m5C51CE7968E938990DEF2FDB6F8D8DA198E4598E (void);
-// 0x00000AFD System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::set_X(System.Double)
+// 0x00000B05 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::set_X(System.Double)
 extern void Point2D_set_X_m32B9E45D52BC1351495B60B34D093FDD024B0694 (void);
-// 0x00000AFE System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y()
+// 0x00000B06 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y()
 extern void Point2D_get_Y_mD7B0ECAB8045328543ED3F950DFB7DC31A39EA00 (void);
-// 0x00000AFF System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::set_Y(System.Double)
+// 0x00000B07 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::set_Y(System.Double)
 extern void Point2D_set_Y_mEDD90BA90E986261AB48D945A4C0D398A589C91C (void);
-// 0x00000B00 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Xf()
+// 0x00000B08 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Xf()
 extern void Point2D_get_Xf_mD67BD62F2C3B731F080536751B2756EE8C57FE21 (void);
-// 0x00000B01 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Yf()
+// 0x00000B09 System.Single FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Yf()
 extern void Point2D_get_Yf_m28FC0C6950469CDB15A0A6323BE7ED58482C374F (void);
-// 0x00000B02 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor()
+// 0x00000B0A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor()
 extern void Point2D__ctor_m1AE6C89406AC1B14BB5C1445A1DB933C0CD82061 (void);
-// 0x00000B03 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor(System.Double,System.Double)
+// 0x00000B0B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor(System.Double,System.Double)
 extern void Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77 (void);
-// 0x00000B04 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B0C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D__ctor_m98E7EF52F23CD150BE9E99CF33594D3640CA474F (void);
-// 0x00000B05 System.String FunkyCode.Utilities.Polygon2DTriangulation.Point2D::ToString()
+// 0x00000B0D System.String FunkyCode.Utilities.Polygon2DTriangulation.Point2D::ToString()
 extern void Point2D_ToString_m297A4EA23D44A93563DDA4BB35634D26E866BCDE (void);
-// 0x00000B06 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2D::GetHashCode()
+// 0x00000B0E System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2D::GetHashCode()
 extern void Point2D_GetHashCode_mCB0E51F2CB40A3511F32C2BF0EBD47AB367BB436 (void);
-// 0x00000B07 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(System.Object)
+// 0x00000B0F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(System.Object)
 extern void Point2D_Equals_m18DD69E74EBB43EA3A1A55E1610AE629AE6726C7 (void);
-// 0x00000B08 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B10 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Equals_m9261EDD94C68F906C163F763F59DC0B40DA3ED2D (void);
-// 0x00000B09 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B11 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4 (void);
-// 0x00000B0A System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2D::CompareTo(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B12 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2D::CompareTo(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_CompareTo_m05E4DA5746EA29A61F5F6B2FB2724E477E99D16F (void);
-// 0x00000B0B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(System.Double,System.Double)
+// 0x00000B13 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(System.Double,System.Double)
 extern void Point2D_Set_mB980163EFB78A327BD3C974F7595E1E7C20B932B (void);
-// 0x00000B0C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B14 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Set_m8096F696FC5172158610C773C23E92708C7D00A4 (void);
-// 0x00000B0D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B15 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Add_m369FEF06497C0ED6C60D5DB308B08AB66B707CA1 (void);
-// 0x00000B0E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Add(System.Double)
+// 0x00000B16 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Add(System.Double)
 extern void Point2D_Add_mEDD11740850BD49D327A886123CFC16E29CEDEAC (void);
-// 0x00000B0F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Subtract(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B17 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Subtract(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Subtract_m79D8916AB2FA100BE98081D060EC4696E529369A (void);
-// 0x00000B10 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Subtract(System.Double)
+// 0x00000B18 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Subtract(System.Double)
 extern void Point2D_Subtract_m6EE09AD68E9DC651182B24B3473A7E27CC49306C (void);
-// 0x00000B11 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Multiply(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B19 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Multiply(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Multiply_mD9E5A4C42E9D26A511C3E92890378F2EE3675298 (void);
-// 0x00000B12 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Multiply(System.Double)
+// 0x00000B1A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Multiply(System.Double)
 extern void Point2D_Multiply_m341025C6F10F97027ADE56096D06301AFE955EC9 (void);
-// 0x00000B13 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Divide(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B1B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Divide(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Divide_mB3E8FED01EAC4D56594317E85C3816F224B2761B (void);
-// 0x00000B14 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Divide(System.Double)
+// 0x00000B1C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Divide(System.Double)
 extern void Point2D_Divide_mED74D0B853EAD054F6B5A0F957FE001E9E3C0D75 (void);
-// 0x00000B15 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Negate()
+// 0x00000B1D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Negate()
 extern void Point2D_Negate_m9EF6D936FE2490391FEA418679C0758EEBE629CA (void);
-// 0x00000B16 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Magnitude()
+// 0x00000B1E System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Magnitude()
 extern void Point2D_Magnitude_m392DAA55FA47FFD9C23B8D6FCBDA090E090F5528 (void);
-// 0x00000B17 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::MagnitudeSquared()
+// 0x00000B1F System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::MagnitudeSquared()
 extern void Point2D_MagnitudeSquared_m879ABEC187FB07778C03626E262911844EEE4CC2 (void);
-// 0x00000B18 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::MagnitudeReciprocal()
+// 0x00000B20 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::MagnitudeReciprocal()
 extern void Point2D_MagnitudeReciprocal_mD3C229F74788C1F069B89A8ABAE5A22507102868 (void);
-// 0x00000B19 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Normalize()
+// 0x00000B21 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Normalize()
 extern void Point2D_Normalize_mF289F65568CD4C49E45BF4CBCE704823F7611DE4 (void);
-// 0x00000B1A System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Dot(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B22 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Dot(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Dot_m1611421138B1BC0CC226FC26E8790805309884A6 (void);
-// 0x00000B1B System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Cross(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B23 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Cross(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Cross_m99FE56EFB513617DADBCB235EE58B04215B0D90A (void);
-// 0x00000B1C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Clamp(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B24 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Clamp(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Clamp_mFA4BE29A84020DEBA5DFE40D6EFE24F38CB85BDB (void);
-// 0x00000B1D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Abs()
+// 0x00000B25 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Abs()
 extern void Point2D_Abs_mF246D7AA6FA36784E5F79F3FC365E5674FBAD162 (void);
-// 0x00000B1E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Reciprocal()
+// 0x00000B26 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Reciprocal()
 extern void Point2D_Reciprocal_m69A80ED8941D7E57EF9E397D0E6F41AA2EDD1CB5 (void);
-// 0x00000B1F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Translate(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B27 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Translate(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Translate_m7E6B6004F7C709C4DE40BB49204870DB4623219D (void);
-// 0x00000B20 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Translate(System.Double,System.Double)
+// 0x00000B28 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Translate(System.Double,System.Double)
 extern void Point2D_Translate_mFA68E1A38494F76FA13B78359CA89621AA587A6C (void);
-// 0x00000B21 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Scale(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B29 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Scale(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Scale_m529F00DA6421775D1B34D937E313825178B9C67F (void);
-// 0x00000B22 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Scale(System.Double)
+// 0x00000B2A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Scale(System.Double)
 extern void Point2D_Scale_mA729412B4D907ED99DBF66899987011CBEC8EBF4 (void);
-// 0x00000B23 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Scale(System.Double,System.Double)
+// 0x00000B2B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Scale(System.Double,System.Double)
 extern void Point2D_Scale_m97C5441AEBBBC9DB9975F32B75FF78B551C505C3 (void);
-// 0x00000B24 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Rotate(System.Double)
+// 0x00000B2C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Rotate(System.Double)
 extern void Point2D_Rotate_mD53C78F62ABD0A863A4AB31C791086D072DD02AE (void);
-// 0x00000B25 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::RotateDegrees(System.Double)
+// 0x00000B2D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::RotateDegrees(System.Double)
 extern void Point2D_RotateDegrees_m420E5DAAB5D326670822D1F034A5CE2DEFA46585 (void);
-// 0x00000B26 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Dot(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B2E System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Dot(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Dot_m1001D121DA61A142559E08F2D2074864C021E553 (void);
-// 0x00000B27 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Cross(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B2F System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Cross(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Cross_m7100E05A1A5D58402189B21334C191B81BC22557 (void);
-// 0x00000B28 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Clamp(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B30 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Clamp(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Clamp_mADBCDFF84D4CB60B0C65E1E3A462CD5EE68CE51B (void);
-// 0x00000B29 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Min(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B31 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Min(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Min_mF38BE017E609D160068CB962F80781A8D65FE08E (void);
-// 0x00000B2A FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Max(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B32 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Max(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Max_mBB682708EBD52211BB5D94AFCD58FB25B24A45A6 (void);
-// 0x00000B2B FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Abs(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B33 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Abs(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Abs_m485B404D61082292925D0D22DACDC3C9DB79D350 (void);
-// 0x00000B2C FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Reciprocal(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B34 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Reciprocal(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Reciprocal_m206167BB68BE185CC654D92C60F5EE7741BEE156 (void);
-// 0x00000B2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Perpendicular(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B35 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Perpendicular(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Point2D_Perpendicular_mA42ADEA152B42C1D0153616570B6E22568DAC5E0 (void);
-// 0x00000B2E FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Perpendicular(System.Double,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B36 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Perpendicular(System.Double,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_Perpendicular_m96D247DA5C4F7C4C53844C25F2392B3B7982E14E (void);
-// 0x00000B2F FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Addition(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B37 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Addition(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_Addition_mB817D17B18EDF723AA94D7DF2FCCF19584F0F4B6 (void);
-// 0x00000B30 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Addition(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B38 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Addition(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Point2D_op_Addition_mBD06BE1F58510BDF3725443AF996CC6E0489CF97 (void);
-// 0x00000B31 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Subtraction(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B39 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Subtraction(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A (void);
-// 0x00000B32 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Subtraction(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B3A FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Subtraction(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Point2D_op_Subtraction_m33A853F80E007C55E38A412E488720B7A2C9453C (void);
-// 0x00000B33 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Multiply(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B3B FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Multiply(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_Multiply_m9BF3C472AE4AF115BA5EA7271211C82C6708EA58 (void);
-// 0x00000B34 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Multiply(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B3C FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Multiply(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Point2D_op_Multiply_mAC4B069F24E829BB107CB7A47711DDF596C5915F (void);
-// 0x00000B35 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Multiply(System.Double,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B3D FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Multiply(System.Double,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_Multiply_m73FF336408A0F8FB5DA2E938A24A49E441BCD549 (void);
-// 0x00000B36 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Division(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B3E FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Division(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_Division_mD0B13AB0FDB10ADC9AB99C98DD6EC2BAEF2E5267 (void);
-// 0x00000B37 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Division(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B3F FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Division(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Point2D_op_Division_m286EF70B2D1D5E86802C182A1DCD3DD30C0E311F (void);
-// 0x00000B38 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_UnaryNegation(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B40 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_UnaryNegation(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_UnaryNegation_mD9A9D841AC6D0F105B5D69CB1F5AE1E6416E78FC (void);
-// 0x00000B39 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_LessThan(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B41 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_LessThan(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_LessThan_m3CD2F5FAE217E9530F183C05CA017EA8D673CB7E (void);
-// 0x00000B3A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_GreaterThan(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B42 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_GreaterThan(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_GreaterThan_m47CC78936CEED939211CB9F01EE0953AF9C4FFD4 (void);
-// 0x00000B3B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_LessThanOrEqual(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B43 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_LessThanOrEqual(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_LessThanOrEqual_mC416F5B929315B1A018A22A7D5BE18D3C30542BC (void);
-// 0x00000B3C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_GreaterThanOrEqual(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B44 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_GreaterThanOrEqual(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2D_op_GreaterThanOrEqual_mEC3D98F1867250EE2EF4D800C43C242D777C5460 (void);
-// 0x00000B3D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
+// 0x00000B45 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
 extern void Point2DEnumerator__ctor_m873066A269B2C3FCA102C0218264C6AAC1570862 (void);
-// 0x00000B3E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::MoveNext()
+// 0x00000B46 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::MoveNext()
 extern void Point2DEnumerator_MoveNext_mAD9751C1F83CC8CC17C6AB6D01BB57BAB491373E (void);
-// 0x00000B3F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::Reset()
+// 0x00000B47 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::Reset()
 extern void Point2DEnumerator_Reset_mFC817B4EE04B6D88B7C5D49B70ACB13BDAE819CB (void);
-// 0x00000B40 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::System.IDisposable.Dispose()
+// 0x00000B48 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::System.IDisposable.Dispose()
 extern void Point2DEnumerator_System_IDisposable_Dispose_m0C057A3DE855833A5EF2975EC7438515EDF75A0E (void);
-// 0x00000B41 System.Object FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::System.Collections.IEnumerator.get_Current()
+// 0x00000B49 System.Object FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::System.Collections.IEnumerator.get_Current()
 extern void Point2DEnumerator_System_Collections_IEnumerator_get_Current_m9029BE428D5CAE8102D7242FC6C02AD7228744AC (void);
-// 0x00000B42 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::get_Current()
+// 0x00000B4A FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DEnumerator::get_Current()
 extern void Point2DEnumerator_get_Current_m59F9E38CB74D20CB3896D5249F1FD541C6AE31E6 (void);
-// 0x00000B43 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_BoundingBox()
+// 0x00000B4B FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_BoundingBox()
 extern void Point2DList_get_BoundingBox_m8499E331A3CFE4A57D4333DACD8903074F5166EC (void);
-// 0x00000B44 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_WindingOrder()
+// 0x00000B4C FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_WindingOrder()
 extern void Point2DList_get_WindingOrder_mF4C28D49D1F8864CE0131DAA5F4E82FC4D643019 (void);
-// 0x00000B45 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::set_WindingOrder(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x00000B4D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::set_WindingOrder(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Point2DList_set_WindingOrder_m923386C8FB0641AF50D20A7A701F56859E699A05 (void);
-// 0x00000B46 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Epsilon()
+// 0x00000B4E System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Epsilon()
 extern void Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69 (void);
-// 0x00000B47 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Item(System.Int32)
+// 0x00000B4F FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Item(System.Int32)
 extern void Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769 (void);
-// 0x00000B48 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B50 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::set_Item(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_set_Item_m0F2A163F471FBB2AE1CF3FD7E7FB956E8EF3ABDE (void);
-// 0x00000B49 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Count()
+// 0x00000B51 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Count()
 extern void Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C (void);
-// 0x00000B4A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_IsReadOnly()
+// 0x00000B52 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_IsReadOnly()
 extern void Point2DList_get_IsReadOnly_mDB596DBF8E563CB6F55C43761EEA6098D5634F3E (void);
-// 0x00000B4B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor()
+// 0x00000B53 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor()
 extern void Point2DList__ctor_mD73FDB92E64EE2E863CFD081D581EE9C60E3076A (void);
-// 0x00000B4C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(System.Int32)
+// 0x00000B54 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(System.Int32)
 extern void Point2DList__ctor_m413127DEFCAC1ABD74D560C421A3AD263DC2C346 (void);
-// 0x00000B4D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
+// 0x00000B55 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
 extern void Point2DList__ctor_mC4D886F76C56CB8D1BCA993D5ED0EAA3AB566650 (void);
-// 0x00000B4E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
+// 0x00000B56 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
 extern void Point2DList__ctor_m3774BF79DE4D8F33A8A32E52010FF2CD2BBB477B (void);
-// 0x00000B4F System.String FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::ToString()
+// 0x00000B57 System.String FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::ToString()
 extern void Point2DList_ToString_m03FCC6B92436D18660CC51E932BCBF0D635C3FC2 (void);
-// 0x00000B50 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::System.Collections.IEnumerable.GetEnumerator()
+// 0x00000B58 System.Collections.IEnumerator FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::System.Collections.IEnumerable.GetEnumerator()
 extern void Point2DList_System_Collections_IEnumerable_GetEnumerator_mD21D0064D7A60B98E7EBE2575AECEB33324E0D25 (void);
-// 0x00000B51 System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D> FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>.GetEnumerator()
+// 0x00000B59 System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D> FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::System.Collections.Generic.IEnumerable<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>.GetEnumerator()
 extern void Point2DList_System_Collections_Generic_IEnumerableU3CFunkyCode_Utilities_Polygon2DTriangulation_Point2DU3E_GetEnumerator_m688AFFC7F88770AB879F21C2371F17645A7A4751 (void);
-// 0x00000B52 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Clear()
+// 0x00000B5A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Clear()
 extern void Point2DList_Clear_m5114C3B7CD79E46858EFAE266CFB951AB8ABA568 (void);
-// 0x00000B53 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B5B System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_IndexOf_mA37E67F9B83F1E740164AC001913A688A212191D (void);
-// 0x00000B54 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B5C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_Add_mC90BCD54B7B8723417DBB4E219C8F520D9CFB8BA (void);
-// 0x00000B55 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
+// 0x00000B5D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Int32,System.Boolean)
 extern void Point2DList_Add_m9B282FD0D01BF6AAAD717C431D140615110F9BB2 (void);
-// 0x00000B56 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::AddRange(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
+// 0x00000B5E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::AddRange(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
 extern void Point2DList_AddRange_m7B2F8A4E6152695CC169CA71A83ECEEB2169AF69 (void);
-// 0x00000B57 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::AddRange(System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
+// 0x00000B5F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::AddRange(System.Collections.Generic.IEnumerator`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType)
 extern void Point2DList_AddRange_m2A307947761F4BA3371A260CA4D0B6C8D4A31301 (void);
-// 0x00000B58 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B60 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Insert(System.Int32,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_Insert_m58080F90BC97486945583E34BBD55BDD6C5A7EDE (void);
-// 0x00000B59 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Remove(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B61 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Remove(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_Remove_m4C29F322C6D081D54E084B622EA58E5ED6DB3730 (void);
-// 0x00000B5A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveAt(System.Int32)
+// 0x00000B62 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveAt(System.Int32)
 extern void Point2DList_RemoveAt_mF2036D2BE98932915883B5F103089FF88D519811 (void);
-// 0x00000B5B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveRange(System.Int32,System.Int32)
+// 0x00000B63 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveRange(System.Int32,System.Int32)
 extern void Point2DList_RemoveRange_mC753400241DB672F5B666070516AC0D752D42C36 (void);
-// 0x00000B5C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B64 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_Contains_m2B1BB0F27820A0DB9FB82C4CB03FB7AA63098A45 (void);
-// 0x00000B5D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.Point2D[],System.Int32)
+// 0x00000B65 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CopyTo(FunkyCode.Utilities.Polygon2DTriangulation.Point2D[],System.Int32)
 extern void Point2DList_CopyTo_m50AA135C76255A991B2FB0B69D2ED54A27F994AF (void);
-// 0x00000B5E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CalculateBounds()
+// 0x00000B66 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CalculateBounds()
 extern void Point2DList_CalculateBounds_mA29FEEB1AF361C9420D93FCCC93B5CC7F6A0C03F (void);
-// 0x00000B5F System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CalculateEpsilon()
+// 0x00000B67 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CalculateEpsilon()
 extern void Point2DList_CalculateEpsilon_mBE5881684927B60F64DDD160F2F0178B645B2CB8 (void);
-// 0x00000B60 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CalculateWindingOrder()
+// 0x00000B68 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CalculateWindingOrder()
 extern void Point2DList_CalculateWindingOrder_m3D4192F0508204ADB0283DDDD6C200B4415322C7 (void);
-// 0x00000B61 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::NextIndex(System.Int32)
+// 0x00000B69 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::NextIndex(System.Int32)
 extern void Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501 (void);
-// 0x00000B62 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::PreviousIndex(System.Int32)
+// 0x00000B6A System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::PreviousIndex(System.Int32)
 extern void Point2DList_PreviousIndex_m32FE470DF5ED0318C16F5D9A33504695A6AA9C3F (void);
-// 0x00000B63 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetSignedArea()
+// 0x00000B6B System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetSignedArea()
 extern void Point2DList_GetSignedArea_m9D49DDCA77D886D31C5D34E90FDEC11951143B10 (void);
-// 0x00000B64 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetArea()
+// 0x00000B6C System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetArea()
 extern void Point2DList_GetArea_m6A998BF79103A67651296076FC4A1B361C49A452 (void);
-// 0x00000B65 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetCentroid()
+// 0x00000B6D FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetCentroid()
 extern void Point2DList_GetCentroid_mB244962AFCE63F0F63BA242AE772B5666FAC7597 (void);
-// 0x00000B66 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Translate(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B6E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Translate(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_Translate_mB27D75FF47192DFAC01ADFBBF66A691E8F0366B8 (void);
-// 0x00000B67 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Scale(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B6F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Scale(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Point2DList_Scale_mC12DD8D30B955DD2AC7EA86032CA70761E88E165 (void);
-// 0x00000B68 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Rotate(System.Double)
+// 0x00000B70 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Rotate(System.Double)
 extern void Point2DList_Rotate_mF486913B4053761778E1BA84108C3DB38F3B9F85 (void);
-// 0x00000B69 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IsDegenerate()
+// 0x00000B71 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IsDegenerate()
 extern void Point2DList_IsDegenerate_mEE0B53A34CCB56057B418EFE8D6FACA96AE9896E (void);
-// 0x00000B6A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IsConvex()
+// 0x00000B72 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IsConvex()
 extern void Point2DList_IsConvex_m5B4C34A54126D5669B05F2364C47DC302EA3CB57 (void);
-// 0x00000B6B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IsSimple()
+// 0x00000B73 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IsSimple()
 extern void Point2DList_IsSimple_mB7AAC3DA73287D62353AF9C35904D086458415B5 (void);
-// 0x00000B6C FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/PolygonError FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CheckPolygon()
+// 0x00000B74 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/PolygonError FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::CheckPolygon()
 extern void Point2DList_CheckPolygon_mDBC8B9136BCA519F7FF9D8BB54A38909734BCAF0 (void);
-// 0x00000B6D System.String FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetErrorString(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/PolygonError)
+// 0x00000B75 System.String FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::GetErrorString(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/PolygonError)
 extern void Point2DList_GetErrorString_m68320F90DBC6DDBE591383E9B9A376C7889011CD (void);
-// 0x00000B6E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveDuplicateNeighborPoints()
+// 0x00000B76 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveDuplicateNeighborPoints()
 extern void Point2DList_RemoveDuplicateNeighborPoints_mB2F453FCEE3837EB53EF4D4F360AD320BBFB713B (void);
-// 0x00000B6F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Simplify()
+// 0x00000B77 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Simplify()
 extern void Point2DList_Simplify_m9E25BB104EF53642118CD89DE9A2A8B4BA1E35FE (void);
-// 0x00000B70 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Simplify(System.Double)
+// 0x00000B78 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Simplify(System.Double)
 extern void Point2DList_Simplify_m19E59A47FDB0170CB651FCC483141B1378222C3E (void);
-// 0x00000B71 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::MergeParallelEdges(System.Double)
+// 0x00000B79 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::MergeParallelEdges(System.Double)
 extern void Point2DList_MergeParallelEdges_mBE4C4EDCE985A9AF2478E19434103811C64FC124 (void);
-// 0x00000B72 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::ProjectToAxis(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double&,System.Double&)
+// 0x00000B7A System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::ProjectToAxis(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double&,System.Double&)
 extern void Point2DList_ProjectToAxis_mDD1D2955FBAED5CA5D528BEC1DF5A2AC67C8C185 (void);
-// 0x00000B73 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.cctor()
+// 0x00000B7B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.cctor()
 extern void Point2DList__cctor_m8697BE50EEEB357A8158EB3C60C70AF913D6CCDC (void);
-// 0x00000B74 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MinX()
+// 0x00000B7C System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MinX()
 extern void Rect2D_get_MinX_m306F346DC5E501AC35508A1B511A2327FE91773E (void);
-// 0x00000B75 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MinX(System.Double)
+// 0x00000B7D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MinX(System.Double)
 extern void Rect2D_set_MinX_m23D4A5EDC3C008DE2C2F1235FDF278DE5EBB2F9D (void);
-// 0x00000B76 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MaxX()
+// 0x00000B7E System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MaxX()
 extern void Rect2D_get_MaxX_mD9FCB26F323F583CB7DA3AE472E9FDD41A006BB3 (void);
-// 0x00000B77 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MaxX(System.Double)
+// 0x00000B7F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MaxX(System.Double)
 extern void Rect2D_set_MaxX_mEDBF76BE7AC0F3F29257074C2D841F85CBBE28D9 (void);
-// 0x00000B78 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MinY()
+// 0x00000B80 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MinY()
 extern void Rect2D_get_MinY_m0B623F79751A4F00ED16BDFC27FDEBBA713550F4 (void);
-// 0x00000B79 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MinY(System.Double)
+// 0x00000B81 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MinY(System.Double)
 extern void Rect2D_set_MinY_m53F39B9E880CCEC843DDEB301A92B2C6B90048AB (void);
-// 0x00000B7A System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MaxY()
+// 0x00000B82 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_MaxY()
 extern void Rect2D_get_MaxY_m808307C2AC36F598E585C256576372F45AE94D04 (void);
-// 0x00000B7B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MaxY(System.Double)
+// 0x00000B83 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_MaxY(System.Double)
 extern void Rect2D_set_MaxY_mE12BFD76397D00A1CE8A3AACB64CFDD1830EC44A (void);
-// 0x00000B7C System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Left()
+// 0x00000B84 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Left()
 extern void Rect2D_get_Left_m99A741134E6DE545ED09893299B9C9E6F5184854 (void);
-// 0x00000B7D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Left(System.Double)
+// 0x00000B85 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Left(System.Double)
 extern void Rect2D_set_Left_m306DB1FDA1E1D72B257A6FD6CC5A64BD028B4BA7 (void);
-// 0x00000B7E System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Right()
+// 0x00000B86 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Right()
 extern void Rect2D_get_Right_m32E6C4A5AC3AA808B62F0D722F58F4535570231C (void);
-// 0x00000B7F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Right(System.Double)
+// 0x00000B87 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Right(System.Double)
 extern void Rect2D_set_Right_mF20F9DD6A02FED9D3D6F085BF4C629C9E8FB693B (void);
-// 0x00000B80 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Top()
+// 0x00000B88 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Top()
 extern void Rect2D_get_Top_mADC3150BDD8D205A71AB99E143DDD43E91C06FB3 (void);
-// 0x00000B81 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Top(System.Double)
+// 0x00000B89 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Top(System.Double)
 extern void Rect2D_set_Top_mEB8C415B5B08CAB11FE139AD0C45B9E69E6435D0 (void);
-// 0x00000B82 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Bottom()
+// 0x00000B8A System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Bottom()
 extern void Rect2D_get_Bottom_m152936D8CF19AEC0EA60E1EC1F55D31031A4A30A (void);
-// 0x00000B83 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Bottom(System.Double)
+// 0x00000B8B System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::set_Bottom(System.Double)
 extern void Rect2D_set_Bottom_m4DFA5E04565689CCFB3CA701ABD0BCBB87878693 (void);
-// 0x00000B84 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Width()
+// 0x00000B8C System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Width()
 extern void Rect2D_get_Width_m744EEBBCB807C45F3820A974F3C4B2AAFFE5987C (void);
-// 0x00000B85 System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Height()
+// 0x00000B8D System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Height()
 extern void Rect2D_get_Height_m81B88B012F93DC1D0C08E0A0133172B313AA745B (void);
-// 0x00000B86 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Empty()
+// 0x00000B8E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Empty()
 extern void Rect2D_get_Empty_mC7105DD4746B69EDD6B4FDDF905C43A9A640910F (void);
-// 0x00000B87 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::.ctor()
+// 0x00000B8F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::.ctor()
 extern void Rect2D__ctor_mE5B78195DD59BD96BE1121F43F2C1EE247EF95FF (void);
-// 0x00000B88 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::GetHashCode()
+// 0x00000B90 System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::GetHashCode()
 extern void Rect2D_GetHashCode_m1092627416DB104BCCD3E8EBDB2F158C52F2DAF9 (void);
-// 0x00000B89 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Equals(System.Object)
+// 0x00000B91 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Equals(System.Object)
 extern void Rect2D_Equals_m1175393829440F30B4097CF102550AA5FD76E7A9 (void);
-// 0x00000B8A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000B92 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_Equals_m2A565EAEB02CE264372FAB8937F0F0B20E7C61F1 (void);
-// 0x00000B8B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Double)
+// 0x00000B93 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Double)
 extern void Rect2D_Equals_m615453535269CD186591716F4E7FC754140607B5 (void);
-// 0x00000B8C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Clear()
+// 0x00000B94 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Clear()
 extern void Rect2D_Clear_m34E4819012CF08389D40851F9BFED2EB32E75071 (void);
-// 0x00000B8D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Set(System.Double,System.Double,System.Double,System.Double)
+// 0x00000B95 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Set(System.Double,System.Double,System.Double,System.Double)
 extern void Rect2D_Set_mD2B958175DEC1551C3BFEA35E4A81E79311B7E30 (void);
-// 0x00000B8E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Set(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000B96 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Set(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_Set_mBE2C536CD6584CAD7AC299951EA3A48C4FDF2285 (void);
-// 0x00000B8F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::SetSize(System.Double,System.Double)
+// 0x00000B97 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::SetSize(System.Double,System.Double)
 extern void Rect2D_SetSize_m248F689A228D7F3A7E276F9730F3BDD92E4E9D02 (void);
-// 0x00000B90 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Contains(System.Double,System.Double)
+// 0x00000B98 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Contains(System.Double,System.Double)
 extern void Rect2D_Contains_mC5A71921E9990D742E1B342667877831A91FB774 (void);
-// 0x00000B91 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B99 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Rect2D_Contains_mEAD60ED52C64941488BFAD976237D75EAB5C625F (void);
-// 0x00000B92 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000B9A System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_Contains_mA8D3BEE4C50881397C74884D239EE4A7284D1D39 (void);
-// 0x00000B93 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(System.Double,System.Double)
+// 0x00000B9B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(System.Double,System.Double)
 extern void Rect2D_ContainsInclusive_m59A95E1328B5BA0C9B26A474A8D3E022B0747A00 (void);
-// 0x00000B94 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(System.Double,System.Double,System.Double)
+// 0x00000B9C System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(System.Double,System.Double,System.Double)
 extern void Rect2D_ContainsInclusive_mE73801B4A3DE559C967EAD5236514E04AAE3F451 (void);
-// 0x00000B95 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000B9D System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Rect2D_ContainsInclusive_mEBA7428A75DFC3009B032D8704BA70188EA6A508 (void);
-// 0x00000B96 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
+// 0x00000B9E System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
 extern void Rect2D_ContainsInclusive_m614AE1D7A33CC2005BDC2BA7AAE71D70CB14508F (void);
-// 0x00000B97 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000B9F System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_ContainsInclusive_mEFD19C152D6E8FF0BDC71EF1460BD93F76FAEB24 (void);
-// 0x00000B98 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Double)
+// 0x00000BA0 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::ContainsInclusive(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Double)
 extern void Rect2D_ContainsInclusive_m1BBDACE8E50CE43E2A1CE16D648595406943C6DE (void);
-// 0x00000B99 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Intersects(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000BA1 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Intersects(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_Intersects_m204F9EBFFD8059F4AFA7847EA31C2E05CA2C7B18 (void);
-// 0x00000B9A FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::GetCenter()
+// 0x00000BA2 FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::GetCenter()
 extern void Rect2D_GetCenter_m6DEADB66B147B624E822DDBC54362D22BCDAC483 (void);
-// 0x00000B9B System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::IsNormalized()
+// 0x00000BA3 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::IsNormalized()
 extern void Rect2D_IsNormalized_mEE6AF8A73611E8957C33F504EBE89573657833D9 (void);
-// 0x00000B9C System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Normalize()
+// 0x00000BA4 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Normalize()
 extern void Rect2D_Normalize_m54580C30084BEE9DB48C2373ED21C0381EB2ACC4 (void);
-// 0x00000B9D System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::AddPoint(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
+// 0x00000BA5 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::AddPoint(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
 extern void Rect2D_AddPoint_m974393685BDEF3922378903CAE27DB62EB98C989 (void);
-// 0x00000B9E System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Inflate(System.Double,System.Double)
+// 0x00000BA6 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Inflate(System.Double,System.Double)
 extern void Rect2D_Inflate_m4EC308BD950BFB6BF5BDFA9EDCD4BB32A4D61318 (void);
-// 0x00000B9F System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Inflate(System.Double,System.Double,System.Double,System.Double)
+// 0x00000BA7 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Inflate(System.Double,System.Double,System.Double,System.Double)
 extern void Rect2D_Inflate_mD45BC0D69F848ADAB5D5222D344487C4E84DE418 (void);
-// 0x00000BA0 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Offset(System.Double,System.Double)
+// 0x00000BA8 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Offset(System.Double,System.Double)
 extern void Rect2D_Offset_m5F8230CE54356A2E931FE55254E6B08152838128 (void);
-// 0x00000BA1 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::SetPosition(System.Double,System.Double)
+// 0x00000BA9 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::SetPosition(System.Double,System.Double)
 extern void Rect2D_SetPosition_m5774E11B446AF3F945554BAB3D33363C26A981FD (void);
-// 0x00000BA2 System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Intersection(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000BAA System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Intersection(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_Intersection_m5681000D2293D851D41D27B8E7447E94C5FAA903 (void);
-// 0x00000BA3 System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Union(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
+// 0x00000BAB System.Void FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Union(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
 extern void Rect2D_Union_m3B4D96ABFFF9C526B878F913F47DEC750C649C5D (void);
-// 0x00000BA4 System.Void FunkyCode.SuperTilemapEditorSupport.TilemapCollider2D::.ctor()
+// 0x00000BAC System.Void FunkyCode.SuperTilemapEditorSupport.TilemapCollider2D::.ctor()
 extern void TilemapCollider2D__ctor_mCB3E08B596E1F6EA1E61B8B57114FEFBA5E6C8F5 (void);
-// 0x00000BA5 System.Void FunkyCode.SuperTilemapEditorSupport.TilemapCollider::.ctor()
+// 0x00000BAD System.Void FunkyCode.SuperTilemapEditorSupport.TilemapCollider::.ctor()
 extern void TilemapCollider__ctor_mE9D16A2E12AF7E1FB85F650C4E4D3474927B1AF1 (void);
-// 0x00000BA6 System.Void FunkyCode.SuperTilemapEditorSupport.TilemapRoom2D::Initialize()
+// 0x00000BAE System.Void FunkyCode.SuperTilemapEditorSupport.TilemapRoom2D::Initialize()
 extern void TilemapRoom2D_Initialize_m4041F1D97E6CC7742A413DD3093A574634DBFE0D (void);
-// 0x00000BA7 System.Void FunkyCode.SuperTilemapEditorSupport.TilemapRoom2D::.ctor()
+// 0x00000BAF System.Void FunkyCode.SuperTilemapEditorSupport.TilemapRoom2D::.ctor()
 extern void TilemapRoom2D__ctor_mD10DDE528E43A4067F84AD1B1C3A28AE48AA09FC (void);
-// 0x00000BA8 System.Void FunkyCode.SuperTilemapEditorSupport.Lightmap.Room::DrawTiles(UnityEngine.Camera,FunkyCode.LightTilemapRoom2D,UnityEngine.Material)
+// 0x00000BB0 System.Void FunkyCode.SuperTilemapEditorSupport.Lightmap.Room::DrawTiles(UnityEngine.Camera,FunkyCode.LightTilemapRoom2D,UnityEngine.Material)
 extern void Room_DrawTiles_m1A2F5B8D3DD3431A131E7A9F58551246775C56BF (void);
-// 0x00000BA9 System.Void FunkyCode.SuperTilemapEditorSupport.Lightmap.Room::.ctor()
+// 0x00000BB1 System.Void FunkyCode.SuperTilemapEditorSupport.Lightmap.Room::.ctor()
 extern void Room__ctor_mE4F9D999BD81B5769AAC76EE9770E0BBCF2519CB (void);
-// 0x00000BAA System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Collider::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
+// 0x00000BB2 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Collider::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
 extern void Collider_Draw_m9CB1A1B3DA164C8913E512E97D2FE273FBC6F0A5 (void);
-// 0x00000BAB System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Collider::.ctor()
+// 0x00000BB3 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Collider::.ctor()
 extern void Collider__ctor_m63727C7F15F2E4515C9FAEAE442A5C33BE72A657 (void);
-// 0x00000BAC System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Grid::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
+// 0x00000BB4 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Grid::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
 extern void Grid_Draw_m7727E3A50E49E4EE067E289E045E5F0476455BB3 (void);
-// 0x00000BAD System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Grid::.ctor()
+// 0x00000BB5 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Shadow.Grid::.ctor()
 extern void Grid__ctor_mBE599112BBD720CFE6D4F9CFA7F0BFF4AF6353C5 (void);
-// 0x00000BAE System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.Grid::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
+// 0x00000BB6 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.Grid::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
 extern void Grid_Draw_m00942E35569F7A205A24CFAA006C38FFC1269F74 (void);
-// 0x00000BAF System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.Grid::.ctor()
+// 0x00000BB7 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.Grid::.ctor()
 extern void Grid__ctor_m329997687365676D7BC28F4D89CEE93C9EB40C2D (void);
-// 0x00000BB0 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.SpriteRenderer2D::Sprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material)
+// 0x00000BB8 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.SpriteRenderer2D::Sprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material)
 extern void SpriteRenderer2D_Sprite_m61A1D51C3529B51CA37C5B9541963AF509616CAE (void);
-// 0x00000BB1 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.SpriteRenderer2D::BumpedSprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material)
+// 0x00000BB9 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.SpriteRenderer2D::BumpedSprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material)
 extern void SpriteRenderer2D_BumpedSprite_m8D6B788A1FFB846248CC3A2CCAFF2977A48C701D (void);
-// 0x00000BB2 System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.SpriteRenderer2D::.ctor()
+// 0x00000BBA System.Void FunkyCode.SuperTilemapEditorSupport.Light.Mask.SpriteRenderer2D::.ctor()
 extern void SpriteRenderer2D__ctor_mDFCBBBD96E5607D0543E43794F3B92057C61E701 (void);
-// 0x00000BB3 System.Void FunkyCode.SpriteExtension.PhysicsShape::.ctor(UnityEngine.Sprite)
+// 0x00000BBB System.Void FunkyCode.SpriteExtension.PhysicsShape::.ctor(UnityEngine.Sprite)
 extern void PhysicsShape__ctor_m27B0A726DCE42D35F759751E1CC3EBDB20D235AB (void);
-// 0x00000BB4 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.SpriteExtension.PhysicsShape::Get()
+// 0x00000BBC System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.SpriteExtension.PhysicsShape::Get()
 extern void PhysicsShape_Get_m95FDA0BBE1B03D8E64EEF851440FD6CCBE7C3D1F (void);
-// 0x00000BB5 System.Void FunkyCode.SpriteExtension.PhysicsShape::Generate()
+// 0x00000BBD System.Void FunkyCode.SpriteExtension.PhysicsShape::Generate()
 extern void PhysicsShape_Generate_mEDC6A934E010070267BEA95267593924F92AC16D (void);
-// 0x00000BB6 UnityEngine.Sprite FunkyCode.SpriteExtension.PhysicsShape::GetSprite()
+// 0x00000BBE UnityEngine.Sprite FunkyCode.SpriteExtension.PhysicsShape::GetSprite()
 extern void PhysicsShape_GetSprite_m8E067A1528E219E5E0B516D4330BD6050CA8CB3E (void);
-// 0x00000BB7 FunkyCode.MeshObject FunkyCode.SpriteExtension.PhysicsShape::GetMesh()
+// 0x00000BBF FunkyCode.MeshObject FunkyCode.SpriteExtension.PhysicsShape::GetMesh()
 extern void PhysicsShape_GetMesh_m5DF5337D2A02A45429CBC759BAD3DE7F32B9A59B (void);
-// 0x00000BB8 System.Void FunkyCode.SpriteExtension.PhysicsShapeManager::Clear()
+// 0x00000BC0 System.Void FunkyCode.SpriteExtension.PhysicsShapeManager::Clear()
 extern void PhysicsShapeManager_Clear_m84CC098DD82BA73CE0BACA30018E07682DEF531B (void);
-// 0x00000BB9 FunkyCode.SpriteExtension.PhysicsShape FunkyCode.SpriteExtension.PhysicsShapeManager::RequestCustomShape(UnityEngine.Sprite)
+// 0x00000BC1 FunkyCode.SpriteExtension.PhysicsShape FunkyCode.SpriteExtension.PhysicsShapeManager::RequestCustomShape(UnityEngine.Sprite)
 extern void PhysicsShapeManager_RequestCustomShape_m48A0991FCB30D850BC651A635E408FAD694622C5 (void);
-// 0x00000BBA FunkyCode.SpriteExtension.PhysicsShape FunkyCode.SpriteExtension.PhysicsShapeManager::RequestCustomShapeAccess(UnityEngine.Sprite)
+// 0x00000BC2 FunkyCode.SpriteExtension.PhysicsShape FunkyCode.SpriteExtension.PhysicsShapeManager::RequestCustomShapeAccess(UnityEngine.Sprite)
 extern void PhysicsShapeManager_RequestCustomShapeAccess_mE1D539021E66646754FAD42608EFC06E0B2FBB2C (void);
-// 0x00000BBB FunkyCode.SpriteExtension.PhysicsShape FunkyCode.SpriteExtension.PhysicsShapeManager::AddShape(UnityEngine.Sprite)
+// 0x00000BC3 FunkyCode.SpriteExtension.PhysicsShape FunkyCode.SpriteExtension.PhysicsShapeManager::AddShape(UnityEngine.Sprite)
 extern void PhysicsShapeManager_AddShape_mC308E3E8311B123FE56BE5A705BAED5B4E911281 (void);
-// 0x00000BBC System.Void FunkyCode.SpriteExtension.PhysicsShapeManager::.cctor()
+// 0x00000BC4 System.Void FunkyCode.SpriteExtension.PhysicsShapeManager::.cctor()
 extern void PhysicsShapeManager__cctor_mA1424FE2C111CFEB31467DC19573BA7ADE43B1A5 (void);
-// 0x00000BBD System.Void FunkyCode.LightSettings.LightEvent::.ctor()
+// 0x00000BC5 System.Void FunkyCode.LightSettings.LightEvent::.ctor()
 extern void LightEvent__ctor_mA6E9BCBB410C5C1FFB5103BE8CBEE37A0472F28D (void);
-// 0x00000BBE System.Void FunkyCode.LightingSettings.QualitySettings::.ctor()
+// 0x00000BC6 System.Void FunkyCode.LightingSettings.QualitySettings::.ctor()
 extern void QualitySettings__ctor_mD68EF62D8709E9F35440C4D76BB0E69603971FA0 (void);
-// 0x00000BBF System.Void FunkyCode.LightingSettings.QualitySettings::.cctor()
+// 0x00000BC7 System.Void FunkyCode.LightingSettings.QualitySettings::.cctor()
 extern void QualitySettings__cctor_m05F8AC01E567C5DF06B9D0FFC599467F19CA603D (void);
-// 0x00000BC0 System.Void FunkyCode.LightingSettings.Layers::.ctor()
+// 0x00000BC8 System.Void FunkyCode.LightingSettings.Layers::.ctor()
 extern void Layers__ctor_m73940066ABE56066FE46CF1BA018E8F8518B9353 (void);
-// 0x00000BC1 System.String[] FunkyCode.LightingSettings.LayersList::GetNames()
+// 0x00000BC9 System.String[] FunkyCode.LightingSettings.LayersList::GetNames()
 extern void LayersList_GetNames_m18EA0EABFAFEB11C91806A9A18B877971372D45E (void);
-// 0x00000BC2 System.String[] FunkyCode.LightingSettings.LayersList::GetOcclusionNames()
+// 0x00000BCA System.String[] FunkyCode.LightingSettings.LayersList::GetOcclusionNames()
 extern void LayersList_GetOcclusionNames_m2878563F2D3472BE04F8310CE16EF5BFFB826055 (void);
-// 0x00000BC3 System.String[] FunkyCode.LightingSettings.LayersList::GetTranslucencyNames()
+// 0x00000BCB System.String[] FunkyCode.LightingSettings.LayersList::GetTranslucencyNames()
 extern void LayersList_GetTranslucencyNames_mF5AB8829EBB4CB117F2AFC2A09738E7350438A03 (void);
-// 0x00000BC4 System.Void FunkyCode.LightingSettings.LayersList::.ctor()
+// 0x00000BCC System.Void FunkyCode.LightingSettings.LayersList::.ctor()
 extern void LayersList__ctor_m12624080EBA2F590A98D953707F0CF06CE7AE645 (void);
-// 0x00000BC5 System.Void FunkyCode.LightingSettings.DayLightingSettings::.ctor()
+// 0x00000BCD System.Void FunkyCode.LightingSettings.DayLightingSettings::.ctor()
 extern void DayLightingSettings__ctor_mB3E73F5690424D9B5B9450224B9CE21E67011703 (void);
-// 0x00000BC6 System.Void FunkyCode.LightingSettings.DayLightingSettings/BumpMap::.ctor()
+// 0x00000BCE System.Void FunkyCode.LightingSettings.DayLightingSettings/BumpMap::.ctor()
 extern void BumpMap__ctor_m78BF20D2FBC1C4470D774A6E84F047FFC38D59B0 (void);
-// 0x00000BC7 System.String FunkyCode.LightingSettings.SortingLayer::get_Name()
+// 0x00000BCF System.String FunkyCode.LightingSettings.SortingLayer::get_Name()
 extern void SortingLayer_get_Name_m7F086198220EBBF262C6CAD995105EB23DB67DB6 (void);
-// 0x00000BC8 System.Void FunkyCode.LightingSettings.SortingLayer::set_Name(System.String)
+// 0x00000BD0 System.Void FunkyCode.LightingSettings.SortingLayer::set_Name(System.String)
 extern void SortingLayer_set_Name_m9ED09B5921419B68BAF2BBC1663C438BFA7779D0 (void);
-// 0x00000BC9 System.Void FunkyCode.LightingSettings.SortingLayer::ApplyToMeshRenderer(UnityEngine.MeshRenderer)
+// 0x00000BD1 System.Void FunkyCode.LightingSettings.SortingLayer::ApplyToMeshRenderer(UnityEngine.MeshRenderer)
 extern void SortingLayer_ApplyToMeshRenderer_mED8500BF77C7529778242F4D85155C4591129D7C (void);
-// 0x00000BCA System.Void FunkyCode.LightingSettings.SortingLayer::.ctor()
+// 0x00000BD2 System.Void FunkyCode.LightingSettings.SortingLayer::.ctor()
 extern void SortingLayer__ctor_m6BD902BAE4D3EF17C430C31547C783619484D668 (void);
-// 0x00000BCB System.Void FunkyCode.LightingSettings.EditorView::.ctor()
+// 0x00000BD3 System.Void FunkyCode.LightingSettings.EditorView::.ctor()
 extern void EditorView__ctor_mAD323D2B682AB66863916831F23CAC86A1499C85 (void);
-// 0x00000BCC System.Void FunkyCode.LightingSettings.Gizmos::.ctor()
+// 0x00000BD4 System.Void FunkyCode.LightingSettings.Gizmos::.ctor()
 extern void Gizmos__ctor_m77A77AD9A18ECB4E06E2C8FB30665E7B7121B1C9 (void);
-// 0x00000BCD System.Void FunkyCode.LightingSettings.Chunks::.ctor()
+// 0x00000BD5 System.Void FunkyCode.LightingSettings.Chunks::.ctor()
 extern void Chunks__ctor_m8B55DC1FB53540BFC3E77E23373352920A85DA29 (void);
-// 0x00000BCE System.Void FunkyCode.LightingSettings.MeshMode::.ctor()
+// 0x00000BD6 System.Void FunkyCode.LightingSettings.MeshMode::.ctor()
 extern void MeshMode__ctor_mE0DD74FBBF26854CB40B10D3F1BF4D0A00C0429B (void);
-// 0x00000BCF System.Void FunkyCode.LightingSettings.BumpMapMode::SetSpriteRenderer(UnityEngine.SpriteRenderer)
+// 0x00000BD7 System.Void FunkyCode.LightingSettings.BumpMapMode::SetSpriteRenderer(UnityEngine.SpriteRenderer)
 extern void BumpMapMode_SetSpriteRenderer_m3B222DF5176EB71429DF5579EBBD076C10192BDB (void);
-// 0x00000BD0 UnityEngine.Texture FunkyCode.LightingSettings.BumpMapMode::GetBumpTexture()
+// 0x00000BD8 UnityEngine.Texture FunkyCode.LightingSettings.BumpMapMode::GetBumpTexture()
 extern void BumpMapMode_GetBumpTexture_m21EA54C20CE4DE59D1E2F83737C8A32A3A168CA9 (void);
-// 0x00000BD1 UnityEngine.Material FunkyCode.LightingSettings.BumpMapMode::SelectMaterial(UnityEngine.Material,UnityEngine.Material)
+// 0x00000BD9 UnityEngine.Material FunkyCode.LightingSettings.BumpMapMode::SelectMaterial(UnityEngine.Material,UnityEngine.Material)
 extern void BumpMapMode_SelectMaterial_m096FB01CA23BF87058E6856B452F5033ABCD31A9 (void);
-// 0x00000BD2 System.Void FunkyCode.LightingSettings.BumpMapMode::.ctor()
+// 0x00000BDA System.Void FunkyCode.LightingSettings.BumpMapMode::.ctor()
 extern void BumpMapMode__ctor_mE118F45C7FF4ED20001F06800EABAC4E15A74CA5 (void);
-// 0x00000BD3 UnityEngine.Texture FunkyCode.LightingSettings.DayNormalMapMode::GetBumpTexture()
+// 0x00000BDB UnityEngine.Texture FunkyCode.LightingSettings.DayNormalMapMode::GetBumpTexture()
 extern void DayNormalMapMode_GetBumpTexture_m48FAA78D1E884532227F9C4B631A105A9C6B6B93 (void);
-// 0x00000BD4 System.Void FunkyCode.LightingSettings.DayNormalMapMode::.ctor()
+// 0x00000BDC System.Void FunkyCode.LightingSettings.DayNormalMapMode::.ctor()
 extern void DayNormalMapMode__ctor_m479E04449ACE24ACA4DF2E612BEA439425A2B6C4 (void);
-// 0x00000BD5 System.Void FunkyCode.LightingSettings.GlowMode::.ctor()
+// 0x00000BDD System.Void FunkyCode.LightingSettings.GlowMode::.ctor()
 extern void GlowMode__ctor_mC5094847205BC1845F194457E129DA598EA3C595 (void);
-// 0x00000BD6 System.String[] FunkyCode.LightingSettings.EventPresetList::GetBufferLayers()
+// 0x00000BDE System.String[] FunkyCode.LightingSettings.EventPresetList::GetBufferLayers()
 extern void EventPresetList_GetBufferLayers_m2CAEF559BCC1EEAB0CB76C0453C676E9B78140DF (void);
-// 0x00000BD7 FunkyCode.LightingSettings.EventPreset[] FunkyCode.LightingSettings.EventPresetList::Get()
+// 0x00000BDF FunkyCode.LightingSettings.EventPreset[] FunkyCode.LightingSettings.EventPresetList::Get()
 extern void EventPresetList_Get_m7E76398E5E49A6D8B8539F69BCF8747B6ABD72C4 (void);
-// 0x00000BD8 System.Void FunkyCode.LightingSettings.EventPresetList::.ctor()
+// 0x00000BE0 System.Void FunkyCode.LightingSettings.EventPresetList::.ctor()
 extern void EventPresetList__ctor_m7598A61A1E2BBE20DC83AD7DB1434E584E79C305 (void);
-// 0x00000BD9 System.Void FunkyCode.LightingSettings.EventPreset::.ctor(System.Int32)
+// 0x00000BE1 System.Void FunkyCode.LightingSettings.EventPreset::.ctor(System.Int32)
 extern void EventPreset__ctor_m7216A3C38D9ACAB391C0DE61B2BC2AE28B85789B (void);
-// 0x00000BDA System.Void FunkyCode.LightingSettings.EventPresetLayers::SetArray(LayerEventSetting[])
+// 0x00000BE2 System.Void FunkyCode.LightingSettings.EventPresetLayers::SetArray(LayerEventSetting[])
 extern void EventPresetLayers_SetArray_mB89458F956AFE25EA2B64DE4F9090C8893FCC574 (void);
-// 0x00000BDB LayerEventSetting[] FunkyCode.LightingSettings.EventPresetLayers::Get()
+// 0x00000BE3 LayerEventSetting[] FunkyCode.LightingSettings.EventPresetLayers::Get()
 extern void EventPresetLayers_Get_mDAFC6338B885EA15214A1E309CB938CF11C1406B (void);
-// 0x00000BDC System.Void FunkyCode.LightingSettings.EventPresetLayers::.ctor()
+// 0x00000BE4 System.Void FunkyCode.LightingSettings.EventPresetLayers::.ctor()
 extern void EventPresetLayers__ctor_mCC93EEDD2B8052F4435FE51DD4EF50446A293898 (void);
-// 0x00000BDD FunkyCode.LightingSettings.LightmapPreset FunkyCode.LightingSettings.LightmapPresetList::get_Item(System.Int32)
+// 0x00000BE5 FunkyCode.LightingSettings.LightmapPreset FunkyCode.LightingSettings.LightmapPresetList::get_Item(System.Int32)
 extern void LightmapPresetList_get_Item_m85FAD26CF2E6C3B13FFD0B23EFDB53DB60AEB381 (void);
-// 0x00000BDE System.String[] FunkyCode.LightingSettings.LightmapPresetList::GetLightmapLayers()
+// 0x00000BE6 System.String[] FunkyCode.LightingSettings.LightmapPresetList::GetLightmapLayers()
 extern void LightmapPresetList_GetLightmapLayers_m53B421BD6CC49E2071F85E18CB2B9358D68A6285 (void);
-// 0x00000BDF System.Void FunkyCode.LightingSettings.LightmapPresetList::.ctor()
+// 0x00000BE7 System.Void FunkyCode.LightingSettings.LightmapPresetList::.ctor()
 extern void LightmapPresetList__ctor_mA35C28B14E490B1D035020F3B73B21C51F94756B (void);
-// 0x00000BE0 System.Void FunkyCode.LightingSettings.LightmapPreset::.ctor(System.Int32)
+// 0x00000BE8 System.Void FunkyCode.LightingSettings.LightmapPreset::.ctor(System.Int32)
 extern void LightmapPreset__ctor_m6A76797673A95FAF2A064444C40B9B5F31D98E49 (void);
-// 0x00000BE1 FunkyCode.LightingSettings.LightmapLayer FunkyCode.LightingSettings.LightmapLayerList::get_Item(System.Int32)
+// 0x00000BE9 FunkyCode.LightingSettings.LightmapLayer FunkyCode.LightingSettings.LightmapLayerList::get_Item(System.Int32)
 extern void LightmapLayerList_get_Item_m32F32D01D1B73816A6A2DAC4E44735D83692DE75 (void);
-// 0x00000BE2 System.Void FunkyCode.LightingSettings.LightmapLayerList::SetArray(FunkyCode.LightingSettings.LightmapLayer[])
+// 0x00000BEA System.Void FunkyCode.LightingSettings.LightmapLayerList::SetArray(FunkyCode.LightingSettings.LightmapLayer[])
 extern void LightmapLayerList_SetArray_mFA766798CD86EE3388F584E960A01A39B5B11E65 (void);
-// 0x00000BE3 FunkyCode.LightingSettings.LightmapLayer[] FunkyCode.LightingSettings.LightmapLayerList::Get()
+// 0x00000BEB FunkyCode.LightingSettings.LightmapLayer[] FunkyCode.LightingSettings.LightmapLayerList::Get()
 extern void LightmapLayerList_Get_m2AD8A6C0B9E2D7B9100C0623EFEF41BD59E141AD (void);
-// 0x00000BE4 System.Void FunkyCode.LightingSettings.LightmapLayerList::.ctor()
+// 0x00000BEC System.Void FunkyCode.LightingSettings.LightmapLayerList::.ctor()
 extern void LightmapLayerList__ctor_m8D725D5ECD76A8C5A51F34182C0E389379AD0B4F (void);
-// 0x00000BE5 System.Int32 FunkyCode.LightingSettings.LightmapLayer::GetLayerID()
+// 0x00000BED System.Int32 FunkyCode.LightingSettings.LightmapLayer::GetLayerID()
 extern void LightmapLayer_GetLayerID_m34ED09F6F9363D70536563DA57A8EDBEB90B90A5 (void);
-// 0x00000BE6 System.Void FunkyCode.LightingSettings.LightmapLayer::.ctor()
+// 0x00000BEE System.Void FunkyCode.LightingSettings.LightmapLayer::.ctor()
 extern void LightmapLayer__ctor_m9E66843A797A46BCF0A9C2511068AF5C720A2F5F (void);
-// 0x00000BE7 FunkyCode.LightingSettings.LightPreset FunkyCode.LightingSettings.LightPresetList::get_Item(System.Int32)
+// 0x00000BEF FunkyCode.LightingSettings.LightPreset FunkyCode.LightingSettings.LightPresetList::get_Item(System.Int32)
 extern void LightPresetList_get_Item_m250E0E87142B47EAE445BD96E2398BAD2C14E415 (void);
-// 0x00000BE8 System.String[] FunkyCode.LightingSettings.LightPresetList::GetPresetNames()
+// 0x00000BF0 System.String[] FunkyCode.LightingSettings.LightPresetList::GetPresetNames()
 extern void LightPresetList_GetPresetNames_mB125362E92D520B6AE9275A8485B86C75FD6D86D (void);
-// 0x00000BE9 FunkyCode.LightingSettings.LightPreset[] FunkyCode.LightingSettings.LightPresetList::Get()
+// 0x00000BF1 FunkyCode.LightingSettings.LightPreset[] FunkyCode.LightingSettings.LightPresetList::Get()
 extern void LightPresetList_Get_mB8B67127E9F354D13EA7672A406AE783EA72F784 (void);
-// 0x00000BEA System.Void FunkyCode.LightingSettings.LightPresetList::.ctor()
+// 0x00000BF2 System.Void FunkyCode.LightingSettings.LightPresetList::.ctor()
 extern void LightPresetList__ctor_m66768E6F5AE61AE7F957CF569D07951EB91FEFC4 (void);
-// 0x00000BEB System.Void FunkyCode.LightingSettings.LightPreset::.ctor(System.Int32)
+// 0x00000BF3 System.Void FunkyCode.LightingSettings.LightPreset::.ctor(System.Int32)
 extern void LightPreset__ctor_m8B0A0F14258315A5822BFBEBF5CF779ADDE187B1 (void);
-// 0x00000BEC FunkyCode.LayerSetting FunkyCode.LightingSettings.LightPresetLayers::get_Item(System.Int32)
+// 0x00000BF4 FunkyCode.LayerSetting FunkyCode.LightingSettings.LightPresetLayers::get_Item(System.Int32)
 extern void LightPresetLayers_get_Item_mC46B963BA899C710C643F5309C9724BB15026DF2 (void);
-// 0x00000BED System.Void FunkyCode.LightingSettings.LightPresetLayers::SetArray(FunkyCode.LayerSetting[])
+// 0x00000BF5 System.Void FunkyCode.LightingSettings.LightPresetLayers::SetArray(FunkyCode.LayerSetting[])
 extern void LightPresetLayers_SetArray_mCF61B73308AC439D99530E55E8A97D1296F484CF (void);
-// 0x00000BEE FunkyCode.LayerSetting[] FunkyCode.LightingSettings.LightPresetLayers::Get()
+// 0x00000BF6 FunkyCode.LayerSetting[] FunkyCode.LightingSettings.LightPresetLayers::Get()
 extern void LightPresetLayers_Get_m609BD1F08A08F397A808D2E54DD8608E9296D286 (void);
-// 0x00000BEF System.Void FunkyCode.LightingSettings.LightPresetLayers::.ctor()
+// 0x00000BF7 System.Void FunkyCode.LightingSettings.LightPresetLayers::.ctor()
 extern void LightPresetLayers__ctor_mFEE9559047D8678F6A27E8305D29EB5C0E9A21B2 (void);
-// 0x00000BF0 System.Void FunkyCode.LightingSettings.Profile::set_DarknessColor(UnityEngine.Color)
+// 0x00000BF8 System.Void FunkyCode.LightingSettings.Profile::set_DarknessColor(UnityEngine.Color)
 extern void Profile_set_DarknessColor_m00B079AB7BF0CC2641E22C493A98CC8786C26CA5 (void);
-// 0x00000BF1 UnityEngine.Color FunkyCode.LightingSettings.Profile::get_DarknessColor()
+// 0x00000BF9 UnityEngine.Color FunkyCode.LightingSettings.Profile::get_DarknessColor()
 extern void Profile_get_DarknessColor_m1C98037ECDC1FEF491B06EA9D05C748B1C7D225A (void);
-// 0x00000BF2 System.Void FunkyCode.LightingSettings.Profile::.ctor()
+// 0x00000BFA System.Void FunkyCode.LightingSettings.Profile::.ctor()
 extern void Profile__ctor_m6CDD2F74596C9B893B6CCBB518177D5BC99221D8 (void);
-// 0x00000BF3 FunkyCode.LightingSettings.Profile FunkyCode.LightingSettings.ProjectSettings::get_Profile()
+// 0x00000BFB FunkyCode.LightingSettings.Profile FunkyCode.LightingSettings.ProjectSettings::get_Profile()
 extern void ProjectSettings_get_Profile_m116CE30E78C48C4DA28B2778A03F60704EF6C6C6 (void);
-// 0x00000BF4 System.Void FunkyCode.LightingSettings.ProjectSettings::set_Profile(FunkyCode.LightingSettings.Profile)
+// 0x00000BFC System.Void FunkyCode.LightingSettings.ProjectSettings::set_Profile(FunkyCode.LightingSettings.Profile)
 extern void ProjectSettings_set_Profile_mD357578A84ABD7AAD43662D8284D39CD236FA316 (void);
-// 0x00000BF5 System.Void FunkyCode.LightingSettings.ProjectSettings::.ctor()
+// 0x00000BFD System.Void FunkyCode.LightingSettings.ProjectSettings::.ctor()
 extern void ProjectSettings__ctor_m2B17E54661884EE5F06CF599138825D4C22C8C78 (void);
-// 0x00000BF6 System.Void FunkyCode.Scriptable.LightSprite2D::set_LightLayer(System.Int32)
+// 0x00000BFE System.Void FunkyCode.Scriptable.LightSprite2D::set_LightLayer(System.Int32)
 extern void LightSprite2D_set_LightLayer_mCBA1F7FD761088D4E915BA09895F970B75907503 (void);
-// 0x00000BF7 System.Int32 FunkyCode.Scriptable.LightSprite2D::get_LightLayer()
+// 0x00000BFF System.Int32 FunkyCode.Scriptable.LightSprite2D::get_LightLayer()
 extern void LightSprite2D_get_LightLayer_m67FAAB28ABCB177C5760B610D837F5F6D7BBDCE0 (void);
-// 0x00000BF8 System.Void FunkyCode.Scriptable.LightSprite2D::set_Sprite(UnityEngine.Sprite)
+// 0x00000C00 System.Void FunkyCode.Scriptable.LightSprite2D::set_Sprite(UnityEngine.Sprite)
 extern void LightSprite2D_set_Sprite_m708EC123E1B679893EC8CF3801F3A353621E6809 (void);
-// 0x00000BF9 UnityEngine.Sprite FunkyCode.Scriptable.LightSprite2D::get_Sprite()
+// 0x00000C01 UnityEngine.Sprite FunkyCode.Scriptable.LightSprite2D::get_Sprite()
 extern void LightSprite2D_get_Sprite_mE9F529D0EB55F44C39B07904A168F5680DD675EC (void);
-// 0x00000BFA System.Void FunkyCode.Scriptable.LightSprite2D::set_Position(UnityEngine.Vector2)
+// 0x00000C02 System.Void FunkyCode.Scriptable.LightSprite2D::set_Position(UnityEngine.Vector2)
 extern void LightSprite2D_set_Position_m49FB4A7F9724550B0E6AB930E9E221F4EF7D6B58 (void);
-// 0x00000BFB UnityEngine.Vector2 FunkyCode.Scriptable.LightSprite2D::get_Position()
+// 0x00000C03 UnityEngine.Vector2 FunkyCode.Scriptable.LightSprite2D::get_Position()
 extern void LightSprite2D_get_Position_m2A9D6E2F9D62CA189FEEE5DED6C9D1FA3E68EC0A (void);
-// 0x00000BFC System.Void FunkyCode.Scriptable.LightSprite2D::set_Scale(UnityEngine.Vector2)
+// 0x00000C04 System.Void FunkyCode.Scriptable.LightSprite2D::set_Scale(UnityEngine.Vector2)
 extern void LightSprite2D_set_Scale_m0807960A7CBDBBAC46DA1289A454990CB698C612 (void);
-// 0x00000BFD UnityEngine.Vector2 FunkyCode.Scriptable.LightSprite2D::get_Scale()
+// 0x00000C05 UnityEngine.Vector2 FunkyCode.Scriptable.LightSprite2D::get_Scale()
 extern void LightSprite2D_get_Scale_m69FB252D2D0F8106D44FD1D0C0FB5324197A88D3 (void);
-// 0x00000BFE System.Void FunkyCode.Scriptable.LightSprite2D::set_Color(UnityEngine.Color)
+// 0x00000C06 System.Void FunkyCode.Scriptable.LightSprite2D::set_Color(UnityEngine.Color)
 extern void LightSprite2D_set_Color_m56CCA886215B28C23E71FA5D1C2C03F519A83325 (void);
-// 0x00000BFF UnityEngine.Color FunkyCode.Scriptable.LightSprite2D::get_Color()
+// 0x00000C07 UnityEngine.Color FunkyCode.Scriptable.LightSprite2D::get_Color()
 extern void LightSprite2D_get_Color_mA021F15CBFAB443A522F56F3D7049DDC9D028507 (void);
-// 0x00000C00 System.Void FunkyCode.Scriptable.LightSprite2D::set_Rotation(System.Single)
+// 0x00000C08 System.Void FunkyCode.Scriptable.LightSprite2D::set_Rotation(System.Single)
 extern void LightSprite2D_set_Rotation_m11836FAE873C41AC0F2064ABB6E22CABEB11E710 (void);
-// 0x00000C01 System.Single FunkyCode.Scriptable.LightSprite2D::get_Rotation()
+// 0x00000C09 System.Single FunkyCode.Scriptable.LightSprite2D::get_Rotation()
 extern void LightSprite2D_get_Rotation_m3F31CFB2C13A1ED0E76FBF0E001C14872BC23673 (void);
-// 0x00000C02 System.Boolean FunkyCode.Scriptable.LightSprite2D::InCamera(UnityEngine.Camera)
+// 0x00000C0A System.Boolean FunkyCode.Scriptable.LightSprite2D::InCamera(UnityEngine.Camera)
 extern void LightSprite2D_InCamera_mE2A27E22D4A29B0E6A88FE44B82DB8C766264D20 (void);
-// 0x00000C03 System.Void FunkyCode.Scriptable.LightSprite2D::.ctor()
+// 0x00000C0B System.Void FunkyCode.Scriptable.LightSprite2D::.ctor()
 extern void LightSprite2D__ctor_m9B7D8DE1119D4292D42CBE01CBDA77065587864F (void);
-// 0x00000C04 System.Void FunkyCode.Scriptable.LightSprite2D::SetActive(System.Boolean)
+// 0x00000C0C System.Void FunkyCode.Scriptable.LightSprite2D::SetActive(System.Boolean)
 extern void LightSprite2D_SetActive_m661F623AF767BD15CCAB3BE038D2B11237C4B1F7 (void);
-// 0x00000C05 System.Void FunkyCode.Scriptable.LightSprite2D::.cctor()
+// 0x00000C0D System.Void FunkyCode.Scriptable.LightSprite2D::.cctor()
 extern void LightSprite2D__cctor_mB7534AA6790592DC3B76702BC1097686CDDDE7EC (void);
-// 0x00000C06 System.Void FunkyCode.Scriptable.LightSpriteTransform::.ctor()
+// 0x00000C0E System.Void FunkyCode.Scriptable.LightSpriteTransform::.ctor()
 extern void LightSpriteTransform__ctor_m09E3E1014BCF7DAC8229E19E7BA91F4590BA8E6E (void);
-// 0x00000C07 System.Void FunkyCode.Scriptable.LightSpriteShape::Update(FunkyCode.Scriptable.LightSprite2D)
+// 0x00000C0F System.Void FunkyCode.Scriptable.LightSpriteShape::Update(FunkyCode.Scriptable.LightSprite2D)
 extern void LightSpriteShape_Update_m4C607FD42181193A2C53C4099CC99A0161DF5459 (void);
-// 0x00000C08 UnityEngine.Rect FunkyCode.Scriptable.LightSpriteShape::GetWorldRect()
+// 0x00000C10 UnityEngine.Rect FunkyCode.Scriptable.LightSpriteShape::GetWorldRect()
 extern void LightSpriteShape_GetWorldRect_mC8C8F5F7E75DB611B31F031AB34E4C81BF0E707D (void);
-// 0x00000C09 FunkyCode.Utilities.Polygon2 FunkyCode.Scriptable.LightSpriteShape::GetSpriteWorldPolygon()
+// 0x00000C11 FunkyCode.Utilities.Polygon2 FunkyCode.Scriptable.LightSpriteShape::GetSpriteWorldPolygon()
 extern void LightSpriteShape_GetSpriteWorldPolygon_m5B2B3C88FF2CA2714659C7E7E86349B1BF8D9A3F (void);
-// 0x00000C0A FunkyCode.Utilities.Polygon2 FunkyCode.Scriptable.LightSpriteShape::GetPolygon()
+// 0x00000C12 FunkyCode.Utilities.Polygon2 FunkyCode.Scriptable.LightSpriteShape::GetPolygon()
 extern void LightSpriteShape_GetPolygon_m424ABCE39E7312225AA96EADBEC7A22220F2501B (void);
-// 0x00000C0B System.Void FunkyCode.Scriptable.LightSpriteShape::.ctor()
+// 0x00000C13 System.Void FunkyCode.Scriptable.LightSpriteShape::.ctor()
 extern void LightSpriteShape__ctor_m1395138F34E847C609ECEFFFB0D2B26384DF9935 (void);
-// 0x00000C0C FunkyCode.LightBuffer2D FunkyCode.Buffers.Manager::AddBuffer(FunkyCode.Light2D)
+// 0x00000C14 FunkyCode.LightBuffer2D FunkyCode.Buffers.Manager::AddBuffer(FunkyCode.Light2D)
 extern void Manager_AddBuffer_mBFAC79F574627D92402C1C2710C1FC1F94DE3365 (void);
-// 0x00000C0D FunkyCode.LightBuffer2D FunkyCode.Buffers.Manager::PullBuffer(FunkyCode.Light2D)
+// 0x00000C15 FunkyCode.LightBuffer2D FunkyCode.Buffers.Manager::PullBuffer(FunkyCode.Light2D)
 extern void Manager_PullBuffer_m1B4CF1F7184AF7021BFD87206C3851E377792F0A (void);
-// 0x00000C0E System.Void FunkyCode.Buffers.Manager::FreeBuffer(FunkyCode.LightBuffer2D)
+// 0x00000C16 System.Void FunkyCode.Buffers.Manager::FreeBuffer(FunkyCode.LightBuffer2D)
 extern void Manager_FreeBuffer_mED1E14D11541D9D7F5E9B53EA5C70F741356FC23 (void);
-// 0x00000C0F System.Void FunkyCode.Rendering.LightBuffer::Render(FunkyCode.Light2D)
+// 0x00000C17 System.Void FunkyCode.Rendering.LightBuffer::Render(FunkyCode.Light2D)
 extern void LightBuffer_Render_m3C8BD206E10ED9E76DA109FCCB3E7785D95ED00F (void);
-// 0x00000C10 System.Void FunkyCode.Rendering.LightBuffer::RenderTranslucency(FunkyCode.Light2D)
+// 0x00000C18 System.Void FunkyCode.Rendering.LightBuffer::RenderTranslucency(FunkyCode.Light2D)
 extern void LightBuffer_RenderTranslucency_m4B578905084795E7C04D4221C20D56CF46F049E3 (void);
-// 0x00000C11 System.Void FunkyCode.Rendering.LightBuffer::RenderFreeForm(FunkyCode.Light2D)
+// 0x00000C19 System.Void FunkyCode.Rendering.LightBuffer::RenderFreeForm(FunkyCode.Light2D)
 extern void LightBuffer_RenderFreeForm_m0162D9A00CDB45C3B978B5D59E2C78FCD5CF927C (void);
-// 0x00000C12 System.Void FunkyCode.Rendering.LightBuffer::UpdateName(FunkyCode.LightBuffer2D)
+// 0x00000C1A System.Void FunkyCode.Rendering.LightBuffer::UpdateName(FunkyCode.LightBuffer2D)
 extern void LightBuffer_UpdateName_m1216470DAB0173D1425243F4FAB216BD4209ABD9 (void);
-// 0x00000C13 System.Void FunkyCode.Rendering.LightBuffer::InitializeRenderTexture(FunkyCode.LightBuffer2D,UnityEngine.Vector2Int)
+// 0x00000C1B System.Void FunkyCode.Rendering.LightBuffer::InitializeRenderTexture(FunkyCode.LightBuffer2D,UnityEngine.Vector2Int)
 extern void LightBuffer_InitializeRenderTexture_m4DF4139F49FECAA7B5466715234B290A8D491096 (void);
-// 0x00000C14 System.Void FunkyCode.Rendering.LightBuffer::InitializeFreeFormTexture(FunkyCode.LightBuffer2D,UnityEngine.Vector2Int)
+// 0x00000C1C System.Void FunkyCode.Rendering.LightBuffer::InitializeFreeFormTexture(FunkyCode.LightBuffer2D,UnityEngine.Vector2Int)
 extern void LightBuffer_InitializeFreeFormTexture_mBD42319BFE19E3D209E0859B720B58CD7DE91246 (void);
-// 0x00000C15 System.Void FunkyCode.Rendering.LightBuffer::InitializeTranslucencyTexture(FunkyCode.LightBuffer2D,UnityEngine.Vector2Int)
+// 0x00000C1D System.Void FunkyCode.Rendering.LightBuffer::InitializeTranslucencyTexture(FunkyCode.LightBuffer2D,UnityEngine.Vector2Int)
 extern void LightBuffer_InitializeTranslucencyTexture_mA2B13234D2FCA2B4CCAB9AD7896253F30E166CF5 (void);
-// 0x00000C16 System.Void FunkyCode.Rendering.LightBuffer::.ctor()
+// 0x00000C1E System.Void FunkyCode.Rendering.LightBuffer::.ctor()
 extern void LightBuffer__ctor_mC06CD6722C0000968C42F2BDA25D8431D1D0CDE5 (void);
-// 0x00000C17 System.Void FunkyCode.Rendering.LightMainBuffer::Update(FunkyCode.LightMainBuffer2D)
+// 0x00000C1F System.Void FunkyCode.Rendering.LightMainBuffer::Update(FunkyCode.LightMainBuffer2D)
 extern void LightMainBuffer_Update_m6C3E2FCB0E8B5CDC65DE7DE9A8FFE93B826CB55D (void);
-// 0x00000C18 System.Void FunkyCode.Rendering.LightMainBuffer::DrawPost(FunkyCode.LightMainBuffer2D)
+// 0x00000C20 System.Void FunkyCode.Rendering.LightMainBuffer::DrawPost(FunkyCode.LightMainBuffer2D)
 extern void LightMainBuffer_DrawPost_m48B5E3E3D25A01BD468CC62FA0E153C957056C9D (void);
-// 0x00000C19 System.Void FunkyCode.Rendering.LightMainBuffer::DrawOn(FunkyCode.LightMainBuffer2D)
+// 0x00000C21 System.Void FunkyCode.Rendering.LightMainBuffer::DrawOn(FunkyCode.LightMainBuffer2D)
 extern void LightMainBuffer_DrawOn_m00EE6D6540F888ED44AF9ABAB61170242EA7DB35 (void);
-// 0x00000C1A System.Void FunkyCode.Rendering.LightMainBuffer::Render(FunkyCode.LightMainBuffer2D)
+// 0x00000C22 System.Void FunkyCode.Rendering.LightMainBuffer::Render(FunkyCode.LightMainBuffer2D)
 extern void LightMainBuffer_Render_mB65D595F02E2AF813742DA3B0D773B3B01AD7094 (void);
-// 0x00000C1B UnityEngine.Vector2Int FunkyCode.Rendering.LightMainBuffer::GetScreenResolution(FunkyCode.LightMainBuffer2D)
+// 0x00000C23 UnityEngine.Vector2Int FunkyCode.Rendering.LightMainBuffer::GetScreenResolution(FunkyCode.LightMainBuffer2D)
 extern void LightMainBuffer_GetScreenResolution_mB0ED011E6587240A3B94B51EF88B7F581DE23707 (void);
-// 0x00000C1C System.Void FunkyCode.Rendering.LightMainBuffer::InitializeRenderTexture(FunkyCode.LightMainBuffer2D)
+// 0x00000C24 System.Void FunkyCode.Rendering.LightMainBuffer::InitializeRenderTexture(FunkyCode.LightMainBuffer2D)
 extern void LightMainBuffer_InitializeRenderTexture_mDC613286BE1D479BD1A1FD4B10FC622115C4D8F0 (void);
-// 0x00000C1D System.Void FunkyCode.Rendering.LightMainBuffer::.ctor()
+// 0x00000C25 System.Void FunkyCode.Rendering.LightMainBuffer::.ctor()
 extern void LightMainBuffer__ctor_m7575DD80DEBD959B8B5E442CECFD96689E2BBF1D (void);
-// 0x00000C1E System.Void FunkyCode.Rendering.LightMainBuffer/Check::RenderTexture(FunkyCode.LightMainBuffer2D)
+// 0x00000C26 System.Void FunkyCode.Rendering.LightMainBuffer/Check::RenderTexture(FunkyCode.LightMainBuffer2D)
 extern void Check_RenderTexture_mFE2CFFF7BFD6F0279DE0E25F6551444234A5B6F0 (void);
-// 0x00000C1F System.Boolean FunkyCode.Rendering.LightMainBuffer/Check::CameraSettings(FunkyCode.LightMainBuffer2D)
+// 0x00000C27 System.Boolean FunkyCode.Rendering.LightMainBuffer/Check::CameraSettings(FunkyCode.LightMainBuffer2D)
 extern void Check_CameraSettings_m32EDE25EFC3C1C2A46F3E548EB4DA26871279058 (void);
-// 0x00000C20 System.Void FunkyCode.Rendering.LightMainBuffer/Check::.ctor()
+// 0x00000C28 System.Void FunkyCode.Rendering.LightMainBuffer/Check::.ctor()
 extern void Check__ctor_mE53EB04656CE4894A8143D5E995D21C8D0F0981B (void);
-// 0x00000C21 UnityEngine.Mesh FunkyCode.Rendering.Universal.Base::GetRenderMesh()
+// 0x00000C29 UnityEngine.Mesh FunkyCode.Rendering.Universal.Base::GetRenderMesh()
 extern void Base_GetRenderMesh_mA55D3BB4DB8EE2660E68D2C115E2EA99012FCC84 (void);
-// 0x00000C22 System.Void FunkyCode.Rendering.Universal.Base::.ctor()
+// 0x00000C2A System.Void FunkyCode.Rendering.Universal.Base::.ctor()
 extern void Base__ctor_m249870BCA8417FBFFCA09409E939971615B5053D (void);
-// 0x00000C23 System.Void FunkyCode.Rendering.Universal.Sprite::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C2B System.Void FunkyCode.Rendering.Universal.Sprite::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Sprite_Draw_m2CAC272916F4CB3B044E9610148D04FCD878AAF6 (void);
-// 0x00000C24 System.Void FunkyCode.Rendering.Universal.Sprite::.ctor()
+// 0x00000C2C System.Void FunkyCode.Rendering.Universal.Sprite::.ctor()
 extern void Sprite__ctor_m377DC0491B32030C59A99DD5307BFA37AF9C742B (void);
-// 0x00000C25 System.Void FunkyCode.Rendering.Universal.Sprite::.cctor()
+// 0x00000C2D System.Void FunkyCode.Rendering.Universal.Sprite::.cctor()
 extern void Sprite__cctor_mC5246CECC2B2D639509822DA58EDE5B277DE1D57 (void);
-// 0x00000C26 System.Void FunkyCode.Rendering.Universal.Sprite/Pass::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C2E System.Void FunkyCode.Rendering.Universal.Sprite/Pass::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Pass_Draw_m357F318B65DDC0B6184D1F2B079D306C3FF6E3D6 (void);
-// 0x00000C27 System.Void FunkyCode.Rendering.Universal.Sprite/Pass::Draw(FunkyCode.SpriteMeshObject,FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C2F System.Void FunkyCode.Rendering.Universal.Sprite/Pass::Draw(FunkyCode.SpriteMeshObject,FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Pass_Draw_mA8089ECE458EC019197FDACCFC188808F268A1D2 (void);
-// 0x00000C28 System.Void FunkyCode.Rendering.Universal.Sprite/MultiPass::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C30 System.Void FunkyCode.Rendering.Universal.Sprite/MultiPass::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void MultiPass_Draw_m875B29184002074C789478B8D26DBA29FB5C127E (void);
-// 0x00000C29 System.Void FunkyCode.Rendering.Universal.Sprite/MultiPass::Draw(FunkyCode.SpriteMeshObject,FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C31 System.Void FunkyCode.Rendering.Universal.Sprite/MultiPass::Draw(FunkyCode.SpriteMeshObject,FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void MultiPass_Draw_m9576DC4A0166D84B6E5023C5BE5EC93BBEFBDF68 (void);
-// 0x00000C2A System.Void FunkyCode.Rendering.Universal.Sprite/Tight::.ctor()
+// 0x00000C32 System.Void FunkyCode.Rendering.Universal.Sprite/Tight::.ctor()
 extern void Tight__ctor_m62C00A7A72DA248829E21193EF50B7FE46C5F4A2 (void);
-// 0x00000C2B System.Void FunkyCode.Rendering.Universal.Sprite/FullRect::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C33 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void FullRect_Draw_mF33AAFC1190B9ED9C27020670EAD6B540E784FC6 (void);
-// 0x00000C2C System.Void FunkyCode.Rendering.Universal.Sprite/FullRect::DrawPass(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C34 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect::DrawPass(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void FullRect_DrawPass_mA2DD53E94F566A5AD8ADF4A122CFA31C7B8E4E08 (void);
-// 0x00000C2D System.Void FunkyCode.Rendering.Universal.Sprite/FullRect::.ctor()
+// 0x00000C35 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect::.ctor()
 extern void FullRect__ctor_mE2DD9B771719D076276A5CBF5760851FDC16DC9A (void);
-// 0x00000C2E System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Simple::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C36 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Simple::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Simple_Draw_mA7CF9C13B07A81F40416FA03BEB00B37C5DD5A7E (void);
-// 0x00000C2F System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Simple::Draw(FunkyCode.SpriteMeshObject,FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C37 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Simple::Draw(FunkyCode.SpriteMeshObject,FunkyCode.Utilities.VirtualSpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Simple_Draw_mE34DB2D679CD0AC78188583BB8571958D2C45981 (void);
-// 0x00000C30 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Simple::.ctor()
+// 0x00000C38 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Simple::.ctor()
 extern void Simple__ctor_m697765C0C938FC1BB4335CDD1DCBCAB51EA67E03 (void);
-// 0x00000C31 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Tiled::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C39 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Tiled::Draw(FunkyCode.SpriteMeshObject,UnityEngine.SpriteRenderer,UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Tiled_Draw_mE6A0C8FCBF6ABE2C90AC1366E1E33F85AF265FC9 (void);
-// 0x00000C32 System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Tiled::.ctor()
+// 0x00000C3A System.Void FunkyCode.Rendering.Universal.Sprite/FullRect/Tiled::.ctor()
 extern void Tiled__ctor_m1CBE34953647B66C69273FBF36B2C703E806203E (void);
-// 0x00000C33 System.Void FunkyCode.Rendering.Universal.Texture::.ctor()
+// 0x00000C3B System.Void FunkyCode.Rendering.Universal.Texture::.ctor()
 extern void Texture__ctor_m5E1EBB50B7C662E14C797D408205E440179330B7 (void);
-// 0x00000C34 System.Void FunkyCode.Rendering.Universal.Texture/Quad::Draw(UnityEngine.Material,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
+// 0x00000C3C System.Void FunkyCode.Rendering.Universal.Texture/Quad::Draw(UnityEngine.Material,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single)
 extern void Quad_Draw_m7C1EB43DDE84C663CD87A9584FE395CA43AFC0E0 (void);
-// 0x00000C35 System.Void FunkyCode.Rendering.Universal.Texture/Quad::Draw(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C3D System.Void FunkyCode.Rendering.Universal.Texture/Quad::Draw(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Quad_Draw_m05B1945F2F603FFC269DF9887D9F5436BB52E810 (void);
-// 0x00000C36 System.Void FunkyCode.Rendering.Universal.Texture/Quad/Sprite::DrawMultiPass(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
+// 0x00000C3E System.Void FunkyCode.Rendering.Universal.Texture/Quad/Sprite::DrawMultiPass(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
 extern void Sprite_DrawMultiPass_m5C3017C7E4C967C05397D2BF9E0348C820852B17 (void);
-// 0x00000C37 System.Void FunkyCode.Rendering.Universal.Texture/Quad/Sprite::DrawPass(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
+// 0x00000C3F System.Void FunkyCode.Rendering.Universal.Texture/Quad/Sprite::DrawPass(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
 extern void Sprite_DrawPass_m2E919BDC843DD1990A8BE6684E12F666E92958F2 (void);
-// 0x00000C38 System.Void FunkyCode.Rendering.Universal.Texture/Quad/Sprite::Draw(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
+// 0x00000C40 System.Void FunkyCode.Rendering.Universal.Texture/Quad/Sprite::Draw(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
 extern void Sprite_Draw_m77F2FF9731924A7CE457F25DB658944160FD7DFC (void);
-// 0x00000C39 System.Void FunkyCode.Rendering.Universal.Texture/Quad/STE::DrawPass(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
+// 0x00000C41 System.Void FunkyCode.Rendering.Universal.Texture/Quad/STE::DrawPass(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Rect,System.Single)
 extern void STE_DrawPass_mC9BFFDEA49A4738A346EABCBE47A9E8E7423D852 (void);
-// 0x00000C3A System.Void FunkyCode.Rendering.Manager.Main::InternalUpdate()
+// 0x00000C42 System.Void FunkyCode.Rendering.Manager.Main::InternalUpdate()
 extern void Main_InternalUpdate_m61E2CEBE7A93D1609130CDD9086DA25261206769 (void);
-// 0x00000C3B System.Void FunkyCode.Rendering.Manager.Main::Render()
+// 0x00000C43 System.Void FunkyCode.Rendering.Manager.Main::Render()
 extern void Main_Render_m984CAC375FA48A2224F6BD36CE72591DB5999703 (void);
-// 0x00000C3C System.Void FunkyCode.Rendering.Manager.Main::UpdateLoop()
+// 0x00000C44 System.Void FunkyCode.Rendering.Manager.Main::UpdateLoop()
 extern void Main_UpdateLoop_m0373938B475A529EAF1B64B1374059ACA0D0D780 (void);
-// 0x00000C3D System.Void FunkyCode.Rendering.Manager.Main::UpdateCameras()
+// 0x00000C45 System.Void FunkyCode.Rendering.Manager.Main::UpdateCameras()
 extern void Main_UpdateCameras_m3560A9C8A4DEBA46B5469447B5D53D556CBF88E3 (void);
-// 0x00000C3E System.Void FunkyCode.Rendering.Manager.Main::PassLightmap(System.Boolean,FunkyCode.LightMainBuffer2D,FunkyCode.CameraSettings,FunkyCode.CameraLightmap,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000C46 System.Void FunkyCode.Rendering.Manager.Main::PassLightmap(System.Boolean,FunkyCode.LightMainBuffer2D,FunkyCode.CameraSettings,FunkyCode.CameraLightmap,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_PassLightmap_m886EF1BF77F9B558F046174C718D6517969B709C (void);
-// 0x00000C3F System.Void FunkyCode.Rendering.Manager.Main::UpdateMaterials()
+// 0x00000C47 System.Void FunkyCode.Rendering.Manager.Main::UpdateMaterials()
 extern void Main_UpdateMaterials_m5B514477BB2F63FC888A9BB41DF6A95CDDF843B3 (void);
-// 0x00000C40 System.Void FunkyCode.Rendering.Manager.Main::UpdateMainBuffers()
+// 0x00000C48 System.Void FunkyCode.Rendering.Manager.Main::UpdateMainBuffers()
 extern void Main_UpdateMainBuffers_mFCF6ED140E9ABD8E2699742D94F57FC6AFCC1798 (void);
-// 0x00000C41 System.Void FunkyCode.Rendering.Manager.Main/<>c::.cctor()
+// 0x00000C49 System.Void FunkyCode.Rendering.Manager.Main/<>c::.cctor()
 extern void U3CU3Ec__cctor_mD9C4991FD9E6058F099AEDE8FEAD9771E9856051 (void);
-// 0x00000C42 System.Void FunkyCode.Rendering.Manager.Main/<>c::.ctor()
+// 0x00000C4A System.Void FunkyCode.Rendering.Manager.Main/<>c::.ctor()
 extern void U3CU3Ec__ctor_m3DD436C26D093212A48FA9973D790215815D80FE (void);
-// 0x00000C43 System.Void FunkyCode.Rendering.Manager.Main/<>c::<Render>b__1_0(FunkyCode.LightBuffer2D)
+// 0x00000C4B System.Void FunkyCode.Rendering.Manager.Main/<>c::<Render>b__1_0(FunkyCode.LightBuffer2D)
 extern void U3CU3Ec_U3CRenderU3Eb__1_0_m7A4C9CF731676B94BB4A9354F005A9E351889643 (void);
-// 0x00000C44 System.Void FunkyCode.Rendering.Manager.Main/<>c::<Render>b__1_1(FunkyCode.LightMainBuffer2D)
+// 0x00000C4C System.Void FunkyCode.Rendering.Manager.Main/<>c::<Render>b__1_1(FunkyCode.LightMainBuffer2D)
 extern void U3CU3Ec_U3CRenderU3Eb__1_1_m562BCA965B00B06EEF90587B35604D21CF400F56 (void);
-// 0x00000C45 System.Void FunkyCode.Rendering.Lightmap.Main::Draw(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000C4D System.Void FunkyCode.Rendering.Lightmap.Main::Draw(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_Draw_m85B2B2A552B620EB8F4D4433C2D5223502C46E38 (void);
-// 0x00000C46 System.Void FunkyCode.Rendering.Lightmap.Main::DarknessColor(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000C4E System.Void FunkyCode.Rendering.Lightmap.Main::DarknessColor(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_DarknessColor_m98D9046BB0F24AB9071FD05D7A3DBB09FBD8240E (void);
-// 0x00000C47 UnityEngine.Color FunkyCode.Rendering.Lightmap.Main::ClearColor(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000C4F UnityEngine.Color FunkyCode.Rendering.Lightmap.Main::ClearColor(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_ClearColor_m1DC6F936A7867AC57D037E548946CECB98021B86 (void);
-// 0x00000C48 System.Void FunkyCode.Rendering.Lightmap.Main::.cctor()
+// 0x00000C50 System.Void FunkyCode.Rendering.Lightmap.Main::.cctor()
 extern void Main__cctor_mAA3890F51FFB2316C8DF444FD46DF901873E7719 (void);
-// 0x00000C49 System.Void FunkyCode.Rendering.Lightmap.NoSort::Draw(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C51 System.Void FunkyCode.Rendering.Lightmap.NoSort::Draw(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_Draw_mFC4980544F70E1FFEA868653E65E6A4DB96007ED (void);
-// 0x00000C4A System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawRooms(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C52 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawRooms(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawRooms_mCD3C37112C83FC7BDC39B5CB425291F411621186 (void);
-// 0x00000C4B System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawTilemapRooms(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C53 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawTilemapRooms(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawTilemapRooms_m97297E673668B036BA9FD18797C4F77EA014746D (void);
-// 0x00000C4C System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightSprites(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C54 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightSprites(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawLightSprites_m6F838605B49ED23D9AB8F23FAEE0C8EDA96B44C4 (void);
-// 0x00000C4D System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightSprites_Scriptable(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C55 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightSprites_Scriptable(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawLightSprites_Scriptable_m73DD1A61449886797166163372A21BD638171724 (void);
-// 0x00000C4E System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightTextures(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C56 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightTextures(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawLightTextures_m5F6BA2701C8926538F164CA6B5FE42592F1D5A88 (void);
-// 0x00000C4F System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightParticleSystem(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C57 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLightParticleSystem(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawLightParticleSystem_mC7DF960857A825D721B753B294EF0551B6EEB37D (void);
-// 0x00000C50 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLight(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C58 System.Void FunkyCode.Rendering.Lightmap.NoSort::DrawLight(FunkyCode.Rendering.Lightmap.Pass)
 extern void NoSort_DrawLight_m7A8110C3717755D6F13C73069AAB79411EF8965D (void);
-// 0x00000C51 System.Void FunkyCode.Rendering.Lightmap.NoSort::.ctor()
+// 0x00000C59 System.Void FunkyCode.Rendering.Lightmap.NoSort::.ctor()
 extern void NoSort__ctor_m44CD7D89590E6F95359C0796E7E30607754B523E (void);
-// 0x00000C52 System.Void FunkyCode.Rendering.Lightmap.LightSource::Draw(FunkyCode.Light2D,UnityEngine.Camera)
+// 0x00000C5A System.Void FunkyCode.Rendering.Lightmap.LightSource::Draw(FunkyCode.Light2D,UnityEngine.Camera)
 extern void LightSource_Draw_m67939B74F3C7B455AC50051374F285A568D099A6 (void);
-// 0x00000C53 System.Void FunkyCode.Rendering.Lightmap.LightSource::DrawOcclusion(FunkyCode.Light2D,UnityEngine.Camera)
+// 0x00000C5B System.Void FunkyCode.Rendering.Lightmap.LightSource::DrawOcclusion(FunkyCode.Light2D,UnityEngine.Camera)
 extern void LightSource_DrawOcclusion_m90FE9985B7663A3CECD3FBCBEAF6AFEF54B5F70C (void);
-// 0x00000C54 System.Void FunkyCode.Rendering.Lightmap.LightSource::DrawTranslucent(FunkyCode.Light2D,UnityEngine.Camera)
+// 0x00000C5C System.Void FunkyCode.Rendering.Lightmap.LightSource::DrawTranslucent(FunkyCode.Light2D,UnityEngine.Camera)
 extern void LightSource_DrawTranslucent_mB8B50938DD907ABE4A1E7052E72AD81911F09B1B (void);
-// 0x00000C55 System.Void FunkyCode.Rendering.Lightmap.LightSource::.ctor()
+// 0x00000C5D System.Void FunkyCode.Rendering.Lightmap.LightSource::.ctor()
 extern void LightSource__ctor_mFB225BC0CD9C2269E5737A59040574D8768E3AE9 (void);
-// 0x00000C56 System.Void FunkyCode.Rendering.Lightmap.LightSprite/Script::DrawScriptable(FunkyCode.Scriptable.LightSprite2D,UnityEngine.Camera)
+// 0x00000C5E System.Void FunkyCode.Rendering.Lightmap.LightSprite/Script::DrawScriptable(FunkyCode.Scriptable.LightSprite2D,UnityEngine.Camera)
 extern void Script_DrawScriptable_m68A11C6F7B1FF90EC99700A506580C4644A26E2B (void);
-// 0x00000C57 System.Void FunkyCode.Rendering.Lightmap.LightSprite/Pass::Draw(FunkyCode.LightSprite2D,UnityEngine.Camera)
+// 0x00000C5F System.Void FunkyCode.Rendering.Lightmap.LightSprite/Pass::Draw(FunkyCode.LightSprite2D,UnityEngine.Camera)
 extern void Pass_Draw_mA811CB561D4103B1DF8CBE3206B64B6F6D0B09BA (void);
-// 0x00000C58 System.Void FunkyCode.Rendering.Lightmap.LightSprite/Simple::Draw(FunkyCode.LightSprite2D,UnityEngine.Camera)
+// 0x00000C60 System.Void FunkyCode.Rendering.Lightmap.LightSprite/Simple::Draw(FunkyCode.LightSprite2D,UnityEngine.Camera)
 extern void Simple_Draw_mA33B73B595C6E1081A2B40AE99B180F8ADA0DF33 (void);
-// 0x00000C59 System.Void FunkyCode.Rendering.Lightmap.Particle::DrawPass(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
+// 0x00000C61 System.Void FunkyCode.Rendering.Lightmap.Particle::DrawPass(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)
 extern void Particle_DrawPass_mA1CE55EA0D1A9774C9D8FBA1F50353AB898EF54B (void);
-// 0x00000C5A System.Void FunkyCode.Rendering.Lightmap.ParticleRenderer::Draw(FunkyCode.LightParticleSystem2D,UnityEngine.Camera)
+// 0x00000C62 System.Void FunkyCode.Rendering.Lightmap.ParticleRenderer::Draw(FunkyCode.LightParticleSystem2D,UnityEngine.Camera)
 extern void ParticleRenderer_Draw_m3A89DCBEC394CE0B3652CAFC6098BF6A8E673A5A (void);
-// 0x00000C5B System.Void FunkyCode.Rendering.Lightmap.ParticleRenderer::.ctor()
+// 0x00000C63 System.Void FunkyCode.Rendering.Lightmap.ParticleRenderer::.ctor()
 extern void ParticleRenderer__ctor_m315B6894DBC49BD42EA4550C1244EC697FCA47DA (void);
-// 0x00000C5C System.Void FunkyCode.Rendering.Lightmap.Room::Draw(FunkyCode.LightRoom2D,UnityEngine.Camera)
+// 0x00000C64 System.Void FunkyCode.Rendering.Lightmap.Room::Draw(FunkyCode.LightRoom2D,UnityEngine.Camera)
 extern void Room_Draw_m13A3095CA6B1EA1E58441138A28CE4D23CB7C794 (void);
-// 0x00000C5D System.Void FunkyCode.Rendering.Lightmap.Room::DrawColliderPass(FunkyCode.LightRoom2D,UnityEngine.Camera)
+// 0x00000C65 System.Void FunkyCode.Rendering.Lightmap.Room::DrawColliderPass(FunkyCode.LightRoom2D,UnityEngine.Camera)
 extern void Room_DrawColliderPass_mF488F7CDA4DD8D2D0841BE8E5AA77DFF44D27AD0 (void);
-// 0x00000C5E System.Void FunkyCode.Rendering.Lightmap.Room::DrawCollider(FunkyCode.LightRoom2D,UnityEngine.Camera)
+// 0x00000C66 System.Void FunkyCode.Rendering.Lightmap.Room::DrawCollider(FunkyCode.LightRoom2D,UnityEngine.Camera)
 extern void Room_DrawCollider_mB62F47F739FC46969656CF2FF84275E301323D40 (void);
-// 0x00000C5F System.Void FunkyCode.Rendering.Lightmap.Room::DrawSprite(FunkyCode.LightRoom2D,UnityEngine.Camera)
+// 0x00000C67 System.Void FunkyCode.Rendering.Lightmap.Room::DrawSprite(FunkyCode.LightRoom2D,UnityEngine.Camera)
 extern void Room_DrawSprite_m7464A12BCFC88BAC102F83760A2FB2E5703A736D (void);
-// 0x00000C60 System.Void FunkyCode.Rendering.Lightmap.TextureRenderer::Draw(FunkyCode.LightTexture2D,UnityEngine.Camera)
+// 0x00000C68 System.Void FunkyCode.Rendering.Lightmap.TextureRenderer::Draw(FunkyCode.LightTexture2D,UnityEngine.Camera)
 extern void TextureRenderer_Draw_m5131C12BC9DF81A537155AEA9C8E0DB88683FAFC (void);
-// 0x00000C61 System.Void FunkyCode.Rendering.Lightmap.TextureRenderer::.ctor()
+// 0x00000C69 System.Void FunkyCode.Rendering.Lightmap.TextureRenderer::.ctor()
 extern void TextureRenderer__ctor_m06E552788484F2420A85442469E15B9E1676B3D0 (void);
-// 0x00000C62 System.Void FunkyCode.Rendering.Lightmap.TilemapRoom::Draw(FunkyCode.LightTilemapRoom2D,UnityEngine.Camera)
+// 0x00000C6A System.Void FunkyCode.Rendering.Lightmap.TilemapRoom::Draw(FunkyCode.LightTilemapRoom2D,UnityEngine.Camera)
 extern void TilemapRoom_Draw_m2A8A32CB3A3AE2E0BEECD2A362471E306C90CD5F (void);
-// 0x00000C63 System.Void FunkyCode.Rendering.Lightmap.TilemapRoom::.ctor()
+// 0x00000C6B System.Void FunkyCode.Rendering.Lightmap.TilemapRoom::.ctor()
 extern void TilemapRoom__ctor_m2C3A2C1386371500EA2C90F6CEEF33D0EB925DB7 (void);
-// 0x00000C64 System.Void FunkyCode.Rendering.Lightmap.TilemapRoom/Sprite::Draw(UnityEngine.Camera,FunkyCode.LightTilemapRoom2D,UnityEngine.Material)
+// 0x00000C6C System.Void FunkyCode.Rendering.Lightmap.TilemapRoom/Sprite::Draw(UnityEngine.Camera,FunkyCode.LightTilemapRoom2D,UnityEngine.Material)
 extern void Sprite_Draw_m0E193ED2492EBEE5D4FCA1662BE8A68970CC5DF6 (void);
-// 0x00000C65 System.Void FunkyCode.Rendering.Lightmap.TilemapRoom/Sprite::.ctor()
+// 0x00000C6D System.Void FunkyCode.Rendering.Lightmap.TilemapRoom/Sprite::.ctor()
 extern void Sprite__ctor_m1A3FB0D9A36772A4820C1D96899B05DFACF24228 (void);
-// 0x00000C66 System.Void FunkyCode.Rendering.Lightmap.TilemapRoom/Sprite::.cctor()
+// 0x00000C6E System.Void FunkyCode.Rendering.Lightmap.TilemapRoom/Sprite::.cctor()
 extern void Sprite__cctor_mAAB15268C6F25763BE103AC091440749077FBF38 (void);
-// 0x00000C67 System.Void FunkyCode.Rendering.Lightmap.Pass::SortObjects()
+// 0x00000C6F System.Void FunkyCode.Rendering.Lightmap.Pass::SortObjects()
 extern void Pass_SortObjects_mF0B8B00F22C4BE7339000E7630002EE3973E06AF (void);
-// 0x00000C68 System.Boolean FunkyCode.Rendering.Lightmap.Pass::Setup(FunkyCode.LightingSettings.LightmapLayer,UnityEngine.Camera)
+// 0x00000C70 System.Boolean FunkyCode.Rendering.Lightmap.Pass::Setup(FunkyCode.LightingSettings.LightmapLayer,UnityEngine.Camera)
 extern void Pass_Setup_m6DB577A992BE15DC96FF751F84E52C767A553673 (void);
-// 0x00000C69 System.Void FunkyCode.Rendering.Lightmap.Pass::.ctor()
+// 0x00000C71 System.Void FunkyCode.Rendering.Lightmap.Pass::.ctor()
 extern void Pass__ctor_mB76C3E660E5A91A8D9FF11F76265862CB1C37761 (void);
-// 0x00000C6A System.Void FunkyCode.Rendering.Lightmap.Sorted::Draw(FunkyCode.Rendering.Lightmap.Pass)
+// 0x00000C72 System.Void FunkyCode.Rendering.Lightmap.Sorted::Draw(FunkyCode.Rendering.Lightmap.Pass)
 extern void Sorted_Draw_m68470DE68BA08775C72088115CB4C9066586C9DC (void);
-// 0x00000C6B System.Void FunkyCode.Rendering.Lightmap.Sorted::.ctor()
+// 0x00000C73 System.Void FunkyCode.Rendering.Lightmap.Sorted::.ctor()
 extern void Sorted__ctor_m7E6605C1AEE0CC27346CF7221EEF7600182D94AF (void);
-// 0x00000C6C System.Void FunkyCode.Rendering.Lightmap.Sorting.SortObject::.ctor(System.Single,System.Object)
+// 0x00000C74 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortObject::.ctor(System.Single,System.Object)
 extern void SortObject__ctor_mE06028C580E3CAA21813C2FBAD0EE22421608D27 (void);
-// 0x00000C6D System.Int32 FunkyCode.Rendering.Lightmap.Sorting.SortObject::Compare(FunkyCode.Rendering.Lightmap.Sorting.SortObject,FunkyCode.Rendering.Lightmap.Sorting.SortObject)
+// 0x00000C75 System.Int32 FunkyCode.Rendering.Lightmap.Sorting.SortObject::Compare(FunkyCode.Rendering.Lightmap.Sorting.SortObject,FunkyCode.Rendering.Lightmap.Sorting.SortObject)
 extern void SortObject_Compare_mFEB47543584219FC30C1132DE60745B80C441F9D (void);
-// 0x00000C6E System.Collections.Generic.IComparer`1<FunkyCode.Rendering.Lightmap.Sorting.SortObject> FunkyCode.Rendering.Lightmap.Sorting.SortObject::Sort()
+// 0x00000C76 System.Collections.Generic.IComparer`1<FunkyCode.Rendering.Lightmap.Sorting.SortObject> FunkyCode.Rendering.Lightmap.Sorting.SortObject::Sort()
 extern void SortObject_Sort_mC4F70C870A4EF798D8DDE25166B42B90A308B379 (void);
-// 0x00000C6F System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::set_Count(System.Int32)
+// 0x00000C77 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::set_Count(System.Int32)
 extern void SortList_set_Count_m24114045C71368A3B83E5AFC401C6918B8A678C1 (void);
-// 0x00000C70 System.Int32 FunkyCode.Rendering.Lightmap.Sorting.SortList::get_Count()
+// 0x00000C78 System.Int32 FunkyCode.Rendering.Lightmap.Sorting.SortList::get_Count()
 extern void SortList_get_Count_m81DA83BBD86E1B5536CC1810D608C791E6F36381 (void);
-// 0x00000C71 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::.ctor()
+// 0x00000C79 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::.ctor()
 extern void SortList__ctor_m810EBAF8604E8C0BB93CB58F297AE44663412267 (void);
-// 0x00000C72 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::Add(System.Object,System.Single)
+// 0x00000C7A System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::Add(System.Object,System.Single)
 extern void SortList_Add_mB7A4EEB74E300A86E0EC9536B9C30A716E9C699C (void);
-// 0x00000C73 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::Reset()
+// 0x00000C7B System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::Reset()
 extern void SortList_Reset_m835CE616F223215442246D38E683EBD6B232E5DF (void);
-// 0x00000C74 System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::Sort()
+// 0x00000C7C System.Void FunkyCode.Rendering.Lightmap.Sorting.SortList::Sort()
 extern void SortList_Sort_m02D8677169CBBC5B1E6B9962DE535388A8F2CAE7 (void);
-// 0x00000C75 System.Void FunkyCode.Rendering.Light.Main::Draw(FunkyCode.Light2D)
+// 0x00000C7D System.Void FunkyCode.Rendering.Light.Main::Draw(FunkyCode.Light2D)
 extern void Main_Draw_mE0B684934FDB855B5B3432A43360D01079A24570 (void);
-// 0x00000C76 System.Void FunkyCode.Rendering.Light.Main::DrawTranslucency(FunkyCode.Light2D)
+// 0x00000C7E System.Void FunkyCode.Rendering.Light.Main::DrawTranslucency(FunkyCode.Light2D)
 extern void Main_DrawTranslucency_m0E5EAD45478CE8A2561D4893B0AD754017B25947 (void);
-// 0x00000C77 System.Void FunkyCode.Rendering.Light.Main::.cctor()
+// 0x00000C7F System.Void FunkyCode.Rendering.Light.Main::.cctor()
 extern void Main__cctor_m6A133066F3039E8719E161DB9912237564DEC4B3 (void);
-// 0x00000C78 System.Void FunkyCode.Rendering.Light.Mesh::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C80 System.Void FunkyCode.Rendering.Light.Mesh::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void Mesh_Mask_mCCFC8387423200FBFE0D21AE06F4E32AA180A3F1 (void);
-// 0x00000C79 System.Void FunkyCode.Rendering.Light.Mesh::MaskNormalMap(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C81 System.Void FunkyCode.Rendering.Light.Mesh::MaskNormalMap(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void Mesh_MaskNormalMap_m28D15E7422A1A4673B574F5606273C1944FAAB42 (void);
-// 0x00000C7A System.Void FunkyCode.Rendering.Light.Mesh::.ctor()
+// 0x00000C82 System.Void FunkyCode.Rendering.Light.Mesh::.ctor()
 extern void Mesh__ctor_m14A9A5AE1C79F6A120C4E31EE831204ABCE73FB5 (void);
-// 0x00000C7B System.Void FunkyCode.Rendering.Light.Shape::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,FunkyCode.LayerSetting)
+// 0x00000C83 System.Void FunkyCode.Rendering.Light.Shape::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,FunkyCode.LayerSetting)
 extern void Shape_Mask_mA1E9AA2B7729C963BE5360903B4B09CEF2867C6C (void);
-// 0x00000C7C System.Void FunkyCode.Rendering.Light.Shape::.ctor()
+// 0x00000C84 System.Void FunkyCode.Rendering.Light.Shape::.ctor()
 extern void Shape__ctor_m392F80176295420A66EE41EB9C7173C0C149B3F7 (void);
-// 0x00000C7D System.Void FunkyCode.Rendering.Light.SkinnedMesh::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C85 System.Void FunkyCode.Rendering.Light.SkinnedMesh::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void SkinnedMesh_Mask_m6E4240FF27F7131D5622E80D70E4E4DD392A3CEA (void);
-// 0x00000C7E System.Void FunkyCode.Rendering.Light.SkinnedMesh::.ctor()
+// 0x00000C86 System.Void FunkyCode.Rendering.Light.SkinnedMesh::.ctor()
 extern void SkinnedMesh__ctor_mA10EB6B5DE101E3297BDE1BF9BAAF0422D020A84 (void);
-// 0x00000C7F System.Void FunkyCode.Rendering.Light.SpriteRenderer2D::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C87 System.Void FunkyCode.Rendering.Light.SpriteRenderer2D::Mask(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void SpriteRenderer2D_Mask_mDC85CFAE4189AC6AF0A6546654C9134E5318CF11 (void);
-// 0x00000C80 System.Void FunkyCode.Rendering.Light.SpriteRenderer2D::MaskBumped(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C88 System.Void FunkyCode.Rendering.Light.SpriteRenderer2D::MaskBumped(FunkyCode.Light2D,FunkyCode.LightCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void SpriteRenderer2D_MaskBumped_m6483B7579913FC239616647650C0C66F98C51FDB (void);
-// 0x00000C81 System.Void FunkyCode.Rendering.Light.Tile::MaskSprite(FunkyCode.LightTile,FunkyCode.LayerSetting,UnityEngine.Material,FunkyCode.LightTilemapCollider2D,System.Single)
+// 0x00000C89 System.Void FunkyCode.Rendering.Light.Tile::MaskSprite(FunkyCode.LightTile,FunkyCode.LayerSetting,UnityEngine.Material,FunkyCode.LightTilemapCollider2D,System.Single)
 extern void Tile_MaskSprite_m5BC2A00928D851E11B98FF9F0225EBC7381E16FE (void);
-// 0x00000C82 System.Void FunkyCode.Rendering.Light.Tile::.ctor()
+// 0x00000C8A System.Void FunkyCode.Rendering.Light.Tile::.ctor()
 extern void Tile__ctor_m875A789E7564CF2FBA93D1770D807CF6BDBB9907 (void);
-// 0x00000C83 System.Void FunkyCode.Rendering.Light.Tile::.cctor()
+// 0x00000C8B System.Void FunkyCode.Rendering.Light.Tile::.cctor()
 extern void Tile__cctor_mDF7AA18C97C72F92C821EB92A90358CE25B645E5 (void);
-// 0x00000C84 System.Void FunkyCode.Rendering.Light.UnityTilemap::Sprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C8C System.Void FunkyCode.Rendering.Light.UnityTilemap::Sprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void UnityTilemap_Sprite_mA79E62EAF0EB0F89576FB84010D7BA3F6750B1B0 (void);
-// 0x00000C85 System.Void FunkyCode.Rendering.Light.UnityTilemap::BumpedSprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
+// 0x00000C8D System.Void FunkyCode.Rendering.Light.UnityTilemap::BumpedSprite(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,UnityEngine.Material,FunkyCode.LayerSetting)
 extern void UnityTilemap_BumpedSprite_m22E43558364860274718E3CB2AC1A83D111DF58E (void);
-// 0x00000C86 System.Void FunkyCode.Rendering.Light.UnityTilemap::MaskShape(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,FunkyCode.LayerSetting)
+// 0x00000C8E System.Void FunkyCode.Rendering.Light.UnityTilemap::MaskShape(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D,FunkyCode.LayerSetting)
 extern void UnityTilemap_MaskShape_m80133D460CB03C5160CC2B8B0E8B49E70FF2B1E6 (void);
-// 0x00000C87 System.Void FunkyCode.Rendering.Light.UnityTilemap::.ctor()
+// 0x00000C8F System.Void FunkyCode.Rendering.Light.UnityTilemap::.ctor()
 extern void UnityTilemap__ctor_mB5EC254D9C5B836607A93F7156D9C4623BB4BCEB (void);
-// 0x00000C88 System.Void FunkyCode.Rendering.Light.UnityTilemap::.cctor()
+// 0x00000C90 System.Void FunkyCode.Rendering.Light.UnityTilemap::.cctor()
 extern void UnityTilemap__cctor_m1D46E0793FE3C8304F411ADE65DF3415125C1343 (void);
-// 0x00000C89 System.Void FunkyCode.Rendering.Light.NoSort::Draw(FunkyCode.Rendering.Light.Pass)
+// 0x00000C91 System.Void FunkyCode.Rendering.Light.NoSort::Draw(FunkyCode.Rendering.Light.Pass)
 extern void NoSort_Draw_mA9B2603879AF5F44B59F42F598B0838B83D1DB75 (void);
-// 0x00000C8A System.Void FunkyCode.Rendering.Light.NoSort/Shadows::Draw(FunkyCode.Rendering.Light.Pass)
+// 0x00000C92 System.Void FunkyCode.Rendering.Light.NoSort/Shadows::Draw(FunkyCode.Rendering.Light.Pass)
 extern void Shadows_Draw_m9CE593E952837A2E743B9C4C34F85B7B85829855 (void);
-// 0x00000C8B System.Void FunkyCode.Rendering.Light.NoSort/Shadows::DrawCollider(FunkyCode.Rendering.Light.Pass)
+// 0x00000C93 System.Void FunkyCode.Rendering.Light.NoSort/Shadows::DrawCollider(FunkyCode.Rendering.Light.Pass)
 extern void Shadows_DrawCollider_m9B85A032733414FD20D243D7D801CB1A15C4C10C (void);
-// 0x00000C8C System.Void FunkyCode.Rendering.Light.NoSort/Shadows::DrawTilemapCollider(FunkyCode.Rendering.Light.Pass)
+// 0x00000C94 System.Void FunkyCode.Rendering.Light.NoSort/Shadows::DrawTilemapCollider(FunkyCode.Rendering.Light.Pass)
 extern void Shadows_DrawTilemapCollider_m9DF118B9A1AC78D10F454229D455843D790FEF52 (void);
-// 0x00000C8D System.Void FunkyCode.Rendering.Light.NoSort/Masks::Draw(FunkyCode.Rendering.Light.Pass)
+// 0x00000C95 System.Void FunkyCode.Rendering.Light.NoSort/Masks::Draw(FunkyCode.Rendering.Light.Pass)
 extern void Masks_Draw_mBA6A87B6D4954EDD7011072B1EEBECA6A7C5F9E7 (void);
-// 0x00000C8E System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawCollider(FunkyCode.Rendering.Light.Pass)
+// 0x00000C96 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawCollider(FunkyCode.Rendering.Light.Pass)
 extern void Masks_DrawCollider_mA7BF739E8E0F57410FC7575164164261EAE8D25F (void);
-// 0x00000C8F System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawMesh(FunkyCode.Rendering.Light.Pass)
+// 0x00000C97 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawMesh(FunkyCode.Rendering.Light.Pass)
 extern void Masks_DrawMesh_m18A9DC70BFDA5923151063202B5BBE0429385723 (void);
-// 0x00000C90 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawSprite(FunkyCode.Rendering.Light.Pass)
+// 0x00000C98 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawSprite(FunkyCode.Rendering.Light.Pass)
 extern void Masks_DrawSprite_m63F211C5DBA0C8BC5DD7890E25536ECDFD4A52E2 (void);
-// 0x00000C91 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawTilemapCollider(FunkyCode.Rendering.Light.Pass)
+// 0x00000C99 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawTilemapCollider(FunkyCode.Rendering.Light.Pass)
 extern void Masks_DrawTilemapCollider_mEA8E1AFA9FDDF7C2B87103A61FB9E5D4589F0D1E (void);
-// 0x00000C92 System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawTilemapSprite(FunkyCode.Rendering.Light.Pass)
+// 0x00000C9A System.Void FunkyCode.Rendering.Light.NoSort/Masks::DrawTilemapSprite(FunkyCode.Rendering.Light.Pass)
 extern void Masks_DrawTilemapSprite_mFC5BA9DB0C69F360B07D88445C8DC7F0FF436664 (void);
-// 0x00000C93 System.Boolean FunkyCode.Rendering.Light.Pass::Setup(FunkyCode.Light2D,FunkyCode.LayerSetting)
+// 0x00000C9B System.Boolean FunkyCode.Rendering.Light.Pass::Setup(FunkyCode.Light2D,FunkyCode.LayerSetting)
 extern void Pass_Setup_m2134FD4E348442F964941EB1E1AE6EE8D98311F8 (void);
-// 0x00000C94 System.Void FunkyCode.Rendering.Light.Pass::.ctor()
+// 0x00000C9C System.Void FunkyCode.Rendering.Light.Pass::.ctor()
 extern void Pass__ctor_mEA8C6047E221C47284DE04F5B1F95A7EAD6E3543 (void);
-// 0x00000C95 System.Void FunkyCode.Rendering.Light.UVRect::.ctor(System.Single,System.Single,System.Single,System.Single)
+// 0x00000C9D System.Void FunkyCode.Rendering.Light.UVRect::.ctor(System.Single,System.Single,System.Single,System.Single)
 extern void UVRect__ctor_mECEF9BB957400F6C340F15A98032FFD11541F834 (void);
-// 0x00000C96 UnityEngine.Material FunkyCode.Rendering.Light.ShadowEngine::GetMaterial()
+// 0x00000C9E UnityEngine.Material FunkyCode.Rendering.Light.ShadowEngine::GetMaterial()
 extern void ShadowEngine_GetMaterial_m982D75A323C931784B6C3C131F51A7B3B7487B3B (void);
-// 0x00000C97 System.Void FunkyCode.Rendering.Light.ShadowEngine::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
+// 0x00000C9F System.Void FunkyCode.Rendering.Light.ShadowEngine::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
 extern void ShadowEngine_Draw_mC156D0255E607A4F341EFA26B8D2CD6F0744A206 (void);
-// 0x00000C98 System.Void FunkyCode.Rendering.Light.ShadowEngine::SetPass(FunkyCode.Light2D,FunkyCode.LayerSetting)
+// 0x00000CA0 System.Void FunkyCode.Rendering.Light.ShadowEngine::SetPass(FunkyCode.Light2D,FunkyCode.LayerSetting)
 extern void ShadowEngine_SetPass_m3D9EA351215BC4C4109F6512B2DD70275B0F8E24 (void);
-// 0x00000C99 System.Void FunkyCode.Rendering.Light.ShadowEngine::GenerateEffectLayers()
+// 0x00000CA1 System.Void FunkyCode.Rendering.Light.ShadowEngine::GenerateEffectLayers()
 extern void ShadowEngine_GenerateEffectLayers_mCD9D30DC46AC9E178951512A4B8B0A8A0CE5007E (void);
-// 0x00000C9A System.Void FunkyCode.Rendering.Light.ShadowEngine::Prepare(FunkyCode.Light2D)
+// 0x00000CA2 System.Void FunkyCode.Rendering.Light.ShadowEngine::Prepare(FunkyCode.Light2D)
 extern void ShadowEngine_Prepare_m4F505FE3F23352E2F3B9C3407CE12DDB9CFDA492 (void);
-// 0x00000C9B System.Void FunkyCode.Rendering.Light.ShadowEngine::.cctor()
+// 0x00000CA3 System.Void FunkyCode.Rendering.Light.ShadowEngine::.cctor()
 extern void ShadowEngine__cctor_mA6EAA463FBFA0786D297D80CEBA1E20658469447 (void);
-// 0x00000C9C System.Void FunkyCode.Rendering.Light.Sorted::Draw(FunkyCode.Rendering.Light.Pass)
+// 0x00000CA4 System.Void FunkyCode.Rendering.Light.Sorted::Draw(FunkyCode.Rendering.Light.Pass)
 extern void Sorted_Draw_mF5DF9FB3AEB6DEE7488700E082E117A402F634EA (void);
-// 0x00000C9D System.Void FunkyCode.Rendering.Light.Sorted::DrawCollider(FunkyCode.LightCollider2D,FunkyCode.Rendering.Light.Pass)
+// 0x00000CA5 System.Void FunkyCode.Rendering.Light.Sorted::DrawCollider(FunkyCode.LightCollider2D,FunkyCode.Rendering.Light.Pass)
 extern void Sorted_DrawCollider_m46A42BE7DA1490EC21E38D18BE1EF14FC70DE365 (void);
-// 0x00000C9E System.Void FunkyCode.Rendering.Light.Sorted::DrawTile(FunkyCode.LightTile,FunkyCode.LightTilemapCollider2D,FunkyCode.Rendering.Light.Pass)
+// 0x00000CA6 System.Void FunkyCode.Rendering.Light.Sorted::DrawTile(FunkyCode.LightTile,FunkyCode.LightTilemapCollider2D,FunkyCode.Rendering.Light.Pass)
 extern void Sorted_DrawTile_m2F2E24A4568FE524EEE1FB7FAE9CCCF55A7DEE36 (void);
-// 0x00000C9F System.Void FunkyCode.Rendering.Light.Sorted::DrawTileMap(FunkyCode.LightTilemapCollider2D,FunkyCode.Rendering.Light.Pass)
+// 0x00000CA7 System.Void FunkyCode.Rendering.Light.Sorted::DrawTileMap(FunkyCode.LightTilemapCollider2D,FunkyCode.Rendering.Light.Pass)
 extern void Sorted_DrawTileMap_m0D7D989B964D014B94E3D0B19BCCB3258AE460DD (void);
-// 0x00000CA0 System.Void FunkyCode.Rendering.Light.Sorting.SortList::set_Count(System.Int32)
+// 0x00000CA8 System.Void FunkyCode.Rendering.Light.Sorting.SortList::set_Count(System.Int32)
 extern void SortList_set_Count_m61C89C55F95BDC7E510FB2CEFB882FAF9C8607CA (void);
-// 0x00000CA1 System.Int32 FunkyCode.Rendering.Light.Sorting.SortList::get_Count()
+// 0x00000CA9 System.Int32 FunkyCode.Rendering.Light.Sorting.SortList::get_Count()
 extern void SortList_get_Count_m1B34F7DD58640E426DDBB34EA47159B2176B0078 (void);
-// 0x00000CA2 System.Void FunkyCode.Rendering.Light.Sorting.SortList::.ctor()
+// 0x00000CAA System.Void FunkyCode.Rendering.Light.Sorting.SortList::.ctor()
 extern void SortList__ctor_m12BEF598326D647BB2906E47FF85DF3BB6741BA4 (void);
-// 0x00000CA3 System.Void FunkyCode.Rendering.Light.Sorting.SortList::Add(System.Object,System.Single)
+// 0x00000CAB System.Void FunkyCode.Rendering.Light.Sorting.SortList::Add(System.Object,System.Single)
 extern void SortList_Add_m1D4F13976EA36C4E8D8A1239CD2977D8F5458986 (void);
-// 0x00000CA4 System.Void FunkyCode.Rendering.Light.Sorting.SortList::Add(FunkyCode.LightTilemapCollider2D,FunkyCode.LightTile,System.Single)
+// 0x00000CAC System.Void FunkyCode.Rendering.Light.Sorting.SortList::Add(FunkyCode.LightTilemapCollider2D,FunkyCode.LightTile,System.Single)
 extern void SortList_Add_m3020E75B2991E0885AB015E081E1E300EB543ABD (void);
-// 0x00000CA5 System.Void FunkyCode.Rendering.Light.Sorting.SortList::Reset()
+// 0x00000CAD System.Void FunkyCode.Rendering.Light.Sorting.SortList::Reset()
 extern void SortList_Reset_mD5627504F7217B6A49D686E8528FB5CC0A3FCAE4 (void);
-// 0x00000CA6 System.Void FunkyCode.Rendering.Light.Sorting.SortList::Sort()
+// 0x00000CAE System.Void FunkyCode.Rendering.Light.Sorting.SortList::Sort()
 extern void SortList_Sort_mA7EC90606799287A3E1C151FDF27FB02589D2299 (void);
-// 0x00000CA7 System.Void FunkyCode.Rendering.Light.Sorting.SortObject::.ctor(System.Single,System.Object,FunkyCode.LightTilemapCollider2D)
+// 0x00000CAF System.Void FunkyCode.Rendering.Light.Sorting.SortObject::.ctor(System.Single,System.Object,FunkyCode.LightTilemapCollider2D)
 extern void SortObject__ctor_mCC08AAA75B4F2661B3DE08C56E7F9D27454ED7C6 (void);
-// 0x00000CA8 System.Int32 FunkyCode.Rendering.Light.Sorting.SortObject::Compare(FunkyCode.Rendering.Light.Sorting.SortObject,FunkyCode.Rendering.Light.Sorting.SortObject)
+// 0x00000CB0 System.Int32 FunkyCode.Rendering.Light.Sorting.SortObject::Compare(FunkyCode.Rendering.Light.Sorting.SortObject,FunkyCode.Rendering.Light.Sorting.SortObject)
 extern void SortObject_Compare_mA0A616525DCC43FA090443DD01BD6C617B9246A6 (void);
-// 0x00000CA9 System.Collections.Generic.IComparer`1<FunkyCode.Rendering.Light.Sorting.SortObject> FunkyCode.Rendering.Light.Sorting.SortObject::Sort()
+// 0x00000CB1 System.Collections.Generic.IComparer`1<FunkyCode.Rendering.Light.Sorting.SortObject> FunkyCode.Rendering.Light.Sorting.SortObject::Sort()
 extern void SortObject_Sort_m341D8A5491D39BAB6FC57FFCF6908E0CF9E05533 (void);
-// 0x00000CAA System.Void FunkyCode.Rendering.Light.Sorting.SortObject::.cctor()
+// 0x00000CB2 System.Void FunkyCode.Rendering.Light.Sorting.SortObject::.cctor()
 extern void SortObject__cctor_mB05A59AD06C22E52E0F2871D40ABB400C3F234B5 (void);
-// 0x00000CAB System.Void FunkyCode.Rendering.Light.Sorting.SortPass::Clear()
+// 0x00000CB3 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::Clear()
 extern void SortPass_Clear_m092FDE102133BDB5685ACFB5F487974B63FBC793 (void);
-// 0x00000CAC System.Void FunkyCode.Rendering.Light.Sorting.SortPass::SortObjects()
+// 0x00000CB4 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::SortObjects()
 extern void SortPass_SortObjects_m6E8F8BB1E7F491BCF7F78191909B628BC6AD31E7 (void);
-// 0x00000CAD System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddColliders()
+// 0x00000CB5 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddColliders()
 extern void SortPass_AddColliders_m4523EE78C5F93928D1CD680F73AA891BA4B88835 (void);
-// 0x00000CAE System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddTilemaps()
+// 0x00000CB6 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddTilemaps()
 extern void SortPass_AddTilemaps_m6821F26F6A6BDCEE8FB03F0074635887553A87A8 (void);
-// 0x00000CAF System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddTileMap(FunkyCode.LightTilemapCollider2D)
+// 0x00000CB7 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddTileMap(FunkyCode.LightTilemapCollider2D)
 extern void SortPass_AddTileMap_mA0C31CB41B702ADA61EE9C3FFFB5E19BFF6DC498 (void);
-// 0x00000CB0 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddTiles(FunkyCode.LightTilemapCollider2D)
+// 0x00000CB8 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::AddTiles(FunkyCode.LightTilemapCollider2D)
 extern void SortPass_AddTiles_mF930DA1912116493AD5FC51B52C122A44D32144D (void);
-// 0x00000CB1 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::.ctor()
+// 0x00000CB9 System.Void FunkyCode.Rendering.Light.Sorting.SortPass::.ctor()
 extern void SortPass__ctor_m3D30DD815950636C186035D44E7E9E58D036ABEA (void);
-// 0x00000CB2 System.Void FunkyCode.Rendering.Light.Shadow.Fast::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
+// 0x00000CBA System.Void FunkyCode.Rendering.Light.Shadow.Fast::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
 extern void Fast_Draw_mD37DAAED04BDACC7419A25ADDAC9C36D7C5D746D (void);
-// 0x00000CB3 System.Void FunkyCode.Rendering.Light.Shadow.Fast::.cctor()
+// 0x00000CBB System.Void FunkyCode.Rendering.Light.Shadow.Fast::.cctor()
 extern void Fast__cctor_m1271D78BA379C69510175DB0874F39131DE1E1F3 (void);
-// 0x00000CB4 System.Void FunkyCode.Rendering.Light.Shadow.LegacyCPU::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
+// 0x00000CBC System.Void FunkyCode.Rendering.Light.Shadow.LegacyCPU::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
 extern void LegacyCPU_Draw_mE68EF0373C15350A3933E712EDFE51DD8F796403 (void);
-// 0x00000CB5 System.Void FunkyCode.Rendering.Light.Shadow.LegacyCPU::.cctor()
+// 0x00000CBD System.Void FunkyCode.Rendering.Light.Shadow.LegacyCPU::.cctor()
 extern void LegacyCPU__cctor_mA394B8A6B2E7648D9C7C43FDAA822400EE236749 (void);
-// 0x00000CB6 System.Void FunkyCode.Rendering.Light.Shadow.LegacyGPU::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single)
+// 0x00000CBE System.Void FunkyCode.Rendering.Light.Shadow.LegacyGPU::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single)
 extern void LegacyGPU_Draw_m241FD5221B27E0C1C8AB0D9DFC3F274C59489B87 (void);
-// 0x00000CB7 System.Void FunkyCode.Rendering.Light.Shadow.LegacyGPU::.cctor()
+// 0x00000CBF System.Void FunkyCode.Rendering.Light.Shadow.LegacyGPU::.cctor()
 extern void LegacyGPU__cctor_mDB6E5F8A8D1C82B348EAF79F3A7130D2358AB320 (void);
-// 0x00000CB8 System.Void FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
+// 0x00000CC0 System.Void FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
 extern void PerpendicularIntersection_Draw_mACF90BC5B40272DE76DBEFE3B6455042D4659A10 (void);
-// 0x00000CB9 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::PolygonClosestIntersection(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000CC1 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::PolygonClosestIntersection(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void PerpendicularIntersection_PolygonClosestIntersection_mFDE5898EEFCC31BC50B8E900902625962E4D705C (void);
-// 0x00000CBA System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::LineIntersectPolygons(UnityEngine.Vector2,UnityEngine.Vector2,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
+// 0x00000CC2 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::LineIntersectPolygons(UnityEngine.Vector2,UnityEngine.Vector2,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
 extern void PerpendicularIntersection_LineIntersectPolygons_m70F71BD4F0AC37A90C7B5FFBDE3406CD623CCF65 (void);
-// 0x00000CBB System.Void FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::.cctor()
+// 0x00000CC3 System.Void FunkyCode.Rendering.Light.Shadow.PerpendicularIntersection::.cctor()
 extern void PerpendicularIntersection__cctor_m20046448F0E36C907D1F8103AFB83ECC2EDF1320 (void);
-// 0x00000CBC System.Void FunkyCode.Rendering.Light.Shadow.Soft::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
+// 0x00000CC4 System.Void FunkyCode.Rendering.Light.Shadow.Soft::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
 extern void Soft_Draw_mE5F803BE9312D8A0858CAC0CF8B574E43A9D5B86 (void);
-// 0x00000CBD System.Void FunkyCode.Rendering.Light.Shadow.Soft::ShadowForVertex(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2)
+// 0x00000CC5 System.Void FunkyCode.Rendering.Light.Shadow.Soft::ShadowForVertex(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2)
 extern void Soft_ShadowForVertex_mBCABC5F46DFEEE58EF9A9F536635112E68DD6A3E (void);
-// 0x00000CBE System.Void FunkyCode.Rendering.Light.Shadow.Soft::ShadowForObject(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,System.Single)
+// 0x00000CC6 System.Void FunkyCode.Rendering.Light.Shadow.Soft::ShadowForObject(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,System.Single)
 extern void Soft_ShadowForObject_m01C6BB69233F4F6707BE9B252D2A78904903DA85 (void);
-// 0x00000CBF System.Void FunkyCode.Rendering.Light.Shadow.Soft::.cctor()
+// 0x00000CC7 System.Void FunkyCode.Rendering.Light.Shadow.Soft::.cctor()
 extern void Soft__cctor_m45ACC4535AC7E2B561132594802F4C25AF23B1B4 (void);
-// 0x00000CC0 System.Void FunkyCode.Rendering.Light.Shadow.SoftDefault::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
+// 0x00000CC8 System.Void FunkyCode.Rendering.Light.Shadow.SoftDefault::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single)
 extern void SoftDefault_Draw_mE6F4937CC361AE5AA494637E2D29EE6B209EFCC4 (void);
-// 0x00000CC1 System.Void FunkyCode.Rendering.Light.Shadow.SoftDefault::.cctor()
+// 0x00000CC9 System.Void FunkyCode.Rendering.Light.Shadow.SoftDefault::.cctor()
 extern void SoftDefault__cctor_m0C3D87A6B7E03A22A23B4761254721E1B2B16328 (void);
-// 0x00000CC2 System.Void FunkyCode.Rendering.Light.Shadow.SoftDistance::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
+// 0x00000CCA System.Void FunkyCode.Rendering.Light.Shadow.SoftDistance::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
 extern void SoftDistance_Draw_m3593920EA7079A8B8C43225A30473436A6820576 (void);
-// 0x00000CC3 System.Void FunkyCode.Rendering.Light.Shadow.SoftDistance::DrawLine(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,System.Single)
+// 0x00000CCB System.Void FunkyCode.Rendering.Light.Shadow.SoftDistance::DrawLine(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,System.Single)
 extern void SoftDistance_DrawLine_mC6B4721408134CF648B997A2F842CA5E76B71F3B (void);
-// 0x00000CC4 System.Void FunkyCode.Rendering.Light.Shadow.SoftDistance::.cctor()
+// 0x00000CCC System.Void FunkyCode.Rendering.Light.Shadow.SoftDistance::.cctor()
 extern void SoftDistance__cctor_m9904733093E3A2864E79E19780BBC8CEF797C08B (void);
-// 0x00000CC5 System.Void FunkyCode.Rendering.Light.Shadow.SpriteProjection::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
+// 0x00000CCD System.Void FunkyCode.Rendering.Light.Shadow.SpriteProjection::Draw(System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>,System.Single,System.Single,System.Single)
 extern void SpriteProjection_Draw_m6459D9E7B4266136ED9BF52E436849A238FD3221 (void);
-// 0x00000CC6 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.SpriteProjection::PolygonClosestIntersection(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
+// 0x00000CCE System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.SpriteProjection::PolygonClosestIntersection(FunkyCode.Utilities.Polygon2,UnityEngine.Vector2,UnityEngine.Vector2)
 extern void SpriteProjection_PolygonClosestIntersection_m324267431D4D6229CCCEC6824B2A50B2CAE4FBB3 (void);
-// 0x00000CC7 System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.SpriteProjection::LineIntersectPolygons(UnityEngine.Vector2,UnityEngine.Vector2,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
+// 0x00000CCF System.Nullable`1<UnityEngine.Vector2> FunkyCode.Rendering.Light.Shadow.SpriteProjection::LineIntersectPolygons(UnityEngine.Vector2,UnityEngine.Vector2,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>)
 extern void SpriteProjection_LineIntersectPolygons_m9016D487B3460C8B4F81638543A48A4490F7F9A4 (void);
-// 0x00000CC8 System.Void FunkyCode.Rendering.Light.Shadow.SpriteProjection::.cctor()
+// 0x00000CD0 System.Void FunkyCode.Rendering.Light.Shadow.SpriteProjection::.cctor()
 extern void SpriteProjection__cctor_m7DD739A0D2E4A6EF34C7A4A1261B2AC6F5F39005 (void);
-// 0x00000CC9 System.Void FunkyCode.Rendering.Light.Shadow.Shape::Draw(FunkyCode.Light2D,FunkyCode.LightCollider2D)
+// 0x00000CD1 System.Void FunkyCode.Rendering.Light.Shadow.Shape::Draw(FunkyCode.Light2D,FunkyCode.LightCollider2D)
 extern void Shape_Draw_m92ED4EDDB5A2EE389F39A06406868663071E2DE4 (void);
-// 0x00000CCA System.Void FunkyCode.Rendering.Light.Shadow.Shape::.ctor()
+// 0x00000CD2 System.Void FunkyCode.Rendering.Light.Shadow.Shape::.ctor()
 extern void Shape__ctor_mE26748DED216D173A2AFEF3A4CB127925F1EBD8A (void);
-// 0x00000CCB System.Void FunkyCode.Rendering.Light.Shadow.Tile::Draw(FunkyCode.Light2D,FunkyCode.LightTile,FunkyCode.LightTilemapCollider2D)
+// 0x00000CD3 System.Void FunkyCode.Rendering.Light.Shadow.Tile::Draw(FunkyCode.Light2D,FunkyCode.LightTile,FunkyCode.LightTilemapCollider2D)
 extern void Tile_Draw_mE2F59E18BD367E128EA5F24B85A9AA844C271F69 (void);
-// 0x00000CCC System.Void FunkyCode.Rendering.Light.Shadow.Tile::.ctor()
+// 0x00000CD4 System.Void FunkyCode.Rendering.Light.Shadow.Tile::.ctor()
 extern void Tile__ctor_m0C1D761B59B29207E500BE4DAEF69D22A07AAF09 (void);
-// 0x00000CCD System.Void FunkyCode.Rendering.Light.Shadow.TilemapCollider::.ctor()
+// 0x00000CD5 System.Void FunkyCode.Rendering.Light.Shadow.TilemapCollider::.ctor()
 extern void TilemapCollider__ctor_mA39A544850CF2636D98C94023CE4694F0F91EB25 (void);
-// 0x00000CCE System.Void FunkyCode.Rendering.Light.Shadow.TilemapCollider/Rectangle::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
+// 0x00000CD6 System.Void FunkyCode.Rendering.Light.Shadow.TilemapCollider/Rectangle::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
 extern void Rectangle_Draw_mAFFA7A175C618A1D94891BD35CCB11B478C83C65 (void);
-// 0x00000CCF System.Void FunkyCode.Rendering.Light.Shadow.TilemapCollider/Rectangle::.ctor()
+// 0x00000CD7 System.Void FunkyCode.Rendering.Light.Shadow.TilemapCollider/Rectangle::.ctor()
 extern void Rectangle__ctor_m3CEFD708513C3EEDCACE68CEA327FB43A5B3BCE8 (void);
-// 0x00000CD0 System.Void FunkyCode.Rendering.Light.Shadow.UnityTilemap::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
+// 0x00000CD8 System.Void FunkyCode.Rendering.Light.Shadow.UnityTilemap::Draw(FunkyCode.Light2D,FunkyCode.LightTilemapCollider2D)
 extern void UnityTilemap_Draw_m71DBFE45CBD1961315C8C2A359F7699E4F7BAC93 (void);
-// 0x00000CD1 System.Void FunkyCode.Rendering.Light.Shadow.UnityTilemap::.ctor()
+// 0x00000CD9 System.Void FunkyCode.Rendering.Light.Shadow.UnityTilemap::.ctor()
 extern void UnityTilemap__ctor_mB21662A1E7B1BDFC36D51CFA4624506FC3838115 (void);
-// 0x00000CD2 System.Void FunkyCode.Rendering.Depth.Main::Draw(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000CDA System.Void FunkyCode.Rendering.Depth.Main::Draw(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_Draw_mAFBC0FD719A0B30A8FB65A1D19BEF7F01CF7C74C (void);
-// 0x00000CD3 UnityEngine.Color FunkyCode.Rendering.Depth.Main::ClearColor(FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000CDB UnityEngine.Color FunkyCode.Rendering.Depth.Main::ClearColor(FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_ClearColor_m085F80AB98E1E488088B632D550E3D0298B81D85 (void);
-// 0x00000CD4 System.Void FunkyCode.Rendering.Depth.Main::.cctor()
+// 0x00000CDC System.Void FunkyCode.Rendering.Depth.Main::.cctor()
 extern void Main__cctor_mA29A81DD8D9735AAD8A865F3C0A81AA3BFFAE2A5 (void);
-// 0x00000CD5 System.Boolean FunkyCode.Rendering.Depth.Pass::Setup(FunkyCode.LightingSettings.LightmapLayer,UnityEngine.Camera)
+// 0x00000CDD System.Boolean FunkyCode.Rendering.Depth.Pass::Setup(FunkyCode.LightingSettings.LightmapLayer,UnityEngine.Camera)
 extern void Pass_Setup_mDAD6E3A2818319E6F7444B47254F4AF62555B44B (void);
-// 0x00000CD6 System.Void FunkyCode.Rendering.Depth.Pass::.ctor()
+// 0x00000CDE System.Void FunkyCode.Rendering.Depth.Pass::.ctor()
 extern void Pass__ctor_m96B49EBE40C961CE9B4BF10C2845A9BF6E92D8ED (void);
-// 0x00000CD7 System.Void FunkyCode.Rendering.Depth.Rendering::Draw(FunkyCode.Rendering.Depth.Pass)
+// 0x00000CDF System.Void FunkyCode.Rendering.Depth.Rendering::Draw(FunkyCode.Rendering.Depth.Pass)
 extern void Rendering_Draw_m7B168E35A1A9BFFEBCAABBD33EE4B15D6E42E0E3 (void);
-// 0x00000CD8 System.Void FunkyCode.Rendering.Depth.Rendering::DrawSprite(FunkyCode.Rendering.Depth.Pass)
+// 0x00000CE0 System.Void FunkyCode.Rendering.Depth.Rendering::DrawSprite(FunkyCode.Rendering.Depth.Pass)
 extern void Rendering_DrawSprite_mDABB9A7B3272E2C2CD8A18F1B649C6450E5C89DB (void);
-// 0x00000CD9 System.Void FunkyCode.Rendering.Depth.Rendering::DrawCollider(FunkyCode.Rendering.Depth.Pass)
+// 0x00000CE1 System.Void FunkyCode.Rendering.Depth.Rendering::DrawCollider(FunkyCode.Rendering.Depth.Pass)
 extern void Rendering_DrawCollider_m962643B35BC72D3C3CF4808B26C85F8B2D092F11 (void);
-// 0x00000CDA System.Void FunkyCode.Rendering.Depth.Rendering::DrawColliderFill(FunkyCode.Rendering.Depth.Pass)
+// 0x00000CE2 System.Void FunkyCode.Rendering.Depth.Rendering::DrawColliderFill(FunkyCode.Rendering.Depth.Pass)
 extern void Rendering_DrawColliderFill_mE84078ECBA5967250900DC526D2BB13FA8A920A8 (void);
-// 0x00000CDB System.Void FunkyCode.Rendering.Depth.Shadow::Begin()
+// 0x00000CE3 System.Void FunkyCode.Rendering.Depth.Shadow::Begin()
 extern void Shadow_Begin_mBDDC1B84250FFFF9A49839BD9D2E091A0B91609F (void);
-// 0x00000CDC System.Void FunkyCode.Rendering.Depth.Shadow::End()
+// 0x00000CE4 System.Void FunkyCode.Rendering.Depth.Shadow::End()
 extern void Shadow_End_m93316FA2838427BABFEF1766207AB639172C6A0A (void);
-// 0x00000CDD System.Void FunkyCode.Rendering.Depth.Shadow::Draw(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
+// 0x00000CE5 System.Void FunkyCode.Rendering.Depth.Shadow::Draw(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
 extern void Shadow_Draw_mB6A23D9289884E3629B286CFAF3B455683DB5DFE (void);
-// 0x00000CDE System.Void FunkyCode.Rendering.Depth.Shadow::DrawFill(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
+// 0x00000CE6 System.Void FunkyCode.Rendering.Depth.Shadow::DrawFill(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
 extern void Shadow_DrawFill_m26BD94815F951810F09CCAC16FC1B7D24C026D46 (void);
-// 0x00000CDF System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::Begin(UnityEngine.Vector2)
+// 0x00000CE7 System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::Begin(UnityEngine.Vector2)
 extern void SpriteRendererShadow_Begin_mA531B549473496608C216F00127620BFF8976764 (void);
-// 0x00000CE0 System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::End()
+// 0x00000CE8 System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::End()
 extern void SpriteRendererShadow_End_m46A765C3BB35D02C6A67F8521B0DF99E1CF64685 (void);
-// 0x00000CE1 System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::DrawOffset(FunkyCode.DayLightCollider2D)
+// 0x00000CE9 System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::DrawOffset(FunkyCode.DayLightCollider2D)
 extern void SpriteRendererShadow_DrawOffset_mF4B685F85DE99285AA30FE92E6233B1AE801008B (void);
-// 0x00000CE2 System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::.cctor()
+// 0x00000CEA System.Void FunkyCode.Rendering.Depth.SpriteRendererShadow::.cctor()
 extern void SpriteRendererShadow__cctor_m297C57957EBEAFA35AB23C8E115327101023D3C6 (void);
-// 0x00000CE3 System.Void FunkyCode.Rendering.Day.Main::Draw(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000CEB System.Void FunkyCode.Rendering.Day.Main::Draw(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_Draw_m483B786F7FEF649A06F40BD1080126A189B04A76 (void);
-// 0x00000CE4 System.Boolean FunkyCode.Rendering.Day.Main::IsDrawing(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
+// 0x00000CEC System.Boolean FunkyCode.Rendering.Day.Main::IsDrawing(UnityEngine.Camera,FunkyCode.LightingSettings.LightmapPreset)
 extern void Main_IsDrawing_mB5EBF6E8445863336D5A9F909B09E6EF7F8F8870 (void);
-// 0x00000CE5 System.Void FunkyCode.Rendering.Day.Main::.cctor()
+// 0x00000CED System.Void FunkyCode.Rendering.Day.Main::.cctor()
 extern void Main__cctor_m5202208FD722FC769ECF5FC632747FFE76A0D7BF (void);
-// 0x00000CE6 System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::Draw(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
+// 0x00000CEE System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::Draw(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
 extern void SpriteRenderer2D_Draw_mA4A117767951BCC43760DCB2CA23BDC3F57F230B (void);
-// 0x00000CE7 System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::DrawTilemap(FunkyCode.DayLightTilemapCollider2D,UnityEngine.Vector2)
+// 0x00000CEF System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::DrawTilemap(FunkyCode.DayLightTilemapCollider2D,UnityEngine.Vector2)
 extern void SpriteRenderer2D_DrawTilemap_m50B6E713047C529ADD89F4C8D7798AC3A8903A35 (void);
-// 0x00000CE8 System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::DrawBumped(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
+// 0x00000CF0 System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::DrawBumped(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
 extern void SpriteRenderer2D_DrawBumped_mBE06027D0B0F47FB446FFD90CF2D4E4580D989D5 (void);
-// 0x00000CE9 System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::.cctor()
+// 0x00000CF1 System.Void FunkyCode.Rendering.Day.SpriteRenderer2D::.cctor()
 extern void SpriteRenderer2D__cctor_mBFF2C7408CC529B8358667A59819178C6B629E26 (void);
-// 0x00000CEA System.Void FunkyCode.Rendering.Day.NoSort::Draw(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF2 System.Void FunkyCode.Rendering.Day.NoSort::Draw(FunkyCode.Rendering.Day.Pass)
 extern void NoSort_Draw_mDB05A2003D7BE663793A69AC10C60B4FD905E9A1 (void);
-// 0x00000CEB System.Void FunkyCode.Rendering.Day.NoSort/Mask::DrawCollider(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF3 System.Void FunkyCode.Rendering.Day.NoSort/Mask::DrawCollider(FunkyCode.Rendering.Day.Pass)
 extern void Mask_DrawCollider_mD09F258D9D9BBA8A3F537A405C08B866E2EE1376 (void);
-// 0x00000CEC System.Void FunkyCode.Rendering.Day.NoSort/Mask::DrawTilemap(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF4 System.Void FunkyCode.Rendering.Day.NoSort/Mask::DrawTilemap(FunkyCode.Rendering.Day.Pass)
 extern void Mask_DrawTilemap_m7D329F7FBFC34DAF8C5D3A6CA0A6ACDEB577A952 (void);
-// 0x00000CED System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawColliderFill(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF5 System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawColliderFill(FunkyCode.Rendering.Day.Pass)
 extern void Shadow_DrawColliderFill_m6354BF4A71267A06141AAE8A123AAD1D5E121FEA (void);
-// 0x00000CEE System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawCollider(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF6 System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawCollider(FunkyCode.Rendering.Day.Pass)
 extern void Shadow_DrawCollider_mDE49E1A82EF5A5555C8CDAD40AE358A116136218 (void);
-// 0x00000CEF System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawTilemapCollider(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF7 System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawTilemapCollider(FunkyCode.Rendering.Day.Pass)
 extern void Shadow_DrawTilemapCollider_mCC4133A412935D3164206EC63EFD5E15E9FDF5CD (void);
-// 0x00000CF0 System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawSprite(FunkyCode.Rendering.Day.Pass)
+// 0x00000CF8 System.Void FunkyCode.Rendering.Day.NoSort/Shadow::DrawSprite(FunkyCode.Rendering.Day.Pass)
 extern void Shadow_DrawSprite_mB766047BECB1234FF7062675398225C076D6B2A4 (void);
-// 0x00000CF1 System.Void FunkyCode.Rendering.Day.Pass::SortObjects()
+// 0x00000CF9 System.Void FunkyCode.Rendering.Day.Pass::SortObjects()
 extern void Pass_SortObjects_m42DFD214FFCFFDF389238C76EDA98049F3A750B8 (void);
-// 0x00000CF2 System.Boolean FunkyCode.Rendering.Day.Pass::Setup(FunkyCode.LightingSettings.LightmapLayer,UnityEngine.Camera)
+// 0x00000CFA System.Boolean FunkyCode.Rendering.Day.Pass::Setup(FunkyCode.LightingSettings.LightmapLayer,UnityEngine.Camera)
 extern void Pass_Setup_mEF0C15681CE364ACCDA7E890F53D472F0C465C37 (void);
-// 0x00000CF3 System.Void FunkyCode.Rendering.Day.Pass::.ctor()
+// 0x00000CFB System.Void FunkyCode.Rendering.Day.Pass::.ctor()
 extern void Pass__ctor_m43B6C360D6ABD3D1E8833F99FA4F9030DF7C7115 (void);
-// 0x00000CF4 System.Void FunkyCode.Rendering.Day.Shadow::Begin()
+// 0x00000CFC System.Void FunkyCode.Rendering.Day.Shadow::Begin()
 extern void Shadow_Begin_m116FDD862B01618B8C75557A2160551BAC01040B (void);
-// 0x00000CF5 System.Void FunkyCode.Rendering.Day.Shadow::End()
+// 0x00000CFD System.Void FunkyCode.Rendering.Day.Shadow::End()
 extern void Shadow_End_mD24CF2470046D36D1ACE229BCEC98BE8D3D39C5E (void);
-// 0x00000CF6 System.Void FunkyCode.Rendering.Day.Shadow::Draw(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
+// 0x00000CFE System.Void FunkyCode.Rendering.Day.Shadow::Draw(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
 extern void Shadow_Draw_mFBBA60929BDF503BA48F6E7E323DBB7D8C05D894 (void);
-// 0x00000CF7 System.Void FunkyCode.Rendering.Day.Shadow::DrawLine(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,System.Single,System.Single)
+// 0x00000CFF System.Void FunkyCode.Rendering.Day.Shadow::DrawLine(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,System.Single,System.Single)
 extern void Shadow_DrawLine_mC6F6055317FF0659A31275B480DB4DA4007B3267 (void);
-// 0x00000CF8 System.Void FunkyCode.Rendering.Day.Shadow::DrawLineTri(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,System.Single,System.Single)
+// 0x00000D00 System.Void FunkyCode.Rendering.Day.Shadow::DrawLineTri(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,System.Single,System.Single)
 extern void Shadow_DrawLineTri_mD094D5CD041EAFEEFB410F6E7AA89636BCCD8109 (void);
-// 0x00000CF9 System.Void FunkyCode.Rendering.Day.Shadow::DrawFill(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
+// 0x00000D01 System.Void FunkyCode.Rendering.Day.Shadow::DrawFill(FunkyCode.DayLightCollider2D,UnityEngine.Vector2)
 extern void Shadow_DrawFill_mAD0E468711A04B42093A6D96404F492AAC2E2061 (void);
-// 0x00000CFA System.Void FunkyCode.Rendering.Day.Shadow::DrawTilemap(FunkyCode.DayLightTilemapCollider2D,UnityEngine.Vector2,UnityEngine.Camera)
+// 0x00000D02 System.Void FunkyCode.Rendering.Day.Shadow::DrawTilemap(FunkyCode.DayLightTilemapCollider2D,UnityEngine.Vector2,UnityEngine.Camera)
 extern void Shadow_DrawTilemap_m80C10C3604EF787F22960C3406F2803AFCDF65D6 (void);
-// 0x00000CFB System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::Begin(UnityEngine.Vector2)
+// 0x00000D03 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::Begin(UnityEngine.Vector2)
 extern void SpriteRendererShadow_Begin_mC0D51ED3D364B25E27592A448BC5D2F53E2383A9 (void);
-// 0x00000CFC System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::End()
+// 0x00000D04 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::End()
 extern void SpriteRendererShadow_End_m96C2B774005C6E4AED07242D738D68C7B6F4E650 (void);
-// 0x00000CFD System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::DrawOffset(FunkyCode.DayLightCollider2D)
+// 0x00000D05 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::DrawOffset(FunkyCode.DayLightCollider2D)
 extern void SpriteRendererShadow_DrawOffset_m99E149D43B80181848D4BB73FE3243A72DF8F01D (void);
-// 0x00000CFE System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::DrawProjection(FunkyCode.DayLightCollider2D)
+// 0x00000D06 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::DrawProjection(FunkyCode.DayLightCollider2D)
 extern void SpriteRendererShadow_DrawProjection_m0C4455CEF73447F6C554B4B6A5FA0FEBDF042495 (void);
-// 0x00000CFF System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::DrawProjectionShape(FunkyCode.DayLightCollider2D)
+// 0x00000D07 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::DrawProjectionShape(FunkyCode.DayLightCollider2D)
 extern void SpriteRendererShadow_DrawProjectionShape_mA87BF6094B514435C1C0D04CBCC4C682E230BCF0 (void);
-// 0x00000D00 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::.cctor()
+// 0x00000D08 System.Void FunkyCode.Rendering.Day.SpriteRendererShadow::.cctor()
 extern void SpriteRendererShadow__cctor_mF961EC7827375CD4FC7D1E5F707F93BC8A3D57B4 (void);
-// 0x00000D01 System.Void FunkyCode.Rendering.Day.Sorted::Draw(FunkyCode.Rendering.Day.Pass)
+// 0x00000D09 System.Void FunkyCode.Rendering.Day.Sorted::Draw(FunkyCode.Rendering.Day.Pass)
 extern void Sorted_Draw_m1CB6816BDDB13F6D5ED13E44726FFDFE9FF337B8 (void);
-// 0x00000D02 System.Void FunkyCode.Rendering.Day.Sorted::.ctor()
+// 0x00000D0A System.Void FunkyCode.Rendering.Day.Sorted::.ctor()
 extern void Sorted__ctor_m9AD708CDCB89A378311D8B1D3ACCA1AF883BC2B1 (void);
-// 0x00000D03 System.Void FunkyCode.Rendering.Day.Sorting.SortObject::.ctor(System.Single,System.Object)
+// 0x00000D0B System.Void FunkyCode.Rendering.Day.Sorting.SortObject::.ctor(System.Single,System.Object)
 extern void SortObject__ctor_mF0EB888694FC4C3CE54B71BA037D0D34D7E71DC0 (void);
-// 0x00000D04 System.Int32 FunkyCode.Rendering.Day.Sorting.SortObject::Compare(FunkyCode.Rendering.Day.Sorting.SortObject,FunkyCode.Rendering.Day.Sorting.SortObject)
+// 0x00000D0C System.Int32 FunkyCode.Rendering.Day.Sorting.SortObject::Compare(FunkyCode.Rendering.Day.Sorting.SortObject,FunkyCode.Rendering.Day.Sorting.SortObject)
 extern void SortObject_Compare_m3D3AC4C283896925117C7CCEB9574B0F48E50171 (void);
-// 0x00000D05 System.Collections.Generic.IComparer`1<FunkyCode.Rendering.Day.Sorting.SortObject> FunkyCode.Rendering.Day.Sorting.SortObject::Sort()
+// 0x00000D0D System.Collections.Generic.IComparer`1<FunkyCode.Rendering.Day.Sorting.SortObject> FunkyCode.Rendering.Day.Sorting.SortObject::Sort()
 extern void SortObject_Sort_mDF57BE001B8432D436C5FC0FF5C804C3F451E8AD (void);
-// 0x00000D06 System.Void FunkyCode.Rendering.Day.Sorting.SortList::set_Count(System.Int32)
+// 0x00000D0E System.Void FunkyCode.Rendering.Day.Sorting.SortList::set_Count(System.Int32)
 extern void SortList_set_Count_m7CEB540F99367D488EA05963142912868C51C06C (void);
-// 0x00000D07 System.Int32 FunkyCode.Rendering.Day.Sorting.SortList::get_Count()
+// 0x00000D0F System.Int32 FunkyCode.Rendering.Day.Sorting.SortList::get_Count()
 extern void SortList_get_Count_m4830DC544F5E80AC711235B1C33AD0A1C48051E6 (void);
-// 0x00000D08 System.Void FunkyCode.Rendering.Day.Sorting.SortList::.ctor()
+// 0x00000D10 System.Void FunkyCode.Rendering.Day.Sorting.SortList::.ctor()
 extern void SortList__ctor_mB235543A3B6A39FE3FD62F9067309548EA25ECC4 (void);
-// 0x00000D09 System.Void FunkyCode.Rendering.Day.Sorting.SortList::Add(System.Object,System.Single)
+// 0x00000D11 System.Void FunkyCode.Rendering.Day.Sorting.SortList::Add(System.Object,System.Single)
 extern void SortList_Add_m9E59687F976449EFE55B1F9245B69A0E6E000ED4 (void);
-// 0x00000D0A System.Void FunkyCode.Rendering.Day.Sorting.SortList::Reset()
+// 0x00000D12 System.Void FunkyCode.Rendering.Day.Sorting.SortList::Reset()
 extern void SortList_Reset_m7AB6718105512DAA816788D3FE9CECC1B37B3974 (void);
-// 0x00000D0B System.Void FunkyCode.Rendering.Day.Sorting.SortList::Sort()
+// 0x00000D13 System.Void FunkyCode.Rendering.Day.Sorting.SortList::Sort()
 extern void SortList_Sort_m70A2053FDDCFD0189292D0EAA8E8749B9346C0C5 (void);
-// 0x00000D0C System.Void FunkyCode.Lighting2DMaterial.BumpMask::Reset()
+// 0x00000D14 System.Void FunkyCode.Lighting2DMaterial.BumpMask::Reset()
 extern void BumpMask_Reset_m0DE7F5F8685D8B6C15F85D830C3990FBDA47223F (void);
-// 0x00000D0D System.Void FunkyCode.Lighting2DMaterial.BumpMask::Initialize()
+// 0x00000D15 System.Void FunkyCode.Lighting2DMaterial.BumpMask::Initialize()
 extern void BumpMask_Initialize_m2B10940E62AF07F6EE0253CAC51076132DB36167 (void);
-// 0x00000D0E UnityEngine.Material FunkyCode.Lighting2DMaterial.BumpMask::GetNormalMapSpritePixelToLight()
+// 0x00000D16 UnityEngine.Material FunkyCode.Lighting2DMaterial.BumpMask::GetNormalMapSpritePixelToLight()
 extern void BumpMask_GetNormalMapSpritePixelToLight_mE90F3846F03488198C299DDFF85FFF8766633894 (void);
-// 0x00000D0F UnityEngine.Material FunkyCode.Lighting2DMaterial.BumpMask::GetNormalMapSpriteObjectToLight()
+// 0x00000D17 UnityEngine.Material FunkyCode.Lighting2DMaterial.BumpMask::GetNormalMapSpriteObjectToLight()
 extern void BumpMask_GetNormalMapSpriteObjectToLight_m1148AD95F3F3C48E86FC8E6F7B154D7AAE4CB1D4 (void);
-// 0x00000D10 UnityEngine.Material FunkyCode.Lighting2DMaterial.BumpMask::GetBumpedDaySprite()
+// 0x00000D18 UnityEngine.Material FunkyCode.Lighting2DMaterial.BumpMask::GetBumpedDaySprite()
 extern void BumpMask_GetBumpedDaySprite_m475ABB8BB85C78DCAE5C51DA7C0FCE93AFFFE360 (void);
-// 0x00000D11 System.Void FunkyCode.Lighting2DMaterial.BumpMask::.ctor()
+// 0x00000D19 System.Void FunkyCode.Lighting2DMaterial.BumpMask::.ctor()
 extern void BumpMask__ctor_mF1066ACE5AB455C17AE38A72BB24E9705DCAC689 (void);
-// 0x00000D12 System.Void FunkyCode.Lighting2DMaterial.Lights::Reset()
+// 0x00000D1A System.Void FunkyCode.Lighting2DMaterial.Lights::Reset()
 extern void Lights_Reset_m3B3ABD005B6914BB08AEFD210AF38856A7352AED (void);
-// 0x00000D13 System.Void FunkyCode.Lighting2DMaterial.Lights::Initialize()
+// 0x00000D1B System.Void FunkyCode.Lighting2DMaterial.Lights::Initialize()
 extern void Lights_Initialize_mEC849AF9202CEE11557E0CCD897A1F3B159D554A (void);
-// 0x00000D14 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetPointLight()
+// 0x00000D1C UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetPointLight()
 extern void Lights_GetPointLight_m228C552C7438B7991B8028DE14F73F37A990B2A2 (void);
-// 0x00000D15 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetSpriteLight()
+// 0x00000D1D UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetSpriteLight()
 extern void Lights_GetSpriteLight_m74D202E316584885B0EC270DE08EDCD327E1CE0E (void);
-// 0x00000D16 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetFreeFormLight()
+// 0x00000D1E UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetFreeFormLight()
 extern void Lights_GetFreeFormLight_m370ADCF11639286368FF7B6C44E54871C33319C8 (void);
-// 0x00000D17 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetFreeFormEdgeLight()
+// 0x00000D1F UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetFreeFormEdgeLight()
 extern void Lights_GetFreeFormEdgeLight_m769534157EB44C53F7F9129008635731157D285B (void);
-// 0x00000D18 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetLightOcclusion()
+// 0x00000D20 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetLightOcclusion()
 extern void Lights_GetLightOcclusion_m29980E5B69BCB46AFF9C4B155CE544D54808231C (void);
-// 0x00000D19 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetPointOcclusion()
+// 0x00000D21 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetPointOcclusion()
 extern void Lights_GetPointOcclusion_m92652C6A287C86A6FC0147BE6F27105E5CF2879A (void);
-// 0x00000D1A UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetFreeFormOcclusion()
+// 0x00000D22 UnityEngine.Material FunkyCode.Lighting2DMaterial.Lights::GetFreeFormOcclusion()
 extern void Lights_GetFreeFormOcclusion_m43E67EE9D2C36E079F404B4814B5FAB28282CC14 (void);
-// 0x00000D1B System.Void FunkyCode.Lighting2DMaterial.Lights::.ctor()
+// 0x00000D23 System.Void FunkyCode.Lighting2DMaterial.Lights::.ctor()
 extern void Lights__ctor_mF15F2EFC19A75888C08CDB3C689FFD66345E6F1D (void);
-// 0x00000D1C System.Void FunkyCode.Lighting2DMaterial.Mask::Reset()
+// 0x00000D24 System.Void FunkyCode.Lighting2DMaterial.Mask::Reset()
 extern void Mask_Reset_m22F3A54310C7398C2C8646F223B3E63818E6A8DB (void);
-// 0x00000D1D UnityEngine.Material FunkyCode.Lighting2DMaterial.Mask::GetMask()
+// 0x00000D25 UnityEngine.Material FunkyCode.Lighting2DMaterial.Mask::GetMask()
 extern void Mask_GetMask_m1485BADA04BA4BE522CD3C3D827ACA40874E670E (void);
-// 0x00000D1E UnityEngine.Material FunkyCode.Lighting2DMaterial.Mask::GetMaskTranslucency()
+// 0x00000D26 UnityEngine.Material FunkyCode.Lighting2DMaterial.Mask::GetMaskTranslucency()
 extern void Mask_GetMaskTranslucency_m9F8B50DEEC8D5500443E955A890EA5A2A2201C6A (void);
-// 0x00000D1F UnityEngine.Material FunkyCode.Lighting2DMaterial.Mask::GetDayMask()
+// 0x00000D27 UnityEngine.Material FunkyCode.Lighting2DMaterial.Mask::GetDayMask()
 extern void Mask_GetDayMask_mEE54914AD9BFAFFFAA4C98EF5188893FD675FDAE (void);
-// 0x00000D20 System.Void FunkyCode.Lighting2DMaterial.Mask::Initialize()
+// 0x00000D28 System.Void FunkyCode.Lighting2DMaterial.Mask::Initialize()
 extern void Mask_Initialize_m3C840B48835A7284B927F13941B3507AEDCA8FAB (void);
-// 0x00000D21 System.Void FunkyCode.Lighting2DMaterial.Mask::.ctor()
+// 0x00000D29 System.Void FunkyCode.Lighting2DMaterial.Mask::.ctor()
 extern void Mask__ctor_m485935A4EC74182DB4111962148E793FDF6CBB0B (void);
-// 0x00000D22 System.Void FunkyCode.Lighting2DMaterial.Room::Reset()
+// 0x00000D2A System.Void FunkyCode.Lighting2DMaterial.Room::Reset()
 extern void Room_Reset_m35FA64258A40B8B315CD7EDBE8EC0FB046EDC40B (void);
-// 0x00000D23 System.Void FunkyCode.Lighting2DMaterial.Room::Initialize()
+// 0x00000D2B System.Void FunkyCode.Lighting2DMaterial.Room::Initialize()
 extern void Room_Initialize_m1E08A252265907603113C30D813504EB42981564 (void);
-// 0x00000D24 UnityEngine.Material FunkyCode.Lighting2DMaterial.Room::GetRoomMask()
+// 0x00000D2C UnityEngine.Material FunkyCode.Lighting2DMaterial.Room::GetRoomMask()
 extern void Room_GetRoomMask_mCFC35B69A470440EA552742AB944156B5F5DC1DF (void);
-// 0x00000D25 UnityEngine.Material FunkyCode.Lighting2DMaterial.Room::GetRoomMultiply()
+// 0x00000D2D UnityEngine.Material FunkyCode.Lighting2DMaterial.Room::GetRoomMultiply()
 extern void Room_GetRoomMultiply_mDDF54761C06B50BFEBC4C7C72616516D709E3D73 (void);
-// 0x00000D26 System.Void FunkyCode.Lighting2DMaterial.Room::.ctor()
+// 0x00000D2E System.Void FunkyCode.Lighting2DMaterial.Room::.ctor()
 extern void Room__ctor_m28F63F54129BC2FC143D20FF3707ED80E7BC040F (void);
-// 0x00000D27 System.Void FunkyCode.Lighting2DMaterial.Shadow::Reset()
+// 0x00000D2F System.Void FunkyCode.Lighting2DMaterial.Shadow::Reset()
 extern void Shadow_Reset_m9A901AB48B46653880D80717D2A1FF6E20C26274 (void);
-// 0x00000D28 System.Void FunkyCode.Lighting2DMaterial.Shadow::Initialize()
+// 0x00000D30 System.Void FunkyCode.Lighting2DMaterial.Shadow::Initialize()
 extern void Shadow_Initialize_m715741ED7F42177CFFA43EF5AE96C804D49DCD28 (void);
-// 0x00000D29 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetDepthDayShadow()
+// 0x00000D31 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetDepthDayShadow()
 extern void Shadow_GetDepthDayShadow_m9F177BC38493CED7D983C39869E760B9F1953A41 (void);
-// 0x00000D2A UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetAlphaShadow()
+// 0x00000D32 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetAlphaShadow()
 extern void Shadow_GetAlphaShadow_mCB6F7799FC72AFCC9F23C94BC22755D2B1CF4367 (void);
-// 0x00000D2B UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSoftShadow()
+// 0x00000D33 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSoftShadow()
 extern void Shadow_GetSoftShadow_m8063E398A3C0489E380A094B2EAEE1AA89FED8A9 (void);
-// 0x00000D2C UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSoftShadowDefault()
+// 0x00000D34 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSoftShadowDefault()
 extern void Shadow_GetSoftShadowDefault_m275EF38AE704EA9784C580A7CAA6EC72EAC37070 (void);
-// 0x00000D2D UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetFastShadow()
+// 0x00000D35 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetFastShadow()
 extern void Shadow_GetFastShadow_m91A65E292269B1731F5835B4F439CBB737969E5C (void);
-// 0x00000D2E UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetLegacyGPUShadow()
+// 0x00000D36 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetLegacyGPUShadow()
 extern void Shadow_GetLegacyGPUShadow_m413BF57BD2B51EBC123375819906BAF5F5F78AF6 (void);
-// 0x00000D2F UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSoftDistanceShadow()
+// 0x00000D37 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSoftDistanceShadow()
 extern void Shadow_GetSoftDistanceShadow_m835CC8B1D830554BD629CE94D0F45B1FBDA17ED0 (void);
-// 0x00000D30 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetLegacyCPUShadow()
+// 0x00000D38 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetLegacyCPUShadow()
 extern void Shadow_GetLegacyCPUShadow_mB201001E74DFE46984F744C0997659684C8D5ADD (void);
-// 0x00000D31 UnityEngine.Sprite FunkyCode.Lighting2DMaterial.Shadow::GetPenumbraSprite()
+// 0x00000D39 UnityEngine.Sprite FunkyCode.Lighting2DMaterial.Shadow::GetPenumbraSprite()
 extern void Shadow_GetPenumbraSprite_m3ABFF0D3F3BB7F5DB559343435F5A7CFECFF8DE3 (void);
-// 0x00000D32 UnityEngine.Sprite FunkyCode.Lighting2DMaterial.Shadow::GetPenumbraSprite2()
+// 0x00000D3A UnityEngine.Sprite FunkyCode.Lighting2DMaterial.Shadow::GetPenumbraSprite2()
 extern void Shadow_GetPenumbraSprite2_m4A18871EF4733F2872F4CB7A6BD0461233BBC7DA (void);
-// 0x00000D33 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetDayCPUShadow()
+// 0x00000D3B UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetDayCPUShadow()
 extern void Shadow_GetDayCPUShadow_m9D01C3079CCA5D5E623C241FA6D5FAD6AB0FA66F (void);
-// 0x00000D34 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSpriteShadow()
+// 0x00000D3C UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSpriteShadow()
 extern void Shadow_GetSpriteShadow_m8F1FA52EAE205FCF5EDD3B370D5928082CB4E777 (void);
-// 0x00000D35 UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSpriteProjectionMaterial()
+// 0x00000D3D UnityEngine.Material FunkyCode.Lighting2DMaterial.Shadow::GetSpriteProjectionMaterial()
 extern void Shadow_GetSpriteProjectionMaterial_m42C7A101EF1E8B9F3D345AC261A2D3925CF8949C (void);
-// 0x00000D36 System.Void FunkyCode.Lighting2DMaterial.Shadow::.ctor()
+// 0x00000D3E System.Void FunkyCode.Lighting2DMaterial.Shadow::.ctor()
 extern void Shadow__ctor_m642893B5B7DAD7AB85105D23935B7D8251BB2BE4 (void);
-// 0x00000D37 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.Collider2DShape::GetMeshes()
+// 0x00000D3F System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.Collider2DShape::GetMeshes()
 extern void Collider2DShape_GetMeshes_m7165891B60A869A46BC1CA727EF45AA8F6CE7F6F (void);
-// 0x00000D38 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider2DShape::GetPolygonsLocal()
+// 0x00000D40 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider2DShape::GetPolygonsLocal()
 extern void Collider2DShape_GetPolygonsLocal_m9AD40BA2931B5C6A433F3EB9A7B200998B8BE976 (void);
-// 0x00000D39 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider2DShape::GetPolygonsWorld()
+// 0x00000D41 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider2DShape::GetPolygonsWorld()
 extern void Collider2DShape_GetPolygonsWorld_m7A9B52D66416751CB9EC375FADB5F9784D2EB3BB (void);
-// 0x00000D3A System.Void FunkyCode.LightShape.Collider2DShape::.ctor()
+// 0x00000D42 System.Void FunkyCode.LightShape.Collider2DShape::.ctor()
 extern void Collider2DShape__ctor_mEACF7C045DDB58661EA61C695ECBCA191A1BFA92 (void);
-// 0x00000D3B System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.Collider3DShape::GetMeshes()
+// 0x00000D43 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.Collider3DShape::GetMeshes()
 extern void Collider3DShape_GetMeshes_mEA49D1A8BB4CBA1095E8B802D1F5F61F6069CBAA (void);
-// 0x00000D3C System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider3DShape::GetPolygonsLocal()
+// 0x00000D44 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider3DShape::GetPolygonsLocal()
 extern void Collider3DShape_GetPolygonsLocal_m2996A3EC78A06D30BAF0B690B621D8465222E490 (void);
-// 0x00000D3D System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider3DShape::GetPolygonsWorld()
+// 0x00000D45 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Collider3DShape::GetPolygonsWorld()
 extern void Collider3DShape_GetPolygonsWorld_m497CEBF4A088D0F5BD424D342B0C0E3B57D1CDE4 (void);
-// 0x00000D3E System.Void FunkyCode.LightShape.Collider3DShape::.ctor()
+// 0x00000D46 System.Void FunkyCode.LightShape.Collider3DShape::.ctor()
 extern void Collider3DShape__ctor_mBECB428310192F9F2C341A7A199A28726856E6F2 (void);
-// 0x00000D3F UnityEngine.CompositeCollider2D FunkyCode.LightShape.CompositeCollider2DShape::GetCompositeCollider()
+// 0x00000D47 UnityEngine.CompositeCollider2D FunkyCode.LightShape.CompositeCollider2DShape::GetCompositeCollider()
 extern void CompositeCollider2DShape_GetCompositeCollider_m1AD27181B29D377638C1B064E17872B69AD62615 (void);
-// 0x00000D40 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.CompositeCollider2DShape::GetMeshes()
+// 0x00000D48 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.CompositeCollider2DShape::GetMeshes()
 extern void CompositeCollider2DShape_GetMeshes_m244C476748CF968D3D261D67F8A4F678F65ED594 (void);
-// 0x00000D41 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.CompositeCollider2DShape::GetPolygonsWorld()
+// 0x00000D49 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.CompositeCollider2DShape::GetPolygonsWorld()
 extern void CompositeCollider2DShape_GetPolygonsWorld_m4EF2E20592A02C7A53F9D198D84E97ECC7674738 (void);
-// 0x00000D42 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.CompositeCollider2DShape::GetPolygonsLocal()
+// 0x00000D4A System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.CompositeCollider2DShape::GetPolygonsLocal()
 extern void CompositeCollider2DShape_GetPolygonsLocal_m2E07ABE265C0AEE6E8924572C7B3C4D3E311CE8F (void);
-// 0x00000D43 System.Void FunkyCode.LightShape.CompositeCollider2DShape::.ctor()
+// 0x00000D4B System.Void FunkyCode.LightShape.CompositeCollider2DShape::.ctor()
 extern void CompositeCollider2DShape__ctor_mEC82863871E4BD8BAAAA6FAC0D146D707FE8B5B1 (void);
-// 0x00000D44 UnityEngine.Mesh FunkyCode.LightShape.MeshRendererShape::get_Mesh()
+// 0x00000D4C UnityEngine.Mesh FunkyCode.LightShape.MeshRendererShape::get_Mesh()
 extern void MeshRendererShape_get_Mesh_m451AD9E4873D9DA0C34278EB1744614C8EB36DB6 (void);
-// 0x00000D45 System.Int32 FunkyCode.LightShape.MeshRendererShape::GetSortingLayer()
+// 0x00000D4D System.Int32 FunkyCode.LightShape.MeshRendererShape::GetSortingLayer()
 extern void MeshRendererShape_GetSortingLayer_mAE69804D1476B7BEB8FDFB8358EE3C90CE46259D (void);
-// 0x00000D46 System.Int32 FunkyCode.LightShape.MeshRendererShape::GetSortingOrder()
+// 0x00000D4E System.Int32 FunkyCode.LightShape.MeshRendererShape::GetSortingOrder()
 extern void MeshRendererShape_GetSortingOrder_mEF7E7E4A47EAEE5A63686F898FB03574DADB065C (void);
-// 0x00000D47 System.Void FunkyCode.LightShape.MeshRendererShape::ResetLocal()
+// 0x00000D4F System.Void FunkyCode.LightShape.MeshRendererShape::ResetLocal()
 extern void MeshRendererShape_ResetLocal_m2612D7A7A7839E78CF2BD4267E9D7F37B37BAA44 (void);
-// 0x00000D48 UnityEngine.MeshFilter FunkyCode.LightShape.MeshRendererShape::GetMeshFilter()
+// 0x00000D50 UnityEngine.MeshFilter FunkyCode.LightShape.MeshRendererShape::GetMeshFilter()
 extern void MeshRendererShape_GetMeshFilter_m9D78F4455AE293EE24180450F1CDC72722CD4C65 (void);
-// 0x00000D49 UnityEngine.MeshRenderer FunkyCode.LightShape.MeshRendererShape::GetMeshRenderer()
+// 0x00000D51 UnityEngine.MeshRenderer FunkyCode.LightShape.MeshRendererShape::GetMeshRenderer()
 extern void MeshRendererShape_GetMeshRenderer_mE74E14686A824ACBB11B26352BB3C6F28F7F3DB8 (void);
-// 0x00000D4A System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.MeshRendererShape::GetMeshes()
+// 0x00000D52 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.MeshRendererShape::GetMeshes()
 extern void MeshRendererShape_GetMeshes_mA57262A4895FB72BE02B02180823736C13C55ECC (void);
-// 0x00000D4B System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.MeshRendererShape::GetPolygonsWorld()
+// 0x00000D53 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.MeshRendererShape::GetPolygonsWorld()
 extern void MeshRendererShape_GetPolygonsWorld_mF9EA621090514EE26F1A6E19CA8EDD92156CBE47 (void);
-// 0x00000D4C System.Void FunkyCode.LightShape.MeshRendererShape::.ctor()
+// 0x00000D54 System.Void FunkyCode.LightShape.MeshRendererShape::.ctor()
 extern void MeshRendererShape__ctor_m3DAE65E17094315877DBAC68B11C9B8AA66F1AE3 (void);
-// 0x00000D4D UnityEngine.SkinnedMeshRenderer FunkyCode.LightShape.SkinnedMeshRendererShape::GetSkinnedMeshRenderer()
+// 0x00000D55 UnityEngine.SkinnedMeshRenderer FunkyCode.LightShape.SkinnedMeshRendererShape::GetSkinnedMeshRenderer()
 extern void SkinnedMeshRendererShape_GetSkinnedMeshRenderer_m8746556DBA8551E5EB041E063F6F209B561D480A (void);
-// 0x00000D4E System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.SkinnedMeshRendererShape::GetMeshes()
+// 0x00000D56 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.SkinnedMeshRendererShape::GetMeshes()
 extern void SkinnedMeshRendererShape_GetMeshes_mA71C802925AE0924B3706439C058618AEBDF2E74 (void);
-// 0x00000D4F System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SkinnedMeshRendererShape::GetPolygonsWorld()
+// 0x00000D57 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SkinnedMeshRendererShape::GetPolygonsWorld()
 extern void SkinnedMeshRendererShape_GetPolygonsWorld_m46C5C8EC4FB8B11F2BB25D9E79849C7E798EBAA3 (void);
-// 0x00000D50 System.Void FunkyCode.LightShape.SkinnedMeshRendererShape::.ctor()
+// 0x00000D58 System.Void FunkyCode.LightShape.SkinnedMeshRendererShape::.ctor()
 extern void SkinnedMeshRendererShape__ctor_m1D1DBAD0206D5E193705EE8323724933025EE20E (void);
-// 0x00000D51 System.Void FunkyCode.LightShape.SpritePhysicsShape::ResetLocal()
+// 0x00000D59 System.Void FunkyCode.LightShape.SpritePhysicsShape::ResetLocal()
 extern void SpritePhysicsShape_ResetLocal_m06AFEDCFF2B6637277A44A5903EFD6B0609D6C9F (void);
-// 0x00000D52 UnityEngine.Sprite FunkyCode.LightShape.SpritePhysicsShape::GetOriginalSprite()
+// 0x00000D5A UnityEngine.Sprite FunkyCode.LightShape.SpritePhysicsShape::GetOriginalSprite()
 extern void SpritePhysicsShape_GetOriginalSprite_m9785EB58AAE539A1FBCE7AA6D63BAF9C6AEED4E3 (void);
-// 0x00000D53 UnityEngine.SpriteRenderer FunkyCode.LightShape.SpritePhysicsShape::GetSpriteRenderer()
+// 0x00000D5B UnityEngine.SpriteRenderer FunkyCode.LightShape.SpritePhysicsShape::GetSpriteRenderer()
 extern void SpritePhysicsShape_GetSpriteRenderer_m9B32CCB98C892D44F9ACBC49664489CCE14E1F60 (void);
-// 0x00000D54 FunkyCode.SpriteExtension.PhysicsShape FunkyCode.LightShape.SpritePhysicsShape::GetPhysicsShape()
+// 0x00000D5C FunkyCode.SpriteExtension.PhysicsShape FunkyCode.LightShape.SpritePhysicsShape::GetPhysicsShape()
 extern void SpritePhysicsShape_GetPhysicsShape_m56316D8AE1C0FD57A0830B90C4032255AD2D97DB (void);
-// 0x00000D55 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.SpritePhysicsShape::GetMeshes()
+// 0x00000D5D System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.SpritePhysicsShape::GetMeshes()
 extern void SpritePhysicsShape_GetMeshes_mD5F26058A2C352151B28D901A033BB45A75F038D (void);
-// 0x00000D56 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpritePhysicsShape::GetPolygonsWorld()
+// 0x00000D5E System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpritePhysicsShape::GetPolygonsWorld()
 extern void SpritePhysicsShape_GetPolygonsWorld_m4B9977801F9255312FA54607995362EC0B0669E4 (void);
-// 0x00000D57 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpritePhysicsShape::GetPolygonsLocal()
+// 0x00000D5F System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpritePhysicsShape::GetPolygonsLocal()
 extern void SpritePhysicsShape_GetPolygonsLocal_m00BDC1C4821FFC2472A1032B506871F999C3AD20 (void);
-// 0x00000D58 System.Void FunkyCode.LightShape.SpritePhysicsShape::.ctor()
+// 0x00000D60 System.Void FunkyCode.LightShape.SpritePhysicsShape::.ctor()
 extern void SpritePhysicsShape__ctor_m39B170D4563065B053F9E40FC3849F6FACC1A9DC (void);
-// 0x00000D59 System.Int32 FunkyCode.LightShape.SpriteShape::GetSortingLayer()
+// 0x00000D61 System.Int32 FunkyCode.LightShape.SpriteShape::GetSortingLayer()
 extern void SpriteShape_GetSortingLayer_mC7443FC0D292A0678473EC0794AEB0EBB29C6F07 (void);
-// 0x00000D5A System.Int32 FunkyCode.LightShape.SpriteShape::GetSortingOrder()
+// 0x00000D62 System.Int32 FunkyCode.LightShape.SpriteShape::GetSortingOrder()
 extern void SpriteShape_GetSortingOrder_m3275D82B54B79FC157DCF0E1D12D1D45F1C37F93 (void);
-// 0x00000D5B System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpriteShape::GetPolygonsLocal()
+// 0x00000D63 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpriteShape::GetPolygonsLocal()
 extern void SpriteShape_GetPolygonsLocal_mF8EF77B58EEEA55BAC74520BE1A92ED9BC7796CC (void);
-// 0x00000D5C System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpriteShape::GetPolygonsWorld()
+// 0x00000D64 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.SpriteShape::GetPolygonsWorld()
 extern void SpriteShape_GetPolygonsWorld_m83C1C587E35A29753F7908BBA787160BCB2045BF (void);
-// 0x00000D5D System.Void FunkyCode.LightShape.SpriteShape::ResetLocal()
+// 0x00000D65 System.Void FunkyCode.LightShape.SpriteShape::ResetLocal()
 extern void SpriteShape_ResetLocal_m35DB3A5C91F21EAE58B26A8D7680EDCFCC28271D (void);
-// 0x00000D5E UnityEngine.SpriteRenderer FunkyCode.LightShape.SpriteShape::GetSpriteRenderer()
+// 0x00000D66 UnityEngine.SpriteRenderer FunkyCode.LightShape.SpriteShape::GetSpriteRenderer()
 extern void SpriteShape_GetSpriteRenderer_mE0F890A8D197EF18F34CBDE50DCB9CC8A4015CD8 (void);
-// 0x00000D5F UnityEngine.Sprite FunkyCode.LightShape.SpriteShape::GetOriginalSprite()
+// 0x00000D67 UnityEngine.Sprite FunkyCode.LightShape.SpriteShape::GetOriginalSprite()
 extern void SpriteShape_GetOriginalSprite_m393F8A2C736F1F7054242C3D491EA03D8E0656E4 (void);
-// 0x00000D60 System.Void FunkyCode.LightShape.SpriteShape::.ctor()
+// 0x00000D68 System.Void FunkyCode.LightShape.SpriteShape::.ctor()
 extern void SpriteShape__ctor_m44659C6FFC7A3B09C2A79705FF3C6A443643677E (void);
-// 0x00000D61 System.Int32 FunkyCode.LightShape.Base::GetSortingOrder()
+// 0x00000D69 System.Int32 FunkyCode.LightShape.Base::GetSortingOrder()
 extern void Base_GetSortingOrder_mC2007409047B66E909876E829E16735F06B6C152 (void);
-// 0x00000D62 System.Int32 FunkyCode.LightShape.Base::GetSortingLayer()
+// 0x00000D6A System.Int32 FunkyCode.LightShape.Base::GetSortingLayer()
 extern void Base_GetSortingLayer_mD5847E7C382F29FE89B1BCF77F34001FD6347D21 (void);
-// 0x00000D63 System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.Base::GetMeshes()
+// 0x00000D6B System.Collections.Generic.List`1<FunkyCode.MeshObject> FunkyCode.LightShape.Base::GetMeshes()
 extern void Base_GetMeshes_m13E4B0FDE5527AB3D3187C6C9D28CBDF94D7C136 (void);
-// 0x00000D64 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Base::GetPolygonsLocal()
+// 0x00000D6C System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Base::GetPolygonsLocal()
 extern void Base_GetPolygonsLocal_m28B3CAC3757FA5AFBB3E8422EA3DCA76BD4A596F (void);
-// 0x00000D65 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Base::GetPolygonsWorld()
-// 0x00000D66 System.Void FunkyCode.LightShape.Base::SetTransform(UnityEngine.Transform)
+// 0x00000D6D System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.LightShape.Base::GetPolygonsWorld()
+// 0x00000D6E System.Void FunkyCode.LightShape.Base::SetTransform(UnityEngine.Transform)
 extern void Base_SetTransform_m081D4205298F87FD733A032BC8C73F3B4D5F81A9 (void);
-// 0x00000D67 System.Void FunkyCode.LightShape.Base::ResetLocal()
+// 0x00000D6F System.Void FunkyCode.LightShape.Base::ResetLocal()
 extern void Base_ResetLocal_m8CFAD868A9AEC5D1E39453F560037C0BEE6C3549 (void);
-// 0x00000D68 System.Void FunkyCode.LightShape.Base::ResetWorld()
+// 0x00000D70 System.Void FunkyCode.LightShape.Base::ResetWorld()
 extern void Base_ResetWorld_m1D0308D3F3A6C8528F968163DD0664576CB082A3 (void);
-// 0x00000D69 UnityEngine.Rect FunkyCode.LightShape.Base::GetWorldRect()
+// 0x00000D71 UnityEngine.Rect FunkyCode.LightShape.Base::GetWorldRect()
 extern void Base_GetWorldRect_mDEE006EEC21D17E0AE3B52352DAC5F48046A221A (void);
-// 0x00000D6A UnityEngine.Rect FunkyCode.LightShape.Base::GetDayRect(System.Single)
+// 0x00000D72 UnityEngine.Rect FunkyCode.LightShape.Base::GetDayRect(System.Single)
 extern void Base_GetDayRect_mB77C53530F5A85B08022351840C993728CB2C642 (void);
-// 0x00000D6B UnityEngine.Rect FunkyCode.LightShape.Base::GetIsoWorldRect()
+// 0x00000D73 UnityEngine.Rect FunkyCode.LightShape.Base::GetIsoWorldRect()
 extern void Base_GetIsoWorldRect_mAD251DCFF30BEC3F7CAE9E6714BAF784E80F59FE (void);
-// 0x00000D6C UnityEngine.Vector2 FunkyCode.LightShape.Base::GetPivotPoint_ShapeCenter()
+// 0x00000D74 UnityEngine.Vector2 FunkyCode.LightShape.Base::GetPivotPoint_ShapeCenter()
 extern void Base_GetPivotPoint_ShapeCenter_m1B3AADC7E57430FFBBB6856EEC59C1BAC1F06C03 (void);
-// 0x00000D6D UnityEngine.Vector2 FunkyCode.LightShape.Base::GetPivotPoint_TransformCenter()
+// 0x00000D75 UnityEngine.Vector2 FunkyCode.LightShape.Base::GetPivotPoint_TransformCenter()
 extern void Base_GetPivotPoint_TransformCenter_mD5D9D797A640227AA3C3D996AF690605FA7D077C (void);
-// 0x00000D6E UnityEngine.Vector2 FunkyCode.LightShape.Base::GetPivotPoint_LowestY()
+// 0x00000D76 UnityEngine.Vector2 FunkyCode.LightShape.Base::GetPivotPoint_LowestY()
 extern void Base_GetPivotPoint_LowestY_m2A044AA9F78960373CD40119B44F0FF4DDAB80A8 (void);
-// 0x00000D6F System.Void FunkyCode.LightShape.Base::.ctor()
+// 0x00000D77 System.Void FunkyCode.LightShape.Base::.ctor()
 extern void Base__ctor_m0B2F128E7F35ECD7DDB068DD4406137B96A749AF (void);
-// 0x00000D70 FunkyCode.Utilities.Polygon2 FunkyCode.EventHandling.Base::GetPolygon()
+// 0x00000D78 FunkyCode.Utilities.Polygon2 FunkyCode.EventHandling.Base::GetPolygon()
 extern void Base_GetPolygon_mD12C9C3FEEDA4AEFAD7FDC77C057647CFCEE2404 (void);
-// 0x00000D71 System.Void FunkyCode.EventHandling.Base::.ctor()
+// 0x00000D79 System.Void FunkyCode.EventHandling.Base::.ctor()
 extern void Base__ctor_mD30153DF63C53ED44FE6F1C49EF2ABB8916669D6 (void);
-// 0x00000D72 System.Void FunkyCode.EventHandling.CollisionEvent2D::.ctor(System.Object,System.IntPtr)
+// 0x00000D7A System.Void FunkyCode.EventHandling.CollisionEvent2D::.ctor(System.Object,System.IntPtr)
 extern void CollisionEvent2D__ctor_mD6CC063AD36F685176446F8A560978AB4E989C73 (void);
-// 0x00000D73 System.Void FunkyCode.EventHandling.CollisionEvent2D::Invoke(FunkyCode.LightCollision2D)
+// 0x00000D7B System.Void FunkyCode.EventHandling.CollisionEvent2D::Invoke(FunkyCode.LightCollision2D)
 extern void CollisionEvent2D_Invoke_m5AE37A4322E0C8EC078A512E1EC5E7AD59B7F21D (void);
-// 0x00000D74 System.IAsyncResult FunkyCode.EventHandling.CollisionEvent2D::BeginInvoke(FunkyCode.LightCollision2D,System.AsyncCallback,System.Object)
+// 0x00000D7C System.IAsyncResult FunkyCode.EventHandling.CollisionEvent2D::BeginInvoke(FunkyCode.LightCollision2D,System.AsyncCallback,System.Object)
 extern void CollisionEvent2D_BeginInvoke_m1EF33B47A851797AD8D48654A5D3C6FF4C52EFDF (void);
-// 0x00000D75 System.Void FunkyCode.EventHandling.CollisionEvent2D::EndInvoke(System.IAsyncResult)
+// 0x00000D7D System.Void FunkyCode.EventHandling.CollisionEvent2D::EndInvoke(System.IAsyncResult)
 extern void CollisionEvent2D_EndInvoke_mB20CFCA0AD2F26DF6DCB281DB37F7044C1F7B54A (void);
-// 0x00000D76 System.Void FunkyCode.EventHandling.LightCollider::GetCollisions(System.Collections.Generic.List`1<FunkyCode.LightCollision2D>,FunkyCode.Light2D)
+// 0x00000D7E System.Void FunkyCode.EventHandling.LightCollider::GetCollisions(System.Collections.Generic.List`1<FunkyCode.LightCollision2D>,FunkyCode.Light2D)
 extern void LightCollider_GetCollisions_m2B05BFC4DA27C249908443A007F19B5DA27EBE37 (void);
-// 0x00000D77 System.Collections.Generic.List`1<FunkyCode.LightCollision2D> FunkyCode.EventHandling.LightCollider::RemoveHiddenPoints(System.Collections.Generic.List`1<FunkyCode.LightCollision2D>,FunkyCode.Light2D,FunkyCode.LightingSettings.EventPreset)
+// 0x00000D7F System.Collections.Generic.List`1<FunkyCode.LightCollision2D> FunkyCode.EventHandling.LightCollider::RemoveHiddenPoints(System.Collections.Generic.List`1<FunkyCode.LightCollision2D>,FunkyCode.Light2D,FunkyCode.LightingSettings.EventPreset)
 extern void LightCollider_RemoveHiddenPoints_m18028C017D3CBED80AFA64423E62DD283E0FF2B6 (void);
-// 0x00000D78 System.Void FunkyCode.EventHandling.LightCollider::.ctor()
+// 0x00000D80 System.Void FunkyCode.EventHandling.LightCollider::.ctor()
 extern void LightCollider__ctor_m89727A014328492C577C799652E814C2F94D4633 (void);
-// 0x00000D79 System.Void FunkyCode.EventHandling.LightCollider::.cctor()
+// 0x00000D81 System.Void FunkyCode.EventHandling.LightCollider::.cctor()
 extern void LightCollider__cctor_mF61A12005903CE6EC1CC80289BEA0AE42FE67F75 (void);
-// 0x00000D7A System.Collections.Generic.List`1<FunkyCode.LightCollision2D> FunkyCode.EventHandling.LightTilemap::RemoveHiddenPoints(System.Collections.Generic.List`1<FunkyCode.LightCollision2D>,FunkyCode.Light2D,FunkyCode.LightingSettings.EventPreset)
+// 0x00000D82 System.Collections.Generic.List`1<FunkyCode.LightCollision2D> FunkyCode.EventHandling.LightTilemap::RemoveHiddenPoints(System.Collections.Generic.List`1<FunkyCode.LightCollision2D>,FunkyCode.Light2D,FunkyCode.LightingSettings.EventPreset)
 extern void LightTilemap_RemoveHiddenPoints_m26299E38481E2E54B0D8E8B86017CE28020A9CE7 (void);
-// 0x00000D7B System.Void FunkyCode.EventHandling.LightTilemap::.ctor()
+// 0x00000D83 System.Void FunkyCode.EventHandling.LightTilemap::.ctor()
 extern void LightTilemap__ctor_m8B16A48580D3EFD8DCAC40D067D3D05A4640E987 (void);
-// 0x00000D7C System.Void FunkyCode.EventHandling.LightTilemap::.cctor()
+// 0x00000D84 System.Void FunkyCode.EventHandling.LightTilemap::.cctor()
 extern void LightTilemap__cctor_m9671E66148638343C23726D62265DDCE9D2F04F4 (void);
-// 0x00000D7D System.Void FunkyCode.EventHandling.Object::add_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x00000D85 System.Void FunkyCode.EventHandling.Object::add_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
 extern void Object_add_collisionEvents_mC6288F7C966B34ACD4FA7D3F4468D9F95CC51316 (void);
-// 0x00000D7E System.Void FunkyCode.EventHandling.Object::remove_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
+// 0x00000D86 System.Void FunkyCode.EventHandling.Object::remove_collisionEvents(FunkyCode.EventHandling.CollisionEvent2D)
 extern void Object_remove_collisionEvents_m6ABAF12FACCEF708C5F51D0E29924C6435E46465 (void);
-// 0x00000D7F System.Void FunkyCode.EventHandling.Object::Update(FunkyCode.Light2D,FunkyCode.LightingSettings.EventPreset)
+// 0x00000D87 System.Void FunkyCode.EventHandling.Object::Update(FunkyCode.Light2D,FunkyCode.LightingSettings.EventPreset)
 extern void Object_Update_m9F3641844E3E8642915B7A72C6E51B13196A6964 (void);
-// 0x00000D80 System.Void FunkyCode.EventHandling.Object::.ctor()
+// 0x00000D88 System.Void FunkyCode.EventHandling.Object::.ctor()
 extern void Object__ctor_m111777A0F7128300569C67A5DC853D35F43DF666 (void);
-// 0x00000D81 System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.LightTilemapCollider.Base::get_MapTiles()
+// 0x00000D89 System.Collections.Generic.List`1<FunkyCode.LightTile> FunkyCode.LightTilemapCollider.Base::get_MapTiles()
 extern void Base_get_MapTiles_m14349ED7A9C2651D9FD08DD737DD15491B4022C6 (void);
-// 0x00000D82 System.Boolean FunkyCode.LightTilemapCollider.Base::ShadowsDisabled()
+// 0x00000D8A System.Boolean FunkyCode.LightTilemapCollider.Base::ShadowsDisabled()
 extern void Base_ShadowsDisabled_mA40FEB6D771841663E0C64A3757C0F67F03E3D46 (void);
-// 0x00000D83 System.Boolean FunkyCode.LightTilemapCollider.Base::MasksDisabled()
+// 0x00000D8B System.Boolean FunkyCode.LightTilemapCollider.Base::MasksDisabled()
 extern void Base_MasksDisabled_mC3AB58F42B3CA63E7238191C4771E5A2EB51EC1E (void);
-// 0x00000D84 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Base::TileWorldPosition(FunkyCode.LightTile)
+// 0x00000D8C UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Base::TileWorldPosition(FunkyCode.LightTile)
 extern void Base_TileWorldPosition_m641B3CFE6358B301B971B342B602FF4D99146FED (void);
-// 0x00000D85 System.Single FunkyCode.LightTilemapCollider.Base::TileWorldRotation(FunkyCode.LightTile)
+// 0x00000D8D System.Single FunkyCode.LightTilemapCollider.Base::TileWorldRotation(FunkyCode.LightTile)
 extern void Base_TileWorldRotation_mB1B7EB3D44BA84659D50353498C228AA72D16B3C (void);
-// 0x00000D86 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Base::TileWorldScale()
+// 0x00000D8E UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Base::TileWorldScale()
 extern void Base_TileWorldScale_m60C51404A4ACDBAD2F2AB4F26D816E2365639FD4 (void);
-// 0x00000D87 FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Base::TilemapType()
+// 0x00000D8F FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Base::TilemapType()
 extern void Base_TilemapType_mAE203DCD9BE87C89E1C4AF181BA68828EF1ABFE0 (void);
-// 0x00000D88 FunkyCode.TilemapProperties FunkyCode.LightTilemapCollider.Base::get_Properties()
+// 0x00000D90 FunkyCode.TilemapProperties FunkyCode.LightTilemapCollider.Base::get_Properties()
 extern void Base_get_Properties_mE9ADFC96DEFA696120855F2F0922C45D57A2B25A (void);
-// 0x00000D89 System.Boolean FunkyCode.LightTilemapCollider.Base::IsPhysicsShape()
+// 0x00000D91 System.Boolean FunkyCode.LightTilemapCollider.Base::IsPhysicsShape()
 extern void Base_IsPhysicsShape_mD8249B92F7F078708409003D87C67CF20D10766C (void);
-// 0x00000D8A System.Void FunkyCode.LightTilemapCollider.Base::Initialize()
+// 0x00000D92 System.Void FunkyCode.LightTilemapCollider.Base::Initialize()
 extern void Base_Initialize_m706B406A6F86B7350095390AE2F5B787A9CFD998 (void);
-// 0x00000D8B System.Void FunkyCode.LightTilemapCollider.Base::SetGameObject(UnityEngine.GameObject)
+// 0x00000D93 System.Void FunkyCode.LightTilemapCollider.Base::SetGameObject(UnityEngine.GameObject)
 extern void Base_SetGameObject_mA0FA838A271DD7E0423B88FE569DB12A8E621F98 (void);
-// 0x00000D8C System.Boolean FunkyCode.LightTilemapCollider.Base::UpdateProperties()
+// 0x00000D94 System.Boolean FunkyCode.LightTilemapCollider.Base::UpdateProperties()
 extern void Base_UpdateProperties_mC22745424EB9DE120419BD8845C15281D89C675E (void);
-// 0x00000D8D System.Void FunkyCode.LightTilemapCollider.Base::ResetWorld()
+// 0x00000D95 System.Void FunkyCode.LightTilemapCollider.Base::ResetWorld()
 extern void Base_ResetWorld_mD68AEB137A13A1BCD7C7BC079608618FD92DCFB8 (void);
-// 0x00000D8E UnityEngine.Rect FunkyCode.LightTilemapCollider.Base::GetRect()
+// 0x00000D96 UnityEngine.Rect FunkyCode.LightTilemapCollider.Base::GetRect()
 extern void Base_GetRect_mDB55D054120FFB0D14A610145998509A6A808B68 (void);
-// 0x00000D8F System.Single FunkyCode.LightTilemapCollider.Base::GetRadius()
+// 0x00000D97 System.Single FunkyCode.LightTilemapCollider.Base::GetRadius()
 extern void Base_GetRadius_mC1B247FC727A75BA2FE23F70EEBE94F3B8918C39 (void);
-// 0x00000D90 System.Void FunkyCode.LightTilemapCollider.Base::.ctor()
+// 0x00000D98 System.Void FunkyCode.LightTilemapCollider.Base::.ctor()
 extern void Base__ctor_m356B98FE5A5B282B7B1BFD8045AE9D41ACD1239A (void);
-// 0x00000D91 FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Hexagon::TilemapType()
+// 0x00000D99 FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Hexagon::TilemapType()
 extern void Hexagon_TilemapType_m26C2D0C1FBED1EA69F8C812E559FB9A9A3E9DD3F (void);
-// 0x00000D92 System.Void FunkyCode.LightTilemapCollider.Hexagon::Initialize()
+// 0x00000D9A System.Void FunkyCode.LightTilemapCollider.Hexagon::Initialize()
 extern void Hexagon_Initialize_mDC9C89DA7C426ED0A9C8C7CFFE1070DCC1CA6D35 (void);
-// 0x00000D93 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Hexagon::TileWorldPosition(FunkyCode.LightTile)
+// 0x00000D9B UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Hexagon::TileWorldPosition(FunkyCode.LightTile)
 extern void Hexagon_TileWorldPosition_mEE7ED92059914CCBD2F8A4BE4D6B5918D892FB40 (void);
-// 0x00000D94 System.Single FunkyCode.LightTilemapCollider.Hexagon::TileWorldRotation(FunkyCode.LightTile)
+// 0x00000D9C System.Single FunkyCode.LightTilemapCollider.Hexagon::TileWorldRotation(FunkyCode.LightTile)
 extern void Hexagon_TileWorldRotation_mF2C806ECB4A07518A571626F5B91CB0A961D64FB (void);
-// 0x00000D95 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Hexagon::TileWorldScale()
+// 0x00000D9D UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Hexagon::TileWorldScale()
 extern void Hexagon_TileWorldScale_mF08C257ECCCC32D6B7CFC67076E81717546F7E9F (void);
-// 0x00000D96 System.Void FunkyCode.LightTilemapCollider.Hexagon::.ctor()
+// 0x00000D9E System.Void FunkyCode.LightTilemapCollider.Hexagon::.ctor()
 extern void Hexagon__ctor_m85E0DE8DB60A6691FD441203CB0F1E744BDEBD99 (void);
-// 0x00000D97 FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Isometric::TilemapType()
+// 0x00000D9F FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Isometric::TilemapType()
 extern void Isometric_TilemapType_m285384133298F969BA3CE93139A2300DF4B126BE (void);
-// 0x00000D98 System.Void FunkyCode.LightTilemapCollider.Isometric::Initialize()
+// 0x00000DA0 System.Void FunkyCode.LightTilemapCollider.Isometric::Initialize()
 extern void Isometric_Initialize_mA6B240AC239C0AC39C6689B7CD905876478174CD (void);
-// 0x00000D99 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Isometric::TileWorldPosition(FunkyCode.LightTile)
+// 0x00000DA1 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Isometric::TileWorldPosition(FunkyCode.LightTile)
 extern void Isometric_TileWorldPosition_mB539F8853B983F35027A62D42FE8AA2EA2B4857B (void);
-// 0x00000D9A System.Single FunkyCode.LightTilemapCollider.Isometric::TileWorldRotation(FunkyCode.LightTile)
+// 0x00000DA2 System.Single FunkyCode.LightTilemapCollider.Isometric::TileWorldRotation(FunkyCode.LightTile)
 extern void Isometric_TileWorldRotation_mEE37406CA5F7296606C789B5F64F7B680FD9AE37 (void);
-// 0x00000D9B UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Isometric::TileWorldScale()
+// 0x00000DA3 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Isometric::TileWorldScale()
 extern void Isometric_TileWorldScale_m68AB1E307B7B1E42F5FE0D826DFC3E75A227D2A4 (void);
-// 0x00000D9C System.Boolean FunkyCode.LightTilemapCollider.Isometric::IsPhysicsShape()
+// 0x00000DA4 System.Boolean FunkyCode.LightTilemapCollider.Isometric::IsPhysicsShape()
 extern void Isometric_IsPhysicsShape_mD3D0DCEF95EAD629E91FF894DD2ABB0A44F64EE2 (void);
-// 0x00000D9D System.Void FunkyCode.LightTilemapCollider.Isometric::.ctor()
+// 0x00000DA5 System.Void FunkyCode.LightTilemapCollider.Isometric::.ctor()
 extern void Isometric__ctor_mE6A3926648613253E594601DE441AD85A5CD0F2E (void);
-// 0x00000D9E FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Rectangle::TilemapType()
+// 0x00000DA6 FunkyCode.LightTilemapCollider.MapType FunkyCode.LightTilemapCollider.Rectangle::TilemapType()
 extern void Rectangle_TilemapType_mE0A7F377138337A2D74FF4849DDF7E7E93D85837 (void);
-// 0x00000D9F UnityEngine.Tilemaps.ITilemap FunkyCode.LightTilemapCollider.Rectangle::GetITilemap(UnityEngine.Tilemaps.Tilemap)
+// 0x00000DA7 UnityEngine.Tilemaps.ITilemap FunkyCode.LightTilemapCollider.Rectangle::GetITilemap(UnityEngine.Tilemaps.Tilemap)
 extern void Rectangle_GetITilemap_mA23471D4BA9C6BC2FFF22A42E990EAC0E36CD2D6 (void);
-// 0x00000DA0 System.Boolean FunkyCode.LightTilemapCollider.Rectangle::IsPhysicsShape()
+// 0x00000DA8 System.Boolean FunkyCode.LightTilemapCollider.Rectangle::IsPhysicsShape()
 extern void Rectangle_IsPhysicsShape_m95BEC503C142A9B02EFF5B88036D7C99C93F40DB (void);
-// 0x00000DA1 System.Void FunkyCode.LightTilemapCollider.Rectangle::Initialize()
+// 0x00000DA9 System.Void FunkyCode.LightTilemapCollider.Rectangle::Initialize()
 extern void Rectangle_Initialize_m3BFF2E0DFECB2FACDE9D75BDA6A3CE08A6F53BE3 (void);
-// 0x00000DA2 System.Void FunkyCode.LightTilemapCollider.Rectangle::InitializeCompositeCollider()
+// 0x00000DAA System.Void FunkyCode.LightTilemapCollider.Rectangle::InitializeCompositeCollider()
 extern void Rectangle_InitializeCompositeCollider_m75D6EE9FEC2CC8F3F3C67D472AE7656A17A2C8A1 (void);
-// 0x00000DA3 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Rectangle::TileWorldPosition(FunkyCode.LightTile)
+// 0x00000DAB UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Rectangle::TileWorldPosition(FunkyCode.LightTile)
 extern void Rectangle_TileWorldPosition_m0647BC520D1FCEBF085A9C36E9AD9374EB0A4507 (void);
-// 0x00000DA4 System.Single FunkyCode.LightTilemapCollider.Rectangle::TileWorldRotation(FunkyCode.LightTile)
+// 0x00000DAC System.Single FunkyCode.LightTilemapCollider.Rectangle::TileWorldRotation(FunkyCode.LightTile)
 extern void Rectangle_TileWorldRotation_m190463119D3D8F1A437EDD78FA2DD5E6C8687023 (void);
-// 0x00000DA5 UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Rectangle::TileWorldScale()
+// 0x00000DAD UnityEngine.Vector2 FunkyCode.LightTilemapCollider.Rectangle::TileWorldScale()
 extern void Rectangle_TileWorldScale_m3D6F71DCA15439C19177C680D1177F25E5214E34 (void);
-// 0x00000DA6 System.Void FunkyCode.LightTilemapCollider.Rectangle::RefreshTile(UnityEngine.Vector3Int)
+// 0x00000DAE System.Void FunkyCode.LightTilemapCollider.Rectangle::RefreshTile(UnityEngine.Vector3Int)
 extern void Rectangle_RefreshTile_m3A3A7C777F681ADB4D78C79F5D009062AFC455B4 (void);
-// 0x00000DA7 FunkyCode.LightTile FunkyCode.LightTilemapCollider.Rectangle::GetTileToRefresh(UnityEngine.Vector3Int)
+// 0x00000DAF FunkyCode.LightTile FunkyCode.LightTilemapCollider.Rectangle::GetTileToRefresh(UnityEngine.Vector3Int)
 extern void Rectangle_GetTileToRefresh_m1820024B6AC81974F3045B46D6E7E9BE6F1F2B90 (void);
-// 0x00000DA8 System.Void FunkyCode.LightTilemapCollider.Rectangle::InitializeGrid()
+// 0x00000DB0 System.Void FunkyCode.LightTilemapCollider.Rectangle::InitializeGrid()
 extern void Rectangle_InitializeGrid_m0CB6BF3BC6AA44A5D4673ED41D861EDE405408EF (void);
-// 0x00000DA9 System.Boolean FunkyCode.LightTilemapCollider.Rectangle::GetTile(UnityEngine.Vector3Int)
+// 0x00000DB1 System.Boolean FunkyCode.LightTilemapCollider.Rectangle::GetTile(UnityEngine.Vector3Int)
 extern void Rectangle_GetTile_mDBDBD8C7D6733FB7D6D329D381E8146268F60FD7 (void);
-// 0x00000DAA System.Void FunkyCode.LightTilemapCollider.Rectangle::.ctor()
+// 0x00000DB2 System.Void FunkyCode.LightTilemapCollider.Rectangle::.ctor()
 extern void Rectangle__ctor_m8DE69374AE69345DBC802DDAA5ACE40C154D5F66 (void);
-// 0x00000DAB System.Void FunkyCode.Chunks.TilemapManager::Initialize()
+// 0x00000DB3 System.Void FunkyCode.Chunks.TilemapManager::Initialize()
 extern void TilemapManager_Initialize_m8C33BB538D743CD4A9510121DBEE9139056D92C0 (void);
-// 0x00000DAC System.Int32 FunkyCode.Chunks.TilemapManager::GetTiles(UnityEngine.Rect)
+// 0x00000DB4 System.Int32 FunkyCode.Chunks.TilemapManager::GetTiles(UnityEngine.Rect)
 extern void TilemapManager_GetTiles_m1F37CA1F9C72F357657FF18A9D4F002A11E6A5E0 (void);
-// 0x00000DAD System.Void FunkyCode.Chunks.TilemapManager::Update(System.Collections.Generic.List`1<FunkyCode.LightTile>,FunkyCode.LightTilemapCollider.Base)
+// 0x00000DB5 System.Void FunkyCode.Chunks.TilemapManager::Update(System.Collections.Generic.List`1<FunkyCode.LightTile>,FunkyCode.LightTilemapCollider.Base)
 extern void TilemapManager_Update_m877476ABCEF8328780BD30AF2772B962527603A1 (void);
-// 0x00000DAE System.Void FunkyCode.Chunks.TilemapManager::GenerateChunks(UnityEngine.Rect)
+// 0x00000DB6 System.Void FunkyCode.Chunks.TilemapManager::GenerateChunks(UnityEngine.Rect)
 extern void TilemapManager_GenerateChunks_m13A0779E313EC24D98AF66C02F64356B5D1A279E (void);
-// 0x00000DAF System.Void FunkyCode.Chunks.TilemapManager::GenerateSimple(UnityEngine.Rect)
+// 0x00000DB7 System.Void FunkyCode.Chunks.TilemapManager::GenerateSimple(UnityEngine.Rect)
 extern void TilemapManager_GenerateSimple_mECB96A8A3404CF150756AFE2E97F747020C75C78 (void);
-// 0x00000DB0 UnityEngine.Vector2Int FunkyCode.Chunks.TilemapManager::Transform(UnityEngine.Vector2)
+// 0x00000DB8 UnityEngine.Vector2Int FunkyCode.Chunks.TilemapManager::Transform(UnityEngine.Vector2)
 extern void TilemapManager_Transform_mD14E27E4B14252B818C8EDC35BE15388B75B6216 (void);
-// 0x00000DB1 UnityEngine.Vector2Int FunkyCode.Chunks.TilemapManager::TransformBounds(UnityEngine.Vector2)
+// 0x00000DB9 UnityEngine.Vector2Int FunkyCode.Chunks.TilemapManager::TransformBounds(UnityEngine.Vector2)
 extern void TilemapManager_TransformBounds_mDE706AEEDFFFD565A9616A0DCCC68B2761BEC5F6 (void);
-// 0x00000DB2 System.Void FunkyCode.Chunks.TilemapManager::.ctor()
+// 0x00000DBA System.Void FunkyCode.Chunks.TilemapManager::.ctor()
 extern void TilemapManager__ctor_mC30C31BC8877572720C7CF8B0ED5959470B9C3E4 (void);
-// 0x00000DB3 System.Void FunkyCode.Chunks.TilemapManager::.cctor()
+// 0x00000DBB System.Void FunkyCode.Chunks.TilemapManager::.cctor()
 extern void TilemapManager__cctor_m98743D751CB0BAFC64CB5731AA295AC210398B9D (void);
-// 0x00000DB4 System.Void Cainos.PixelArtTopDown_Basic.CameraFollow::Start()
+// 0x00000DBC System.Void Cainos.PixelArtTopDown_Basic.CameraFollow::Start()
 extern void CameraFollow_Start_mEBAAC53EB0EE4399F0882DAE9E8D040A25D296F8 (void);
-// 0x00000DB5 System.Void Cainos.PixelArtTopDown_Basic.CameraFollow::Update()
+// 0x00000DBD System.Void Cainos.PixelArtTopDown_Basic.CameraFollow::Update()
 extern void CameraFollow_Update_m3849E10F292871A111766EC01FF5A9602F8A9E86 (void);
-// 0x00000DB6 System.Void Cainos.PixelArtTopDown_Basic.CameraFollow::.ctor()
+// 0x00000DBE System.Void Cainos.PixelArtTopDown_Basic.CameraFollow::.ctor()
 extern void CameraFollow__ctor_m6C84D3D39B4314D45AC1232FF723AEFCBC17C266 (void);
-// 0x00000DB7 System.Void Cainos.PixelArtTopDown_Basic.LayerTrigger::OnTriggerExit2D(UnityEngine.Collider2D)
+// 0x00000DBF System.Void Cainos.PixelArtTopDown_Basic.LayerTrigger::OnTriggerExit2D(UnityEngine.Collider2D)
 extern void LayerTrigger_OnTriggerExit2D_m28B5601357810675FAE0FA71405D3E368FE451B2 (void);
-// 0x00000DB8 System.Void Cainos.PixelArtTopDown_Basic.LayerTrigger::.ctor()
+// 0x00000DC0 System.Void Cainos.PixelArtTopDown_Basic.LayerTrigger::.ctor()
 extern void LayerTrigger__ctor_m3E69EAFC4F2B44FBF7127B40DAD4C9841823979B (void);
-// 0x00000DB9 System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::OnTriggerEnter2D(UnityEngine.Collider2D)
+// 0x00000DC1 System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::OnTriggerEnter2D(UnityEngine.Collider2D)
 extern void PropsAltar_OnTriggerEnter2D_m6C0D4DC4347D56D38D3FAEB7DC5A5201D0DF4D8F (void);
-// 0x00000DBA System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::OnTriggerExit2D(UnityEngine.Collider2D)
+// 0x00000DC2 System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::OnTriggerExit2D(UnityEngine.Collider2D)
 extern void PropsAltar_OnTriggerExit2D_m783F3B467951EEDEE31D0A9B2D2122FB472E0ABA (void);
-// 0x00000DBB System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::Update()
+// 0x00000DC3 System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::Update()
 extern void PropsAltar_Update_m4FDE0804B99A4220F7688C3986205851F0654423 (void);
-// 0x00000DBC System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::.ctor()
+// 0x00000DC4 System.Void Cainos.PixelArtTopDown_Basic.PropsAltar::.ctor()
 extern void PropsAltar__ctor_m69DFF48A670641BE43D3E0497CFB2C4E4236F9A4 (void);
-// 0x00000DBD System.Void Cainos.PixelArtTopDown_Basic.SpriteColorAnimation::Start()
+// 0x00000DC5 System.Void Cainos.PixelArtTopDown_Basic.SpriteColorAnimation::Start()
 extern void SpriteColorAnimation_Start_m2ACC54988A8F1FFA29F523C931AB47A000136DDB (void);
-// 0x00000DBE System.Void Cainos.PixelArtTopDown_Basic.SpriteColorAnimation::Update()
+// 0x00000DC6 System.Void Cainos.PixelArtTopDown_Basic.SpriteColorAnimation::Update()
 extern void SpriteColorAnimation_Update_mEF8C45000A30E791203FE33B5EC460477968247D (void);
-// 0x00000DBF System.Void Cainos.PixelArtTopDown_Basic.SpriteColorAnimation::.ctor()
+// 0x00000DC7 System.Void Cainos.PixelArtTopDown_Basic.SpriteColorAnimation::.ctor()
 extern void SpriteColorAnimation__ctor_m81B06070713CAEF2840EC022D87AEFD3A0256A74 (void);
-// 0x00000DC0 System.Void Cainos.PixelArtTopDown_Basic.TopDownCharacterController::Start()
+// 0x00000DC8 System.Void Cainos.PixelArtTopDown_Basic.TopDownCharacterController::Start()
 extern void TopDownCharacterController_Start_m2855683618F1BA5D03F12D7163C48F7BDECBCDC8 (void);
-// 0x00000DC1 System.Void Cainos.PixelArtTopDown_Basic.TopDownCharacterController::Update()
+// 0x00000DC9 System.Void Cainos.PixelArtTopDown_Basic.TopDownCharacterController::Update()
 extern void TopDownCharacterController_Update_m133706DB4F79355D977D674656D297E93238336C (void);
-// 0x00000DC2 System.Void Cainos.PixelArtTopDown_Basic.TopDownCharacterController::.ctor()
+// 0x00000DCA System.Void Cainos.PixelArtTopDown_Basic.TopDownCharacterController::.ctor()
 extern void TopDownCharacterController__ctor_m8D0CDD0BDFC8B4BD4BC47085188958FF2CD07BAE (void);
-static Il2CppMethodPointer s_methodPointers[3522] = 
+static Il2CppMethodPointer s_methodPointers[3530] = 
 {
 	AdvancedRuleTile_FillRules_mE2E5296507C4E72C67759CA45F8E9457F9F2A899,
 	AdvancedRuleTile_RuleMatch_m57BECF02F5C53A90C1B2FD079F2237BA89A6B7DB,
@@ -7154,42 +7170,42 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	GridGraphics_TimeFromSpeed_mBE3E4C1914F46669D1E98DDADCBA96A3A29C3EA9,
 	GridGraphics_TileLerp_mCE1CDD9F8529207808566A014914D9B0106E285B,
 	GridGraphics_FlashAnimation_m2AB1FF7710F3118CF577D01AFA6E0BE68D90472A,
-	U3CLerpPositionU3Ed__16__ctor_m8B4C2280C31570B8DB92268D96E4B6628E5A7D43,
-	U3CLerpPositionU3Ed__16_System_IDisposable_Dispose_m33BDB787B68150225DA82BD0F2799F13EA2A68CD,
-	U3CLerpPositionU3Ed__16_MoveNext_m90D1CFBC805DFC0F269889B21611E35F5A526365,
-	U3CLerpPositionU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m484E482F275E2FAE4C93D43DFDA019A7D2CD03C2,
-	U3CLerpPositionU3Ed__16_System_Collections_IEnumerator_Reset_mE802D93B5A416CEE2B79A5098DFB65F19565421F,
-	U3CLerpPositionU3Ed__16_System_Collections_IEnumerator_get_Current_m9CA68A1FC616FF0954034051699A35D494F15924,
-	U3CRollToPositionU3Ed__18__ctor_m726F4BD13B5B5C1FCCA51F1F95305AED832B75AD,
-	U3CRollToPositionU3Ed__18_System_IDisposable_Dispose_m6606460DBD17C39AB99DB33CA529D458FA884298,
-	U3CRollToPositionU3Ed__18_MoveNext_mEB89A66FDBEA53DE06A2ECDE8506E2E09831FAAC,
-	U3CRollToPositionU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m72A2ED7BCD4A41D05AE2784EB1DE2FA9C29A182F,
-	U3CRollToPositionU3Ed__18_System_Collections_IEnumerator_Reset_m1CA99B539E5A5CE0A423B0AA10A47C65FA8F8D9B,
-	U3CRollToPositionU3Ed__18_System_Collections_IEnumerator_get_Current_mA90452A1144D580D765033A0FBE532D0BDCC600E,
-	U3CNudgeSpringU3Ed__19__ctor_m4C87AE80F707F2D5C8618E00B79C5ABD24B0F14D,
-	U3CNudgeSpringU3Ed__19_System_IDisposable_Dispose_m306B882D5159FB7F159849398C02A837C8D83390,
-	U3CNudgeSpringU3Ed__19_MoveNext_mF40FE819ED015EFAB2BC8F4F87927880C2C57427,
-	U3CNudgeSpringU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD442A28D43421797785E0B15B71456487AA6349F,
-	U3CNudgeSpringU3Ed__19_System_Collections_IEnumerator_Reset_m4498A94564F3AD6DD287F2937CA9C44846D2EFE2,
-	U3CNudgeSpringU3Ed__19_System_Collections_IEnumerator_get_Current_mCD584252F6AB06F6D8B3C20DBFC9A2EE42C2CE4F,
-	U3CLerpPositionSpringU3Ed__20__ctor_m6FAEDB5F2C3CD7379B3D824018BB6C8B7E58D6FE,
-	U3CLerpPositionSpringU3Ed__20_System_IDisposable_Dispose_mC713F6FC4248C385BB37635DB59EA4286F9C500B,
-	U3CLerpPositionSpringU3Ed__20_MoveNext_m454D9099B85F6AD2EDA6759F30C30D48EE903BE0,
-	U3CLerpPositionSpringU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m91650D2CCBCA8DE236BF99746CA39F9871BBFEFF,
-	U3CLerpPositionSpringU3Ed__20_System_Collections_IEnumerator_Reset_mAB98AD8A4C9153DF179CEE780FC19D3F64BAD1DE,
-	U3CLerpPositionSpringU3Ed__20_System_Collections_IEnumerator_get_Current_m61A2DE194D3E07C920DE78F961AB91128A1D966F,
-	U3CTileLerpU3Ed__22__ctor_m571C75DAC264E5BC924D4AC8D7B1F0BC3A0282AE,
-	U3CTileLerpU3Ed__22_System_IDisposable_Dispose_mE3D809A6252DF68C0F2CA69DC8BA07B9B38B70FB,
-	U3CTileLerpU3Ed__22_MoveNext_m644D5258AF386A38D5A38DA173DCD739506A8114,
-	U3CTileLerpU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB7E73B142A12BA4D83BFE5A8CE1BC25C044BDE1F,
-	U3CTileLerpU3Ed__22_System_Collections_IEnumerator_Reset_m2544ADBD825F71541D4CFDC3CAB532C784834465,
-	U3CTileLerpU3Ed__22_System_Collections_IEnumerator_get_Current_m837557238DD9637A8739B21A782E35779DC29137,
-	U3CFlashAnimationU3Ed__23__ctor_m63E4C22FAB50051CD7D5880BB7230D9BCB060E39,
-	U3CFlashAnimationU3Ed__23_System_IDisposable_Dispose_mE57E53376C1AA5060071D89874CD3EF11187A751,
-	U3CFlashAnimationU3Ed__23_MoveNext_mFA710068FEE51F385463E617E79BB071D57984C9,
-	U3CFlashAnimationU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3C9037F9E1517168D8560C5A501D65D90250028F,
-	U3CFlashAnimationU3Ed__23_System_Collections_IEnumerator_Reset_m19F48A856ED7DFECE2759ED459BDC6F870A36116,
-	U3CFlashAnimationU3Ed__23_System_Collections_IEnumerator_get_Current_m8C8A3F3E1090585451F9847EAC13EC956CEBCC1C,
+	U3CLerpPositionU3Ed__17__ctor_mF5B812E0BF9EE3290ECC9E516F52285D67ECFEDE,
+	U3CLerpPositionU3Ed__17_System_IDisposable_Dispose_m6D49758ABDE90470C9A6B12ED433E09F274064C2,
+	U3CLerpPositionU3Ed__17_MoveNext_m1FFA0B7B6E73E6F98205A65F58A5293F5076F098,
+	U3CLerpPositionU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1E57D98C2DBB4E62E0C3634E03912790BE8BF3BB,
+	U3CLerpPositionU3Ed__17_System_Collections_IEnumerator_Reset_m5FB498F2C724AC76FB1866086854FBA8E4C2DF51,
+	U3CLerpPositionU3Ed__17_System_Collections_IEnumerator_get_Current_m53800203EC2115BA4DB550B712542FF60712C5A0,
+	U3CRollToPositionU3Ed__19__ctor_mFD8D497B2EC0A9C54089ABBDD8D560D4DA746351,
+	U3CRollToPositionU3Ed__19_System_IDisposable_Dispose_m32B15FE8AA5AB77BAEBAC07EA817CA9162368770,
+	U3CRollToPositionU3Ed__19_MoveNext_mCE6260E77AF98563E10D56513017A8B0C1E3ACFA,
+	U3CRollToPositionU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEC97F388D384F5A45C61ED0CB7996DB50E752C03,
+	U3CRollToPositionU3Ed__19_System_Collections_IEnumerator_Reset_mDB130E02BA7DDE8D6343F369D2EDD06CCD9B6658,
+	U3CRollToPositionU3Ed__19_System_Collections_IEnumerator_get_Current_m5B25144E759CA19029DD936B193D1E6DC34F4008,
+	U3CNudgeSpringU3Ed__20__ctor_mE10DCDE359AC56B2195E22518461BC308F07AD5E,
+	U3CNudgeSpringU3Ed__20_System_IDisposable_Dispose_mA88905636C77F21A45BF2DE37058C5D0FA253EE2,
+	U3CNudgeSpringU3Ed__20_MoveNext_mAEB466C8A671ABB6A27D15DEA1C471813AC47BDB,
+	U3CNudgeSpringU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m35C17205BA9A2A5A5121A97B3F8E94A839CF3D56,
+	U3CNudgeSpringU3Ed__20_System_Collections_IEnumerator_Reset_m5B069B969B57C9CFADE613F9BF0FB50927ABCAAC,
+	U3CNudgeSpringU3Ed__20_System_Collections_IEnumerator_get_Current_m7393A6078EB2B20BD79B6B9EA7742CD618B7ACF7,
+	U3CLerpPositionSpringU3Ed__21__ctor_m7EC024E5AA2540C36A6048D4F9C56756D9A0139D,
+	U3CLerpPositionSpringU3Ed__21_System_IDisposable_Dispose_m0509224292E79545E3A8A5D19295E853B62D89C2,
+	U3CLerpPositionSpringU3Ed__21_MoveNext_m2504ACCCE2110AA6BD268DF3E777FBEC11148706,
+	U3CLerpPositionSpringU3Ed__21_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8A9505020EB43846EB7EDA11C82055EAF0B22C6E,
+	U3CLerpPositionSpringU3Ed__21_System_Collections_IEnumerator_Reset_m5F7377C4B53925AFC4DD586205AB0C5A7B71199C,
+	U3CLerpPositionSpringU3Ed__21_System_Collections_IEnumerator_get_Current_m3B3DBFC2E13107B16B89E7AE0213EBA707DB174E,
+	U3CTileLerpU3Ed__23__ctor_m5254F966CF81E56B7672B2BE20F04B8879694482,
+	U3CTileLerpU3Ed__23_System_IDisposable_Dispose_mDD7A6723D0D3B924B2B7E91B9942D69D953149EA,
+	U3CTileLerpU3Ed__23_MoveNext_m5651A060E8D193E9892188748214E624A0002079,
+	U3CTileLerpU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF50C86D2489AFE6BA2460D1FE3F39E88BB3A3E8A,
+	U3CTileLerpU3Ed__23_System_Collections_IEnumerator_Reset_m614C5E167170BDA80650A50CC6B8BB3EEF3F4D61,
+	U3CTileLerpU3Ed__23_System_Collections_IEnumerator_get_Current_mC9ACA76A7EE048308CC2AF2F725F33B669D64017,
+	U3CFlashAnimationU3Ed__24__ctor_mAF31998CF68D0DA54D8C41352B46C5B095F77F63,
+	U3CFlashAnimationU3Ed__24_System_IDisposable_Dispose_m8A28B90212D02294B707BCAAFB65516E40F338ED,
+	U3CFlashAnimationU3Ed__24_MoveNext_m86FCDB979811F040FDEE6A09A203568B4F78B892,
+	U3CFlashAnimationU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0357875AACB3F2B90166DB894DEC0AF58140BEEA,
+	U3CFlashAnimationU3Ed__24_System_Collections_IEnumerator_Reset_mA545D0418154187224E726E54B21CDA063BB2769,
+	U3CFlashAnimationU3Ed__24_System_Collections_IEnumerator_get_Current_m6D73B348B0C00CFB8CF64EE880C0C9E75BF41FEB,
 	GridManager_Awake_m663A059BFA9CB0F09507D270962932D937C78AE7,
 	GridManager_Initialize_m46FA360CAD74C6E408808F00E51CD58003096257,
 	GridManager_TickGame_mC2DE429CAEE909F14104260FED84009E847E3754,
@@ -7336,7 +7352,7 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	InventoryManager_UpdateInvetorySlots_m11D534F76A1A843064C19D691DBC328D54271B19,
 	InventoryManager_UpdateSkillSlotGraphics_m258D2BF6418F8E191C432EC2A98DE12E68C3E3D5,
 	InventoryManager_CreateSkillSlots_mF5A8E1E7900DEEA4940B4516F188F7AAA1B69D9F,
-	InventoryManager_UpdateInventory_m85B32CE8C31B6E843C4245BAAA5F6C3CB034A47A,
+	InventoryManager_UpdateInventory_m7BBB8CEF7DC99D0D823B47BD8619D4FC49B40861,
 	InventoryManager_AddSkill_m48CECD881943C9EDED8785FCAF4C9CCD36CC7011,
 	InventoryManager_CreateSkills_mEB2B0C94A36023B9E5A0180208CD5A26782E23B2,
 	InventoryManager__ctor_m82EA27C0BD3260DA5E2CF873EAF370D2E03D5D13,
@@ -7487,7 +7503,7 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	PathingManager_SwapPlacesSpring_m19BFBE0E3033B78B873F4411D08A108E0469024F,
 	PathingManager_MoveOneStep_mFAE0BAE97EB493ECB52333331D2305B9045A1E3D,
 	PathingManager_WalkAnimation_mA2EEA31D4B8725D36664CDB9A87A7FD651DD00FF,
-	PathingManager_MoveOneStepLeader_m7E81FB401CC9A5B59C9B5C8747213C0E0CF972B9,
+	PathingManager_MoveOneStepLeader_mCA57E0D0BFDF1D44EC4B8C7498C5AC1C21A7C429,
 	PathingManager_Jump_m391AFA5782E3700A6CE57490E8E6D1FC58B86C4D,
 	PathingManager_MovePosition_mEF6B30C222151EB1C418C07F3BBA8858E2B23FED,
 	PathingManager_Roll_m8B5853AD83648EA94E4830D6CA98BC2606D9A649,
@@ -8006,6 +8022,7 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	CharacterSpriteGenerator_ColourizeSprite_m7D1B6712A419A588BE82EEC7F9505C1C07F1C73B,
 	FloorManager_Awake_m89C18E059C58484EA987994B69D24F75529AF904,
 	FloorManager_IsWalkable_mC0E7C4D4F3DEF7544DB03A26622877C4ED7B64EE,
+	FloorManager_IsWalkableAndNoGO_m08F2BFB8E9381053B29A4C557AD12F8E0B721BA7,
 	FloorManager_IsWall_mB043B6E189341177F6895BAE998DB12A8D550368,
 	FloorManager__ctor_m7AA977075C58B22730E0F38740183F79D796C900,
 	GlobalValues_GetWaitSeconds_m1AF3CF16989088A1C12B29E5586573C569534791,
@@ -8024,18 +8041,19 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	MouseManager_Awake_m8436803D6C05A0AF1840170513568BC64B8540E3,
 	MouseManager_SelectItem_mAD91E78AD62F1BF603DA97F39170E138D4826662,
 	MouseManager_Update_mED479C9012C280EF4688D9C84AEF7E40CE04B55B,
+	MouseManager_OnMouseDown_m8BBBB146017F79A5FF5AF1FACF8A1083885CE52F,
 	MouseManager_AddTarget_m81E4255B7B859D3A97FA614240957D076912F3E8,
 	MouseManager_SetMode_mD68147B960B05951D80757F91AA1264A96A5BEA8,
 	MouseManager_Inspect_m48EC6E9CE12F9C8B90D820D8C19595E5F4221AAC,
 	MouseManager_PlayerActionsOrder_m0417B0BB939140861AB6D2C0FF91C37D1DAEF222,
-	MouseManager_SwapPositionWithAllyDuringCombat_m73F9F986B74460E26BBBDC6D68764FB4B650C7F2,
-	MouseManager_UseItem_m0DCB7CD0B92CDACC6654B37FE64C5E439A30F862,
+	MouseManager_SwapPositionWithAllyDuringCombat_mC1A14A1FA19319E601C75E7707A1F3C7EAC77728,
+	MouseManager_UseItem_m86A4EA9974606A417AF22723CD8C733BD29468A0,
 	MouseManager_Attack_mA4046A87A1F392C4E892C83BC98F5D04A8A02429,
 	MouseManager_WaitOrPickUpItem_m4EE3CF0B19B0018D9CB9FCF7A62E371FF56185B2,
 	MouseManager_WalkLeader_mD7DDED3FA899CC52F509697D0576F5DC40BA4948,
 	MouseManager_Walk_mB3FF3C3E7E57FF0B8472B91064CF9595D32D16F2,
 	MouseManager_ChangeActionPoints_mFD43E8CF4746EF1CAC13ABD736AA93D7C69A99B9,
-	MouseManager_EndOfAction_m83BE1A060EB06A0E93CFC9268C994575AA6CB094,
+	MouseManager_EndOfAction_m64E0F2B2E43BBC32413D3D98CBACC1F8123C6249,
 	MouseManager_EndOfActionFinal_m3A1715E1420D779A01C169C91B008DFDA89CDAF0,
 	MouseManager_RepeatDelay_m2558B65C58067022289FA7E4D2B2E4D0D8F58103,
 	MouseManager_Repeat_mBC827AC8AD2A0C00D16CB06121B224C418DF29B7,
@@ -8043,12 +8061,12 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	MouseManager_CheckMouseValidity_mE588FF9066ADA35215A388C8E316580AB94A58DE,
 	MouseManager_UpdateHightlight_mB372203D1D1BD64AA99B376FE9513D8DB6BB636E,
 	MouseManager__ctor_m7740CE6641B9764E619CD8F6908648F8EE800FAD,
-	U3CRepeatDelayU3Ed__32__ctor_m494011C0D3D135BCF71AA3E21CBE7AAB96AF21FB,
-	U3CRepeatDelayU3Ed__32_System_IDisposable_Dispose_m300F8FCE3EEFF304712CDE96811C99FC410BB475,
-	U3CRepeatDelayU3Ed__32_MoveNext_mE5CE7D1DBB03728635442F4A9911AD05A4AC2A2B,
-	U3CRepeatDelayU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4FDBEEE8C3C0B7CF923D5D801D2168A6792FC759,
-	U3CRepeatDelayU3Ed__32_System_Collections_IEnumerator_Reset_mF8066B4E06159864EA4F0116CBF18202FFDD4F0A,
-	U3CRepeatDelayU3Ed__32_System_Collections_IEnumerator_get_Current_m63990CEE17AA41CDE63A979E90E564DFEF5E8801,
+	U3CRepeatDelayU3Ed__34__ctor_m0ED4605F71E6CD5EEC0BE708535346C45CBD9FF7,
+	U3CRepeatDelayU3Ed__34_System_IDisposable_Dispose_mA06263B97AB8655300AC25077BB1936038710E86,
+	U3CRepeatDelayU3Ed__34_MoveNext_mF9CF96BC87E4C7564A534C361290543F65E69335,
+	U3CRepeatDelayU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2E7BFDEBA38696FDBD383238878434F8B922E783,
+	U3CRepeatDelayU3Ed__34_System_Collections_IEnumerator_Reset_mDAEE4F11FEA72677348B4B4A2B2C513A00779EB8,
+	U3CRepeatDelayU3Ed__34_System_Collections_IEnumerator_get_Current_mCF4BD37E0A4996B75567A94DB8A9C65BB116BBB1,
 	NPCSearch_OnEnable_m6FB7364E01FD171E5EBAE410240B21B7D3293270,
 	NPCSearch_Search_mF139E0EFB0568385E934BBE3454D5BA3C401626E,
 	NPCSearch__ctor_m6AFD37C974E3508BEAB4F6D878620DBED90F5A85,
@@ -8081,6 +8099,9 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	U3CU3Ec__DisplayClass27_1_U3CArrangeEnemyPartyBasedOnPathU3Eb__1_m90B4771783DCADD22D78FBFCBE01C26DE2FEC2C0,
 	U3CU3Ec__DisplayClass27_1_U3CArrangeEnemyPartyBasedOnPathU3Eb__2_m8BD3869A3E6124C7882433F4B131507293A4C4B1,
 	SmoothCamera_Awake_m75D40561645114488A131364379CE2255761F13F,
+	SmoothCamera_OnEnable_m83005D1509BE885FABC0849407533EE1784A2AA1,
+	SmoothCamera_OnDisable_mE1A60CFDF8C49957F1ED5C549CD2A8966E9EA426,
+	SmoothCamera_DisableFollow_m8003B84EE6B170F40D8382264BFDF27307B02AAF,
 	SmoothCamera_LateUpdate_m7ACC7CA5B88F2724CB11568D7A9F75D661A0E711,
 	SmoothCamera_ActionZoomIn_m6CF65FED6D906444D823497EE75B077CC6A0BEB0,
 	SmoothCamera_IActionZoomIn_m76B85B0048DD38163C14B0D8EE1DFD9FD8DB0A4B,
@@ -8088,12 +8109,12 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	SmoothCamera_Update_m9FF6F2F2C4025179B6FB5238E6A74CA90ABDC235,
 	SmoothCamera_FixedUpdate_m718555E08F94553BE18B5CC3FB80638B219D3B61,
 	SmoothCamera__ctor_m7F985CCBB10438AEF7AF1EFCCF2476A61AA6C08E,
-	U3CIActionZoomInU3Ed__17__ctor_m403C06B8A0679DA52EB23CDF0D65CDB172148AE7,
-	U3CIActionZoomInU3Ed__17_System_IDisposable_Dispose_m642CD71B9013EB67279C6DF0309CD39A3A8AAC8B,
-	U3CIActionZoomInU3Ed__17_MoveNext_mB94B270ED5C3EBC156B214671540C4A120A693AF,
-	U3CIActionZoomInU3Ed__17_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m842EE1E37FDE2C2E6AE0375B5463A7F9484134FF,
-	U3CIActionZoomInU3Ed__17_System_Collections_IEnumerator_Reset_m5FD1EDE102F54DC1411A0B597A2FB2B37F7059FC,
-	U3CIActionZoomInU3Ed__17_System_Collections_IEnumerator_get_Current_mC32B156281D69C79E1516362D7DBC49476800AD2,
+	U3CIActionZoomInU3Ed__20__ctor_m0E56739F0D28681A138689EA63F59DBD7A42ACA4,
+	U3CIActionZoomInU3Ed__20_System_IDisposable_Dispose_mA57FB639F541EFCB33C69A3A8FA55D826E491F2B,
+	U3CIActionZoomInU3Ed__20_MoveNext_m4AF2766E0A2E5F61313E84E06523236A9D0D7B1D,
+	U3CIActionZoomInU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDEB3E7D192D41E1EBBE4477E12F8EADDC56909FA,
+	U3CIActionZoomInU3Ed__20_System_Collections_IEnumerator_Reset_m50977AC701AFA2A4A13EF04425FCFCDEC643EDB9,
+	U3CIActionZoomInU3Ed__20_System_Collections_IEnumerator_get_Current_mEC52EA96330B3626C85ADB33EB007ECF1522C1C3,
 	SOAttribute__ctor_m6232E3A190E7BDCF490CD5057430692BFDD29A0B,
 	Stats_ResetTempStats_mEEF85BF4FA2A8A8E6676CF52B08AB7CCD8C9CCC6,
 	Stats_OnEnable_m03B40D610EE92F7CB669B4A66966C51192F3FDF6,
@@ -8447,6 +8468,9 @@ static Il2CppMethodPointer s_methodPointers[3522] =
 	Move__ctor_m431383ED8BD8063E9F94D0BEE225602C2046E152,
 	MyCube_SetColor_m7A1D4B22388206B237461C42EF4AC0EB6641C9E0,
 	MyCube__ctor_m60A5F1B379C825E87A2DF63550B6A5CE828E752E,
+	LeanCameraZoom_LateUpdate_m1D0D4A8F54C39757B31DC5DCE823441553B270B8,
+	LeanCameraZoom_SetZoom_m985EF5D66C1C5F44EFA8B6803E4C42215F28F6AF,
+	LeanCameraZoom__ctor_m8B39113E17495F142437AC714E07289D6D15E74C,
 	BowyerWatson_CalcSuperTriangle_mE6A6173D3E25C44567C4699B4431B6C00EB7D7A7,
 	BowyerWatson_Triangulate_mCA07B236B46BB01FC501B1AC02D9B202F9C9146F,
 	U3CU3Ec__DisplayClass1_0__ctor_mA90B89AE7870D607F59E5C17DD61F48162E91AD3,
@@ -10533,2824 +10557,1237 @@ extern void SortObject__ctor_mF0EB888694FC4C3CE54B71BA037D0D34D7E71DC0_AdjustorT
 extern void SortObject_Compare_m3D3AC4C283896925117C7CCEB9574B0F48E50171_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[30] = 
 {
-	{ 0x060006D1, CameraLightmap__ctor_m7D558175B2A08AE350C8BA5FED97DD3CD8550463_AdjustorThunk },
-	{ 0x060006D2, CameraLightmap_GetMaterials_m8659077084A7E9AF901A288293E2D02DE84074EB_AdjustorThunk },
-	{ 0x060006D3, CameraLightmap_GetMaterial_m08180DBF1EB8DDF796294E473A92AB47FDF0041A_AdjustorThunk },
-	{ 0x060006D4, CameraSettings_get_Lightmaps_m1BACDAA4A71F003E9811571D06892E8DD2F0A8B0_AdjustorThunk },
-	{ 0x060006D5, CameraSettings_set_Lightmaps_m3383BEA9CE956B256749F4570CC43B6A38FEED07_AdjustorThunk },
-	{ 0x060006D6, CameraSettings_GetLightmap_m7A0B37F12FB35B36ECE7532E678488A8CD19EB2E_AdjustorThunk },
-	{ 0x060006D7, CameraSettings_GetTypeName_m484B59622140205D64BD7E5F9BEC693C3BA91448_AdjustorThunk },
-	{ 0x060006D8, CameraSettings_GetLayerId_m8E9C95825A3D1590B780313DB7E57890E2DDF898_AdjustorThunk },
-	{ 0x060006D9, CameraSettings__ctor_mB19AB0973210E507A8758E1EEF6DEE28471AA9D7_AdjustorThunk },
-	{ 0x060006DA, CameraSettings_GetCamera_m1B3591067ACC5A102EC00A6B7154FB62B322EAEC_AdjustorThunk },
-	{ 0x060006DB, CameraSettings_GetHashCode_m7EE817CCCDBA4FDC45C5C2A4DBCDA85E9EF2877F_AdjustorThunk },
-	{ 0x0600076B, LightCollision2D__ctor_m46417B132558A081EAF7553240A1FE3236C61ACC_AdjustorThunk },
-	{ 0x060007AE, SpriteTransform__ctor_m8C5BCCD58E556BDBD2ED704514DB300733E9C91E_AdjustorThunk },
-	{ 0x06000890, Pair2__ctor_mB59A72EB114EF28EA453943745627230767314C2_AdjustorThunk },
-	{ 0x06000AD1, FixedBitArray3_get_Item_mA084FDFBAE6BF93221583D00C7E11E692EAB3768_AdjustorThunk },
-	{ 0x06000AD2, FixedBitArray3_set_Item_mAB2D7E431AF9D0ADF66337175CBFE6F618185235_AdjustorThunk },
-	{ 0x06000AD3, FixedBitArray3_Contains_mD752A3BA6B90F64C49B3D9519316C2752E118285_AdjustorThunk },
-	{ 0x06000AD4, FixedBitArray3_IndexOf_m3DFD04CA30732B31868199DF0B80EC6FF05047E7_AdjustorThunk },
-	{ 0x06000AD5, FixedBitArray3_Clear_m3E93B2AC706412361D2EED721793F49FECBFC07A_AdjustorThunk },
-	{ 0x06000AD6, FixedBitArray3_Clear_m4CD45ECA86EE92D888EA77A54DE05483BCB9759F_AdjustorThunk },
-	{ 0x06000AD7, FixedBitArray3_Enumerate_m1AD3B0162E55A42D88069993B3E6E34CC1A4C950_AdjustorThunk },
-	{ 0x06000AD8, FixedBitArray3_GetEnumerator_m12A72A3886DD437D898E9F27879775A031256714_AdjustorThunk },
-	{ 0x06000AD9, FixedBitArray3_System_Collections_IEnumerable_GetEnumerator_m50AF62F6F306BCFBB17758CC681A68BB4F8B16F2_AdjustorThunk },
-	{ 0x06000C6C, SortObject__ctor_mE06028C580E3CAA21813C2FBAD0EE22421608D27_AdjustorThunk },
-	{ 0x06000C6D, SortObject_Compare_mFEB47543584219FC30C1132DE60745B80C441F9D_AdjustorThunk },
-	{ 0x06000C95, UVRect__ctor_mECEF9BB957400F6C340F15A98032FFD11541F834_AdjustorThunk },
-	{ 0x06000CA7, SortObject__ctor_mCC08AAA75B4F2661B3DE08C56E7F9D27454ED7C6_AdjustorThunk },
-	{ 0x06000CA8, SortObject_Compare_mA0A616525DCC43FA090443DD01BD6C617B9246A6_AdjustorThunk },
-	{ 0x06000D03, SortObject__ctor_mF0EB888694FC4C3CE54B71BA037D0D34D7E71DC0_AdjustorThunk },
-	{ 0x06000D04, SortObject_Compare_m3D3AC4C283896925117C7CCEB9574B0F48E50171_AdjustorThunk },
+	{ 0x060006D9, CameraLightmap__ctor_m7D558175B2A08AE350C8BA5FED97DD3CD8550463_AdjustorThunk },
+	{ 0x060006DA, CameraLightmap_GetMaterials_m8659077084A7E9AF901A288293E2D02DE84074EB_AdjustorThunk },
+	{ 0x060006DB, CameraLightmap_GetMaterial_m08180DBF1EB8DDF796294E473A92AB47FDF0041A_AdjustorThunk },
+	{ 0x060006DC, CameraSettings_get_Lightmaps_m1BACDAA4A71F003E9811571D06892E8DD2F0A8B0_AdjustorThunk },
+	{ 0x060006DD, CameraSettings_set_Lightmaps_m3383BEA9CE956B256749F4570CC43B6A38FEED07_AdjustorThunk },
+	{ 0x060006DE, CameraSettings_GetLightmap_m7A0B37F12FB35B36ECE7532E678488A8CD19EB2E_AdjustorThunk },
+	{ 0x060006DF, CameraSettings_GetTypeName_m484B59622140205D64BD7E5F9BEC693C3BA91448_AdjustorThunk },
+	{ 0x060006E0, CameraSettings_GetLayerId_m8E9C95825A3D1590B780313DB7E57890E2DDF898_AdjustorThunk },
+	{ 0x060006E1, CameraSettings__ctor_mB19AB0973210E507A8758E1EEF6DEE28471AA9D7_AdjustorThunk },
+	{ 0x060006E2, CameraSettings_GetCamera_m1B3591067ACC5A102EC00A6B7154FB62B322EAEC_AdjustorThunk },
+	{ 0x060006E3, CameraSettings_GetHashCode_m7EE817CCCDBA4FDC45C5C2A4DBCDA85E9EF2877F_AdjustorThunk },
+	{ 0x06000773, LightCollision2D__ctor_m46417B132558A081EAF7553240A1FE3236C61ACC_AdjustorThunk },
+	{ 0x060007B6, SpriteTransform__ctor_m8C5BCCD58E556BDBD2ED704514DB300733E9C91E_AdjustorThunk },
+	{ 0x06000898, Pair2__ctor_mB59A72EB114EF28EA453943745627230767314C2_AdjustorThunk },
+	{ 0x06000AD9, FixedBitArray3_get_Item_mA084FDFBAE6BF93221583D00C7E11E692EAB3768_AdjustorThunk },
+	{ 0x06000ADA, FixedBitArray3_set_Item_mAB2D7E431AF9D0ADF66337175CBFE6F618185235_AdjustorThunk },
+	{ 0x06000ADB, FixedBitArray3_Contains_mD752A3BA6B90F64C49B3D9519316C2752E118285_AdjustorThunk },
+	{ 0x06000ADC, FixedBitArray3_IndexOf_m3DFD04CA30732B31868199DF0B80EC6FF05047E7_AdjustorThunk },
+	{ 0x06000ADD, FixedBitArray3_Clear_m3E93B2AC706412361D2EED721793F49FECBFC07A_AdjustorThunk },
+	{ 0x06000ADE, FixedBitArray3_Clear_m4CD45ECA86EE92D888EA77A54DE05483BCB9759F_AdjustorThunk },
+	{ 0x06000ADF, FixedBitArray3_Enumerate_m1AD3B0162E55A42D88069993B3E6E34CC1A4C950_AdjustorThunk },
+	{ 0x06000AE0, FixedBitArray3_GetEnumerator_m12A72A3886DD437D898E9F27879775A031256714_AdjustorThunk },
+	{ 0x06000AE1, FixedBitArray3_System_Collections_IEnumerable_GetEnumerator_m50AF62F6F306BCFBB17758CC681A68BB4F8B16F2_AdjustorThunk },
+	{ 0x06000C74, SortObject__ctor_mE06028C580E3CAA21813C2FBAD0EE22421608D27_AdjustorThunk },
+	{ 0x06000C75, SortObject_Compare_mFEB47543584219FC30C1132DE60745B80C441F9D_AdjustorThunk },
+	{ 0x06000C9D, UVRect__ctor_mECEF9BB957400F6C340F15A98032FFD11541F834_AdjustorThunk },
+	{ 0x06000CAF, SortObject__ctor_mCC08AAA75B4F2661B3DE08C56E7F9D27454ED7C6_AdjustorThunk },
+	{ 0x06000CB0, SortObject_Compare_mA0A616525DCC43FA090443DD01BD6C617B9246A6_AdjustorThunk },
+	{ 0x06000D0B, SortObject__ctor_mF0EB888694FC4C3CE54B71BA037D0D34D7E71DC0_AdjustorThunk },
+	{ 0x06000D0C, SortObject_Compare_m3D3AC4C283896925117C7CCEB9574B0F48E50171_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[3522] = 
+static const int32_t s_InvokerIndices[3530] = 
 {
-	5937,
-	1626,
-	3408,
-	3408,
-	3408,
-	3408,
-	3408,
-	3408,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4722,
-	4722,
-	5937,
-	4750,
-	5812,
-	5937,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	4860,
-	1469,
-	1463,
-	1469,
-	2094,
-	1457,
-	2746,
-	5937,
-	2748,
-	2753,
-	5812,
-	5937,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	2119,
-	4248,
-	2118,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	3408,
-	3408,
-	5937,
-	5784,
-	5937,
-	5937,
-	819,
-	5937,
-	5937,
-	5937,
-	4750,
-	2097,
-	5812,
-	4242,
-	5937,
-	4750,
-	5867,
-	5937,
-	4860,
-	5937,
-	2420,
-	5937,
-	5937,
-	4257,
-	4242,
-	4416,
-	3408,
-	4750,
-	2654,
-	3408,
-	5937,
-	5937,
-	5812,
-	5937,
-	4750,
-	4750,
-	5937,
-	5812,
-	2177,
-	5937,
-	2081,
-	5812,
-	800,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	2753,
-	5937,
-	5937,
-	5937,
-	10865,
-	8641,
-	10035,
-	9800,
-	9800,
-	9593,
-	9593,
-	7218,
-	10034,
-	10034,
-	8479,
-	8479,
-	8255,
-	9800,
-	9800,
-	10051,
-	7673,
-	7622,
-	9593,
-	8255,
-	7422,
-	489,
-	4257,
-	2752,
-	4257,
-	1732,
-	1239,
-	1239,
-	2144,
-	2144,
-	2144,
-	1181,
-	2069,
-	2069,
-	1061,
-	1181,
-	4257,
-	4430,
-	2096,
-	5928,
-	2096,
-	4431,
-	2420,
-	20,
-	5937,
-	886,
-	822,
-	2082,
-	822,
-	823,
-	822,
-	1226,
-	427,
-	1202,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	1001,
-	5937,
-	5812,
-	5937,
-	5937,
-	4750,
-	2646,
-	5937,
-	5937,
-	5937,
-	5928,
-	5937,
-	5937,
-	5937,
-	5937,
-	4860,
-	5937,
-	2750,
-	4098,
-	5937,
-	1732,
-	2679,
-	5812,
-	4257,
-	1467,
-	1731,
-	2752,
-	4860,
-	4257,
-	4860,
-	5937,
-	3525,
-	4242,
-	4242,
-	4242,
-	2077,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4750,
-	3525,
-	2144,
-	1119,
-	1732,
-	2069,
-	1182,
-	800,
-	411,
-	512,
-	4257,
-	959,
-	4257,
-	4257,
-	2084,
-	4257,
-	4430,
-	1228,
-	1238,
-	1396,
-	4257,
-	5937,
-	4750,
-	4750,
-	5937,
-	4750,
-	5937,
-	5937,
-	4802,
-	5937,
-	3377,
-	4860,
-	5937,
-	5937,
-	2750,
-	1465,
-	2095,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	2661,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	1366,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	1335,
-	5937,
-	2445,
-	1335,
-	5937,
-	4019,
-	1893,
-	3408,
-	1469,
-	1469,
-	4750,
-	4750,
-	4242,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	1468,
-	1468,
-	2646,
-	1468,
-	1468,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	2661,
-	4750,
-	4750,
-	4750,
-	5937,
-	4750,
-	5937,
-	4750,
-	2679,
-	5937,
-	5937,
-	2646,
-	1396,
-	4750,
-	2661,
-	5937,
-	5937,
-	5937,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	1377,
-	4750,
-	4750,
-	2661,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5784,
-	5937,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4242,
-	489,
-	5937,
-	4242,
-	5937,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	1893,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4750,
-	1214,
-	5812,
-	4242,
-	5937,
-	4750,
-	5867,
-	5937,
-	4860,
-	5937,
-	2420,
-	5937,
-	4257,
-	4242,
-	5937,
-	5937,
-	1413,
-	2753,
-	2753,
-	2753,
-	1732,
-	2083,
-	1732,
-	1229,
-	1469,
-	1470,
-	2144,
-	1215,
-	1732,
-	1732,
-	1963,
-	1732,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	2074,
-	5937,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	2074,
-	5937,
-	201,
-	5937,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	201,
-	4750,
-	5937,
-	5937,
-	5812,
-	2074,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	2074,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	2074,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	201,
-	2661,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	2074,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	0,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	4750,
-	5812,
-	4242,
-	4242,
-	4242,
-	4242,
-	4242,
-	3408,
-	3408,
-	5937,
-	5937,
-	5937,
-	5937,
-	5724,
-	5812,
-	5937,
-	5937,
-	4722,
-	4662,
-	5724,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5724,
-	5937,
-	5937,
-	5724,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	1004,
-	5937,
-	1004,
-	4750,
-	5937,
-	1004,
-	5937,
-	0,
-	5937,
-	1005,
-	5937,
-	0,
-	1005,
-	0,
-	5937,
-	5937,
-	1004,
-	1893,
-	3408,
-	5812,
-	5937,
-	2750,
-	5937,
-	2750,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4860,
-	2750,
-	5937,
-	0,
-	5937,
-	5937,
-	5937,
-	5937,
-	2750,
-	4019,
-	5937,
-	5784,
-	1004,
-	4242,
-	1120,
-	5937,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	1004,
-	5937,
-	1004,
-	5937,
-	4860,
-	4860,
-	4860,
-	4860,
-	1731,
-	5937,
-	201,
-	5812,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	1005,
-	5937,
-	5937,
-	7089,
-	8453,
-	7204,
-	6792,
-	9787,
-	7580,
-	9787,
-	10018,
-	8453,
-	8453,
-	8453,
-	5937,
-	3525,
-	3525,
-	5937,
-	4248,
-	5937,
-	5812,
-	5812,
-	5937,
-	5937,
-	5812,
-	5937,
-	0,
-	0,
-	0,
-	0,
-	0,
-	5937,
-	4750,
-	5937,
-	4860,
-	4722,
-	4860,
-	4860,
-	548,
-	548,
-	548,
-	513,
-	1120,
-	1120,
-	296,
-	5937,
-	5937,
-	5812,
-	5937,
-	5928,
-	5724,
-	4860,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	5937,
-	1658,
-	1658,
-	8438,
-	4750,
-	5937,
-	4750,
-	5812,
-	4750,
-	5937,
-	5937,
-	5937,
-	5812,
-	4750,
-	4750,
-	5937,
-	2661,
-	2679,
-	4750,
-	5937,
-	5937,
-	1893,
-	5937,
-	3113,
-	3113,
-	5937,
-	5937,
-	1460,
-	1210,
-	5937,
-	5937,
-	5937,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	2526,
-	3408,
-	891,
-	1343,
-	2753,
-	4657,
-	1366,
-	4722,
-	5937,
-	5937,
-	4860,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	0,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4750,
-	4750,
-	4750,
-	4750,
-	5937,
-	5937,
-	1191,
-	4722,
-	4750,
-	4722,
-	4722,
-	4722,
-	5937,
-	4722,
-	4722,
-	4750,
-	1393,
-	5937,
-	5937,
-	2081,
-	5937,
-	10825,
-	5937,
-	5812,
-	5937,
-	4750,
-	4750,
-	5937,
-	10865,
-	8827,
-	8827,
-	8827,
-	8827,
-	10865,
-	10865,
-	10825,
-	10865,
-	4750,
-	5937,
-	5937,
-	5937,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	5937,
-	2711,
-	4330,
-	5937,
-	5867,
-	4802,
-	5867,
-	4802,
-	5925,
-	4857,
-	5925,
-	4857,
-	5925,
-	4857,
-	5925,
-	4857,
-	5925,
-	4857,
-	4417,
-	5937,
-	2743,
-	5937,
-	5867,
-	4802,
-	5867,
-	4802,
-	5927,
-	4859,
-	5927,
-	4859,
-	5927,
-	4859,
-	5927,
-	4859,
-	5927,
-	4859,
-	4426,
-	5937,
-	2748,
-	5937,
-	5937,
-	0,
-	0,
-	5937,
-	4859,
-	4765,
-	4244,
-	5937,
-	4859,
-	4256,
-	4765,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	4859,
-	4859,
-	4256,
-	4256,
-	5937,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	4255,
-	4857,
-	5937,
-	4857,
-	4255,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	1460,
-	4859,
-	1460,
-	4256,
-	4256,
-	5937,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	4722,
-	5937,
-	5724,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5724,
-	5724,
-	3459,
-	5937,
-	5724,
-	5724,
-	5724,
-	5724,
-	3459,
-	5724,
-	5724,
-	5724,
-	3459,
-	1110,
-	5724,
-	9858,
-	5937,
-	5937,
-	4750,
-	4750,
-	5937,
-	3408,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	3408,
-	3408,
-	5937,
-	5937,
-	5937,
-	4750,
-	4768,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5724,
-	5724,
-	3377,
-	4722,
-	4722,
-	5784,
-	5937,
-	10825,
-	4750,
-	5724,
-	5724,
-	5724,
-	3408,
-	5937,
-	5937,
-	5937,
-	3408,
-	5937,
-	5937,
-	5937,
-	5927,
-	3459,
-	3459,
-	5724,
-	3377,
-	3524,
-	5937,
-	4859,
-	5937,
-	5724,
-	5724,
-	5724,
-	3459,
-	5724,
-	3524,
-	5724,
-	5724,
-	5937,
-	5724,
-	5937,
-	5937,
-	5937,
-	5937,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	4802,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5724,
-	5937,
-	3408,
-	5937,
-	5724,
-	5724,
-	5724,
-	3459,
-	5724,
-	5937,
-	5937,
-	4750,
-	4750,
-	5937,
-	4657,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	2711,
-	2711,
-	5937,
-	1437,
-	5937,
-	9787,
-	9787,
-	5937,
-	3408,
-	5867,
-	2661,
-	3408,
-	5784,
-	5812,
-	8356,
-	2661,
-	9787,
-	8443,
-	2420,
-	3408,
-	5784,
-	5812,
-	8195,
-	8195,
-	1396,
-	3408,
-	5784,
-	5812,
-	3408,
-	3408,
-	3408,
-	3408,
-	5724,
-	5937,
-	5937,
-	5784,
-	5724,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5833,
-	3408,
-	5937,
-	10825,
-	5724,
-	5724,
-	5937,
-	5937,
-	5937,
-	5812,
-	5937,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4802,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4735,
-	5937,
-	5937,
-	5937,
-	5937,
-	4735,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10825,
-	5937,
-	5937,
-	5724,
-	4750,
-	4750,
-	5724,
-	4750,
-	4750,
-	4750,
-	4750,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	9784,
-	9784,
-	4735,
-	3408,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	9784,
-	9784,
-	5937,
-	5937,
-	5724,
-	5724,
-	3408,
-	4860,
-	5937,
-	5937,
-	5937,
-	5812,
-	5937,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5812,
-	4750,
-	4750,
-	4750,
-	5812,
-	5812,
-	5812,
-	10825,
-	5812,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	5724,
-	3408,
-	3408,
-	5926,
-	5724,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	5812,
-	5812,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	5937,
-	3408,
-	10825,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5937,
-	5937,
-	3408,
-	5937,
-	10865,
-	5937,
-	5937,
-	5812,
-	5937,
-	5937,
-	5812,
-	5812,
-	5867,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	4238,
-	10865,
-	10825,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10825,
-	5724,
-	5812,
-	10818,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5724,
-	5937,
-	2661,
-	2661,
-	5812,
-	5812,
-	5937,
-	10865,
-	5937,
-	5937,
-	9787,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	463,
-	5937,
-	5812,
-	5937,
-	1874,
-	5937,
-	5937,
-	5937,
-	4722,
-	5812,
-	5812,
-	5812,
-	4750,
-	3689,
-	5812,
-	3994,
-	4722,
-	5812,
-	5784,
-	5784,
-	5937,
-	3690,
-	2382,
-	10051,
-	8725,
-	10865,
-	4750,
-	4750,
-	5937,
-	10825,
-	10865,
-	6713,
-	10865,
-	10865,
-	5812,
-	10865,
-	9858,
-	9817,
-	9787,
-	4657,
-	5833,
-	5833,
-	5812,
-	5937,
-	10865,
-	5937,
-	3408,
-	4750,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5833,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	4750,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	5724,
-	5937,
-	5937,
-	4750,
-	5937,
-	0,
-	0,
-	0,
-	5812,
-	5812,
-	4750,
-	5937,
-	5937,
-	3429,
-	5833,
-	5784,
-	5784,
-	5833,
-	5812,
-	5812,
-	5812,
-	5925,
-	5724,
-	5937,
-	5724,
-	4657,
-	4857,
-	5925,
-	4857,
-	5925,
-	4802,
-	5867,
-	5937,
-	2661,
-	5937,
-	4750,
-	4657,
-	2668,
-	8455,
-	4750,
-	237,
-	5812,
-	4750,
-	5937,
-	5937,
-	5812,
-	5937,
-	5937,
-	1396,
-	5937,
-	5833,
-	5812,
-	5812,
-	5937,
-	4750,
-	5812,
-	1724,
-	5937,
-	5937,
-	4750,
-	4416,
-	4750,
-	4242,
-	4242,
-	5812,
-	5812,
-	9787,
-	5937,
-	10825,
-	5937,
-	10825,
-	10825,
-	10825,
-	5724,
-	4657,
-	4750,
-	4242,
-	4242,
-	4242,
-	5937,
-	10865,
-	5937,
-	5937,
-	9787,
-	4750,
-	5937,
-	5937,
-	5724,
-	4657,
-	4750,
-	4242,
-	4242,
-	5937,
-	10865,
-	10865,
-	10865,
-	5937,
-	4722,
-	4750,
-	5937,
-	5937,
-	5724,
-	5812,
-	5812,
-	5812,
-	5937,
-	5724,
-	5937,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	9787,
-	9787,
-	4750,
-	4750,
-	5812,
-	5937,
-	9787,
-	9787,
-	5937,
-	5937,
-	3408,
-	10865,
-	5937,
-	3408,
-	8824,
-	10029,
-	8824,
-	7232,
-	8803,
-	8803,
-	5937,
-	5937,
-	10021,
-	10028,
-	8640,
-	8640,
-	9858,
-	10026,
-	8633,
-	9858,
-	5937,
-	10825,
-	10023,
-	10026,
-	10051,
-	10051,
-	10051,
-	5937,
-	881,
-	1326,
-	5937,
-	5937,
-	5937,
-	2678,
-	5812,
-	9787,
-	5937,
-	974,
-	5812,
-	4750,
-	5724,
-	5937,
-	10865,
-	5937,
-	4858,
-	5937,
-	10865,
-	5724,
-	441,
-	10865,
-	5937,
-	7067,
-	5812,
-	5937,
-	5812,
-	5937,
-	5937,
-	10865,
-	8795,
-	5937,
-	5937,
-	5937,
-	5937,
-	10865,
-	6339,
-	10865,
-	10865,
-	7217,
-	10051,
-	7217,
-	7217,
-	7217,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	5724,
-	5784,
-	5937,
-	9615,
-	10803,
-	5937,
-	6276,
-	6440,
-	8276,
-	5937,
-	10801,
-	10825,
-	10825,
-	10825,
-	10818,
-	10818,
-	10045,
-	10803,
-	10057,
-	10845,
-	10051,
-	10865,
-	10825,
-	10825,
-	10865,
-	5812,
-	5937,
-	5937,
-	4242,
-	4242,
-	5937,
-	5937,
-	5937,
-	5937,
-	10825,
-	10825,
-	10825,
-	10825,
-	10825,
-	10825,
-	10825,
-	10825,
-	5937,
-	6188,
-	6811,
-	6365,
-	6811,
-	5937,
-	10865,
-	4722,
-	4750,
-	5937,
-	7895,
-	8795,
-	6583,
-	7096,
-	9787,
-	5937,
-	10865,
-	9795,
-	5937,
-	4750,
-	4750,
-	9787,
-	4750,
-	8453,
-	9787,
-	9787,
-	7577,
-	5937,
-	4419,
-	4750,
-	9787,
-	5812,
-	5867,
-	285,
-	546,
-	7586,
-	7095,
-	7586,
-	5937,
-	7586,
-	7095,
-	7586,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5833,
-	5812,
-	4242,
-	2738,
-	2706,
-	4750,
-	4722,
-	4750,
-	4750,
-	4857,
-	5724,
-	5937,
-	9799,
-	9799,
-	9799,
-	818,
-	1208,
-	4750,
-	4750,
-	4750,
-	4750,
-	4750,
-	3522,
-	9787,
-	9787,
-	8448,
-	9787,
-	8448,
-	5937,
-	10865,
-	9787,
-	9787,
-	8448,
-	8448,
-	5937,
-	10865,
-	8480,
-	9817,
-	8495,
-	9817,
-	9787,
-	9787,
-	9787,
-	5937,
-	9787,
-	5937,
-	9865,
-	8535,
-	7667,
-	7667,
-	8627,
-	8626,
-	8626,
-	8626,
-	8626,
-	1454,
-	8444,
-	8444,
-	7624,
-	9860,
-	8628,
-	7669,
-	10027,
-	10027,
-	9817,
-	9817,
-	8195,
-	8195,
-	8195,
-	8195,
-	8195,
-	8195,
-	8195,
-	9581,
-	9581,
-	8453,
-	8082,
-	6842,
-	6895,
-	8251,
-	8453,
-	8453,
-	7406,
-	7406,
-	7627,
-	8195,
-	8356,
-	10865,
-	6900,
-	5937,
-	2661,
-	2743,
-	8444,
-	8444,
-	10825,
-	2743,
-	10826,
-	4750,
-	4857,
-	2711,
-	4750,
-	5937,
-	4750,
-	4750,
-	4750,
-	3408,
-	3522,
-	3408,
-	4242,
-	5724,
-	5937,
-	5751,
-	5833,
-	4242,
-	3408,
-	4242,
-	4242,
-	9799,
-	9799,
-	9799,
-	818,
-	1208,
-	4242,
-	4242,
-	7893,
-	5812,
-	4242,
-	4242,
-	4242,
-	2093,
-	2087,
-	2741,
-	2710,
-	4857,
-	4750,
-	4750,
-	4750,
-	4750,
-	4750,
-	10865,
-	9787,
-	9787,
-	8448,
-	9787,
-	8448,
-	5937,
-	10865,
-	9787,
-	9787,
-	8448,
-	8448,
-	5937,
-	10865,
-	6585,
-	9817,
-	9787,
-	9787,
-	9787,
-	5937,
-	9787,
-	5937,
-	4750,
-	4750,
-	4750,
-	4750,
-	5812,
-	2196,
-	10825,
-	4750,
-	4857,
-	5812,
-	2196,
-	4750,
-	2196,
-	1288,
-	2196,
-	2196,
-	4750,
-	4750,
-	4688,
-	8302,
-	8302,
-	9780,
-	9651,
-	5925,
-	5927,
-	8453,
-	8453,
-	8455,
-	8455,
-	8455,
-	8455,
-	8453,
-	8453,
-	8453,
-	8453,
-	8453,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	10825,
-	5867,
-	5867,
-	5937,
-	4750,
-	4750,
-	5760,
-	5724,
-	4657,
-	1396,
-	4019,
-	4019,
-	4019,
-	3408,
-	1396,
-	4750,
-	5937,
-	4750,
-	5937,
-	2081,
-	4242,
-	4242,
-	4242,
-	4242,
-	4242,
-	5937,
-	2661,
-	5812,
-	5937,
-	4750,
-	4750,
-	4722,
-	4750,
-	2661,
-	5751,
-	5812,
-	1893,
-	3408,
-	3408,
-	3408,
-	2380,
-	2646,
-	2646,
-	2646,
-	3408,
-	3408,
-	3408,
-	2646,
-	2646,
-	2646,
-	1619,
-	1651,
-	1651,
-	1651,
-	10051,
-	10051,
-	10051,
-	10051,
-	7895,
-	10051,
-	10051,
-	8453,
-	7577,
-	7895,
-	7895,
-	7895,
-	7895,
-	7895,
-	7895,
-	7895,
-	7895,
-	7895,
-	7895,
-	7405,
-	6788,
-	6788,
-	6425,
-	6300,
-	6347,
-	8795,
-	8795,
-	8795,
-	8195,
-	9645,
-	9645,
-	8795,
-	8195,
-	7202,
-	2661,
-	4750,
-	4750,
-	5812,
-	4235,
-	4242,
-	4235,
-	4242,
-	4750,
-	5724,
-	5724,
-	5937,
-	2661,
-	5812,
-	4750,
-	5812,
-	4750,
-	5812,
-	4750,
-	5812,
-	4750,
-	5812,
-	4750,
-	4750,
-	5724,
-	5937,
-	5937,
-	1893,
-	5937,
-	959,
-	5812,
-	4750,
-	5812,
-	4750,
-	5784,
-	5937,
-	5724,
-	4657,
-	4750,
-	4750,
-	4750,
-	5937,
-	4750,
-	4750,
-	4242,
-	5937,
-	4750,
-	4750,
-	5937,
-	2081,
-	9696,
-	8195,
-	8195,
-	6883,
-	541,
-	6426,
-	7199,
-	7891,
-	7495,
-	10051,
-	7495,
-	10051,
-	7495,
-	10051,
-	7036,
-	9696,
-	8446,
-	9787,
-	5937,
-	1396,
-	5812,
-	4750,
-	5812,
-	4750,
-	5812,
-	4750,
-	5784,
-	5812,
-	4750,
-	4238,
-	5937,
-	4750,
-	3408,
-	3408,
-	5784,
-	8195,
-	8195,
-	5812,
-	522,
-	1874,
-	4750,
-	4750,
-	4722,
-	5937,
-	3408,
-	4242,
-	4242,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	1107,
-	1084,
-	1658,
-	1814,
-	4238,
-	2445,
-	5812,
-	4750,
-	5812,
-	4750,
-	5784,
-	5812,
-	4750,
-	5724,
-	4657,
-	5724,
-	4657,
-	5867,
-	4802,
-	5751,
-	4688,
-	5751,
-	5751,
-	5751,
-	5751,
-	5812,
-	4750,
-	1393,
-	5812,
-	5812,
-	4019,
-	4750,
-	1371,
-	2654,
-	2654,
-	2445,
-	3408,
-	3408,
-	2654,
-	4750,
-	3952,
-	5784,
-	4238,
-	2178,
-	5276,
-	4750,
-	7895,
-	4750,
-	4750,
-	4750,
-	5937,
-	5812,
-	3408,
-	5812,
-	5812,
-	5784,
-	5812,
-	4750,
-	5724,
-	4657,
-	5724,
-	4657,
-	5867,
-	4802,
-	5751,
-	4688,
-	5751,
-	5751,
-	5751,
-	5751,
-	5812,
-	4238,
-	2445,
-	5812,
-	4750,
-	4750,
-	4750,
-	5812,
-	4019,
-	4750,
-	4750,
-	4750,
-	1371,
-	2654,
-	2654,
-	2445,
-	3408,
-	4750,
-	3408,
-	2654,
-	4750,
-	4750,
-	5937,
-	4750,
-	4750,
-	4750,
-	5937,
-	3408,
-	4750,
-	2196,
-	5812,
-	4750,
-	5812,
-	4750,
-	9787,
-	9787,
-	5937,
-	4750,
-	4750,
-	5812,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	0,
-	5812,
-	4750,
-	5812,
-	4750,
-	5937,
-	2661,
-	5812,
-	4750,
-	5812,
-	4750,
-	5922,
-	2661,
-	5812,
-	5937,
-	8586,
-	5812,
-	4750,
-	5784,
-	4722,
-	5812,
-	4750,
-	5784,
-	4722,
-	5937,
-	0,
-	4750,
-	0,
-	4750,
-	5937,
-	5724,
-	4657,
-	5812,
-	5937,
-	4750,
-	0,
-	5751,
-	4688,
-	5751,
-	4688,
-	5922,
-	5812,
-	4750,
-	5724,
-	2196,
-	1287,
-	5812,
-	5784,
-	3408,
-	2196,
-	7648,
-	4750,
-	3408,
-	1651,
-	9787,
-	10865,
-	4750,
-	5724,
-	5937,
-	5937,
-	5812,
-	5812,
-	5937,
-	6883,
-	6883,
-	7497,
-	6412,
-	6882,
-	6210,
-	8195,
-	6127,
-	6271,
-	8302,
-	6425,
-	5937,
-	8432,
-	8432,
-	5937,
-	10865,
-	8436,
-	8436,
-	5937,
-	10865,
-	5812,
-	4750,
-	5812,
-	4750,
-	5812,
-	4750,
-	5724,
-	4657,
-	5724,
-	4657,
-	5867,
-	4802,
-	5751,
-	4688,
-	5751,
-	5751,
-	5751,
-	5751,
-	5812,
-	5784,
-	4238,
-	2445,
-	4750,
-	5812,
-	4019,
-	4750,
-	4750,
-	1371,
-	1082,
-	2654,
-	3408,
-	1038,
-	2445,
-	3408,
-	3408,
-	4722,
-	3408,
-	2654,
-	3408,
-	3408,
-	4750,
-	4750,
-	5937,
-	5724,
-	4750,
-	5784,
-	4750,
-	2661,
-	2661,
-	5937,
-	4750,
-	4750,
-	3408,
-	1658,
-	3408,
-	3408,
-	1715,
-	5784,
+	7010,
+	1834,
+	3918,
+	3918,
+	3918,
+	3918,
+	3918,
+	3918,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	5513,
+	5513,
+	7010,
 	5544,
-	5784,
-	4238,
-	3945,
-	5937,
-	5724,
-	4750,
-	4750,
-	3377,
-	2380,
-	3314,
-	3952,
-	5937,
-	4657,
-	5812,
-	5812,
-	5812,
-	4722,
-	5937,
-	5724,
-	5724,
-	5937,
-	5812,
-	5812,
-	5812,
+	6877,
+	7010,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	5659,
+	1657,
+	1650,
+	1657,
+	2405,
+	1644,
+	3172,
+	7010,
+	3175,
+	3180,
+	6877,
+	7010,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	2436,
+	4923,
+	2435,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	3918,
+	3918,
+	7010,
+	6846,
+	7010,
+	7010,
+	932,
+	7010,
+	7010,
+	7010,
+	5544,
+	2408,
+	6877,
+	4917,
+	7010,
+	5544,
+	6935,
+	7010,
+	5659,
+	7010,
+	2778,
+	7010,
+	7010,
+	4933,
+	4917,
+	5117,
+	3918,
+	5544,
+	3067,
+	3918,
+	7010,
+	7010,
+	6877,
+	7010,
+	5544,
+	5544,
+	7010,
+	6877,
+	2505,
+	7010,
+	2392,
+	6877,
+	908,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	3180,
+	7010,
+	7010,
+	7010,
+	12523,
+	10071,
+	11626,
+	11367,
+	11367,
+	11130,
+	11130,
+	8494,
+	11625,
+	11625,
+	9903,
+	9903,
+	9643,
+	11367,
+	11367,
+	11646,
+	9005,
+	8948,
+	11130,
+	9643,
+	8722,
+	539,
+	4933,
+	3179,
+	4933,
+	1958,
+	1407,
+	1407,
+	2468,
+	2468,
+	2468,
+	1335,
+	2377,
+	2377,
+	1201,
+	1335,
+	4933,
+	5132,
+	2407,
+	7001,
+	2407,
+	5133,
+	2778,
+	20,
+	7010,
+	1011,
+	935,
+	2393,
+	935,
+	936,
+	935,
+	1386,
+	464,
+	1357,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	1137,
+	7010,
+	6877,
+	7010,
+	7010,
+	5544,
+	3057,
+	7010,
+	7010,
+	7010,
+	7001,
+	7010,
+	7010,
+	7010,
+	7010,
+	5659,
+	7010,
+	3177,
+	4706,
+	7010,
+	1958,
+	3093,
+	6877,
+	4933,
+	1655,
+	1957,
+	3179,
+	5659,
+	4933,
+	5659,
+	7010,
+	4039,
+	4917,
+	4917,
+	4917,
+	2387,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5544,
+	4039,
+	2468,
+	1271,
+	1958,
+	2377,
+	1336,
+	908,
+	446,
+	563,
+	4933,
+	1092,
+	4933,
+	4933,
+	2395,
+	4933,
+	5132,
+	1388,
+	1406,
+	1579,
+	4933,
+	7010,
+	5544,
+	5544,
+	7010,
+	5544,
+	7010,
+	7010,
+	5598,
+	7010,
+	3884,
+	5659,
+	7010,
+	7010,
+	3177,
+	1653,
+	2406,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	3075,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	1544,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	1511,
+	7010,
+	2806,
+	1511,
+	7010,
+	4624,
+	2165,
+	3918,
+	1657,
+	1657,
+	5544,
+	5544,
+	4917,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	1656,
+	1656,
+	3057,
+	1656,
+	1656,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	3075,
+	5544,
+	5544,
+	5544,
+	7010,
+	5544,
+	5544,
+	5544,
+	3093,
+	7010,
+	7010,
+	3057,
+	1579,
+	5544,
+	3075,
+	7010,
+	7010,
+	7010,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	1557,
+	5544,
+	5544,
+	3075,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	6846,
+	7010,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	4917,
+	539,
+	7010,
+	4917,
+	7010,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	2165,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	5544,
+	1369,
+	6877,
+	4917,
+	7010,
+	5544,
+	6935,
+	7010,
+	5659,
+	7010,
+	2778,
+	7010,
+	4933,
+	4917,
+	7010,
+	7010,
+	1598,
+	3180,
+	3180,
+	3180,
+	1958,
+	2394,
+	1272,
+	1389,
+	1657,
+	1658,
+	2468,
+	1370,
+	1958,
+	1958,
+	2242,
+	1958,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	2384,
+	7010,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	2384,
+	7010,
+	204,
+	7010,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	204,
+	5544,
+	7010,
+	7010,
+	6877,
+	2384,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	2384,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	2384,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	204,
+	3075,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	2384,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	0,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	5544,
+	6877,
+	4917,
+	4917,
+	4917,
+	4917,
+	4917,
+	3918,
+	3918,
+	7010,
+	7010,
+	7010,
+	7010,
+	6770,
+	6877,
+	7010,
+	7010,
+	5513,
+	5439,
+	6770,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6770,
+	7010,
+	7010,
+	6770,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	1140,
+	7010,
+	1140,
+	5544,
+	7010,
+	1140,
+	7010,
+	0,
+	7010,
+	1141,
+	7010,
+	0,
+	1141,
+	0,
+	7010,
+	7010,
+	1140,
+	2165,
+	3918,
+	6877,
+	7010,
+	3177,
+	7010,
+	3177,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5659,
+	3177,
+	7010,
+	0,
+	7010,
+	7010,
+	7010,
+	7010,
+	3177,
+	4624,
+	7010,
+	6846,
+	1140,
+	4917,
+	1272,
+	7010,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	1140,
+	7010,
+	1140,
+	7010,
+	5659,
+	5659,
+	5659,
+	5659,
+	1957,
+	7010,
+	204,
+	6877,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	1141,
+	7010,
+	7010,
+	8345,
+	9871,
+	8476,
+	7980,
+	11352,
+	8900,
+	11352,
+	11609,
+	9871,
+	9871,
+	9871,
+	7010,
+	4039,
+	4039,
+	4039,
+	7010,
+	4923,
+	7010,
+	6877,
+	6877,
+	7010,
+	7010,
+	6877,
+	7010,
+	0,
+	0,
+	0,
+	0,
+	0,
+	7010,
+	5544,
+	7010,
+	7010,
+	5659,
+	5513,
+	5659,
+	5659,
+	308,
+	308,
+	603,
+	564,
+	1272,
+	1272,
+	307,
+	3075,
+	7010,
+	6877,
+	7010,
+	7001,
+	6770,
+	5659,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	7010,
+	1874,
+	1874,
+	9854,
+	5544,
+	7010,
+	5544,
+	6877,
+	5544,
+	7010,
+	7010,
+	7010,
+	6877,
+	5544,
+	5544,
+	7010,
+	3075,
+	3093,
+	5544,
+	7010,
+	7010,
+	2165,
+	7010,
+	3599,
+	3599,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	1647,
+	1365,
+	7010,
+	7010,
+	7010,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	2890,
+	3918,
+	1017,
+	1519,
+	3180,
+	5434,
+	1544,
+	5513,
+	7010,
+	7010,
+	5659,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	0,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	5544,
+	5544,
+	5544,
+	5544,
+	7010,
+	7010,
+	1345,
+	5513,
+	5544,
+	5513,
+	5513,
+	5513,
+	7010,
+	5513,
+	5513,
+	5544,
+	1575,
+	7010,
+	7010,
+	2392,
+	7010,
+	12474,
+	7010,
+	6877,
+	7010,
+	5544,
+	5544,
+	7010,
+	12523,
+	10315,
+	10315,
+	10315,
+	10315,
+	12523,
+	12523,
+	12474,
+	12523,
+	5544,
+	7010,
+	7010,
+	7010,
 	0,
 	0,
 	0,
@@ -13368,734 +11805,2329 @@ static const int32_t s_InvokerIndices[3522] =
 	0,
 	0,
 	0,
-	8165,
-	7388,
-	6864,
-	8295,
+	0,
+	0,
+	0,
+	0,
+	7010,
+	3131,
+	5021,
+	7010,
+	6935,
+	5598,
+	6935,
+	5598,
+	6998,
+	5656,
+	6998,
+	5656,
+	6998,
+	5656,
+	6998,
+	5656,
+	6998,
+	5656,
+	5118,
+	7010,
+	3168,
+	7010,
+	6935,
+	5598,
+	6935,
+	5598,
+	7000,
+	5658,
+	7000,
+	5658,
+	7000,
+	5658,
+	7000,
+	5658,
+	7000,
+	5658,
+	5128,
+	7010,
+	3175,
+	7010,
+	7010,
+	0,
+	0,
+	7010,
+	5658,
+	5561,
+	4919,
+	7010,
+	5658,
+	4932,
+	5561,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	5658,
+	5658,
+	4932,
+	4932,
+	7010,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	4931,
+	5656,
+	7010,
+	5656,
+	4931,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	1647,
+	5658,
+	1647,
+	4932,
+	4932,
+	7010,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	5513,
+	7010,
+	6770,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6770,
+	6770,
+	3971,
+	7010,
+	6770,
+	6770,
+	6770,
+	6770,
+	3971,
+	6770,
+	6770,
+	6770,
+	3971,
+	1262,
+	6770,
+	11446,
+	7010,
+	7010,
+	5544,
+	5544,
+	7010,
+	3918,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	3918,
+	3918,
+	7010,
+	7010,
+	7010,
+	5544,
+	5564,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6770,
+	6770,
+	3884,
+	5513,
+	5513,
+	6846,
+	7010,
+	12474,
+	5544,
+	6770,
+	6770,
+	6770,
+	3918,
+	7010,
+	7010,
+	7010,
+	3918,
+	7010,
+	7010,
+	7010,
+	7000,
+	3971,
+	3971,
+	6770,
+	3884,
+	4038,
+	7010,
+	5658,
+	7010,
+	6770,
+	6770,
+	6770,
+	3971,
+	6770,
+	4038,
+	6770,
+	6770,
+	7010,
+	6770,
+	7010,
+	7010,
+	7010,
+	7010,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	5598,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6770,
+	7010,
+	3918,
+	7010,
+	6770,
+	6770,
+	6770,
+	3971,
+	6770,
+	7010,
+	7010,
+	5544,
+	5544,
+	7010,
+	5434,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	3131,
+	3131,
+	7010,
+	1624,
+	7010,
+	7010,
+	5598,
+	7010,
+	11352,
+	11352,
+	7010,
+	3918,
+	6935,
+	3075,
+	3918,
+	6846,
+	6877,
+	9765,
+	3075,
+	11352,
+	9860,
+	2778,
+	3918,
+	6846,
+	6877,
+	9575,
+	9575,
+	1579,
+	3918,
+	6846,
+	6877,
+	3918,
+	3918,
+	3918,
+	3918,
+	6770,
+	7010,
+	7010,
+	6846,
+	6770,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	6901,
+	3918,
+	7010,
+	12474,
+	6770,
+	6770,
+	7010,
+	7010,
+	7010,
+	6877,
+	7010,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	5598,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	5527,
+	7010,
+	7010,
+	7010,
+	7010,
+	5527,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12474,
+	7010,
+	7010,
+	6770,
+	5544,
+	5544,
+	6770,
+	5544,
+	5544,
+	5544,
+	5544,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	11348,
+	11348,
+	5527,
+	3918,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	11348,
+	11348,
+	7010,
+	7010,
+	6770,
+	6770,
+	3918,
+	5659,
+	7010,
+	7010,
+	7010,
+	6877,
+	7010,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	6877,
+	5544,
+	5544,
+	5544,
+	6877,
+	6877,
+	6877,
+	12474,
+	6877,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	6770,
+	3918,
+	3918,
+	6999,
+	6770,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	6877,
+	6877,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	7010,
+	3918,
+	12474,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7010,
+	7010,
+	3918,
+	7010,
+	12523,
+	7010,
+	7010,
+	6877,
+	7010,
+	7010,
+	6877,
+	6877,
+	6935,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	4910,
+	12523,
+	12474,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12474,
+	6770,
+	6877,
+	12465,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6770,
+	7010,
+	3075,
+	3075,
+	6877,
+	6877,
+	7010,
+	12523,
+	7010,
+	7010,
+	11352,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	508,
+	7010,
+	6877,
+	7010,
+	2138,
+	7010,
+	7010,
+	7010,
+	5513,
+	6877,
+	6877,
+	6877,
+	5544,
+	4245,
+	6877,
+	4596,
+	5513,
+	6877,
+	6846,
+	6846,
+	7010,
+	4246,
+	2734,
+	11646,
+	10204,
+	12523,
+	5544,
+	5544,
+	7010,
+	12474,
+	12523,
+	7898,
+	12523,
+	12523,
+	6877,
+	12523,
+	11446,
+	11401,
+	11352,
+	5434,
+	6901,
+	6901,
+	6877,
+	7010,
+	12523,
+	7010,
+	3918,
+	5544,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	6901,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	5544,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	6770,
+	7010,
+	7010,
+	5544,
+	7010,
+	0,
+	0,
+	0,
+	6877,
+	6877,
+	5544,
+	7010,
+	7010,
+	3941,
+	6901,
+	6846,
+	6846,
+	6901,
+	6877,
+	6877,
+	6877,
+	6998,
+	6770,
+	7010,
+	6770,
+	5434,
+	5656,
+	6998,
+	5656,
+	6998,
+	5598,
+	6935,
+	7010,
+	3075,
+	7010,
+	5544,
+	5434,
+	3082,
+	9873,
+	5544,
+	244,
+	6877,
+	5544,
+	7010,
+	7010,
+	6877,
+	7010,
+	7010,
+	1579,
+	7010,
+	6901,
+	6877,
+	6877,
+	7010,
+	5544,
+	6877,
+	1950,
+	7010,
+	7010,
+	5544,
+	5117,
+	5544,
+	4917,
+	4917,
+	6877,
+	6877,
+	11352,
+	7010,
+	12474,
+	7010,
+	12474,
+	12474,
+	12474,
+	6770,
+	5434,
+	5544,
+	4917,
+	4917,
+	4917,
+	7010,
+	12523,
+	7010,
+	7010,
+	11352,
+	5544,
+	7010,
+	7010,
+	6770,
+	5434,
+	5544,
+	4917,
+	4917,
+	7010,
+	12523,
+	12523,
+	12523,
+	7010,
+	5513,
+	5544,
+	7010,
+	7010,
+	6770,
+	6877,
+	6877,
+	6877,
+	7010,
+	6770,
+	7010,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	11352,
+	11352,
+	5544,
+	5544,
+	6877,
+	7010,
+	11352,
+	11352,
+	7010,
+	7010,
+	3918,
+	12523,
+	7010,
+	3918,
+	10312,
+	11620,
+	10312,
+	8509,
+	10289,
+	10289,
+	7010,
+	7010,
+	11612,
+	11619,
+	10070,
+	10070,
+	11446,
+	11617,
+	10062,
+	11446,
+	7010,
+	12474,
+	11614,
+	11617,
+	11646,
+	11646,
+	11646,
+	7010,
+	1006,
+	1500,
+	7010,
+	7010,
+	7010,
+	3092,
+	6877,
+	11352,
+	7010,
+	1107,
+	6877,
+	5544,
+	6770,
+	7010,
+	12523,
+	7010,
+	5657,
+	7010,
+	12523,
+	6770,
+	481,
+	12523,
+	7010,
+	8320,
+	6877,
+	7010,
+	6877,
+	7010,
+	7010,
+	12523,
+	10281,
+	7010,
+	7010,
+	7010,
+	7010,
+	12523,
+	7480,
+	12523,
+	12523,
+	8493,
+	11646,
+	8493,
+	8493,
+	8493,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	6770,
+	6846,
+	7010,
+	11152,
+	12441,
+	7010,
+	7413,
+	7588,
+	9667,
+	7010,
+	12439,
+	12474,
+	12474,
+	12474,
+	12465,
+	12465,
+	11637,
+	12441,
+	11652,
+	12503,
+	11646,
+	12523,
+	12474,
+	12474,
+	12523,
+	6877,
+	7010,
+	7010,
+	4917,
+	4917,
+	7010,
+	7010,
+	7010,
+	7010,
+	12474,
+	12474,
+	12474,
+	12474,
+	12474,
+	12474,
+	12474,
+	12474,
+	7010,
+	7317,
+	7999,
+	7506,
+	7999,
+	7010,
+	12523,
+	5513,
+	5544,
+	7010,
+	9241,
+	10281,
+	7757,
+	8352,
+	11352,
+	7010,
+	12523,
+	11360,
+	7010,
+	5544,
+	5544,
+	11352,
+	5544,
+	9871,
+	11352,
+	11352,
+	8897,
+	7010,
+	5120,
+	5544,
+	11352,
+	6877,
+	6935,
+	293,
+	601,
+	8906,
+	8351,
+	8906,
+	7010,
+	8906,
+	8351,
+	8906,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	6901,
+	6877,
+	4917,
+	3162,
+	3126,
+	5544,
+	5513,
+	5544,
+	5544,
+	5656,
+	6770,
+	7010,
+	11366,
+	11366,
+	11366,
+	931,
+	1363,
+	5544,
+	5544,
+	5544,
+	5544,
+	5544,
+	4036,
+	11352,
+	11352,
+	9866,
+	11352,
+	9866,
+	7010,
+	12523,
+	11352,
+	11352,
+	9866,
+	9866,
+	7010,
+	12523,
+	9907,
+	11401,
+	9922,
+	11401,
+	11352,
+	11352,
+	11352,
+	7010,
+	11352,
+	7010,
+	11453,
+	9963,
+	8998,
+	8998,
+	10056,
+	10055,
+	10055,
+	10055,
+	10055,
+	1641,
+	9861,
+	9861,
+	8950,
+	11448,
+	10057,
+	9000,
+	11618,
+	11618,
+	11401,
+	11401,
+	9575,
+	9575,
+	9575,
+	9575,
+	9575,
+	9575,
+	9575,
+	11117,
+	11117,
+	9871,
+	9439,
+	8038,
+	8098,
+	9639,
+	9871,
+	9871,
+	8702,
+	8702,
+	8954,
+	9575,
+	9765,
+	12523,
+	8104,
+	7010,
+	3075,
+	3168,
+	9861,
+	9861,
+	12474,
+	3168,
+	12475,
+	5544,
+	5656,
+	3131,
+	5544,
+	7010,
+	5544,
+	5544,
+	5544,
+	3918,
+	4036,
+	3918,
+	4917,
+	6770,
+	7010,
+	6797,
+	6901,
+	4917,
+	3918,
+	4917,
+	4917,
+	11366,
+	11366,
+	11366,
+	931,
+	1363,
+	4917,
+	4917,
+	9239,
+	6877,
+	4917,
+	4917,
+	4917,
+	2404,
+	2398,
+	3166,
+	3130,
+	5656,
+	5544,
+	5544,
+	5544,
+	5544,
+	5544,
+	12523,
+	11352,
+	11352,
+	9866,
+	11352,
+	9866,
+	7010,
+	12523,
+	11352,
+	11352,
+	9866,
+	9866,
+	7010,
+	12523,
+	7759,
+	11401,
+	11352,
+	11352,
+	11352,
+	7010,
+	11352,
+	7010,
+	5544,
+	5544,
+	5544,
+	5544,
+	6877,
+	2525,
+	12474,
+	5544,
+	5656,
+	6877,
+	2525,
+	5544,
+	2525,
+	1460,
+	2525,
+	2525,
+	5544,
+	5544,
+	5465,
+	9695,
+	9695,
+	11343,
+	11188,
+	6998,
+	7000,
+	9871,
+	9871,
+	9873,
+	9873,
+	9873,
+	9873,
+	9871,
+	9871,
+	9871,
+	9871,
+	9871,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	12474,
+	6935,
+	6935,
+	7010,
+	5544,
+	5544,
+	6807,
+	6770,
+	5434,
+	1579,
+	4624,
+	4624,
+	4624,
+	3918,
+	1579,
+	5544,
+	7010,
+	5544,
+	7010,
+	2392,
+	4917,
+	4917,
+	4917,
+	4917,
+	4917,
+	7010,
+	3075,
+	6877,
+	7010,
+	5544,
+	5544,
+	5513,
+	5544,
+	3075,
+	6797,
+	6877,
+	2165,
+	3918,
+	3918,
+	3918,
+	2732,
+	3057,
+	3057,
+	3057,
+	3918,
+	3918,
+	3918,
+	3057,
+	3057,
+	3057,
+	1827,
+	1865,
+	1865,
+	1865,
+	11646,
+	11646,
+	11646,
+	11646,
+	9241,
+	11646,
+	11646,
+	9871,
+	8897,
+	9241,
+	9241,
+	9241,
+	9241,
+	9241,
+	9241,
+	9241,
+	9241,
+	9241,
+	9241,
+	8701,
+	7976,
+	7976,
+	7572,
 	7439,
+	7488,
+	10281,
+	10281,
+	10281,
+	9575,
+	11182,
+	11182,
+	10281,
+	9575,
+	8474,
+	3075,
+	5544,
+	5544,
+	6877,
+	4904,
+	4917,
+	4904,
+	4917,
+	5544,
+	6770,
+	6770,
+	7010,
+	3075,
+	6877,
+	5544,
+	6877,
+	5544,
+	6877,
+	5544,
+	6877,
+	5544,
+	6877,
+	5544,
+	5544,
+	6770,
+	7010,
+	7010,
+	2165,
+	7010,
+	1092,
+	6877,
+	5544,
+	6877,
+	5544,
+	6846,
+	7010,
+	6770,
+	5434,
+	5544,
+	5544,
+	5544,
+	7010,
+	5544,
+	5544,
+	4917,
+	7010,
+	5544,
+	5544,
+	7010,
+	2392,
+	11244,
+	9575,
+	9575,
+	8083,
+	594,
+	7573,
+	8471,
+	9237,
+	8806,
+	11646,
+	8806,
+	11646,
+	8806,
+	11646,
+	8285,
+	11244,
+	9863,
+	11352,
+	7010,
+	1579,
+	6877,
+	5544,
+	6877,
+	5544,
+	6877,
+	5544,
+	6846,
+	6877,
+	5544,
+	4910,
+	7010,
+	5544,
+	3918,
+	3918,
+	6846,
+	9575,
+	9575,
+	6877,
+	574,
+	2138,
+	5544,
+	5544,
+	5513,
+	7010,
+	3918,
+	4917,
+	4917,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	1258,
+	1230,
+	1874,
+	2061,
+	4910,
+	2806,
+	6877,
+	5544,
+	6877,
+	5544,
+	6846,
+	6877,
+	5544,
+	6770,
+	5434,
+	6770,
+	5434,
+	6935,
+	5598,
+	6797,
+	5465,
+	6797,
+	6797,
+	6797,
+	6797,
+	6877,
+	5544,
+	1575,
+	6877,
+	6877,
+	4624,
+	5544,
+	1550,
+	3067,
+	3067,
+	2806,
+	3918,
+	3918,
+	3067,
+	5544,
+	4548,
+	6846,
+	4910,
+	2506,
+	6215,
+	5544,
+	9241,
+	5544,
+	5544,
+	5544,
+	7010,
+	6877,
+	3918,
+	6877,
+	6877,
+	6846,
+	6877,
+	5544,
+	6770,
+	5434,
+	6770,
+	5434,
+	6935,
+	5598,
+	6797,
+	5465,
+	6797,
+	6797,
+	6797,
+	6797,
+	6877,
+	4910,
+	2806,
+	6877,
+	5544,
+	5544,
+	5544,
+	6877,
+	4624,
+	5544,
+	5544,
+	5544,
+	1550,
+	3067,
+	3067,
+	2806,
+	3918,
+	5544,
+	3918,
+	3067,
+	5544,
+	5544,
+	7010,
+	5544,
+	5544,
+	5544,
+	7010,
+	3918,
+	5544,
+	2525,
+	6877,
+	5544,
+	6877,
+	5544,
+	11352,
+	11352,
+	7010,
+	5544,
+	5544,
+	6877,
 	0,
-	8588,
-	5937,
-	10865,
-	5751,
-	4688,
-	5751,
-	4688,
-	5867,
-	5867,
-	5937,
-	2196,
-	4750,
-	5812,
-	5784,
-	3408,
-	3408,
-	1656,
-	4019,
-	2196,
-	4750,
-	4750,
-	4688,
-	4750,
-	4688,
-	4750,
-	4688,
-	4750,
-	4688,
-	5937,
-	5751,
-	5751,
-	5751,
-	5937,
-	3739,
-	3739,
-	2661,
-	5937,
-	5937,
-	4750,
-	2196,
-	4750,
-	4688,
-	2196,
-	4688,
-	4688,
-	8302,
-	8302,
-	7577,
-	8453,
-	8453,
-	9787,
-	9787,
-	8446,
-	8433,
-	8453,
-	8446,
-	8453,
-	8446,
-	8453,
-	8446,
-	8433,
-	8453,
-	8446,
-	9787,
-	8195,
-	8195,
-	8195,
-	8195,
-	4750,
-	5724,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5784,
-	4722,
-	5751,
-	4238,
-	2445,
-	5784,
-	5724,
-	5937,
-	4722,
-	4750,
-	4750,
-	5812,
-	5812,
-	5812,
-	5937,
-	4019,
-	4750,
-	1371,
-	4750,
-	2654,
-	2445,
-	3408,
-	4722,
-	2420,
-	3408,
-	2654,
-	5937,
-	5751,
-	5784,
-	3994,
-	3994,
-	5751,
-	5751,
-	5812,
-	4750,
-	4750,
-	4688,
-	5724,
-	5724,
-	5724,
-	5922,
-	9798,
-	5937,
-	5937,
-	4688,
-	4688,
-	1356,
-	10865,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	4688,
-	5751,
-	5751,
-	5724,
-	5937,
-	5784,
-	3408,
-	3408,
-	1656,
-	5937,
-	871,
-	4750,
-	2196,
-	1603,
-	3408,
-	3408,
-	1603,
-	1039,
-	3408,
-	1656,
-	3408,
-	1656,
-	3408,
-	5812,
-	5724,
-	5937,
-	4750,
-	2196,
-	871,
-	2196,
-	2196,
-	1658,
-	2661,
-	5937,
-	5937,
-	5937,
-	5937,
-	7895,
-	5937,
-	8795,
-	5937,
-	8795,
-	5937,
-	8795,
-	5937,
-	7895,
-	7895,
-	5937,
-	4750,
-	5812,
-	5937,
-	5812,
-	5812,
-	10865,
-	9787,
-	9787,
-	9787,
-	10865,
-	5937,
-	5937,
-	10865,
-	5937,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5812,
-	4750,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	4750,
-	5812,
-	2081,
-	5937,
-	5812,
-	5937,
-	5937,
-	5812,
-	5812,
-	5937,
-	4722,
-	4750,
-	5812,
-	5937,
-	4238,
-	5812,
-	5937,
-	4722,
-	4238,
-	4750,
-	5812,
-	5937,
-	5784,
-	5937,
-	4238,
-	5812,
-	5812,
-	5937,
-	4722,
-	4238,
-	4750,
-	5812,
-	5937,
-	4662,
-	5728,
-	5937,
-	5812,
-	4750,
-	5937,
-	4722,
-	5784,
-	4750,
-	5812,
-	4857,
-	5925,
-	4857,
-	5925,
-	4662,
-	5728,
-	4802,
-	5867,
-	3408,
-	5937,
-	4657,
-	10865,
-	5937,
-	4750,
-	5833,
-	5812,
-	5812,
-	5937,
-	9787,
-	9787,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	8802,
-	8802,
-	8802,
-	5937,
-	10051,
-	10051,
-	10051,
-	10051,
-	10024,
-	10051,
-	5937,
-	10051,
-	9581,
-	5937,
-	10825,
-	5937,
-	6796,
-	5937,
-	10865,
-	6796,
-	6796,
-	6796,
-	6796,
-	5937,
-	6796,
-	6796,
-	5937,
-	6796,
-	6796,
-	5937,
-	6796,
-	5937,
-	5937,
-	6804,
-	7917,
-	7230,
-	7230,
-	7230,
-	7230,
-	10865,
-	10865,
-	10865,
-	10865,
-	6714,
-	10865,
-	10865,
-	10865,
-	5937,
-	4750,
-	4750,
-	8795,
-	8795,
-	8274,
-	10865,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	5937,
-	8795,
-	8795,
-	8795,
-	5937,
-	8795,
-	8795,
-	8795,
-	7917,
-	8795,
-	5937,
-	8795,
-	8795,
-	8795,
-	8795,
-	8795,
-	5937,
-	8795,
-	5937,
-	7895,
-	5937,
-	10865,
-	5937,
-	1658,
-	5937,
-	10051,
-	5937,
-	2710,
-	1925,
-	10825,
-	4722,
-	5784,
-	5937,
-	2668,
-	5937,
-	5937,
-	10051,
-	10051,
-	10865,
-	7202,
-	7202,
-	5937,
-	7895,
-	5937,
-	7202,
-	5937,
-	7202,
-	7202,
-	6789,
-	5937,
-	10865,
-	7202,
-	7202,
-	7895,
-	5937,
-	10865,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	1658,
-	5937,
-	986,
-	10825,
-	7214,
-	8795,
-	10865,
-	10051,
-	10865,
-	10051,
-	8795,
-	7895,
-	8795,
-	4722,
-	5784,
-	5937,
-	2668,
-	1397,
-	5937,
-	5937,
-	1434,
-	1924,
-	10825,
-	10865,
-	5937,
-	5937,
-	5937,
-	5937,
-	4750,
-	4750,
-	5937,
-	8799,
-	10865,
-	7214,
-	10865,
-	7900,
-	10865,
-	8799,
-	7355,
-	7356,
-	10865,
-	8799,
-	8801,
-	7904,
-	10865,
-	8799,
-	10865,
-	7214,
-	7229,
-	10865,
-	7214,
-	7355,
-	7356,
-	10865,
-	8795,
-	5937,
-	7895,
-	5937,
-	5937,
-	8795,
-	5937,
-	8795,
-	5937,
-	8795,
-	9615,
-	10865,
-	1658,
-	5937,
-	10051,
-	10051,
-	10051,
-	10051,
-	10865,
-	10865,
-	8801,
-	8801,
-	10060,
-	10865,
-	10051,
-	10865,
-	8795,
-	8195,
-	10865,
-	8801,
-	8801,
-	8801,
-	10865,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	10051,
-	5937,
-	1658,
-	5937,
-	10865,
-	10865,
-	8801,
-	6810,
-	6810,
-	8801,
-	7903,
-	10060,
-	10865,
-	10051,
-	10051,
-	10051,
-	10865,
-	10051,
-	5937,
-	2710,
-	1923,
-	10825,
-	4722,
-	5784,
-	5937,
-	2668,
-	5937,
-	5937,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5937,
-	5812,
-	5812,
-	5937,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	5812,
-	5812,
-	5812,
-	5937,
-	5812,
-	5812,
-	5812,
-	5937,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	5812,
-	5784,
-	5784,
-	5937,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	5812,
-	5812,
-	5812,
-	5937,
-	5937,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5812,
-	5937,
-	5784,
-	5784,
-	5812,
-	5812,
-	5937,
-	5812,
-	5812,
-	5937,
-	5784,
-	5784,
-	5812,
-	5812,
 	0,
-	4750,
-	5937,
-	5937,
-	5833,
-	4284,
-	5833,
-	5925,
-	5925,
-	5925,
-	5937,
-	10825,
-	5937,
-	2657,
-	4735,
-	1185,
-	4750,
-	8795,
-	7577,
-	5937,
-	10865,
-	7577,
-	5937,
-	10865,
-	4750,
-	4750,
-	2661,
-	5937,
-	5812,
-	5724,
-	5724,
-	4416,
-	4329,
-	5925,
-	5784,
-	5812,
-	5724,
-	5937,
-	4750,
-	5724,
-	5937,
-	5833,
-	5867,
-	5937,
-	5784,
-	5937,
-	4416,
-	4329,
-	5925,
-	5937,
-	5784,
-	5937,
-	4416,
-	4329,
-	5925,
-	5724,
-	5937,
-	5784,
-	9787,
-	5724,
-	5937,
-	5937,
-	4416,
-	4329,
-	5925,
-	4860,
-	4257,
-	5937,
-	3525,
-	5937,
-	5937,
-	4030,
-	2661,
-	4771,
-	4771,
-	10025,
-	10025,
-	5937,
-	10865,
-	5937,
-	5937,
-	5937,
-	4750,
-	5937,
-	4750,
-	4750,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
-	5937,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	6877,
+	5544,
+	6877,
+	5544,
+	7010,
+	3075,
+	6877,
+	5544,
+	6877,
+	5544,
+	6994,
+	3075,
+	6877,
+	7010,
+	10014,
+	6877,
+	5544,
+	6846,
+	5513,
+	6877,
+	5544,
+	6846,
+	5513,
+	7010,
+	0,
+	5544,
+	0,
+	5544,
+	7010,
+	6770,
+	5434,
+	6877,
+	7010,
+	5544,
+	0,
+	6797,
+	5465,
+	6797,
+	5465,
+	6994,
+	6877,
+	5544,
+	6770,
+	2525,
+	1459,
+	6877,
+	6846,
+	3918,
+	2525,
+	8978,
+	5544,
+	3918,
+	1865,
+	11352,
+	12523,
+	5544,
+	6770,
+	7010,
+	7010,
+	6877,
+	6877,
+	7010,
+	8083,
+	8083,
+	8808,
+	7558,
+	8082,
+	7339,
+	9575,
+	7255,
+	7408,
+	9695,
+	7572,
+	7010,
+	9847,
+	9847,
+	7010,
+	12523,
+	9852,
+	9852,
+	7010,
+	12523,
+	6877,
+	5544,
+	6877,
+	5544,
+	6877,
+	5544,
+	6770,
+	5434,
+	6770,
+	5434,
+	6935,
+	5598,
+	6797,
+	5465,
+	6797,
+	6797,
+	6797,
+	6797,
+	6877,
+	6846,
+	4910,
+	2806,
+	5544,
+	6877,
+	4624,
+	5544,
+	5544,
+	1550,
+	1228,
+	3067,
+	3918,
+	1177,
+	2806,
+	3918,
+	3918,
+	5513,
+	3918,
+	3067,
+	3918,
+	3918,
+	5544,
+	5544,
+	7010,
+	6770,
+	5544,
+	6846,
+	5544,
+	3075,
+	3075,
+	7010,
+	5544,
+	5544,
+	3918,
+	1874,
+	3918,
+	3918,
+	1939,
+	6846,
+	6540,
+	6846,
+	4910,
+	4541,
+	7010,
+	6770,
+	5544,
+	5544,
+	3884,
+	2732,
+	3811,
+	4548,
+	7010,
+	5434,
+	6877,
+	6877,
+	6877,
+	5513,
+	7010,
+	6770,
+	6770,
+	7010,
+	6877,
+	6877,
+	6877,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	9530,
+	8677,
+	8062,
+	9688,
+	8741,
+	0,
+	10016,
+	7010,
+	12523,
+	6797,
+	5465,
+	6797,
+	5465,
+	6935,
+	6935,
+	7010,
+	2525,
+	5544,
+	6877,
+	6846,
+	3918,
+	3918,
+	1870,
+	4624,
+	2525,
+	5544,
+	5544,
+	5465,
+	5544,
+	5465,
+	5544,
+	5465,
+	5544,
+	5465,
+	7010,
+	6797,
+	6797,
+	6797,
+	7010,
+	4298,
+	4298,
+	3075,
+	7010,
+	7010,
+	5544,
+	2525,
+	5544,
+	5465,
+	2525,
+	5465,
+	5465,
+	9695,
+	9695,
+	8897,
+	9871,
+	9871,
+	11352,
+	11352,
+	9863,
+	9848,
+	9871,
+	9863,
+	9871,
+	9863,
+	9871,
+	9863,
+	9848,
+	9871,
+	9863,
+	11352,
+	9575,
+	9575,
+	9575,
+	9575,
+	5544,
+	6770,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	6846,
+	5513,
+	6797,
+	4910,
+	2806,
+	6846,
+	6770,
+	7010,
+	5513,
+	5544,
+	5544,
+	6877,
+	6877,
+	6877,
+	7010,
+	4624,
+	5544,
+	1550,
+	5544,
+	3067,
+	2806,
+	3918,
+	5513,
+	2778,
+	3918,
+	3067,
+	7010,
+	6797,
+	6846,
+	4596,
+	4596,
+	6797,
+	6797,
+	6877,
+	5544,
+	5544,
+	5465,
+	6770,
+	6770,
+	6770,
+	6994,
+	11364,
+	7010,
+	7010,
+	5465,
+	5465,
+	1533,
+	12523,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	5465,
+	6797,
+	6797,
+	6770,
+	7010,
+	6846,
+	3918,
+	3918,
+	1870,
+	7010,
+	991,
+	5544,
+	2525,
+	1805,
+	3918,
+	3918,
+	1805,
+	1178,
+	3918,
+	1870,
+	3918,
+	1870,
+	3918,
+	6877,
+	6770,
+	7010,
+	5544,
+	2525,
+	991,
+	2525,
+	2525,
+	1874,
+	3075,
+	7010,
+	7010,
+	7010,
+	7010,
+	9241,
+	7010,
+	10281,
+	7010,
+	10281,
+	7010,
+	10281,
+	7010,
+	9241,
+	9241,
+	7010,
+	5544,
+	6877,
+	7010,
+	6877,
+	6877,
+	12523,
+	11352,
+	11352,
+	11352,
+	12523,
+	7010,
+	7010,
+	12523,
+	7010,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	6877,
+	5544,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	5544,
+	6877,
+	2392,
+	7010,
+	6877,
+	7010,
+	7010,
+	6877,
+	6877,
+	7010,
+	5513,
+	5544,
+	6877,
+	7010,
+	4910,
+	6877,
+	7010,
+	5513,
+	4910,
+	5544,
+	6877,
+	7010,
+	6846,
+	7010,
+	4910,
+	6877,
+	6877,
+	7010,
+	5513,
+	4910,
+	5544,
+	6877,
+	7010,
+	5439,
+	6774,
+	7010,
+	6877,
+	5544,
+	7010,
+	5513,
+	6846,
+	5544,
+	6877,
+	5656,
+	6998,
+	5656,
+	6998,
+	5439,
+	6774,
+	5598,
+	6935,
+	3918,
+	7010,
+	5434,
+	12523,
+	7010,
+	5544,
+	6901,
+	6877,
+	6877,
+	7010,
+	11352,
+	11352,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	10288,
+	10288,
+	10288,
+	7010,
+	11646,
+	11646,
+	11646,
+	11646,
+	11615,
+	11646,
+	7010,
+	11646,
+	11117,
+	7010,
+	12474,
+	7010,
+	7984,
+	7010,
+	12523,
+	7984,
+	7984,
+	7984,
+	7984,
+	7010,
+	7984,
+	7984,
+	7010,
+	7984,
+	7984,
+	7010,
+	7984,
+	7010,
+	7010,
+	7992,
+	9268,
+	8507,
+	8507,
+	8507,
+	8507,
+	12523,
+	12523,
+	12523,
+	12523,
+	7899,
+	12523,
+	12523,
+	12523,
+	7010,
+	5544,
+	5544,
+	10281,
+	10281,
+	9665,
+	12523,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	7010,
+	10281,
+	10281,
+	10281,
+	7010,
+	10281,
+	10281,
+	10281,
+	9268,
+	10281,
+	7010,
+	10281,
+	10281,
+	10281,
+	10281,
+	10281,
+	7010,
+	10281,
+	7010,
+	9241,
+	7010,
+	12523,
+	7010,
+	1874,
+	7010,
+	11646,
+	7010,
+	3130,
+	2198,
+	12474,
+	5513,
+	6846,
+	7010,
+	3082,
+	7010,
+	7010,
+	11646,
+	11646,
+	12523,
+	8474,
+	8474,
+	7010,
+	9241,
+	7010,
+	8474,
+	7010,
+	8474,
+	8474,
+	7977,
+	7010,
+	12523,
+	8474,
+	8474,
+	9241,
+	7010,
+	12523,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	1874,
+	7010,
+	1121,
+	12474,
+	8488,
+	10281,
+	12523,
+	11646,
+	12523,
+	11646,
+	10281,
+	9241,
+	10281,
+	5513,
+	6846,
+	7010,
+	3082,
+	1580,
+	7010,
+	7010,
+	1621,
+	2197,
+	12474,
+	12523,
+	7010,
+	7010,
+	7010,
+	7010,
+	5544,
+	5544,
+	7010,
+	10285,
+	12523,
+	8488,
+	12523,
+	9247,
+	12523,
+	10285,
+	8640,
+	8641,
+	12523,
+	10285,
+	10287,
+	9254,
+	12523,
+	10285,
+	12523,
+	8488,
+	8506,
+	12523,
+	8488,
+	8640,
+	8641,
+	12523,
+	10281,
+	7010,
+	9241,
+	7010,
+	7010,
+	10281,
+	7010,
+	10281,
+	7010,
+	10281,
+	11152,
+	12523,
+	1874,
+	7010,
+	11646,
+	11646,
+	11646,
+	11646,
+	12523,
+	12523,
+	10287,
+	10287,
+	11655,
+	12523,
+	11646,
+	12523,
+	10281,
+	9575,
+	12523,
+	10287,
+	10287,
+	10287,
+	12523,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	11646,
+	7010,
+	1874,
+	7010,
+	12523,
+	12523,
+	10287,
+	7998,
+	7998,
+	10287,
+	9253,
+	11655,
+	12523,
+	11646,
+	11646,
+	11646,
+	12523,
+	11646,
+	7010,
+	3130,
+	2196,
+	12474,
+	5513,
+	6846,
+	7010,
+	3082,
+	7010,
+	7010,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	7010,
+	6877,
+	6877,
+	7010,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	6877,
+	6877,
+	6877,
+	7010,
+	6877,
+	6877,
+	6877,
+	7010,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	6877,
+	6846,
+	6846,
+	7010,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	6877,
+	6877,
+	6877,
+	7010,
+	7010,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	6877,
+	7010,
+	6846,
+	6846,
+	6877,
+	6877,
+	7010,
+	6877,
+	6877,
+	7010,
+	6846,
+	6846,
+	6877,
+	6877,
+	0,
+	5544,
+	7010,
+	7010,
+	6901,
+	4971,
+	6901,
+	6998,
+	6998,
+	6998,
+	7010,
+	12474,
+	7010,
+	3070,
+	5527,
+	1339,
+	5544,
+	10281,
+	8897,
+	7010,
+	12523,
+	8897,
+	7010,
+	12523,
+	5544,
+	5544,
+	3075,
+	7010,
+	6877,
+	6770,
+	6770,
+	5117,
+	5020,
+	6998,
+	6846,
+	6877,
+	6770,
+	7010,
+	5544,
+	6770,
+	7010,
+	6901,
+	6935,
+	7010,
+	6846,
+	7010,
+	5117,
+	5020,
+	6998,
+	7010,
+	6846,
+	7010,
+	5117,
+	5020,
+	6998,
+	6770,
+	7010,
+	6846,
+	11352,
+	6770,
+	7010,
+	7010,
+	5117,
+	5020,
+	6998,
+	5659,
+	4933,
+	7010,
+	4039,
+	7010,
+	7010,
+	4636,
+	3075,
+	5567,
+	5567,
+	11616,
+	11616,
+	7010,
+	12523,
+	7010,
+	7010,
+	7010,
+	5544,
+	7010,
+	5544,
+	5544,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
+	7010,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[5] = 
 {
 	{ 0x020000FB, { 12, 3 } },
-	{ 0x0200017A, { 15, 5 } },
-	{ 0x020001FD, { 20, 9 } },
-	{ 0x020001FE, { 29, 5 } },
-	{ 0x06000477, { 0, 12 } },
+	{ 0x0200017B, { 15, 5 } },
+	{ 0x020001FE, { 20, 9 } },
+	{ 0x020001FF, { 29, 5 } },
+	{ 0x0600047C, { 0, 12 } },
 };
 extern const uint32_t g_rgctx_List_1_t8F785BF4FE85F5E4A5111B966D451CCE1160ACFD;
 extern const uint32_t g_rgctx_List_1_GetEnumerator_mA4CA11BFA5539B3C0EEF7A3C2CD2B4DAD6C5DC60;
@@ -14172,7 +14204,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	3522,
+	3530,
 	s_methodPointers,
 	30,
 	s_adjustorThunks,

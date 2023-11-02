@@ -114,6 +114,7 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_TERRAIN
 --compilation-defines=ENABLE_TILEMAP
 --compilation-defines=ENABLE_TIMELINE
+--compilation-defines=ENABLE_INPUT_SYSTEM
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
@@ -124,9 +125,17 @@ Library: lib_burst_generated
 --compilation-defines=CSHARP_7_3_OR_NEWER
 --compilation-defines=ENABLE_VR_MODULE
 --compilation-defines=ENABLE_XR_MODULE
+--compilation-defines=ENABLE_INPUT_SYSTEM_PACKAGE
+--compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_VR
+--compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_XR
+--compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_PHYSICS
+--compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_PHYSICS2D
+--compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_UI
 --compilation-defines=ENABLE_BURST_1_0_0_OR_NEWER
 --compilation-defines=USING_ANIMATION_MODULE
 --compilation-defines=USING_PHYSICS2D_MODULE
+--compilation-defines=PACKAGE_INPUT_SYSTEM_EXISTS
+--compilation-defines=PACKAGE_INPUT_SYSTEM_1_2_0_OR_NEWER_EXISTS
 --compilation-defines=MODULE_AI_EXISTS
 --compilation-defines=MODULE_ANIMATION_EXISTS
 --compilation-defines=MODULE_PHYSICS_EXISTS
@@ -135,12 +144,14 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_ANIMATION_BURST
 --compilation-defines=ENABLE_SPRITESHAPE_BURST
 --compilation-defines=TIMELINE_FRAMEACCURATE
+--compilation-defines=__INPUTSYSTEM__
 --generate-link-xml=Temp\burst.link.xml
 --output=C:\Unity\Roguelike Rewrite\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
+--root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.InputSystem.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.VisualScripting.State.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.VisualScripting.Flow.dll
@@ -176,6 +187,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\KinoBloom.Runtime.dll
 --root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
+--root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\CW.Common.dll
+--root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\LeanTouch.dll
+--root-assembly=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\LeanCommon.dll
 --assembly-folder=C:\Unity\Roguelike Rewrite\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Jobs.IJobExtensions+JobStruct`1[[UnityEngine.Rendering.Universal.RadixSortJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.RadixSortJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--26c6d10914da2fc98755b3533c59141e

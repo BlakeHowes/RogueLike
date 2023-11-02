@@ -25,6 +25,7 @@ public class TraitAnimation : MonoBehaviour
     }
 
     public void AddTrait(string description, Sprite sprite,GameObject parentGO,ItemAbstract item,GameObject positionGO) {
+        if (!gameObject.transform.parent.gameObject.activeSelf) { gameObject.transform.parent.gameObject.SetActive(true); }
         foreach (Transform child in transform) {
             if (child.gameObject.activeSelf) { continue; }
             if (history.Contains(child.gameObject)) { continue; }

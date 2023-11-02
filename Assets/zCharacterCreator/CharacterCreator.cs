@@ -14,8 +14,8 @@ public class CharacterCreator : MonoBehaviour {
     public Transform selectLayout;
     public List<GameObject> characters,charactersToEnable = new List<GameObject>();
     private Vector3 origionalPosition;
-    public Vector3 editPosition;
-    public TextMeshProUGUI traitDescription;
+    public Transform traitLayout;
+    public Transform editPosition;
     public enum PaletteButtonType {
         Body,
         Hair,
@@ -62,13 +62,13 @@ public class CharacterCreator : MonoBehaviour {
         currentCharacter = character;
         options = currentCharacter.GetComponent<CCOptions>();
         character.SetActive(true);
-        character.transform.position = editPosition;
+        character.transform.position = editPosition.position;
         editLayout.gameObject.SetActive(true);
         selectLayout.gameObject.SetActive(false);
         var paletteFeatureButtons = editLayout.Find("Feature").Find("PaletteLayout");
         CreatePaletteButtons(paletteFeatureButtons, character.GetComponent<CCOptions>().race.featurePalettes, PaletteButtonType.Feature);
         UpdateLabels();
-        ShowDescriptionForTraits(character);
+        ShowDescriptionForTraits();
     }
 
     public void RandomizeCharacter(GameObject character) {
@@ -87,7 +87,7 @@ public class CharacterCreator : MonoBehaviour {
         foreach (ItemAbstract item in options.race.permanentTraits) {
             traits.Add(item);
         }
-        ShowDescriptionForTraits(character);
+        ShowDescriptionForTraits();
 
         options.hair = assets.hairs[Random.Range(0, assets.hairs.Count)];
         options.hairPalette = assets.hairPalettes[Random.Range(0, assets.hairPalettes.Count)];
@@ -163,10 +163,17 @@ public class CharacterCreator : MonoBehaviour {
         CheckBodyPalette();
     }
 
-    public void ShowDescriptionForTraits(GameObject character) {
-        traitDescription.text = "";
-        foreach(ItemAbstract item in character.GetComponent<Inventory>().traits) {
-            //traitDescription.text += item.Description() + "\n";
+    public void ShowDescriptionForTraits() {
+        var prefab = Manager.GetGlobalValues().traitUIPrefab;
+        foreach(Transform child in traitLayout.transform) {
+            Destroy(child.gameObject);
+        }
+        foreach(ItemAbstract item in options.race.permanentTraits) {
+            var uiElements = TraitUIGenerator.GetUIElementsFromItem(item,options.gameObject, prefab);
+            foreach (var element in uiElements) {
+                element.transform.SetParent(traitLayout);
+                element.transform.localScale = new Vector3(1,1,1);
+            }
         }
     }
 
@@ -232,7 +239,7 @@ public class CharacterCreator : MonoBehaviour {
     }
 
     public void RefreshContent(GameObject character) {
-        ShowDescriptionForTraits(character);
+        ShowDescriptionForTraits();
         var paletteButtonsInLayout = editLayout.Find("Race").Find("PaletteLayout");
         CreatePaletteButtons(paletteButtonsInLayout, options.race.bodyPalettes,PaletteButtonType.Body);
         options.bodyPalette = paletteButtonsInLayout.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
