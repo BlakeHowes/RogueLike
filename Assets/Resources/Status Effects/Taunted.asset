@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d789c5c34408c58409cf2b380f5c7ec0, type: 3}
-  m_Name: TargetSelf
+  m_Script: {fileID: 11500000, guid: 4f2b025c248a48c42a842c8b4ed5fef5, type: 3}
+  m_Name: Taunted
   m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  position: {x: 0, y: 0, z: 0}
-  parentGO: {fileID: 0}
-  parentItem: {fileID: 0}
-  extraVariableType: 0
-  lastAction: {fileID: 0}
+  tile: {fileID: 11400000, guid: 5fe26befb9e08f74b9571a1d012dbbd2, type: 2}
+  abilities: []
+  duration: 0

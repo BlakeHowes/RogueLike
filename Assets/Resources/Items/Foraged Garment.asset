@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b178b59ec6d7574da16b2cc40ac52dc, type: 3}
+  m_Name: Foraged Garment
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: bea0cd4ed66a7904098c3d34442ccf93, type: 2}
+  abilities:
+  - callType: 7
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 8
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: f6891e149d1350f469db0507c33237ed, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 92665c8e0d1cb9e4b97475dbc3f7399a, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  shopValue: 2
+  equipmentType: 3
+  weight: 1
+  wornSprite: {fileID: 21300000, guid: e77ad2cc19680d24f821fff15aa0a774, type: 3}
+  customDescription: 
+  wornOffset: {x: 0, y: 0, z: 0}
+  hideHair: 0

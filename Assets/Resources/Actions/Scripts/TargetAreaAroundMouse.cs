@@ -18,7 +18,7 @@ public class TargetAreaAroundMouse : Action {
             }
             if (parentItem is Weapon) {
                 var weapon = parentItem as Weapon;
-                range = weapon.rangeTemp;
+                range = weapon.GetRange(parentGO);
             }
         }
         var positions = position.PositionsInSight(range);

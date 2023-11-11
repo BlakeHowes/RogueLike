@@ -67,7 +67,7 @@ public class MouseManager : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)) {
-            OnMouseDown();
+            //OnMouseDown();
         }
     }
 

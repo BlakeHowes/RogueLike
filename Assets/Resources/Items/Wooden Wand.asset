@@ -20,20 +20,35 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6375196592243838218, guid: bcbd58969a0ce484a9b09746dda832bc, type: 3}
+      prefabValue: {fileID: 6375196592243838218, guid: bcbd58969a0ce484a9b09746dda832bc,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6375196592243838218, guid: bcbd58969a0ce484a9b09746dda832bc, type: 3}
+      prefabValue: {fileID: 6375196592243838218, guid: bcbd58969a0ce484a9b09746dda832bc,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 568943927c191564f80dbb8ca8ac948e, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: a6d1c48ea3b31bd4c8f45a45e781648b, type: 2}
+      prefabValue: {fileID: 6375196592243838218, guid: bcbd58969a0ce484a9b09746dda832bc,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 5
   weaponType: 2
   damageRange: {x: 5, y: 8}
@@ -41,8 +56,6 @@ MonoBehaviour:
   rangeBase: 7
   heldOffset: {x: 11, y: 9, z: 0}
   twoHanded: 0
-  rangeTemp: 7
-  accuracyTemp: 6
-  damageMultipleTemp: 1
   parentGO: {fileID: 0}
   target: {fileID: 0}
+  damageTotal: 0

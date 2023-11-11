@@ -14,6 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 177766f94651dbe499364a2784232c33, type: 2}
   abilities:
-  - callType: 7
-    actionContainers: []
+  - callType: 14
+    actionContainers:
+    - action: {fileID: 0}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   duration: 5

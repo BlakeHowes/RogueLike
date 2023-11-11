@@ -14,12 +14,12 @@ public class RangeCondition : Action {
         }
         if (useMainHandRange) {
             var weapon = parentGO.GetComponent<Inventory>().GetMainHandAsWeapon();
-            if (position.InRange(origin, weapon.rangeTemp)) { return !returnValue; }
+            if (position.InRange(origin, weapon.GetRange(parentGO))) { return !returnValue; }
             return returnValue;
         }
         if (parentItem is Weapon) {
             Weapon weapon = parentItem as Weapon;
-            if (position.InRange(origin, weapon.rangeTemp)) {
+            if (position.InRange(origin, weapon.GetRange(parentGO))) {
                 return !returnValue;
             }
         }

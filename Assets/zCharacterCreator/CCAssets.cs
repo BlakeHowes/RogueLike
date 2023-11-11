@@ -10,11 +10,12 @@ public class CCAssets : MonoBehaviour
     public List<CCLoadout> loadouts = new List<CCLoadout>();
     public List<CCPalette> hairPalettes,facePalettes = new List<CCPalette>();
     public List<CCPalette> undeadPalettes = new List<CCPalette>();
+    public List<ItemAbstract> undeadTraits = new List<ItemAbstract> ();
     public void Awake() {
         i = this;
         var raceResources = Resources.LoadAll<CCRace>("Character Creator/Races");
         foreach (CCRace race in raceResources) { races.Add(race); }
-        var loadoutResources = Resources.LoadAll<CCLoadout>("Character Creator/Loadouts");
+        var loadoutResources = Resources.LoadAll<CCLoadout>("Character Creator/ClassesLoadouts");
         foreach (CCLoadout loadout in loadoutResources) { loadouts.Add(loadout); }
         var hairResources = Resources.LoadAll<Sprite>("Character Creator/Hair");
         foreach (Sprite sprite in hairResources) { hairs.Add(sprite); }

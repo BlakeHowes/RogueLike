@@ -109,6 +109,9 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 70
   actionPoints: 0
   actionPointsSum: 0
@@ -135,7 +138,7 @@ MonoBehaviour:
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 0}
+  mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}

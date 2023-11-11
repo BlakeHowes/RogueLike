@@ -264,16 +264,8 @@ public class Inventory : MonoBehaviour
         for (int i = 0; i < statusEffects.Count; i++) {
             statusEffects[i].Call(position, origin, gameObject, callType);
         }
-        List<BlankItem> postWeaponItems = new List<BlankItem>();
         foreach (var item in traits) {
-            if (item) {
-                if(item is BlankItem) {
-                    var blankItem = item as BlankItem;
-                    if (blankItem.afterWeapon) { postWeaponItems.Add(blankItem);continue; } //Little hack to make some traits trigger after the weapons
-                }
-                item.Call(position, origin, gameObject, callType);
-            } 
-        }
+            if (item) { item.Call(position, origin, gameObject, callType);}  }
         foreach (var item in generalAbilities) { 
             if(item.callType == callType)
             item.Call(position, origin,gameObject, null);
@@ -288,10 +280,6 @@ public class Inventory : MonoBehaviour
         if (trinket4) { trinket4.Call(position, origin, gameObject, callType); }
         if (mainHand) { mainHand.Call(position, origin, gameObject, callType); }
         if (offHand) { offHand.Call(position, origin, gameObject, callType); }
-
-        foreach(var item in postWeaponItems) {
-            item.Call(position, origin, gameObject, callType);
-        }
     }
 
     public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, CallType signal) {

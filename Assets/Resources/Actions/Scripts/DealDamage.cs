@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
 using static PartyManager;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 [CreateAssetMenu(fileName = "Deal Damage", menuName = "Actions/Deal Damage")]
 public class DealDamage : Action,IDescription
@@ -92,6 +91,12 @@ public class DealDamage : Action,IDescription
 
     public override IEnumerator StackAction() {
         //position = parentGO.Position();
+        var action = GridManager.i.GetNextStackItem(1);
+        if (action is ValueOverride) {
+            var valueOverride = action as ValueOverride;
+            damage = valueOverride.ModifyValue(parentGO,damage);
+        }
+
         switch (damageSource) {
             case DamageSource.Damage: targetGo.GetComponent<Stats>().TakeDamage(damage, origin); break;
             case DamageSource.ParentItem: ParentItemDamage(); break;
@@ -114,8 +119,8 @@ public class DealDamage : Action,IDescription
             case DamageSource.ParentItem:
                 var weapon = parentItem as Weapon;
                 description += "Deals " +weapon.damageRange.x + " to " +weapon.damageRange.y + " " +weapon.weaponType + " damage";
-                if(weapon.rangeTemp > 1) { description += " at a range of " + weapon.rangeTemp; }
-                description += "with an accuracy of " + weapon.accuracyTemp;
+                if(weapon.GetRange(parentGO) > 1) { description += " at a range of " + weapon.GetRange(parentGO); }
+                description += "with an accuracy of " + weapon.GetAccuracy(parentGO);
                 break;
          
         }

@@ -68,7 +68,7 @@ public class GameUIManager : MonoBehaviour {
                     var weapon = inventory.mainHand as Weapon;
                     var origin = inventory.gameObject.Position();
                     if (!weapon) { ShowRange(origin, 1); }
-                    else { ShowRange(origin, weapon.rangeTemp); }
+                    else { ShowRange(origin, weapon.GetRange(character)); }
                 }
             }
         }

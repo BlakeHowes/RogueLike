@@ -29,9 +29,14 @@ public class Stats : MonoBehaviour {
     [HideInInspector] public int enemyAlertRangeTemp;
     [HideInInspector] public int skillRangeTemp;
     public int directDamage;
-     public int armour;
+    public int armour;
     public int damageTaken;
-     public int meleeDamage;
+
+    [Header("Weapon Stats")]
+    public int meleeDamage;
+    public float meleeDamageMultiple = 1;
+    public float meleeAccuracy;
+    public float meleeAccuracyMultiple = 1;
 
     [Header("Dynamic Stats")]
     public int health;
@@ -60,6 +65,9 @@ public class Stats : MonoBehaviour {
         skillRangeTemp = skillRangeBase;
         directDamage = 0;
         meleeDamage = 0;
+        meleeDamageMultiple = 1f;
+        meleeAccuracy = 0f;
+        meleeAccuracyMultiple = 1f;
     }
 
     public void OnEnable() {
@@ -142,10 +150,12 @@ public class Stats : MonoBehaviour {
     public void TakeDamage(int damage,Vector3Int origin,bool ignoreArmor) {
         if (!gameObject.activeSelf) { return; }
         var position = gameObject.Position();
+        var originGO = origin.GameObjectGo();
         RefreshCharacter(position);
         damageTaken = damage;
         inventory.CallEquipment(origin, position, CallType.OnTakeDamage);
         Manager.OnTakeDamageCall(origin, position);
+
         //Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
 
         var damageTotal = damage;
@@ -157,7 +167,11 @@ public class Stats : MonoBehaviour {
             if (damage < 0) { damage = 0; }
         }
 
-        if(!infiniteHealth)health -= damage;
+        if (origin != position && originGO) {
+            originGO.GetComponent<Inventory>().CallEquipment(position, origin, CallType.OnDirectDamage);
+        }
+
+        if (!infiniteHealth)health -= damage;
 
         if (gameObject.tag == "Enemy") {
             if (state != PartyManager.State.Combat) {

@@ -50,6 +50,12 @@ TagManager:
   - name: Surfaces
     uniqueID: 2381104929
     locked: 0
+  - name: Scenery
+    uniqueID: 1164477975
+    locked: 0
+  - name: Scenery 2
+    uniqueID: 1209331629
+    locked: 0
   - name: Shadows
     uniqueID: 708697295
     locked: 0

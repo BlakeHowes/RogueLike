@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: fce1d45efef0f2042ae81932a660b0d0, type: 2}
   abilities:
-  - callType: 0
+  - callType: 14
     actionContainers:
     - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
       intValue: 0
@@ -103,5 +103,5 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  afterWeapon: 1
+  afterWeapon: 0
   notes: 

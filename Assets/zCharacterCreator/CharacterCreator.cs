@@ -154,11 +154,6 @@ public class CharacterCreator : MonoBehaviour {
 
     public void NextRace(int direction) {
         options.race = CCAssets.i.NextOption(direction,CCAssets.i.races, options.race);
-        var traits = currentCharacter.GetComponent<Inventory>().traits;
-        traits.Clear();
-        foreach (ItemAbstract item in options.race.permanentTraits) { 
-            traits.Add(item);
-        }
         RefreshContent(currentCharacter);
         CheckBodyPalette();
     }
@@ -168,7 +163,7 @@ public class CharacterCreator : MonoBehaviour {
         foreach(Transform child in traitLayout.transform) {
             Destroy(child.gameObject);
         }
-        foreach(ItemAbstract item in options.race.permanentTraits) {
+        foreach(ItemAbstract item in currentCharacter.GetComponent<Inventory>().traits) {
             var uiElements = TraitUIGenerator.GetUIElementsFromItem(item,options.gameObject, prefab);
             foreach (var element in uiElements) {
                 element.transform.SetParent(traitLayout);
@@ -203,9 +198,11 @@ public class CharacterCreator : MonoBehaviour {
     }
     public void NextGender(int direction) {
         options.body = CCAssets.i.NextOption(direction, CCAssets.i.bodies, options.body);
+        RefreshContent(currentCharacter);
         UpdateLabels();
         CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
         CheckBodyPalette();
+        
     }
 
     public void CheckBodyPalette() {
@@ -239,7 +236,6 @@ public class CharacterCreator : MonoBehaviour {
     }
 
     public void RefreshContent(GameObject character) {
-        ShowDescriptionForTraits();
         var paletteButtonsInLayout = editLayout.Find("Race").Find("PaletteLayout");
         CreatePaletteButtons(paletteButtonsInLayout, options.race.bodyPalettes,PaletteButtonType.Body);
         options.bodyPalette = paletteButtonsInLayout.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
@@ -255,6 +251,18 @@ public class CharacterCreator : MonoBehaviour {
             options.feature = null;
             options.featurePalette = null;
         }
+
+        var traits = currentCharacter.GetComponent<Inventory>().traits;
+        traits.Clear();
+        foreach (ItemAbstract item in options.race.permanentTraits) {
+            traits.Add(item);
+        }
+        if (options.body.name == "Undead") {
+            foreach (ItemAbstract item in CCAssets.i.undeadTraits) {
+                traits.Add(item);
+            }
+        }
+        ShowDescriptionForTraits();
 
         CharacterSpriteGenerator.CreateCharacterSprite(character);
         UpdateLabels();

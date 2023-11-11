@@ -175,7 +175,7 @@ public class GridManager : MonoBehaviour {
 
         var currentCharacter = PartyManager.i.currentCharacter;
         if (!currentCharacter) { return; }
-
+        GameUIManager.i.ClearRange();
         if (currentCharacter.activeSelf) {
             if (PartyManager.i.party.Contains(currentCharacter)) {
                 //InstantiateGosMechsSurfacesAroundCharacters();
@@ -190,9 +190,9 @@ public class GridManager : MonoBehaviour {
 
     }
 
-    public Action GetNextStackItem() {
-        if(itemsInActionStack.Count <= 1) { return null; }
-        return itemsInActionStack[1];
+    public Action GetNextStackItem(int index) {
+        if(itemsInActionStack.Count <= index) { return null; }
+        return itemsInActionStack[index];
     }
 
     public void AddToStack(Action action) {

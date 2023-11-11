@@ -15,21 +15,16 @@ public class Weapon : ItemAbstract {
     public bool twoHanded = false;
 
     [Header("Temporary Stats")]
-    [HideInInspector] public int rangeTemp;
-    [HideInInspector] public float accuracyTemp;
-    [HideInInspector] public int damageMultipleTemp;
     [HideInInspector] public GameObject parentGO;
     [HideInInspector] public GameObject target;
-    public void ResetTempStats() {
-        rangeTemp = rangeBase;
-        accuracyTemp = accuracyBase;
-        damageMultipleTemp = 1;
-    }
+    [HideInInspector] public int damageTotal;
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
-        if(callType == CallType.ResetStatsToBase) { ResetTempStats();return; }
         origin = parentGO.Position();
-        if(callType == CallType.OnActivate) { if (!position.InRange(origin, rangeTemp)) { return; } }
+        if(callType == CallType.OnActivate) {
+            if (!parentGO) { return; }
+            if (!position.InRange(origin, rangeBase)) { return; }
+        }
         foreach (var ability in abilities) {
             if (ability.callType == callType) {
                 ability.Call(position, origin, parentGO, this);
@@ -39,18 +34,31 @@ public class Weapon : ItemAbstract {
 
     public int GetDamage(GameObject target,GameObject parentGO) {
         int damage = 0;
+        var stats = parentGO.GetComponent<Stats>();
         if (!target) { goto SkipAccuracy; }
-        var stats = target.GetComponent<Stats>();
         if (isAttackAMiss(stats)) { return 0; }
         SkipAccuracy:
         damage = Random.Range(damageRange.x, damageRange.y + 1);
-        damage *= damageMultipleTemp;
-        damage += parentGO.GetComponent<Stats>().meleeDamage;
+        damage += stats.meleeDamage;
+        damage =Mathf.RoundToInt( damage *stats.meleeDamageMultiple);//ROUNDING WHAT AM I SUPPOSE TO DO HERE
         return damage;
+    }
+
+    public float GetAccuracy(GameObject ParentGO) {
+        if (!parentGO) { return accuracyBase; }
+        var stats = parentGO.GetComponent<Stats>();
+        var accuracy = stats.meleeAccuracy;
+        accuracy *= stats.meleeAccuracyMultiple;
+        return accuracyBase + accuracy;
+    }
+
+    public int GetRange(GameObject ParentGO) {
+        return rangeBase;
     }
 
     private bool isAttackAMiss(Stats stats) {
         var accuracyRoll = Random.Range(0.0f, 100.0f);
+        var accuracyTemp = accuracyBase + stats.meleeAccuracy;
         if (accuracyTemp < accuracyRoll) { return true; }
         return false;
     }

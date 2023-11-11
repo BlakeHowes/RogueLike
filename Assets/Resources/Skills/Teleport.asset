@@ -99,7 +99,7 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   rangeType: 4
-  targetsTags: 1
+  targetsTags: -1
   range: 4
   AOE: 0
   actionPointCost: 2

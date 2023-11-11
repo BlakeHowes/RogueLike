@@ -127,7 +127,7 @@ public static class ItemStatic {
         StartOfTurn,
         OnStatusEffectEnable,
         EndOfStack,
-        DirectDamage,
+        OnDirectDamage,
         StartOfIndividualTurn,
         DisableItem,
         OnTakeDamageGlobal,

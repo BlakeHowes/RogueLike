@@ -18,7 +18,7 @@ public class AreaAroundUser : Action {
             }
             if (parentItem is Weapon) {
                 var weapon = parentItem as Weapon;
-                range = weapon.rangeTemp;
+                range = weapon.GetRange(parentGO);
             }
         }
 

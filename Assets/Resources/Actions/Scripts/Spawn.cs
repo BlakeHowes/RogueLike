@@ -6,11 +6,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Spawn", menuName = "Actions/Spawn")]
 public class Spawn : Action,IDescription {
     [HideInInspector]public GameObject prefab;
+    public bool spawnParentGO;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         this.origin = position;
         this.position = origin;
         this.parentGO = parentGO;
         prefab = actionContainer.prefabValue;
+        if (spawnParentGO) { prefab = GridManager.i.InstantiateGo(parentGO); }
         if (!parentGO) { return true; }
         this.AddToStack();
         return true;

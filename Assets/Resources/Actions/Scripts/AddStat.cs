@@ -20,7 +20,7 @@ public class AddStat : Action {
         Stats stats = null;
 
         if (amount == 0) {
-            var action = GridManager.i.GetNextStackItem();
+            var action = GridManager.i.GetNextStackItem(1);
             if(action is ValueOverride) {
                 var valueOverride = action as ValueOverride;
                 amount = valueOverride.GetValue(parentGO);

@@ -5,7 +5,6 @@ using static ItemStatic;
 
 [CreateAssetMenu(fileName = "BlankItem", menuName = "Items/BlankItem")]
 public class BlankItem : ItemAbstract {
-    public bool afterWeapon = false;
     [TextArea] public string notes;
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         foreach (var ability in abilities) {

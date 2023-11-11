@@ -37,23 +37,10 @@ public class Equipment : ItemAbstract {
             if (weapon.rangeBase != 1) {
                 var result = accuracyDivision + ((float)weapon.rangeBase / 7.4f);
                 if (result > 1) {
-                    weapon.accuracyTemp /= result;
+                    originCharacter.GetComponent<Stats>().meleeAccuracyMultiple /= result;
                 }
 
             }
         }
-        if (offHand) {
-            if (offHand is Weapon) {
-                var offHandWeapon = offHand as Weapon;
-                if (offHandWeapon.rangeBase != 1) {
-                    var result = accuracyDivision + ((float)offHandWeapon.rangeBase / 7.4f);
-                    if (result > 1) {
-                        offHandWeapon.accuracyTemp /= result;
-                    }
-                }
-            }
-
-        }
-
     }
 }

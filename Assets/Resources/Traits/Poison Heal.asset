@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
+  m_Name: Poison Heal
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 3c27faa5c4533e54689e4742e9ca39c5, type: 2}
+  abilities:
+  - callType: 4
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 55e8dc9fbafb3ca448985fa623eab9c1, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 55e8dc9fbafb3ca448985fa623eab9c1, type: 3}
+      stringValue: Heal from Poison, all other sources inflict damage instead
+  afterWeapon: 0
+  notes: 

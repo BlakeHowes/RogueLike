@@ -75,7 +75,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sightRange: 12
-  itemActions: []
   targetsTags: 18
 --- !u!114 &3243932232630802517
 MonoBehaviour:
@@ -91,22 +90,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 363491edd93a29c42b5e38cefebe4bd2, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: a92f6e84923d4c947b35e2434576607a, type: 2}
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 85
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
-  fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
   skillRangeBase: 0
-  armourTemp: 0
+  maxHealthTemp: 0
+  maxArmourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
+  meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 70
   actionPoints: 0
   actionPointsSum: 0
@@ -127,13 +132,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities: []
   items: []
   traits:
   - {fileID: 11400000, guid: db7132a652ad2a14a977957fa251dc10, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 73fc896a1d331d64db39350014b865cf, type: 2}
+  mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
@@ -205,16 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - item: {fileID: 11400000, guid: d5d93365186e3a34bb95b93d42dbd29a, type: 2}
-    rarity: 0.323
-    pool: 0
-  - item: {fileID: 11400000, guid: b269883fab5f18949b1840a8a8e3dd06, type: 2}
-    rarity: 0.323
-    pool: 1
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0

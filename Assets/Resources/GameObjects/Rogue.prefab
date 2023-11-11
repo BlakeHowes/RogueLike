@@ -185,7 +185,10 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
-  health: 100
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
+  health: 50
   actionPoints: 3
   actionPointsSum: 0
   infiniteHealth: 0
