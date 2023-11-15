@@ -20,7 +20,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6375196592243838218, guid: 864d4fd45943c524c99213928a26a468, type: 3}
+      prefabValue: {fileID: 6375196592243838218, guid: 864d4fd45943c524c99213928a26a468,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -37,14 +38,12 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   shopValue: 5
-  weaponType: 2
+  weaponType: 3
   damageRange: {x: 6, y: 12}
   accuracyBase: 100
   rangeBase: 6
   heldOffset: {x: 11, y: 6, z: 0}
   twoHanded: 0
-  rangeTemp: 6
-  accuracyTemp: 100
-  damageMultipleTemp: 1
   parentGO: {fileID: 0}
   target: {fileID: 0}
+  damageTotal: 0

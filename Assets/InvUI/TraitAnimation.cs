@@ -18,6 +18,7 @@ public class TraitAnimation : MonoBehaviour
         {"Enemy","<color=\"red\">" },
         {"Summon","<color=\"purple\">" },
         {"Passive","<color=\"yellow\">" },
+        {"Door","<color=\"yellow\">" },
     };
 
     public string GetTagColour(string tag) {

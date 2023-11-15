@@ -27,7 +27,7 @@ public class Roll : Action {
         var line = GridManager.i.tools.BresenhamLineLength(position.x, position.y, origin.x, origin.y, 15);
         var line2 = GridManager.i.tools.BresenhamLineLength(origin.x, origin.y, line[line.Count - 1].x, line[line.Count - 1].y, maxDistanceRoll);
         var targetPos = line2[line2.Count - 1];
-        endPos = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, origin);
+        endPos = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(targetPos, origin);
         this.parentGO = parentGO;
 
         damagePosition = GridManager.i.goMethods.FirstGameObjectInSight(targetPos, origin);

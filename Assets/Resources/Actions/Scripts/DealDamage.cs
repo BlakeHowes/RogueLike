@@ -2,6 +2,7 @@
 using LlamAcademy.Spring.Runtime;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static ItemStatic;
 using static PartyManager;
@@ -15,10 +16,20 @@ public class DealDamage : Action,IDescription
     [HideInInspector] public Weapon weapon;
     [HideInInspector] public GameObject targetGo;
     [HideInInspector] public Vector2Int damageRange;
+    [HideInInspector] public Surface element;
     public enum Target {
         Others,
         Self,
         Area
+    }
+
+    public Surface GetElement(Ability ability) {
+        foreach(ActionContainer container in ability.actionContainers) {
+            if(container.action is GiveSurface) {
+                return container.surfaceValue;
+            }
+        }
+        return null;
     }
 
     public enum DamageSource {
@@ -52,7 +63,7 @@ public class DealDamage : Action,IDescription
             areaRange = actionContainer.vector2IntValue.y;
             damage = actionContainer.vector2IntValue.x;
         }
-
+        element =GetElement(ability);
         targetGo = position.GameObjectGo();
         if(targetGo)GridManager.i.AddToStack(this);
 
@@ -66,10 +77,12 @@ public class DealDamage : Action,IDescription
     }
 
     public void Area() {
+
         var inSightArea = GridManager.i.goMethods.PositionsInSight(areaRange, origin);
         foreach (var positionInArea in inSightArea) {
             var go = positionInArea.GameObjectGo();
             if (!go) { continue; }
+            if (element) { go.GetComponent<Stats>().TakeDamage(damage, origin,false,element,WeaponType.none); continue; }
             go.GetComponent<Stats>().TakeDamage(damage, origin);
         }
     }

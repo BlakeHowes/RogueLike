@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
     public List<Ability> generalAbilities = new List<Ability>();
     public List<ItemAbstract> items = new List<ItemAbstract>();
     public List<ItemAbstract> traits = new List<ItemAbstract>();
-    [HideInInspector]public List<ItemAbstract> skills = new List<ItemAbstract>();
+    public List<ItemAbstract> skills = new List<ItemAbstract>();
     public List<CoolDown> coolDowns = new List<CoolDown>();
     public List<ItemAbstract> statusEffects = new List<ItemAbstract>();   
     public ItemAbstract mainHand;

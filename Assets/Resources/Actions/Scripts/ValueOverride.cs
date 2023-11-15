@@ -13,9 +13,13 @@ public class ValueOverride : Action {
         return true;
     }
 
-    public int ModifyValue(GameObject go,int value) {
+    public GameObject GetGO(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem) {
+        return null;
+    }
 
+    public int ModifyValue(GameObject go,int value) {
         var item =GridManager.i.GetNextStackItem(2);
+        GridManager.i.RemoveFromStack(this);
         if (item) {
             if (item is ValueOverride) {
                 var valueOverride = item as ValueOverride;
@@ -31,6 +35,7 @@ public class ValueOverride : Action {
     }
 
     public int GetValue(GameObject go) {
+        GridManager.i.RemoveFromStack(this);
         var stats = go.GetComponent<Stats>();
         switch (stat) {
             case TypeStat.None: break;
@@ -50,6 +55,13 @@ public class ValueOverride : Action {
         None,
         DirectDamage,
         DamageTaken,
+    }
+
+    public enum TypeGO {
+        None,
+        PositionGO,
+        OriginGO,
+        
     }
 
     public override IEnumerator StackAction() {

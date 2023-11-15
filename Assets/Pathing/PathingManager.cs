@@ -100,6 +100,29 @@ public class PathingManager : MonoBehaviour
         return false;
     }
 
+    public bool MoveOneStepFly(Vector3Int position, Vector3Int origin) {
+        var character = origin.GameObjectSpawn();
+
+        if (origin == globalValues.NullValue) {
+            Debug.LogError("MoveOneStep returned, origin not found. Dude probably died lol");
+            return false;
+        }
+        var path = algorithm.AStarSearch(origin, position, false);
+        if (path != null) {
+            if (path.Length > globalValues.maxPathLength) {
+                return false;
+            }
+            var nextStep = path[1].FloorToInt();
+            var goMethods = GridManager.i.goMethods;
+            if (goMethods.GetGameObjectOrSpawnFromTile(nextStep) == null) {
+                StartCoroutine(GridManager.i.graphics.LerpPosition(origin, nextStep, character, 0.01f));
+                MovePosition(nextStep, origin, character);
+                return true;
+            }
+        }
+        return false;
+    }
+
     public IEnumerator WalkAnimation(GameObject character,Vector3 position) {
         var spring = character.GetComponent<SpringToTarget3D>();
         spring.SpringTo(position + new Vector3(0, globalValues.stepAnimationHeight/10), globalValues.stepDampening, globalValues.stepHardness);
@@ -136,13 +159,20 @@ public class PathingManager : MonoBehaviour
     }
 
     public float Jump(Vector3Int endPosition, Vector3Int startPosition,float speed) {
-        endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObject(endPosition,startPosition);
+        endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(endPosition,startPosition);
         if (endPosition == startPosition) { return 0; }
         var character = startPosition.GameObjectSpawn();
         if (character == null) { return 0; }
-
+        TryGetComponent<ElementalStats>(out ElementalStats elementalStats);
+        if (elementalStats) {
+            if (elementalStats.pushImmunity) {
+                return 0;
+            }
+        }
         character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, speed * 100);
         MovePosition(endPosition, startPosition, character);
+
+
 
         var travelTime = Vector3.Distance(startPosition, endPosition) /14f;
         return travelTime;

@@ -2,10 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
-
-
-namespace CSVReading {
+namespace ItemImporter {
     public class CSVReader {
         static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
         static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
@@ -49,3 +46,4 @@ namespace CSVReading {
         }
     }
 }
+

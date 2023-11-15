@@ -50,7 +50,7 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   shopValue: 5
-  weaponType: 2
+  weaponType: 3
   damageRange: {x: 5, y: 8}
   accuracyBase: 100
   rangeBase: 7

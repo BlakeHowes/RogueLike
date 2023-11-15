@@ -64,6 +64,7 @@ public static class ItemStatic {
     }
 
     public enum WeaponType {
+        none,
         melee,
         ranged,
         magic,

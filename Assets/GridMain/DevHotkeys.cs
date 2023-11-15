@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DevHotkeys : MonoBehaviour
@@ -61,6 +62,9 @@ public class DevHotkeys : MonoBehaviour
             var character = pos.GameObjectGo();
             if (character) { character.GetComponent<Stats>().TakeDamage(1000000, pos); }
             GridManager.i.StartStack();
+            foreach(GameObject member in PartyManager.i.party) {
+                member.GetComponent<NPCSearch>().Search();
+            }
         }
     }
 }

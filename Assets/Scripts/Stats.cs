@@ -128,22 +128,18 @@ public class Stats : MonoBehaviour {
         TakeDamage(damage, origin, false);
     }
 
-    public bool IsImmune(Action action) {
-        if (elementalStats == null) { return false; }
-        if (elementalStats.IsImmune(action)) { return true; }
-        return false;
-    }
-
-    public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element) {
+    public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element, WeaponType weaponType) {
         if (elementalStats == null) { return; }
-
         float damageResult = damage;
-        foreach (var elementInteraction in elementalStats.elementalInteractions) {
-            if(elementInteraction.surface == element) { 
-                damageResult *= elementInteraction.damageMultiplier; 
 
-            }
+        if (element) {
+            damageResult *= elementalStats.GetElementalDamageModifier(element);
         }
+
+        if(weaponType != WeaponType.none) {
+            damageResult *= elementalStats.GetWeaponTypeDamageModifier(weaponType);
+        }
+       
         TakeDamage(Mathf.RoundToInt(damageResult), origin, ignoreArmor);
     }
 
@@ -156,8 +152,6 @@ public class Stats : MonoBehaviour {
         inventory.CallEquipment(origin, position, CallType.OnTakeDamage);
         Manager.OnTakeDamageCall(origin, position);
 
-        //Debug.Log("Damage Taken "+ gameObject.name + " " + damageTaken +" from " + origin.GameObjectGo());
-
         var damageTotal = damage;
         if (!ignoreArmor) {
             var armourLeft = armour - damage;
@@ -167,10 +161,6 @@ public class Stats : MonoBehaviour {
             if (damage < 0) { damage = 0; }
         }
 
-        if (origin != position && originGO) {
-            originGO.GetComponent<Inventory>().CallEquipment(position, origin, CallType.OnDirectDamage);
-        }
-
         if (!infiniteHealth)health -= damage;
 
         if (gameObject.tag == "Enemy") {
@@ -178,16 +168,17 @@ public class Stats : MonoBehaviour {
                 state = PartyManager.State.Combat;
                 PartyManager.i.enemyParty.Add(gameObject);
             }
-            var originCharacter = origin.GameObjectGo();
+        }
 
-            if (originCharacter) {
-                var stats = originCharacter.GetComponent<Stats>();
-                stats.state = PartyManager.State.Combat;
-                if (origin != position) {
-                    stats.directDamage += damage;
-                }
+        if (originGO) {
+            var stats = originGO.GetComponent<Stats>();
+            stats.state = PartyManager.State.Combat;
+            if (gameObject != originGO) {
+                stats.directDamage += damage;
+                originGO.GetComponent<Inventory>().CallEquipment(position, origin, CallType.OnDirectDamage);
             }
         }
+
         var spring = GetComponent<SpringToTarget3D>();
         if (spring && position != origin) {
             Vector3 cellOffsetPosition = new Vector3(0.5f, 1) + (Vector3)position;

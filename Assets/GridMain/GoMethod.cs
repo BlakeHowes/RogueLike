@@ -68,6 +68,15 @@ public class GoMethod
         return true;
     }
 
+    public bool IsInSightObsticalFree(Vector3Int Position, Vector3Int Origin) {
+        var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        foreach (var cell in cells) {
+            if (!FloorManager.i.IsWalkable(cell)) { return false; }
+            if(cell.GameObjectGo() && cell != Position) { return false; }
+        }
+        return true;
+    }
+
     public Vector3Int FirstGameObjectInSight(Vector3Int Position, Vector3Int Origin,List<string> tags) {
         var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
         var previousPos = Origin;
@@ -127,7 +136,7 @@ public class GoMethod
         return Position;
     }
 
-    public Vector3Int PositionBeforeHittingGameObject(Vector3Int Position, Vector3Int Origin) {
+    public Vector3Int PositionBeforeHittingGameObjectOrUnwalkableCell(Vector3Int Position, Vector3Int Origin) {
         var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
         var previousPos = Origin;
         if (cells.Count == 0) {

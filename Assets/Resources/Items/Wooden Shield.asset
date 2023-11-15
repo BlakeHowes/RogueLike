@@ -84,7 +84,8 @@ MonoBehaviour:
       intValue: 1
       floatValue: 0.2
       itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
-      prefabValue: {fileID: 8288408381700605430, guid: badb02212dd93834681a9d7c3f660d1c, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: badb02212dd93834681a9d7c3f660d1c,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 1, y: 4}
       surfaceValue: {fileID: 0}
@@ -160,7 +161,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  shopValue: 10
+  shopValue: 5
   equipmentType: 1
   weight: 1
   wornSprite: {fileID: 0}

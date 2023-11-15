@@ -30,7 +30,6 @@ public class Behaviours : MonoBehaviour
         var inventory = GetComponent<Inventory>();
         foreach (var item in inventory.skills) {
             if(item is not Skill) {
-                Debug.LogError(item + " in " + gameObject.name +" skills");
                 continue; 
             }
             Skill skill = item as Skill;
@@ -42,6 +41,7 @@ public class Behaviours : MonoBehaviour
                 globalValues.GetWaitSeconds(0.2f).AddToStack();
                 skill.Call(targetPosition,origin,gameObject, CallType.OnActivate);
                 globalValues.GetWaitSeconds(0.2f).AddToStack();
+                stats.actionPoints -= skill.actionPointCost;
                 MouseManager.i.itemSelected = null;
                 ThisTask.Succeed();
                 break;
@@ -249,6 +249,16 @@ public class Behaviours : MonoBehaviour
     [Task]
     void MoveToTarget() {
         if (!target) { ThisTask.Fail();return; }
+        if (MouseManager.i.Walk(targetPosition, origin, gameObject.GetComponent<Stats>())) {
+            ThisTask.Succeed();
+            return;
+        }
+        ThisTask.Fail(); return;
+    }
+
+    [Task]
+    void FlyToTarget() {
+        if (!target) { ThisTask.Fail(); return; }
         if (MouseManager.i.Walk(targetPosition, origin, gameObject.GetComponent<Stats>())) {
             ThisTask.Succeed();
             return;

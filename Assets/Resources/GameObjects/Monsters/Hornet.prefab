@@ -90,7 +90,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 836a1ca2fa34b7d4cafa7c031ef94633, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 20
   maxArmourBase: 0
   actionPointsBase: 3
@@ -109,6 +109,9 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 20
   actionPoints: 0
   actionPointsSum: 0
@@ -135,7 +138,7 @@ MonoBehaviour:
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 49fce398741d6c14880d2b0800bb6ee3, type: 2}
+  mainHand: {fileID: 11400000, guid: ecc1b3f1ad4a82c479ad305cf07817d5, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
@@ -207,13 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - item: {fileID: 11400000, guid: 73e1032bd2150c34eb3fe41e8cdf26bb, type: 2}
-    rarity: 0.203
-    pool: 0
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
 --- !u!114 &6717019821424419616
 MonoBehaviour:
   m_ObjectHideFlags: 0

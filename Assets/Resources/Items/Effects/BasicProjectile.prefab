@@ -1484,7 +1484,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: edddfa79f4142e04d8b22c70fc6fbda2, type: 3}
+    - sprite: {fileID: 21300000, guid: b05691ab29aba59408f1dd3dfb52f355, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

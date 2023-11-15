@@ -13,22 +13,14 @@ MonoBehaviour:
   m_Name: Push Wand
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c1ca0a7676f79c64193ce60a05c7e2b4, type: 2}
-  position: {x: 34, y: 28, z: 0}
-  origin: {x: 34, y: 29, z: 0}
+  abilities: []
   shopValue: 0
-  subItems:
-  - subItem: {fileID: 11400000, guid: c82127c0c59af3843989cc8cee0b1f8a, type: 2}
-    after: 1
-  twoHanded: 0
+  weaponType: 3
   damageRange: {x: 5, y: 6}
   accuracyBase: 100
   rangeBase: 1
   heldOffset: {x: 11, y: 6, z: 0}
-  rangeTemp: 1
-  accuracyTemp: 100
-  damageTemp: 5
-  damageMaxTemp: 6
-  damageMultipleTemp: 1
-  damage: 5
+  twoHanded: 0
   parentGO: {fileID: 0}
   target: {fileID: 0}
+  damageTotal: 0

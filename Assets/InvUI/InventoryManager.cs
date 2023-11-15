@@ -123,7 +123,7 @@ public class InventoryManager : MonoBehaviour
         CreateSkills(inventory,position); //THIS HAPPENS A LOT
     }
 
-    public void AddSkill(ItemAbstract skill) {
+    public void AddSkill(Skill skill) {
         currentInventory.skills.Add(skill);
     }
 
@@ -133,6 +133,7 @@ public class InventoryManager : MonoBehaviour
         inventory.CallEquipment(position, position, ItemStatic.CallType.AddSkillToHotbar);
         CreateSkillSlots(inventory);
         foreach(var item in inventory.traits) {
+            if(item is not Skill) { continue; }
             if (inventory.skills.Contains(item)) { continue; }
             inventory.skills.Add(item);
         }

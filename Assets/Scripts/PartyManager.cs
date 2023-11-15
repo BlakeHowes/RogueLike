@@ -94,7 +94,7 @@ public class PartyManager : MonoBehaviour {
             if (target.CompareTag("Enemy")) {
                 return true; 
             } }
-        if (parentGO.CompareTag("Enemy")) { if (parentGO.CompareTag("Party") || parentGO.CompareTag("Summon")) { return true; }  }
+        if (parentGO.CompareTag("Enemy")) { if (target.CompareTag("Party") || target.CompareTag("Summon")) { return true; }  }
         return false;
     }
 

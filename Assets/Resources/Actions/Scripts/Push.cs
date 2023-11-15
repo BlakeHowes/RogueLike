@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Push", menuName = "Actions/Push")]
-public class Push : Action {
+public class Push : Action,IDescription {
     public bool away = true;
     public float speed;
     public bool area;
@@ -37,7 +37,7 @@ public class Push : Action {
                     var oppositeTarget = (positionInArea - targetPos2) + positionInArea;
                     targetPos2 = oppositeTarget;
                 }
-                var endPosition2 = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos2, positionInArea);
+                var endPosition2 = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(targetPos2, positionInArea);
                 PathingManager.i.Jump(endPosition2, positionInArea, speed);
             }
 
@@ -49,8 +49,15 @@ public class Push : Action {
             var oppositeTarget = (origin - targetPos) + origin;
             targetPos = oppositeTarget;
         }
-        var endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObject(targetPos, origin);
+        var endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(targetPos, origin);
         PathingManager.i.Jump(endPosition, origin, speed);
         yield return null;
+    }
+
+    public string Description(ItemAbstract parentItem, ActionContainer actionContainer) {
+        if (actionContainer.surfaceValue == null) { Debug.LogError("Forgot to set surface in " + parentItem.name); return "SURFACE MISSING!!!"; }
+        var description = $"Pushes{actionContainer.vector2IntValue.x}steps";
+        if (area) { description += " in an area of " + actionContainer.vector2IntValue.y; }
+        return description;
     }
 }

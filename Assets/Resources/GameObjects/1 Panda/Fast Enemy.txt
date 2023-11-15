@@ -1,0 +1,43 @@
+tree("Root")
+	fallback
+		tree("Idle")
+		not isCurrentTurnCharacter
+		tree("Combat")
+		tree("Lost Target")
+tree("Idle")
+	sequence
+		not isInCombat
+		WalkRandomly()
+tree("Combat")
+	while 
+		isInCombat
+		repeat
+			sequence
+				CheckInformation()
+				tree("Actions")
+				StartStack()
+				WaitForStack()
+				checkEndTurn()
+tree("Actions")
+	fallback
+		UseSkills()
+		Attack()
+		not isHealthAboveZero
+		tree("Move")
+
+tree("Move")
+	sequence
+		fallback
+			FlyToTarget()
+			AdvanceToTarget()
+			tree("Lost Target")
+		Wait(0.14)
+
+tree("Lost Target")
+	sequence
+		not isInCombat
+		Wait(0.1)
+		MakeQuestionMark()
+		SetActionPoints(0)
+		Wait(0.5)
+		checkEndTurn()

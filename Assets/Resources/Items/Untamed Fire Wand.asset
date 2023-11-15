@@ -25,15 +25,14 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 15
-  weaponType: 2
+  weaponType: 3
   damageRange: {x: 5, y: 8}
   accuracyBase: 100
   rangeBase: 7
   heldOffset: {x: 11, y: 6, z: 0}
   twoHanded: 0
-  rangeTemp: 7
-  accuracyTemp: 46.599495
-  damageMultipleTemp: 1
   parentGO: {fileID: 0}
   target: {fileID: 0}
+  damageTotal: 0

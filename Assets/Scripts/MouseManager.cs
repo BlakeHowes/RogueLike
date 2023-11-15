@@ -320,6 +320,18 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
+    public bool Fly(Vector3Int position, Vector3Int origin, Stats stats) {
+        if (!position.IsWalkable()) { return false; }
+        var walkCost = stats.walkCostTemp;
+        if (walkCost > stats.actionPoints) { return false; }
+        var walked = PathingManager.i.MoveOneStep(position, origin);
+        if (walked) {
+            stats.actionPoints -= walkCost;
+            return true;
+        }
+        return false;
+    }
+
     public bool ChangeActionPoints(Vector3Int position,Vector3Int origin,Inventory inventory,Stats stats,int actionPoints) {
         if(stats.state == State.Idle) { return true; }   //If outside of combat dont use action points 
         if(actionPoints <= stats.actionPoints) { stats.actionPoints -= actionPoints; return true; }

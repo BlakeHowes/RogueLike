@@ -18,7 +18,7 @@ public class GeneralItemUtilities : Action {
             case Type.IfPositionHasGo: if (!position.GameObjectGo()) { return false; } break;
             case Type.IfPositionDoesNotHaveGo: if (position.GameObjectGo()) { return false; } break;
             case Type.IfPositionInSight: if (!position.InSight(origin)) { return false; } break;
-            case Type.IfClearLineToPosition: if (GridManager.i.goMethods.FirstGameObjectInSight(position, origin) != position) { return false; } break;
+            case Type.IfClearLineToPosition: if (GridManager.i.goMethods.IsInSightObsticalFree(position, origin) != true) { return false; } break;
             case Type.IfWeaponsAreMelee:
                 var mainHand = parentGO.GetComponent<Inventory>().GetMainHandAsWeapon();
                 if (mainHand) { if (mainHand.weaponType != WeaponType.melee) { return false; } }

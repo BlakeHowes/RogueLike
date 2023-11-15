@@ -184,7 +184,12 @@ public class GridManager : MonoBehaviour {
             }
         }
 
-        //ClearSemiFog();
+        foreach(var character in PartyManager.i.party) {
+            var pos = character.Position();
+            if (fogDarkTilemap.GetTile(pos) != null) {
+                ClearFogDoor(pos);
+            }
+        }
 
         graphics.UpdateEverything();
 
@@ -193,6 +198,10 @@ public class GridManager : MonoBehaviour {
     public Action GetNextStackItem(int index) {
         if(itemsInActionStack.Count <= index) { return null; }
         return itemsInActionStack[index];
+    }
+
+    public void RemoveFromStack(Action action) {
+        if (itemsInActionStack.Contains(action)) { itemsInActionStack.Remove(action); }
     }
 
     public void AddToStack(Action action) {

@@ -23,7 +23,6 @@ public class IfParentGo : Action {
             case Type.IfPositionIsThis: if (targetPos.GameObjectGo() == parentGO) { return !returnInverse; }break;
             case Type.IfPositionIsEnemy: if (PartyManager.i.IsEnemy(parentGO, target)) { return !returnInverse; }break;
         }
-    
         return returnInverse;
     }
 

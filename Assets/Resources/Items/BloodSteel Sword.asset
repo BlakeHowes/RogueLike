@@ -27,14 +27,12 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   shopValue: 30
-  weaponType: 0
+  weaponType: 1
   damageRange: {x: 15, y: 30}
   accuracyBase: 100
   rangeBase: 1
   heldOffset: {x: 11, y: 6, z: 0}
   twoHanded: 0
-  rangeTemp: 1
-  accuracyTemp: 100
-  damageMultipleTemp: 1
   parentGO: {fileID: 0}
   target: {fileID: 0}
+  damageTotal: 0

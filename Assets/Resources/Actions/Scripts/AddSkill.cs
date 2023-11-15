@@ -6,7 +6,7 @@ using UnityEngine;
 public class AddSkill : Action,IDescription {
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
        if(actionContainer.itemValue == null) { Debug.LogError("Missing skill on " + parentItem);return true;}
-        InventoryManager.i.AddSkill(actionContainer.itemValue);
+        InventoryManager.i.AddSkill(actionContainer.itemValue as Skill);
         return true;
     }
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7784706712300013749}
   - component: {fileID: -4423380373258034374}
   - component: {fileID: 3011359740961232716}
+  - component: {fileID: 4061900566101987855}
   m_Layer: 0
   m_Name: Door 1
   m_TagString: Door
@@ -69,6 +70,9 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 1
   actionPoints: 0
   actionPointsSum: 0
@@ -198,3 +202,19 @@ MonoBehaviour:
   position: 0
   direction: 0
   tooltip: 
+--- !u!114 &4061900566101987855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381531369335737414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70e8530490295e43a31d0035b8209dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushImmunity: 1
+  statusImmunites: []
+  actionImmunities: []
+  damageInteractions: []
