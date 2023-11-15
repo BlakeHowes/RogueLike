@@ -190,7 +190,7 @@ public class GridManager : MonoBehaviour {
                 ClearFogDoor(pos);
             }
         }
-
+        ClearSemiFog();
         graphics.UpdateEverything();
 
     }

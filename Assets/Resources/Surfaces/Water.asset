@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 3fb3f729d36941a478a6a055e3b2a3e4, type: 2}
+  tile: {fileID: 11400000, guid: 6da33fa4f80501c4a9dfd0153de7a026, type: 2}
   iconColour: {r: 0, g: 0.63013697, b: 1, a: 1}
   combinations:
   - inputSurface: {fileID: 11400000, guid: 5a18ec5232360c648afc4776236516e7, type: 2}

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.Tilemaps;
 
-namespace ItemImporter { 
+namespace Importers { 
 public static class ItemImporter {
     public static List<ItemAbstract> items = new List<ItemAbstract>();
     [MenuItem("Tools/Generate Items From Text")]

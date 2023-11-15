@@ -30,7 +30,8 @@ MonoBehaviour:
       intValue: 30
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -40,7 +41,8 @@ MonoBehaviour:
       intValue: 30
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210,
+        type: 3}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -52,7 +54,8 @@ MonoBehaviour:
       intValue: 30
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210,
+        type: 3}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -62,14 +65,15 @@ MonoBehaviour:
       intValue: 30
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210,
+        type: 3}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 11400000, guid: 0dbf2b5772cad434881370f322b0732c, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
   description: 
-  shopValue: 0
+  shopValue: 10
   subItems: []
   totalUses: 1
   timesUsed: 0

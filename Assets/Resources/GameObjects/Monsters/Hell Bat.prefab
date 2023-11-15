@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70e8530490295e43a31d0035b8209dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushImmunity: 0
   statusImmunites:
   - {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
   actionImmunities: []

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5489671670705153384}
   - component: {fileID: -6055477302126000918}
   - component: {fileID: -3644339487406115361}
+  - component: {fileID: 4723093663502415769}
+  - component: {fileID: 4735503666626699403}
   m_Layer: 0
   m_Name: Boulder
   m_TagString: Passive
@@ -70,6 +72,9 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -200,9 +205,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70e8530490295e43a31d0035b8209dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  immunites:
-  - {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
+  pushImmunity: 0
+  statusImmunites: []
   actionImmunities: []
-  elementalInteractions:
-  - surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
-    damageMultiplier: 0
+  damageInteractions: []
+--- !u!114 &4723093663502415769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354247380013042016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5783dbbad6a59184fa58aa75d79bcc02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadowType: 3
+  shadowLayer: 0
+  shadowDistance: 1
+  shadowDistanceMin: 0.4322133
+  shadowDistanceMax: 1.2197485
+  shadowTranslucency: 0.3
+  maskType: 1
+  maskLit: 0
+  maskPivot: 0
+  maskLayer: 0
+  maskLitCustom: 1
+  bumpMapMode:
+    type: 0
+    textureType: 0
+    texture: {fileID: 0}
+    sprite: {fileID: 0}
+    invertX: 0
+    invertY: 0
+    depth: 1
+    spriteRenderer: {fileID: 0}
+  mainShape:
+    shadowType: 3
+    maskType: 1
+    maskPivot: 0
+    transform: {fileID: 0}
+--- !u!58 &4735503666626699403
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354247380013042016}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.35}
+  serializedVersion: 2
+  m_Radius: 0.59

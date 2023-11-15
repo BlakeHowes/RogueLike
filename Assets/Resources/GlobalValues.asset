@@ -29,6 +29,11 @@ MonoBehaviour:
   generalTile: {fileID: 11400000, guid: fb2e91ed51e47234991b256342ede459, type: 2}
   summonSickness: {fileID: 11400000, guid: 419759a89e7e0354290aa6b6d8fd63f7, type: 2}
   NullValue: {x: -1, y: -1, z: 0}
+  defaultEnemyBehaviour: {fileID: 0}
+  defaultEPassiveBehaviour: {fileID: 0}
+  defaultSummonBehaviour: {fileID: 0}
+  lightAlphaCurrentCharacter: 0.72
+  lightAlphaNonSelectedCharacter: 0
   maxItems: 9
   maxPathLength: 30
   stepAnimationHeight: 5.18

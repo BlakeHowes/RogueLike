@@ -1,3 +1,4 @@
+using FunkyCode;
 using LlamAcademy.Spring.Runtime;
 using System.Collections;
 using System.Collections.Generic;
@@ -190,7 +191,9 @@ public class PathingManager : MonoBehaviour
             var character = startPosition.GameObjectSpawn();
             if (character == null) { return; }
             character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
-            StartCoroutine(GridManager.i.graphics.RollToPosition(startPosition, endPosition, character, speed));
+            character.TryGetComponent<LightCollider2D>(out LightCollider2D lightCollider);
+            if (lightCollider) {lightCollider.enabled = false; }
+            StartCoroutine(GridManager.i.graphics.RollToPosition(startPosition, endPosition, character, speed,lightCollider));
             MovePosition(endPosition, startPosition, character);
             character.GetComponent<SpringToTarget3D>().spring.Reset();
         }

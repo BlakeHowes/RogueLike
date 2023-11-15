@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4276186278275183352}
   - component: {fileID: 6983015920032974242}
+  - component: {fileID: 8806868479985686519}
   m_Layer: 0
   m_Name: Character Light
   m_TagString: Untagged
@@ -93,3 +94,15 @@ MonoBehaviour:
     - {x: -0.4999999, y: -0.86602545}
   drawingEnabled: 1
   drawingTranslucencyEnabled: 0
+--- !u!114 &8806868479985686519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649372773842755526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23e75c7aa8cd644a9394e961b6db800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

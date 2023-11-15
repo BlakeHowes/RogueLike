@@ -12,8 +12,7 @@ public class GlobalValues : ScriptableObject
     public float onHitNudgeAmount =1;
     public float onAttackNudgeAmount =1;
 
-    [Header("Test Objects")]
-    //public List<GameObject> partyPrefabs = new List<GameObject>();
+    [Header("Fog")]
     public Tile shadowTile;
     public TileBase fog;
     public TileBase bigFog;
@@ -24,9 +23,18 @@ public class GlobalValues : ScriptableObject
     public int outerFogFill;
     public float fogDistance;
     public float outerFogDistance;
+
+    [Header("Character")]
     public Tile generalTile;
     public StatusEffect summonSickness;
     [HideInInspector] public Vector3Int NullValue = new Vector3Int(-1, -1, 0);
+
+    public TextAsset defaultEnemyBehaviour;
+    public TextAsset defaultEPassiveBehaviour;
+    public TextAsset defaultSummonBehaviour;
+
+    public float lightAlphaCurrentCharacter;
+    public float lightAlphaNonSelectedCharacter;
 
     [Header("Inventory")]
     public int maxItems = 9;

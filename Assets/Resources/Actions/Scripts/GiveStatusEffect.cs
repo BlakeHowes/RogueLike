@@ -27,10 +27,10 @@ public class GiveStatusEffect : Action {
     }
 
     public override IEnumerator StackAction() {
-        var target = origin.GameObjectGo();
+        var target = position.GameObjectGo();
         if (target) {
-            if(statusEffect) target.GetComponent<Inventory>().AddStatusEffect(origin,position, statusEffect);
-            if(statusEffectTargeted) target.GetComponent<Inventory>().AddStatusEffect(origin,position, statusEffectTargeted);
+            if(statusEffect) target.GetComponent<Inventory>().AddStatusEffect(position, origin, statusEffect);
+            if(statusEffectTargeted) target.GetComponent<Inventory>().AddStatusEffect(position, origin, statusEffectTargeted);
         }
         yield return null;
     }

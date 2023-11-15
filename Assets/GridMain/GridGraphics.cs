@@ -1,3 +1,4 @@
+using FunkyCode;
 using LlamAcademy.Spring;
 using System.Collections;
 using System.Collections.Generic;
@@ -102,7 +103,7 @@ public class GridGraphics
         return Sprite.Create(existingSprite.texture, existingSprite.rect, pivot,16);
     }
 
-    public IEnumerator RollToPosition(Vector3Int startPosition, Vector3Int targetPosition, GameObject character, float duration) {
+    public IEnumerator RollToPosition(Vector3Int startPosition, Vector3Int targetPosition, GameObject character, float duration, LightCollider2D lightCollider) {
         float time = 0;
         Vector3 offset = new Vector3(0.5f, 0.5f);
         if (!character) { yield return null; }
@@ -148,6 +149,7 @@ public class GridGraphics
         character.transform.position = new Vector3(character.transform.position.x, character.transform.position.y - (offset.y - 0.5f));
         rend.sprite = CreateSpriteWithPivot(rend.sprite, pivot);
         lerping = false;
+        if (lightCollider) { lightCollider.enabled = true; }
     }
 
     public IEnumerator NudgeSpring(Vector3Int position,Vector3Int origin,float amount,GameObject go) {

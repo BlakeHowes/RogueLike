@@ -1,3 +1,4 @@
+using FunkyCode;
 using Panda;
 using System;
 using System.Collections;
@@ -19,6 +20,11 @@ public class PartyManager : MonoBehaviour {
     public bool follow = true;
     private GlobalValues globalValues;
     string currentTag;
+
+    public System.Action<GameObject, GameObject> OnSwitchCharacter;
+    public void OnSwitchCharacterCall(GameObject currentCharacter,GameObject previousCharacter) {
+        OnSwitchCharacter?.Invoke(currentCharacter,previousCharacter);
+    }
     public enum State {
         Idle,
         Combat
@@ -148,13 +154,18 @@ public class PartyManager : MonoBehaviour {
 
     public void SetCurrentCharacter(GameObject character) {
         if (currentCharacter) { currentCharacter.GetComponent<SpriteRenderer>().material = globalValues.normalMaterial; }
-
+        var previousCharacter = currentCharacter;
         currentCharacter = character;
+
+        OnSwitchCharacterCall(currentCharacter, previousCharacter);
+
         currentTag = character.tag;
         var stats = character.GetComponent<Stats>();
+
         if(currentCharacter.tag == "Summon") { character.GetComponent<SpriteRenderer>().material = globalValues.summonMaterial; }
-        if(currentCharacter.tag == "Party") { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial; }
+        if(currentCharacter.tag == "Party") { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial;}
         if(currentCharacter.tag == "Enemy") { character.GetComponent<SpriteRenderer>().material = globalValues.enemyoutlineMaterial; }
+
         GameUIManager.i.UpdatePartyIcons(party);
 
         if (currentCharacter.tag == "Summon") { MouseManager.i.disableMouse = true; }

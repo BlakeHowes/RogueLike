@@ -37,7 +37,7 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   description: 
-  shopValue: 0
+  shopValue: 30
   subItems: []
   totalUses: 1
   timesUsed: 0
