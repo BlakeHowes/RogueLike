@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 7361458235895569522}
   - component: {fileID: 731529511117603317}
   - component: {fileID: 8270103826403491340}
+  - component: {fileID: -3916216811466351697}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: Party
@@ -225,13 +226,10 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: af0d447c440855341912d2d63fdc32b6, type: 2}
   traits:
-  - {fileID: 11400000, guid: da6dc9add706734439cf8f2f75c0e5f4, type: 2}
   - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
   - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
   - {fileID: 11400000, guid: 3861e3f7c2f426f42b46dfe8cce291c0, type: 2}
   - {fileID: 11400000, guid: e2fd7d1eb258cff4c9bb3e9a177077b5, type: 2}
-  - {fileID: 11400000, guid: cf944f5b8d6e60a41aa907664bc7e87c, type: 2}
-  - {fileID: 11400000, guid: 528080ffa4096674baf13ffd031f5feb, type: 2}
   - {fileID: 11400000, guid: 90867b714e24b1942bf8ba4e270ddf93, type: 2}
   skills: []
   coolDowns: []
@@ -241,7 +239,7 @@ MonoBehaviour:
   helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: e9266809da9eb504ba444080470830d8, type: 2}
   trinket1: {fileID: 11400000, guid: 3eef8e428404eba4482d5c56fef962ef, type: 2}
-  trinket2: {fileID: 0}
+  trinket2: {fileID: 11400000, guid: d262d4956d0e39542be84a034b1d9b83, type: 2}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}
 --- !u!114 &7475694374052512725
@@ -340,6 +338,25 @@ MonoBehaviour:
   position: 0
   direction: 0
   tooltip: 
+--- !u!114 &-3916216811466351697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780645703283991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70e8530490295e43a31d0035b8209dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushImmunity: 0
+  statusImmunites:
+  - {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
+  damageInteractions:
+  - weaponType: 0
+    surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+    damageMultiplier: 0.3
 --- !u!1001 &4244679382711588305
 PrefabInstance:
   m_ObjectHideFlags: 0

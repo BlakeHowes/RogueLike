@@ -543,6 +543,8 @@ struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73;
 struct List_1_tDA4D291C60B1EFA9EA50BBA3367C657CC9410576;
 // System.Collections.Generic.List`1<UnityEngine.InputSystem.Utilities.InternedString>
 struct List_1_t5F075F07C02D0CCF50D7FB6C844DE693B2851FC6;
+// System.Collections.Generic.List`1<ItemAbstract>
+struct List_1_tCE4C666F03149B8EE3A0ED12D14250F57CFDD9C0;
 // System.Collections.Generic.List`1<UnityEngine.Material>
 struct List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B;
 // System.Collections.Generic.List`1<UnityEngine.MaterialPropertyBlock>
@@ -10173,6 +10175,8 @@ struct CCAssets_t2F778ADF98837768CB74A12AF471EE899836147F  : public MonoBehaviou
 	List_1_tB601E09A10F19DEABBF28F3D37AE3D9CA60BE2AB* ___facePalettes_11;
 	// System.Collections.Generic.List`1<CCPalette> CCAssets::undeadPalettes
 	List_1_tB601E09A10F19DEABBF28F3D37AE3D9CA60BE2AB* ___undeadPalettes_12;
+	// System.Collections.Generic.List`1<ItemAbstract> CCAssets::undeadTraits
+	List_1_tCE4C666F03149B8EE3A0ED12D14250F57CFDD9C0* ___undeadTraits_13;
 };
 
 struct CCAssets_t2F778ADF98837768CB74A12AF471EE899836147F_StaticFields

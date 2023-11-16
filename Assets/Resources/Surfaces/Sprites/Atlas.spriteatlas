@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 1d125e87017e8f94e8a89b87b1451f96, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -1224166339, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: 1609179120, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: -1344672810, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: 83322582, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: 1391848133, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: 557355917, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: -1480473669, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: 1855112382, guid: a833d370376b93349adf9491aa92fa01, type: 3}
+  - {fileID: 21300000, guid: 1129aa51f39ba734b85ba69b60131513, type: 3}
+  - {fileID: 21300000, guid: 08098d335e2e36c429a0c51aceb23208, type: 3}
+  - {fileID: -722382467, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1235947522, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1523487275, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1305792111, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 639147642, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -629477750, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1997279460, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 509693012, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1163354734, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1541241951, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1824721410, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1661076684, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 94379062, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -2128934059, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1394798300, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1675898393, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1860351942, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -2018365475, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 927491315, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1736255822, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1891663259, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1070742918, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1942392277, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -2011900621, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -992287204, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: -1374259409, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 1158112678, guid: 31c84953158b2fd4c90b0b71e6044a82, type: 3}
+  - {fileID: 865267234, guid: 19cfaca36ea9a99469950297d947933e, type: 3}
+  - {fileID: -1651908214, guid: 19cfaca36ea9a99469950297d947933e, type: 3}
+  - {fileID: 399957849, guid: 19cfaca36ea9a99469950297d947933e, type: 3}
+  - {fileID: 853229255, guid: 19cfaca36ea9a99469950297d947933e, type: 3}
+  - {fileID: 630214997, guid: 19cfaca36ea9a99469950297d947933e, type: 3}
+  - {fileID: 21300000, guid: 03f046540cbd53f40bf29bfac75c5064, type: 3}
+  - {fileID: 21300000, guid: 2aef77c4118a222408dfc448fda733f2, type: 3}
+  - {fileID: 21300000, guid: 61b0e5263a37a604a96bc6169dfa30e0, type: 3}
+  - {fileID: 21300000, guid: 04581c56ee64f094e99debb60bfc8ba9, type: 3}
+  - {fileID: 21300000, guid: 162e99c644388b04cb737f3f41c335f2, type: 3}
+  - {fileID: 21300000, guid: 70ac62573b8e6ae498f65b9dbf1c951e, type: 3}
+  - {fileID: 2030385638, guid: e0af3a59a07e7304d874288d0eecd7b6, type: 3}
+  - {fileID: 316112776, guid: e0af3a59a07e7304d874288d0eecd7b6, type: 3}
+  - {fileID: -191847994, guid: e0af3a59a07e7304d874288d0eecd7b6, type: 3}
+  - {fileID: -636161185, guid: e0af3a59a07e7304d874288d0eecd7b6, type: 3}
+  - {fileID: 1477436971, guid: e0af3a59a07e7304d874288d0eecd7b6, type: 3}
+  - {fileID: 212197132, guid: e0af3a59a07e7304d874288d0eecd7b6, type: 3}
+  - {fileID: 1174319554, guid: f3d16579ea919af43a8dd1839cdf77df, type: 3}
+  - {fileID: -237447205, guid: f3d16579ea919af43a8dd1839cdf77df, type: 3}
+  - {fileID: 2030385638, guid: 9a3f140aa10433647b07f83c765b6197, type: 3}
+  - {fileID: 316112776, guid: 9a3f140aa10433647b07f83c765b6197, type: 3}
+  - {fileID: -191847994, guid: 9a3f140aa10433647b07f83c765b6197, type: 3}
+  - {fileID: -636161185, guid: 9a3f140aa10433647b07f83c765b6197, type: 3}
+  - {fileID: 1477436971, guid: 9a3f140aa10433647b07f83c765b6197, type: 3}
+  - {fileID: -1874761125, guid: 9a3f140aa10433647b07f83c765b6197, type: 3}
+  - {fileID: 21300000, guid: e4d8dbea7bb9699489f120683d2c62f2, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Fluid 4_0
+  - Fluid 4_1
+  - Fluid 4_2
+  - Fluid 4_3
+  - Fluid 4_4
+  - Fluid 4_5
+  - Fluid 4_6
+  - Fluid 4_7
+  - FloorRemade2t
+  - FloorLight
+  - Grass_6
+  - Grass_7
+  - Grass_4
+  - Grass_5
+  - Grass_2
+  - Grass_3
+  - Grass_0
+  - Grass_1
+  - Grass_8
+  - Grass_15
+  - Grass_9
+  - Grass_14
+  - Grass_17
+  - Grass_16
+  - Grass_11
+  - Grass_10
+  - Grass_13
+  - Grass_12
+  - Grass_19
+  - Grass_18
+  - Grass_24
+  - Grass_25
+  - Grass_26
+  - Grass_20
+  - Grass_21
+  - Grass_22
+  - Grass_23
+  - Fluid 3_3
+  - Fluid 3_2
+  - Fluid 3_1
+  - Fluid 3_0
+  - Fluid 3_4
+  - Fluid 3.3
+  - Fluid 3.2
+  - Fluid 3.1
+  - GrassTest.
+  - LavaEmission
+  - FlFloor 8
+  - Blood 1_1
+  - Blood 1_0
+  - Blood 1_3
+  - Blood 1_2
+  - Blood 1_4
+  - Lava_0
+  - Fluid 3.4_1
+  - Fluid 3.4_0
+  - Blood 1_1
+  - Blood 1_0
+  - Blood 1_3
+  - Blood 1_2
+  - Blood 1_4
+  - Blood 4_0
+  - surfaceSprite 2
+  m_RenderDataMap: {}
+  m_Tag: Atlas
+  m_IsVariant: 0

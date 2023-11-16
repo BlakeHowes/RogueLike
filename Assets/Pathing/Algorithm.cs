@@ -10,6 +10,7 @@ public class Algorithm {
     private List<Cell> openList;
     private List<Cell> closedList;
     public Tilemap walkableTilemap;
+    bool generated = false;
     private Algorithm() { }
 
     public Algorithm(Grid2D grid) {
@@ -33,7 +34,10 @@ public class Algorithm {
             return null;
         }
         Debug.Log("ASTAR 1 StopWatch:" + stopwatch.Elapsed);
-        grid.Generate();
+        if (!generated) {
+            grid.Generate();
+            generated = true;
+        }
         openList.Clear();
         closedList.Clear();
         Debug.Log("ASTAR 2 StopWatch:" + stopwatch.Elapsed);
@@ -46,6 +50,7 @@ public class Algorithm {
         for (int x = Mathf.Clamp(startpos.x - range, 0, grid.width); x < Mathf.Clamp(startpos.x + range, 0, grid.width); x++) {
             for (int y = Mathf.Clamp(startpos.y - range, 0, grid.length); y < Mathf.Clamp(startpos.y + range, 0, grid.length); y++) {
                 Vector3Int gameobjectcell = new Vector3Int(x, y);
+                grid.ResetCell(gameobjectcell);
                 if (gameobjectcell == startpos) {
                     continue;
                 }
@@ -69,10 +74,9 @@ public class Algorithm {
 
                 if (gameobjectcell.GameObjectGo()) {
                     grid.FindCellByPosition(gameobjectcell).walkable = false;
+                    continue;
                 }
-                else {
-                    grid.FindCellByPosition(gameobjectcell).walkable = true;
-                }
+                grid.FindCellByPosition(gameobjectcell).walkable = true;
             }
         }
         Debug.Log("ASTAR 4 StopWatch:" + stopwatch.Elapsed);

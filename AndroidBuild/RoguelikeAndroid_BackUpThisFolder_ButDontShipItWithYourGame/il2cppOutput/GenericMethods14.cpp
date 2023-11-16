@@ -2200,6 +2200,31 @@ struct CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257_marshaled_com
 	List_1_t70EE7982F45810D4B024CF720D910E67974A3094* ___U3CattributeOverridesU3Ek__BackingField_4;
 };
 
+// DamageInteractions
+struct DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 
+{
+	// ItemStatic/WeaponType DamageInteractions::weaponType
+	int32_t ___weaponType_0;
+	// Surface DamageInteractions::surface
+	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_1;
+	// System.Single DamageInteractions::damageMultiplier
+	float ___damageMultiplier_2;
+};
+// Native definition for P/Invoke marshalling of DamageInteractions
+struct DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_marshaled_pinvoke
+{
+	int32_t ___weaponType_0;
+	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_1;
+	float ___damageMultiplier_2;
+};
+// Native definition for COM marshalling of DamageInteractions
+struct DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_marshaled_com
+{
+	int32_t ___weaponType_0;
+	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_1;
+	float ___damageMultiplier_2;
+};
+
 // UnityEngine.Rendering.Universal.DecalEntity
 struct DecalEntity_t8CAF09C65939503449C4138ADCDC4907196293FD 
 {
@@ -2346,27 +2371,6 @@ struct EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4
 {
 	// UnityEngine.UIElements.EasingMode UnityEngine.UIElements.EasingFunction::m_Mode
 	int32_t ___m_Mode_0;
-};
-
-// ElementalInteractions
-struct ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D 
-{
-	// Surface ElementalInteractions::surface
-	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_0;
-	// System.Single ElementalInteractions::damageMultiplier
-	float ___damageMultiplier_1;
-};
-// Native definition for P/Invoke marshalling of ElementalInteractions
-struct ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_marshaled_pinvoke
-{
-	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_0;
-	float ___damageMultiplier_1;
-};
-// Native definition for COM marshalling of ElementalInteractions
-struct ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_marshaled_com
-{
-	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_0;
-	float ___damageMultiplier_1;
 };
 
 // UnityEngine.UIElements.Focusable
@@ -14191,6 +14195,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContourVertex_t58C64DD8B2209C868718C7B5065770
 		return ((ContourVertex_t58C64DD8B2209C868718C7B50657707A15EEEF32*)il2cpp_codegen_add((intptr_t)L_0, ((intptr_t)il2cpp_codegen_multiply(L_1, ((intptr_t)L_2)))));
 	}
 }
+// T& System.Runtime.CompilerServices.Unsafe::Add<DamageInteractions>(T&,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* Unsafe_Add_TisDamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_m2504BB66669F105C3AE2FA71551CA2D7ABEFEAF0_gshared (DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* ___source0, int32_t ___elementOffset1, const RuntimeMethod* method) 
+{
+	{
+		DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* L_0 = ___source0;
+		int32_t L_1 = ___elementOffset1;
+		uint32_t L_2 = sizeof(DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2);
+		return ((DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2*)il2cpp_codegen_add((intptr_t)L_0, ((intptr_t)il2cpp_codegen_multiply(L_1, ((intptr_t)L_2)))));
+	}
+}
 // T& System.Runtime.CompilerServices.Unsafe::Add<System.Double>(T&,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double* Unsafe_Add_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_mA53EE7E045E1A473083CAC029A67479B72CFA24E_gshared (double* ___source0, int32_t ___elementOffset1, const RuntimeMethod* method) 
 {
@@ -14219,16 +14233,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EasingFunction_t5197D3B06056326A8B5C96032CDEB
 		int32_t L_1 = ___elementOffset1;
 		uint32_t L_2 = sizeof(EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4);
 		return ((EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4*)il2cpp_codegen_add((intptr_t)L_0, ((intptr_t)il2cpp_codegen_multiply(L_1, ((intptr_t)L_2)))));
-	}
-}
-// T& System.Runtime.CompilerServices.Unsafe::Add<ElementalInteractions>(T&,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* Unsafe_Add_TisElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_m77E6CC07EDB21E1957D3CF5E2322C8847E8DBDCC_gshared (ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* ___source0, int32_t ___elementOffset1, const RuntimeMethod* method) 
-{
-	{
-		ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* L_0 = ___source0;
-		int32_t L_1 = ___elementOffset1;
-		uint32_t L_2 = sizeof(ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D);
-		return ((ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D*)il2cpp_codegen_add((intptr_t)L_0, ((intptr_t)il2cpp_codegen_multiply(L_1, ((intptr_t)L_2)))));
 	}
 }
 // T& System.Runtime.CompilerServices.Unsafe::Add<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>(T&,System.Int32)
@@ -15442,6 +15446,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContourVertex_t58C64DD8B2209C868718C7B5065770
 		return (ContourVertex_t58C64DD8B2209C868718C7B50657707A15EEEF32*)(L_0);
 	}
 }
+// TTo& System.Runtime.CompilerServices.Unsafe::As<System.Byte,DamageInteractions>(TFrom&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* Unsafe_As_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_TisDamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_m8FDED3685F6B3308726515A6115E0D64C800A9E7_gshared (uint8_t* ___source0, const RuntimeMethod* method) 
+{
+	{
+		uint8_t* L_0 = ___source0;
+		return (DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2*)(L_0);
+	}
+}
 // TTo& System.Runtime.CompilerServices.Unsafe::As<System.Byte,System.Double>(TFrom&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double* Unsafe_As_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_mF3C4041BAA385580E978EDAB01947FB2A9078270_gshared (uint8_t* ___source0, const RuntimeMethod* method) 
 {
@@ -15464,14 +15476,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EasingFunction_t5197D3B06056326A8B5C96032CDEB
 	{
 		uint8_t* L_0 = ___source0;
 		return (EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4*)(L_0);
-	}
-}
-// TTo& System.Runtime.CompilerServices.Unsafe::As<System.Byte,ElementalInteractions>(TFrom&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* Unsafe_As_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_TisElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_mFCDDB8BF8EA355A857712728BFBFB440FE648B51_gshared (uint8_t* ___source0, const RuntimeMethod* method) 
-{
-	{
-		uint8_t* L_0 = ___source0;
-		return (ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D*)(L_0);
 	}
 }
 // TTo& System.Runtime.CompilerServices.Unsafe::As<System.Byte,UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>(TFrom&)
@@ -16589,6 +16593,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Unsafe_IsAddressLessThan_TisContourVerte
 		return (bool)((!(((RuntimeObject*)(uintptr_t)L_0) >= ((RuntimeObject*)(uintptr_t)L_1)))? 1 : 0);
 	}
 }
+// System.Boolean System.Runtime.CompilerServices.Unsafe::IsAddressLessThan<DamageInteractions>(T&,T&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Unsafe_IsAddressLessThan_TisDamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_m90E01958C98BECC42C595D9CF3D6F1347CF6A5E7_gshared (DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* ___left0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* ___right1, const RuntimeMethod* method) 
+{
+	{
+		DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* L_0 = ___left0;
+		DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2* L_1 = ___right1;
+		return (bool)((!(((RuntimeObject*)(uintptr_t)L_0) >= ((RuntimeObject*)(uintptr_t)L_1)))? 1 : 0);
+	}
+}
 // System.Boolean System.Runtime.CompilerServices.Unsafe::IsAddressLessThan<System.Double>(T&,T&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Unsafe_IsAddressLessThan_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_mB11C4B6BF2B77E52389D66FBFB3A85F71FBDD8C3_gshared (double* ___left0, double* ___right1, const RuntimeMethod* method) 
 {
@@ -16613,15 +16626,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Unsafe_IsAddressLessThan_TisEasingFuncti
 	{
 		EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4* L_0 = ___left0;
 		EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4* L_1 = ___right1;
-		return (bool)((!(((RuntimeObject*)(uintptr_t)L_0) >= ((RuntimeObject*)(uintptr_t)L_1)))? 1 : 0);
-	}
-}
-// System.Boolean System.Runtime.CompilerServices.Unsafe::IsAddressLessThan<ElementalInteractions>(T&,T&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Unsafe_IsAddressLessThan_TisElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_m054A56E47B04E8A8383F3F04A6D08896A128361D_gshared (ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* ___left0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* ___right1, const RuntimeMethod* method) 
-{
-	{
-		ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* L_0 = ___left0;
-		ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D* L_1 = ___right1;
 		return (bool)((!(((RuntimeObject*)(uintptr_t)L_0) >= ((RuntimeObject*)(uintptr_t)L_1)))? 1 : 0);
 	}
 }

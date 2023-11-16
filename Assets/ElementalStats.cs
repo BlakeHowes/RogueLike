@@ -7,7 +7,6 @@ public class ElementalStats : MonoBehaviour
 {
     public bool pushImmunity = false;
     public List<ItemAbstract> statusImmunites;
-    public List<Action> actionImmunities;
     public List<DamageInteractions> damageInteractions;
     public bool IsImmune(ItemAbstract statusEffect) {
         if (!statusEffect) { return false; }

@@ -69,7 +69,9 @@ MonoBehaviour:
     type: 3}
   partyIconPrefab: {fileID: 867278356251875308, guid: 7c1b6f0d3a1a05b419bf455ae740db4d,
     type: 3}
-  traitUIPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
+  traitUIEventPrefab: {fileID: 3373031311772610868, guid: aa44cc6d35ab05c4f831f6748e1280dd,
+    type: 3}
+  traitUIDescriptionPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
     type: 3}
   items: []
   traits:

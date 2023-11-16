@@ -74,7 +74,8 @@ public class GlobalValues : ScriptableObject
     public Sprite defaultSkillSprite;
     public GameObject gameOverLayout;
     public GameObject partyIconPrefab;
-    public GameObject traitUIPrefab;
+    public GameObject traitUIEventPrefab;
+    public GameObject traitUIDescriptionPrefab;
 
     [Header("Loot")]
     public List<LootPool> items = new();

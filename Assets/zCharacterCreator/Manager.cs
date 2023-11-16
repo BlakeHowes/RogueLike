@@ -12,10 +12,15 @@ public static class Manager {
     public static System.Action<Vector3Int, Vector3Int, CallType> OnDeathEvent;
     public static System.Action<Vector3Int, Vector3Int, CallType> OnMoveEvent;
     public static System.Action<Vector3Int, Vector3Int, CallType> OnAttackEvent;
+    public static System.Action<GameObject, GameObject> OnSwitchCharacter;
     public static Action<bool> EndOfStackEvent;
 
     public static void OnEndOfStackCall() {
         EndOfStackEvent?.Invoke(true);
+    }
+
+    public static void OnSwitchCharacterCall(GameObject currentCharacter, GameObject previousCharacter) {
+        OnSwitchCharacter?.Invoke(currentCharacter, previousCharacter);
     }
 
     public static void OnTakeDamageCall(Vector3Int position, Vector3Int origin) {

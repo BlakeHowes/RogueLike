@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.Tilemaps;
 namespace Importers {
     public static class GOImporter {
         public static List<GameObject> goList = new List<GameObject>();
@@ -25,7 +25,32 @@ namespace Importers {
         }
 
         public static void UpdateGO(Dictionary<string, object> CSVData,GameObject go ) {
+            var name = CSVData["Name"].ToString();
+            go.tag = CSVData["Faction"].ToString();
+            var sprite = Resources.Load<Sprite>($"GameObjects/2 Sprites/{name}");
+            if (!sprite) { Debug.LogError("Cant Find Sprite for " + name + $"Items/Sprites/{name}.png");return; }
+            go.GetComponent<SpriteRenderer>().sprite = sprite;
+            go.GetComponent<HierarchyIcons.HierarchyIcon>().icon = sprite.texture;
+            var stats = go.GetComponent<Stats>();
+            stats.tile = GetTile(name,sprite);
+            stats.maxHealthBase = int.Parse(CSVData["Health"].ToString());
+            stats.health = int.Parse(CSVData["Health"].ToString());
+            if(bool.Parse(CSVData["Infinite Health"].ToString())) { stats.infiniteHealth = true; }
+            stats.maxArmourBase = int.Parse(CSVData["Armour"].ToString());
+            stats.actionPointsBase = int.Parse(CSVData["AP"].ToString());
+        }
 
+        public static Tile GetTile(string name,Sprite sprite) {
+            var tile = Resources.Load<Tile>($"GameObjects/2 Sprites/{name}");
+            if (!tile) {
+                tile = ScriptableObject.CreateInstance<Tile>();
+                tile.sprite = sprite;
+                AssetDatabase.CreateAsset(tile, $"Assets/Resources/GameObjects/2 Sprites/{name}.asset");
+                return tile;
+            }
+            tile.sprite = sprite;
+            EditorUtility.SetDirty(tile);
+            return tile;
         }
 
 
@@ -49,6 +74,7 @@ namespace Importers {
                     if (faction == "Passive") {AddAI(go, Manager.GetGlobalValues().defaultEPassiveBehaviour); }
                     if (faction == "Summon") { AddAI(go, Manager.GetGlobalValues().defaultSummonBehaviour); }
                 }
+                UpdateGO(itemData, go);
             }
         }
 

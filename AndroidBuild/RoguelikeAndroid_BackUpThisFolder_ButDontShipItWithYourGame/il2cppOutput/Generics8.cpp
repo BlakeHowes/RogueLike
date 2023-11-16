@@ -282,14 +282,14 @@ struct Comparison_1_t6C68834601B841AAE02FC565E6F74B78BF830F18;
 struct Comparison_1_t8EB455F2AAA7E2008173FA39BB2AE4BD31964C79;
 // System.Comparison`1<UnityEngine.Rendering.Universal.LibTessDotNet.ContourVertex>
 struct Comparison_1_tC9C458D54EED8A511FC028EC65CEEF4138AFC836;
+// System.Comparison`1<DamageInteractions>
+struct Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3;
 // System.Comparison`1<System.Double>
 struct Comparison_1_tBF0BE6729972AF8DF6C6E2274134C881021D8631;
 // System.Comparison`1<UnityEngine.Rendering.Universal.DoublePoint>
 struct Comparison_1_t0D159E270CF89D22E760004B1311C4096F0947B6;
 // System.Comparison`1<UnityEngine.UIElements.EasingFunction>
 struct Comparison_1_tE81C7BD20CD6590757BACBD4D55CBCD17BAA6D8B;
-// System.Comparison`1<ElementalInteractions>
-struct Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE;
 // System.Comparison`1<UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord>
 struct Comparison_1_tF964A5F2E76EBC830880EAA79F49245171578AA2;
 // System.Comparison`1<UnityEngine.TextCore.GlyphRect>
@@ -2343,6 +2343,31 @@ struct ComputedTransitionProperty_tD8E4D8EB5DD69E063944F27A48D9263F4F1354E1_mars
 	Il2CppMethodPointer ___easingCurve_3;
 };
 
+// DamageInteractions
+struct DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 
+{
+	// ItemStatic/WeaponType DamageInteractions::weaponType
+	int32_t ___weaponType_0;
+	// Surface DamageInteractions::surface
+	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_1;
+	// System.Single DamageInteractions::damageMultiplier
+	float ___damageMultiplier_2;
+};
+// Native definition for P/Invoke marshalling of DamageInteractions
+struct DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_marshaled_pinvoke
+{
+	int32_t ___weaponType_0;
+	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_1;
+	float ___damageMultiplier_2;
+};
+// Native definition for COM marshalling of DamageInteractions
+struct DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2_marshaled_com
+{
+	int32_t ___weaponType_0;
+	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_1;
+	float ___damageMultiplier_2;
+};
+
 // System.Collections.DictionaryEntry
 struct DictionaryEntry_t171080F37B311C25AA9E75888F9C9D703FA721BB 
 {
@@ -2385,27 +2410,6 @@ struct EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4
 {
 	// UnityEngine.UIElements.EasingMode UnityEngine.UIElements.EasingFunction::m_Mode
 	int32_t ___m_Mode_0;
-};
-
-// ElementalInteractions
-struct ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D 
-{
-	// Surface ElementalInteractions::surface
-	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_0;
-	// System.Single ElementalInteractions::damageMultiplier
-	float ___damageMultiplier_1;
-};
-// Native definition for P/Invoke marshalling of ElementalInteractions
-struct ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_marshaled_pinvoke
-{
-	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_0;
-	float ___damageMultiplier_1;
-};
-// Native definition for COM marshalling of ElementalInteractions
-struct ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D_marshaled_com
-{
-	Surface_t82C996BD2803A78494838F606C373CFD0260569F* ___surface_0;
-	float ___damageMultiplier_1;
 };
 
 // System.Runtime.CompilerServices.Ephemeron
@@ -6521,6 +6525,11 @@ struct Comparison_1_tC9C458D54EED8A511FC028EC65CEEF4138AFC836  : public Multicas
 {
 };
 
+// System.Comparison`1<DamageInteractions>
+struct Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3  : public MulticastDelegate_t
+{
+};
+
 // System.Comparison`1<System.Double>
 struct Comparison_1_tBF0BE6729972AF8DF6C6E2274134C881021D8631  : public MulticastDelegate_t
 {
@@ -6533,11 +6542,6 @@ struct Comparison_1_t0D159E270CF89D22E760004B1311C4096F0947B6  : public Multicas
 
 // System.Comparison`1<UnityEngine.UIElements.EasingFunction>
 struct Comparison_1_tE81C7BD20CD6590757BACBD4D55CBCD17BAA6D8B  : public MulticastDelegate_t
-{
-};
-
-// System.Comparison`1<ElementalInteractions>
-struct Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE  : public MulticastDelegate_t
 {
 };
 
@@ -14266,6 +14270,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Comparison_1_Invoke_m0E99D58D81EA8F09
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+int32_t Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_Multicast(Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___x0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___y1, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	int32_t retVal = 0;
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* currentDelegate = reinterpret_cast<Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3*>(delegatesToInvoke[i]);
+		typedef int32_t (*FunctionPointerType) (RuntimeObject*, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, const RuntimeMethod*);
+		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+	return retVal;
+}
+int32_t Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_OpenInst(Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___x0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___y1, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, method);
+}
+int32_t Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_OpenStatic(Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___x0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___y1, const RuntimeMethod* method)
+{
+	typedef int32_t (*FunctionPointerType) (DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, method);
+}
+int32_t Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_OpenStaticInvoker(Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___x0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___y1, const RuntimeMethod* method)
+{
+	return InvokerFuncInvoker2< int32_t, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 >::Invoke(__this->___method_ptr_0, method, NULL, ___x0, ___y1);
+}
+int32_t Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_ClosedStaticInvoker(Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___x0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___y1, const RuntimeMethod* method)
+{
+	return InvokerFuncInvoker3< int32_t, RuntimeObject*, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___x0, ___y1);
+}
+// System.Void System.Comparison`1<DamageInteractions>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Comparison_1__ctor_m8487487BD7B2E74653EF6C4A88B4EB691E28D7B0_gshared (Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 2;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		if (___object0 == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_Multicast;
+}
+// System.Int32 System.Comparison`1<DamageInteractions>::Invoke(T,T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Comparison_1_Invoke_mE59731F50473D9A2B6B379F2F0AD325B28C3F7AC_gshared (Comparison_1_tA914A156FC7DC712F1F069A76D16143F01DA61C3* __this, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___x0, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2 ___y1, const RuntimeMethod* method) 
+{
+	typedef int32_t (*FunctionPointerType) (RuntimeObject*, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, DamageInteractions_tCB53217EC65E6BCC15B915C4FF7143E76CE61EC2, const RuntimeMethod*);
+	return ((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 int32_t Comparison_1_Invoke_m0EF775EE8756C9B9962AED61D41ACC02DA4195E3_Multicast(Comparison_1_tBF0BE6729972AF8DF6C6E2274134C881021D8631* __this, double ___x0, double ___y1, const RuntimeMethod* method)
 {
 	il2cpp_array_size_t length = __this->___delegates_13->max_length;
@@ -14496,86 +14580,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Comparison_1__ctor_mD1F153B40E7D12AF9FE6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Comparison_1_Invoke_mB2279F345520378176E58A892BF2D9445AF9D3DF_gshared (Comparison_1_tE81C7BD20CD6590757BACBD4D55CBCD17BAA6D8B* __this, EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4 ___x0, EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4 ___y1, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4, EasingFunction_t5197D3B06056326A8B5C96032CDEBD5D3BDCA7A4, const RuntimeMethod*);
-	return ((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-int32_t Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_Multicast(Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___x0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___y1, const RuntimeMethod* method)
-{
-	il2cpp_array_size_t length = __this->___delegates_13->max_length;
-	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
-	int32_t retVal = 0;
-	for (il2cpp_array_size_t i = 0; i < length; i++)
-	{
-		Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* currentDelegate = reinterpret_cast<Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE*>(delegatesToInvoke[i]);
-		typedef int32_t (*FunctionPointerType) (RuntimeObject*, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, const RuntimeMethod*);
-		retVal = ((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
-	}
-	return retVal;
-}
-int32_t Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_OpenInst(Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___x0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___y1, const RuntimeMethod* method)
-{
-	typedef int32_t (*FunctionPointerType) (ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, const RuntimeMethod*);
-	return ((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, method);
-}
-int32_t Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_OpenStatic(Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___x0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___y1, const RuntimeMethod* method)
-{
-	typedef int32_t (*FunctionPointerType) (ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, const RuntimeMethod*);
-	return ((FunctionPointerType)__this->___method_ptr_0)(___x0, ___y1, method);
-}
-int32_t Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_OpenStaticInvoker(Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___x0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___y1, const RuntimeMethod* method)
-{
-	return InvokerFuncInvoker2< int32_t, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D >::Invoke(__this->___method_ptr_0, method, NULL, ___x0, ___y1);
-}
-int32_t Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_ClosedStaticInvoker(Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___x0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___y1, const RuntimeMethod* method)
-{
-	return InvokerFuncInvoker3< int32_t, RuntimeObject*, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___x0, ___y1);
-}
-// System.Void System.Comparison`1<ElementalInteractions>::.ctor(System.Object,System.IntPtr)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Comparison_1__ctor_m7FB7AC933A7F94A842CC6895DD864660BD26CF7D_gshared (Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
-{
-	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
-	__this->___method_3 = ___method1;
-	__this->___m_target_2 = ___object0;
-	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
-	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
-	__this->___method_code_6 = (intptr_t)__this;
-	if (MethodIsStatic((RuntimeMethod*)___method1))
-	{
-		bool isOpen = parameterCount == 2;
-		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
-			if (isOpen)
-				__this->___invoke_impl_1 = (intptr_t)&Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_OpenStaticInvoker;
-			else
-				__this->___invoke_impl_1 = (intptr_t)&Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_ClosedStaticInvoker;
-		else
-			if (isOpen)
-				__this->___invoke_impl_1 = (intptr_t)&Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_OpenStatic;
-			else
-				{
-					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
-					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
-				}
-	}
-	else
-	{
-		if (___object0 == NULL)
-			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
-		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
-		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
-	}
-	__this->___extra_arg_5 = (intptr_t)&Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_Multicast;
-}
-// System.Int32 System.Comparison`1<ElementalInteractions>::Invoke(T,T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Comparison_1_Invoke_mF2A72D8A95DAA76781F4948D3468BADE3F1C4027_gshared (Comparison_1_tF6E9377DAAC939915B19BA4E582F271B21E678EE* __this, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___x0, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D ___y1, const RuntimeMethod* method) 
-{
-	typedef int32_t (*FunctionPointerType) (RuntimeObject*, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, ElementalInteractions_t867ECED8E22790D1E930C5D04A618832D073875D, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___x0, ___y1, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
 }
 #ifdef __clang__

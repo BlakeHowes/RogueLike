@@ -28,12 +28,12 @@ public static class ItemImporter {
             var type = itemData["Type"].ToString();
 
             //Weapon
-            if (type == "Melee" || type == "Ranged" || type == "Magic") {
+            if (type == "melee" || type == "ranged" || type == "magic") {
                     UpdateOrCreateWeapon(itemData);continue;
             }
 
             //General Item
-            if(type == "General") {
+            if(type == "general") {
                     UpdateOrCreateGeneralItem(itemData);continue;
             }
 
@@ -92,7 +92,7 @@ public static class ItemImporter {
         tile.sprite = sprite;
         EditorUtility.SetDirty(tile);
         return tile;
-    }
+        }
 
         private static void UpdateOrCreateWeapon(Dictionary<string, object> itemData) {
             var name = itemData["Name"].ToString();

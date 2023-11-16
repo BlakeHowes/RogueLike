@@ -256,29 +256,17 @@ public class Stats : MonoBehaviour {
     }
 
     public void RefreshCharacter(Vector3Int position) {
-        //START STOPWATCH
-        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        stopwatch.Start();
-        //START STOPWATCH
-        Debug.Log("Refresh Character StopWatch 1:" + stopwatch.Elapsed);
         ResetTempStats();
-        Debug.Log("Refresh Character StopWatch 2:" + stopwatch.Elapsed);
         //System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
         //System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
         //Debug.LogError(gameObject.name +" "+ methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
 
         //inventory.CallEquipment(position, position, CallType.ResetStatsToBase);
         inventory.CallEquipment(position,position, CallType.CalculateStats);
-        Debug.Log("Refresh Character StopWatch 3:" + stopwatch.Elapsed);
         if (!armourChecked) { armour = maxArmourTemp; armourChecked = true; }
         //Debug.Log(armour +" "+ armourTemp + "Status Effects " + inventory.statusEffects.Count);
         if (armour > maxArmourTemp) { armour = maxArmourTemp; }
-        Debug.Log("Refresh Character StopWatch 4:" + stopwatch.Elapsed);
         UpdateHealthBar();
-        //STOP STOPWATCH
-        stopwatch.Stop();
-        Debug.Log("Refresh Character StopWatch 5:" + stopwatch.Elapsed);
-        //STOP STOPWATCH
 
     }
 

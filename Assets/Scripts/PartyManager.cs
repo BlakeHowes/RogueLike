@@ -21,10 +21,8 @@ public class PartyManager : MonoBehaviour {
     private GlobalValues globalValues;
     string currentTag;
 
-    public System.Action<GameObject, GameObject> OnSwitchCharacter;
-    public void OnSwitchCharacterCall(GameObject currentCharacter,GameObject previousCharacter) {
-        OnSwitchCharacter?.Invoke(currentCharacter,previousCharacter);
-    }
+ 
+
     public enum State {
         Idle,
         Combat
@@ -157,7 +155,7 @@ public class PartyManager : MonoBehaviour {
         var previousCharacter = currentCharacter;
         currentCharacter = character;
 
-        OnSwitchCharacterCall(currentCharacter, previousCharacter);
+        Manager.OnSwitchCharacterCall(currentCharacter, previousCharacter);
 
         currentTag = character.tag;
         var stats = character.GetComponent<Stats>();

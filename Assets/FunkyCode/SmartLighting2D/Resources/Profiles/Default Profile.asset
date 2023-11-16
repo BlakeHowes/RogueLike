@@ -54,8 +54,8 @@ MonoBehaviour:
         list:
         - layerID: 0
   qualitySettings:
-    lightTextureSize: 1
-    lightEffectTextureSize: 1
+    lightTextureSize: 3
+    lightEffectTextureSize: 5
     lightFilterMode: 0
     lightmapFilterMode: 0
     updateMethod: 0

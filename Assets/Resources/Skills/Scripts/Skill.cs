@@ -46,10 +46,11 @@ public class Skill : ItemAbstract{
             InventoryManager.i.AddSkill(this);
         }
         if (MouseManager.i.itemSelected != this) { return; }
-        if (callType == CallType.OnActivate) {
+
+        if (callType == CallType.OnActivate && rangeType == RangeType.Multi) {
             var inventory = parentGO.GetComponent<Inventory>();
             if (inventory.GetCoolDown(this) > 0) { return; }
-            inventory.AddCoolDown(coolDown +1, this);
+            inventory.AddCoolDown(coolDown + 1, this);
         }
 
         if (rangeType == RangeType.Multi && callType == CallType.OnActivate) {
@@ -60,8 +61,10 @@ public class Skill : ItemAbstract{
                     }
                 }
             }
+            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), actionPointCost);
             return;
         }
+
 
 
         if (rangeType == RangeType.TwoTargets && callType == CallType.OnActivate) {
@@ -70,11 +73,20 @@ public class Skill : ItemAbstract{
             return;
         }
 
+        if (callType == CallType.OnActivate) {
+            var inventory = parentGO.GetComponent<Inventory>();
+            if (inventory.GetCoolDown(this) > 0) { return; }
+            inventory.AddCoolDown(coolDown + 1, this);
+
+            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), actionPointCost);
+        }
+
         foreach (var ability in abilities) {
             if (ability.callType == callType) {
                 ability.Call(position, origin, parentGO, this);
             }
         }
+
     }
 
     public List<string> GetTags(GameObject parentGO) {

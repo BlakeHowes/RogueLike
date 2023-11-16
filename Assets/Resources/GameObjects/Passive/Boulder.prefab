@@ -206,7 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushImmunity: 0
-  statusImmunites: []
+  statusImmunites:
+  - {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
   actionImmunities: []
   damageInteractions: []
 --- !u!114 &4723093663502415769
@@ -224,9 +225,9 @@ MonoBehaviour:
   shadowType: 3
   shadowLayer: 0
   shadowDistance: 1
-  shadowDistanceMin: 0.4322133
-  shadowDistanceMax: 1.2197485
-  shadowTranslucency: 0.3
+  shadowDistanceMin: 0.57507044
+  shadowDistanceMax: 1.8626056
+  shadowTranslucency: 0.37
   maskType: 1
   maskLit: 0
   maskPivot: 0
@@ -245,7 +246,7 @@ MonoBehaviour:
     shadowType: 3
     maskType: 1
     maskPivot: 0
-    transform: {fileID: 0}
+    transform: {fileID: 2354247380013042045}
 --- !u!58 &4735503666626699403
 CircleCollider2D:
   m_ObjectHideFlags: 0

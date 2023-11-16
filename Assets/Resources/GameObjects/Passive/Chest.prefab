@@ -72,6 +72,9 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 1
   actionPoints: 0
   actionPointsSum: 0
@@ -230,9 +233,9 @@ MonoBehaviour:
   shadowType: 3
   shadowLayer: 0
   shadowDistance: 1
-  shadowDistanceMin: 0.30234316
-  shadowDistanceMax: 0.9535147
-  shadowTranslucency: 0.3
+  shadowDistanceMin: 0.57507044
+  shadowDistanceMax: 1.8626056
+  shadowTranslucency: 0.37
   maskType: 1
   maskLit: 0
   maskPivot: 0

@@ -6,7 +6,7 @@ public class LineEffect : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     public float timeUntilDestroy;
-    bool destroyAfterSeconds = false;
+    public bool destroyAfterSeconds = false;
 
     public GameObject go;
     public GameObject go2;
@@ -15,7 +15,11 @@ public class LineEffect : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.SetPosition(0, origin);
         lineRenderer.SetPosition(1, position);
-        if(destroyAfterSeconds) StartCoroutine(Animate());
+        //if(destroyAfterSeconds) StartCoroutine(Animate());
+    }
+
+    public void OnEnable() {
+        if (destroyAfterSeconds) StartCoroutine(Animate());
     }
 
 
@@ -32,6 +36,10 @@ public class LineEffect : MonoBehaviour
     IEnumerator Animate() {
         yield return new WaitForSeconds(timeUntilDestroy);
         Destroy(gameObject);
+    }
+
+    public void DestroyEffect() {
+        Destroy(gameObject); return;
     }
 
     public void Update() {

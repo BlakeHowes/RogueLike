@@ -8,14 +8,13 @@ public class CharacterLight : MonoBehaviour
     private Light2D light2D;
     private GlobalValues globalValues;
     public void OnEnable() {
-        PartyManager.i.OnSwitchCharacter += OnSwitchCharacter;
+        Manager.OnSwitchCharacter += OnSwitchCharacter;
         globalValues = Manager.GetGlobalValues();
         light2D = GetComponent<Light2D>();
-        OnSwitchCharacter(PartyManager.i.currentCharacter,gameObject);
     }
 
     public void OnDisable() {
-        PartyManager.i.OnSwitchCharacter -= OnSwitchCharacter;
+        Manager.OnSwitchCharacter -= OnSwitchCharacter;
     }
 
     public void OnSwitchCharacter(GameObject currentCharacter, GameObject previousCharacter) {

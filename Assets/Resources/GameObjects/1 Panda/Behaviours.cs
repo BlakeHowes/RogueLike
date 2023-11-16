@@ -41,7 +41,6 @@ public class Behaviours : MonoBehaviour
                 globalValues.GetWaitSeconds(0.2f).AddToStack();
                 skill.Call(targetPosition,origin,gameObject, CallType.OnActivate);
                 globalValues.GetWaitSeconds(0.2f).AddToStack();
-                stats.actionPoints -= skill.actionPointCost;
                 MouseManager.i.itemSelected = null;
                 ThisTask.Succeed();
                 break;

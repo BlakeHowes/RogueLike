@@ -42,6 +42,7 @@ public class GridManager : MonoBehaviour {
     public List<Action> itemsInActionStack = new List<Action>();
     public bool enumeratingStack;
     public int lootCounter = 1;
+    private bool semiFog = false;
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
@@ -54,6 +55,7 @@ public class GridManager : MonoBehaviour {
         goMethods = new GoMethod(goGrid, assets, goTilemap, floorTilemap, globalValues);
         graphics = new GridGraphics(globalValues.width, globalValues.height, mechGrid, surfaceGrid, goGrid, itemGrid, goTilemap, itemTilemap, mechTilemap, surfaceTilemap, shadowTilemap, globalValues);
         ExtensionMethods.SetReferences();
+        if (fogTilemap.enabled) { semiFog = true; }
     }
 
     public void Initialize() {
@@ -190,7 +192,7 @@ public class GridManager : MonoBehaviour {
                 ClearFogDoor(pos);
             }
         }
-        ClearSemiFog();
+        if(semiFog)ClearSemiFog();
         graphics.UpdateEverything();
 
     }

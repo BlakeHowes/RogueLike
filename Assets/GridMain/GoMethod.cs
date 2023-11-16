@@ -46,7 +46,7 @@ public class GoMethod
     }
 
     public GameObject GetGameObject(Vector3Int position) {
-        if (position.InBounds() && position.IsWalkable()) {
+        if (position.InBounds()) {
             return goGrid[position.x, position.y];
         }
         return null;
@@ -134,6 +134,19 @@ public class GoMethod
             previousPos = cell;
         }
         return Position;
+    }
+
+    public Vector3Int ClosestFreeCellToPosition(Vector3Int Position, Vector3Int Origin) {
+        var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
+        if (cells.Count == 0) {return Origin;}
+
+        for (int i = cells.Count-1; i > 0; i--) {
+            if (FloorManager.i.IsWalkable(cells[i]) && !cells[i].GameObjectGo()) {
+                return cells[i];
+            }
+        }
+
+        return Origin;
     }
 
     public Vector3Int PositionBeforeHittingGameObjectOrUnwalkableCell(Vector3Int Position, Vector3Int Origin) {
@@ -366,7 +379,7 @@ public class GoMethod
                 for (int y = checkpos.y - 1; y <= checkpos.y + 1; y++) {
                     pos.x = x;
                     pos.y = y;
-                    if (!floorTilemap.GetTile(pos)) { continue; }
+                    if (!FloorManager.i.IsWalkable(pos)) { continue; }
                     if (x == checkpos.x && y == checkpos.y) { continue; }
 
                     if (!pos.GameObjectSpawn()) {

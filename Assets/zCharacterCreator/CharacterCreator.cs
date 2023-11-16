@@ -159,12 +159,12 @@ public class CharacterCreator : MonoBehaviour {
     }
 
     public void ShowDescriptionForTraits() {
-        var prefab = Manager.GetGlobalValues().traitUIPrefab;
+        var prefab = Manager.GetGlobalValues().traitUIEventPrefab;
         foreach(Transform child in traitLayout.transform) {
             Destroy(child.gameObject);
         }
         foreach(ItemAbstract item in currentCharacter.GetComponent<Inventory>().traits) {
-            var uiElements = TraitUIGenerator.GetUIElementsFromItem(item,options.gameObject, prefab);
+            var uiElements = TraitUIGenerator.GetItemTraits(item,options.gameObject, prefab);
             foreach (var element in uiElements) {
                 element.transform.SetParent(traitLayout);
                 element.transform.localScale = new Vector3(1,1,1);

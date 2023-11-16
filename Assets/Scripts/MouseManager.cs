@@ -196,13 +196,13 @@ public class MouseManager : MonoBehaviour
 
         if (inventory.items.Contains(itemSelected)) {
             Actions.i.ThrowItem(position, origin, itemSelected, inventory);
-            ChangeActionPoints(position, origin, inventory, currentStats, 1);
+            ChangeActionPoints(currentStats, 1);
             SelectItem(null);
             EndOfAction(currentCharacter, currentStats);
             return true;
         }
         var skill = itemSelected as Skill;
-        if (ChangeActionPoints(position, origin, inventory, currentStats, skill.actionPointCost))
+        if (CheckActionPoints(currentStats, skill.actionPointCost))
         itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
         GameUIManager.i.apUIElement.HighlightAP(-1);
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
@@ -253,14 +253,9 @@ public class MouseManager : MonoBehaviour
     [HideInInspector] public bool blockPickup = false;
     [HideInInspector] public bool pickUpButNotAddToInventory = false;
     public void WaitOrPickUpItem(Vector3Int position, Vector3Int origin, GameObject target, Stats currentStats, GameObject currentCharacter) {
-        //START STOPWATCH
-        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        stopwatch.Start();
-        //START STOPWATCH
         if(position != origin) { return; }
         var mech = GridManager.i.mechMethods.GetMechanism(position);
         if(mech)mech.Call(position,MechStatic.Signal.ClickOnWhileStandingOntopOf);
-        Debug.Log("WaitOrPickup 1 StopWatch:" + stopwatch.Elapsed);
         //Wait
         if (target != currentCharacter) { return; }
         if (position.Item() == null) {
@@ -268,31 +263,23 @@ public class MouseManager : MonoBehaviour
             EndOfAction(currentCharacter, currentStats);
             return;
         }
-        Debug.Log("WaitOrPickup 2 StopWatch:" + stopwatch.Elapsed);
         //Pick up
         var inventory = currentCharacter.GetComponent<Inventory>();
         var item = position.Item();
         if (item) {
-            Debug.Log("WaitOrPickup 3 StopWatch:" + stopwatch.Elapsed);
             item.Call(position, origin,currentCharacter, CallType.OnPickupItem);
             if (blockPickup) { EndOfAction(currentCharacter, currentStats);return; }
             //Coins hack, better this concept if needed
             if (pickUpButNotAddToInventory) { GridManager.i.itemMethods.RemoveItem(position); currentStats.actionPoints -= 1; EndOfAction(currentCharacter, currentStats);return; }
-            Debug.Log("WaitOrPickup 4 StopWatch:" + stopwatch.Elapsed);
             if (inventory.items.Count < globalValues.maxItems) {
                 GridManager.i.itemMethods.RemoveItem(position);
                 inventory.AddItem(item);
                 bagAnimation.PlayAnimation(item);
 
             }
-            Debug.Log("WaitOrPickup 5 StopWatch:" + stopwatch.Elapsed);
         }
 
         currentStats.actionPoints -= 1;
-        //STOP STOPWATCH
-        stopwatch.Stop();
-        Debug.Log("WaitOrPickup 6 StopWatch:" + stopwatch.Elapsed);
-        //STOP STOPWATCH
         EndOfAction(currentCharacter, currentStats);
     }
 
@@ -332,7 +319,13 @@ public class MouseManager : MonoBehaviour
         return false;
     }
 
-    public bool ChangeActionPoints(Vector3Int position,Vector3Int origin,Inventory inventory,Stats stats,int actionPoints) {
+    public bool CheckActionPoints(Stats stats, int actionPoints) {
+        if (stats.state == State.Idle) { return true; }   //If outside of combat dont use action points 
+        if (actionPoints <= stats.actionPoints) { return true; }
+        return false;
+    }
+
+    public bool ChangeActionPoints(Stats stats,int actionPoints) {
         if(stats.state == State.Idle) { return true; }   //If outside of combat dont use action points 
         if(actionPoints <= stats.actionPoints) { stats.actionPoints -= actionPoints; return true; }
         return false;
@@ -346,7 +339,7 @@ public class MouseManager : MonoBehaviour
         //partyManager.RemoveNullCharacters(partyManager.party);
         if (currentStats.state == State.Idle) {
             foreach (GameObject member in partyManager.party) {
-                member.GetComponent<Stats>().ResetActionPoints();
+                if(member)member.GetComponent<Stats>().ResetActionPoints();
             }
             if (state == State.Combat) {
                 partyManager.partyMemberTurnTaken.Clear();

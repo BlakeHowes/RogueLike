@@ -94,7 +94,7 @@ MonoBehaviour:
   elementalStats: {fileID: 0}
   maxHealthBase: 200
   maxArmourBase: 0
-  actionPointsBase: 5
+  actionPointsBase: 6
   throwingRangeBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0

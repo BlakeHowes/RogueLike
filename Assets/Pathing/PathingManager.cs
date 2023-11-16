@@ -159,23 +159,37 @@ public class PathingManager : MonoBehaviour
         return false;
     }
 
+    public bool CheckMoveImmunity(GameObject go) {
+        go.TryGetComponent<ElementalStats>(out ElementalStats elementalStats);
+        if (elementalStats) {
+            if (elementalStats.pushImmunity) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public float Jump(Vector3Int endPosition, Vector3Int startPosition,float speed) {
         endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(endPosition,startPosition);
         if (endPosition == startPosition) { return 0; }
         var character = startPosition.GameObjectSpawn();
         if (character == null) { return 0; }
-        TryGetComponent<ElementalStats>(out ElementalStats elementalStats);
-        if (elementalStats) {
-            if (elementalStats.pushImmunity) {
-                return 0;
-            }
-        }
+        if (CheckMoveImmunity(character)) { return 0; }
         character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, speed * 100);
         MovePosition(endPosition, startPosition, character);
-
-
-
         var travelTime = Vector3.Distance(startPosition, endPosition) /14f;
+        return travelTime;
+    }
+
+    public float Fly(Vector3Int endPosition, Vector3Int startPosition, float speed) {
+        endPosition = GridManager.i.goMethods.ClosestFreeCellToPosition(endPosition, startPosition);
+        if (endPosition == startPosition) { return 0; }
+        var character = startPosition.GameObjectSpawn();
+        if (character == null) { return 0; }
+        if (CheckMoveImmunity(character)) { return 0; }
+        character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, speed * 100);
+        MovePosition(endPosition, startPosition, character);
+        var travelTime = Vector3.Distance(startPosition, endPosition) / 14f;
         return travelTime;
     }
 
@@ -189,6 +203,7 @@ public class PathingManager : MonoBehaviour
     public void Roll(Vector3Int endPosition, Vector3Int startPosition, float speed) {
         if (endPosition.GameObjectSpawn() == null) {
             var character = startPosition.GameObjectSpawn();
+            if (CheckMoveImmunity(character)) { return; }
             if (character == null) { return; }
             character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
             character.TryGetComponent<LightCollider2D>(out LightCollider2D lightCollider);
@@ -202,6 +217,7 @@ public class PathingManager : MonoBehaviour
     public Vector3Int Teleport(Vector3Int endPosition, Vector3Int startPosition) {
         var character = startPosition.GameObjectSpawn();
         if (!character) { return startPosition; }
+        if (CheckMoveImmunity(character)) { return startPosition; }
         character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
         character.GetComponent<SpringToTarget3D>().spring.Reset();
         GridManager.i.goMethods.RemoveGameObject(startPosition);

@@ -31,6 +31,14 @@ public class DevHotkeys : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C)) {
             CharacterSpriteGenerator.CreateCharacterSprite(PartyManager.i.currentCharacter);
         }
+        
+        if (Input.GetKeyDown(KeyCode.T)) {
+            var mousePos = MouseManager.i.MousePositionOnGrid();
+            foreach(var go in PartyManager.i.party) {
+                PathingManager.i.Teleport(mousePos, go.Position());
+            }
+            GridManager.i.UpdateGame();
+        }
 
         if (Input.GetKeyDown(KeyCode.V)) {
             PartyManager.i.EndTurn();

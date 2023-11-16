@@ -27,6 +27,12 @@ public class Grid2D {
         }
     }
 
+    public void ResetCell(Vector3Int pos) {
+        int index = pos.x * length + pos.y;
+        cells[index].parent = null;
+        cells[index].walkable = true;
+    }
+
 
     public Cell FindCellByPosition(Vector3Int pos) {
         int index = pos.x * length + pos.y;

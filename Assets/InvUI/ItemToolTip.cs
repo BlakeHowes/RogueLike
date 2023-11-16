@@ -70,11 +70,11 @@ public class ItemToolTip : MonoBehaviour
         statsClone.GetComponent<StatsUI>().UpdateStats(character);
 
         Title.text = character.name.ToString();
-        AddAbilitysToUI(character.GetComponent<Inventory>().generalAbilities, character, null) ;
-        foreach (var item in character.GetComponent<Inventory>().traits) {
-            if(item is Skill) { continue; }
-            AddAbilitysToUI(item.abilities,character,null);
-        }
+        var descriptionElements = TraitUIGenerator.CreateGoDescriptions(character);
+        foreach (var descriptionElement in descriptionElements) {
+            descriptionElement.transform.parent = traitsLayout.transform;
+            descriptionElement.transform.localScale = new Vector3(1, 1, 1);
+        }    
         var position = Input.mousePosition;
         var offset = 0;
         if (position.x > 1500) { offset = -420; } else {

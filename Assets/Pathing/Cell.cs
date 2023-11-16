@@ -16,4 +16,8 @@ public class Cell {
     public Cell(Vector3Int position) {
         this.position = position;
     }
+
+    public void SetPosition(Vector3Int position) {
+        this.position = position;
+    }
 }
