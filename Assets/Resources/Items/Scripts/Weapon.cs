@@ -20,7 +20,7 @@ public class Weapon : ItemAbstract {
     [HideInInspector] public int damageTotal;
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
-        origin = parentGO.Position();
+        if(position != origin) { origin = parentGO.Position(); }
         if(callType == CallType.OnActivate) {
             if (!parentGO) { return; }
             if (!position.InRange(origin, rangeBase)) { return; }

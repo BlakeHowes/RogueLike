@@ -13,6 +13,6 @@ public class FloorExit : MechAbstract {
 
 public IEnumerator Wait() {
         yield return new WaitForSeconds(0.2f);
-        //Manager.LoadNextScene();
+        Manager.LoadNextScene();
     }
 }

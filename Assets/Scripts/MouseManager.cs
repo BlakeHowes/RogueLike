@@ -202,7 +202,7 @@ public class MouseManager : MonoBehaviour
             return true;
         }
         var skill = itemSelected as Skill;
-        if (CheckActionPoints(currentStats, skill.actionPointCost))
+        if (CheckActionPoints(currentStats, skill.GetAPCost()))
         itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
         GameUIManager.i.apUIElement.HighlightAP(-1);
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);

@@ -38,18 +38,40 @@ public class GridGraphics
 
     public void UpdateEverything() {
         shadowTilemap.ClearAllTiles();
+        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        stopwatch.Start();
+
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
+
+
                 var position = new Vector3Int(x, y);
                 if (fogMap[x,y] == 0) { continue; }
                 if (itemGrid[x, y] != null) {
-                    itemTilemap.SetTile(position, itemGrid[x, y].tile);
-                    shadowTilemap.SetTile(position, globalValues.shadowTile);
-                }  
-                if (mechGrid[x, y] != null) mechTilemap.SetTile(position, mechGrid[x, y].tile);
-                if (surfaceGrid[x, y] != null) surfaceTilemap.SetTile(position, surfaceGrid[x, y].tile);
+                    if(itemTilemap.GetTile(position) != itemGrid[x, y].tile) {
+                        itemTilemap.SetTile(position, itemGrid[x, y].tile);
+                        shadowTilemap.SetTile(position, globalValues.shadowTile);
+                    }
+                }
+
+
+                if (mechGrid[x, y] != null) {
+                    if (mechTilemap.GetTile(position) != mechGrid[x, y].tile) {
+                        mechTilemap.SetTile(position, mechGrid[x, y].tile);
+                    }
+                }
+
+
+                if (surfaceGrid[x, y] != null) {
+                    if (surfaceTilemap.GetTile(position) != surfaceGrid[x, y].tile) {
+                        surfaceTilemap.SetTile(position, surfaceGrid[x, y].tile);
+                    }
+                }
+
             }
         }
+        Debug.Log("Graphics stopwatch "+stopwatch.Elapsed);
+        stopwatch.Stop();
     }
 
     public void UpdateItemAbstracts(int width, int height,ItemAbstract[,] itemGrid, Tilemap tilemap) {

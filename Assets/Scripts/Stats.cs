@@ -22,8 +22,9 @@ public class Stats : MonoBehaviour {
 
     [Header("Temporary Stats")]
     [HideInInspector] public int maxHealthTemp;
-     public int maxArmourTemp;
+    public int maxArmourTemp;
     public int actionPointsTemp;
+    public int skillAPCost;
     [HideInInspector] public int throwingRangeTemp;
     [HideInInspector] public int walkCostTemp;
     [HideInInspector] public int enemyAlertRangeTemp;

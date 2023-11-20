@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Eletricity
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 88195e1b69a0d85478127ad23d06ae16, type: 2}
-  iconColour: {r: 1, g: 0.97351444, b: 0, a: 1}
+  iconColour: {r: 0, g: 0.860724, b: 1, a: 1}
   combinations: []
   abilities: []
   StatusEffect: {fileID: 0}
   duration: {x: 0, y: 0}
   counter: 0
-  effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c, type: 3}
+  effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c,
+    type: 3}
   dryUpSurface: {fileID: 0}
   dryUp: 1
   tryToSpread: 0

@@ -30,6 +30,19 @@ public class FloorManager : MonoBehaviour
     //1 Walkable
     //2 NonWalkable (floor you cant walk on but can shoot over)
 
+    public Vector3Int GetRandomWalkableFloorPosition() {
+        var globalValues = Manager.GetGlobalValues();
+        List<Vector3Int> walkableCells = new List<Vector3Int>();
+        for (int x = 0; x < globalValues.width; x++) {
+            for (int y = 0; y < globalValues.height; y++) {
+                if (floorGrid[x,y] != 1) { continue; }
+                 walkableCells.Add(new Vector3Int(x, y));
+            }
+        }
+        var roll = Random.Range(0, walkableCells.Count);
+        return walkableCells[roll];
+    }
+
     public bool IsWalkable(Vector3Int position) {
         if (floorGrid[position.x,position.y] == 1) { return true; }
         return false;

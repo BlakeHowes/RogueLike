@@ -10,6 +10,7 @@ TagManager:
   - Summon
   - Door
   - Interactable
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -71,9 +72,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: UI
-    uniqueID: 2301544101
-    locked: 0
   - name: Fog
     uniqueID: 4021982461
     locked: 0
@@ -82,4 +80,7 @@ TagManager:
     locked: 0
   - name: Torches
     uniqueID: 149471883
+    locked: 0
+  - name: UI
+    uniqueID: 2301544101
     locked: 0

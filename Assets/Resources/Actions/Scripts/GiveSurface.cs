@@ -20,9 +20,9 @@ public class GiveSurface : Action,IDescription {
         if (newSurface) { 
             surface = GridManager.i.InstaniateSurface(surface,actionContainer.colorValue); 
             surface.name = parentItem.name;
-            foreach(var parentAbilities in parentItem.abilities) {
-                if(parentAbilities != ability) {
-                    surface.abilities.Add(parentAbilities);
+            foreach(var parentAbility in parentItem.abilities) {
+                if(parentAbility != ability) {
+                    surface.abilities.Add(parentAbility);
                 }
             }
         }

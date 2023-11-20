@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e9be87fe170e04d8a4266508cf9c3a, type: 3}
-  m_Name: TargetOrigin
+  m_Script: {fileID: 11500000, guid: e6f28f3d8af212743a9f14cf64d04586, type: 3}
+  m_Name: IfNotHasStatusEffect
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
-  extraVariableType: 0
+  extraVariableType: 3
+  not: 1

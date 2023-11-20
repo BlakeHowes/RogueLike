@@ -78,7 +78,9 @@ public class GlobalValues : ScriptableObject
     public GameObject traitUIDescriptionPrefab;
 
     [Header("Loot")]
-    public List<LootPool> items = new();
+    public List<LootPool> propItems = new();
+    public List<LootPool> enemyItems = new();
+    public List<LootPool> chestItems = new();
     public List<LootPool> traits = new();
 
     public WaitSeconds GetWaitSeconds(float time) {
@@ -87,7 +89,7 @@ public class GlobalValues : ScriptableObject
     }
 
     public void CloneLoot() {
-        foreach(var floor in items) {
+        foreach(var floor in propItems) {
             floor.CreateCopy();
         }
 
@@ -96,9 +98,14 @@ public class GlobalValues : ScriptableObject
         }
     }
 
-    public ItemAbstract GetRandomLootItem() {
-        var floor = items[0];
-        return floor.GetItem();
+    public ItemAbstract GetRandomLootItem(LootGenerator.LootGroup lootGroup) {
+        switch (lootGroup) {
+            case LootGenerator.LootGroup.None: return null;
+            case LootGenerator.LootGroup.Props: return propItems[0].GetItem();
+            case LootGenerator.LootGroup.Enemies: return enemyItems[0].GetItem();
+            case LootGenerator.LootGroup.Chests: return chestItems[0].GetItem();
+        }
+        return null;
     }
 
     public ItemAbstract GetRandomLootTrait() {
@@ -110,6 +117,7 @@ public class GlobalValues : ScriptableObject
 public class LootPool {
     public List<ItemAbstract> items = new();
     private List<ItemAbstract> itemsCopy = new();
+
     public void CreateCopy() {
         itemsCopy.Clear();
         foreach (var item in items) {

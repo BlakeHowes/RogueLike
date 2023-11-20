@@ -8,42 +8,51 @@ namespace Importers {
 public static class ItemImporter {
     public static List<ItemAbstract> items = new List<ItemAbstract>();
     [MenuItem("Tools/Generate Items From Text")]
-    public static void GenerateItems() {
-        if (Selection.activeObject == null) { return; }
-        string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), AssetDatabase.GetAssetPath(Selection.activeObject));
-        if (!path.ToLower().EndsWith("csv")) { Debug.LogError("Not CSV"); return; }
+        public static void GenerateItems() {
+            if (Selection.activeObject == null) { return; }
+            string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), AssetDatabase.GetAssetPath(Selection.activeObject));
+            if (!path.ToLower().EndsWith("csv")) { Debug.LogError("Not CSV"); return; }
 
-        List<Dictionary<string, object>> rawCSVData = CSVReader.Read(path);
-        if (rawCSVData.Count <= 0) { Debug.LogError("No data in CSV"); return; }
+            List<Dictionary<string, object>> rawCSVData = CSVReader.Read(path);
+            if (rawCSVData.Count <= 0) { Debug.LogError("No data in CSV"); return; }
 
-        var itemResources = Resources.LoadAll<ItemAbstract>("Items");
-        foreach (ItemAbstract item in itemResources) { items.Add(item); }
+            var itemResources = Resources.LoadAll<ItemAbstract>("Items");
+            foreach (ItemAbstract item in itemResources) { items.Add(item); }
 
-        Generate(rawCSVData);
-    }
-
-    private static void Generate(List<Dictionary<string, object>> CSVData) {
-        for (int i = 0; i < CSVData.Count; i++) {
-            var itemData = CSVData[i];
-            var type = itemData["Type"].ToString();
-
-            //Weapon
-            if (type == "melee" || type == "ranged" || type == "magic") {
-                    UpdateOrCreateWeapon(itemData);continue;
-            }
-
-            //General Item
-            if(type == "general") {
-                    UpdateOrCreateGeneralItem(itemData);continue;
-            }
-
-            //Equipment
-            UpdateOrCreateEquipment(itemData);
+            Generate(rawCSVData);
         }
-        AssetDatabase.SaveAssets();
-    }
 
-    public static Weapon UpdateWeaponValues(Dictionary<string, object> itemData, Weapon weapon) {
+        private static void Generate(List<Dictionary<string, object>> CSVData) {
+            for (int i = 0; i < CSVData.Count; i++) {
+                var itemData = CSVData[i];
+                var type = itemData["Type"].ToString();
+                bool itemFound = false;
+                //Weapon
+                if (type == "melee" || type == "ranged" || type == "magic") {
+                    UpdateOrCreateWeapon(itemData);
+                    itemFound = true;
+                    continue;
+                }
+
+                //General Item
+                if (type == "general") {
+                    itemFound = true;
+                    UpdateOrCreateGeneralItem(itemData); continue;
+                }
+                //Equipment
+                if (type == "offHand" || type == "helmet" || type == "armour" || type == "trinket") {
+                    UpdateOrCreateEquipment(itemData);
+                    itemFound = true;
+                }
+
+                if (!itemFound) { Debug.LogError("Cant find item with type: " + type); }
+
+
+            }
+            AssetDatabase.SaveAssets();
+        }
+
+        public static Weapon UpdateWeaponValues(Dictionary<string, object> itemData, Weapon weapon) {
         weapon.name = itemData["Name"].ToString();
         weapon.weaponType = (ItemStatic.WeaponType)System.Enum.Parse(typeof(ItemStatic.WeaponType), itemData["Type"].ToString());
         weapon.damageRange.x = int.Parse(itemData["Damage Min"].ToString());
@@ -57,21 +66,24 @@ public static class ItemImporter {
         return weapon;
     }
 
-    public static Equipment UpdateEquipmentValues(Dictionary<string, object> itemData, Equipment equipment) {
-        equipment.name = itemData["Name"].ToString();
-        equipment.equipmentType = (ItemStatic.EquipmentType)System.Enum.Parse(typeof(ItemStatic.EquipmentType), itemData["Type"].ToString());
-        equipment.weight = (ItemStatic.Weight)System.Enum.Parse(typeof(ItemStatic.Weight), itemData["Weight"].ToString());
-        equipment.shopValue = int.Parse(itemData["Value"].ToString());
+        public static Equipment UpdateEquipmentValues(Dictionary<string, object> itemData, Equipment equipment) {
+            equipment.name = itemData["Name"].ToString();
+            equipment.equipmentType = (ItemStatic.EquipmentType)System.Enum.Parse(typeof(ItemStatic.EquipmentType), itemData["Type"].ToString());
+            equipment.weight = (ItemStatic.Weight)System.Enum.Parse(typeof(ItemStatic.Weight), itemData["Weight"].ToString());
+            equipment.shopValue = int.Parse(itemData["Value"].ToString());
 
-        equipment.tile = GetTile(equipment.name);
-        return equipment;
-    }
+            equipment.tile = GetTile(equipment.name);
+            return equipment;
+        }
 
         public static GeneralItem UpdateGeneralItemValues(Dictionary<string, object> itemData, GeneralItem item) {
             item.name = itemData["Name"].ToString();
            
             item.endlessUses = bool.Parse(itemData["Endless Uses"].ToString());
-            if (!item.endlessUses) { item.totalUses = int.Parse(itemData["Total Uses"].ToString()); }
+            if (!item.endlessUses) {
+                Debug.Log("Total Uses" + itemData["Total Uses"].ToString());
+                item.totalUses = int.Parse(itemData["Total Uses"].ToString());
+            }
             Debug.Log(itemData["Value"].ToString());
             item.shopValue = int.Parse(itemData["Value"].ToString());
             item.description = itemData["Description"].ToString();

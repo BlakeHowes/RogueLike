@@ -13,7 +13,6 @@ public class Skill : ItemAbstract{
     public int AOE = 0;
     [Range(0, 6)]
     public int actionPointCost = 2;
-    [HideInInspector] public int actionPointCostTemp;
     [Range(0, 17)]
     public int coolDown = 2;
 
@@ -35,6 +34,10 @@ public class Skill : ItemAbstract{
     public int GetDamage() {
         var damage = Random.Range(skillDamage.x, skillDamage.y + 1);
         return damage;
+    }
+
+    public int GetAPCost() {
+        return actionPointCost;
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
@@ -61,7 +64,7 @@ public class Skill : ItemAbstract{
                     }
                 }
             }
-            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), actionPointCost);
+            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), GetAPCost());
             return;
         }
 
@@ -78,7 +81,7 @@ public class Skill : ItemAbstract{
             if (inventory.GetCoolDown(this) > 0) { return; }
             inventory.AddCoolDown(coolDown + 1, this);
 
-            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), actionPointCost);
+            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), GetAPCost());
         }
 
         foreach (var ability in abilities) {
@@ -95,7 +98,7 @@ public class Skill : ItemAbstract{
 
     public bool CheckValidity(Vector3Int position, Vector3Int origin, GameObject parentGO) {
         var coolDownTimer = parentGO.GetComponent<Inventory>().GetCoolDown(this);
-        if (parentGO.GetComponent<Stats>().actionPoints < actionPointCost) { return false; }
+        if (parentGO.GetComponent<Stats>().actionPoints < GetAPCost()) { return false; }
         if (coolDownTimer > 0) { return false; }
         if (rangeType == RangeType.CircleUnderMouse) {
             if (!position.InRange(origin, range)) { return false; }

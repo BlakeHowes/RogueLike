@@ -75,7 +75,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sightRange: 12
-  itemActions: []
   targetsTags: 18
 --- !u!114 &3243932232630802517
 MonoBehaviour:
@@ -91,22 +90,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 81066cab820d6be46af052203c89288b, type: 2}
   state: 0
-  deathAction:
-  - {fileID: 11400000, guid: 00bf39bfceb55474286f141714d15453, type: 2}
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 20
-  armourBase: 0
+  maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
-  fistDamageBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
   skillRangeBase: 0
-  armourTemp: 0
+  maxHealthTemp: 0
+  maxArmourTemp: 0
+  actionPointsTemp: 0
+  throwingRangeTemp: 0
+  walkCostTemp: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
+  damageTaken: 0
+  meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 20
   actionPoints: 0
   actionPointsSum: 0
@@ -127,11 +132,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bbfb71f3747cc34ea3b37d22df37132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  generalAbilities: []
   items: []
   traits: []
   skills: []
+  coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 6ae166ef8018be148bff8f74285239f2, type: 2}
+  mainHand: {fileID: 0}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
@@ -203,10 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot: []
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
+  lootGroup: 0
 --- !u!114 &-876628501165001776
 MonoBehaviour:
   m_ObjectHideFlags: 0

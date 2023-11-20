@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c7aa6c35bac97864b9eefc044ad3f691, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 70
   maxArmourBase: 0
   actionPointsBase: 3
@@ -110,6 +110,9 @@ MonoBehaviour:
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 70
   actionPoints: 0
   actionPointsSum: 0
@@ -137,7 +140,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6, type: 3}
+      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -147,7 +151,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6, type: 3}
+      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -157,22 +162,23 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6, type: 3}
+      prefabValue: {fileID: 3243932232630802507, guid: 0070007990f6e4d4ab63801704f0a9d6,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
   items:
-  - {fileID: 11400000, guid: 985e17ddf19ed31419533fcf17e18a89, type: 2}
-  - {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
+  - {fileID: 11400000, guid: 1dc36efb41b9db248981a9ebba4f8e14, type: 2}
+  - {fileID: 11400000, guid: 20ff2827bbd314c4c8e2050926a20f8e, type: 2}
   traits: []
   skills: []
   coolDowns: []
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 1dc36efb41b9db248981a9ebba4f8e14, type: 2}
   offHand: {fileID: 0}
-  helmet: {fileID: 11400000, guid: 09330abf4e9b836438e70f0bc3a4a6f7, type: 2}
+  helmet: {fileID: 11400000, guid: 20ff2827bbd314c4c8e2050926a20f8e, type: 2}
   armour: {fileID: 0}
   trinket1: {fileID: 0}
   trinket2: {fileID: 0}
@@ -242,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lootGroup: 0
 --- !u!114 &752585418151326076
 MonoBehaviour:
   m_ObjectHideFlags: 0

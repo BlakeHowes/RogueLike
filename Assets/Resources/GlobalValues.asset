@@ -69,11 +69,22 @@ MonoBehaviour:
     type: 3}
   partyIconPrefab: {fileID: 867278356251875308, guid: 7c1b6f0d3a1a05b419bf455ae740db4d,
     type: 3}
-  traitUIEventPrefab: {fileID: 3373031311772610868, guid: aa44cc6d35ab05c4f831f6748e1280dd,
+  traitUIEventPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
     type: 3}
   traitUIDescriptionPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
     type: 3}
-  items: []
+  propItems:
+  - items:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 11400000, guid: 2fd76d04e82d18348bd6e780ee88038d, type: 2}
+    - {fileID: 11400000, guid: 2fd76d04e82d18348bd6e780ee88038d, type: 2}
+    - {fileID: 11400000, guid: 9a62eadc2cb566b41a11cea829c2243f, type: 2}
+  enemyItems: []
+  chestItems:
+  - items:
+    - {fileID: 11400000, guid: 5965499e20db9c745905c1f11ec070b3, type: 2}
   traits:
   - items:
     - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
