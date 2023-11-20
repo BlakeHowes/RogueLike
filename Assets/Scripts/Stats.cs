@@ -140,7 +140,7 @@ public class Stats : MonoBehaviour {
         if(weaponType != WeaponType.none) {
             damageResult *= elementalStats.GetWeaponTypeDamageModifier(weaponType);
         }
-       
+        if(damageResult == 0) { SpawnHitNumber("Immune", Color.magenta, 1); }
         TakeDamage(Mathf.RoundToInt(damageResult), origin, ignoreArmor);
     }
 

@@ -25,7 +25,7 @@ public class SkillSlot : MonoBehaviour
         var stats = currentCharacter.GetComponent<Stats>();
         stats.RefreshCharacter(postion);
         if(skill.GetAPCost() > stats.actionPoints) { MouseManager.i.itemSelected = null; return; }
-        GameUIManager.i.ShowRange(postion, skill.range);
+        GameUIManager.i.ShowRange(postion, skill.GetRange());
         GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost());
     }
 

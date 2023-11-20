@@ -439,8 +439,8 @@ public class MouseManager : MonoBehaviour
             var origin = currentCharacter.Position();
             var currentStats = currentCharacter.GetComponent<Stats>();
             currentStats.RefreshCharacter(origin);
-            GameUIManager.i.ShowRange(origin, skill.range, true);
-            if (mousePosition.InRange(origin, skill.range)) {
+            GameUIManager.i.ShowRange(origin, skill.GetRange(), true);
+            if (mousePosition.InRange(origin, skill.GetRange())) {
                 GameUIManager.i.ShowRange(mousePosition, skill.AOE);
             }
             else {

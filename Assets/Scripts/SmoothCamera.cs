@@ -23,15 +23,7 @@ public class SmoothCamera : MonoBehaviour {
         i = this;
     }
 
-    public void OnEnable() {
-        Lean.Touch.LeanTouch.OnFingerSwipe += DisableFollow;
-    }
-
-    public void OnDisable() {
-        Lean.Touch.LeanTouch.OnFingerSwipe -= DisableFollow;
-    }
-
-    public void DisableFollow(Lean.Touch.LeanFinger finger) {
+    public void DisableFollow() {
         following = false;
     }
 

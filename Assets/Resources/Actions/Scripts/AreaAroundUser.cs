@@ -12,7 +12,7 @@ public class AreaAroundUser : Action {
         if(range == 0) {
             if (parentItem is Skill) {
                 var skill = parentItem as Skill;
-                range = parentGO.GetComponent<Stats>().skillRangeTemp + skill.range;
+                range = parentGO.GetComponent<Stats>().skillRangeTemp + skill.GetRange();
                 tags = skill.GetTags(parentGO);
                 checkTags = true;
             }

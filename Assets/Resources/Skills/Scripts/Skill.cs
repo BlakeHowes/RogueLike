@@ -40,6 +40,10 @@ public class Skill : ItemAbstract{
         return actionPointCost;
     }
 
+    public int GetRange() {
+        return range;
+    }
+
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         if(rangeType == RangeType.Cone) {
             //Targets = cone;
@@ -101,7 +105,7 @@ public class Skill : ItemAbstract{
         if (parentGO.GetComponent<Stats>().actionPoints < GetAPCost()) { return false; }
         if (coolDownTimer > 0) { return false; }
         if (rangeType == RangeType.CircleUnderMouse) {
-            if (!position.InRange(origin, range)) { return false; }
+            if (!position.InRange(origin, GetRange())) { return false; }
         }
 
         return true;

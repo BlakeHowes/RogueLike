@@ -64,6 +64,7 @@ MonoBehaviour:
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  skillAPCost: 0
   throwingRangeTemp: 0
   walkCostTemp: 0
   enemyAlertRangeTemp: 0
@@ -158,9 +159,34 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: ca3506efcd5149747a16742f409f803d, type: 3}
+      stringValue: 
+  - callType: 4
+    actionContainers:
+    - action: {fileID: 11400000, guid: 1a64771c6adfa2d48878159548c12851, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 3243932232630802507, guid: e5d1e34fa03a36d43ab39de7f2c31286,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
       spriteValue: {fileID: 21300000, guid: 6246c036e25b7bd489e60d4a72faa2c7, type: 3}
       stringValue: 
-  items: []
+    - action: {fileID: 11400000, guid: e445fb7a8f2ecda459424f96e9c1d165, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 3243932232630802507, guid: e5d1e34fa03a36d43ab39de7f2c31286,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 6246c036e25b7bd489e60d4a72faa2c7, type: 3}
+      stringValue: 
+  items:
+  - {fileID: 11400000, guid: 9a62eadc2cb566b41a11cea829c2243f, type: 2}
   traits: []
   skills: []
   coolDowns: []
