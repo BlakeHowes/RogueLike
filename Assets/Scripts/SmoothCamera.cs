@@ -1,3 +1,4 @@
+using Lean.Touch;
 using System.Collections;
 using UnityEngine;
 
@@ -17,17 +18,20 @@ public class SmoothCamera : MonoBehaviour {
     public static SmoothCamera i;
     public bool useTargetPos = false;
     public Vector3 targetPosition;
+    public LeanDragCamera leanDragCamera;
     public void Awake() {
         mCamera = Camera.main;
         size = mCamera.orthographicSize;
         i = this;
+        leanDragCamera = GetComponent<LeanDragCamera>();
     }
 
     public void DisableFollow() {
         following = false;
     }
-
+    
     void LateUpdate() {
+
         if (Input.GetMouseButton(2)) {
             following = false;
             Diference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
@@ -72,6 +76,10 @@ public class SmoothCamera : MonoBehaviour {
     public void Update() {
         if (Input.GetKeyDown(KeyCode.O)) {
             ActionZoomIn(new Vector3(30, 30, 0), 2,SmoothSpeed);
+        }
+
+        if (leanDragCamera.worldDelta != Vector3.zero) {
+            DisableFollow();
         }
     }
     Vector3 offset = new Vector3(0.5f, 0.5f);

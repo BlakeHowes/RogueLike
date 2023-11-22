@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143d52ba78b423647a0221d72e5d32bd, type: 3}
   m_Name: DamageInt
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
-  origin: {x: 0, y: 0, z: 0}
+  origin: {x: 46, y: 45, z: 0}
+  position: {x: 45, y: 46, z: 0}
   parentGO: {fileID: 0}
-  parentItem: {fileID: 0}
-  extraVariableType: 1
-  value: 0
+  parentItem: {fileID: 11400000, guid: e2fd7d1eb258cff4c9bb3e9a177077b5, type: 2}
+  extraVariableType: 9
+  damage: 5
   areaRange: 0
   damageSource: 0
   weapon: {fileID: 0}
-  delayTime: 0
   targetGo: {fileID: 0}
+  damageRange: {x: 4, y: 6}
+  element: {fileID: 0}

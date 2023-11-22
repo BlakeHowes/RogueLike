@@ -30,14 +30,14 @@ MonoBehaviour:
   abilities:
   - callType: 0
     actionContainers:
-    - action: {fileID: 11400000, guid: b175c9666dd5b1d4cb312af3064f711c, type: 2}
-      intValue: 0
+    - action: {fileID: 11400000, guid: 5914442942a5c8443b438e6190de3c16, type: 2}
+      intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 4, y: 6}
-      surfaceValue: {fileID: 0}
+      surfaceValue: {fileID: 11400000, guid: 1870302bae434ca44899b5b5a832425f, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
   StatusEffect: {fileID: 0}
@@ -46,5 +46,5 @@ MonoBehaviour:
   effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c,
     type: 3}
   dryUpSurface: {fileID: 0}
-  dryUp: 1
+  dryUp: 0
   tryToSpread: 1

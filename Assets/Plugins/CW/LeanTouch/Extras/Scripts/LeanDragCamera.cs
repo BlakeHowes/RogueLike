@@ -33,10 +33,12 @@ namespace Lean.Touch
 		public Vector3 DefaultPosition { set { defaultPosition = value; } get { return defaultPosition; } } [SerializeField] private Vector3 defaultPosition;
 
 		[SerializeField]
-		private Vector3 remainingDelta;
+		public Vector3 remainingDelta;
 
-		/// <summary>This method resets the target position value to the <b>DefaultPosition</b> value.</summary>
-		[ContextMenu("Reset Position")]
+		[HideInInspector] public Vector3 worldDelta;
+
+        /// <summary>This method resets the target position value to the <b>DefaultPosition</b> value.</summary>
+        [ContextMenu("Reset Position")]
 		public virtual void ResetRotation()
 		{
 			remainingDelta = defaultPosition - transform.position;
@@ -110,11 +112,11 @@ namespace Lean.Touch
 			var screenPoint     = LeanGesture.GetScreenCenter(fingers);
 
 			// Get the world delta of them after conversion
-			var worldDelta = ScreenDepth.ConvertDelta(lastScreenPoint, screenPoint, gameObject);
+			worldDelta = ScreenDepth.ConvertDelta(lastScreenPoint, screenPoint, gameObject);
 
 			// Store the current position
 			var oldPosition = transform.localPosition;
-
+			Debug.Log(worldDelta);
 			// Pan the camera based on the world delta
 			transform.position -= worldDelta * sensitivity;
 
@@ -139,6 +141,7 @@ namespace Lean.Touch
 
 			// Update remainingDelta with the dampened value
 			remainingDelta = newRemainingDelta;
+			
 		}
 	}
 }

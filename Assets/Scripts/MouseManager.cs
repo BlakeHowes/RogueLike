@@ -57,13 +57,10 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1)) {
             if (itemSelected) {
                 if (itemSelected is Skill) {
-                    var skill = itemSelected as Skill;
-                    skill.startPositionSet = false;
+                    CancelSkill();
+                    return;
                 }
             }
-            SelectItem(null);
-            GameUIManager.i.groundUI.ClearAllTiles();
-            SetMode(MouseMode.None);
         }
 
         if (Input.GetMouseButtonDown(0)) {
@@ -71,11 +68,34 @@ public class MouseManager : MonoBehaviour
         }
     }
 
+    public void CancelSkill() {
+        var skill = itemSelected as Skill;
+        skill.startPositionSet = false;
+        SelectItem(null);
+        GameUIManager.i.groundUI.ClearAllTiles();
+        SetMode(MouseMode.None);
+        GameUIManager.i.apUIElement.HighlightAP(0);
+    }
+
     public void OnMouseDown() {
+
+        if (Input.GetMouseButtonDown(1)) {
+            return;
+        }
+
         if (isRepeatingActionsOutsideCombat) { isRepeatingActionsOutsideCombat = false; return; }
         lastMousePosition = Input.mousePosition;
         var mousePosition = MousePositionOnGrid();
         if (!CheckMouseValidity()) { return; }
+
+        //Range Check Hack
+        if (itemSelected is Skill) {
+            var skill = itemSelected as Skill;
+            if (!mousePosition.InRange(PartyManager.i.currentCharacter.Position(), skill.GetRange())) {
+                return;
+            }
+        }
+
         UpdateHightlight(mousePosition);
         var toolTip = GameUIManager.i.tooltipGameObject;
         if (toolTip.activeSelf) { toolTip.SetActive(false); return; }

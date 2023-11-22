@@ -63,7 +63,13 @@ public class DealDamage : Action,IDescription
             areaRange = actionContainer.vector2IntValue.y;
             damage = actionContainer.vector2IntValue.x;
         }
-        element =GetElement(ability);
+        if (actionContainer.surfaceValue) {
+            element = actionContainer.surfaceValue;
+        }
+        else {
+            element = GetElement(ability);
+        }
+
         targetGo = position.GameObjectGo();
         if(targetGo)GridManager.i.AddToStack(this);
 
@@ -111,7 +117,7 @@ public class DealDamage : Action,IDescription
         }
 
         switch (damageSource) {
-            case DamageSource.Damage: targetGo.GetComponent<Stats>().TakeDamage(damage, origin); break;
+            case DamageSource.Damage: targetGo.GetComponent<Stats>().TakeDamage(damage, origin,false,element,WeaponType.none); break;
             case DamageSource.ParentItem: ParentItemDamage(); break;
             case DamageSource.Weapon: this.weapon.Call(position, origin, parentGO, CallType.OnActivate); break;
             case DamageSource.Percentage: Percentage(); break;

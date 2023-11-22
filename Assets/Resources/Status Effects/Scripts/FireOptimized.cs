@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using static ItemStatic;
 //[CreateAssetMenu(fileName = "FireOptimized", menuName = "FireOptimized")]
 public class FireOptimized : Action {
     public GameObject particles;
@@ -16,9 +16,9 @@ public class FireOptimized : Action {
     }
 
     public override IEnumerator StackAction() {
-        if (character) { character.GetComponent<Stats>().TakeDamage(3, origin); }
-        EffectManager.i.CreateSingleParticleEffect(origin, particles);
-        GridManager.i.CombineSurface(origin, surface);
+        if (character) { character.GetComponent<Stats>().TakeDamage(3, position,false,surface,WeaponType.none); }
+        EffectManager.i.CreateSingleParticleEffect(position, particles);
+        GridManager.i.CombineSurface(position, surface);
         yield return null;
     }
 }

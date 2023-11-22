@@ -130,7 +130,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element, WeaponType weaponType) {
-        if (elementalStats == null) { return; }
+        if (elementalStats == null) { TakeDamage(damage, origin, false); }
         float damageResult = damage;
 
         if (element) {

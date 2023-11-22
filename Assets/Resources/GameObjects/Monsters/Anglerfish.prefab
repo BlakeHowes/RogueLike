@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7725340996476457758}
   - component: {fileID: -1371616870617058851}
   - component: {fileID: 901359122887757220}
+  - component: {fileID: 3890323668656474303}
   m_Layer: 0
   m_Name: Anglerfish
   m_TagString: Enemy
@@ -35,8 +36,7 @@ Transform:
   m_LocalPosition: {x: 33.5, y: 12.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6968237474758873173}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   elementalStats: {fileID: 0}
   maxHealthBase: 85
   maxArmourBase: 0
-  actionPointsBase: 3
+  actionPointsBase: 1
   throwingRangeBase: 1
   walkCostBase: 1
   enemyAlertRangeBase: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  skillAPCost: 0
   throwingRangeTemp: 0
   walkCostTemp: 0
   enemyAlertRangeTemp: 0
@@ -139,7 +140,7 @@ MonoBehaviour:
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
+  mainHand: {fileID: 11400000, guid: ecc1b3f1ad4a82c479ad305cf07817d5, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
@@ -211,6 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lootGroup: 0
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,96 +244,21 @@ MonoBehaviour:
   position: 0
   direction: 0
   tooltip: 
---- !u!1 &7396014325397592816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6968237474758873173}
-  - component: {fileID: 5843318179150798745}
-  m_Layer: 0
-  m_Name: Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6968237474758873173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7396014325397592816}
-  m_LocalRotation: {x: 0, y: 0, z: 0.061048545, w: 0.99813485}
-  m_LocalPosition: {x: 1.12, y: 1.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3243932232630802518}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5843318179150798745
+--- !u!114 &3890323668656474303
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7396014325397592816}
+  m_GameObject: {fileID: 3243932232630802507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85a34663ca705a54eac3205e225a6d45, type: 3}
+  m_Script: {fileID: 11500000, guid: a70e8530490295e43a31d0035b8209dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightType: 1
-  lightPresetId: 0
-  eventPresetId: 0
-  lightLayer: 0
-  occlusionLayer: 0
-  translucentLayer: 0
-  translucentPresetId: 0
-  color: {r: 0.0812277, g: 0.6603774, b: 0, a: 1}
-  size: 2.5471568
-  spotAngleInner: 360
-  spotAngleOuter: 360
-  coreSize: 0.5
-  falloff: 0
-  lightStrength: 0
-  outerAngle: 15
-  lightRadius: 1
-  shadowDistanceClose: 0
-  shadowDistanceFar: 5
-  maskTranslucencyQuality: 1
-  maskTranslucencyStrength: 0.5
-  applyRotation: 0
-  textureSize: 1
-  meshMode:
-    enable: 1
-    alpha: 1
-    shader: 0
-    materials:
-    - {fileID: 0}
-    sortingLayer:
-      name: Torches
-      Order: 0
-  bumpMap:
-    intensity: 1
-    depth: 1
-  whenInsideCollider: 0
-  lightSprite: 0
-  sprite: {fileID: 21300000, guid: 6592d6be03fd808449716a11558d506f, type: 3}
-  spriteFlipX: 0
-  spriteFlipY: 0
-  freeFormFalloff: 1
-  freeFormPoint: 1
-  freeFormFalloffStrength: 1
-  freeFormPoints:
-    points:
-    - {x: 1, y: 0}
-    - {x: -0.50000006, y: 0.8660254}
-    - {x: -0.4999999, y: -0.86602545}
-  drawingEnabled: 1
-  drawingTranslucencyEnabled: 0
+  pushImmunity: 0
+  statusImmunites: []
+  damageInteractions:
+  - weaponType: 0
+    surface: {fileID: 11400000, guid: 1870302bae434ca44899b5b5a832425f, type: 2}
+    damageMultiplier: 0

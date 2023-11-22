@@ -8,20 +8,25 @@ public class BagAnimation : MonoBehaviour
 {
     public Sprite closed;
     public Sprite open;
+    public GameObject animationGO;
     public new Animation animation;
-    public Image itemImage;
+    public RawImage itemImage;
     bool openToggle = true;
+    Image image;
+    public void Awake() {
+        image = GetComponent<Image>();
+    }
     public void PlayAnimation(ItemAbstract item) {
-        animation.Play();
-        itemImage.sprite = item.tile.sprite;
-        StartCoroutine(OpenBag());
+        animationGO.SetActive(true);
+        itemImage.texture = item.tile.sprite.texture;
+        image.sprite = open;
+        StartCoroutine(CloseBag());
+    }
+    public IEnumerator CloseBag() {
+        yield return new WaitForSeconds(0.3f);
+        image.sprite = closed;
     }
 
-    public IEnumerator OpenBag() {
-        GetComponent<Image>().sprite = open;
-        yield return new WaitForSeconds(0.3f);
-        GetComponent<Image>().sprite = closed;
-    }
 
     public void ToggleSprite() {
         openToggle = !openToggle;

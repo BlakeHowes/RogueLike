@@ -50,7 +50,8 @@ MonoBehaviour:
       intValue: 2
       floatValue: 0
       itemValue: {fileID: 11400000}
-      prefabValue: {fileID: 6375196592243838218, guid: 6121bb14c112b16448a51d024044a1ea, type: 3}
+      prefabValue: {fileID: 6375196592243838218, guid: 6121bb14c112b16448a51d024044a1ea,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -65,7 +66,7 @@ MonoBehaviour:
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
+      surfaceValue: {fileID: 11400000, guid: 1870302bae434ca44899b5b5a832425f, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
     - action: {fileID: 11400000, guid: 8f95972c7fc7e4d4289ca05f1d92f9d9, type: 2}

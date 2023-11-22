@@ -41,6 +41,7 @@ public class Skill : ItemAbstract{
     }
 
     public int GetRange() {
+        //calculate the range here
         return range;
     }
 
@@ -107,7 +108,6 @@ public class Skill : ItemAbstract{
         if (rangeType == RangeType.CircleUnderMouse) {
             if (!position.InRange(origin, GetRange())) { return false; }
         }
-
         return true;
     }
 }
