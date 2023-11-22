@@ -85,6 +85,7 @@ MonoBehaviour:
   chestItems:
   - items:
     - {fileID: 11400000, guid: 5965499e20db9c745905c1f11ec070b3, type: 2}
+    - {fileID: 0}
   traits:
   - items:
     - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
