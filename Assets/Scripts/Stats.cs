@@ -164,7 +164,7 @@ public class Stats : MonoBehaviour {
 
         if (!infiniteHealth)health -= damage;
 
-        if (gameObject.tag == "Enemy") {
+        if (gameObject.CompareTag("Enemy")) {
             if (state != PartyManager.State.Combat) {
                 state = PartyManager.State.Combat;
                 PartyManager.i.enemyParty.Add(gameObject);
@@ -173,7 +173,7 @@ public class Stats : MonoBehaviour {
 
         if (originGO) {
             var stats = originGO.GetComponent<Stats>();
-            stats.state = PartyManager.State.Combat;
+            //stats.state = PartyManager.State.Combat;
             if (gameObject != originGO) {
                 stats.directDamage += damage;
                 originGO.GetComponent<Inventory>().CallEquipment(position, origin, CallType.OnDirectDamage);

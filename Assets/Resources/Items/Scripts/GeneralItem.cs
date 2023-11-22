@@ -15,7 +15,6 @@ public class GeneralItem : ItemAbstract {
     [HideInInspector] public Vector3Int thrownLocation;
 
     [Header("Specific GameObject Use Case")]
-    public bool useOnlyOnViableTargets;
     public bool destroyOnUse;
     public List<GameObject> viableTargets = new List<GameObject>();
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
@@ -23,7 +22,7 @@ public class GeneralItem : ItemAbstract {
             if (!endlessUses) timesUsed++;
         }
 
-        if (useOnlyOnViableTargets) {
+        if (viableTargets.Count > 0) {
             var target = position.GameObjectGo();
             if (!target) { return; }
             foreach (var item in viableTargets) {

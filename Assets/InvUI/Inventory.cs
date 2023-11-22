@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using static ItemStatic;
@@ -285,12 +286,11 @@ public class Inventory : MonoBehaviour
     }
 
     public void CallTraitsAndStatusEffects(Vector3Int position, Vector3Int origin, CallType signal) {
-
-        if (statusEffects.Count == 0) { goto traits; }
-        for (int i = 0; i < statusEffects.Count; i++) {
-            statusEffects[i].Call(position, origin, gameObject, signal);
+        Debug.Log(gameObject.name);
+        //if (statusEffects.Count == 0) { goto traits; }
+        foreach(var stat in statusEffects) {
+            stat.Call(position, origin, gameObject, signal);
         }
-        traits:
         if (traits.Count == 0) { return; }
         foreach (var item in skills) { if (item) item.Call(position, origin, gameObject, signal); }
         stats.UpdateHealthBar();
