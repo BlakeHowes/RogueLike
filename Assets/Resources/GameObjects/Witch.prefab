@@ -171,13 +171,14 @@ MonoBehaviour:
   maxHealthBase: 100
   maxArmourBase: 0
   actionPointsBase: 4
-  throwingRangeBase: 1
+  throwingRangeBase: 5
   walkCostBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
   walkCostTemp: 0
   enemyAlertRangeTemp: 0

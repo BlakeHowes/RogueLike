@@ -24,7 +24,7 @@ public class Stats : MonoBehaviour {
     [HideInInspector] public int maxHealthTemp;
     public int maxArmourTemp;
     public int actionPointsTemp;
-    public int skillAPCost;
+    public int actionPointSkillCostChange;
     [HideInInspector] public int throwingRangeTemp;
     [HideInInspector] public int walkCostTemp;
     [HideInInspector] public int enemyAlertRangeTemp;
@@ -130,7 +130,7 @@ public class Stats : MonoBehaviour {
     }
 
     public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element, WeaponType weaponType) {
-        if (elementalStats == null) { TakeDamage(damage, origin, false); }
+        if (elementalStats == null) { TakeDamage(damage, origin, false);return; }
         float damageResult = damage;
 
         if (element) {

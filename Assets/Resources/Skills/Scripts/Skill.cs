@@ -23,6 +23,8 @@ public class Skill : ItemAbstract{
 
     public Vector2Int skillDamage;
     public WeaponType weaponType;
+
+    private Stats parentStats;
     public enum RangeType {
         None,
         CircleUnderMouse,
@@ -37,17 +39,30 @@ public class Skill : ItemAbstract{
     }
 
     public int GetAPCost() {
-        return actionPointCost;
+        var apModified = actionPointCost;
+        if (parentStats) {
+            apModified += parentStats.actionPointSkillCostChange;
+        }
+        return apModified;
     }
 
     public int GetRange() {
-        //calculate the range here
-        return range;
+        var rangeModified = range;
+        if (parentStats) {
+            rangeModified += parentStats.actionPointSkillCostChange;
+        }
+        return rangeModified;
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
         if(rangeType == RangeType.Cone) {
             //Targets = cone;
+        }
+
+        if(callType == CallType.CalculateStats) {
+            if (parentGO) {
+                parentStats = parentGO.GetComponent<Stats>();
+            }
         }
 
         if (callType == CallType.AddSkillToHotbar) {

@@ -98,7 +98,6 @@ MonoBehaviour:
   range: 5
   AOE: 0
   actionPointCost: 1
-  actionPointCostTemp: 0
   coolDown: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0

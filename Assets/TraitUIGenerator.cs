@@ -55,7 +55,7 @@ public static class TraitUIGenerator
 
         go.TryGetComponent(out ElementalStats elementalStats);
         if (elementalStats) {
-            if (elementalStats.pushImmunity) { descriptionElements.Add(CreateTraitDescription(prefab, null, $"Unmovable")); }
+            if (elementalStats.pushImmunity) { descriptionElements.Add(CreateTraitDescription(prefab, null, $"Immune too being moved and teleported")); }
             foreach (var status in elementalStats.statusImmunites) {
                 descriptionElements.Add(CreateTraitDescription(prefab, status.tile.sprite, $"Immune too {status.name}"));
             }

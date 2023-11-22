@@ -45,7 +45,7 @@ public class Roll : Action {
         yield return new WaitForSeconds(0.1f * (Vector3.Distance(endPos, origin) * (speed * 10)));
         if (goHit && dealDamage) {
             if (origin == damagePosition) { yield break; }
-            var damage = endPos.GameObjectGo().GetComponent<Stats>().damageTaken;
+            var damage = parentGO.GetComponent<Stats>().damageTaken;
             goHit.GetComponent<Stats>().TakeDamage(damage, endPos);
         }
     }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f038314d241a9a48aa688b219b0e5ad, type: 3}
   m_Name: GlobalValues
   m_EditorClassIdentifier: 
-  width: 80
-  height: 80
+  width: 66
+  height: 45
   onHitNudgeAmount: 1.5
   onAttackNudgeAmount: 10.47
   shadowTile: {fileID: 11400000, guid: 0369ba64565147a4b8256b16fd02b51a, type: 2}
@@ -85,7 +85,6 @@ MonoBehaviour:
   chestItems:
   - items:
     - {fileID: 11400000, guid: 5965499e20db9c745905c1f11ec070b3, type: 2}
-    - {fileID: 0}
   traits:
   - items:
     - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}

@@ -28,9 +28,8 @@ public class PathingManager : MonoBehaviour
 
     public void SwapPlaces(Vector3Int position, Vector3Int origin) {
         var targetGO = position.GameObjectGo();
-        if(targetGO == PartyManager.i.currentCharacter) {
-            return;
-        }
+        if (CheckMoveImmunity(targetGO)) { return; }
+        if (targetGO == PartyManager.i.currentCharacter) { return; }
         var originGO=origin.GameObjectGo();
         StartCoroutine(GridManager.i.graphics.LerpPosition(origin, position, originGO, globalValues.walkSpeed));
         StartCoroutine(GridManager.i.graphics.LerpPosition(position, origin, targetGO, globalValues.walkSpeed));
@@ -44,6 +43,7 @@ public class PathingManager : MonoBehaviour
     public void SwapPlacesInstant(Vector3Int position, Vector3Int origin) {
         var targetGO = position.GameObjectGo();
         if(position == origin) { return; }
+        if (CheckMoveImmunity(targetGO)) { return; }
         var originGO = origin.GameObjectGo();
         var positionGO = position.GameObjectGo();
         if (originGO == null || positionGO == null) { return; }
@@ -66,6 +66,7 @@ public class PathingManager : MonoBehaviour
         if (targetGO == PartyManager.i.currentCharacter) {
             return;
         }
+        if (CheckMoveImmunity(targetGO)) { return; }
         var originGO = origin.GameObjectGo();
         var positionGO = position.GameObjectGo();
         FlipCharacter(originGO, position, origin);
@@ -203,8 +204,8 @@ public class PathingManager : MonoBehaviour
     public void Roll(Vector3Int endPosition, Vector3Int startPosition, float speed) {
         if (endPosition.GameObjectSpawn() == null) {
             var character = startPosition.GameObjectSpawn();
-            if (CheckMoveImmunity(character)) { return; }
             if (character == null) { return; }
+            if (CheckMoveImmunity(character)) { return; }
             character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
             character.TryGetComponent<LightCollider2D>(out LightCollider2D lightCollider);
             if (lightCollider) {lightCollider.enabled = false; }

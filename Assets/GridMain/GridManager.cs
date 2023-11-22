@@ -10,11 +10,13 @@ using static ItemStatic;
 
 public class GridManager : MonoBehaviour {
     public static GridManager i;
+    public bool showGrid = false;
+    public bool showFogGrid = false;
     public List<GameObject> partyPrefabs = new List<GameObject>();
     public GridGraphics graphics;
     public AssetManager assets;
     public GridTools tools;
-    public bool showFogGrid = false;
+
 
     private GlobalValues globalValues;
 
@@ -269,25 +271,33 @@ public class GridManager : MonoBehaviour {
     }
 
     void OnDrawGizmos() {
-        if (!showFogGrid) { return; }
-        //Draw a semitransparent red cube at the transforms position
-        if (!globalValues) { return; }
-        for (int x = 0; x < globalValues.width; x++) {
-            for (int y = 0; y < globalValues.height; y++) {
-                if (fogMap[x, y] == 0) {
-                    Gizmos.color = Color.red;
-                    Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
-                }
-                if (fogMap[x, y] == 1) {
-                    Gizmos.color = Color.yellow;
-                    Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
-                }
-                if (fogMap[x, y] == 2) {
-                    Gizmos.color = Color.green;
-                    Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
+        if (showGrid) {
+            Gizmos.color = new Color(1,0,0,0.2f);
+            Gizmos.DrawCube(new Vector3(Manager.GetGlobalValues().width/2, Manager.GetGlobalValues().height/2), new Vector3(Manager.GetGlobalValues().width, Manager.GetGlobalValues().height));
+        }
+
+
+    
+        if (showFogGrid) {
+            //Draw a semitransparent red cube at the transforms position
+            for (int x = 0; x < globalValues.width; x++) {
+                for (int y = 0; y < globalValues.height; y++) {
+                    if (fogMap[x, y] == 0) {
+                        Gizmos.color = Color.red;
+                        Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
+                    }
+                    if (fogMap[x, y] == 1) {
+                        Gizmos.color = Color.yellow;
+                        Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
+                    }
+                    if (fogMap[x, y] == 2) {
+                        Gizmos.color = Color.green;
+                        Gizmos.DrawCube(new Vector3(x + 0.5f, y + 0.5f), new Vector3(1, 1));
+                    }
                 }
             }
         }
+
       
     }
 

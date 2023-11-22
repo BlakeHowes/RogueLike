@@ -18,7 +18,8 @@ public class SmoothCamera : MonoBehaviour {
     public static SmoothCamera i;
     public bool useTargetPos = false;
     public Vector3 targetPosition;
-    public LeanDragCamera leanDragCamera;
+    private LeanDragCamera leanDragCamera;
+    public float dragCancelSensitivity;
     public void Awake() {
         mCamera = Camera.main;
         size = mCamera.orthographicSize;
@@ -78,7 +79,7 @@ public class SmoothCamera : MonoBehaviour {
             ActionZoomIn(new Vector3(30, 30, 0), 2,SmoothSpeed);
         }
 
-        if (leanDragCamera.worldDelta != Vector3.zero) {
+        if (leanDragCamera.worldDelta.magnitude > dragCancelSensitivity) {
             DisableFollow();
         }
     }
