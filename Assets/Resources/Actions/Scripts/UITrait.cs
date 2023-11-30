@@ -8,12 +8,10 @@ public class UITrait : Action {
     public string description;
     public Sprite icon;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        if (ability.callType != ItemStatic.CallType.CalculateStats) {
-            description = ability.callType.ToString() + ": ";
-        }
-        else {
-            description = "";
-        }
+        description = "";
+        if(parentItem is StatusEffect) { NameFormat(parentItem); }
+        if(parentItem is not StatusEffect) { CallTypeFormat(ability); }
+
      
         icon = actionContainer.spriteValue;
         foreach (var container in ability.actionContainers) {
@@ -25,6 +23,19 @@ public class UITrait : Action {
         }
 
         return true;
+    }
+
+    public void NameFormat(ItemAbstract parentItem) {
+        description += parentItem.name + ": ";
+    }
+
+    public void CallTypeFormat(Ability ability) {
+        if (ability.callType != ItemStatic.CallType.CalculateStats) {
+            description = ability.callType.ToString() + ": ";
+        }
+        else {
+            description = "";
+        }
     }
 
     public override IEnumerator StackAction() {

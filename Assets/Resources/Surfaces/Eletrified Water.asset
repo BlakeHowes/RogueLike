@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
   m_Name: Eletrified Water
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 2a8c011c7e2847b4bbd0fbf820c9786e, type: 2}
+  tile: {fileID: 11400000, guid: cd351d2a6e37c214da0fdd1d5b4dffec, type: 2}
   iconColour: {r: 0, g: 1, b: 0.7854166, a: 1}
   combinations:
   - inputSurface: {fileID: 11400000, guid: 5a18ec5232360c648afc4776236516e7, type: 2}
@@ -46,5 +46,5 @@ MonoBehaviour:
   effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c,
     type: 3}
   dryUpSurface: {fileID: 0}
-  dryUp: 0
+  dryUp: 1
   tryToSpread: 1

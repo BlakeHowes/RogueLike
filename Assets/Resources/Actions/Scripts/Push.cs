@@ -57,7 +57,7 @@ public class Push : Action,IDescription {
     public string Description(ItemAbstract parentItem, ActionContainer actionContainer) {
         if (actionContainer.surfaceValue == null) { Debug.LogError("Forgot to set surface in " + parentItem.name); return "SURFACE MISSING!!!"; }
         var description = $"Pushes{actionContainer.vector2IntValue.x}steps";
-        if (area) { description += " in an area of " + actionContainer.vector2IntValue.y; }
+        if (area) { description += " in an area of " + actionContainer.vector2IntValue.y + " "; }
         return description;
     }
 }

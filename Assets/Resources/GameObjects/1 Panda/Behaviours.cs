@@ -55,6 +55,12 @@ public class Behaviours : MonoBehaviour
         ThisTask.Succeed();
     }
 
+    [Task]
+    public bool IsAPZero() {
+        if(stats.actionPoints > 0) { return false; }
+        return true;
+    }
+
     public void GetTarget() {
         target = GridManager.i.goMethods.FindClosestGameObject(sightRange, origin, targetStrings);
     }
@@ -75,6 +81,7 @@ public class Behaviours : MonoBehaviour
         origin = gameObject.Position();
         stats = gameObject.GetComponent<Stats>();
         stats.RefreshCharacter(origin);
+
         GetTarget();
         Debug.Log("target " + target);
         if (!target) {
@@ -123,11 +130,19 @@ public class Behaviours : MonoBehaviour
         if(stats) if(stats.state == State.Combat) { return true; }
         return false;
     }
+    [Task]
+    void CheckStunned() {
+        if (!GetComponent<Inventory>().AmIStunned()) { ThisTask.Fail(); return; }
+        GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
+        if (gameObject.CompareTag("Summon")) { ThisTask.Succeed(); PartyManager.i.EndTurn(); return; }
+        PartyManager.i.EndEnemyTurn(gameObject);
+        ThisTask.Succeed();
+    }
 
     [Task]
     void checkEndTurn() {
         GridManager.i.TickGame();
-        if (GetComponent<Stats>().actionPoints > 0) { ThisTask.Succeed(); return; }
+        if (stats.actionPoints > 0) { ThisTask.Succeed(); return; }
         GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Manual;
         if (gameObject.CompareTag("Summon")) { ThisTask.Succeed(); PartyManager.i.EndTurn(); return; }
         PartyManager.i.EndEnemyTurn(gameObject);
@@ -251,6 +266,22 @@ public class Behaviours : MonoBehaviour
         if (MouseManager.i.Walk(targetPosition, origin, gameObject.GetComponent<Stats>())) {
             ThisTask.Succeed();
             return;
+        }
+        ThisTask.Fail(); return;
+    }
+
+    [Task]
+    void AttackGosInWayOfTarget() {
+        var goInWay = GridManager.i.goMethods.FirstGameObjectInSight(targetPosition, origin).GameObjectGo();
+        if (goInWay) {
+            if (!goInWay.CompareTag("Enemy")) {
+                target = goInWay;
+                if (MouseManager.i.Attack(target.Position(), origin, target, gameObject)) {
+                    globalValues.GetWaitSeconds(0.2f).AddToStack();
+                    ThisTask.Succeed();
+                    return;
+                }
+            }
         }
         ThisTask.Fail(); return;
     }

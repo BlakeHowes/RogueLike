@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 using static MechStatic;
 public abstract class MechAbstract : ScriptableObject {
     public Tile tile;
+    public string description;
     public abstract void Call(Vector3Int position,Signal signal);
 }
 

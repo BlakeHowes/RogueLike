@@ -58,15 +58,14 @@ MonoBehaviour:
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 0
-  walkCostBase: 0
-  enemyAlertRangeBase: 0
+  enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
-  skillAPCost: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
@@ -163,6 +162,17 @@ MonoBehaviour:
       stringValue: 
   - callType: 4
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 3243932232630802507, guid: e5d1e34fa03a36d43ab39de7f2c31286,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 70934216b267b2a47ae3946ddb21c248, type: 3}
+      stringValue: 
     - action: {fileID: 11400000, guid: 1a64771c6adfa2d48878159548c12851, type: 2}
       intValue: 20
       floatValue: 0
@@ -212,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootGroup: 1
+  lootGroup2: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +238,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &-1712389032874754349
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,11 +16,35 @@ MonoBehaviour:
   abilities:
   - callType: 0
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 8c07426c518338047ac7435381e69f34, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 8c07426c518338047ac7435381e69f34, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Select two objects, if one is damaged, the other is damaged by
+        the same amount
     - action: {fileID: 11400000, guid: 568943927c191564f80dbb8ca8ac948e, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 11400000, guid: 8c07426c518338047ac7435381e69f34, type: 2}
-      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -32,7 +56,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -42,7 +67,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 11400000, guid: 8c07426c518338047ac7435381e69f34, type: 2}
-      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 633d98e4970234145b655d6b01274dd0,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -53,7 +79,6 @@ MonoBehaviour:
   range: 4
   AOE: 0
   actionPointCost: 2
-  actionPointCostTemp: 0
   coolDown: 2
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0

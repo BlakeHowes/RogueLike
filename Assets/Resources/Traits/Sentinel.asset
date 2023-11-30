@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a9eadeeabf74594595a1d25ab940899, type: 3}
   m_Name: Sentinel
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: cd468f6f63175cf4d9812c9b6d062783, type: 2}
@@ -20,7 +20,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -30,7 +31,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -40,7 +42,8 @@ MonoBehaviour:
       intValue: 1
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -50,7 +53,8 @@ MonoBehaviour:
       intValue: 2
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -60,7 +64,19 @@ MonoBehaviour:
       intValue: 3
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 58318baf9614b9048a45a25b8d5e81dd, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -70,7 +86,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -80,7 +97,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -90,9 +108,13 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
+  characterClass: 1
+  cardBack: {fileID: 0}
+  notes: 

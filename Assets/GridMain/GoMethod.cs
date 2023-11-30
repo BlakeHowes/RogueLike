@@ -156,6 +156,7 @@ public class GoMethod
             return Origin;
         }
         foreach (var cell in cells) {
+            if (!cell.InBounds()) { return previousPos; }
             if (!FloorManager.i.IsWalkable(cell)) { return previousPos; }
 
             if (goTilemap.GetTile(cell) != null || GetGameObject(cell) != null) {

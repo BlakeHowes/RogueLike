@@ -90,25 +90,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 39babad063c3a7c459593e0a7cf35758, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 50
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
-  walkCostBase: 1
-  enemyAlertRangeBase: 0
+  enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 1
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 50
   actionPoints: 0
   actionPointsSum: 0
@@ -136,7 +139,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
+      prefabValue: {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -146,7 +150,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
+      prefabValue: {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -156,7 +161,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e, type: 3}
+      prefabValue: {fileID: 3243932232630802507, guid: dddc6ecbba2596c4290f767c95b2e18e,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -239,6 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lootGroup: 0
+  lootGroup2: 0
 --- !u!114 &-876628501165001776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +262,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &-2204530397417996730
 MonoBehaviour:
   m_ObjectHideFlags: 0

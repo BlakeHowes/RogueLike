@@ -24,10 +24,11 @@ MonoBehaviour:
     callType: 0
     subItem: {fileID: 11400000, guid: 8dd2794bf795c2642bf371687f1b35f6, type: 2}
   abilities: []
-  StatusEffect: {fileID: 0}
+  StatusEffect: {fileID: 11400000, guid: 6db5a432c46752146b2006dbe8ecaed4, type: 2}
   duration: {x: 19.59, y: 40.48}
   counter: 0
-  effectPrefab: {fileID: 8288408381700605430, guid: 77288526853d4d24aace830b9b887729, type: 3}
+  effectPrefab: {fileID: 8288408381700605430, guid: 77288526853d4d24aace830b9b887729,
+    type: 3}
   dryUpSurface: {fileID: 0}
   dryUp: 0
   tryToSpread: 0

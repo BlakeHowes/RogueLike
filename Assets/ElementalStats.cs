@@ -11,7 +11,7 @@ public class ElementalStats : MonoBehaviour
     public bool IsImmune(ItemAbstract statusEffect) {
         if (!statusEffect) { return false; }
         foreach (var immunity in statusImmunites) {
-            if (immunity.GetType() == statusEffect.GetType()) { return true; }
+            if (immunity.name == statusEffect.name) { return true; }
         }
         return false;
     }

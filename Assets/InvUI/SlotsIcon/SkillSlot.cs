@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SkillSlot : MonoBehaviour
@@ -10,7 +11,6 @@ public class SkillSlot : MonoBehaviour
     public Color defaultColour;
     public Sprite defaultSprite;
     private Image image;
-
     public int coolDown() {
         if (!skill) { return 0; }
         return PartyManager.i.currentCharacter.GetComponent<Inventory>().GetCoolDown(skill);
@@ -18,13 +18,21 @@ public class SkillSlot : MonoBehaviour
     public void SelectSkill() {
         if (!skill) { return; }
         if(coolDown() > 0) { return; }
+        var currentCharacter = PartyManager.i.currentCharacter;
+        var stats = currentCharacter.GetComponent<Stats>();
+        if (skill.GetAPCost() > stats.actionPoints) {
+            EventSystem.current.SetSelectedGameObject(null);
+            MouseManager.i.itemSelected = null; 
+            GameUIManager.i.AnimateNotEnoughAP();
+            return;
+        }
         MouseManager.i.itemSelected = skill;
         if (skill.rangeType == Skill.RangeType.Multi || skill.rangeType == Skill.RangeType.TwoTargets) { MouseManager.i.SetMode(MouseManager.MouseMode.SelectTargets); }
-        var currentCharacter = PartyManager.i.currentCharacter;
+
         var postion = currentCharacter.Position();
-        var stats = currentCharacter.GetComponent<Stats>();
+
         stats.RefreshCharacter(postion);
-        if(skill.GetAPCost() > stats.actionPoints) { MouseManager.i.itemSelected = null; return; }
+
         GameUIManager.i.ShowRange(postion, skill.GetRange());
         GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost());
     }
@@ -70,9 +78,12 @@ public class SkillSlot : MonoBehaviour
     public void EnableToolTip() {
         GameUIManager.i.tooltipGameObject.SetActive(true);
         GameUIManager.i.itemtooltip.UpdateToolTip(skill, false);
+        if (!skill) { return;}
+        GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost());
     }
 
     public void DisableToolTip() {
         GameUIManager.i.tooltipGameObject.SetActive(false);
+        GameUIManager.i.apUIElement.HighlightAP(0);
     }
 }

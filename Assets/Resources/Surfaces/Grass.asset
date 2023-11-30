@@ -39,3 +39,4 @@ MonoBehaviour:
   dryUpSurface: {fileID: 0}
   dryUp: 0
   tryToSpread: 0
+  description: Grass. is pretty cool

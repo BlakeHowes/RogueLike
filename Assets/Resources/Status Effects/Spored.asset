@@ -16,6 +16,39 @@ MonoBehaviour:
   abilities:
   - callType: 1
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 11400000, guid: d2cad24b7ba47774f8733efe637d00c4, type: 2}
+      spriteValue: {fileID: 21300000, guid: 17c2a731bfbe0bd4a8485f894e0f2755, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 11400000, guid: d2cad24b7ba47774f8733efe637d00c4, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 30% chance to spawn grass
+    - action: {fileID: 11400000, guid: 1a64771c6adfa2d48878159548c12851, type: 2}
+      intValue: 30
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 11400000, guid: d2cad24b7ba47774f8733efe637d00c4, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
       intValue: 5
       floatValue: 0
@@ -27,4 +60,15 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  duration: 4
+    - action: {fileID: 11400000, guid: 663a26766991da445b5e6305b99852a3, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 2353600328335836179, guid: ceec7516237b4104b94300043ca39784,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 11400000, guid: d2cad24b7ba47774f8733efe637d00c4, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  duration: 2

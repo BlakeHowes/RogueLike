@@ -6,6 +6,7 @@ using static ItemStatic;
 [CreateAssetMenu(fileName = "Equipment", menuName = "Items/Equipment")]
 public class Equipment : ItemAbstract {
     public int shopValue;
+    public int armour;
     public EquipmentType equipmentType;
     public Weight weight;
     public Sprite wornSprite;

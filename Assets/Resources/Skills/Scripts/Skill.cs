@@ -31,6 +31,7 @@ public class Skill : ItemAbstract{
         Cone,
         Multi,
         TwoTargets,
+        ClickAnywhere,
     }
 
     public int GetDamage() {
@@ -47,11 +48,7 @@ public class Skill : ItemAbstract{
     }
 
     public int GetRange() {
-        var rangeModified = range;
-        if (parentStats) {
-            rangeModified += parentStats.actionPointSkillCostChange;
-        }
-        return rangeModified;
+        return range;
     }
 
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {

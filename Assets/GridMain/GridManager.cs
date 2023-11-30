@@ -18,7 +18,7 @@ public class GridManager : MonoBehaviour {
     public GridTools tools;
 
 
-    private GlobalValues globalValues;
+    public GlobalValues globalValues;
 
     //Grid data
     private MechAbstract[,] mechGrid;
@@ -48,7 +48,6 @@ public class GridManager : MonoBehaviour {
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
-        globalValues.CloneLoot();
         assets = new AssetManager();
         tools = new GridTools(globalValues);
         Initialize();
@@ -125,9 +124,20 @@ public class GridManager : MonoBehaviour {
             return;
         }
         invetory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.StartOfTurn);
+        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnStartOfPartyTurn);
         invetory.ReduceCoolDowns();
     }
+
+    public void StartStackWithoutUpdate() {
+        if (DevHotkeys.i.suspendStack == true) { return; }
+
+        MouseManager.i.disableMouse = true;
+        if (itemsInActionStack.Count == 0) { EndStack(); return; }
+        enumeratingStack = true;
+        //Debug.Log(itemsInActionStack.Count);
+        StartCoroutine(Stack(false));
+    }
+
 
     public void StartStack() {
         if (DevHotkeys.i.suspendStack == true) { return; }
@@ -136,13 +146,13 @@ public class GridManager : MonoBehaviour {
         if (itemsInActionStack.Count == 0) { EndStack(); return; }
         enumeratingStack = true;
         //Debug.Log(itemsInActionStack.Count);
-        StartCoroutine(Stack());
+        StartCoroutine(Stack(true));
     }
 
     //After 4 hours I cannot find this bug so I am making a terrible hack
     //For some reason some items are being called multiple times
     //List<Action> itemsCheckedHack = new List<Action>();
-    public IEnumerator Stack() {
+    public IEnumerator Stack(bool update) {
         //itemsCheckedHack.Clear();
         while (itemsInActionStack.Count > 0) {
             Action action = itemsInActionStack[0];
@@ -153,7 +163,11 @@ public class GridManager : MonoBehaviour {
             if (itemsInActionStack.Count == 0) { break; } //WHHHYYY
             itemsInActionStack.Remove(itemsInActionStack[0]); //I cant insert into stack, god knows why this is happening, 2 more hours wasted trying to debug this
         }
-        EndStack();
+        if (update) {
+            EndStack();
+            yield break;
+        }
+        enumeratingStack = false;
     }
 
     public void EndStack() {
@@ -268,6 +282,7 @@ public class GridManager : MonoBehaviour {
             PartyManager.i.AddPartyMember(clone);
             clone.transform.parent = null;
         }
+        globalValues.OnStartOfRun();
     }
 
     void OnDrawGizmos() {
@@ -464,7 +479,31 @@ public class GridManager : MonoBehaviour {
         return goGrid;
     }
 
+    public bool IsSameSurface(Surface surface, Surface surfaceComparason) {
+        if (surface == null || surfaceComparason == null) {
+            if (surface && surfaceComparason == null) { return true; }
+            return false;
+        }
+        if (surfaceComparason.name + "(Clone)" == surface.name ||
+              surfaceComparason.name == surface.name + "(Clone)" ||
+              surfaceComparason.name == surface.name) { return true; }
+        return false;
+    }
+
+    public bool IsSameSurface(Vector3Int position, Surface surfaceComparason) {
+        var surface = GetOrSpawnSurface(position);
+        if (surface == null || surfaceComparason == null) {
+            if (surface && surfaceComparason == null) { return true; }
+            return false;
+        }
+        if (surfaceComparason.name + "(Clone)" == surface.name ||
+              surfaceComparason.name == surface.name + "(Clone)" ||
+              surfaceComparason.name == surface.name) { return true; }
+        return false;
+    }
+
     public Surface GetOrSpawnSurface(Vector3Int position) {
+        if (!position.InBounds()) { return null; }
         var item = surfaceGrid[position.x, position.y];
         if (item) { return item; }
         var tile = surfaceTilemap.GetTile(position);
@@ -484,7 +523,7 @@ public class GridManager : MonoBehaviour {
             return;
         }
         if (justCombine) { return; }
-        if (surface.duration.y == 0) { return; }
+        if (surface.duration.y == 0 && surface.dryUp) { return; }
         surfaceTilemap.SetTile(position, surface.tile);
         var surfaceOnGround = GetOrSpawnSurface(position);
         surfaceOnGround.Call(position);
@@ -569,6 +608,7 @@ public class GridManager : MonoBehaviour {
     }
 
     public ItemAbstract InstantiateItem(ItemAbstract item) {
+        if (!item) { Debug.LogError("Item to instantiate is null");return null;}
         var clone = Instantiate(item);
         clone.name = item.name;
         return clone;

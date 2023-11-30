@@ -62,6 +62,7 @@ namespace Importers {
                 var go = CheckForGoInList(name);
                 if(go == null) { 
                     go = new GameObject();
+                    go.name = name;
                     go.AddComponent<Stats>();
                     go.AddComponent<Inventory>();
                     go.AddComponent<SpriteRenderer>();
@@ -71,7 +72,6 @@ namespace Importers {
                     var faction = itemData["Faction"].ToString();
 
                     if (faction == "Enemy") {AddAI(go,Manager.GetGlobalValues().defaultEnemyBehaviour);}
-                    if (faction == "Passive") {AddAI(go, Manager.GetGlobalValues().defaultEPassiveBehaviour); }
                     if (faction == "Summon") { AddAI(go, Manager.GetGlobalValues().defaultSummonBehaviour); }
                 }
                 UpdateGO(itemData, go);

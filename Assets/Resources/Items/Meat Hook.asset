@@ -37,6 +37,7 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   shopValue: 15
+  armour: 0
   equipmentType: 4
   weight: 1
   wornSprite: {fileID: 0}

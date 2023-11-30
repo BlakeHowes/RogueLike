@@ -9,8 +9,9 @@ public class GeneralItem : ItemAbstract {
     public int shopValue;
     public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public int totalUses = 1;
-    [HideInInspector] public int timesUsed = 0;
+    public int timesUsed = 0;
     public bool endlessUses = false;
+    public bool pickUpByStandingOver;
     [HideInInspector] public GameObject parentGO;
     [HideInInspector] public Vector3Int thrownLocation;
 

@@ -74,6 +74,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void ClearCoolDowns() {
+        List<CoolDown> coolDownsToRemove = new List<CoolDown>();
+        foreach (var skillCoolDown in coolDowns) {
+            coolDownsToRemove.Add(skillCoolDown);
+        }
+        foreach (var skillCoolDown in coolDownsToRemove) {
+            if (coolDowns.Contains(skillCoolDown)) { coolDowns.Remove(skillCoolDown); }
+        }
+    }
+
     public int GetCoolDown(ItemAbstract item) {
         foreach(var skillCoolDown in coolDowns) {
             if (skillCoolDown.item.name == item.name) { return skillCoolDown.coolDownTimer; }
@@ -90,6 +100,7 @@ public class Inventory : MonoBehaviour
 
 
     public bool AddItem(ItemAbstract item) {
+        if(item == null) { return true; }
         if(items.Count < globalValues.maxItems) {
             items.Add(item);
             return false;
@@ -100,7 +111,17 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
+    public bool AmIStunned() {
+        foreach(var status in statusEffects) {
+            if(status.name == globalValues.stun.name) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void AddStatusEffect(Vector3Int position,Vector3Int origin,StatusEffect statusEffect) {
+        if (statusEffect == null) { return; }
         if (stats.elementalStats != null) {
             if (stats.elementalStats.IsImmune(statusEffect)) { return; }
         }
@@ -122,6 +143,7 @@ public class Inventory : MonoBehaviour
     }
 
     public void AddStatusEffect(Vector3Int position, Vector3Int origin, StatusEffectTargeted statusEffect) {
+        if(statusEffect == null) { return; }
         if (stats.elementalStats != null) {
             if (stats.elementalStats.IsImmune(statusEffect)) { return; }
         }
@@ -144,7 +166,15 @@ public class Inventory : MonoBehaviour
     }
 
     public void RemoveStatusEffect(ItemAbstract statusEffect) {
-        statusEffects.Remove(statusEffect);
+        List<ItemAbstract> statusEffectsToRemove = new List<ItemAbstract>();
+        foreach (var effect in statusEffects) {
+            if (effect.name == statusEffect.name) {
+                statusEffectsToRemove.Add(effect);
+            }
+        }
+        foreach(var effect in statusEffectsToRemove) {
+            statusEffects.Remove(effect);
+        }
         stats.RefreshCharacter(stats.gameObject.Position());
     }
 
@@ -255,11 +285,14 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddAbility(ItemAbstract item,bool stackable) {
+    public void AddTrait(ItemAbstract item,bool stackable) {
         if(traits.Contains(item) && !stackable) { return; }
         traits.Add(item);
         RemoveAbilityCallSubscriptions();
         CreateAbilityCallSubscriptions();
+        var position = gameObject.Position();
+        item.Call(position, position, gameObject, CallType.OnPickTrait);
+        GridManager.i.StartStackWithoutUpdate();
     }
 
     public void CallEquipment(Vector3Int position, Vector3Int origin, CallType callType) {

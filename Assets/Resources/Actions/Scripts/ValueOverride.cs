@@ -28,7 +28,7 @@ public class ValueOverride : Action {
         }
 
         switch (modification) {
-            case TypeModification.None: break;
+            case TypeModification.None: return GetValue(go);
             case TypeModification.Percentage: return Mathf.RoundToInt((float)value / 100 * this.value);
         }
         return value;

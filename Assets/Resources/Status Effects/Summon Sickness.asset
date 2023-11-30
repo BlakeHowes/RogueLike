@@ -16,10 +16,60 @@ MonoBehaviour:
   abilities:
   - callType: 1
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Summons outside of combat take 4-6 damager per turn
     - action: {fileID: 11400000, guid: b175c9666dd5b1d4cb312af3064f711c, type: 2}
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 11400000}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: d4deeeb400132494c9bc0978c60de7b7, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 6}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 216f737d566c90343b5d57797696a075, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 11400000}
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 4, y: 6}

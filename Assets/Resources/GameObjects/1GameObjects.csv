@@ -1,0 +1,7 @@
+#,Name,Faction,Health,Infinite Health,Armour,AP
+1,Hell Bat,Enemy,200,FALSE,0,6
+2,Random Barrel,Passive,1,FALSE,0,3
+3,Water Barrel,Passive,1,FALSE,0,3
+4,Eletrified Water Barrel,Passive,1,FALSE,0,3
+5,Oil Barrel,Passive,1,FALSE,0,3
+6,Ice Barrel,Passive,1,FALSE,0,3

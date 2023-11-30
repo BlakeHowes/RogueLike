@@ -95,14 +95,14 @@ MonoBehaviour:
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
-  walkCostBase: 1
-  enemyAlertRangeBase: 0
+  enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 1
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lootGroup: 0
+  lootGroup2: 0
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +228,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &901359122887757220
 MonoBehaviour:
   m_ObjectHideFlags: 0

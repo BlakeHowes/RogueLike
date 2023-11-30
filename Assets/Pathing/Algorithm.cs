@@ -22,10 +22,6 @@ public class Algorithm {
     }
 
     public Vector3[] AStarSearch(Vector3Int startpos1, Vector3Int endpos1,bool ignoreEnemies) {
-        //START STOPWATCH
-        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        stopwatch.Start();
-        //START STOPWATCH
 
         var startpos = new Vector3Int(startpos1.x, startpos1.y); 
         var endpos = new Vector3Int(endpos1.x, endpos1.y);
@@ -33,20 +29,17 @@ public class Algorithm {
         if (startpos == endpos) {
             return null;
         }
-        Debug.Log("ASTAR 1 StopWatch:" + stopwatch.Elapsed);
         if (!generated) {
             grid.Generate();
             generated = true;
         }
         openList.Clear();
         closedList.Clear();
-        Debug.Log("ASTAR 2 StopWatch:" + stopwatch.Elapsed);
         var goTilemap = GridManager.i.goTilemap;
         var goGrid = GridManager.i.GetGoGrid();
         var go = startpos.GameObjectGo();
         if (!go) { return null; }
         var startPosTag = startpos.GameObjectGo().tag;
-        Debug.Log("ASTAR 3 StopWatch:" + stopwatch.Elapsed);
         for (int x = Mathf.Clamp(startpos.x - range, 0, grid.width); x < Mathf.Clamp(startpos.x + range, 0, grid.width); x++) {
             for (int y = Mathf.Clamp(startpos.y - range, 0, grid.length); y < Mathf.Clamp(startpos.y + range, 0, grid.length); y++) {
                 Vector3Int gameobjectcell = new Vector3Int(x, y);
@@ -79,7 +72,6 @@ public class Algorithm {
                 grid.FindCellByPosition(gameobjectcell).walkable = true;
             }
         }
-        Debug.Log("ASTAR 4 StopWatch:" + stopwatch.Elapsed);
 
 
         var startCell = grid.FindCellByPosition(startpos);
@@ -87,7 +79,6 @@ public class Algorithm {
 
         startCell.heuristic = (endpos - startCell.position).magnitude;
         openList.Add(startCell);
-        Debug.Log("ASTAR 5 StopWatch:" + stopwatch.Elapsed);
         while (openList.Count > 0) {
             var bestCell = GetBestCell();
             openList.Remove(bestCell);
@@ -103,7 +94,6 @@ public class Algorithm {
                     var positions = new List<Vector3>();
                     var path = ConstructPath(curCell);
                     if(path == null) { return null; }
-                    Debug.Log("ASTAR 6 StopWatch:" + stopwatch.Elapsed);
                     path.ToList().ForEach(c => positions.Add(new Vector3(c.position.x, c.position.y, 0)));
                     return positions.ToArray();
                 }

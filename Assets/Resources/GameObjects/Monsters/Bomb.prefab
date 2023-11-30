@@ -90,25 +90,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c9780698b3775bd4b9aa6a9db749ec3e, type: 2}
   state: 0
-  immunites: []
+  elementalStats: {fileID: 0}
   maxHealthBase: 30
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
-  walkCostBase: 1
-  enemyAlertRangeBase: 0
+  enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 1
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 0
   actionPoints: 0
   actionPointsSum: 0
@@ -141,6 +144,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
       intValue: 1
       floatValue: 0
@@ -150,6 +154,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 249ba737b9e287b4eac72e99b8949295, type: 2}
       intValue: 1
       floatValue: 0
@@ -159,6 +164,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
+      stringValue: 
   items: []
   traits:
   - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
@@ -237,16 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - item: {fileID: 11400000, guid: d5d93365186e3a34bb95b93d42dbd29a, type: 2}
-    rarity: 0.323
-    pool: 0
-  - item: {fileID: 11400000, guid: b269883fab5f18949b1840a8a8e3dd06, type: 2}
-    rarity: 0.323
-    pool: 1
-  deathActions: []
-  worldLootScriptable: {fileID: 0}
-  useGridCounter: 0
+  lootGroup: 0
+  lootGroup2: 0
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +260,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &901359122887757220
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Druid
   m_EditorClassIdentifier: 
   mainHand: {fileID: 11400000, guid: 1106b5d67d6d01940b944ad2c2b6d300, type: 2}
-  offHand: {fileID: 11400000, guid: b2c2a2a9adec9ba4a92e27a9f931d915, type: 2}
+  offHand: {fileID: 0}
   helmet: {fileID: 11400000, guid: 3776d516912869a40ba3c4b47d5e3144, type: 2}
   armour: {fileID: 11400000, guid: 64514875beb59eb49bad0ec9064a2e20, type: 2}
   trinkets:
-  - {fileID: 11400000, guid: c5168c94e807ccb439095537a8fb71b5, type: 2}
+  - {fileID: 11400000, guid: b2c2a2a9adec9ba4a92e27a9f931d915, type: 2}

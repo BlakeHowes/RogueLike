@@ -161,6 +161,7 @@ public class PathingManager : MonoBehaviour
     }
 
     public bool CheckMoveImmunity(GameObject go) {
+        if (!go) { return false; }
         go.TryGetComponent<ElementalStats>(out ElementalStats elementalStats);
         if (elementalStats) {
             if (elementalStats.pushImmunity) {
@@ -219,22 +220,26 @@ public class PathingManager : MonoBehaviour
         var character = startPosition.GameObjectSpawn();
         if (!character) { return startPosition; }
         if (CheckMoveImmunity(character)) { return startPosition; }
-        character.GetComponent<SpringToTarget3D>().StopAllCoroutines();
-        character.GetComponent<SpringToTarget3D>().spring.Reset();
+        var spring = character.GetComponent<SpringToTarget3D>();
+        spring.StopAllCoroutines();
+        spring.spring.Reset();
+        spring.disableSpring = true;
         GridManager.i.goMethods.RemoveGameObject(startPosition);
         var pos =GridManager.i.goMethods.FindFloodFillCellForGo(endPosition);
         GridManager.i.goMethods.SetGameObject(pos, character);
         if (!character) { return pos; }
         FlipCharacter(character, pos, startPosition);
-        StartCoroutine(TeleportAnimation(endPosition, pos, character));
+        StartCoroutine(TeleportAnimation(endPosition, pos, character,spring));
         return pos;
     }
 
-    public IEnumerator TeleportAnimation(Vector3Int landedPosition,Vector3Int finalPosition, GameObject character) {
+    public IEnumerator TeleportAnimation(Vector3Int landedPosition,Vector3Int finalPosition, GameObject character,SpringToTarget3D spring) {
         character.transform.position = landedPosition + new Vector3(0.5f, 3f);
-        character.GetComponent<SpringToTarget3D>().SpringTo(landedPosition, 40, 800);
+        spring.SpringTo(landedPosition, 40, 800);
         yield return new WaitForSeconds(0.1f);
-        character.GetComponent<SpringToTarget3D>().SpringTo(finalPosition, 50, 700);
+        spring.disableSpring = false;
+        spring.SpringTo(finalPosition, 50, 700);
+
     }
 
     public bool IsPathable(Vector3Int position, Vector3Int origin) {

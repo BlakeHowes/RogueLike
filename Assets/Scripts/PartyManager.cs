@@ -1,12 +1,9 @@
-using FunkyCode;
 using Panda;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using static ItemStatic;
 
 public class PartyManager : MonoBehaviour {
@@ -20,8 +17,6 @@ public class PartyManager : MonoBehaviour {
     public bool follow = true;
     private GlobalValues globalValues;
     string currentTag;
-
- 
 
     public enum State {
         Idle,
@@ -44,6 +39,7 @@ public class PartyManager : MonoBehaviour {
             return;
         }
         foreach(GameObject member in party) {
+            if(member == null) { continue; }
             if(member.GetComponent<Stats>().state == State.Combat) {
                 return;
             }
@@ -51,6 +47,7 @@ public class PartyManager : MonoBehaviour {
         var playerpos = characterFollowPosition;
         RemoveNullCharacters(party);
         foreach (GameObject member in party) {
+            if (member == null) { continue; }
             if (member == currentCharacter) {  continue; }
             var memberpos = member.Position();
 
@@ -134,7 +131,22 @@ public class PartyManager : MonoBehaviour {
         SetCurrentCharacter(party[0]);
     }
 
+    public float endTurnTimer;
     public void Update() {
+
+        if(currentTag != "Party") {
+            endTurnTimer += Time.deltaTime;
+            if(endTurnTimer > 7) {
+                if (currentTag == "Enemy") { EndEnemyTurn(currentCharacter); } else {
+                    GridManager.i.itemsInActionStack.Clear();
+                    EndTurn();
+                }
+            }
+        }
+        else {
+            endTurnTimer = 0;
+        }
+
         if (!currentCharacter) {
             if (currentTag == "Party") { SwitchToNextCharacter(); }
             if (currentTag == "Enemy") { EndEnemyTurn(null); }
@@ -226,6 +238,8 @@ public class PartyManager : MonoBehaviour {
 
     public void EndTurn() {
         partyMemberTurnTaken.Add(currentCharacter);
+        var previousPosition = currentCharacter.Position();
+        currentCharacter.GetComponent<Inventory>().CallEquipment(previousPosition, previousPosition, CallType.OnEndOfIndivualTurn);
         SwitchToNextCharacter();
    
         if (partyMemberTurnTaken.Count >= party.Count) {
@@ -254,6 +268,7 @@ public class PartyManager : MonoBehaviour {
         var pos = currentCharacter.Position();
         currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
         currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+        GridManager.i.StartStackWithoutUpdate();
     }
 
     public List<GameObject> ArrangeEnemyPartyBasedOnPath() {
@@ -279,9 +294,6 @@ public class PartyManager : MonoBehaviour {
             partyOrder.Add(member, pathingInstance.PathDistance(target.Position(), member.Position()));
         }
 
-        foreach(var member in partyOrder) {
-            Debug.Log(member);
-        }
         if(partyOrder.Count > 4) {
             partyCopy.Sort((p1, p2) => partyOrder.SingleOrDefault(s => s.Key == p1).Value.CompareTo(partyOrder.SingleOrDefault(s => s.Key == p2).Value));
         }
@@ -292,15 +304,16 @@ public class PartyManager : MonoBehaviour {
     }
 
     public void EndEnemyTurn(GameObject enemy) {
-        if(enemy)
-        enemyTurnTaken.Add(enemy);
+        if(enemy)enemyTurnTaken.Add(enemy);
         var enemyPosition = enemy.Position();
+        if (enemy) enemy.GetComponent<Inventory>().CallEquipment(enemyPosition, enemyPosition, CallType.OnEndOfIndivualTurn);
         foreach (GameObject enemyCharacter in enemyParty) {
             if (enemyTurnTaken.Contains(enemyCharacter) || !enemyCharacter) { continue; }
             SetCurrentCharacter(enemyCharacter);
             var pos = enemyCharacter.Position();
             enemyCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
             enemyCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
+            GridManager.i.StartStackWithoutUpdate();
             return;
         }
         PartyStartTurn();
@@ -310,7 +323,7 @@ public class PartyManager : MonoBehaviour {
         var pos = character.Position();
         var inventory = character.GetComponent<Inventory>();
         inventory.ReduceCoolDowns();
-        inventory.CallEquipment(pos, pos, CallType.StartOfTurn);
+        inventory.CallEquipment(pos, pos, CallType.OnStartOfPartyTurn);
     }
 
 

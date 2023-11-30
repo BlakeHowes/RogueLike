@@ -20,27 +20,19 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588, type: 3}
+      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 21300000, guid: be2f13da61fea7548b00592918110cb8, type: 3}
       stringValue: 
-    - action: {fileID: 11400000, guid: 1b2d52aa3c467e34ea61b9be2a78287d, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588, type: 3}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588, type: 3}
+      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -60,7 +52,8 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588, type: 3}
+      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -69,16 +62,6 @@ MonoBehaviour:
   - callType: 0
     actionContainers:
     - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
-      intValue: 3
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 5, y: 3}
-      surfaceValue: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
-      spriteValue: {fileID: 0}
-      stringValue: 
-    - action: {fileID: 11400000, guid: 1b2d52aa3c467e34ea61b9be2a78287d, type: 2}
       intValue: 3
       floatValue: 0
       itemValue: {fileID: 0}
@@ -124,7 +107,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588, type: 3}
+      prefabValue: {fileID: 763799897560185588, guid: cea737a9f2607c64fb8c3e269ff7d588,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 11400000, guid: 1870302bae434ca44899b5b5a832425f, type: 2}
@@ -138,4 +122,6 @@ MonoBehaviour:
   coolDown: 2
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
-  targets: []
+  totalTargets: 0
+  skillDamage: {x: 0, y: 0}
+  weaponType: 0

@@ -7,6 +7,8 @@ namespace LlamAcademy.Spring.Runtime
     {
         public SpringVector3 spring;
         [HideInInspector]public GameObject healthbar;
+        public bool disableSpring;
+        private bool moving = false;
         private void Awake()
         {
             spring = new SpringVector3()
@@ -32,8 +34,9 @@ namespace LlamAcademy.Spring.Runtime
             spring.Stiffness = stiffness;
             StopAllCoroutines();
 
-
-            if(gameObject.activeSelf)StartCoroutine(DoSpringToTarget(targetPosition));
+            //disableSpring = false;
+            moving = true;
+            if (gameObject.activeSelf)StartCoroutine(DoSpringToTarget(targetPosition));
         }
 
         public void SpringToDefaultValues(Vector3 targetPosition) {
@@ -73,6 +76,9 @@ namespace LlamAcademy.Spring.Runtime
                 Vector3.SqrMagnitude(targetPosition - transform.position)
             ))
             {
+                if (moving) {
+                    yield break;
+                }
                 transform.position = spring.Evaluate(Time.deltaTime);
 
                 yield return null;
@@ -96,11 +102,15 @@ namespace LlamAcademy.Spring.Runtime
 
             while (!Mathf.Approximately(Vector3.SqrMagnitude(transform.position - TargetPosition), 0))
             {
+                if (disableSpring) {
+                    yield break; 
+                }
                 transform.position = spring.Evaluate(Time.deltaTime);
                 if (healthbar) healthbar.transform.position = transform.position;
                 yield return null;
             }
-            transform.position = TargetPosition;
+            //transform.position = TargetPosition;
+            moving = false;
             spring.Reset();
         }
     }

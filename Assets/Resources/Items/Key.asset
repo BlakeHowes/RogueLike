@@ -16,6 +16,26 @@ MonoBehaviour:
   abilities:
   - callType: 0
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Unlocks Grey Doors
     - action: {fileID: 11400000, guid: 249ba737b9e287b4eac72e99b8949295, type: 2}
       intValue: 0
       floatValue: 0
@@ -32,6 +52,7 @@ MonoBehaviour:
   totalUses: 1
   timesUsed: 0
   endlessUses: 1
+  pickUpByStandingOver: 0
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}
   destroyOnUse: 0

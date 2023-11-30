@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
   m_Name: Call Beasts
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 5109417d454ea684a911f86357cf24c7, type: 2}
+  tile: {fileID: 11400000, guid: 5f7ebc40b8cd77b478c6acd634bbbe60, type: 2}
   abilities:
   - callType: 0
     actionContainers:
@@ -25,7 +25,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: bfcb0973b8cff4641855ba084dfe01d0, type: 3}
+      spriteValue: {fileID: 21300000, guid: 645f03bae9caee941b76e97472f0900a, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 0
@@ -38,16 +38,6 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: Summon Random Animal
-    - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
-      intValue: 0
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: 
     - action: {fileID: 11400000, guid: e445fb7a8f2ecda459424f96e9c1d165, type: 2}
       intValue: 0
       floatValue: 0
@@ -64,7 +54,6 @@ MonoBehaviour:
   range: 1
   AOE: 0
   actionPointCost: 2
-  actionPointCostTemp: 0
   coolDown: 8
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0

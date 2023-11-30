@@ -18,7 +18,7 @@ public class Surface : ScriptableObject
     public Surface dryUpSurface;
     public bool dryUp = true;
     public bool tryToSpread;
-
+    public string description;
     public void Spread(Vector3Int position) {
         if (counter < 2) { return; }
         var walkableTilemap = GridManager.i.floorTilemap;
@@ -52,12 +52,12 @@ public class Surface : ScriptableObject
             return;
         }
 
-        if (dryUp) {
+        if (dryUp || tryToSpread) {
             var surfaceTilemap = GridManager.i.surfaceTilemap;
             var circle = GridManager.i.tools.Circle(1, position);
             foreach (var cell in circle) {
                 if (FloorManager.i.IsWall(cell)) { continue; }
-                if (surfaceTilemap.GetTile(cell) != tile) {
+                if (GridManager.i.IsSameSurface(cell,this)) {
                     counter++;
                     break;
                 }

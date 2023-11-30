@@ -55,6 +55,15 @@ public abstract class Action : ScriptableObject {
 }
 
 public static class ItemStatic {
+
+    public enum CharacterClass {
+        Netural,
+        Warrior,
+        Ranger,
+        Mage,
+        Druid
+    }
+
     public enum EquipmentType {
         mainHand,
         offHand,
@@ -105,12 +114,16 @@ public static class ItemStatic {
         MaxHealth,
         Health,
         Armour,
-        meleeDamage,
+        Damage,
         rangeDamage,
         magicDamage,
         MaxActionPoints,
         ActionPoints,
-        DamageTaken
+        DamageTaken,
+        WalkCost,
+        ActionPointCost,
+        EnemyAlertRange,
+        DamageMultiple,
     }
 
     public enum CallType {
@@ -125,7 +138,7 @@ public static class ItemStatic {
         ActionPointSum,
         SelectItem,
         AddSkillToHotbar,
-        StartOfTurn,
+        OnStartOfPartyTurn,
         OnStatusEffectEnable,
         EndOfStack,
         OnDirectDamage,
@@ -134,7 +147,8 @@ public static class ItemStatic {
         OnTakeDamageGlobal,
         OnDeathGlobal,
         OnMoveGlobal,
-        OnAttackGlobal
-           
+        OnAttackGlobal,
+        OnEndOfIndivualTurn,
+        OnPickTrait
     }
 }

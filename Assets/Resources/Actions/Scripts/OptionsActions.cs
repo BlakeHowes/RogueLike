@@ -5,7 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "OptionsActions", menuName = "Actions/OptionsActions")]
 public class OptionsActions : Action {
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        parentGO.GetComponent<CCOptions>().hideWeapons = false;
+        if (!parentGO) { return true; }
+        parentGO.TryGetComponent(out CCOptions options);
+        if(options == null) { return true; }
+        options.hideWeapons = false;
         CharacterSpriteGenerator.CreateCharacterSprite(parentGO);
         return true;
     }

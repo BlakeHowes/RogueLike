@@ -10,7 +10,7 @@ public class StatusEffectTargeted : ItemAbstract {
     [HideInInspector] public GameObject target;
     public int duration;
     public override void Call(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
-        if (callType == CallType.StartOfTurn) {
+        if (callType == CallType.OnStartOfPartyTurn) {
             var inventory = parentGO.GetComponent<Inventory>();
 
             if (inventory.GetCoolDown(this) <= 0) {

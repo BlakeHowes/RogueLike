@@ -58,14 +58,14 @@ MonoBehaviour:
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 0
-  walkCostBase: 0
-  enemyAlertRangeBase: 0
+  enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 1
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootGroup: 1
+  lootGroup2: 0
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +202,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &-826689176733290346
 MonoBehaviour:
   m_ObjectHideFlags: 0

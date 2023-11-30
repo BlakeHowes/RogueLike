@@ -96,14 +96,14 @@ MonoBehaviour:
   maxArmourBase: 0
   actionPointsBase: 6
   throwingRangeBase: 1
-  walkCostBase: 1
-  enemyAlertRangeBase: 0
+  enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 0
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
@@ -137,8 +137,7 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: a437c03d7ed23444c9be8961765a2324, type: 2}
   traits:
-  - {fileID: 11400000, guid: 75432d34e21573d40b1abef2dfb9ac89, type: 2}
-  - {fileID: 11400000, guid: 90867b714e24b1942bf8ba4e270ddf93, type: 2}
+  - {fileID: 11400000, guid: 2e8a80eb2373782439cf2d2265a89d12, type: 2}
   - {fileID: 11400000, guid: 749991c71be6e5945affea0dd9df8fc6, type: 2}
   skills: []
   coolDowns: []
@@ -215,6 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e9cbf1857b47747915acd854d43a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lootGroup: 0
+  lootGroup2: 0
 --- !u!114 &6717019821424419616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +231,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &-5847116750405721974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +263,6 @@ MonoBehaviour:
   pushImmunity: 0
   statusImmunites:
   - {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
-  actionImmunities: []
   damageInteractions:
   - weaponType: 0
     surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a9eadeeabf74594595a1d25ab940899, type: 3}
   m_Name: Spikes
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: b5a2358d141bc04449fd3287f96c5aa8, type: 2}
+  tile: {fileID: 11400000, guid: e4b31c9870076894e8df26aa03181a56, type: 2}
   abilities:
   - callType: 2
     actionContainers:
@@ -25,7 +25,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: 1f0ee0b814d8cae478371fe9b788df0e, type: 3}
+      spriteValue: {fileID: 21300000, guid: d05c6fc3928aaa54cb488463581ff8bf, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 0
@@ -71,5 +71,6 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  afterWeapon: 0
+  characterClass: 1
+  cardBack: {fileID: 0}
   notes: 

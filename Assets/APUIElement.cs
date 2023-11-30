@@ -8,7 +8,7 @@ public class APUIElement : MonoBehaviour
     public Color highlightColour;
     public Color defaultColor;
     public void HighlightAP(int amount) {
-        for (int i = transform.childCount -1; i > 0; i--) {
+        for (int i = transform.childCount -1; i >= 0; i--) {
             var child = transform.GetChild(i);
             if (child.gameObject.activeSelf) {
                 var rend = child.GetComponent<Image>();
@@ -27,6 +27,27 @@ public class APUIElement : MonoBehaviour
             if(i < amount)child.gameObject.SetActive(true);
             if (i >= amount) child.gameObject.SetActive(false);
             i++;
+        }
+    }
+
+    public IEnumerator NoEnoughAPAnimation() {
+        List<Image> images = new List<Image>();
+        foreach (Transform child in transform) {
+            var rend = child.GetComponent<Image>();
+            images.Add(rend);
+            rend.color = Color.red;
+        }
+        yield return new WaitForSeconds(0.1f);
+        foreach (Image image in images) {
+            image.color = Color.white;
+        }
+        yield return new WaitForSeconds(0.1f);
+        foreach (Image image in images) {
+            image.color = Color.red;
+        }
+        yield return new WaitForSeconds(0.1f);
+        foreach (Image image in images) {
+            image.color = Color.white;
         }
     }
 }

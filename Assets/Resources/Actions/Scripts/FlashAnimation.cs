@@ -9,16 +9,18 @@ public class FlashAnimation : Action {
     public bool flash;
     public bool setMaterialSolid;
     [HideInInspector] public Material material;
+    [HideInInspector] public Color color;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         character = position.GameObjectGo();
         //material = actionContainer.materialValue;
+        color = actionContainer.colorValue;
         this.AddToStack();
         return true;
     }
 
     public override IEnumerator StackAction() {
         if (character) {
-            if(flash)GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(character, position, Color.red));
+            if(flash)GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(character, position, color));
             //if (setMaterialSolid) { character.GetComponent<SpriteRenderer>().material = material; }
         }
         yield return null;

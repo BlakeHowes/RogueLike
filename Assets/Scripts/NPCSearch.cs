@@ -12,6 +12,11 @@ public class NPCSearch : MonoBehaviour
         targetStrings =ConvertFlagsEnumToStringList(targetsTags,gameObject);
         stats = GetComponent<Stats>();
     }
+
+    public void CreateTargetTags() {
+        targetStrings = ConvertFlagsEnumToStringList(targetsTags, gameObject);
+    }
+
     public void Search() {
         var origin = gameObject.Position();
         var range = stats.enemyAlertRangeTemp;

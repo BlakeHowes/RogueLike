@@ -23,7 +23,6 @@ public class AreaAroundUser : Action {
         }
 
         var positions = origin.PositionsInSight(range);
-
         foreach (var pos in positions) {
             var go = pos.GameObjectGo();
             if (requireTarget) { if (!go) { continue; } }

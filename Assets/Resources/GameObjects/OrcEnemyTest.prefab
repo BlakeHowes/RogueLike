@@ -86,20 +86,23 @@ MonoBehaviour:
   maxArmourBase: 0
   actionPointsBase: 4
   throwingRangeBase: 5
-  walkCostBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 1
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
   armour: 0
   damageTaken: 0
   meleeDamage: 0
+  meleeDamageMultiple: 1
+  meleeAccuracy: 0
+  meleeAccuracyMultiple: 1
   health: 100
   actionPoints: 3
   actionPointsSum: 0
@@ -215,6 +218,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &-8396399736578433637
 MonoBehaviour:
   m_ObjectHideFlags: 0

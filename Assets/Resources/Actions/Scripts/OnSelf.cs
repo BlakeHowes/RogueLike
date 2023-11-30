@@ -14,7 +14,11 @@ public class OnSelf : Action {
                 foundSelf = true;
                 continue; 
             }
-            if(foundSelf)otherContainer.action.Condition(origin, origin, parentGO, parentItem, ability, otherContainer);
+            if (foundSelf) {
+                var conditionResult = otherContainer.action.Condition(origin, origin, parentGO, parentItem, ability, otherContainer);
+                if (!conditionResult) { break; }
+            }
+
         }
         foundSelf = false;
         return false;

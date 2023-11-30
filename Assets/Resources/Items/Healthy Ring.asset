@@ -13,8 +13,31 @@ MonoBehaviour:
   m_Name: Healthy Ring
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 9af173bbc21f59d48927109cc68613f0, type: 2}
-  abilities: []
+  abilities:
+  - callType: 7
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 111c43d7f8493da4e82bbf35a92e8b3c, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 15
+  armour: 0
   equipmentType: 4
   weight: 0
   wornSprite: {fileID: 0}

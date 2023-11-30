@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
   m_Name: Kick
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 5109417d454ea684a911f86357cf24c7, type: 2}
+  tile: {fileID: 11400000, guid: 223d39ee97f36154085d0fd7b7dd518a, type: 2}
   abilities:
   - callType: 0
     actionContainers:
@@ -25,7 +25,7 @@ MonoBehaviour:
       colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: d6ea6a68f49522c4aa62ec5f3c21a990, type: 3}
+      spriteValue: {fileID: 21300000, guid: d7cb6bd086d27da438e2529bbef7fc49, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 20
@@ -76,7 +76,6 @@ MonoBehaviour:
   range: 2
   AOE: 0
   actionPointCost: 1
-  actionPointCostTemp: 0
   coolDown: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0

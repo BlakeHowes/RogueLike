@@ -41,6 +41,12 @@ static class ExtensionMethods
     }
 
     public static bool IsWalkable(this Vector3Int position) {
+        if (!position.InBounds()) {
+            System.Diagnostics.StackTrace stackTrace = new System.Diagnostics.StackTrace();
+            System.Reflection.MethodBase methodBase = stackTrace.GetFrame(1).GetMethod();
+            Debug.LogError("Out of bounds position from " + methodBase.DeclaringType.Name + " Called by " + methodBase.Name);
+            return false;
+        }
         return floorManager.IsWalkable(position);
     }
 
@@ -74,6 +80,10 @@ static class ExtensionMethods
 
     public static MechAbstract Mech(this Vector3Int position) {
         return gridManager.mechMethods.GetMechanism(position);
+    }
+
+    public static Surface Surface(this Vector3Int position) {
+        return gridManager.GetOrSpawnSurface(position);
     }
 
     public static ItemAbstract Item(this Vector3Int position) {

@@ -5,6 +5,6 @@ using UnityEngine;
 public class CancelButton : MonoBehaviour
 {
     public void Cancel() {
-        MouseManager.i.CancelSkill();
+        MouseManager.i.Cancel();
     }
 }

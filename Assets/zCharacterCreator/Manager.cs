@@ -1,3 +1,4 @@
+using LlamAcademy.Spring.Runtime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ public static class Manager {
     public static System.Action<Vector3Int, Vector3Int, CallType> OnAttackEvent;
     public static System.Action<GameObject, GameObject> OnSwitchCharacter;
     public static Action<bool> EndOfStackEvent;
+
+    public static int coins = 0;
 
     public static void OnEndOfStackCall() {
         EndOfStackEvent?.Invoke(true);
@@ -42,6 +45,16 @@ public static class Manager {
     public static void LoadNextScene() {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
+        Camera.main.TryGetComponent(out SmoothCamera smoothCamera);
+        if (smoothCamera) { smoothCamera.resetFollow();}
+    }
+
+    public static bool FinalFloor() {
+        if(SceneManager.GetActiveScene().buildIndex >= SceneManager.sceneCountInBuildSettings - 1) {
+            GameUIManager.i.ShowGameOverUI();
+            return true; 
+        }
+        return false;
     }
 
     public static void LoadCharacterCreator() {

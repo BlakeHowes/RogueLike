@@ -40,7 +40,6 @@ public class itemMethods {
             itemGrid[position.x, position.y] = null;
             return null;
         }
-        Debug.Log("Set Item " + item +" on "+ position);
         itemTilemap.SetTile(position, item.tile);
         itemGrid[position.x, position.y] = item;
         var mech = GridManager.i.mechMethods.GetMechanism(position);

@@ -33,7 +33,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: b6c6956eeed8985489c6e4267fd3c64d, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: b6c6956eeed8985489c6e4267fd3c64d,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -53,7 +54,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: b6c6956eeed8985489c6e4267fd3c64d, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: b6c6956eeed8985489c6e4267fd3c64d,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -63,7 +65,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 9e09ef84372c3bd4591c8f23c6c10f45, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 9e09ef84372c3bd4591c8f23c6c10f45,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -73,7 +76,8 @@ MonoBehaviour:
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: b6c6956eeed8985489c6e4267fd3c64d, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: b6c6956eeed8985489c6e4267fd3c64d,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}

@@ -38,9 +38,6 @@ public class Shop : MechAbstract
             if (item is GeneralItem) {
                 var generalItem = item as GeneralItem;
                 value = generalItem.shopValue;
-                if (generalItem.timesUsed != 0) {
-                    return;
-                }
             }
   
             if (item is Weapon) {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+/*
 [CustomPropertyDrawer(typeof(LootPool))]
 public class InspectorLoot : PropertyDrawer {
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -21,3 +22,4 @@ public class InspectorLoot : PropertyDrawer {
         return propHeight;
     }
 }
+*/

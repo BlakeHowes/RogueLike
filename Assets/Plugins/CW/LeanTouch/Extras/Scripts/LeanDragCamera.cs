@@ -116,7 +116,6 @@ namespace Lean.Touch
 
 			// Store the current position
 			var oldPosition = transform.localPosition;
-			Debug.Log(worldDelta);
 			// Pan the camera based on the world delta
 			transform.position -= worldDelta * sensitivity;
 

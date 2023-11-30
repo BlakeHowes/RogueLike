@@ -44,6 +44,9 @@ public class FloorManager : MonoBehaviour
     }
 
     public bool IsWalkable(Vector3Int position) {
+        if (!position.InBounds()) {
+            Debug.LogError("IsWalkable position out of bounds " + position);
+            return false;}
         if (floorGrid[position.x,position.y] == 1) { return true; }
         return false;
     }

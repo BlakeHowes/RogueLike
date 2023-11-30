@@ -13,13 +13,15 @@ public class DevHotkeys : MonoBehaviour
 
     public void Update() {
         if (Input.GetKeyDown(KeyCode.Z)) {
-            foreach(GameObject go in PartyManager.i.party) {
-                var stats = go.GetComponent<Stats>();
-                stats.health = 99;
-                stats.maxHealthBase = 99;
-                stats.actionPoints = 10;
-                stats.actionPointsBase = 10;
-            }
+            var go = PartyManager.i.currentCharacter;
+            var stats = go.GetComponent<Stats>();
+            stats.health = 99;
+            stats.maxHealthBase = 99;
+            stats.actionPoints = 10;
+            stats.actionPointsBase = 10;
+            go.GetComponent<Inventory>().ClearCoolDowns();
+            InventoryManager.i.UpdateInventory(go);
+            GameUIManager.i.SetAP(10);
         }
 
         if (Input.GetKeyDown(KeyCode.A)) {
@@ -31,7 +33,18 @@ public class DevHotkeys : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C)) {
             CharacterSpriteGenerator.CreateCharacterSprite(PartyManager.i.currentCharacter);
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.F)) {
+            Manager.LoadNextScene();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)) {
+            var mousePos = MouseManager.i.MousePositionOnGrid();
+            if (mousePos.GameObjectGo()) {
+                mousePos.GameObjectGo().GetComponent<Stats>().TakeDamage(1, mousePos);
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.T)) {
             var mousePos = MouseManager.i.MousePositionOnGrid();
             foreach(var go in PartyManager.i.party) {

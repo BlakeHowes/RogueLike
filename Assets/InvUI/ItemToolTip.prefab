@@ -576,7 +576,7 @@ MonoBehaviour:
   handle: {fileID: 6926536094168163435}
   Title: {fileID: 3262669007700524884}
   titleGo: {fileID: 4396242894524502306}
-  offset: {x: 0, y: 111.8, z: 0}
+  offset: {x: 0, y: 100, z: 0}
   traitsLayout: {fileID: 5354252966729343692}
   traitPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
     type: 3}

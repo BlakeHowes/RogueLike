@@ -14,12 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 9654ca8f4fcbd4444bae9464de5dcc27, type: 2}
   abilities:
-  - callType: 7
+  - callType: 10
     actionContainers:
-    - action: {fileID: 11400000, guid: 92665c8e0d1cb9e4b97475dbc3f7399a, type: 2}
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
       intValue: 5
       floatValue: 0
-      itemValue: {fileID: 0}
+      itemValue: {fileID: 11400000, guid: f4dc245e8c69f094fa7a0bb97dacc1fe, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 495053ba09da99946a9abe8a3fd7319b, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: e3130203548a3a24e965947238ad3922, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: f4dc245e8c69f094fa7a0bb97dacc1fe, type: 2}
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
@@ -27,7 +37,8 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   shopValue: 10
-  equipmentType: 1
+  armour: 0
+  equipmentType: 4
   weight: 1
   wornSprite: {fileID: 0}
   customDescription: 

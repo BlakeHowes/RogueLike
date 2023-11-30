@@ -1,7 +1,9 @@
 using Panda;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Searcher;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
 using static ItemStatic;
 using static MechStatic;
@@ -11,6 +13,7 @@ using static PartyManager;
 public class Pokeball : Action {
     [HideInInspector] public GameObject capturedGO;
     [HideInInspector] public bool capture = false;
+    [HideInInspector] public Pokeball pokeball;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         this.position = position;
         SaveValues(position, origin, parentGO, parentItem);
@@ -21,7 +24,7 @@ public class Pokeball : Action {
         else {
             capture = false;
         }
-        
+        pokeball = this;
         GridManager.i.AddToStack(this);
         return true;
     }
@@ -43,24 +46,36 @@ public class Pokeball : Action {
         if (!capture) {
             Place();
         }
+        pokeball.capturedGO = null;
+        pokeball.capture = true;
         yield return null;
     }
 
     public void Place() {
         capturedGO.SetActive(true);
-        capturedGO.transform.SetParent(GameObject.Find("GridManager").transform);
         capturedGO.GetComponent<Stats>().healthbar.gameObject.SetActive(false);
         GridManager.i.goMethods.SetGameObject(position, capturedGO);
         capturedGO.transform.position = position + new Vector3(0.5f, 0.5f);
         PartyManager.i.AddPartyMember(capturedGO);
+        capturedGO.transform.SetParent(null);
+        DontDestroyOnLoad(capturedGO);
         capturedGO.TryGetComponent(out NPCSearch npcSearch);
         capturedGO.TryGetComponent(out PandaBehaviour panda);
+        capturedGO.TryGetComponent(out Behaviours behaviours);
         if (panda) Destroy(panda);
-        if (!npcSearch) capturedGO.AddComponent<NPCSearch>();
+        if (behaviours) Destroy(behaviours);
+        if (!npcSearch) {
+            var search = capturedGO.AddComponent<NPCSearch>();
+            search.targetsTags = Tags.Enemies;
+            
+        } 
         capturedGO.tag = "Party";
         foreach (Transform child in capturedGO.transform) {
             Destroy(child.gameObject);
         }
-        capturedGO = null;
+        capturedGO.GetComponent<NPCSearch>().CreateTargetTags();
+        var light = GridManager.i.InstantiateGo(Manager.GetGlobalValues().characterLightPrefab);
+        light.transform.SetParent(capturedGO.transform);
+        light.transform.localPosition = Vector3.zero;
     }
 }

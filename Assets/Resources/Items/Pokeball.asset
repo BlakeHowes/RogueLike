@@ -16,6 +16,27 @@ MonoBehaviour:
   abilities:
   - callType: 0
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Throw at object to catch, throw at ground to add caught object
+        to party
     - action: {fileID: 11400000, guid: cd4bd3b9184230d439e3d0493dddd0d3, type: 2}
       intValue: 0
       floatValue: 0
@@ -26,14 +47,14 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  description: POIKEMOBNM
+  description: Gotta catch em all
   shopValue: 15
   subItems: []
-  totalUses: 1
+  totalUses: 3
   timesUsed: 0
-  endlessUses: 1
+  endlessUses: 0
+  pickUpByStandingOver: 0
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}
-  useOnlyOnViableTargets: 0
   destroyOnUse: 0
   viableTargets: []

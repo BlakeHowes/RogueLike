@@ -32,7 +32,9 @@ public class TraitAnimation : MonoBehaviour
             if (history.Contains(child.gameObject)) { continue; }
             if(traits.Contains(child.gameObject)) { continue; }
             child.Find("Image").gameObject.GetComponent<Image>().sprite = sprite;
-            var text = GetTagColour(parentGO.tag) + parentGO.name + " <color=\"white\">used <color=\"yellow\">" + item.name + "<color=\"white\">";
+            var itemName = parentGO.name;
+            if (item) { itemName = item.name; }
+            var text = GetTagColour(parentGO.tag) + parentGO.name + " <color=\"white\">used <color=\"yellow\">" + itemName + "<color=\"white\">";
             if (positionGO) {
                 if(positionGO != parentGO) {
                     text += " on " + GetTagColour(positionGO.tag) + positionGO.name + "<color=\"white\">";

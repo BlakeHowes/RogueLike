@@ -16,6 +16,16 @@ MonoBehaviour:
   abilities:
   - callType: 5
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 3}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 498968629, guid: e46baa2ca6fada74ebe37c25d0a8621a, type: 3}
+      stringValue: 
     - action: {fileID: 11400000, guid: 1ba94d5e6b4799e4f94d00bb143a4f00, type: 2}
       intValue: 0
       floatValue: 0
@@ -23,6 +33,9 @@ MonoBehaviour:
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 7827884d52990524589a9471101c3913, type: 2}
       intValue: 2
       floatValue: 0
@@ -30,4 +43,17 @@ MonoBehaviour:
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 1, y: 3}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   description: 
+  shopValue: 0
+  subItems: []
+  totalUses: 1
+  timesUsed: 1
+  endlessUses: 0
+  pickUpByStandingOver: 1
+  parentGO: {fileID: 0}
+  thrownLocation: {x: 0, y: 0, z: 0}
+  destroyOnUse: 0
+  viableTargets: []

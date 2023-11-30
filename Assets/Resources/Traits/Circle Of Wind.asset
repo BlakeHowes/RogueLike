@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a9eadeeabf74594595a1d25ab940899, type: 3}
   m_Name: Circle Of Wind
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: cd468f6f63175cf4d9812c9b6d062783, type: 2}
@@ -20,8 +20,7 @@ MonoBehaviour:
       intValue: 2
       floatValue: 0.3
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5,
-        type: 3}
+      prefabValue: {fileID: 0}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 2, y: 4}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
@@ -42,8 +41,7 @@ MonoBehaviour:
       intValue: 2
       floatValue: 0.3
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5,
-        type: 3}
+      prefabValue: {fileID: 0}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 2, y: 4}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
@@ -64,8 +62,7 @@ MonoBehaviour:
       intValue: 2
       floatValue: 0.3
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8194992990867289339, guid: a4a376c56f4679443a0f5632384b04e5,
-        type: 3}
+      prefabValue: {fileID: 0}
       colorValue: {r: 1, g: 0, b: 0, a: 1}
       vector2IntValue: {x: 1, y: 1}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
@@ -93,4 +90,6 @@ MonoBehaviour:
       surfaceValue: {fileID: 11400000, guid: 42ec6803fe554094ead4945c24c5288e, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
+  characterClass: 3
+  cardBack: {fileID: 0}
   notes: 

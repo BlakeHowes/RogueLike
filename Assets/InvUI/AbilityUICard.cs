@@ -12,5 +12,6 @@ public class AbilityUICard : MonoBehaviour
 
     public void SelectAbility() {
         transform.parent.gameObject.GetComponent<AbilitySelection>().GiveAbilityToCharacter(trait);
+        Manager.GetGlobalValues().chosenItems.Add(trait as Trait);
     }
 }

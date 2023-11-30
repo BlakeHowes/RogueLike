@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using static UnityEngine.ParticleSystem;
 
 
 public class CharacterCreator : MonoBehaviour {
@@ -27,15 +25,32 @@ public class CharacterCreator : MonoBehaviour {
         i = this;
     }
 
-    public void QuickStart() {
+    public void OnEnable() {
+        Manager.coins = 0;
+        Manager.GetGlobalValues().OnStartOfRun();
         int i = 1;
-        foreach(var character in characters) {
+        foreach (var character in characters) {
+            if (!character.activeSelf) { continue; }
             RandomAppearence(character);
             currentCharacter = character;
             options = character.GetComponent<CCOptions>();
             NextLoadout(i);
             i++;
         }
+
+    }
+
+    public void QuickStart() {
+        int i = 1;
+        foreach(var character in characters) {
+            if (!character.activeSelf) { continue; }
+            RandomAppearence(character);
+            currentCharacter = character;
+            options = character.GetComponent<CCOptions>();
+            NextLoadout(i);
+            i++;
+        }
+        Manager.LoadNextScene();
     }
 
     public void CharacterSelect() {
@@ -160,14 +175,22 @@ public class CharacterCreator : MonoBehaviour {
 
     public void ShowDescriptionForTraits() {
         var prefab = Manager.GetGlobalValues().traitUIEventPrefab;
-        foreach(Transform child in traitLayout.transform) {
+        var inventory = currentCharacter.GetComponent<Inventory>();
+        foreach (Transform child in traitLayout.transform) {
             Destroy(child.gameObject);
         }
-        foreach(ItemAbstract item in currentCharacter.GetComponent<Inventory>().traits) {
-            var uiElements = TraitUIGenerator.GetItemTraits(item,options.gameObject, prefab);
+        foreach(ItemAbstract item in inventory.traits ){
+            var uiElements = TraitUIGenerator.CreateAbilityDescriptions(item.abilities,options.gameObject, item);
             foreach (var element in uiElements) {
                 element.transform.SetParent(traitLayout);
                 element.transform.localScale = new Vector3(1,1,1);
+            }
+        }
+        foreach(var item in options.loadout.trinkets) {
+            var uiElements = TraitUIGenerator.CreateAbilityDescriptions(item.abilities, options.gameObject, item);
+            foreach (var element in uiElements) {
+                element.transform.SetParent(traitLayout);
+                element.transform.localScale = new Vector3(1, 1, 1);
             }
         }
     }
@@ -194,6 +217,7 @@ public class CharacterCreator : MonoBehaviour {
         }
 
         CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
+        RefreshContent(currentCharacter);
         UpdateLabels();
     }
     public void NextGender(int direction) {
@@ -252,7 +276,7 @@ public class CharacterCreator : MonoBehaviour {
             options.featurePalette = null;
         }
 
-        var traits = currentCharacter.GetComponent<Inventory>().traits;
+        var traits = character.GetComponent<Inventory>().traits;
         traits.Clear();
         foreach (ItemAbstract item in options.race.permanentTraits) {
             traits.Add(item);

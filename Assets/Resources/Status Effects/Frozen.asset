@@ -13,5 +13,29 @@ MonoBehaviour:
   m_Name: Frozen
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 055243097db9a094988c4819733b8d9a, type: 2}
-  abilities: []
-  duration: 3
+  abilities:
+  - callType: 15
+    actionContainers:
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+      intValue: 0
+      floatValue: 1
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: a253cafaeeb23a9439fec53613b9c5e5, type: 2}
+      intValue: 0
+      floatValue: 1
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 2, y: 3}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  duration: 2

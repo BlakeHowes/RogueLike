@@ -1,3 +1,4 @@
+using FunkyCode.Rendering.Light;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -26,33 +27,43 @@ public static class TraitUIGenerator
         return clone;
     }
 
-    public static List<GameObject> CreateGoDescriptions(GameObject go) {
-        var inventory = go.GetComponent<Inventory>();
-        var prefab = Manager.GetGlobalValues().traitUIDescriptionPrefab;
+    public static List<GameObject> CreateAbilityDescriptions(List<Ability> abilities, GameObject parentGO,ItemAbstract item) {
         List<GameObject> descriptionElements = new();
-        foreach(var item in inventory.traits) {
-            if(item is not BlankItem) { continue; }
-            foreach (var ability in item.abilities) {
-                foreach (var container in ability.actionContainers) {
-                    if (container.action is UITrait) {
-                        UITrait uiTrait = container.action as UITrait;
-                        uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, go, item, ability, container);
-                        descriptionElements.Add(CreateTraitDescription(prefab,uiTrait.icon, uiTrait.description));
-                    }
-                }
-            }
-        }
-
-        foreach(var ability in inventory.generalAbilities) {
+        var prefab = Manager.GetGlobalValues().traitUIDescriptionPrefab;
+        foreach (var ability in abilities) {
             foreach (var container in ability.actionContainers) {
                 if (container.action is UITrait) {
                     UITrait uiTrait = container.action as UITrait;
-                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, go, null, ability, container);
+                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, parentGO, item, ability, container);
                     descriptionElements.Add(CreateTraitDescription(prefab, uiTrait.icon, uiTrait.description));
                 }
             }
         }
+        return descriptionElements;
+    }
 
+    public static List<GameObject> AddList(List<GameObject> listRecieve, List<GameObject> listGive) {
+        foreach (var item in listGive) {
+            listRecieve.Add(item);
+        }
+        return listRecieve;
+    }
+
+    public static List<GameObject> CreateGoDescriptions(GameObject go) {
+        var inventory = go.GetComponent<Inventory>();
+        var prefab = Manager.GetGlobalValues().traitUIDescriptionPrefab;
+        List<GameObject> descriptionElements = new();
+
+        //Trait Items
+        foreach(var item in inventory.traits) {
+            if (!item) { continue; }
+            descriptionElements = AddList(descriptionElements, CreateAbilityDescriptions(item.abilities,go, item));
+        }
+
+        //General abilities
+        descriptionElements = AddList(descriptionElements, CreateAbilityDescriptions(inventory.generalAbilities, go, null));
+
+        //Immunities
         go.TryGetComponent(out ElementalStats elementalStats);
         if (elementalStats) {
             if (elementalStats.pushImmunity) { descriptionElements.Add(CreateTraitDescription(prefab, null, $"Immune too being moved and teleported")); }
@@ -83,19 +94,23 @@ public static class TraitUIGenerator
         }
 
         foreach (var item in inventory.statusEffects) {
-            if (item is not BlankItem) { continue; }
-            foreach (var ability in item.abilities) {
-                foreach (var container in ability.actionContainers) {
-                    if (container.action is UITrait) {
-                        UITrait uiTrait = container.action as UITrait;
-                        uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, go, item, ability, container);
-                        descriptionElements.Add(CreateTraitDescription(prefab, uiTrait.icon, uiTrait.description));
-                    }
-                }
-            }
+            if (!item) { continue; }
+            descriptionElements = AddList(descriptionElements, CreateAbilityDescriptions(item.abilities, go, item));
         }
 
         return descriptionElements;
+    }
+
+    public static List<GameObject> CreateMechDescriptions(MechAbstract mech) {
+        var list = new List<GameObject>();
+        list.Add(CreateMechDescription(mech));
+        return list;
+    }
+
+    public static List<GameObject> CreateSurfaceDescriptions(Surface surface) {
+        var list = new List<GameObject>();
+        list.Add(CreateSurfaceDescription(surface));
+        return list;
     }
 
     static Texture2D _tex;
@@ -107,10 +122,28 @@ public static class TraitUIGenerator
     }
 
     private static GameObject CreateTraitDescription(GameObject prefab,Sprite icon,string description) {
-        var clone = GridManager.i.InstantiateGo(prefab);
+        var clone = InventoryManager.i.InstantiateGo(prefab);
         var text = clone.transform.Find("Text");
         text.GetComponent<TextMeshProUGUI>().text = description;
         if (icon) text.Find("Icon").GetComponent<Image>().sprite = icon;
+        return clone;
+    }
+
+    private static GameObject CreateSurfaceDescription(Surface surface) {
+        var texture = MakeTinyTex(surface.iconColour);
+        var sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100.0f);
+        var clone = GridManager.i.InstantiateGo(Manager.GetGlobalValues().traitUIDescriptionPrefab);
+        var text = clone.transform.Find("Text");
+        text.GetComponent<TextMeshProUGUI>().text = surface.description;
+        text.Find("Icon").GetComponent<Image>().sprite = sprite;
+        return clone;
+    }
+
+    private static GameObject CreateMechDescription(MechAbstract mech) {
+        var clone = GridManager.i.InstantiateGo(Manager.GetGlobalValues().traitUIDescriptionPrefab);
+        var text = clone.transform.Find("Text");
+        text.GetComponent<TextMeshProUGUI>().text = mech.description;
+        if (mech.tile) text.Find("Icon").GetComponent<Image>().sprite = mech.tile.sprite;
         return clone;
     }
 
@@ -120,19 +153,5 @@ public static class TraitUIGenerator
         text.GetComponent<TextMeshProUGUI>().text = description;
         if (sprite) text.Find("Icon").GetComponent<Image>().sprite = sprite;
         return clone;
-    }
-
-    public static List<GameObject> GetItemTraits(ItemAbstract item,GameObject parentGO,GameObject prefab) {
-        List<GameObject> elements = new List<GameObject>();
-        foreach (var ability in item.abilities) {
-            foreach (var container in ability.actionContainers) {
-                if (container.action is UITrait) {
-                    UITrait uiTrait = container.action as UITrait;
-                    uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, parentGO, item, ability, container);
-                    elements.Add(CreateTraitElement(uiTrait.icon, uiTrait.description,prefab));
-                }
-            }
-        }
-        return elements;
     }
 }

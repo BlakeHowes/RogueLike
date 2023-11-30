@@ -38,8 +38,6 @@ public class GridGraphics
 
     public void UpdateEverything() {
         shadowTilemap.ClearAllTiles();
-        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        stopwatch.Start();
 
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
@@ -70,8 +68,6 @@ public class GridGraphics
 
             }
         }
-        Debug.Log("Graphics stopwatch "+stopwatch.Elapsed);
-        stopwatch.Stop();
     }
 
     public void UpdateItemAbstracts(int width, int height,ItemAbstract[,] itemGrid, Tilemap tilemap) {
@@ -239,10 +235,8 @@ public class GridGraphics
     }
 
     public IEnumerator TileLerp(Vector3Int targetTile,Vector3 startlocation, Vector3 endlocation, float lerpduration,Tilemap tilemap) {
-        Debug.Log("Lerp Start, Start Location:" + startlocation+ ", End Location: " + endlocation + ", Target Tile: " + targetTile);
         Vector3 start = startlocation - targetTile;
         Vector3 end = endlocation - targetTile;
-        Debug.Log("start:" + start + ", end:" + end);
         Vector3 lerpPos = start;
         float TimeElapsed = 0;
         while (TimeElapsed < lerpduration) {
@@ -253,7 +247,6 @@ public class GridGraphics
             TimeElapsed += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("Lerp End");
     }
 
     public IEnumerator FlashAnimation(GameObject character, Vector3Int origin,Color colour) {
@@ -266,6 +259,7 @@ public class GridGraphics
         if (renderer == null) { yield break; }
         //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
         renderer.material = globalValues.hitMaterial;
+        renderer.material.color = colour;
         yield return new WaitForSeconds(0.15f);
         if (renderer) { renderer.material = globalValues.normalMaterial; }
         //character.transform.position = startPosition;
@@ -277,5 +271,25 @@ public class GridGraphics
         if (character == PartyManager.i.currentCharacter) {
             if (renderer) renderer.material = globalValues.outlineMaterial;
         }
+        globalValues.hitMaterial.color = Color.white;
+    }
+
+    public IEnumerator SingeFlashAnimation(GameObject character, Color colour) {
+        if (character == null) yield break;
+        //var position = character.position();
+        var renderer = character.GetComponent<SpriteRenderer>();
+        //var startPosition = character.transform.position;
+        //GridManager.i.goTilemap.SetColor(position, Color.clear);
+
+        if (renderer == null) { yield break; }
+        //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
+        renderer.material = globalValues.hitMaterial;
+        renderer.material.color = colour;
+        yield return new WaitForSeconds(0.15f);
+        if (renderer) { renderer.material = globalValues.normalMaterial; }
+        if (character == PartyManager.i.currentCharacter) {
+            if (renderer) renderer.material = globalValues.outlineMaterial;
+        }
+        renderer.material.color = Color.white;
     }
 }

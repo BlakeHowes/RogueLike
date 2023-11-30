@@ -15,6 +15,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: ed5943da6e80f7e4380ea2dfd13e22ba, type: 2}
   abilities: []
   shopValue: 15
+  armour: 0
   equipmentType: 1
   weight: 0
   wornSprite: {fileID: 0}

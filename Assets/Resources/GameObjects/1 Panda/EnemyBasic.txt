@@ -13,6 +13,7 @@ tree("Combat")
 		isInCombat
 		repeat
 			sequence
+				WaitForStack()
 				CheckInformation()
 				tree("Actions")
 				StartStack()
@@ -20,6 +21,7 @@ tree("Combat")
 				checkEndTurn()
 tree("Actions")
 	fallback
+		CheckStunned()
 		UseSkills()
 		Attack()
 		not isHealthAboveZero
@@ -29,6 +31,7 @@ tree("Move")
 	sequence
 		fallback
 			MoveToTarget()
+			AttackGosInWayOfTarget()
 			AdvanceToTarget()
 			tree("Lost Target")
 		Wait(0.3)

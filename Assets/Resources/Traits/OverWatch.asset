@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ee58074fe9a48438830babe776836a, type: 3}
-  m_Name: OverWatch
+  m_Script: {fileID: 11500000, guid: 9a9eadeeabf74594595a1d25ab940899, type: 3}
+  m_Name: Overwatch
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 5941eb9f18da3544a9ba04be7e899236, type: 2}
   abilities:
@@ -86,3 +86,6 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
+  characterClass: 2
+  cardBack: {fileID: 0}
+  notes: 

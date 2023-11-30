@@ -9,22 +9,25 @@ public class AbilitySelection : MonoBehaviour
     public UIPartySelector partySelector;
 
     public void GiveAbilityToCharacter(ItemAbstract item) {
-        if(partySelector.selectedGO) partySelector.selectedGO.GetComponent<Inventory>().AddAbility(item,false);
+        if(partySelector.selectedGO) partySelector.selectedGO.GetComponent<Inventory>().AddTrait(item,false);
     }
-    public void AddAbilities(List<ItemAbstract> items) {
+    public void AddTrait(List<Trait> traits) {
+
         foreach(Transform child in transform) {
             child.gameObject.SetActive(false);
         }
 
         int i = 0;
-        foreach(var item in items) {
+        foreach(var trait in traits) {
+            if(trait == null) continue;
             var card = gameObject.transform.GetChild(i);
             card.gameObject.SetActive(true);
-            card.GetComponent<AbilityUICard>().AddAbility(item);
-            card.transform.Find("Title").GetComponent<TextMeshProUGUI>().text = item.name;
-            card.transform.Find("Image").GetComponent<Image>().sprite = item.tile.sprite;
+            card.GetComponent<AbilityUICard>().AddAbility(trait);
+            card.transform.Find("Title").GetComponent<TextMeshProUGUI>().text = trait.name;
+            card.transform.Find("Image").GetComponent<Image>().sprite = trait.tile.sprite;
+            if(trait.cardBack)card.GetComponent<Image>().sprite = trait.cardBack;
             var description = "";
-            foreach (var ability in item.abilities) {
+            foreach (var ability in trait.abilities) {
                 foreach (var container in ability.actionContainers) {
                     if (container.action is UITrait) {
                         UITrait uiTrait = container.action as UITrait;

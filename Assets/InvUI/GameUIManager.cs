@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using static ItemStatic;
 
 public class GameUIManager : MonoBehaviour {
-    public int coins;
     public Text coinsText;
     public static GameUIManager i;
     public Tilemap uiTilemap;
@@ -28,16 +27,20 @@ public class GameUIManager : MonoBehaviour {
     public void SetAP(float amount) {
         apUIElement.ChangeAP(Mathf.FloorToInt(amount));
     }
+
+    public void AnimateNotEnoughAP() {
+        StartCoroutine(apUIElement.NoEnoughAPAnimation());
+    }
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
-        coinsText.text = coins.ToString();
+        coinsText.text = Manager.coins.ToString();
     }
 
     public bool ChangeCoinsValue(int amount) {
-        if (coins + amount < 0) { return false; }
-        coins += amount;
-        coinsText.text = coins.ToString();
+        if (Manager.coins + amount < 0) { return false; }
+        Manager.coins += amount;
+        coinsText.text = Manager.coins.ToString();
         return true;
     }
 
@@ -85,6 +88,13 @@ public class GameUIManager : MonoBehaviour {
         foreach(Transform go in GridManager.i.gameObject.transform) {
             go.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         }
+    }
+
+    public IEnumerator FlashTile(Vector3Int position) {
+        var tile = uiTilemap.GetTile(position);
+        uiTilemap.SetTile(position,globalValues.rangeTile);
+        yield return new WaitForSeconds(0.15f);
+        uiTilemap.SetTile(position, tile);
     }
 
     public void ShowRange(Vector3Int position,int range) {

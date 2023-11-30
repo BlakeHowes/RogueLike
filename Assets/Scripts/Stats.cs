@@ -1,5 +1,6 @@
 using LlamAcademy.Spring.Runtime;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -15,8 +16,6 @@ public class Stats : MonoBehaviour {
     public int maxArmourBase;
     public int actionPointsBase;
     public int throwingRangeBase;
-
-    public int walkCostBase;
     public int enemyAlertRangeBase;
     public int skillRangeBase;
 
@@ -24,10 +23,10 @@ public class Stats : MonoBehaviour {
     [HideInInspector] public int maxHealthTemp;
     public int maxArmourTemp;
     public int actionPointsTemp;
-    public int actionPointSkillCostChange;
+    public int actionPointSkillCostChange = 0;
     [HideInInspector] public int throwingRangeTemp;
-    [HideInInspector] public int walkCostTemp;
-    [HideInInspector] public int enemyAlertRangeTemp;
+    [HideInInspector] public int walkCost = 1;
+    public int enemyAlertRangeTemp;
     [HideInInspector] public int skillRangeTemp;
     public int directDamage;
     public int armour;
@@ -43,6 +42,9 @@ public class Stats : MonoBehaviour {
     public int health;
     public float actionPoints;
     public int actionPointsSum;
+    private int hitNumberTotal;
+    private bool totalTimerRunning = false;
+    private bool blockDamage = false;
 
     [Header("Options")]
     public bool infiniteHealth = false;
@@ -61,7 +63,7 @@ public class Stats : MonoBehaviour {
         maxHealthTemp = maxHealthBase;
         maxArmourTemp = maxArmourBase;
         throwingRangeTemp = throwingRangeBase;
-        walkCostTemp = walkCostBase;
+        walkCost = 1;
         enemyAlertRangeTemp = enemyAlertRangeBase;
         skillRangeTemp = skillRangeBase;
         directDamage = 0;
@@ -69,6 +71,8 @@ public class Stats : MonoBehaviour {
         meleeDamageMultiple = 1f;
         meleeAccuracy = 0f;
         meleeAccuracyMultiple = 1f;
+        actionPointSkillCostChange = 0;
+        blockDamage = false;
     }
 
     public void OnEnable() {
@@ -85,6 +89,10 @@ public class Stats : MonoBehaviour {
 
     public void OnDisable() {
         Manager.EndOfStackEvent -= EndOfStackGORemoval;
+    }
+
+    public void BlockDamage() {
+        blockDamage = true;
     }
 
 
@@ -144,14 +152,47 @@ public class Stats : MonoBehaviour {
         TakeDamage(Mathf.RoundToInt(damageResult), origin, ignoreArmor);
     }
 
+
+    public void TotalValue(int amount) {
+        hitNumberTotal += amount;
+        if(!totalTimerRunning)
+        StartCoroutine(TotalTimer());
+    }
+
+    public IEnumerator TotalTimer() {
+        totalTimerRunning = true;
+        yield return new WaitForSeconds(0.2f);
+        if (gameObject.tag != "Interactable" && gameObject.tag != "Door") {
+            if (hitNumberTotal == 0) { SpawnHitNumber("Miss", Color.yellow, 1); }
+            else {
+                SpawnHitNumber(hitNumberTotal.ToString(), Color.red, 1);
+            }
+
+        }
+        hitNumberTotal = 0;
+        totalTimerRunning = false;
+    }
+
     public void TakeDamage(int damage,Vector3Int origin,bool ignoreArmor) {
         if (!gameObject.activeSelf) { return; }
         var position = gameObject.Position();
         var originGO = origin.GameObjectGo();
         RefreshCharacter(position);
         damageTaken = damage;
-        inventory.CallEquipment(origin, position, CallType.OnTakeDamage);
-        Manager.OnTakeDamageCall(origin, position);
+
+        if (!blockDamage) {
+            if (originGO != gameObject) {
+                inventory.CallEquipment(origin, position, CallType.OnTakeDamage);
+            }
+
+            Manager.OnTakeDamageCall(origin, position);
+        }
+
+
+        if (blockDamage) {
+            blockDamage = false;
+            return;
+        }
 
         var damageTotal = damage;
         if (!ignoreArmor) {
@@ -164,10 +205,15 @@ public class Stats : MonoBehaviour {
 
         if (!infiniteHealth)health -= damage;
 
-        if (gameObject.CompareTag("Enemy")) {
+        if (gameObject.CompareTag("Enemy") && originGO) {
             if (state != PartyManager.State.Combat) {
                 state = PartyManager.State.Combat;
                 PartyManager.i.enemyParty.Add(gameObject);
+                if (originGO.CompareTag("Party") && health > 0) {
+                    originGO.GetComponent<Stats>().state = PartyManager.State.Combat;
+                    GetComponent<Behaviours>().target = originGO;
+                }
+
             }
         }
 
@@ -189,12 +235,7 @@ public class Stats : MonoBehaviour {
             Vector3 amount = gameObject.transform.position - offset;
             if(!GridManager.i.graphics.lerping)spring.Nudge(amount,24,1000);
         }
-        if (gameObject.tag != "Interactable" && gameObject.tag != "Door") {
-            if (damageTotal == 0) { SpawnHitNumber("Miss", Color.yellow, 1); } else {
-                SpawnHitNumber(damageTotal.ToString(), Color.red, 1);
-            }
-
-        }
+        TotalValue(damageTotal);
         UpdateHealthBar();
         if(health > 0) {
             GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(gameObject, origin, Color.white));

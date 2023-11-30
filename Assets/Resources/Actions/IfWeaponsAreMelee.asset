@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213e79bd708e7ad4985e56b5fc2cfa81, type: 3}
   m_Name: IfWeaponsAreMelee
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
   extraVariableType: 0
   type: 5
+  weaponType: 1

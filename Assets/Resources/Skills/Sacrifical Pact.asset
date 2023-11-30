@@ -50,7 +50,8 @@ MonoBehaviour:
       intValue: 4
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: 002b74e23df03894d8c00a53978df03d, type: 3}
+      prefabValue: {fileID: 8288408381700605430, guid: 002b74e23df03894d8c00a53978df03d,
+        type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
@@ -108,7 +109,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 11400000, guid: 1ada6f848a8738143b3fc8fa6319dc91, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
-  rangeType: 0
+  rangeType: 5
   targetsTags: 1
   range: 0
   AOE: 0
@@ -116,4 +117,6 @@ MonoBehaviour:
   coolDown: 2
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
-  targets: []
+  totalTargets: 0
+  skillDamage: {x: 0, y: 0}
+  weaponType: 0

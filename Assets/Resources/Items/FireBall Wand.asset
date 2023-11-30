@@ -47,6 +47,17 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
+    - action: {fileID: 11400000, guid: 95b965062ed01374997609207908785c, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 16bd81cb08d797b4da482c048b69ebd9,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 5
   weaponType: 3
   damageRange: {x: 6, y: 12}
