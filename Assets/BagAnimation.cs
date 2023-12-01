@@ -30,7 +30,8 @@ public class BagAnimation : MonoBehaviour
 
     public void ToggleSprite() {
         openToggle = !openToggle;
-        if (!openToggle) { GetComponent<Image>().sprite = open; InventoryManager.i.UpdateInventory(PartyManager.i.currentCharacter); }
+        if (!openToggle) { GetComponent<Image>().sprite = open;  }
         if (openToggle) { GetComponent<Image>().sprite = closed; }
+        InventoryManager.i.UpdateInventory(PartyManager.i.currentCharacter);
     }
 }

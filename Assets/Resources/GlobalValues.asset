@@ -82,11 +82,10 @@ MonoBehaviour:
   propItems:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 2fd76d04e82d18348bd6e780ee88038d, type: 2}
   - {fileID: 11400000, guid: 2fd76d04e82d18348bd6e780ee88038d, type: 2}
   - {fileID: 11400000, guid: 9a62eadc2cb566b41a11cea829c2243f, type: 2}
-  - {fileID: 11400000, guid: bbf894b525785f44abded9e5e181c8f3, type: 2}
+  - {fileID: 0}
   enemyItems: []
   Trinkets:
   - {fileID: 11400000, guid: 3eef8e428404eba4482d5c56fef962ef, type: 2}
@@ -100,6 +99,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9b7bb8548e3fdf45bbe6862da9b9ccc, type: 2}
   - {fileID: 11400000, guid: c5168c94e807ccb439095537a8fb71b5, type: 2}
   - {fileID: 11400000, guid: a5e8553b4ee07614f9eb81535d79285f, type: 2}
+  - {fileID: 11400000, guid: 1220d87172e00e24ca7ebe06e5caaef2, type: 2}
   Equipment:
   - {fileID: 11400000, guid: a437c03d7ed23444c9be8961765a2324, type: 2}
   - {fileID: 11400000, guid: e4dec34f1a18e2d4bb62a27426d28d50, type: 2}
@@ -114,13 +114,11 @@ MonoBehaviour:
   traitItems:
   - {fileID: 11400000, guid: f89229f48d5eca04d84c62fb1c755850, type: 2}
   - {fileID: 11400000, guid: 2e0d4d8a0c9027e4a9bdcd47181df65d, type: 2}
-  - {fileID: 11400000, guid: 76915a4c2b55307458eab22f23cb89cf, type: 2}
   - {fileID: 11400000, guid: 09d54176d5b6a2140b4db137ae8e9a19, type: 2}
   - {fileID: 11400000, guid: 37957a4b4a891324abc6c01ee36320d2, type: 2}
   traits:
   - {fileID: 11400000, guid: 453d807b36692194ca7072d32395f8f1, type: 2}
   - {fileID: 11400000, guid: ecf886643230e484fa36718981811656, type: 2}
-  - {fileID: 11400000, guid: 4562bf2bea1dbaa4687471c38fff547d, type: 2}
   - {fileID: 11400000, guid: 479ded912e2720a40b282ac3526203d0, type: 2}
   - {fileID: 11400000, guid: cf83d6156180967449f979cbf2d54d41, type: 2}
   - {fileID: 11400000, guid: 3527ded892571f54fa1def74d77672d6, type: 2}
@@ -131,5 +129,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f38ff9c34db631644bffbb0b7e2af260, type: 2}
   - {fileID: 11400000, guid: 956b348c4a249b34a83a3dc13862b8d1, type: 2}
   - {fileID: 11400000, guid: b06f2f5f1973a344f99d2481b6891759, type: 2}
-  - {fileID: 11400000, guid: c5c9f76c8a7a0984886dcca4c1fae449, type: 2}
-  chosenItems: []
+  - {fileID: 11400000, guid: ed8adfbf45d4469479b487969c797f0d, type: 2}
+  chosenItems:
+  - {fileID: 11400000, guid: 6efacf755ae6e75468be8d7260e56587, type: 2}
+  - {fileID: 11400000, guid: ecf886643230e484fa36718981811656, type: 2}
+  - {fileID: 11400000, guid: 956b348c4a249b34a83a3dc13862b8d1, type: 2}
+  - {fileID: 11400000, guid: ed8adfbf45d4469479b487969c797f0d, type: 2}

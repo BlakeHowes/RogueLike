@@ -132,23 +132,25 @@ public class Stats : MonoBehaviour {
         healthbar.InitializeHealthbar(this, inventory);
         RefreshCharacter(gameObject.Position());
     }
-
+    Color elementHitColour = Color.red;
     public void TakeDamage(int damage, Vector3Int origin) {
         TakeDamage(damage, origin, false);
+        elementHitColour = Color.red;
     }
 
     public void TakeDamage(int damage, Vector3Int origin,bool ignoreArmor,Surface element, WeaponType weaponType) {
         if (elementalStats == null) { TakeDamage(damage, origin, false);return; }
         float damageResult = damage;
 
-        if (element) {
+        if (element != null) {
             damageResult *= elementalStats.GetElementalDamageModifier(element);
+            if (damageResult == 0) { SpawnHitNumber("Immune", element.iconColour, 1); }
+            elementHitColour = element.iconColour;
         }
 
         if(weaponType != WeaponType.none) {
             damageResult *= elementalStats.GetWeaponTypeDamageModifier(weaponType);
         }
-        if(damageResult == 0) { SpawnHitNumber("Immune", Color.magenta, 1); }
         TakeDamage(Mathf.RoundToInt(damageResult), origin, ignoreArmor);
     }
 
@@ -165,7 +167,7 @@ public class Stats : MonoBehaviour {
         if (gameObject.tag != "Interactable" && gameObject.tag != "Door") {
             if (hitNumberTotal == 0) { SpawnHitNumber("Miss", Color.yellow, 1); }
             else {
-                SpawnHitNumber(hitNumberTotal.ToString(), Color.red, 1);
+                SpawnHitNumber(hitNumberTotal.ToString(), elementHitColour, 1);
             }
 
         }
@@ -252,7 +254,17 @@ public class Stats : MonoBehaviour {
         inventory.CallEquipment(position, position, CallType.OnDeath);
         Manager.OnDeathEventCall(position, origin);
         PartyManager.i.RemoveDeadEnemy(gameObject);
-        if(gameObject.tag != "Summon")inventory.items.Drop(position, position);
+        if(!gameObject.CompareTag("Summon")) inventory.items.Drop(position, position);
+        if(gameObject.CompareTag("Party")) {
+            inventory.mainHand.Drop(position, true);
+            inventory.offHand.Drop(position, true);
+            inventory.helmet.Drop(position, true);
+            inventory.armour.Drop(position, true);
+            inventory.trinket1.Drop(position, true);
+            inventory.trinket2.Drop(position, true);
+            inventory.trinket3.Drop(position, true);
+            inventory.trinket4.Drop(position, true);
+        }
         GridManager.i.graphics.UpdateEverything();
         if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }
         healthbarGameObject.SetActive(false);

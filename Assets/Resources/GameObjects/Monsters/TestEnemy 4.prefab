@@ -139,8 +139,7 @@ MonoBehaviour:
   traits: []
   skills: []
   coolDowns: []
-  statusEffects:
-  - {fileID: 11400000, guid: 941f6fff1e0e3aa4498e8f55fabe5cc8, type: 2}
+  statusEffects: []
   mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

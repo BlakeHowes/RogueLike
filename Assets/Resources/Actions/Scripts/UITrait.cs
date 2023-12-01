@@ -9,10 +9,12 @@ public class UITrait : Action {
     public Sprite icon;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         description = "";
+        /*
         if(parentItem is StatusEffect) { NameFormat(parentItem); }
         if(parentItem is not StatusEffect) { CallTypeFormat(ability); }
-
-     
+        */
+        description += parentItem.name + ": ";
+        if (parentItem is not StatusEffect) { CallTypeFormat(ability); }
         icon = actionContainer.spriteValue;
         foreach (var container in ability.actionContainers) {
             if (container.action == this) { continue; }
@@ -31,7 +33,7 @@ public class UITrait : Action {
 
     public void CallTypeFormat(Ability ability) {
         if (ability.callType != ItemStatic.CallType.CalculateStats) {
-            description = ability.callType.ToString() + ": ";
+            description += (ability.callType.ToString() + " ");
         }
         else {
             description = "";

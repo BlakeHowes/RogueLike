@@ -31,7 +31,7 @@ public class AbilitySelection : MonoBehaviour
                 foreach (var container in ability.actionContainers) {
                     if (container.action is UITrait) {
                         UITrait uiTrait = container.action as UITrait;
-                        uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, null, ability, container);
+                        uiTrait.Condition(Vector3Int.zero, Vector3Int.zero, null, trait, ability, container);
                         description += uiTrait.description;
                     }
                 }

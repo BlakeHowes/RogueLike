@@ -35,9 +35,9 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Enemy alert range is reduced by 5 tiles
+      stringValue: Enemy alert range is reduced by 4 tiles
     - action: {fileID: 11400000, guid: 659860d18cdd58f489d234a2acb2a2b6, type: 2}
-      intValue: -5
+      intValue: -4
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}

@@ -38,11 +38,13 @@ public class Roll : Action {
     public override IEnumerator StackAction() {
         if (!rollOther) { origin = parentGO.Position(); }
         var goHit = damagePosition.GameObjectGo();
-        if (hideAnimation) { PathingManager.i.Jump(endPos, origin, speed * 13); }
+        if (hideAnimation) { PathingManager.i.Slide(endPos, origin, speed * 13); }
         else {
             PathingManager.i.Roll(endPos, origin, speed);
         }
-        yield return new WaitForSeconds(0.1f * (Vector3.Distance(endPos, origin) * (speed * 10)));
+        var slideWait = 0.1f * (Vector3.Distance(endPos, origin) * (speed * 10));
+        slideWait = Mathf.Clamp(slideWait, 0,3);
+        yield return new WaitForSeconds(slideWait);
         if (goHit && dealDamage) {
             if (origin == damagePosition) { yield break; }
             var damage = parentGO.GetComponent<Stats>().damageTaken;

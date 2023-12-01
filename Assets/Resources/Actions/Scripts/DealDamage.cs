@@ -63,6 +63,7 @@ public class DealDamage : Action,IDescription
             areaRange = actionContainer.vector2IntValue.y;
             damage = actionContainer.vector2IntValue.x;
         }
+
         if (actionContainer.surfaceValue) {
             element = actionContainer.surfaceValue;
         }
@@ -71,7 +72,16 @@ public class DealDamage : Action,IDescription
         }
 
         targetGo = position.GameObjectGo();
-        if(targetGo)GridManager.i.AddToStack(this);
+        if (damage == 0) {
+            if (parentItem) {
+                if (parentItem is Weapon) {
+                    var weapon = parentItem as Weapon;
+                    damage = weapon.GetDamage(targetGo,parentGO);
+                }
+            }
+
+        }
+        if (targetGo)GridManager.i.AddToStack(this);
 
         return true;
     }
@@ -84,12 +94,12 @@ public class DealDamage : Action,IDescription
 
     public void Area() {
 
-        var inSightArea = GridManager.i.goMethods.PositionsInSight(areaRange, origin);
+        var inSightArea = GridManager.i.goMethods.PositionsInSight(areaRange, position);
         foreach (var positionInArea in inSightArea) {
             var go = positionInArea.GameObjectGo();
             if (!go) { continue; }
-            if (element) { go.GetComponent<Stats>().TakeDamage(damage, origin,false,element,WeaponType.none); continue; }
-            go.GetComponent<Stats>().TakeDamage(damage, origin);
+            if (element) { go.GetComponent<Stats>().TakeDamage(damage, position, false,element,WeaponType.none); continue; }
+            go.GetComponent<Stats>().TakeDamage(damage, position);
         }
     }
 
@@ -137,11 +147,11 @@ public class DealDamage : Action,IDescription
         switch (damageSource) {
             case DamageSource.ParentItem:
                 var weapon = parentItem as Weapon;
-                description += "Deals " +weapon.damageRange.x + " to " +weapon.damageRange.y + " " +weapon.weaponType + " damage";
+                description += "Deals " +weapon.damageRange.x + "-" +weapon.damageRange.y + " " +weapon.weaponType + " damage";
                 if(weapon.GetRange(parentGO) > 1) { description += " at a range of " + weapon.GetRange(parentGO); }
                 description += " with an accuracy of " + weapon.GetAccuracy(parentGO);
                 break;
-         
+            case DamageSource.Range: description += $"Deals {actionContainer.vector2IntValue.x}-{actionContainer.vector2IntValue.x} damage"; break;
         }
         return description;
     }

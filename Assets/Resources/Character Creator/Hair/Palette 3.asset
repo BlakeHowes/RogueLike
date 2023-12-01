@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad5528f94ec68342a641cc368ab05c4, type: 3}
   m_Name: Palette 3
   m_EditorClassIdentifier: 
-  lightestColour: {r: 0.7468019, g: 0.033241354, b: 0.7830189, a: 1}
-  lightColour: {r: 0.76470596, g: 0.015686275, b: 0.46274513, a: 1}
-  midColour: {r: 0.509434, g: 0.040850844, b: 0.31419086, a: 1}
-  darkColour: {r: 0.3773585, g: 0.030259885, b: 0.23092628, a: 1}
-  darkestColour: {r: 0.2830189, g: 0.028034888, b: 0.17894384, a: 1}
+  lightestColour: {r: 1, g: 0.3022256, b: 0.1745283, a: 1}
+  lightColour: {r: 0.8301887, g: 0.07539968, b: 0.06657174, a: 1}
+  midColour: {r: 0.6226415, g: 0.11261618, b: 0.0734247, a: 1}
+  darkColour: {r: 0.509434, g: 0.030697366, b: 0.016820943, a: 1}
+  darkestColour: {r: 0.24528301, g: 0.03355287, b: 0.05526873, a: 1}

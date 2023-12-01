@@ -41,7 +41,7 @@ MonoBehaviour:
     - action: {fileID: 11400000, guid: bff8c5c22c225ec4fbfa106ec3457aaf, type: 2}
       intValue: 20
       floatValue: 0
-      itemValue: {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
+      itemValue: {fileID: 11400000, guid: 4562bf2bea1dbaa4687471c38fff547d, type: 2}
       prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
         type: 3}
       colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}

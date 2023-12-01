@@ -17,7 +17,7 @@ MonoBehaviour:
   parentGO: {fileID: 0}
   parentItem: {fileID: 11400000, guid: 8ac1bb7ff9c47a24d8d42f9e6ca5c89d, type: 2}
   extraVariableType: 0
-  type: 5
+  type: 9
   intValue: 20
   itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
   spriteValue: {fileID: 0}

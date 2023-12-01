@@ -1,5 +1,6 @@
 using FunkyCode;
 using LlamAcademy.Spring.Runtime;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PathingManager : MonoBehaviour
     private Grid2D grid;
     private Algorithm algorithm;
     private GlobalValues globalValues;
+
     public void Awake() {
         globalValues = Manager.GetGlobalValues();
         i = this;
@@ -172,14 +174,41 @@ public class PathingManager : MonoBehaviour
     }
 
     public float Jump(Vector3Int endPosition, Vector3Int startPosition,float speed) {
-        endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(endPosition,startPosition);
+
+        if (endPosition == startPosition) { return 0; }
+        if (endPosition.InMeleeRange(startPosition)) {
+            if (endPosition.GameObjectGo()) { return 0; }
+        }
+        else {
+            endPosition = GridManager.i.goMethods.ClosestFreeCellToPosition(endPosition, startPosition);
+        }
+
+        var character = startPosition.GameObjectSpawn();
+        if (character == null) { return 0; }
+        if (CheckMoveImmunity(character)) { return 0; }
+        StartCoroutine(JumpAnimation (character.GetComponent<SpringToTarget3D>(),startPosition,endPosition));
+        MovePosition(endPosition, startPosition, character);
+        var travelTime = Vector3.Distance(startPosition, endPosition) /14f;
+        return travelTime;
+    }
+
+    public IEnumerator JumpAnimation(SpringToTarget3D spring, Vector3 startPosition,Vector3 endPosition) {
+        var midWay = endPosition + (startPosition - endPosition) / 2;
+        midWay = new Vector3(midWay.x, midWay.y + 0.8f);
+        spring.SpringTo(midWay, 25.5f, 300.1f);
+        yield return new WaitForSeconds(Vector3.Distance(endPosition,startPosition)* 0.04f);
+        spring.SpringTo(endPosition, 35.6f, 309f);
+    }
+
+    public float Slide(Vector3Int endPosition, Vector3Int startPosition, float speed) {
+        endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(endPosition, startPosition);
         if (endPosition == startPosition) { return 0; }
         var character = startPosition.GameObjectSpawn();
         if (character == null) { return 0; }
         if (CheckMoveImmunity(character)) { return 0; }
         character.GetComponent<SpringToTarget3D>().SpringTo(endPosition, 40, speed * 100);
         MovePosition(endPosition, startPosition, character);
-        var travelTime = Vector3.Distance(startPosition, endPosition) /14f;
+        var travelTime = Vector3.Distance(startPosition, endPosition) / 14f;
         return travelTime;
     }
 

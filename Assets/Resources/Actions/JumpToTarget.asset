@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80ccb2cccfc4954185e7e1121711bbd, type: 3}
   m_Name: JumpToTarget
   m_EditorClassIdentifier: 
-  position: {x: 22, y: 36, z: 0}
-  origin: {x: 27, y: 35, z: 0}
+  origin: {x: 20, y: 11, z: 0}
+  position: {x: 17, y: 11, z: 0}
   parentGO: {fileID: 0}
-  parentItem: {fileID: 11400000, guid: 3eef8e428404eba4482d5c56fef962ef, type: 2}
+  parentItem: {fileID: 11400000, guid: 3c856b9744f71824a83d9edeb46a5c23, type: 2}
   extraVariableType: 0
-  type: 4
-  intValue: 1
+  type: 8
+  intValue: 0
   itemValue: {fileID: 0}
   spriteValue: {fileID: 0}

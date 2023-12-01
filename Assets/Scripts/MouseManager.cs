@@ -303,6 +303,7 @@ public class MouseManager : MonoBehaviour
         if (target != currentCharacter) { return; }
         if (position.Item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
+            currentStats.actionPoints -= 1;
             EndOfAction(currentCharacter, currentStats);
             return;
         }

@@ -112,12 +112,12 @@ public class itemMethods {
         return timeTaken;
     }
 
-    public Vector3Int FloodFillDropItem(Vector3Int position, bool setItem, ItemAbstract item) {
+    public Vector3Int FloodFillDropItem(Vector3Int position, bool placeItemOnFloor, ItemAbstract item) {
         var actions = Actions.i;
         Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
         List<Vector3Int> checkedCells = new List<Vector3Int>();
         if (!position.GameObjectGo() && !GetItem(position)) {
-            if(setItem)SetItem(item, position);
+            if(placeItemOnFloor)SetItem(item, position);
             return position;
         }
         cellstocheck.Enqueue(position);
@@ -136,7 +136,7 @@ public class itemMethods {
                     if (!isFloor.GetTile(offsetPosition)) { continue; }
                     if (offsetPosition == checkpos) { continue; }
                     if (offsetPosition.GameObjectGo() == null && GetItem(offsetPosition) == null) {
-                        if(setItem)SetItem(item, offsetPosition);
+                        if(placeItemOnFloor)SetItem(item, offsetPosition);
                         return offsetPosition;
                     }
 

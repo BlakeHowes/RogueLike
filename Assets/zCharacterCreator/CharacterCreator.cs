@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 
@@ -28,13 +29,29 @@ public class CharacterCreator : MonoBehaviour {
     public void OnEnable() {
         Manager.coins = 0;
         Manager.GetGlobalValues().OnStartOfRun();
-        int i = 1;
+        int i = 2;
+        var paletteButtonsInLayout = editLayout.Find("Hair").Find("PaletteLayout");
+        CreatePaletteButtons(paletteButtonsInLayout, CCAssets.i.hairPalettes, PaletteButtonType.Hair);
+        var paletteButtonsInLayout2 = editLayout.Find("Face").Find("PaletteLayout");
+        CreatePaletteButtons(paletteButtonsInLayout2, CCAssets.i.hairPalettes, PaletteButtonType.Face);
         foreach (var character in characters) {
             if (!character.activeSelf) { continue; }
             RandomAppearence(character);
             currentCharacter = character;
             options = character.GetComponent<CCOptions>();
-            NextLoadout(i);
+            var inventory = character.GetComponent<Inventory>();
+            inventory.mainHand = options.loadout.mainHand;
+            inventory.offHand = options.loadout.offHand;
+            inventory.helmet = options.loadout.helmet;
+            inventory.armour = options.loadout.armour;
+
+            foreach (var item in options.loadout.trinkets) {
+                var trinket = inventory.GetType().GetField("trinket" + i);
+                trinket.SetValue(inventory, item);
+                i++;
+            }
+            CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
+
             i++;
         }
 
@@ -132,16 +149,7 @@ public class CharacterCreator : MonoBehaviour {
     }
 
     public void Start() {
-        foreach (GameObject character in characters) {
-            options = character.GetComponent<CCOptions>();
-            options.hairPalette = FirstPaletteInLayout("Hair", PaletteButtonType.Hair, CCAssets.i.hairPalettes);
-            options.facePalette = FirstPaletteInLayout("Face", PaletteButtonType.Face, CCAssets.i.facePalettes);
-            options.featurePalette = FirstPaletteInLayout("Feature", PaletteButtonType.Feature, options.race.featurePalettes);
-            foreach (ItemAbstract item in options.race.permanentTraits) {
-                character.GetComponent<Inventory>().traits.Add(item);
-            }
-            RefreshContent(character);
-        }
+
     }
 
     public void UpdateLabels() {

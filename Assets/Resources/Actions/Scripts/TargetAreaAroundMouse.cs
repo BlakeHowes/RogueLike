@@ -22,16 +22,18 @@ public class TargetAreaAroundMouse : Action {
             }
         }
         var positions = position.PositionsInSight(range);
-
+        bool foundThis = false;
         foreach (var pos in positions) {
             var go = pos.GameObjectGo();
             if (requireTarget) { if (!go) { continue; } }
             if (checkTags && go) if (!tags.Contains(go.tag)) { continue; }
 
             foreach (var container in ability.actionContainers) {
-                if (container.action == this) { continue; }
+                if (container.action == this) { foundThis = true; continue; }
+                if(!foundThis) { continue; }
                 if(!container.action.Condition(pos, origin, parentGO, parentItem, ability, container)) { break; }
             }
+            foundThis = false;
 
         }
 

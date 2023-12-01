@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9eadeeabf74594595a1d25ab940899, type: 3}
   m_Name: Sentinel
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: cd468f6f63175cf4d9812c9b6d062783, type: 2}
+  tile: {fileID: 11400000, guid: abae5e370fecd3e4fac7fd636e1087ef, type: 2}
   abilities:
   - callType: 17
     actionContainers:
@@ -25,7 +25,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: bac4c7ec892f7b44b8fb01f8f4fea158, type: 3}
+      spriteValue: {fileID: 21300000, guid: def6e2f24b6cc224ca16a6c15c0b3e0c, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 0

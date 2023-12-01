@@ -73,10 +73,10 @@ MonoBehaviour:
       stringValue: attack in an area
   rangeType: 5
   targetsTags: 2
-  range: 2
+  range: 4
   AOE: 1
-  actionPointCost: 3
-  coolDown: 5
+  actionPointCost: 2
+  coolDown: 4
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0

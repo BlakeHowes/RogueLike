@@ -9,6 +9,7 @@ public class SkillSlot : MonoBehaviour
 {
     public Skill skill;
     public Color defaultColour;
+    public Color unavailableColour;
     public Sprite defaultSprite;
     private Image image;
     public int coolDown() {
@@ -20,6 +21,11 @@ public class SkillSlot : MonoBehaviour
         if(coolDown() > 0) { return; }
         var currentCharacter = PartyManager.i.currentCharacter;
         var stats = currentCharacter.GetComponent<Stats>();
+        if(MouseManager.i.itemSelected == skill) {
+            MouseManager.i.Cancel();
+            EventSystem.current.SetSelectedGameObject(null);
+            return; 
+        } 
         if (skill.GetAPCost() > stats.actionPoints) {
             EventSystem.current.SetSelectedGameObject(null);
             MouseManager.i.itemSelected = null; 
@@ -53,6 +59,7 @@ public class SkillSlot : MonoBehaviour
     public void UpdateGraphic() {
         if (!skill) { return; }
         if(coolDown() > 0) { image.color = defaultColour;}
+        if(skill.GetAPCost() > PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints) { image.color = unavailableColour; }
     }
 
     public void AddSkill(Skill skill) {

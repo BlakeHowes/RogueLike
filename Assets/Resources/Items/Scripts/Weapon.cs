@@ -32,6 +32,14 @@ public class Weapon : ItemAbstract {
         }
     }
 
+    public void CallIgnoringRange(Vector3Int position, Vector3Int origin, GameObject parentGO, CallType callType) {
+        foreach (var ability in abilities) {
+            if (ability.callType == callType) {
+                ability.Call(position, origin, parentGO, this);
+            }
+        }
+    }
+
     public int GetDamage(GameObject target,GameObject parentGO) {
         int damage = 0;
         var stats = parentGO.GetComponent<Stats>();

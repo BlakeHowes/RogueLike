@@ -31,7 +31,7 @@ public class Actions : MonoBehaviour
 
         if (position.GameObjectGo() && item is Weapon) {
             var weapon = item as Weapon;
-            weapon.Call(position, position, inventory.gameObject, CallType.OnActivate); //This causes a bug, origin shouldnt be position
+            weapon.CallIgnoringRange(position, origin, inventory.gameObject, CallType.OnActivate); //This causes a bug, origin shouldnt be position
         }
        
         /*

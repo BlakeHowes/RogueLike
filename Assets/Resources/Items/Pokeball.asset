@@ -52,7 +52,7 @@ MonoBehaviour:
   subItems: []
   totalUses: 3
   timesUsed: 0
-  endlessUses: 0
+  endlessUses: 1
   pickUpByStandingOver: 0
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}

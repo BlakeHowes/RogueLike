@@ -15,7 +15,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 68572a55bf5079f439e6e6b1879e6c37, type: 2}
   abilities: []
   description: 
-  shopValue: 4
+  shopValue: 10
   subItems: []
   totalUses: 1
   timesUsed: 0

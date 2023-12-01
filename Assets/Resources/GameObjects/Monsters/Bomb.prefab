@@ -167,7 +167,7 @@ MonoBehaviour:
       stringValue: 
   items: []
   traits:
-  - {fileID: 11400000, guid: c25b24373a7dd0b44b877ce435ad4538, type: 2}
+  - {fileID: 11400000, guid: 4562bf2bea1dbaa4687471c38fff547d, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []

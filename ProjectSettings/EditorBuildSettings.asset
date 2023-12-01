@@ -12,17 +12,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Mini 1.unity
     guid: c73f02e707c57e44e90021e0e799d19e
   - enabled: 1
+    path: Assets/Scenes/Mini 5.unity
+    guid: ec648c7d82624f74d80fadc3f968ffe5
+  - enabled: 1
     path: Assets/Scenes/Mini Potion Shop.unity
     guid: bdd21bf994b380a4394bdc403c423d87
   - enabled: 1
     path: Assets/Scenes/Mini 2.unity
     guid: a08462c1c27bbdc40b1fcebe26c76afe
   - enabled: 1
+    path: Assets/Scenes/Mini 6.unity
+    guid: b2bd6e85c092ef144b2d00efbb7cf1cd
+  - enabled: 1
     path: Assets/Scenes/Mini Shop 1.unity
     guid: c5b0920fa8aaee64c96b4aa566445f68
   - enabled: 1
     path: Assets/Scenes/Mini 3.unity
     guid: 89ec75073576c444e82e74c7155ca77d
+  - enabled: 1
+    path: Assets/Scenes/Mini 7.unity
+    guid: 048ceac81c96d1f48b7a000174e4eebd
   - enabled: 1
     path: Assets/Scenes/Mini 4.unity
     guid: 1061556f923b7ec4fbc4ca408037f867

@@ -221,6 +221,16 @@ MonoBehaviour:
   generalAbilities:
   - callType: 2
     actionContainers:
+    - action: {fileID: 11400000, guid: 37aff16ffbed4fa4ea7cb8970868c321, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 721fd94881a3f8e4291f8dbad17e0ea6, type: 2}
       intValue: 0
       floatValue: 0

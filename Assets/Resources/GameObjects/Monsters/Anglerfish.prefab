@@ -135,7 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generalAbilities: []
   items: []
-  traits: []
+  traits:
+  - {fileID: 11400000, guid: 2fb0308757a375347af4be55362c691a, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []

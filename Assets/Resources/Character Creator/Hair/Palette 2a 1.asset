@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad5528f94ec68342a641cc368ab05c4, type: 3}
-  m_Name: Palette 7
+  m_Name: Palette 2a 1
   m_EditorClassIdentifier: 
-  lightestColour: {r: 0.07450978, g: 0.12284647, b: 0.7137255, a: 1}
-  lightColour: {r: 0.07843135, g: 0.14494136, b: 0.48235294, a: 1}
-  midColour: {r: 0.007843141, g: 0.046761908, b: 0.22745098, a: 1}
-  darkColour: {r: 0.011764701, g: 0.04287674, b: 0.16862746, a: 1}
-  darkestColour: {r: 0.0039215656, g: 0.03288615, b: 0.101960786, a: 1}
+  lightestColour: {r: 0.2924528, g: 0.2660199, b: 0.25520647, a: 1}
+  lightColour: {r: 0.16037738, g: 0.15119135, b: 0.14751694, a: 1}
+  midColour: {r: 0.11320752, g: 0.11051617, b: 0.10946953, a: 1}
+  darkColour: {r: 0.11320752, g: 0.10610535, b: 0.103061564, a: 1}
+  darkestColour: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}

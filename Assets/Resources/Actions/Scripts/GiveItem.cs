@@ -26,7 +26,7 @@ public class GiveItem : Action {
             target.GetComponent<Inventory>().AddItem(itemClone);
         }
         else {
-            itemClone.Drop(position,false);
+            itemClone.Drop(position,true);
         }
         yield return null;
     }

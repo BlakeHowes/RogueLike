@@ -115,7 +115,10 @@ public class GlobalValues : ScriptableObject
         if (availableItems.Count == 0) { availableItems = items; }
         var itemSelected = availableItems[Random.Range(0, availableItems.Count)];
         if(itemSelected == null) { return null; }
-        chosenItems.Add(itemSelected);
+        if(lootGroup != LootGenerator.LootGroup.Props && lootGroup != LootGenerator.LootGroup.Enemies) {
+            chosenItems.Add(itemSelected);
+        }
+
         return GridManager.i.InstantiateItem(itemSelected);
     }
 

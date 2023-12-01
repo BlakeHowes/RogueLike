@@ -38,7 +38,7 @@ public class Push : Action,IDescription {
                     targetPos2 = oppositeTarget;
                 }
                 var endPosition2 = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(targetPos2, positionInArea);
-                PathingManager.i.Jump(endPosition2, positionInArea, speed);
+                PathingManager.i.Slide(endPosition2, positionInArea, speed);
             }
 
             yield break;
@@ -50,13 +50,13 @@ public class Push : Action,IDescription {
             targetPos = oppositeTarget;
         }
         var endPosition = GridManager.i.goMethods.PositionBeforeHittingGameObjectOrUnwalkableCell(targetPos, origin);
-        PathingManager.i.Jump(endPosition, origin, speed);
+        PathingManager.i.Slide(endPosition, origin, speed);
         yield return null;
     }
 
     public string Description(ItemAbstract parentItem, ActionContainer actionContainer) {
         if (actionContainer.surfaceValue == null) { Debug.LogError("Forgot to set surface in " + parentItem.name); return "SURFACE MISSING!!!"; }
-        var description = $"Pushes{actionContainer.vector2IntValue.x}steps";
+        var description = $"Pushes {actionContainer.vector2IntValue.x} steps";
         if (area) { description += " in an area of " + actionContainer.vector2IntValue.y + " "; }
         return description;
     }
