@@ -49,12 +49,9 @@ MonoBehaviour:
   description: 
   shopValue: 10
   subItems: []
-  totalUses: 1
-  timesUsed: 0
-  endlessUses: 1
+  destroyOnUse: 0
   pickUpByStandingOver: 0
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}
-  destroyOnUse: 0
   viableTargets:
   - {fileID: 3381531369335737414, guid: 1f1601b96b85bd94f9f66c0dad56ef57, type: 3}

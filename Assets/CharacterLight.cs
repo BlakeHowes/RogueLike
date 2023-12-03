@@ -20,6 +20,10 @@ public class CharacterLight : MonoBehaviour
     public void OnSwitchCharacter(GameObject currentCharacter, GameObject previousCharacter) {
         if (!currentCharacter) { return; }
         if(!currentCharacter.CompareTag("Party")) { return; }
+        if(transform.parent == null) {
+            Destroy(gameObject);
+            return;
+        }
         if (transform.parent.gameObject == currentCharacter) { 
             light2D.color.a = globalValues.lightAlphaCurrentCharacter;
         }

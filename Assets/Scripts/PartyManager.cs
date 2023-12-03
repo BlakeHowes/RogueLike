@@ -153,7 +153,7 @@ public class PartyManager : MonoBehaviour {
         }
         if (currentCharacter) {
             if (!GridManager.i.enumeratingStack && currentTag == "Party") {
-                MouseManager.i.disableMouse = false;
+                MouseManager.i.disableMouseAndUI = false;
             }
             if (currentCharacter.activeSelf) { return; }
             if (currentTag == "Party") { SwitchToNextCharacter(); }
@@ -176,9 +176,8 @@ public class PartyManager : MonoBehaviour {
         if(currentCharacter.tag == "Party") { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial;}
         if(currentCharacter.tag == "Enemy") { character.GetComponent<SpriteRenderer>().material = globalValues.enemyoutlineMaterial; }
 
-        GameUIManager.i.UpdatePartyIcons(party);
 
-        if (currentCharacter.tag == "Summon") { MouseManager.i.disableMouse = true; }
+        if (currentCharacter.tag == "Summon") { MouseManager.i.disableMouseAndUI = true; }
         stats.ResetTempStats();
         var position = character.Position();
         stats.RefreshCharacter(position);
@@ -218,7 +217,6 @@ public class PartyManager : MonoBehaviour {
             }
             SetCurrentCharacter(party[0]);
             GridManager.i.UpdateGame();
-            GameUIManager.i.UpdatePartyIcons(party);
             return;
         }
         foreach (GameObject character in party) {
@@ -233,7 +231,6 @@ public class PartyManager : MonoBehaviour {
             currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
         }
         GridManager.i.UpdateGame();
-        GameUIManager.i.UpdatePartyIcons(party);
     }
 
     public void EndTurn() {
@@ -251,10 +248,11 @@ public class PartyManager : MonoBehaviour {
             GridManager.i.StartStack();
         }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
+        StartCoroutine(MouseManager.i.EndOfTurnMouseDisableToPreventMissClick());
     }
 
     public void EnemyPartyStartTurn() {
-        MouseManager.i.disableMouse = true;
+        MouseManager.i.disableMouseAndUI = true;
         RemoveNullCharacters(enemyParty);
         if(enemyParty.Count == 0) {PartyStartTurn();return; }
         var partyCopy =ArrangeEnemyPartyBasedOnPath();
@@ -328,7 +326,7 @@ public class PartyManager : MonoBehaviour {
 
 
     public void PartyStartTurn() {
-        MouseManager.i.disableMouse = false;
+        MouseManager.i.disableMouseAndUI = false;
         RemoveNullCharacters(party);
         foreach (var player in party) {
             if (!player) { continue; }

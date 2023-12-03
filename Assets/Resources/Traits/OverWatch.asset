@@ -35,7 +35,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: If an enemy enters range attack
+      stringValue: If an enemy enters range attack them
     - action: {fileID: 11400000, guid: fc23d5b8a3d7c7143a4a86e2f92c49f3, type: 2}
       intValue: 4
       floatValue: 0

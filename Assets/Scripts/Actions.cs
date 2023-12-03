@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
+using static UnityEditor.Progress;
+using static UnityEngine.UI.Image;
 
 public class Actions : MonoBehaviour
 {
@@ -16,39 +18,48 @@ public class Actions : MonoBehaviour
         i = this;
     }
 
+    public bool IsSellingAtShop(Vector3Int position) {
+        var mech = position.Mech();
+        if (mech) {
+            if (mech is Shop) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void ThrowItem(Vector3Int position,Vector3Int origin,ItemAbstract item,Inventory inventory) {
         if (!position.InRange(origin, inventory.GetComponent<Stats>().throwingRangeTemp)) { return; }
         var landPos = GridManager.i.itemMethods.FloodFillDropItem(position,false,item);
-
         EffectManager.i.ShootBasicProjectile(position, origin, item.tile.sprite);
-        bool itemOverTotalUses = false;
-        if (item is GeneralItem) { 
-            var item2 = item as GeneralItem;
-            item2.thrownLocation = landPos;
-            item.Call(position, origin, inventory.gameObject, CallType.OnActivate); 
-            if(item2.timesUsed >= item2.totalUses) { itemOverTotalUses = true; }
+
+        if (IsSellingAtShop(position)) {
+            if (inventory.items.Contains(item)) {
+                inventory.items.Remove(item);
+            }
+            setItem.itemValue = item;
+            setItem.action.Condition(landPos, origin, inventory.gameObject, null, null, setItem);
+            return;
         }
 
         if (position.GameObjectGo() && item is Weapon) {
             var weapon = item as Weapon;
             weapon.CallIgnoringRange(position, origin, inventory.gameObject, CallType.OnActivate); //This causes a bug, origin shouldnt be position
         }
-       
-        /*
-        if (landPos != position && !itemOverTotalUses) {
-            wait.Call(position, origin, inventory.gameObject, CallType.Activate);
-            EffectManager.i.ShootBasicProjectile(landPos, position, item.tile.sprite, false);
+        else {
+            item.Call(position, origin, inventory.gameObject, CallType.OnActivate);
         }
-        */
-
-        if (!itemOverTotalUses) {
-            setItem.itemValue = item;
-            setItem.action.Condition(landPos, origin,inventory.gameObject,null,null, setItem);
-        }
-        
-
         if (inventory.items.Contains(item)) {
             inventory.items.Remove(item);
         }
+
+        if (item is GeneralItem) {
+            var generalItem = item as GeneralItem;
+            if (generalItem.destroyOnUse) {
+                return;
+            }
+        }
+        setItem.itemValue = item;
+        setItem.action.Condition(landPos, origin, inventory.gameObject, null, null, setItem);
     }
 }

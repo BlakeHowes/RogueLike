@@ -13,8 +13,8 @@ public class UITrait : Action {
         if(parentItem is StatusEffect) { NameFormat(parentItem); }
         if(parentItem is not StatusEffect) { CallTypeFormat(ability); }
         */
-        description += parentItem.name + ": ";
-        if (parentItem is not StatusEffect) { CallTypeFormat(ability); }
+        if(parentItem)description += parentItem.name + ": ";
+        //if (parentItem is not StatusEffect) { CallTypeFormat(ability); }
         icon = actionContainer.spriteValue;
         foreach (var container in ability.actionContainers) {
             if (container.action == this) { continue; }

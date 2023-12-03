@@ -11,12 +11,6 @@ public class GeneralItemUtilities : Action {
         switch (type) {
             case Type.Debug: Debug.LogError("DebugLog: Positon: " +position + " Origin: " +origin + " ParentGo: " + parentGO + " ParentItem: " + parentItem +" CallType: " + ability.callType);
                 Debug.LogError("Position Go: " + position.GameObjectGo() + " Origin Go: " + origin.GameObjectGo()); break;
-            case Type.IsTimesUsed:
-                if (parentItem is GeneralItem) {
-                    var item = parentItem as GeneralItem;
-                    if (item.timesUsed >= item.totalUses && item.endlessUses == false) { return false; }
-                }
-                break;
             case Type.IfPositionHasGo: if (!position.GameObjectGo()) { return false; } break;
             case Type.IfPositionDoesNotHaveGo: if (position.GameObjectGo()) { return false; } break;
             case Type.IfPositionInSight: if (!position.InSight(origin)) { return false; } break;
@@ -28,6 +22,7 @@ public class GeneralItemUtilities : Action {
                 var offHand = parentGO.GetComponent<Inventory>().GetOffHandAsWeapon();
                 if (offHand) { if (offHand.weaponType != weaponType) { return false; } }
                 break;
+            case Type.IfOriginGo: if (!origin.GameObjectGo()) { return false; } break;
 
         }
         return true;
@@ -47,6 +42,7 @@ public class GeneralItemUtilities : Action {
         IfWeaponsAreOfDamageType,
         Debug,
         IfPositionInIdle,
+        IfOriginGo,
     }
 }
 

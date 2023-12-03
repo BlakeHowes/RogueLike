@@ -182,12 +182,9 @@ public class Stats : MonoBehaviour {
         RefreshCharacter(position);
         damageTaken = damage;
 
-        if (!blockDamage) {
-            if (originGO != gameObject) {
-                inventory.CallEquipment(origin, position, CallType.OnTakeDamage);
-            }
-
-            Manager.OnTakeDamageCall(origin, position);
+        if (!blockDamage && originGO != gameObject) {
+            inventory.CallEquipment(position, origin, CallType.OnTakeDamage);
+            Manager.OnTakeDamageCall(position, origin);
         }
 
 
@@ -264,6 +261,8 @@ public class Stats : MonoBehaviour {
             inventory.trinket2.Drop(position, true);
             inventory.trinket3.Drop(position, true);
             inventory.trinket4.Drop(position, true);
+            gameObject.transform.Find("Character Light").transform.SetParent(null);
+
         }
         GridManager.i.graphics.UpdateEverything();
         if (!GridManager.i.enumeratingStack) { GridManager.i.StartStack(); }

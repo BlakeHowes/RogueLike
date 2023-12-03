@@ -227,7 +227,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a227a972f7a51764190c4d29444c534b, type: 2}
   - {fileID: 11400000, guid: eefb14421a884a043ab54712c06ea664, type: 2}
   - {fileID: 11400000, guid: 809f4ed232b3b9f4f948125f54bd2c33, type: 2}
-  - {fileID: 11400000, guid: 2fb0308757a375347af4be55362c691a, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
@@ -235,7 +234,7 @@ MonoBehaviour:
   offHand: {fileID: 11400000, guid: b2c2a2a9adec9ba4a92e27a9f931d915, type: 2}
   helmet: {fileID: 11400000, guid: 3776d516912869a40ba3c4b47d5e3144, type: 2}
   armour: {fileID: 11400000, guid: 64514875beb59eb49bad0ec9064a2e20, type: 2}
-  trinket1: {fileID: 0}
+  trinket1: {fileID: 11400000, guid: c5168c94e807ccb439095537a8fb71b5, type: 2}
   trinket2: {fileID: 0}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}

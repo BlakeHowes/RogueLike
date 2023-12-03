@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e01616043d0ab83479ba67d1d3936ff4, type: 3}
-  m_Name: TargetGosAroundMouse
+  m_Script: {fileID: 11500000, guid: 45e9be87fe170e04d8a4266508cf9c3a, type: 3}
+  m_Name: AtOriginSelf
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
-  extraVariableType: 1
-  requireTarget: 1
+  extraVariableType: 0

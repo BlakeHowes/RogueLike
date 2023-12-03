@@ -1,7 +1,6 @@
 using LlamAcademy.Spring.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static ItemStatic;
@@ -11,6 +10,7 @@ public class MouseManager : MonoBehaviour
 {
     public static MouseManager i;
     public ItemAbstract itemSelected;
+    public bool disableMouseAndUI;
     public bool disableMouse;
     public bool disableToggle = false;
     State state;
@@ -22,7 +22,6 @@ public class MouseManager : MonoBehaviour
     private GlobalValues globalValues;
     public BagAnimation bagAnimation;
     public MouseMode mouseMode = MouseMode.None;
-
     public List<Vector3Int> targets = new List<Vector3Int>();
 
     public void Awake() {
@@ -82,6 +81,12 @@ public class MouseManager : MonoBehaviour
         SetMode(MouseMode.None);
         GameUIManager.i.apUIElement.HighlightAP(0);
         GameUIManager.i.tooltipGameObject.SetActive(false);
+    }
+
+    public IEnumerator EndOfTurnMouseDisableToPreventMissClick() {
+        disableMouse = true;
+        yield return new WaitForSeconds(0.5f);
+        disableMouse = false;
     }
 
     public void OnMouseDown() {
@@ -453,12 +458,16 @@ public class MouseManager : MonoBehaviour
     public bool CheckMouseValidity() {
         if (isRepeatingActionsOutsideCombat) { return false; }
         if (GridManager.i.graphics.lerping) { return false; }
-        if (disableToggle && disableMouse == false) {
-            GameUIManager.i.EnableUI(); disableMouse = false;
+        if (disableToggle && disableMouseAndUI == false) {
+            GameUIManager.i.EnableUI(); disableMouseAndUI = false;
         }
-        if (disableMouse) {
+        if (disableMouseAndUI) {
             GameUIManager.i.DisableUI();
             disableToggle = true;
+            return false;
+        }
+
+        if (disableMouse) {
             return false;
         }
         return true;

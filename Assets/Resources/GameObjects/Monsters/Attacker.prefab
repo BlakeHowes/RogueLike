@@ -135,6 +135,7 @@ MonoBehaviour:
   generalAbilities: []
   items: []
   traits:
+  - {fileID: 11400000, guid: 3861e3f7c2f426f42b46dfe8cce291c0, type: 2}
   - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
   skills: []
   coolDowns: []

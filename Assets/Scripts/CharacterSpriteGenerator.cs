@@ -16,10 +16,10 @@ public static class CharacterSpriteGenerator {
         return target;
     }
 
-    public static Texture2D CropTexture(Texture2D texture, Sprite sprite) {
+    public static Texture2D CropTexture(Texture2D texture, Sprite sprite,Vector2Int positionOnTexture) {
         if(sprite.rect.size.x == texture.width) { return sprite.texture; }
         var rect = sprite.textureRect;
-        Color[] colours = texture.GetPixels(Mathf.FloorToInt(rect.xMin), Mathf.FloorToInt(rect.yMin), Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));
+        Color[] colours = texture.GetPixels(Mathf.FloorToInt(rect.xMin) + positionOnTexture.x, Mathf.FloorToInt(rect.yMin) +positionOnTexture.y, Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));
         Texture2D croppedTexture = new Texture2D(Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));
         croppedTexture.filterMode = FilterMode.Point;
         croppedTexture.SetPixels(colours);
@@ -47,7 +47,7 @@ public static class CharacterSpriteGenerator {
     private static Texture2D PasteSprite(Sprite source, Texture2D target, Vector3Int offset) {
         var targetWidth = target.width;
         var targetHeight = target.height;
-        var texture = CropTexture(source.texture, source);
+        var texture = CropTexture(source.texture, source,Vector2Int.zero);
         for (int x = 0; x < texture.width; x++) {
             for (int y = 0; y < texture.height; y++) {
                 if (x < targetWidth && y < targetHeight && x >= 0 && y >= 0) {

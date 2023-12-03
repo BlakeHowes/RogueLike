@@ -29,6 +29,7 @@ public class EquipmentSlot : MonoBehaviour {
         InventoryManager.i.UpdateInventory(currentCharacter);
         PartyManager.i.currentCharacter.GetComponent<Stats>().RefreshCharacter(position);
         CharacterSpriteGenerator.CreateCharacterSprite(inventory.gameObject);
+        GameUIManager.i.uiTilemap.ClearAllTiles();
     }
 
     public void ChangeCharacterInventory(Inventory inventory, EquipmentType type, ItemAbstract itemReplace) {

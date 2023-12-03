@@ -131,7 +131,7 @@ public class GridManager : MonoBehaviour {
     public void StartStackWithoutUpdate() {
         if (DevHotkeys.i.suspendStack == true) { return; }
 
-        MouseManager.i.disableMouse = true;
+        MouseManager.i.disableMouseAndUI = true;
         if (itemsInActionStack.Count == 0) { EndStack(); return; }
         enumeratingStack = true;
         //Debug.Log(itemsInActionStack.Count);
@@ -142,7 +142,7 @@ public class GridManager : MonoBehaviour {
     public void StartStack() {
         if (DevHotkeys.i.suspendStack == true) { return; }
 
-        MouseManager.i.disableMouse = true;
+        MouseManager.i.disableMouseAndUI = true;
         if (itemsInActionStack.Count == 0) { EndStack(); return; }
         enumeratingStack = true;
         //Debug.Log(itemsInActionStack.Count);
@@ -176,7 +176,7 @@ public class GridManager : MonoBehaviour {
         var currentCharacter = PartyManager.i.currentCharacter;
         enumeratingStack = false;
         if (!currentCharacter) { return; }
-        if (currentCharacter.tag == "Party") { MouseManager.i.disableMouse = false; }
+        if (currentCharacter.tag == "Party") { MouseManager.i.disableMouseAndUI = false; }
 
         if (currentCharacter.tag == "Enemy") {
             return;

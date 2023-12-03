@@ -38,18 +38,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: If close ally is attacked, retaliate
-    - action: {fileID: 11400000, guid: 0a410748905f0204389c32748a361d00, type: 2}
-      intValue: 1
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
-        type: 3}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: 
-    - action: {fileID: 11400000, guid: cc80a93056729a74eb704ec880df64cd, type: 2}
+    - action: {fileID: 11400000, guid: c1279e94e5631d94fb3aeb036ed68f9f, type: 2}
       intValue: 2
       floatValue: 0
       itemValue: {fileID: 0}
@@ -60,8 +49,8 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: 5a5f266020bf5b44bb2ee43713b09f80, type: 2}
-      intValue: 3
+    - action: {fileID: 11400000, guid: 20154a1aa7fe7f945a410b0d3fd63576, type: 2}
+      intValue: 1
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
@@ -71,7 +60,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: 58318baf9614b9048a45a25b8d5e81dd, type: 2}
+    - action: {fileID: 11400000, guid: 4e58be9a802718342b8422c96add5e88, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
@@ -82,8 +71,8 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: fc23d5b8a3d7c7143a4a86e2f92c49f3, type: 2}
-      intValue: 0
+    - action: {fileID: 11400000, guid: 0a410748905f0204389c32748a361d00, type: 2}
+      intValue: 1
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 8288408381700605430, guid: a5434bba2c751d447b9ea2356d680731,
@@ -104,7 +93,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: c1f79d98365da08439dc247be2bc2809, type: 2}
+    - action: {fileID: 11400000, guid: fbd1c7a3a81152049a2f6238ee85939e, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}

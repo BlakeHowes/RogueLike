@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e01616043d0ab83479ba67d1d3936ff4, type: 3}
-  m_Name: TargetAreaAroundMouse
+  m_Script: {fileID: 11500000, guid: 38621d0b514b11546a427055de444996, type: 3}
+  m_Name: CallActivateOnOrigin
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
-  extraVariableType: 1
-  requireTarget: 0
+  extraVariableType: 0
+  callType: 0
+  callPosition: 0
+  targetOrigin: 1

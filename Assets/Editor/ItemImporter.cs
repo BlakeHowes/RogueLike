@@ -78,12 +78,6 @@ public static class ItemImporter {
 
         public static GeneralItem UpdateGeneralItemValues(Dictionary<string, object> itemData, GeneralItem item) {
             item.name = itemData["Name"].ToString();
-           
-            item.endlessUses = bool.Parse(itemData["Endless Uses"].ToString());
-            if (!item.endlessUses) {
-                Debug.Log("Total Uses" + itemData["Total Uses"].ToString());
-                item.totalUses = int.Parse(itemData["Total Uses"].ToString());
-            }
             Debug.Log(itemData["Value"].ToString());
             item.shopValue = int.Parse(itemData["Value"].ToString());
             item.description = itemData["Description"].ToString();

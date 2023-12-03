@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38621d0b514b11546a427055de444996, type: 3}
-  m_Name: CallThisOnActivate
+  m_Script: {fileID: 11500000, guid: 7008d793f5a6141418c0c6611821969f, type: 3}
+  m_Name: AtGosAroundUser
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
-  extraVariableType: 0
-  callType: 0
-  callPosition: 0
+  extraVariableType: 1
+  requireTarget: 1

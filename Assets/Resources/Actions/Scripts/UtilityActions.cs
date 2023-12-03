@@ -26,13 +26,13 @@ public class UtilityActions : Action {
             case Type.SetInactive:if(parentGO) parentGO.SetActive(false); break;
             case Type.SetActive: parentGO.SetActive(true); break;
             case Type.ChangeSprite: parentGO.GetComponent<SpriteRenderer>().sprite = spriteValue; break;
-            case Type.DropItem: GridManager.i.itemMethods.FloodFillDropItem(position,true,itemValue); break;
-            case Type.SlideToPosition: waitTime= PathingManager.i.Slide(position, origin,5); break;
-            case Type.SlideToOrigin: waitTime= PathingManager.i.Slide(origin, position, 5); break;
+            case Type.DropItem: var itemPosition = GridManager.i.itemMethods.FloodFillDropItem(position,true,itemValue);break;
+            case Type.SlideToPosition: waitTime= PathingManager.i.Slide(position, origin, 5); break;
+            case Type.SlideToOrigin: waitTime= PathingManager.i.Slide(position, origin, 5); break;
             case Type.FlyToPosition: waitTime = PathingManager.i.Fly(position, origin, 5); break;
-            case Type.FlyToOrigin: waitTime = PathingManager.i.Fly(origin, position, 5); break;
+            case Type.FlyToOrigin: waitTime = PathingManager.i.Fly(position, origin, 5); break;
             case Type.JumpToPosition: waitTime = PathingManager.i.Jump(position, origin, 5); break;
-            case Type.JumpToOrigin: waitTime = PathingManager.i.Jump(origin, position, 5); break;
+            case Type.JumpToOrigin: waitTime = PathingManager.i.Jump(position, origin, 5); break;
         }
         yield return new WaitForSeconds(waitTime);
     }

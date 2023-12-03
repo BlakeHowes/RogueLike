@@ -154,7 +154,7 @@ public class GameUIManager : MonoBehaviour {
         gameOverLayout.SetActive(true);
         uiTilemap.ClearAllTiles();
         canvasOverlay.gameObject.SetActive(false);
-        MouseManager.i.disableMouse = true;
+        MouseManager.i.disableMouseAndUI = true;
     }
 
     public void DisableUI() {

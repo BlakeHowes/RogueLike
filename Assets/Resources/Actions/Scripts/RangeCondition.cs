@@ -7,7 +7,17 @@ public class RangeCondition : Action {
     public bool useParentItem;
     public bool returnValue;
     public bool useMainHandRange;
+    public bool useParentGo;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
+        if (useParentGo) {
+            var parentGoPosition = parentGO.Position();
+            var go = position.GameObjectGo();
+            var originGo = origin.GameObjectGo();
+            if (parentGoPosition.InRange(position, actionContainer.intValue)) {
+                return true; 
+            }
+            return false;
+        }
         if (!useParentItem) {
             if(position.InRange(origin, actionContainer.intValue)){ return !returnValue; }
             return returnValue;

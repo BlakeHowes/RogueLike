@@ -5,6 +5,8 @@ tree("Root")
 tree("Combat")
 	repeat
 		sequence
+			isCurrentTurnCharacter
+			WaitForStack()
 			CheckInformation()
 			tree("Actions")
 			StartStack()
@@ -15,9 +17,11 @@ tree("Actions")
 		Attack()
 		not isHealthAboveZero
 		tree("Move")
+	
 
 tree("Move")
 	sequence
 		fallback
 			MoveToTarget()
 			AdvanceToTarget()
+		Wait(0.3)

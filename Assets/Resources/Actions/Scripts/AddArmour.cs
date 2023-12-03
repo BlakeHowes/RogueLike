@@ -21,7 +21,7 @@ public class AddArmour : Action,IDescription {
         throw new System.NotImplementedException();
     }
     public string Description(ItemAbstract parentItem, ActionContainer actionContainer) {
-        var description = "+" + actionContainer.intValue + " Armour";
+        var description = "+" + actionContainer.intValue + " Max Armour";
         return description;
     }
 

@@ -36,17 +36,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: If you have a shield equiped, take the damage of adjacent allies
-    - action: {fileID: 11400000, guid: f099e0ed934634a4aa1b3b22e8aae0fc, type: 2}
-      intValue: 1
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: If shield equipt
-    - action: {fileID: 11400000, guid: 4e58be9a802718342b8422c96add5e88, type: 2}
+    - action: {fileID: 11400000, guid: b00a450613aee6549916481e245e29b2, type: 2}
       intValue: 1
       floatValue: 0
       itemValue: {fileID: 0}
@@ -56,16 +46,16 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: If you have a shield equiped, take the damage of adjacent allies
-    - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
+    - action: {fileID: 11400000, guid: 58318baf9614b9048a45a25b8d5e81dd, type: 2}
       intValue: 1
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
-      colorValue: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: If shield equipt
+      stringValue: If you have a shield equiped, take the damage of adjacent allies
     - action: {fileID: 11400000, guid: 4e58be9a802718342b8422c96add5e88, type: 2}
       intValue: 1
       floatValue: 0
@@ -86,6 +76,16 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: If you have a shield equiped, take the damage of adjacent allies
+    - action: {fileID: 11400000, guid: f099e0ed934634a4aa1b3b22e8aae0fc, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: If shield equipt
     - action: {fileID: 11400000, guid: b01737b50a0613f458e625f66c0c99d6, type: 2}
       intValue: 1
       floatValue: 0
@@ -96,16 +96,6 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: If shield equipt
-    - action: {fileID: 11400000, guid: 3b191e5224aef8442aa6b72eac2468db, type: 2}
-      intValue: 1
-      floatValue: 0
-      itemValue: {fileID: 0}
-      prefabValue: {fileID: 0}
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
-      surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      stringValue: If you have a shield equiped, take the damage of adjacent allies
     - action: {fileID: 11400000, guid: bd92a27476135fa4bb6cf382cf0958f9, type: 2}
       intValue: 1
       floatValue: 0

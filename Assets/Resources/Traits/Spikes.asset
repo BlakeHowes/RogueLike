@@ -37,7 +37,18 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Reflect 20% of damage taken
+      stringValue: When Attacked Reflect 20% of damage taken
+    - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 5914442942a5c8443b438e6190de3c16, type: 2}
       intValue: 0
       floatValue: 0

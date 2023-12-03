@@ -45,7 +45,7 @@ MonoBehaviour:
       vector2IntValue: {x: 2, y: 4}
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
-      stringValue: Explode!
+      stringValue: On Death, Explode!
     - action: {fileID: 11400000, guid: 91274b2dc7aac6c4cba72918c9d58ec6, type: 2}
       intValue: 2
       floatValue: 0.3

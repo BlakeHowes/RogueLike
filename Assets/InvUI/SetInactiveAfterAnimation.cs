@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetInactiveAfterAnimation : MonoBehaviour
 {
-    private Animation animation;
+    private new Animation animation;
     public void OnEnable() {
         animation = GetComponent<Animation>();
        

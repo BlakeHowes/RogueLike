@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8e821d413adbb4c99f1466903a60b0, type: 3}
   m_Name: IfInRangeParentItem
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
-  showValueInInspector: 0
+  extraVariableType: 0
+  useParentItem: 1
+  returnValue: 0
+  useMainHandRange: 0

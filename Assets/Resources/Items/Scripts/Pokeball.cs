@@ -1,12 +1,8 @@
 using Panda;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Searcher;
+
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UIElements;
-using static ItemStatic;
-using static MechStatic;
 using static PartyManager;
 
 //[CreateAssetMenu(fileName = "Pokeball", menuName = "Pokeball")]
@@ -31,8 +27,8 @@ public class Pokeball : Action {
 
     public override IEnumerator StackAction() {
         var go = position.GameObjectGo();
-
         if (capture) {
+            if (!go) { yield break; }
             go.SetActive(false);
             capturedGO = go;
             go.transform.SetParent(null);
@@ -52,6 +48,7 @@ public class Pokeball : Action {
     }
 
     public void Place() {
+        if (PartyManager.i.party.Contains(capturedGO)) { return; }
         capturedGO.SetActive(true);
         capturedGO.GetComponent<Stats>().healthbar.gameObject.SetActive(false);
         GridManager.i.goMethods.SetGameObject(position, capturedGO);
