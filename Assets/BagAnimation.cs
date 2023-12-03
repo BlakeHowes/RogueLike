@@ -11,6 +11,7 @@ public class BagAnimation : MonoBehaviour
     public GameObject animationGO;
     public new Animation animation;
     public RawImage itemImage;
+    public GameObject itemsLayout;
     bool openToggle = true;
     Image image;
     public void Awake() {
@@ -29,9 +30,13 @@ public class BagAnimation : MonoBehaviour
 
 
     public void ToggleSprite() {
+        if (itemsLayout.activeSelf) {
+            image.sprite = open;
+        }
+        else {
+            image.sprite = closed;
+        }
         openToggle = !openToggle;
-        if (!openToggle) { GetComponent<Image>().sprite = open;  }
-        if (openToggle) { GetComponent<Image>().sprite = closed; }
         InventoryManager.i.UpdateInventory(PartyManager.i.currentCharacter);
     }
 }

@@ -5,3 +5,6 @@
 4,Eletrified Water Barrel,Passive,1,FALSE,0,3
 5,Oil Barrel,Passive,1,FALSE,0,3
 6,Ice Barrel,Passive,1,FALSE,0,3
+7,Silver Chest,Passive,1,FALSE,0,3
+8,Armored Snake,Enemy,80,FALSE,30,2
+9,Snake,Enemy,90,FALSE,0,3

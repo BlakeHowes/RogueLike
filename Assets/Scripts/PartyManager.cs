@@ -341,6 +341,7 @@ public class PartyManager : MonoBehaviour {
         var pos = currentCharacter.Position();
         currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
         GridManager.i.StartStack();
+        MouseManager.i.UpdateHightlight(MouseManager.i.MousePositionOnGrid());
         //enemyTurnTaken.Clear();
     }
 

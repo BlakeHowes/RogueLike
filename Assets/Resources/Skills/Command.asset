@@ -75,7 +75,7 @@ MonoBehaviour:
       stringValue: 
   rangeType: 0
   targetsTags: -1
-  range: 4
+  range: 5
   AOE: 0
   actionPointCost: 1
   coolDown: 0

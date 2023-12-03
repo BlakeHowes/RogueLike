@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -7609951924661499120}
   m_Layer: 0
   m_Name: Silver Chest
-  m_TagString: Interactable
+  m_TagString: Passive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 5
   lootGroup2: 5
+  Drops: []
 --- !u!114 &5489671670705153384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fc219dcbba90e84b86e2ecf840e0266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 2800000, guid: a7bc68557744d3f48a8fc16f18b39aed, type: 3}
+  icon: {fileID: 2800000, guid: 83c05d07d254d534d85f78afbe8a0782, type: 3}
   position: 0
   direction: 0
   tooltip: 
@@ -273,7 +274,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.125}
     oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5

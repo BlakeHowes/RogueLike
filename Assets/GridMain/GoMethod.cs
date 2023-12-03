@@ -140,7 +140,8 @@ public class GoMethod
         var cells = GridManager.i.tools.BresenhamLine(Origin.x, Origin.y, Position.x, Position.y);
         if (cells.Count == 0) {return Origin;}
 
-        for (int i = cells.Count-1; i > 0; i--) {
+        for (int i = cells.Count-1; i >= 0; i--) {
+            Debug.Log("nextbng");
             if (FloorManager.i.IsWalkable(cells[i]) && !cells[i].GameObjectGo()) {
                 return cells[i];
             }

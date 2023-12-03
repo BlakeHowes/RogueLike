@@ -45,6 +45,7 @@ public class GridManager : MonoBehaviour {
     public bool enumeratingStack;
     public int lootCounter = 1;
     private bool semiFog = false;
+    bool insertToStack = false;
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
@@ -75,10 +76,16 @@ public class GridManager : MonoBehaviour {
         }
     }
 
-    public void TickGame() {
+    public void TickCharacter(GameObject character,Vector3Int characterPos) {
+        insertToStack = true;
+        if (mechGrid[characterPos.x, characterPos.y]) mechGrid[characterPos.x, characterPos.y].Call(characterPos, MechStatic.Signal.Tick);
+        if (surfaceGrid[characterPos.x, characterPos.y]) surfaceGrid[characterPos.x, characterPos.y].Call(characterPos);
+        var inventory = character.GetComponent<Inventory>();
+        inventory.CallTraitsAndStatusEffects(characterPos, characterPos, CallType.OnTick);
+        insertToStack = false;
+    }
 
-        var stopWatch = System.Diagnostics.Stopwatch.StartNew();
-        stopWatch.Start();
+    public void TickGame() {
         var currentCharacter = PartyManager.i.currentCharacter;
         Vector3Int position = Vector3Int.zero;
 
@@ -116,16 +123,16 @@ public class GridManager : MonoBehaviour {
         StartStack();
     }
 
-    public void CallTickAndStartOfTurn(Vector3Int position, Inventory invetory, GameObject currentCharacter, PartyManager.State state) {
+    public void CallTickAndStartOfTurn(Vector3Int position, Inventory inventory, GameObject currentCharacter, PartyManager.State state) {
         if (state == PartyManager.State.Combat) {
-            if (invetory.gameObject == currentCharacter) {
-                invetory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
+            if (inventory.gameObject == currentCharacter) {
+                inventory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
             }
             return;
         }
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
-        invetory.CallTraitsAndStatusEffects(position, position, CallType.OnStartOfPartyTurn);
-        invetory.ReduceCoolDowns();
+        inventory.CallTraitsAndStatusEffects(position, position, CallType.OnTick);
+        inventory.CallTraitsAndStatusEffects(position, position, CallType.OnStartOfPartyTurn);
+        inventory.ReduceCoolDowns();
     }
 
     public void StartStackWithoutUpdate() {
@@ -221,10 +228,10 @@ public class GridManager : MonoBehaviour {
     public void RemoveFromStack(Action action) {
         if (itemsInActionStack.Contains(action)) { itemsInActionStack.Remove(action); }
     }
-
     public void AddToStack(Action action) {
         var clone = Instantiate(action);
-        clone.name = clone.name + UnityEngine.Random.Range(0.000f, 100.000f);
+        clone.name += UnityEngine.Random.Range(0.000f, 100.000f);
+        if (insertToStack) { itemsInActionStack.Insert(1,clone);return; }
         itemsInActionStack.Add(clone);
     }
 

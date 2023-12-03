@@ -16,7 +16,7 @@ public class Behaviours : MonoBehaviour
     Vector3 offset = new Vector3(0.5f, 0.5f, 0.5f);
     Tilemap gotilemap;
     private List<string> targetStrings = new List<string>();
-    public Tags targetsTags;
+    public Tags targetsTags = Tags.Enemies | Tags.Summon;
     private GlobalValues globalValues;
 
     public void OnEnable() {

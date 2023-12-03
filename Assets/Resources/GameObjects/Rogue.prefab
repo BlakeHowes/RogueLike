@@ -189,7 +189,7 @@ MonoBehaviour:
   meleeDamageMultiple: 1
   meleeAccuracy: 0
   meleeAccuracyMultiple: 1
-  health: 50
+  health: 2805
   actionPoints: 3
   actionPointsSum: 0
   infiniteHealth: 0
@@ -227,14 +227,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af0d447c440855341912d2d63fdc32b6, type: 2}
   - {fileID: 11400000, guid: 95a1a4e5a05b6dc4d826441d5a38e675, type: 2}
   traits:
-  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
+  - {fileID: 11400000, guid: 8ac1bb7ff9c47a24d8d42f9e6ca5c89d, type: 2}
   - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
   - {fileID: 11400000, guid: 3861e3f7c2f426f42b46dfe8cce291c0, type: 2}
   - {fileID: 11400000, guid: e2fd7d1eb258cff4c9bb3e9a177077b5, type: 2}
-  - {fileID: 11400000, guid: 479ded912e2720a40b282ac3526203d0, type: 2}
   - {fileID: 11400000, guid: 3c856b9744f71824a83d9edeb46a5c23, type: 2}
-  - {fileID: 11400000, guid: 956b348c4a249b34a83a3dc13862b8d1, type: 2}
   - {fileID: 11400000, guid: f38ff9c34db631644bffbb0b7e2af260, type: 2}
+  - {fileID: 11400000, guid: 4883c932cf759e741903497479699937, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
@@ -356,12 +355,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pushImmunity: 0
-  statusImmunites:
-  - {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
-  damageInteractions:
-  - weaponType: 0
-    surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
-    damageMultiplier: 0.3
+  statusImmunites: []
+  damageInteractions: []
 --- !u!1001 &4244679382711588305
 PrefabInstance:
   m_ObjectHideFlags: 0

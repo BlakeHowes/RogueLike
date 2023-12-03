@@ -7,7 +7,22 @@ public class APUIElement : MonoBehaviour
 {
     public Color highlightColour;
     public Color defaultColor;
-    public void HighlightAP(int amount) {
+    public void HighlightAP(int amount,Skill skill) {
+        if (skill) {
+            if (skill.GetAPCost() > PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints) {
+                for (int i = transform.childCount - 1; i >= 0; i--) {
+                    var child = transform.GetChild(i);
+                    if (child.gameObject.activeSelf) {
+                        var rend = child.GetComponent<Image>();
+
+                        rend.color = Color.red;
+                    }
+
+                }
+                return;
+            }
+        }
+
         for (int i = transform.childCount -1; i >= 0; i--) {
             var child = transform.GetChild(i);
             if (child.gameObject.activeSelf) {

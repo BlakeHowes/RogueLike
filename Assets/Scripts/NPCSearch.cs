@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using static PartyManager;
 public class NPCSearch : MonoBehaviour
@@ -13,6 +12,13 @@ public class NPCSearch : MonoBehaviour
         stats = GetComponent<Stats>();
     }
 
+    public void OnDisable() {
+    }
+
+    public void DeathSearch(Vector3Int position,Vector3Int origin, ItemStatic.CallType callType) {
+        Search();
+    }
+
     public void CreateTargetTags() {
         targetStrings = ConvertFlagsEnumToStringList(targetsTags, gameObject);
     }
@@ -22,6 +28,7 @@ public class NPCSearch : MonoBehaviour
         var range = stats.enemyAlertRangeTemp;
         if(stats.state == State.Combat) { range = stats.enemyAlertRangeBase; }
         var enemies = GridManager.i.goMethods.GameObjectsInSight(range, origin, targetStrings);
+        PartyManager.i.RemoveNullCharacters(PartyManager.i.enemyParty);
         if (enemies.Count == 0 && PartyManager.i.enemyParty.Count == 0) {
             var partyTurns = PartyManager.i.partyMemberTurnTaken;
             if (partyTurns.Contains(gameObject)) {

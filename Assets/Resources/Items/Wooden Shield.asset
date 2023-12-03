@@ -70,7 +70,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: Shield Bash Enemies
-    - action: {fileID: 11400000, guid: 3b191e5224aef8442aa6b72eac2468db, type: 2}
+    - action: {fileID: 11400000, guid: b08e53df69bbafa44a46b78719c2cd86, type: 2}
       intValue: 1
       floatValue: 0.2
       itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
@@ -80,12 +80,11 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: 8c7450f50c12a524386c801b39ef672e, type: 2}
+    - action: {fileID: 11400000, guid: 3b191e5224aef8442aa6b72eac2468db, type: 2}
       intValue: 1
       floatValue: 0.2
       itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
-      prefabValue: {fileID: 8288408381700605430, guid: badb02212dd93834681a9d7c3f660d1c,
-        type: 3}
+      prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 1, y: 4}
       surfaceValue: {fileID: 0}
@@ -162,6 +161,7 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   shopValue: 5
+  armour: 0
   equipmentType: 1
   weight: 1
   wornSprite: {fileID: 0}

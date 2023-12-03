@@ -139,6 +139,7 @@ MonoBehaviour:
   traits:
   - {fileID: 11400000, guid: 2e8a80eb2373782439cf2d2265a89d12, type: 2}
   - {fileID: 11400000, guid: 749991c71be6e5945affea0dd9df8fc6, type: 2}
+  - {fileID: 11400000, guid: 8ac1bb7ff9c47a24d8d42f9e6ca5c89d, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []
@@ -216,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 0
   lootGroup2: 0
+  Drops: []
 --- !u!114 &6717019821424419616
 MonoBehaviour:
   m_ObjectHideFlags: 0

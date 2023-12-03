@@ -91,7 +91,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 37083263bc220da47b28d61d0de13c9d, type: 2}
   state: 0
   elementalStats: {fileID: 0}
-  maxHealthBase: 85
+  maxHealthBase: 90
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
@@ -112,7 +112,7 @@ MonoBehaviour:
   meleeDamageMultiple: 1
   meleeAccuracy: 0
   meleeAccuracyMultiple: 1
-  health: 70
+  health: 90
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 1
   lootGroup2: 0
+  Drops: []
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0

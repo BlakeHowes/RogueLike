@@ -212,6 +212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 0
   lootGroup2: 0
+  Drops:
+  - chance: 20
+    item: {fileID: 11400000, guid: ecc1b3f1ad4a82c479ad305cf07817d5, type: 2}
 --- !u!114 &6717019821424419616
 MonoBehaviour:
   m_ObjectHideFlags: 0

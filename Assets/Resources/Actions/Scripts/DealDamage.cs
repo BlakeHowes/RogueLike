@@ -149,7 +149,7 @@ public class DealDamage : Action,IDescription
                 var weapon = parentItem as Weapon;
                 description += "Deals " +weapon.damageRange.x + "-" +weapon.damageRange.y + " " +weapon.weaponType + " damage";
                 if(weapon.GetRange(parentGO) > 1) { description += " at a range of " + weapon.GetRange(parentGO); }
-                description += " with an accuracy of " + weapon.GetAccuracy(parentGO);
+                //description += " with an accuracy of " + weapon.GetAccuracy(parentGO);
                 break;
             case DamageSource.Range: description += $"Deals {actionContainer.vector2IntValue.x}-{actionContainer.vector2IntValue.x} damage"; break;
         }

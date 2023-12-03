@@ -38,7 +38,7 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: When Attacked Reflect 20% of damage taken
-    - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
+    - action: {fileID: 11400000, guid: b08e53df69bbafa44a46b78719c2cd86, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}

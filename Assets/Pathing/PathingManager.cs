@@ -213,8 +213,12 @@ public class PathingManager : MonoBehaviour
     }
 
     public float Fly(Vector3Int endPosition, Vector3Int startPosition, float speed) {
+        Debug.Log(endPosition);
         endPosition = GridManager.i.goMethods.ClosestFreeCellToPosition(endPosition, startPosition);
-        if (endPosition == startPosition) { return 0; }
+        if (endPosition == startPosition) {
+            Debug.Log("kfnjsd");
+            return 0; 
+        }
         var character = startPosition.GameObjectSpawn();
         if (character == null) { return 0; }
         if (CheckMoveImmunity(character)) { return 0; }

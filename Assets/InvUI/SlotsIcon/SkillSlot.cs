@@ -40,7 +40,7 @@ public class SkillSlot : MonoBehaviour
         stats.RefreshCharacter(postion);
 
         GameUIManager.i.ShowRange(postion, skill.GetRange());
-        GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost());
+        GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost(), skill);
     }
 
     public void OnEnable() {
@@ -86,11 +86,11 @@ public class SkillSlot : MonoBehaviour
         GameUIManager.i.tooltipGameObject.SetActive(true);
         GameUIManager.i.itemtooltip.UpdateToolTip(skill, false);
         if (!skill) { return;}
-        GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost());
+        GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost(),skill);
     }
 
     public void DisableToolTip() {
         GameUIManager.i.tooltipGameObject.SetActive(false);
-        GameUIManager.i.apUIElement.HighlightAP(0);
+        GameUIManager.i.apUIElement.HighlightAP(0, null);
     }
 }

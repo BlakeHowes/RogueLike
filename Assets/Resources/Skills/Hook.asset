@@ -71,9 +71,9 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: Kick
-    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+    - action: {fileID: 11400000, guid: c64a8cb420420d849a476d91d907cf6c, type: 2}
       intValue: 20
-      floatValue: 0.1
+      floatValue: 0
       itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
       prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
         type: 3}
@@ -82,9 +82,9 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: Kick
-    - action: {fileID: 11400000, guid: c64a8cb420420d849a476d91d907cf6c, type: 2}
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
       intValue: 20
-      floatValue: 0
+      floatValue: 0.1
       itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
       prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
         type: 3}

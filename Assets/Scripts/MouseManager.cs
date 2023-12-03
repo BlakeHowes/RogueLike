@@ -79,7 +79,7 @@ public class MouseManager : MonoBehaviour
         SelectItem(null);
         GameUIManager.i.groundUI.ClearAllTiles();
         SetMode(MouseMode.None);
-        GameUIManager.i.apUIElement.HighlightAP(0);
+        GameUIManager.i.apUIElement.HighlightAP(0,null);
         GameUIManager.i.tooltipGameObject.SetActive(false);
     }
 
@@ -248,7 +248,7 @@ public class MouseManager : MonoBehaviour
         var skill = itemSelected as Skill;
         if (CheckActionPoints(currentStats, skill.GetAPCost()))
         itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
-        GameUIManager.i.apUIElement.HighlightAP(-1);
+        GameUIManager.i.apUIElement.HighlightAP(-1,null);
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);
