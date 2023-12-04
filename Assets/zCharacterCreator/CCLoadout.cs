@@ -7,5 +7,5 @@ public class CCLoadout : ScriptableObject {
     public ItemAbstract offHand;
     public ItemAbstract helmet;
     public ItemAbstract armour;
-    public List<ItemAbstract> trinkets;
+    public List<ItemAbstract> traits;
 }

@@ -78,6 +78,8 @@ public class GlobalValues : ScriptableObject
     public GameObject partyIconPrefab;
     public GameObject traitUIEventPrefab;
     public GameObject traitUIDescriptionPrefab;
+    public Sprite normalActionPointSprite;
+    public Sprite walkActionPointSprite;
 
     [Header("Loot")]
     public List<ItemAbstract> propItems = new();

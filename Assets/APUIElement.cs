@@ -7,6 +7,14 @@ public class APUIElement : MonoBehaviour
 {
     public Color highlightColour;
     public Color defaultColor;
+    private Sprite normalAPSprite;
+    private Sprite walkAPSprite;
+
+    public void OnEnable() {
+        var globalValues =Manager.GetGlobalValues();
+        normalAPSprite = globalValues.normalActionPointSprite;
+        walkAPSprite = globalValues.walkActionPointSprite;
+    }
     public void HighlightAP(int amount,Skill skill) {
         if (skill) {
             if (skill.GetAPCost() > PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints) {
@@ -36,12 +44,25 @@ public class APUIElement : MonoBehaviour
         }
     }
 
-    public void ChangeAP(int amount) {
+    public void UpdateActionPointUI(Stats stats) {
+        if (!stats.actionPointStack) { return; }
+        var points = stats.actionPointStack.points;
         int i = 0;
-        foreach(Transform child in transform) {
-            if(i < amount)child.gameObject.SetActive(true);
-            if (i >= amount) child.gameObject.SetActive(false);
+        foreach (var point in points) {
+            var element = transform.GetChild(i).gameObject;
+            element.SetActive(true);
+            var image = element.GetComponent<Image>();
+            switch (point.type) {
+                case ItemStatic.ActionPointType.Normal: image.sprite = normalAPSprite; break;
+                case ItemStatic.ActionPointType.Movement: image.sprite = walkAPSprite; break;
+                case ItemStatic.ActionPointType.Custom: image.sprite = point.item.tile.sprite; break;
+            }
             i++;
+        }
+        var i2 = 0;
+        foreach (Transform child in transform) {
+            if (i2 >= i) { child.gameObject.SetActive(false); }
+            i2++;
         }
     }
 

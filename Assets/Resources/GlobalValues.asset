@@ -79,6 +79,10 @@ MonoBehaviour:
     type: 3}
   traitUIDescriptionPrefab: {fileID: 5579602146939978373, guid: 0ffc438d7c4b6cd46b1a904dee703e5a,
     type: 3}
+  normalActionPointSprite: {fileID: 21300000, guid: c2c4d1a971a097741aaa8b024962c5b0,
+    type: 3}
+  walkActionPointSprite: {fileID: 21300000, guid: e8d0130d46ac6df4fb037c50464084ea,
+    type: 3}
   propItems:
   - {fileID: 0}
   - {fileID: 0}
@@ -130,8 +134,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 956b348c4a249b34a83a3dc13862b8d1, type: 2}
   - {fileID: 11400000, guid: b06f2f5f1973a344f99d2481b6891759, type: 2}
   - {fileID: 11400000, guid: ed8adfbf45d4469479b487969c797f0d, type: 2}
-  chosenItems:
-  - {fileID: 11400000, guid: 6efacf755ae6e75468be8d7260e56587, type: 2}
-  - {fileID: 11400000, guid: ecf886643230e484fa36718981811656, type: 2}
-  - {fileID: 11400000, guid: 956b348c4a249b34a83a3dc13862b8d1, type: 2}
-  - {fileID: 11400000, guid: ed8adfbf45d4469479b487969c797f0d, type: 2}
+  chosenItems: []

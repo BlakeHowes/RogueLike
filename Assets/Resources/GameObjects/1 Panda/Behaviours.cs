@@ -37,7 +37,7 @@ public class Behaviours : MonoBehaviour
                 MouseManager.i.itemSelected = item;
                
                 skill.Call(targetPosition,origin, gameObject,CallType.CalculateStats);
-                GameUIManager.i.ShowRange(origin, skill.GetRange());
+                GameUIManager.i.ShowRange(origin, skill.GetRange(gameObject));
                 globalValues.GetWaitSeconds(0.2f).AddToStack();
                 skill.Call(targetPosition,origin,gameObject, CallType.OnActivate);
                 globalValues.GetWaitSeconds(0.2f).AddToStack();

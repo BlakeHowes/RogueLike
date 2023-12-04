@@ -127,8 +127,6 @@ public class PartyManager : MonoBehaviour {
 
     public void AddPartyMember(GameObject character) {
         party.Add(character);
-        currentCharacter = character;
-        SetCurrentCharacter(party[0]);
     }
 
     public float endTurnTimer;
@@ -182,7 +180,7 @@ public class PartyManager : MonoBehaviour {
         var position = character.Position();
         stats.RefreshCharacter(position);
         InventoryManager.i.UpdateInventory(currentCharacter);
-        GameUIManager.i.SetAP(stats.actionPoints);
+        GameUIManager.i.UpdateActionPointUI(stats);
         if(stats.state == State.Idle) {
             stats.ResetActionPoints();
         }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a9eadeeabf74594595a1d25ab940899, type: 3}
-  m_Name: Quiet Steps
+  m_Name: Shadowed Steps
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: b5a2358d141bc04449fd3287f96c5aa8, type: 2}
+  tile: {fileID: 11400000, guid: 155a2252ea4d22d488bf8728e6ec3bd8, type: 2}
   abilities:
   - callType: 7
     actionContainers:
@@ -24,7 +24,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 017f515b95b36f744a006e6a63ab26d0, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 0

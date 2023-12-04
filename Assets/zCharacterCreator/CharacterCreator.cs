@@ -44,14 +44,8 @@ public class CharacterCreator : MonoBehaviour {
             inventory.offHand = options.loadout.offHand;
             inventory.helmet = options.loadout.helmet;
             inventory.armour = options.loadout.armour;
-
-            foreach (var item in options.loadout.trinkets) {
-                var trinket = inventory.GetType().GetField("trinket" + i);
-                trinket.SetValue(inventory, item);
-                i++;
-            }
             CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
-
+            RefreshContent(character, false);
             i++;
         }
 
@@ -97,10 +91,7 @@ public class CharacterCreator : MonoBehaviour {
         character.transform.position = editPosition.position;
         editLayout.gameObject.SetActive(true);
         selectLayout.gameObject.SetActive(false);
-        var paletteFeatureButtons = editLayout.Find("Feature").Find("PaletteLayout");
-        CreatePaletteButtons(paletteFeatureButtons, character.GetComponent<CCOptions>().race.featurePalettes, PaletteButtonType.Feature);
-        UpdateLabels();
-        ShowDescriptionForTraits();
+        RefreshContent(character,false);
     }
 
     public void RandomizeCharacter(GameObject character) {
@@ -117,6 +108,9 @@ public class CharacterCreator : MonoBehaviour {
         var traits = character.GetComponent<Inventory>().traits;
         traits.Clear();
         foreach (ItemAbstract item in options.race.permanentTraits) {
+            traits.Add(item);
+        }
+        foreach (ItemAbstract item in options.loadout.traits) {
             traits.Add(item);
         }
         ShowDescriptionForTraits();
@@ -177,7 +171,7 @@ public class CharacterCreator : MonoBehaviour {
 
     public void NextRace(int direction) {
         options.race = CCAssets.i.NextOption(direction,CCAssets.i.races, options.race);
-        RefreshContent(currentCharacter);
+        RefreshContent(currentCharacter, true);
         CheckBodyPalette();
     }
 
@@ -192,13 +186,6 @@ public class CharacterCreator : MonoBehaviour {
             foreach (var element in uiElements) {
                 element.transform.SetParent(traitLayout);
                 element.transform.localScale = new Vector3(1,1,1);
-            }
-        }
-        foreach(var item in options.loadout.trinkets) {
-            var uiElements = TraitUIGenerator.CreateAbilityDescriptions(item.abilities, options.gameObject, item);
-            foreach (var element in uiElements) {
-                element.transform.SetParent(traitLayout);
-                element.transform.localScale = new Vector3(1, 1, 1);
             }
         }
     }
@@ -217,24 +204,11 @@ public class CharacterCreator : MonoBehaviour {
         inventory.helmet = options.loadout.helmet;
         inventory.armour = options.loadout.armour;
 
-        int i = 1;
-        foreach(var item in options.loadout.trinkets) {
-            var trinket = inventory.GetType().GetField("trinket" + i);
-            trinket.SetValue(inventory, item);
-            i++;
-        }
-
-        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
-        RefreshContent(currentCharacter);
-        UpdateLabels();
+        RefreshContent(currentCharacter,false);
     }
     public void NextGender(int direction) {
         options.body = CCAssets.i.NextOption(direction, CCAssets.i.bodies, options.body);
-        RefreshContent(currentCharacter);
-        UpdateLabels();
-        CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
-        CheckBodyPalette();
-        
+        RefreshContent(currentCharacter,false);
     }
 
     public void CheckBodyPalette() {
@@ -267,26 +241,35 @@ public class CharacterCreator : MonoBehaviour {
         CharacterSpriteGenerator.CreateCharacterSprite(currentCharacter);
     }
 
-    public void RefreshContent(GameObject character) {
+    public void RefreshContent(GameObject character, bool defaultValues) {
         var paletteButtonsInLayout = editLayout.Find("Race").Find("PaletteLayout");
-        CreatePaletteButtons(paletteButtonsInLayout, options.race.bodyPalettes,PaletteButtonType.Body);
-        options.bodyPalette = paletteButtonsInLayout.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
+        options = character.GetComponent<CCOptions>();
+        if(options.body.name != "Undead")CreatePaletteButtons(paletteButtonsInLayout, options.race.bodyPalettes, PaletteButtonType.Body);
+        CheckBodyPalette();
+        if (defaultValues) {
+            options.bodyPalette = paletteButtonsInLayout.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
 
-        if(options.race.features.Count > 0) {
-            options.feature = options.race.features[0];
-            options.featurePalette = FirstPaletteInLayout("Feature", PaletteButtonType.Feature, options.race.featurePalettes);
-            var paletteFeatureButtons = editLayout.Find("Feature").Find("PaletteLayout");
-            CreatePaletteButtons(paletteFeatureButtons, options.race.featurePalettes, PaletteButtonType.Feature);
-            options.featurePalette = paletteFeatureButtons.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
+            if (options.race.features.Count > 0) {
+                options.feature = options.race.features[0];
+                options.featurePalette = FirstPaletteInLayout("Feature", PaletteButtonType.Feature, options.race.featurePalettes);
+                var paletteFeatureButtons = editLayout.Find("Feature").Find("PaletteLayout");
+                CreatePaletteButtons(paletteFeatureButtons, options.race.featurePalettes, PaletteButtonType.Feature);
+                options.featurePalette = paletteFeatureButtons.GetChild(0).gameObject.GetComponent<PaletteButton>().palette;
+            }
+            else {
+                options.feature = null;
+                options.featurePalette = null;
+            }
         }
-        else {
-            options.feature = null;
-            options.featurePalette = null;
-        }
+
+
 
         var traits = character.GetComponent<Inventory>().traits;
         traits.Clear();
         foreach (ItemAbstract item in options.race.permanentTraits) {
+            traits.Add(item);
+        }
+        foreach (ItemAbstract item in options.loadout.traits) {
             traits.Add(item);
         }
         if (options.body.name == "Undead") {

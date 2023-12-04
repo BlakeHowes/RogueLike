@@ -2,7 +2,6 @@
 using LlamAcademy.Spring.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using static ItemStatic;
 using static PartyManager;
@@ -109,12 +108,6 @@ public class DealDamage : Action,IDescription
             var weaponDamage = weapon.GetDamage(targetGo, parentGO);
             targetGo.GetComponent<Stats>().TakeDamage(weaponDamage, origin);
             if (parentGO) parentGO.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, Manager.GetGlobalValues().onAttackNudgeAmount), 24, 1000);
-        }
-        if (parentItem is Skill) {
-            var skill = parentItem as Skill;
-            var weaponDamage = skill.GetDamage();
-            targetGo.GetComponent<Stats>().TakeDamage(weaponDamage, origin);
-            //if (parentGO) parentGO.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, Manager.GetGlobalValues().onAttackNudgeAmount), 24, 1000);
         }
     }
 

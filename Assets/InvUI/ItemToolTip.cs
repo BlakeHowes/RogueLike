@@ -15,9 +15,9 @@ public class ItemToolTip : MonoBehaviour
     public Transform traitsLayout;
     public GameObject traitPrefab;
     public GameObject statsPrefab;
-    public void OnEnable() {
-        //gameObject.SetActive(false);
-    }
+    public RectTransform backgroundRect;
+    public RectTransform parentRect;
+
     public void UpdateToolTip(ItemAbstract item,bool top) {
         if(item == null) {
             gameObject.SetActive(false);
@@ -36,9 +36,9 @@ public class ItemToolTip : MonoBehaviour
         AddAbilitysToUI(item.abilities,null, item);
         var position = Input.mousePosition;
         transform.position = new Vector3(position.x, position.y, 0);
-        //if(item.tile)
-        //handle.transform.Find("Image").GetComponent<Image>().sprite = item.tile.sprite;
+        KeepFullyOnScreen();
     }
+
 
     public void AddAbilitysToUI(List<Ability> abilities, GameObject go, ItemAbstract item) {
         foreach (var ability in abilities) {
@@ -102,9 +102,32 @@ public class ItemToolTip : MonoBehaviour
         AddElementsToToolTip(descriptionElements);
     }
 
+    public void KeepFullyOnScreen() {
+        RectTransform canvas = transform.parent.GetComponent<RectTransform>(); ;
+        RectTransform rect = backgroundRect;
+
+        Vector2 sizeDelta = rect.sizeDelta * transform.localScale;
+        Vector2 anchorOffset = canvas.sizeDelta * (rect.anchorMin - Vector2.one / 2);
+
+        Vector2 maxPivotOffset = sizeDelta * (rect.pivot - (Vector2.one / 2) * 2);
+        Vector2 minPivotOffset = sizeDelta * ((Vector2.one / 2) * 2 - rect.pivot);
+        Vector2 position = rect.anchoredPosition;
+        float minX = (canvas.sizeDelta.x) * -0.5f - anchorOffset.x - minPivotOffset.x + sizeDelta.x;
+        float maxX = (canvas.sizeDelta.x) * 0.5f - anchorOffset.x + maxPivotOffset.x;
+        float minY = (canvas.sizeDelta.y) * -0.5f - anchorOffset.y - minPivotOffset.y + sizeDelta.y;
+        float maxY = (canvas.sizeDelta.y) * 0.5f - anchorOffset.y + maxPivotOffset.y;
+
+        position.x = Mathf.Clamp(position.x, minX, maxX);
+        position.y = Mathf.Clamp(position.y, minY, maxY);
+
+        rect.anchoredPosition = position;
+    }
+
+
+
     public void AddElementsToToolTip(List<GameObject> elements) {
         foreach (var descriptionElement in elements) {
-            descriptionElement.transform.parent = traitsLayout.transform;
+            descriptionElement.transform.SetParent(traitsLayout.transform);
             descriptionElement.transform.localScale = new Vector3(1, 1, 1);
         }
         var position = Input.mousePosition;
@@ -115,6 +138,7 @@ public class ItemToolTip : MonoBehaviour
         }
         handle.transform.localPosition = Vector3.zero;
         transform.position = new Vector3(position.x + offset, position.y - 150, 0);
+        KeepFullyOnScreen();
     }
 
     public void AddTraitUIItem(Sprite sprite,string description) {
@@ -122,10 +146,5 @@ public class ItemToolTip : MonoBehaviour
         var text = clone.transform.Find("Text");
         text.GetComponent<TextMeshProUGUI>().text = description;
         if(sprite)text.Find("Icon").GetComponent<Image>().sprite = sprite;
-    }
-
-    public void Update() {
-        //var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //transform.position = new Vector3(position.x, position.y, 0);
     }
 }

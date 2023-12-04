@@ -229,4 +229,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   sightRange: 12
-  targetsTags: 10
+  targetsTags: 18

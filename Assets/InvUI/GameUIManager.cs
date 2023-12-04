@@ -24,8 +24,8 @@ public class GameUIManager : MonoBehaviour {
     public AbilitySelection abilitySelection;
     public GameObject AbilitySelectLayout;
     public TraitAnimation traitAnimation;
-    public void SetAP(float amount) {
-        apUIElement.ChangeAP(Mathf.FloorToInt(amount));
+    public void UpdateActionPointUI(Stats stats) {
+        apUIElement.UpdateActionPointUI(stats);
     }
 
     public void AnimateNotEnoughAP() {

@@ -8,6 +8,7 @@ using static PartyManager;
 public class Skill : ItemAbstract{
     public RangeType rangeType;
     public Tags targetsTags;
+    public WeaponType weaponType;
     [Range(0, 16)]
     public int range = 5;
     public int AOE = 0;
@@ -15,14 +16,13 @@ public class Skill : ItemAbstract{
     public int actionPointCost = 2;
     [Range(0, 17)]
     public int coolDown = 2;
+    public bool useWeaponRange;
 
-    public Vector3Int targetedStartPosition;
-    public bool startPositionSet = false;
+    [HideInInspector]public Vector3Int targetedStartPosition;
+    [HideInInspector] public bool startPositionSet = false;
+    [HideInInspector] public int totalTargets = 0;
 
-    public int totalTargets = 0;
 
-    public Vector2Int skillDamage;
-    public WeaponType weaponType;
 
     private Stats parentStats;
     public enum RangeType {
@@ -34,11 +34,6 @@ public class Skill : ItemAbstract{
         ClickAnywhere,
     }
 
-    public int GetDamage() {
-        var damage = Random.Range(skillDamage.x, skillDamage.y + 1);
-        return damage;
-    }
-
     public int GetAPCost() {
         var apModified = actionPointCost;
         if (parentStats) {
@@ -47,7 +42,11 @@ public class Skill : ItemAbstract{
         return apModified;
     }
 
-    public int GetRange() {
+    public int GetRange(GameObject character) {
+        if (useWeaponRange) {
+            var weapon = character.GetComponent<Inventory>().GetMainHandAsWeapon();
+            if (weapon) { return weapon.GetRange(character); }
+        }
         return range;
     }
 
@@ -81,7 +80,7 @@ public class Skill : ItemAbstract{
                     }
                 }
             }
-            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), GetAPCost());
+            parentGO.GetComponent<Stats>().ChangeActionPoints(GetAPCost());
             return;
         }
 
@@ -98,7 +97,7 @@ public class Skill : ItemAbstract{
             if (inventory.GetCoolDown(this) > 0) { return; }
             inventory.AddCoolDown(coolDown + 1, this);
 
-            MouseManager.i.ChangeActionPoints(parentGO.GetComponent<Stats>(), GetAPCost());
+            parentGO.GetComponent<Stats>().ChangeActionPoints(GetAPCost());
         }
 
         foreach (var ability in abilities) {
@@ -118,7 +117,7 @@ public class Skill : ItemAbstract{
         if (parentGO.GetComponent<Stats>().actionPoints < GetAPCost()) { return false; }
         if (coolDownTimer > 0) { return false; }
         if (rangeType == RangeType.CircleUnderMouse) {
-            if (!position.InRange(origin, GetRange())) { return false; }
+            if (!position.InRange(origin, GetRange(parentGO))) { return false; }
         }
         return true;
     }

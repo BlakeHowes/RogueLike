@@ -1,7 +1,6 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEditor.Callbacks;
-using Unity.VisualScripting;
 
 namespace FolderIcons {
     public class GizmoIconUtility {
@@ -49,7 +48,7 @@ namespace FolderIcons {
         }
 
         public static Texture2D CropTexture(Texture2D texture,Sprite sprite) {
-            if (sprite.rect.size == texture.Size()) { return sprite.texture; }
+            if (sprite.rect.size == new Vector2(texture.width,texture.height)) { return sprite.texture; }
             var rect = sprite.textureRect;
             Color[] colours = texture.GetPixels(Mathf.FloorToInt(rect.xMin), Mathf.FloorToInt(rect.yMin), Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));
             Texture2D croppedTexture = new Texture2D(Mathf.FloorToInt(rect.size.x), Mathf.FloorToInt(rect.size.y));

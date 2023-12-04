@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DevHotkeys : MonoBehaviour
@@ -21,7 +18,7 @@ public class DevHotkeys : MonoBehaviour
             stats.actionPointsBase = 10;
             go.GetComponent<Inventory>().ClearCoolDowns();
             InventoryManager.i.UpdateInventory(go);
-            GameUIManager.i.SetAP(10);
+            GameUIManager.i.UpdateActionPointUI(stats);
         }
 
         if (Input.GetKeyDown(KeyCode.A)) {

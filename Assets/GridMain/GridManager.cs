@@ -204,7 +204,7 @@ public class GridManager : MonoBehaviour {
         if (currentCharacter.activeSelf) {
             if (PartyManager.i.party.Contains(currentCharacter)) {
                 //InstantiateGosMechsSurfacesAroundCharacters();
-                GameUIManager.i.SetAP(currentCharacter.GetComponent<Stats>().actionPoints);
+                GameUIManager.i.UpdateActionPointUI(currentCharacter.GetComponent<Stats>());
                 InventoryManager.i.UpdateInventory(currentCharacter);
             }
         }
@@ -279,6 +279,7 @@ public class GridManager : MonoBehaviour {
                     PartyManager.i.AddPartyMember(character);
                 }
             }
+            PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
             return;
         }
     DebugSpawn:
@@ -289,6 +290,7 @@ public class GridManager : MonoBehaviour {
             PartyManager.i.AddPartyMember(clone);
             clone.transform.parent = null;
         }
+        PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
         globalValues.OnStartOfRun();
     }
 
@@ -347,7 +349,7 @@ public class GridManager : MonoBehaviour {
         CreateFog();
         SpawnParty();
         UpdateGame();
-        GameUIManager.i.SetAP(partyPrefabs[0].GetComponent<Stats>().actionPointsBase);
+        GameUIManager.i.UpdateActionPointUI(partyPrefabs[0].GetComponent<Stats>());
         //ClearFog();
  
 

@@ -16,5 +16,4 @@ MonoBehaviour:
   offHand: {fileID: 0}
   helmet: {fileID: 11400000, guid: 3776d516912869a40ba3c4b47d5e3144, type: 2}
   armour: {fileID: 11400000, guid: 64514875beb59eb49bad0ec9064a2e20, type: 2}
-  trinkets:
-  - {fileID: 11400000, guid: b2c2a2a9adec9ba4a92e27a9f931d915, type: 2}
+  traits: []

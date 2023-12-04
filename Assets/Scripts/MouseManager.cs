@@ -103,9 +103,11 @@ public class MouseManager : MonoBehaviour
         //Range Check Hack
         if (itemSelected is Skill) {
             var skill = itemSelected as Skill;
-            if(skill.rangeType != Skill.RangeType.ClickAnywhere)
-            if (!mousePosition.InRange(PartyManager.i.currentCharacter.Position(), skill.GetRange())) {
-                return;
+            if (skill.rangeType != Skill.RangeType.ClickAnywhere) {
+                var currentCharacter = PartyManager.i.currentCharacter;
+                if (!mousePosition.InRange(currentCharacter.Position(), skill.GetRange(currentCharacter))) {
+                    return;
+                }
             }
         }
 
@@ -223,10 +225,10 @@ public class MouseManager : MonoBehaviour
             if (gameobjectundermouse.CompareTag("Enemy")) { return false; }
             if (!GridManager.i.tools.InMeeleeRange(mousePosition, origin)) { return false; }
 
-            if (currentStats.actionPoints >= currentStats.walkCost) {
+            if (currentStats.DoIHaveActionPointsToWalk()) {
                 if (gameobjectundermouse.CompareTag("Party") || gameobjectundermouse.CompareTag("Summon")) {
                     PathingManager.i.SwapPlaces(mousePosition, origin);
-                    currentStats.actionPoints -= currentStats.walkCost;
+                    currentStats.UseWalkActionPoints();
                     EndOfAction(currentCharacter, currentStats);
                     return true;
                 }
@@ -240,13 +242,13 @@ public class MouseManager : MonoBehaviour
 
         if (inventory.items.Contains(itemSelected)) {
             Actions.i.ThrowItem(position, origin, itemSelected, inventory);
-            ChangeActionPoints(currentStats, 1);
+            currentStats.ChangeActionPoints(-1);
             SelectItem(null);
             EndOfAction(currentCharacter, currentStats);
             return true;
         }
         var skill = itemSelected as Skill;
-        if (CheckActionPoints(currentStats, skill.GetAPCost()))
+        if (currentStats.DoIHavenEnoughNormalActionPoints(skill.GetAPCost()))
         itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
         GameUIManager.i.apUIElement.HighlightAP(-1,null);
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
@@ -260,6 +262,7 @@ public class MouseManager : MonoBehaviour
     public bool Attack(Vector3Int position, Vector3Int origin,GameObject target,GameObject currentCharacter) {
         if (target == null) { return false; }
         var currentStats = currentCharacter.GetComponent<Stats>();
+        if (!currentStats.DoIHavenEnoughNormalActionPoints(1)) { return false; }
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
         if(currentStats.state == State.Idle) {
@@ -273,7 +276,7 @@ public class MouseManager : MonoBehaviour
         }
         else {
             PathingManager.i.FlipCharacter(currentCharacter, position, origin);
-            currentStats.actionPoints--;
+            currentStats.ChangeActionPoints(-1);
 
            
             if (inventory.mainHand || inventory.offHand) { return true; }
@@ -283,8 +286,8 @@ public class MouseManager : MonoBehaviour
             
         Meelee:
         var range = GridManager.i.tools.MeeleeRange(origin);
-        if (range.Contains(position) && currentStats.actionPoints > 0) {
-            currentStats.actionPoints -= 1;
+        if (range.Contains(position) && currentStats.DoIHavenEnoughNormalActionPoints(1)) {
+            currentStats.ChangeActionPoints(-1);
             target.GetComponent<Stats>().TakeDamage(1, origin);
             PathingManager.i.FlipCharacter(currentCharacter,position, origin);
             currentCharacter.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, globalValues.onAttackNudgeAmount), 24, 1000);
@@ -308,7 +311,7 @@ public class MouseManager : MonoBehaviour
         if (target != currentCharacter) { return; }
         if (position.Item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
-            currentStats.actionPoints -= 1;
+            currentStats.ChangeActionPoints(-1);
             EndOfAction(currentCharacter, currentStats);
             return;
         }
@@ -328,17 +331,17 @@ public class MouseManager : MonoBehaviour
             }
         }
 
-        currentStats.actionPoints -= 1;
+        currentStats.ChangeActionPoints(-1);
         EndOfAction(currentCharacter, currentStats);
     }
 
     public bool WalkLeader(Vector3Int position, Vector3Int origin, Stats stats) {
-        var walkCost = stats.walkCost;
-        if (walkCost > stats.actionPoints) { return false; }
+        if (!stats.DoIHaveActionPointsToWalk()) { return false; }
+
 
         var walked = PathingManager.i.MoveOneStepLeader(position, origin,stats.gameObject);
         if (walked) {
-            stats.actionPoints -= walkCost;
+            stats.UseWalkActionPoints();
             return true;
         }
         return false;
@@ -346,37 +349,12 @@ public class MouseManager : MonoBehaviour
 
     public bool Walk(Vector3Int position, Vector3Int origin, Stats stats) {
         if (!position.IsWalkable()) { return false; }
-        var walkCost = stats.walkCost;
-        if (walkCost > stats.actionPoints) { return false; }
+        if (!stats.DoIHaveActionPointsToWalk()) { return false; }
         var walked = PathingManager.i.MoveOneStep(position, origin);
         if (walked) {
-            stats.actionPoints -= walkCost;
+            stats.UseWalkActionPoints();
             return true;
         }
-        return false;
-    }
-
-    public bool Fly(Vector3Int position, Vector3Int origin, Stats stats) {
-        if (!position.IsWalkable()) { return false; }
-        var walkCost = stats.walkCost;
-        if (walkCost > stats.actionPoints) { return false; }
-        var walked = PathingManager.i.MoveOneStep(position, origin);
-        if (walked) {
-            stats.actionPoints -= walkCost;
-            return true;
-        }
-        return false;
-    }
-
-    public bool CheckActionPoints(Stats stats, int actionPoints) {
-        if (stats.state == State.Idle) { return true; }   //If outside of combat dont use action points 
-        if (actionPoints <= stats.actionPoints) { return true; }
-        return false;
-    }
-
-    public bool ChangeActionPoints(Stats stats,int actionPoints) {
-        if(stats.state == State.Idle) { return true; }   //If outside of combat dont use action points 
-        if(actionPoints <= stats.actionPoints) { stats.actionPoints -= actionPoints; return true; }
         return false;
     }
 
@@ -404,7 +382,7 @@ public class MouseManager : MonoBehaviour
         var partyManager = PartyManager.i;
         if (!partyManager.currentCharacter.CompareTag("Party")) { return; }
         if (state == State.Combat) { isRepeatingActionsOutsideCombat = false; }
-        if (partyManager.currentCharacter.GetComponent<Stats>().actionPoints <= 0) {
+        if (partyManager.currentCharacter.GetComponent<Stats>().AmITotallyOutOfActionPoints()) {
             partyManager.EndTurn();
             isRepeatingActionsOutsideCombat = false;
         }
@@ -493,8 +471,9 @@ public class MouseManager : MonoBehaviour
             var origin = currentCharacter.Position();
             var currentStats = currentCharacter.GetComponent<Stats>();
             currentStats.RefreshCharacter(origin);
-            GameUIManager.i.ShowRange(origin, skill.GetRange(), true);
-            if (mousePosition.InRange(origin, skill.GetRange())) {
+            var range = skill.GetRange(currentCharacter);
+            GameUIManager.i.ShowRange(origin, range, true);
+            if (mousePosition.InRange(origin, range)) {
                 GameUIManager.i.ShowRange(mousePosition, skill.AOE);
             }
             else {

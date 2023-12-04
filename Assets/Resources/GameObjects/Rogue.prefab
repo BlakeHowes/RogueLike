@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6780645703283991165}
   - component: {fileID: -2139632145659441176}
+  - component: {fileID: -1650173262576315935}
   - component: {fileID: 6780645703283991166}
   - component: {fileID: 6780645703283991167}
   - component: {fileID: 7475694374052512725}
@@ -153,6 +154,32 @@ MonoBehaviour:
   characterOffset: {x: 31, y: 15, z: 0}
   hideWeapons: 0
   hideHelmet: 0
+--- !u!114 &-1650173262576315935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780645703283991136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b92bf1a635be1c45abc12ecdb020115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePoints:
+  - type: 2
+    item: {fileID: 11400000, guid: 7252269420e26004e8504f204ccca940, type: 2}
+  - type: 2
+    item: {fileID: 11400000, guid: 6b51b67e965cfac4592ff2dbd985b981, type: 2}
+  - type: 0
+    item: {fileID: 0}
+  - type: 0
+    item: {fileID: 0}
+  - type: 1
+    item: {fileID: 0}
+  - type: 1
+    item: {fileID: 0}
+  points: []
 --- !u!114 &6780645703283991166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +195,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 50
   maxArmourBase: 0
   actionPointsBase: 4

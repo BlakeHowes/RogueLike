@@ -64,6 +64,12 @@ public static class ItemStatic {
         Druid
     }
 
+    public enum ActionPointType {
+        Normal,
+        Movement,
+        Custom,
+    }
+
     public enum EquipmentType {
         mainHand,
         offHand,

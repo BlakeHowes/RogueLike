@@ -28,6 +28,27 @@ MonoBehaviour:
       stringValue: 
   - callType: 0
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 10}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: b57bf36f347e92b42a874e6fa8b63fa8, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 10}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Select a character then a position to drop them, collisions deal
+        4-10 damage
     - action: {fileID: 11400000, guid: 92879ffd8ddf7c04a883fc2fa8749c01, type: 2}
       intValue: 0
       floatValue: 0
@@ -58,13 +79,23 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+    - action: {fileID: 11400000, guid: 242c1f441d8db854bb1b247bb25adbaa, type: 2}
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
+      vector2IntValue: {x: 4, y: 10}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: b175c9666dd5b1d4cb312af3064f711c, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 4, y: 10}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
@@ -88,25 +119,24 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+    - action: {fileID: 11400000, guid: b175c9666dd5b1d4cb312af3064f711c, type: 2}
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
-      vector2IntValue: {x: 0, y: 0}
+      vector2IntValue: {x: 4, y: 10}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
   rangeType: 4
   targetsTags: -1
-  range: 4
+  weaponType: 0
+  range: 6
   AOE: 0
   actionPointCost: 2
-  actionPointCostTemp: 0
   coolDown: 2
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 2
-  skillDamage: {x: 4, y: 10}
-  weaponType: 0

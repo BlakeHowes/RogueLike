@@ -26,7 +26,7 @@ public class SkillSlot : MonoBehaviour
             EventSystem.current.SetSelectedGameObject(null);
             return; 
         } 
-        if (skill.GetAPCost() > stats.actionPoints) {
+        if (!stats.DoIHavenEnoughNormalActionPoints(skill.GetAPCost())) {
             EventSystem.current.SetSelectedGameObject(null);
             MouseManager.i.itemSelected = null; 
             GameUIManager.i.AnimateNotEnoughAP();
@@ -39,7 +39,7 @@ public class SkillSlot : MonoBehaviour
 
         stats.RefreshCharacter(postion);
 
-        GameUIManager.i.ShowRange(postion, skill.GetRange());
+        GameUIManager.i.ShowRange(postion, skill.GetRange(currentCharacter));
         GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost(), skill);
     }
 

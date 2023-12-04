@@ -104,7 +104,7 @@ public class Surface : ScriptableObject
                 combination.inputSurface.name == surface.name + "(Clone)"||
                 combination.inputSurface.name == surface.name) {
                 GridManager.i.SetSurface(position, combination.resultingSurface);
-                if (combination.subItem) { combination.subItem.Call(position, position,null, combination.callType); }
+                if (combination.subItem) { combination.subItem.Call(position, position,null, ItemStatic.CallType.OnActivate); }
                 return true;
             }
         }
@@ -115,6 +115,5 @@ public class Surface : ScriptableObject
 public struct Combination {
     public Surface inputSurface;
     public Surface resultingSurface;
-    public ItemStatic.CallType callType;
     public ItemAbstract subItem;
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Body 2
   m_EditorClassIdentifier: 
   lightestColour: {r: 0.7735849, g: 0.7569797, b: 0.7042542, a: 1}
-  lightColour: {r: 0.6037736, g: 0.55980587, b: 0.498398, a: 1}
+  lightColour: {r: 0.5849056, g: 0.5123452, b: 0.45523316, a: 1}
   midColour: {r: 0.5754717, g: 0.4739498, b: 0.4261748, a: 1}
   darkColour: {r: 0.26415092, g: 0.19508843, b: 0.19063722, a: 1}
   darkestColour: {r: 0.16981131, g: 0.12896048, b: 0.12896048, a: 1}

@@ -11,6 +11,7 @@ public class Stats : MonoBehaviour {
     public TileBase tile;
     public PartyManager.State state = PartyManager.State.Idle;
     [HideInInspector] public ElementalStats elementalStats;
+    [HideInInspector] public ActionPointStack actionPointStack;
     [Header("Base Stats")]
     public int maxHealthBase;
     public int maxArmourBase;
@@ -84,6 +85,8 @@ public class Stats : MonoBehaviour {
         inventory = GetComponent<Inventory>();
         TryGetComponent(out ElementalStats elementalStats);
         this.elementalStats = elementalStats;
+        TryGetComponent(out ActionPointStack actionPointStack);
+        this.actionPointStack = actionPointStack;
         CharacterSpriteGenerator.CreateCharacterSprite(gameObject);
     }
 
@@ -303,7 +306,52 @@ public class Stats : MonoBehaviour {
         if(healthbar)healthbar.UpdateHealthBar();
     }
 
+
+    public void ChangeActionPoints(int amount) {
+        if (actionPointStack) {
+            actionPointStack.ChangeActionPoints(amount);
+            return;
+        }
+
+        actionPoints += amount;
+    }
+
+    public bool AmITotallyOutOfActionPoints() {
+        if (actionPointStack) {
+            return actionPointStack.AmITotallyOutOfActionPoints();
+        }
+
+        if (actionPoints <= 0) return true;
+        return false;
+    }
+
+    public bool DoIHavenEnoughNormalActionPoints(int cost) {
+        if (actionPointStack) {
+            return actionPointStack.DoIHavenEnoughNormalActionPoints(cost);
+        }
+
+        if (actionPoints >= cost) return true;
+        return false;
+    }
+
+    public bool DoIHaveActionPointsToWalk() {
+        if (actionPointStack) {
+            return actionPointStack.DoIHaveActionPointsToWalk(walkCost);
+        }
+        if (actionPoints >= walkCost) return true;
+        return false;
+    }
+
+    public void UseWalkActionPoints() {
+        if (actionPointStack) {
+            actionPointStack.UseWalkActionPoints(walkCost);
+            return;
+        }
+        actionPoints -= walkCost;
+    }
+
     public void ResetActionPoints() {
+        if (actionPointStack) { actionPointStack.ResetActionPoints(); }
         actionPoints = actionPointsTemp;
         if(actionPoints == 0) { actionPoints = actionPointsBase; }
     }
