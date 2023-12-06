@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e01616043d0ab83479ba67d1d3936ff4, type: 3}
   m_Name: AtGosAroundMouse
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
   origin: {x: 0, y: 0, z: 0}
+  position: {x: 0, y: 0, z: 0}
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
-  extraVariableType: 1
-  requireTarget: 1
+  extraVariableType: 0
+  requireTarget: 0

@@ -39,7 +39,7 @@ MonoBehaviour:
       stringValue: 
   shopValue: 15
   weaponType: 3
-  damageRange: {x: 8, y: 12}
+  damageRange: {x: 4, y: 8}
   accuracyBase: 100
   rangeBase: 8
   heldOffset: {x: 0, y: 0, z: 0}

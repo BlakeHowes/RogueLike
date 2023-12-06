@@ -17,12 +17,12 @@ public class APUIElement : MonoBehaviour
     }
     public void HighlightAP(int amount,Skill skill) {
         if (skill) {
-            if (skill.GetAPCost() > PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints) {
+            if (!PartyManager.i.currentCharacter.GetComponent<Stats>().DoIHavenEnoughNormalActionPoints(skill.GetAPCost())) {
                 for (int i = transform.childCount - 1; i >= 0; i--) {
                     var child = transform.GetChild(i);
                     if (child.gameObject.activeSelf) {
                         var rend = child.GetComponent<Image>();
-
+                        if(rend.sprite == walkAPSprite) { continue; }
                         rend.color = Color.red;
                     }
 
@@ -35,8 +35,8 @@ public class APUIElement : MonoBehaviour
             var child = transform.GetChild(i);
             if (child.gameObject.activeSelf) {
                 var rend = child.GetComponent<Image>();
-               
-                if(amount > 0) rend.color = highlightColour;
+                if (rend.sprite == walkAPSprite) { continue; }
+                if (amount > 0) rend.color = highlightColour;
                 if (amount <= 0) rend.color = defaultColor;
                 amount--;
             }
@@ -55,7 +55,12 @@ public class APUIElement : MonoBehaviour
             switch (point.type) {
                 case ItemStatic.ActionPointType.Normal: image.sprite = normalAPSprite; break;
                 case ItemStatic.ActionPointType.Movement: image.sprite = walkAPSprite; break;
-                case ItemStatic.ActionPointType.Custom: image.sprite = point.item.tile.sprite; break;
+                case ItemStatic.ActionPointType.Custom: 
+                    if(point.item == null) {
+                        point.type = ItemStatic.ActionPointType.Normal;
+                        image.sprite = normalAPSprite; break;
+                    }
+                    image.sprite = point.item.tile.sprite; break;
             }
             i++;
         }

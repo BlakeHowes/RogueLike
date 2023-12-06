@@ -5,20 +5,28 @@ using UnityEngine;
 public class EffectManager : MonoBehaviour
 {
     public static EffectManager i;
-    private Vector3 offset = new Vector3(0.5f, 0.5f, 0);
+    private Vector3 offset = new Vector3(0.5f, 0.7f, 0);
     public GameObject hitParticles;
-    public ActionContainer throwAction;
+    public GlobalValues globalValues;
     public void Awake() {
         i = this;
+        globalValues = Manager.GetGlobalValues();
     }
 
     public void HitParticleEffect(Vector3Int position) {
         CreateSingleParticleEffect(position, hitParticles);
     }
 
-    public void ShootBasicProjectile(Vector3Int position, Vector3Int origin,Sprite sprite) {
-        throwAction.prefabValue.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0,sprite);
-        throwAction.action.Condition(position, origin,null, null, null, throwAction);
+    public void SpinningThrowProjectile(Vector3Int position, Vector3Int origin,Sprite sprite) {
+        var projectile = globalValues.spinningThrowProjectile;
+        projectile.prefabValue.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0,sprite);
+        projectile.action.Condition(position, origin,null, null, null, projectile);
+    }
+
+    public void ShootBasicProjectile(Vector3Int position, Vector3Int origin, Sprite sprite) {
+        var projectile = globalValues.straightThrowProjectile;
+        projectile.prefabValue.GetComponent<ParticleSystem>().textureSheetAnimation.SetSprite(0, sprite);
+        projectile.action.Condition(position, origin, null, null, null, projectile);
     }
 
     public void CreateLineEffect(Vector3 position,Vector3 origin,GameObject linePrefab) {

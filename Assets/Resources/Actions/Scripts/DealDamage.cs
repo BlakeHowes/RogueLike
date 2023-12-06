@@ -42,7 +42,8 @@ public class DealDamage : Action,IDescription
         Area,
         Range,
         DamageTaken,
-        Armour
+        Armour,
+        MainHandIgnoringRange
     }
 
     public void Percentage() {
@@ -129,6 +130,7 @@ public class DealDamage : Action,IDescription
             case DamageSource.Range: targetGo.GetComponent<Stats>().TakeDamage(Random.Range(damageRange.x,damageRange.y +1), position); break;
             case DamageSource.DamageTaken: targetGo.GetComponent<Stats>().TakeDamage(parentGO.GetComponent<Stats>().damageTaken, origin); break;
             case DamageSource.MainHand: UseCharacterWeapon(parentGO.GetComponent<Inventory>().GetMainHandAsWeapon()); break;
+            case DamageSource.MainHandIgnoringRange: parentGO.GetComponent<Inventory>().GetMainHandAsWeapon().CallIgnoringRange(position, origin, parentGO, CallType.OnActivate); break;
             case DamageSource.OffHand: UseCharacterWeapon(parentGO.GetComponent<Inventory>().GetOffHandAsWeapon()); break;
             case DamageSource.Armour: targetGo.GetComponent<Stats>().TakeDamage(parentGO.GetComponent<Stats>().armour, origin); break;
         }

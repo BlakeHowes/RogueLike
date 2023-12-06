@@ -58,7 +58,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Attacks twice
+      stringValue: Attacks three times
     - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
       intValue: 0
       floatValue: 0.1
@@ -79,7 +79,17 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: Attacks twice
-  shopValue: 20
+    - action: {fileID: 11400000, guid: 81f7b1f4efb38594a97cd9dd1191fc58, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Attacks twice
+  shopValue: 50
   weaponType: 2
   damageRange: {x: 12, y: 17}
   accuracyBase: 100

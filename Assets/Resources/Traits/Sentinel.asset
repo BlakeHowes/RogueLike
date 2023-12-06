@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: If close ally is attacked, retaliate
+      stringValue: If an Adjacent Ally is attacked, retaliate
     - action: {fileID: 11400000, guid: c1279e94e5631d94fb3aeb036ed68f9f, type: 2}
       intValue: 2
       floatValue: 0

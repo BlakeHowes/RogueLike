@@ -386,7 +386,6 @@ IL2CPP_EXTERN_C RuntimeClass* Action_3_tB66A92817D753A594EC84167B55729A989805797
 IL2CPP_EXTERN_C RuntimeClass* Action_3_tF0DE5B83F2AFD393EC6368ED5B01330C2C61E154_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CwHelper_tA75B82888802E2D673AEAF8F84E219275DE6DE77_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* FloatEvent_t327672CEDA917D9CF41548681BEAD1C12C30EFEA_il2cpp_TypeInfo_var;
@@ -7838,12 +7837,6 @@ IL_0010:
 // System.Boolean Lean.Touch.LeanFingerDown::RequiredButtonPressed(Lean.Touch.LeanFinger)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LeanFingerDown_RequiredButtonPressed_m54D857FC87A906AD75DA65042D2C4CCB9F6A6B19 (LeanFingerDown_t4FD7FEE522FC0B3AAF9240A040551A828D52DF17* __this, LeanFinger_t26AAB32CCAF9C1785BDCF4BAB1F58A2AEE90F77D* ___finger0, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	{
 		// if (finger.Index < 0)
 		LeanFinger_t26AAB32CCAF9C1785BDCF4BAB1F58A2AEE90F77D* L_0 = ___finger0;
@@ -7856,7 +7849,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LeanFingerDown_RequiredButtonPressed_m54
 	}
 	{
 		// if (CwInput.GetMouseExists() == true)
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = CwInput_GetMouseExists_m5D88DE70E6D21E03FCEDFB12B7383D5D59A9DED2(NULL);
 		if (!L_2)
@@ -7873,7 +7865,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LeanFingerDown_RequiredButtonPressed_m54
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = CwInput_GetMouseIsHeld_m045519FEF1D86A24F7E729561DB8964986E6C9B2(0, NULL);
 		if (!L_4)
@@ -7896,7 +7887,6 @@ IL_0024:
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_6;
 		L_6 = CwInput_GetMouseIsHeld_m045519FEF1D86A24F7E729561DB8964986E6C9B2(1, NULL);
 		if (!L_6)
@@ -7919,7 +7909,6 @@ IL_0038:
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_8;
 		L_8 = CwInput_GetMouseIsHeld_m045519FEF1D86A24F7E729561DB8964986E6C9B2(2, NULL);
 		if (!L_8)
@@ -8381,7 +8370,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tBD1C7A6DDCC7BB4E36CB06B8F1176E9C8A977
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_AddRange_mC331991D46B7CFB6C2027C1802D77AD52EAC6CF1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_m3D1F4EA539045F02E8865A44BEB25CAAEED5455A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_RemoveAt_mC97D14861853023E25ADE3D450AEC2E7EA273E66_RuntimeMethod_var);
@@ -8613,7 +8601,6 @@ IL_00f2:
 	}
 	{
 		int32_t L_39 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_40;
 		L_40 = CwInput_GetMouseIsHeld_m045519FEF1D86A24F7E729561DB8964986E6C9B2(L_39, NULL);
 		if (L_40)
@@ -8623,7 +8610,6 @@ IL_00f2:
 	}
 	{
 		int32_t L_41 = V_2;
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_42;
 		L_42 = CwInput_GetMouseWentUp_m9B17483D3D864CC0DB68EFDBADD037277A7324B9(L_41, NULL);
 		if (L_42)
@@ -16393,12 +16379,6 @@ IL_00f5:
 // System.Void Lean.Touch.LeanTouchSimulator::HandleSimulateFingers()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeanTouchSimulator_HandleSimulateFingers_m03F9ABF4B6AD152015DA5B91FA55FC510F2BA3D8 (LeanTouchSimulator_t55D40867543BD4AB1A21972F0E856AB85A02D0B3* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	bool V_1 = false;
@@ -16408,7 +16388,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeanTouchSimulator_HandleSimulateFingers
 	memset((&V_4), 0, sizeof(V_4));
 	{
 		// if (CwInput.GetMouseExists() == true && CwInput.GetKeyboardExists() == true)
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = CwInput_GetMouseExists_m5D88DE70E6D21E03FCEDFB12B7383D5D59A9DED2(NULL);
 		if (!L_0)
@@ -16417,7 +16396,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeanTouchSimulator_HandleSimulateFingers
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = CwInput_GetKeyboardExists_m4E6D94BE5DF10530FA91CD08E7B3787FBA796CB8(NULL);
 		if (!L_1)
@@ -16427,7 +16405,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeanTouchSimulator_HandleSimulateFingers
 	}
 	{
 		// var mousePosition = CwInput.GetMousePosition();
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2;
 		L_2 = CwInput_GetMousePosition_mEAB61C2A353CEBB87CEF6EB5A917C94988C91548(NULL);
 		V_0 = L_2;
@@ -16445,7 +16422,6 @@ IL_0022:
 		// mouseSet |= CwInput.GetMouseIsHeld(i);
 		bool L_3 = V_1;
 		int32_t L_4 = V_3;
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_5;
 		L_5 = CwInput_GetMouseIsHeld_m045519FEF1D86A24F7E729561DB8964986E6C9B2(L_4, NULL);
 		V_1 = (bool)((int32_t)((int32_t)L_3|(int32_t)L_5));
@@ -16490,7 +16466,6 @@ IL_0045:
 		// if (CwInput.GetKeyIsHeld(MovePivotKey) == true)
 		int32_t L_13;
 		L_13 = LeanTouchSimulator_get_MovePivotKey_mDB9EA6A965347128A34F174548DE379B6DA8E42A_inline(__this, NULL);
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_14;
 		L_14 = CwInput_GetKeyIsHeld_m3CF9110B4AE5AF560FC12DD196281D04809955D2(L_13, NULL);
 		if (!L_14)
@@ -16520,7 +16495,6 @@ IL_0082:
 		// if (CwInput.GetKeyIsHeld(PinchTwistKey) == true)
 		int32_t L_23;
 		L_23 = LeanTouchSimulator_get_PinchTwistKey_m08A0EFB38BDDDB2FBB1489F96489B873AEF57179_inline(__this, NULL);
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_24;
 		L_24 = CwInput_GetKeyIsHeld_m3CF9110B4AE5AF560FC12DD196281D04809955D2(L_23, NULL);
 		if (!L_24)
@@ -16560,7 +16534,6 @@ IL_00de:
 		// else if (CwInput.GetKeyIsHeld(MultiDragKey) == true)
 		int32_t L_39;
 		L_39 = LeanTouchSimulator_get_MultiDragKey_m31D5462496FF512D0D437AA730957CC1D31CF700_inline(__this, NULL);
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_40;
 		L_40 = CwInput_GetKeyIsHeld_m3CF9110B4AE5AF560FC12DD196281D04809955D2(L_39, NULL);
 		if (!L_40)
@@ -20535,12 +20508,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeanGesture_GetPinchScale_mD1960D1843DF
 // System.Boolean Lean.Touch.LeanGesture::TryGetPinchScale(System.Collections.Generic.List`1<Lean.Touch.LeanFinger>,UnityEngine.Vector2,UnityEngine.Vector2,System.Single&,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LeanGesture_TryGetPinchScale_m49042A678ECE4D28C1753BEA399DA59430E669AB (List_1_tBD1C7A6DDCC7BB4E36CB06B8F1176E9C8A97702E* ___fingers0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___center1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lastCenter2, float* ___scale3, float ___wheelSensitivity4, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
@@ -20585,7 +20552,6 @@ IL_001f:
 	}
 	{
 		// var scroll = CwInput.GetMouseWheelDelta();
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		float L_11;
 		L_11 = CwInput_GetMouseWheelDelta_m1990F66C7F3D9086241D5D9203844A6E8CA5D5B0(NULL);
 		V_2 = L_11;
@@ -20684,12 +20650,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeanGesture_GetPinchRatio_m503AEECC69D1
 // System.Boolean Lean.Touch.LeanGesture::TryGetPinchRatio(System.Collections.Generic.List`1<Lean.Touch.LeanFinger>,UnityEngine.Vector2,UnityEngine.Vector2,System.Single&,System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LeanGesture_TryGetPinchRatio_m0A5B2EB2308519A1D323AC0BC179F434A4D1BAAB (List_1_tBD1C7A6DDCC7BB4E36CB06B8F1176E9C8A97702E* ___fingers0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___center1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lastCenter2, float* ___ratio3, float ___wheelSensitivity4, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
@@ -20734,7 +20694,6 @@ IL_001f:
 	}
 	{
 		// var scroll = CwInput.GetMouseWheelDelta();
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		float L_11;
 		L_11 = CwInput_GetMouseWheelDelta_m1990F66C7F3D9086241D5D9203844A6E8CA5D5B0(NULL);
 		V_2 = L_11;
@@ -24424,12 +24383,6 @@ IL_013c:
 // System.Void Lean.Touch.LeanTouch::PollFingers()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeanTouch_PollFingers_m74260F2D71DD43E2B810FA4D8E4147A01CF91BF7 (LeanTouch_tB9A5FAC0D173A45CDB1A8F994FD2BBB689D8927C* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_2;
@@ -24452,7 +24405,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeanTouch_PollFingers_m74260F2D71DD43E2B
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		int32_t L_1;
 		L_1 = CwInput_GetTouchCount_m1D0A09D098D1B6A2B433CA0948510C4C299B6031(NULL);
 		if ((((int32_t)L_1) <= ((int32_t)0)))
@@ -24470,7 +24422,6 @@ IL_0014:
 	{
 		// CwInput.GetTouch(i, out id, out position, out pressure, out set);
 		int32_t L_2 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		CwInput_GetTouch_mD60E0699649F3E4B8CC3F02BF10F40C2215D80BF(L_2, (&V_1), (&V_2), (&V_3), (&V_4), NULL);
 		// AddFinger(id, position, pressure, set);
 		int32_t L_3 = V_1;
@@ -24488,7 +24439,6 @@ IL_0032:
 	{
 		// for (var i = 0; i < CwInput.GetTouchCount(); i++)
 		int32_t L_9 = V_0;
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		int32_t L_10;
 		L_10 = CwInput_GetTouchCount_m1D0A09D098D1B6A2B433CA0948510C4C299B6031(NULL);
 		if ((((int32_t)L_9) < ((int32_t)L_10)))
@@ -24507,7 +24457,6 @@ IL_003a:
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_12;
 		L_12 = CwInput_GetMouseExists_m5D88DE70E6D21E03FCEDFB12B7383D5D59A9DED2(NULL);
 		if (!L_12)
@@ -24517,7 +24466,6 @@ IL_003a:
 	}
 	{
 		// var mousePosition = CwInput.GetMousePosition();
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13;
 		L_13 = CwInput_GetMousePosition_mEAB61C2A353CEBB87CEF6EB5A917C94988C91548(NULL);
 		V_5 = L_13;
@@ -24544,7 +24492,6 @@ IL_006d:
 		}
 	}
 	{
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_18;
 		L_18 = CwInput_GetMouseExists_m5D88DE70E6D21E03FCEDFB12B7383D5D59A9DED2(NULL);
 		if (!L_18)
@@ -24567,7 +24514,6 @@ IL_0087:
 		// mouseSet |= CwInput.GetMouseIsHeld(i);
 		bool L_19 = V_6;
 		int32_t L_20 = V_8;
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		bool L_21;
 		L_21 = CwInput_GetMouseIsHeld_m045519FEF1D86A24F7E729561DB8964986E6C9B2(L_20, NULL);
 		V_6 = (bool)((int32_t)((int32_t)L_19|(int32_t)L_21));
@@ -24610,7 +24556,6 @@ IL_00a5:
 IL_00b2:
 	{
 		// var mousePosition = CwInput.GetMousePosition();
-		il2cpp_codegen_runtime_class_init_inline(CwInput_t79C22CD4688B249F4FF6A553B0887781D372EC46_il2cpp_TypeInfo_var);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29;
 		L_29 = CwInput_GetMousePosition_mEAB61C2A353CEBB87CEF6EB5A917C94988C91548(NULL);
 		V_9 = L_29;

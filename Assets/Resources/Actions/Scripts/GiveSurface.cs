@@ -12,8 +12,14 @@ public class GiveSurface : Action,IDescription {
     public bool randomSurface = false;
     public bool justCombine = false;
     public bool newSurface = false;
+
+    public void ConditionWithoutAC(Vector3Int position) {
+        this.position = position;
+        if (randomSurface) { surface = GridManager.i.assets.RandomSurface(); }
+        this.AddToStack();
+    }
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
-        this.origin = position;
+        this.position = position;
         surface = actionContainer.surfaceValue;
         radius = actionContainer.intValue;
         if (randomSurface) { surface = GridManager.i.assets.RandomSurface(); }
@@ -31,15 +37,15 @@ public class GiveSurface : Action,IDescription {
     }
 
     public override IEnumerator StackAction() {
-        var circle = origin.PositionsInSight(radius);
-        if(surface == null && area == false) { GridManager.i.SetSurface(origin, null);yield break; }
+        var circle = position.PositionsInSight(radius);
+        if(surface == null && area == false) { GridManager.i.SetSurface(position, null);yield break; }
         if (area) {
             foreach (var cell in circle) {
                 GridManager.i.CombineOrSetSurface(cell, surface,justCombine);
             }
         }
         else {
-            GridManager.i.CombineOrSetSurface(origin, surface, justCombine);
+            GridManager.i.CombineOrSetSurface(position, surface, justCombine);
         }
 
         yield return null;

@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
-using static UnityEditor.Progress;
-using static UnityEngine.UI.Image;
-
 public class Actions : MonoBehaviour
 {
     public static Actions i;
@@ -31,7 +28,7 @@ public class Actions : MonoBehaviour
     public void ThrowItem(Vector3Int position,Vector3Int origin,ItemAbstract item,Inventory inventory) {
         if (!position.InRange(origin, inventory.GetComponent<Stats>().throwingRangeTemp)) { return; }
         var landPos = GridManager.i.itemMethods.FloodFillDropItem(position,false,item);
-        EffectManager.i.ShootBasicProjectile(position, origin, item.tile.sprite);
+        EffectManager.i.SpinningThrowProjectile(position, origin, item.tile.sprite);
 
         if (IsSellingAtShop(position)) {
             if (inventory.items.Contains(item)) {
@@ -42,9 +39,11 @@ public class Actions : MonoBehaviour
             return;
         }
 
-        if (position.GameObjectGo() && item is Weapon) {
+        if (item is Weapon) {
             var weapon = item as Weapon;
-            weapon.CallIgnoringRange(position, origin, inventory.gameObject, CallType.OnActivate); //This causes a bug, origin shouldnt be position
+            if(weapon.weaponType == WeaponType.melee) {
+                weapon.CallIgnoringRange(position, origin, inventory.gameObject, CallType.OnActivate);
+            }
         }
         else {
             item.Call(position, origin, inventory.gameObject, CallType.OnActivate);

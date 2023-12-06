@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Barrel
+      stringValue: Create eight barrels around you
     - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
       intValue: 0
       floatValue: 0
@@ -138,12 +138,12 @@ MonoBehaviour:
       stringValue: 
   rangeType: 5
   targetsTags: -1
+  weaponType: 0
   range: 1
   AOE: 0
   actionPointCost: 1
-  coolDown: 0
+  coolDown: 1
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

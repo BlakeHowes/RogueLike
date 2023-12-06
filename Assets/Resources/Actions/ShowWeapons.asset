@@ -17,3 +17,4 @@ MonoBehaviour:
   parentGO: {fileID: 0}
   parentItem: {fileID: 0}
   extraVariableType: 0
+  hideWeaponValue: 0

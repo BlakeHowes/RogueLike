@@ -19,7 +19,10 @@ MonoBehaviour:
   StatusEffect: {fileID: 0}
   duration: {x: 0, y: 0}
   counter: 0
-  effectPrefab: {fileID: 9027514048236820045, guid: bd0bd2f1897a3444192400788aebb49c, type: 3}
+  effectPrefab: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e,
+    type: 3}
   dryUpSurface: {fileID: 0}
   dryUp: 1
   tryToSpread: 0
+  allowAnySurfaceToSetOverThis: 0
+  description: 

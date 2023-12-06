@@ -59,7 +59,7 @@ public class SkillSlot : MonoBehaviour
     public void UpdateGraphic() {
         if (!skill) { return; }
         if(coolDown() > 0) { image.color = defaultColour;}
-        if(skill.GetAPCost() > PartyManager.i.currentCharacter.GetComponent<Stats>().actionPoints) { image.color = unavailableColour; }
+        if(!PartyManager.i.currentCharacter.GetComponent<Stats>().DoIHavenEnoughNormalActionPoints(skill.GetAPCost())) { image.color = unavailableColour; }
     }
 
     public void AddSkill(Skill skill) {
@@ -87,6 +87,8 @@ public class SkillSlot : MonoBehaviour
         GameUIManager.i.itemtooltip.UpdateToolTip(skill, false);
         if (!skill) { return;}
         GameUIManager.i.apUIElement.HighlightAP(skill.GetAPCost(),skill);
+        var character = PartyManager.i.currentCharacter;
+        GameUIManager.i.ShowRange(character.Position(), skill.GetRange(character));
     }
 
     public void DisableToolTip() {

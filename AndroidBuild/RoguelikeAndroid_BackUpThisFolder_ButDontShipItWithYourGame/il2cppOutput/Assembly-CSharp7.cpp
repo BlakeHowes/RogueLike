@@ -21,28 +21,6 @@ struct VirtualActionInvoker0
 		((Action)invokeData.methodPtr)(obj, invokeData.method);
 	}
 };
-template <typename T1>
-struct VirtualActionInvoker1
-{
-	typedef void (*Action)(void*, T1, const RuntimeMethod*);
-
-	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
-		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
-	}
-};
-template <typename T1, typename T2>
-struct VirtualActionInvoker2
-{
-	typedef void (*Action)(void*, T1, T2, const RuntimeMethod*);
-
-	static inline void Invoke (Il2CppMethodSlot slot, RuntimeObject* obj, T1 p1, T2 p2)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_virtual_invoke_data(slot, obj);
-		((Action)invokeData.methodPtr)(obj, p1, p2, invokeData.method);
-	}
-};
 template <typename R>
 struct VirtualFuncInvoker0
 {
@@ -65,67 +43,29 @@ struct InterfaceActionInvoker1
 		((Action)invokeData.methodPtr)(obj, p1, invokeData.method);
 	}
 };
-template <typename R>
-struct InterfaceFuncInvoker0
-{
-	typedef R (*Func)(void*, const RuntimeMethod*);
 
-	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
-		return ((Func)invokeData.methodPtr)(obj, invokeData.method);
-	}
-};
-template <typename R, typename T1>
-struct InterfaceFuncInvoker1
-{
-	typedef R (*Func)(void*, T1, const RuntimeMethod*);
-
-	static inline R Invoke (Il2CppMethodSlot slot, RuntimeClass* declaringInterface, RuntimeObject* obj, T1 p1)
-	{
-		const VirtualInvokeData& invokeData = il2cpp_codegen_get_interface_invoke_data(slot, obj, declaringInterface);
-		return ((Func)invokeData.methodPtr)(obj, p1, invokeData.method);
-	}
-};
-
-// System.Collections.Generic.Dictionary`2<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>
-struct Dictionary_2_t8B5974C86BE99AA0CBBC468A0CE5CCD3B5F9B7A1;
 // System.Collections.Generic.IComparer`1<System.Object>
 struct IComparer_1_tC0A12A847AF97F369A5CE9A0CCE71CE18EE1440E;
 // System.Collections.Generic.IComparer`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>
 struct IComparer_1_t94F82640EF5E2FDC5196D614C23B748B3FC7299C;
 // System.Collections.Generic.IEnumerable`1<System.Object>
 struct IEnumerable_1_tF95C9E01A913DD50575531C8305932628663D9E9;
-// System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>
-struct IEnumerable_1_t6F0F8792ECC5F94E180BF8FCBCE3A8298797304D;
 // System.Collections.Generic.IEnumerable`1<FunkyCode.Utilities.Vector2D>
 struct IEnumerable_1_t0C8287175C993CC29C8FD7E7B0319838AB3319AD;
-// System.Collections.Generic.IEqualityComparer`1<System.UInt32>
-struct IEqualityComparer_1_t0BB8211419723EB61BF19007AC9D62365E50500E;
-// System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>
-struct IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4;
-// System.Collections.Generic.Dictionary`2/KeyCollection<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>
-struct KeyCollection_t8272998A8C701205FC1CD815261AD1701B906D04;
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint>
 struct List_1_t522C07B33E9405B750058E80D4F1A326C3F0C7B6;
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle>
 struct List_1_t7CAACA73A08CE03763D38B945473B477DE76A3D0;
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>
-struct List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2;
-// System.Collections.Generic.List`1<System.Int32>
-struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73;
+// System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2>
+struct List_1_t033CFB1F92EDFE4783967CE396237099F065666E;
 // System.Collections.Generic.List`1<System.Object>
 struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D;
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>
 struct List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F;
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>
-struct List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346;
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>
-struct List_1_t4C6409F93C562B69408929822AF1ED688D478D06;
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>
+struct List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2;
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>
 struct List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55;
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>
-struct List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765;
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>
 struct List_1_tDE2150805FD7185E06AEFE0895F3786DEEEB0D6E;
 // System.Collections.Generic.List`1<UnityEngine.Vector2>
@@ -134,10 +74,6 @@ struct List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B;
 struct List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49;
 // UnityEngine.Events.UnityEvent`1<UnityEngine.SpriteRenderer>
 struct UnityEvent_1_t8ABE5544759145B8D7A09F1C54FFCB6907EDD56E;
-// System.Collections.Generic.Dictionary`2/ValueCollection<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>
-struct ValueCollection_t36D2DBDD1AAA7FE9E0F6FC0D632E09A80BF7BB63;
-// System.Collections.Generic.Dictionary`2/Entry<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>[]
-struct EntryU5BU5D_t1B58AE8016EC9ABAC38BB313224A0C5E2791B341;
 // System.Char[]
 struct CharU5BU5D_t799905CF001DD5F13F7DBB310181FC4D8B7D0AAB;
 // UnityEngine.Collider[]
@@ -150,8 +86,8 @@ struct CombineInstanceU5BU5D_tF7855763C164A0775855FF142E891E7BE0ABE093;
 struct DTSweepConstraintU5BU5D_tC7CE1D76238F3A43DAA3E5CBB3CFD346CE0DFF1F;
 // FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle[]
 struct DelaunayTriangleU5BU5D_t5874733156E3486B001BF2AED16056244EFD6F85;
-// FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo[]
-struct EdgeIntersectInfoU5BU5D_t27B78DEAB47344EA4891528E532DF75640FD5678;
+// FunkyCode.Utilities.DoublePair2[]
+struct DoublePair2U5BU5D_t0F80BC6F804ECAF326A85879CAF3F2308BCD66FA;
 // System.Int32[]
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
 // System.IntPtr[]
@@ -160,14 +96,10 @@ struct IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 // FunkyCode.Utilities.Pair2D[]
 struct Pair2DU5BU5D_tE7BFA950D375F95BE9277B661DC3BBAC66C0A35D;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D[]
-struct Point2DU5BU5D_t8240A62D7D78D7687568B4BCAA0B3FE71641C167;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList[]
-struct Point2DListU5BU5D_tB6D12911B5EED842F9369B66F9E5822234CE331E;
+// FunkyCode.Utilities.Polygon2[]
+struct Polygon2U5BU5D_tB3FC47D2BF1F996FEA9E45FBAF784EF60CE74A55;
 // FunkyCode.Utilities.Polygon2D[]
 struct Polygon2DU5BU5D_t5FEF425BDC6F11F680A1B71BD7FD5CCE77821D2B;
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode[]
-struct SplitComplexPolygonNodeU5BU5D_tE43D9E3964EDA2DEA037C1C82DA61FE55F7E476D;
 // System.Diagnostics.StackTrace[]
 struct StackTraceU5BU5D_t32FBCB20930EAF5BAE3F450FF75228E5450DA0DF;
 // System.String[]
@@ -224,12 +156,10 @@ struct DTSweepPointComparator_t3C6B3CE8B18A5AD5B8DF46EB8920C7AE7CC0246A;
 struct DelaunayTriangle_tA5239E508D512FED93D6AC8A7CA96A8D31C83341;
 // FunkyCode.Utilities.DestroyTimer
 struct DestroyTimer_t17C7D032DABD8E69ABCFB191CEEBEF12F0BC4669;
-// FunkyCode.Utilities.Polygon2DTriangulation.Edge
-struct Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526;
+// FunkyCode.Utilities.DoublePair2
+struct DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207;
 // UnityEngine.EdgeCollider2D
 struct EdgeCollider2D_tB7A39F2B1345894C40577A62FD62244702DE3710;
-// FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo
-struct EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB;
 // System.Exception
 struct Exception_t;
 // UnityEngine.GameObject
@@ -264,10 +194,12 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C;
 struct Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B;
 // FunkyCode.Utilities.Polygon2DTriangulation.Point2D
 struct Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList
-struct Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C;
 // FunkyCode.Utilities.Polygon2DTriangulation.PointOnEdgeException
 struct PointOnEdgeException_t53CD5411812F6782F8727BE8566AD2C3521F4229;
+// FunkyCode.Utilities.Polygon2
+struct Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3;
+// FunkyCode.Utilities.Polygon2Collider3D
+struct Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5;
 // FunkyCode.Utilities.Polygon2D
 struct Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C;
 // FunkyCode.Utilities.Polygon2DCollider2D
@@ -278,22 +210,16 @@ struct Polygon2DCollider3D_t3F9D173E3A6567C4E21A901D8FC1D9F314CDDC9A;
 struct Polygon2DListCollider2D_tB6FC798CF681ECE6E2A61699114569721B9EE89C;
 // FunkyCode.Utilities.Polygon2DListCollider3D
 struct Polygon2DListCollider3D_tE75EED4C2D6D2BE1932021A165113E5A06A858EA;
+// FunkyCode.Utilities.Polygon2ListCollider3D
+struct Polygon2ListCollider3D_t9C31FD7F2EA9BCADE46F9DC0654BE91CCD2DBADC;
 // UnityEngine.PolygonCollider2D
 struct PolygonCollider2D_t7CEFFFEE6522175436B408712B052D236889C89E;
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext
-struct PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1;
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil
-struct PolygonUtil_tC9D6F3E0B26CC92D619DC868213715914DCDEC5A;
-// FunkyCode.Utilities.Polygon2DTriangulation.Rect2D
-struct Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB;
 // UnityEngine.Renderer
 struct Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF;
 // System.Runtime.Serialization.SafeSerializationManager
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
 // UnityEngine.SphereCollider
 struct SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275;
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode
-struct SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94;
 // UnityEngine.Sprite
 struct Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99;
 // UnityEngine.SpriteRenderer
@@ -344,19 +270,17 @@ IL2CPP_EXTERN_C RuntimeClass* DTSweepEdgeEvent_t30173AD3CA0E6E7DA5AE9A25400DE2BE
 IL2CPP_EXTERN_C RuntimeClass* DTSweepPointComparator_t3C6B3CE8B18A5AD5B8DF46EB8920C7AE7CC0246A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* DelaunayTriangle_tA5239E508D512FED93D6AC8A7CA96A8D31C83341_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EdgeCollider2D_tB7A39F2B1345894C40577A62FD62244702DE3710_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ITriangulatable_t05320A967B06462270F616BB33B8790D3D7957F9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Lighting2D_tC57B79084FE0F1E4C5B2BFDF710A7D5CDA053240_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* List_1_t4C6409F93C562B69408929822AF1ED688D478D06_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_t033CFB1F92EDFE4783967CE396237099F065666E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var;
@@ -366,16 +290,13 @@ IL2CPP_EXTERN_C RuntimeClass* Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4_il2
 IL2CPP_EXTERN_C RuntimeClass* NotImplementedException_t6366FE4DCF15094C51F4833B91A2AE68D4DA90E8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PointOnEdgeException_t53CD5411812F6782F8727BE8566AD2C3521F4229_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Polygon2DCollider2D_tDA230EA0F324998CF46E08080D8866A62EFE4E8E_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Polygon2DCollider3D_t3F9D173E3A6567C4E21A901D8FC1D9F314CDDC9A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PolygonCollider2D_t7CEFFFEE6522175436B408712B052D236889C89E_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringBuilder_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* TimerHelper_t8AD548D67C9E7327237A10E95403675761636C40_il2cpp_TypeInfo_var;
@@ -387,22 +308,17 @@ IL2CPP_EXTERN_C RuntimeClass* Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_
 IL2CPP_EXTERN_C RuntimeClass* Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral07AC1B1D6E5B09CAD55868C0EBA7C2B6EB0B16DF;
 IL2CPP_EXTERN_C String_t* _stringLiteral0A6129D3AF4D923F94C2DF172F5DA64D92B3C03C;
-IL2CPP_EXTERN_C String_t* _stringLiteral15F4323C90D6C07949CD76F44F260B4631F8D055;
 IL2CPP_EXTERN_C String_t* _stringLiteral22ED5FCE4A7B9417FAA18E0C31983A86F0BDAD99;
 IL2CPP_EXTERN_C String_t* _stringLiteral237443D40E51BEB792E3255884B17F5F2A070555;
 IL2CPP_EXTERN_C String_t* _stringLiteral3860603B88C3C33FCEFF25F72FA3E650D2B25876;
 IL2CPP_EXTERN_C String_t* _stringLiteral3D172D971586C86B346F8E91020B75C359F6EE40;
-IL2CPP_EXTERN_C String_t* _stringLiteral455E97A5B9BF088B98E5F6F67F14F20C06CFBBBC;
 IL2CPP_EXTERN_C String_t* _stringLiteral56B1B0DAE4B652A32E15CB48CE581E89937976FE;
 IL2CPP_EXTERN_C String_t* _stringLiteral56FEC330311BE1770446499D7CC29C5DBA8485E8;
-IL2CPP_EXTERN_C String_t* _stringLiteral633D575B992D8D7A43F03F3E8CBD7AAC87029DE0;
 IL2CPP_EXTERN_C String_t* _stringLiteral656D304F364B477202FBF443F2948662EBAB895C;
 IL2CPP_EXTERN_C String_t* _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D;
 IL2CPP_EXTERN_C String_t* _stringLiteral8706B69B164F3C604142DF2063A4BDC8079377AC;
 IL2CPP_EXTERN_C String_t* _stringLiteral88EB854C80D13C1F40F616EE53A1381BFF41639B;
-IL2CPP_EXTERN_C String_t* _stringLiteral972C242EAA5C2C409490342E19DE074153348E63;
 IL2CPP_EXTERN_C String_t* _stringLiteral9B56FA96FE55F4A5B70E48AF16D59739F6389D3C;
-IL2CPP_EXTERN_C String_t* _stringLiteral9D98CF45AE5B5E623759A6DCB43B04AC6BAE9719;
 IL2CPP_EXTERN_C String_t* _stringLiteralA29C437354A4DAC3895D74F1428508364E47293F;
 IL2CPP_EXTERN_C String_t* _stringLiteralA3DFC0C77ACADE0EE48DCC73E795A597D0270A73;
 IL2CPP_EXTERN_C String_t* _stringLiteralB3F14BF976EFD974E34846B742502C802FABAE9D;
@@ -422,24 +338,27 @@ IL2CPP_EXTERN_C const RuntimeMethod* DelaunayTriangle_MarkNeighbor_m014D41563394
 IL2CPP_EXTERN_C const RuntimeMethod* DelaunayTriangle_MarkNeighbor_m02B215A9A10ABF08CA363F44FD0505C7F50A06AA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_First_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_m4D239FA2DA642410F9BB59401EE52CF6AD06AAEB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m77700B83B6AE323E23E8A4F0A976C4634DFB213B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mC8CF4AFEDA999BB7E7411AFD060000577AC96D85_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mD7FE793C82D2BD65DBF9DC2430CBBDAE0189602E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_Dispose_mFB85A7D510F5174C1C7A3FFB6EEC229481D21F59_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m2B1CDC9D7CDB31196AA266399DC0A6A62A524762_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m4E3CE7ACCF52451843F4467BE372BC8FDE0B60F4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m599592AFD400C29C217ECE2F22CCD12C8B4ABF22_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mAC154F16EBA26CEE5DEB9C5D0EBF673285D2B986_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m107FE47D6F69A55A1CBA237E8976B4C825822762_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m2D0D06514001F8AF3ECEAC70E2B6CA8D93790CF6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m3E1FDA79688D4578B6451E7DF3DB26AF84030CB1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Enumerator_get_Current_mEB21C1420BEFC977FC3A472AEBDAEF5D979DC3BC_RuntimeMethod_var;
@@ -460,62 +379,46 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisMeshRenderer_t4B
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponent_TisPolygonCollider2D_t7CEFFFEE6522175436B408712B052D236889C89E_mB708FB5D59F3B41927EC97A355A2F7B6DECD2ED8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponents_TisCollider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52_m8341E9FC18C8BFB0A1A35C62EE3622099006F10E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponents_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_mC866FD3319709BA8DB8AD60E437A77EF06C10E99_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_AddRange_m766B30E845BFCD58DB8B3EDF99EB26B9710929CE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mA70DD923C9BB91D95D985C7AFFFFEEE15C87661F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mAAF7A46E5988118762E8CAAA6CE21A15CAFDC9BB_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mB5FDF069171C4CB1778BFAC3B9015A22EA7DFBCD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mF0911B14088BA1CC4C77CA2F7883DCE6721CD320_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m4339A803A1BB070C0F542D3015E3C57A858CA644_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m5A63CA6B78D66FB8E391FA7EEB148761AFB05FA3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Clear_m8DAFCEA89A73F95F2BF011EBCA875BB88EBDF98F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m031D6060C7C2F66959AC2232063DFF9BD4E095EF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m1A55A07CC4307A96B3C4F21C2F40F83D73DADEBD_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_mB8AE65ACBD9CAB3DA7D02BCB942DE44CAB7DCE9F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_mDE62147F2C353145B8CC1A06E1835601786A044A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_IndexOf_m15D851E66B879ABA75685C88ABE1CAA21CD6B033_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_m1F342FAE1CDEBFC23A9C50546EE87326824E652D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_m3F74C0AC1A2BD3E4F2D6515EB1C17A7D9A8B0C92_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Remove_mEADE900C32A82D50530C506465B334157561C7F3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Reverse_mCACA3263A8C5BE6F134F2D2CDBE1FAB49F0DFD5E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_Sort_mC2478158DE66642F378D562E8C1FDAF4A8EBC26C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_ToArray_m9F2A058632994B7A2310424880C089F9DE5B1BA5_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m4E6142012AA8B972541646F6324B2D3EA9E67221_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m7A0337C6183CCFA0C26430CBF07655FC28061B25_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m88C4BD8AC607DB3585552068F4DC437406358D5F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mB118A944D7B2A4AFFE0E26BF5C2113FF436B3B6F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mB6F0B56187AD9119E0450E9DC862840A9EFFCD5E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mB9716F4D2719A7DB44ECA85680A88BC1F814A94F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mD51CAD898DC0D92A014DB5FCFFA5831C5353479A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m2D57C60729FD1A60C53C1DD7EEB3E9510DEFB79B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m8B5B34D10F34D8EA8A313E0514DEFBFEE19C877D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mAFD63FFFEE1B4D3D086018394BE3C2954AE510B8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB4C2181A18A2EBCDCD815534B50AF3508E98A85C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m0112993EC4C243B75B3CD3ED7DEF9E8FC21D21D7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m54F5008AD63F3FE4C437856C15E2C195BE7DD3DA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mF108F2A1AB1A8305855B364F78F1BA302E55BA4C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* PolygonUtil_SplitComplexPolygon_m06C203214FC1CF955CBB5EAF036344C09D6B5D0C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* BoxCollider2D_tF860C7737FFB062CEC06577E0CD8364EEC1D4EDA_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* CapsuleCollider2D_tBC93B7F1D1569FF805567D2D4C17438E95F927EE_0_0_0_var;
@@ -545,31 +448,6 @@ IL2CPP_EXTERN_C_END
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-
-// System.Collections.Generic.Dictionary`2<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>
-struct Dictionary_2_t8B5974C86BE99AA0CBBC468A0CE5CCD3B5F9B7A1  : public RuntimeObject
-{
-	// System.Int32[] System.Collections.Generic.Dictionary`2::_buckets
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____buckets_0;
-	// System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[] System.Collections.Generic.Dictionary`2::_entries
-	EntryU5BU5D_t1B58AE8016EC9ABAC38BB313224A0C5E2791B341* ____entries_1;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_count
-	int32_t ____count_2;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_freeList
-	int32_t ____freeList_3;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_freeCount
-	int32_t ____freeCount_4;
-	// System.Int32 System.Collections.Generic.Dictionary`2::_version
-	int32_t ____version_5;
-	// System.Collections.Generic.IEqualityComparer`1<TKey> System.Collections.Generic.Dictionary`2::_comparer
-	RuntimeObject* ____comparer_6;
-	// System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::_keys
-	KeyCollection_t8272998A8C701205FC1CD815261AD1701B906D04* ____keys_7;
-	// System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::_values
-	ValueCollection_t36D2DBDD1AAA7FE9E0F6FC0D632E09A80BF7BB63* ____values_8;
-	// System.Object System.Collections.Generic.Dictionary`2::_syncRoot
-	RuntimeObject* ____syncRoot_9;
-};
 
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint>
 struct List_1_t522C07B33E9405B750058E80D4F1A326C3F0C7B6  : public RuntimeObject
@@ -609,11 +487,11 @@ struct List_1_t7CAACA73A08CE03763D38B945473B477DE76A3D0_StaticFields
 	DelaunayTriangleU5BU5D_t5874733156E3486B001BF2AED16056244EFD6F85* ___s_emptyArray_5;
 };
 
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>
-struct List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2  : public RuntimeObject
+// System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2>
+struct List_1_t033CFB1F92EDFE4783967CE396237099F065666E  : public RuntimeObject
 {
 	// T[] System.Collections.Generic.List`1::_items
-	EdgeIntersectInfoU5BU5D_t27B78DEAB47344EA4891528E532DF75640FD5678* ____items_1;
+	DoublePair2U5BU5D_t0F80BC6F804ECAF326A85879CAF3F2308BCD66FA* ____items_1;
 	// System.Int32 System.Collections.Generic.List`1::_size
 	int32_t ____size_2;
 	// System.Int32 System.Collections.Generic.List`1::_version
@@ -622,29 +500,10 @@ struct List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2  : public RuntimeObject
 	RuntimeObject* ____syncRoot_4;
 };
 
-struct List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2_StaticFields
+struct List_1_t033CFB1F92EDFE4783967CE396237099F065666E_StaticFields
 {
 	// T[] System.Collections.Generic.List`1::s_emptyArray
-	EdgeIntersectInfoU5BU5D_t27B78DEAB47344EA4891528E532DF75640FD5678* ___s_emptyArray_5;
-};
-
-// System.Collections.Generic.List`1<System.Int32>
-struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
-};
-
-struct List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___s_emptyArray_5;
+	DoublePair2U5BU5D_t0F80BC6F804ECAF326A85879CAF3F2308BCD66FA* ___s_emptyArray_5;
 };
 
 // System.Collections.Generic.List`1<System.Object>
@@ -685,11 +544,11 @@ struct List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F_StaticFields
 	Pair2DU5BU5D_tE7BFA950D375F95BE9277B661DC3BBAC66C0A35D* ___s_emptyArray_5;
 };
 
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>
-struct List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346  : public RuntimeObject
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>
+struct List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2  : public RuntimeObject
 {
 	// T[] System.Collections.Generic.List`1::_items
-	Point2DU5BU5D_t8240A62D7D78D7687568B4BCAA0B3FE71641C167* ____items_1;
+	Polygon2U5BU5D_tB3FC47D2BF1F996FEA9E45FBAF784EF60CE74A55* ____items_1;
 	// System.Int32 System.Collections.Generic.List`1::_size
 	int32_t ____size_2;
 	// System.Int32 System.Collections.Generic.List`1::_version
@@ -698,29 +557,10 @@ struct List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346  : public RuntimeObject
 	RuntimeObject* ____syncRoot_4;
 };
 
-struct List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_StaticFields
+struct List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2_StaticFields
 {
 	// T[] System.Collections.Generic.List`1::s_emptyArray
-	Point2DU5BU5D_t8240A62D7D78D7687568B4BCAA0B3FE71641C167* ___s_emptyArray_5;
-};
-
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>
-struct List_1_t4C6409F93C562B69408929822AF1ED688D478D06  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	Point2DListU5BU5D_tB6D12911B5EED842F9369B66F9E5822234CE331E* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
-};
-
-struct List_1_t4C6409F93C562B69408929822AF1ED688D478D06_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	Point2DListU5BU5D_tB6D12911B5EED842F9369B66F9E5822234CE331E* ___s_emptyArray_5;
+	Polygon2U5BU5D_tB3FC47D2BF1F996FEA9E45FBAF784EF60CE74A55* ___s_emptyArray_5;
 };
 
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>
@@ -740,25 +580,6 @@ struct List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55_StaticFields
 {
 	// T[] System.Collections.Generic.List`1::s_emptyArray
 	Polygon2DU5BU5D_t5FEF425BDC6F11F680A1B71BD7FD5CCE77821D2B* ___s_emptyArray_5;
-};
-
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>
-struct List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765  : public RuntimeObject
-{
-	// T[] System.Collections.Generic.List`1::_items
-	SplitComplexPolygonNodeU5BU5D_tE43D9E3964EDA2DEA037C1C82DA61FE55F7E476D* ____items_1;
-	// System.Int32 System.Collections.Generic.List`1::_size
-	int32_t ____size_2;
-	// System.Int32 System.Collections.Generic.List`1::_version
-	int32_t ____version_3;
-	// System.Object System.Collections.Generic.List`1::_syncRoot
-	RuntimeObject* ____syncRoot_4;
-};
-
-struct List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_StaticFields
-{
-	// T[] System.Collections.Generic.List`1::s_emptyArray
-	SplitComplexPolygonNodeU5BU5D_tE43D9E3964EDA2DEA037C1C82DA61FE55F7E476D* ___s_emptyArray_5;
 };
 
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint>
@@ -888,15 +709,15 @@ struct Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526  : public RuntimeObject
 	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___mQ_1;
 };
 
-// FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo
-struct EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB  : public RuntimeObject
+// FunkyCode.Utilities.Math2D
+struct Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6  : public RuntimeObject
 {
-	// FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::<EdgeOne>k__BackingField
-	Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___U3CEdgeOneU3Ek__BackingField_0;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::<EdgeTwo>k__BackingField
-	Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___U3CEdgeTwoU3Ek__BackingField_1;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::<IntersectionPoint>k__BackingField
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___U3CIntersectionPointU3Ek__BackingField_2;
+};
+
+struct Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_StaticFields
+{
+	// FunkyCode.Utilities.Pair2D FunkyCode.Utilities.Math2D::pointInPoly_Pair2D
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___pointInPoly_Pair2D_1;
 };
 
 // FunkyCode.Utilities.Polygon2DTriangulation.MathUtil
@@ -938,27 +759,22 @@ struct Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7  : public RuntimeObject
 	double ___mY_1;
 };
 
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList
-struct Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C  : public RuntimeObject
+// FunkyCode.Utilities.Polygon2
+struct Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3  : public RuntimeObject
 {
-	// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D> FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::mPoints
-	List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* ___mPoints_3;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Rect2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::mBoundingBox
-	Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___mBoundingBox_4;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::mWindingOrder
-	int32_t ___mWindingOrder_5;
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::mEpsilon
-	double ___mEpsilon_6;
+	// UnityEngine.Vector2[] FunkyCode.Utilities.Polygon2::points
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___points_0;
 };
 
-struct Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C_StaticFields
+// FunkyCode.Utilities.Polygon2Collider3D
+struct Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5  : public RuntimeObject
 {
-	// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::kMaxPolygonVertices
-	int32_t ___kMaxPolygonVertices_0;
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::kLinearSlop
-	double ___kLinearSlop_1;
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::kAngularSlop
-	double ___kAngularSlop_2;
+};
+
+struct Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_StaticFields
+{
+	// System.Int32 FunkyCode.Utilities.Polygon2Collider3D::defaultCircleVerticesCount
+	int32_t ___defaultCircleVerticesCount_0;
 };
 
 // FunkyCode.Utilities.Polygon2D
@@ -1005,60 +821,6 @@ struct Polygon2DCollider3D_t3F9D173E3A6567C4E21A901D8FC1D9F314CDDC9A_StaticField
 // FunkyCode.Utilities.Polygon2DHelper
 struct Polygon2DHelper_t22135B1741E1AE93F470CFE2539C7B3AC93A2B7A  : public RuntimeObject
 {
-};
-
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext
-struct PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1  : public RuntimeObject
-{
-	// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mOperations
-	uint32_t ___mOperations_0;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mOriginalPolygon1
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___mOriginalPolygon1_1;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mOriginalPolygon2
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___mOriginalPolygon2_2;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mPoly1
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___mPoly1_3;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mPoly2
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___mPoly2_4;
-	// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo> FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mIntersections
-	List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* ___mIntersections_5;
-	// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mStartingIndex
-	int32_t ___mStartingIndex_6;
-	// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mError
-	int32_t ___mError_7;
-	// System.Collections.Generic.List`1<System.Int32> FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mPoly1VectorAngles
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___mPoly1VectorAngles_8;
-	// System.Collections.Generic.List`1<System.Int32> FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mPoly2VectorAngles
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___mPoly2VectorAngles_9;
-	// System.Collections.Generic.Dictionary`2<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::mOutput
-	Dictionary_2_t8B5974C86BE99AA0CBBC468A0CE5CCD3B5F9B7A1* ___mOutput_10;
-};
-
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil
-struct PolygonUtil_tC9D6F3E0B26CC92D619DC868213715914DCDEC5A  : public RuntimeObject
-{
-};
-
-// FunkyCode.Utilities.Polygon2DTriangulation.Rect2D
-struct Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB  : public RuntimeObject
-{
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::mMinX
-	double ___mMinX_0;
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::mMaxX
-	double ___mMaxX_1;
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::mMinY
-	double ___mMinY_2;
-	// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::mMaxY
-	double ___mMaxY_3;
-};
-
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode
-struct SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94  : public RuntimeObject
-{
-	// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode> FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::mConnected
-	List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* ___mConnected_0;
-	// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::mPosition
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___mPosition_1;
 };
 
 // System.String
@@ -1151,6 +913,11 @@ struct Vector2DList_tAF7C6B5170CAB13AD45A2FEEBA97C6FBE6FFAC83  : public RuntimeO
 {
 };
 
+// FunkyCode.Utilities.Vector2Extensions
+struct Vector2Extensions_t2BBE0A906E15304097F433790670FF100B6F9722  : public RuntimeObject
+{
+};
+
 // System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint>
 struct Enumerator_t39C9BE9D309FC199D92C53D46C727640743452FF 
 {
@@ -1177,19 +944,6 @@ struct Enumerator_tB53AAE3EE95732CE08C1C34BD71DD5F8BAC5B248
 	DelaunayTriangle_tA5239E508D512FED93D6AC8A7CA96A8D31C83341* ____current_3;
 };
 
-// System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>
-struct Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C 
-{
-	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::_list
-	List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* ____list_0;
-	// System.Int32 System.Collections.Generic.List`1/Enumerator::_index
-	int32_t ____index_1;
-	// System.Int32 System.Collections.Generic.List`1/Enumerator::_version
-	int32_t ____version_2;
-	// T System.Collections.Generic.List`1/Enumerator::_current
-	EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* ____current_3;
-};
-
 // System.Collections.Generic.List`1/Enumerator<System.Object>
 struct Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A 
 {
@@ -1214,6 +968,19 @@ struct Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4
 	int32_t ____version_2;
 	// T System.Collections.Generic.List`1/Enumerator::_current
 	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ____current_3;
+};
+
+// System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2>
+struct Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F 
+{
+	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::_list
+	List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* ____list_0;
+	// System.Int32 System.Collections.Generic.List`1/Enumerator::_index
+	int32_t ____index_1;
+	// System.Int32 System.Collections.Generic.List`1/Enumerator::_version
+	int32_t ____version_2;
+	// T System.Collections.Generic.List`1/Enumerator::_current
+	Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* ____current_3;
 };
 
 // System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2D>
@@ -1457,6 +1224,11 @@ struct Polygon2DListCollider3D_tE75EED4C2D6D2BE1932021A165113E5A06A858EA  : publ
 {
 };
 
+// FunkyCode.Utilities.Polygon2ListCollider3D
+struct Polygon2ListCollider3D_t9C31FD7F2EA9BCADE46F9DC0654BE91CCD2DBADC  : public Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5
+{
+};
+
 // UnityEngine.Quaternion
 struct Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 
 {
@@ -1619,6 +1391,19 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 	};
 };
 
+// System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>
+struct Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931 
+{
+	// System.Collections.Generic.List`1<T> System.Collections.Generic.List`1/Enumerator::_list
+	List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* ____list_0;
+	// System.Int32 System.Collections.Generic.List`1/Enumerator::_index
+	int32_t ____index_1;
+	// System.Int32 System.Collections.Generic.List`1/Enumerator::_version
+	int32_t ____version_2;
+	// T System.Collections.Generic.List`1/Enumerator::_current
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ____current_3;
+};
+
 // System.Nullable`1<UnityEngine.Vector2>
 struct Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD 
 {
@@ -1661,6 +1446,17 @@ struct DelaunayTriangle_tA5239E508D512FED93D6AC8A7CA96A8D31C83341  : public Runt
 	FixedBitArray3_t0B0A634D1DF01269A8E2B7E8D9BB56AD06AFCDEC ___EdgeIsDelaunay_3;
 	// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.DelaunayTriangle::<IsInterior>k__BackingField
 	bool ___U3CIsInteriorU3Ek__BackingField_4;
+};
+
+// FunkyCode.Utilities.DoublePair2
+struct DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207  : public RuntimeObject
+{
+	// UnityEngine.Vector2 FunkyCode.Utilities.DoublePair2::A
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___A_0;
+	// UnityEngine.Vector2 FunkyCode.Utilities.DoublePair2::B
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___B_1;
+	// UnityEngine.Vector2 FunkyCode.Utilities.DoublePair2::C
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___C_2;
 };
 
 // System.Exception
@@ -2004,6 +1800,41 @@ struct PolygonCollider2D_t7CEFFFEE6522175436B408712B052D236889C89E  : public Col
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+// UnityEngine.Collider[]
+struct ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787  : public RuntimeArray
+{
+	ALIGN_FIELD (8) Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* m_Items[1];
+
+	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
 // UnityEngine.Vector2[]
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA  : public RuntimeArray
 {
@@ -2171,41 +2002,6 @@ struct Collider2DU5BU5D_t4771A44B23D278BC01AB6ED33A9A28E48DC0B034  : public Runt
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
-// UnityEngine.Collider[]
-struct ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787  : public RuntimeArray
-{
-	ALIGN_FIELD (8) Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* m_Items[1];
-
-	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-};
 // System.String[]
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeArray
 {
@@ -2280,20 +2076,10 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeA
 
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
-// TSource System.Linq.Enumerable::Last<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Last_TisRuntimeObject_m39971562AFD7CCF7CFF65E8CA0A457CCC3E18F8F_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___index0, const RuntimeMethod* method) ;
+// T[] UnityEngine.GameObject::GetComponents<System.Object>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* GameObject_GetComponents_TisRuntimeObject_m1654344F5C897CA86F9AB51530972086BDB05948_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
-// System.Void System.Nullable`1<UnityEngine.Vector2>::.ctor(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_gshared (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method) ;
-// System.Boolean System.Nullable`1<UnityEngine.Vector2>::get_HasValue()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_gshared_inline (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method) ;
-// T System.Nullable`1<UnityEngine.Vector2>::get_Value()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7_gshared (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1/Enumerator<System.Object>::Dispose()
@@ -2302,6 +2088,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1/Enumerator<System.Object>::MoveNext()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector2>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_gshared_inline (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<UnityEngine.Vector2>::GetEnumerator()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931 List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA_gshared (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C_gshared (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>::get_Current()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_gshared_inline (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector2>::IndexOf(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D_gshared (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___item0, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1<UnityEngine.Vector2>::get_Item(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_gshared (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, int32_t ___index0, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA_gshared (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method) ;
+// TSource System.Linq.Enumerable::Last<System.Object>(System.Collections.Generic.IEnumerable`1<TSource>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Last_TisRuntimeObject_m39971562AFD7CCF7CFF65E8CA0A457CCC3E18F8F_gshared (RuntimeObject* ___source0, const RuntimeMethod* method) ;
+// System.Boolean System.Nullable`1<UnityEngine.Vector2>::get_HasValue()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_gshared_inline (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<UnityEngine.Vector2>::.ctor(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_gshared (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<System.Object>::get_Count()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
+// T System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___index0, const RuntimeMethod* method) ;
+// T System.Nullable`1<UnityEngine.Vector2>::get_Value()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7_gshared (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::Reverse()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Reverse_m3A8BEF4194B03E75859F94B4EE2F54045AF98708_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<System.Object>()
@@ -2314,8 +2126,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m88C4BD8AC607DB3585552068F4
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mB5FDF069171C4CB1778BFAC3B9015A22EA7DFBCD_gshared_inline (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___item0, const RuntimeMethod* method) ;
 // T[] System.Collections.Generic.List`1<UnityEngine.Vector2>::ToArray()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* List_1_ToArray_m9F2A058632994B7A2310424880C089F9DE5B1BA5_gshared (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method) ;
-// T[] UnityEngine.GameObject::GetComponents<System.Object>()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* GameObject_GetComponents_TisRuntimeObject_m1654344F5C897CA86F9AB51530972086BDB05948_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_mE097DBD72433D1AFC11733F5678602603A756424_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___collection0, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1<System.Object>::Remove(T)
@@ -2336,80 +2146,119 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FixedArray3_1_Clear_mD0A537FB49D2DFC03BC
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::Sort(System.Collections.Generic.IComparer`1<T>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Sort_m4204C143D97E871DF2553329CFB0FBE3CD1A01F2_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___comparer0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::AddRange(System.Collections.Generic.IEnumerable`1<T>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_AddRange_m1F76B300133150E6046C5FED00E88B5DE0A02E17_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___collection0, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_gshared (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Int32>::set_Item(System.Int32,T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_gshared (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___index0, int32_t ___value1, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<System.Object>::IndexOf(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t List_1_IndexOf_m378F61BA812B79DEE58D86FE8AA9F20E3FC7D85F_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Object>::RemoveAt(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1<System.Object>::Contains(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) ;
 
-// System.Double System.Math::Pow(System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Pow_mEAE651F0858203FBE12B72B6A53951BBD0FB5265 (double ___x0, double ___y1, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>::.ctor()
+inline void List_1__ctor_mB9716F4D2719A7DB44ECA85680A88BC1F814A94F (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+// T[] UnityEngine.GameObject::GetComponents<UnityEngine.Collider>()
+inline ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* GameObject_GetComponents_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_mC866FD3319709BA8DB8AD60E437A77EF06C10E99 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
+{
+	return ((  ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponents_TisRuntimeObject_m1654344F5C897CA86F9AB51530972086BDB05948_gshared)(__this, method);
+}
+// System.Type System.Object::GetType()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___handle0, const RuntimeMethod* method) ;
+// System.Boolean System.Type::op_Equality(System.Type,System.Type)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC (Type_t* ___left0, Type_t* ___right1, const RuntimeMethod* method) ;
+// FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromBoxCollider(UnityEngine.BoxCollider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* Polygon2Collider3D_CreateFromBoxCollider_m6CE1C5C1ED995D038DE5D271DA6F169D14DFF76F (BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* ___boxCollider0, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>::Add(T)
+inline void List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_inline (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* __this, Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* ___item0, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2*, Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+}
+// FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromSphereCollider(UnityEngine.SphereCollider,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* Polygon2Collider3D_CreateFromSphereCollider_m165CC299C47BA3995E0040038D429D4272FD9DCC (SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275* ___sphereCollider0, int32_t ___pointsCount1, const RuntimeMethod* method) ;
+// FunkyCode.Utilities.Polygon2 FunkyCode.Utilities.Polygon2Collider3D::CreateFromCapsuleCollider(UnityEngine.CapsuleCollider,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* Polygon2Collider3D_CreateFromCapsuleCollider_mD32037F0109239DD88298F64B2F4469257CA0C8C (CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* ___capsuleCollider0, int32_t ___pointsCount1, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2Collider3D::CreateFromMeshCollider(UnityEngine.MeshCollider)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* Polygon2Collider3D_CreateFromMeshCollider_m133F68DA7BAB5C2525E1E564AE096276F4DAD759 (MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* ___meshCollider0, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2>::GetEnumerator()
+inline Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629 (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F (*) (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+}
+// System.Void System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2>::Dispose()
+inline void Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD (Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+}
+// T System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2>::get_Current()
+inline Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_inline (Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F* __this, const RuntimeMethod* method)
+{
+	return ((  Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* (*) (Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+}
+// System.Boolean System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2>::MoveNext()
+inline bool Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E (Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+}
+// System.Void FunkyCode.Utilities.Polygon2::Normalize()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2_Normalize_m3F19E90F7CF12CD4E6796197EF4C034CA9323DCD (Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* __this, const RuntimeMethod* method) ;
+// System.Void FunkyCode.Utilities.Polygon2Collider3D::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2Collider3D__ctor_mB735D372C7393B15F72E954A5ABEA05486B5671D (Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Transform::get_eulerAngles()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Transform::get_lossyScale()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Transform::get_position()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Vector2D::.ctor(UnityEngine.Vector2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector2D__ctor_m719F414E728D86859EC8AD3A5DEAFFE788A02D8D (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___point0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>::.ctor()
-inline void List_1__ctor_mD51CAD898DC0D92A014DB5FCFFA5831C5353479A (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* __this, const RuntimeMethod* method)
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2>::.ctor()
+inline void List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D (List_1_t033CFB1F92EDFE4783967CE396237099F065666E* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+	((  void (*) (List_1_t033CFB1F92EDFE4783967CE396237099F065666E*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
-// System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::get_Count()
-inline int32_t List_1_get_Count_m8B5B34D10F34D8EA8A313E0514DEFBFEE19C877D_inline (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, const RuntimeMethod* method)
+// System.Void FunkyCode.Utilities.DoublePair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DoublePair2__ctor_mF7D20AA459BB48C0E0391543249A96E0E1153615 (DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointB1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointC2, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2>::Add(T)
+inline void List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_inline (List_1_t033CFB1F92EDFE4783967CE396237099F065666E* __this, DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207* ___item0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+	((  void (*) (List_1_t033CFB1F92EDFE4783967CE396237099F065666E*, DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
 }
-// TSource System.Linq.Enumerable::Last<FunkyCode.Utilities.Vector2D>(System.Collections.Generic.IEnumerable`1<TSource>)
-inline Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4 (RuntimeObject* ___source0, const RuntimeMethod* method)
+// System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector2>::get_Count()
+inline int32_t List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method)
 {
-	return ((  Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Last_TisRuntimeObject_m39971562AFD7CCF7CFF65E8CA0A457CCC3E18F8F_gshared)(___source0, method);
+	return ((  int32_t (*) (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B*, const RuntimeMethod*))List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_gshared_inline)(__this, method);
 }
-// T System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::get_Item(System.Int32)
-inline Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, int32_t ___index0, const RuntimeMethod* method)
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<UnityEngine.Vector2>::GetEnumerator()
+inline Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931 List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method)
 {
-	return ((  Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
+	return ((  Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931 (*) (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B*, const RuntimeMethod*))List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA_gshared)(__this, method);
 }
-// System.Void FunkyCode.Utilities.Pair2D::.ctor(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___pointA0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___pointB1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>::Add(T)
-inline void List_1_Add_mF0911B14088BA1CC4C77CA2F7883DCE6721CD320_inline (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* __this, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___item0, const RuntimeMethod* method)
+// System.Void System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>::Dispose()
+inline void Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F*, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+	((  void (*) (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931*, const RuntimeMethod*))Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C_gshared)(__this, method);
 }
-// System.Void System.Nullable`1<UnityEngine.Vector2>::.ctor(T)
-inline void Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73 (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method)
+// T System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>::get_Current()
+inline Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_inline (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method)
 {
-	((  void (*) (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD*, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7, const RuntimeMethod*))Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_gshared)(__this, ___value0, method);
+	return ((  Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 (*) (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931*, const RuntimeMethod*))Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_gshared_inline)(__this, method);
 }
-// System.Boolean System.Nullable`1<UnityEngine.Vector2>::get_HasValue()
-inline bool Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_inline (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method)
+// System.Int32 System.Collections.Generic.List`1<UnityEngine.Vector2>::IndexOf(T)
+inline int32_t List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___item0, const RuntimeMethod* method)
 {
-	return ((  bool (*) (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD*, const RuntimeMethod*))Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B*, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7, const RuntimeMethod*))List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D_gshared)(__this, ___item0, method);
 }
-// T System.Nullable`1<UnityEngine.Vector2>::get_Value()
-inline Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7 (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method)
+// T System.Collections.Generic.List`1<UnityEngine.Vector2>::get_Item(System.Int32)
+inline Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543 (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, int32_t ___index0, const RuntimeMethod* method)
 {
-	return ((  Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 (*) (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD*, const RuntimeMethod*))Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7_gshared)(__this, method);
+	return ((  Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 (*) (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B*, int32_t, const RuntimeMethod*))List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_gshared)(__this, ___index0, method);
 }
-// System.Void FunkyCode.Utilities.Pair2D::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pair2D__ctor_m7E7D9554C47DA531248B3C81E4E6FA7D6564C5DD (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointB1, const RuntimeMethod* method) ;
-// UnityEngine.Vector2 UnityEngine.Vector2::get_zero()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Pair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pair2__ctor_mB59A72EB114EF28EA453943745627230767314C2 (Pair2_tDADA88364D4F4BE398DB5F478F50E12EB2C2D221* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointB1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::Add(T)
-inline void List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_inline (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___item0, const RuntimeMethod* method)
+// System.Boolean System.Collections.Generic.List`1/Enumerator<UnityEngine.Vector2>::MoveNext()
+inline bool Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method)
 {
-	((  void (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+	return ((  bool (*) (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931*, const RuntimeMethod*))Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA_gshared)(__this, method);
 }
-// System.Void FunkyCode.Utilities.Vector2D::.ctor(System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector2D__ctor_m4859523908C2D0693A21477878021C3FFA7B0B4F (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* __this, double ___px0, double ___py1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollRad(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Math2D_GetPitchYawRollRad_mF22278783BA92877E94698966BB1A66B5641A6E4 (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation0, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::GetEnumerator()
 inline Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, const RuntimeMethod* method)
 {
@@ -2425,18 +2274,129 @@ inline Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* Enumerator_get_Curren
 {
 	return ((  Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* (*) (Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
-// System.Void FunkyCode.Utilities.Polygon2D::AddPoint(FunkyCode.Utilities.Vector2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2D_AddPoint_mC493D66CAA0FE45685C9066DF21E5EB7F6E250BB (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, const RuntimeMethod* method) ;
+// System.Double System.Math::Min(System.Double,System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1 (double ___val10, double ___val21, const RuntimeMethod* method) ;
+// System.Double System.Math::Max(System.Double,System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26 (double ___val10, double ___val21, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Vector2D>::MoveNext()
 inline bool Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6 (Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED* __this, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+}
+// System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___x0, float ___y1, float ___width2, float ___height3, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D> FunkyCode.Utilities.Pair2D::GetList(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___list0, bool ___connect1, const RuntimeMethod* method) ;
+// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>::GetEnumerator()
+inline Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9 (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* __this, const RuntimeMethod* method)
+{
+	return ((  Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 (*) (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
+}
+// System.Void System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Pair2D>::Dispose()
+inline void Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4* __this, const RuntimeMethod* method)
+{
+	((  void (*) (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
+}
+// T System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Pair2D>::get_Current()
+inline Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_inline (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4* __this, const RuntimeMethod* method)
+{
+	return ((  Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* (*) (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PointInPoly_m5618FCDE71970AD3DDAAD4567E63101C4D3FCFAA (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly1, const RuntimeMethod* method) ;
+// System.Boolean System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Pair2D>::MoveNext()
+inline bool Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PolyIntersectPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyIntersectPoly_m4BA3BE65B000565E829A2932C0F0CD6116436059 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) ;
+// System.Boolean FunkyCode.Utilities.Math2D::PolyInPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyInPoly_m2005B6C265E6BA23509F15F68164D719897E2857 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) ;
+// System.Boolean FunkyCode.Utilities.Math2D::LineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineA0, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineB1, const RuntimeMethod* method) ;
+// System.Void FunkyCode.Utilities.Pair2D::.ctor(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___pointA0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___pointB1, const RuntimeMethod* method) ;
+// TSource System.Linq.Enumerable::Last<FunkyCode.Utilities.Vector2D>(System.Collections.Generic.IEnumerable`1<TSource>)
+inline Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4 (RuntimeObject* ___source0, const RuntimeMethod* method)
+{
+	return ((  Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* (*) (RuntimeObject*, const RuntimeMethod*))Enumerable_Last_TisRuntimeObject_m39971562AFD7CCF7CFF65E8CA0A457CCC3E18F8F_gshared)(___source0, method);
+}
+// System.Void FunkyCode.Utilities.Vector2D::.ctor(FunkyCode.Utilities.Vector2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector2D__ctor_m4CBB6B6514F1C67B3CF53D317320786BB4FC9F58 (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 UnityEngine.Vector2::get_zero()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) ;
+// System.Void FunkyCode.Utilities.Vector2D::.ctor(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector2D__ctor_m719F414E728D86859EC8AD3A5DEAFFE788A02D8D (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___point0, const RuntimeMethod* method) ;
+// FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Math2D::GetPointLineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineA0, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineB1, const RuntimeMethod* method) ;
+// System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine3(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD Math2D_GetPointLineIntersectLine3_mC183C70C56DB40C66F1A560E75D15639A238BE48 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a_a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a_b1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b_a2, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b_b3, const RuntimeMethod* method) ;
+// System.Boolean System.Nullable`1<UnityEngine.Vector2>::get_HasValue()
+inline bool Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_inline (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD*, const RuntimeMethod*))Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_gshared_inline)(__this, method);
+}
+// System.Boolean UnityEngine.Vector2::op_Inequality(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lhs0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___rhs1, const RuntimeMethod* method) ;
+// System.Void FunkyCode.Utilities.Vector2D::.ctor(System.Double,System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Vector2D__ctor_m4859523908C2D0693A21477878021C3FFA7B0B4F (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* __this, double ___px0, double ___py1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<UnityEngine.Vector2>::.ctor(T)
+inline void Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73 (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___value0, const RuntimeMethod* method)
+{
+	((  void (*) (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD*, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7, const RuntimeMethod*))Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_gshared)(__this, ___value0, method);
 }
 // System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::.ctor()
 inline void List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::Add(T)
+inline void List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_inline (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___item0, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+}
+// System.Boolean FunkyCode.Utilities.Math2D::LineIntersectCircle(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Vector2D,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_LineIntersectCircle_mD3026ECB83638C83386A44A0221939C639BE0B3E (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___line0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___circle1, float ___radius2, const RuntimeMethod* method) ;
+// System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::get_Count()
+inline int32_t List_1_get_Count_m8B5B34D10F34D8EA8A313E0514DEFBFEE19C877D_inline (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, const RuntimeMethod* method)
+{
+	return ((  int32_t (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
+}
+// T System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::get_Item(System.Int32)
+inline Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, int32_t ___index0, const RuntimeMethod* method)
+{
+	return ((  Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
+}
+// System.Int32 FunkyCode.Utilities.Math2D::GetQuad(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math2D_GetQuad_m50A6588EE4753E94B608487D55BED79576F4F83D (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___axis0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___vert1, const RuntimeMethod* method) ;
+// FunkyCode.Utilities.Pair2D FunkyCode.Utilities.Pair2D::Zero()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* Pair2D_Zero_m61E30C11E2494BB93A2AEE0BC3DDA2C7FB97521B (const RuntimeMethod* method) ;
+// System.Double System.Math::Pow(System.Double,System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Pow_mEAE651F0858203FBE12B72B6A53951BBD0FB5265 (double ___x0, double ___y1, const RuntimeMethod* method) ;
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>::.ctor()
+inline void List_1__ctor_mD51CAD898DC0D92A014DB5FCFFA5831C5353479A (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* __this, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
+}
+// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>::Add(T)
+inline void List_1_Add_mF0911B14088BA1CC4C77CA2F7883DCE6721CD320_inline (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* __this, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___item0, const RuntimeMethod* method)
+{
+	((  void (*) (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F*, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
+}
+// T System.Nullable`1<UnityEngine.Vector2>::get_Value()
+inline Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7 (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method)
+{
+	return ((  Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 (*) (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD*, const RuntimeMethod*))Nullable_1_get_Value_m47B6E93739E8A6B3D44D7C08DC7D385D35F0D1F7_gshared)(__this, method);
+}
+// System.Void FunkyCode.Utilities.Pair2D::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pair2D__ctor_m7E7D9554C47DA531248B3C81E4E6FA7D6564C5DD (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointB1, const RuntimeMethod* method) ;
+// System.Void FunkyCode.Utilities.Pair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pair2__ctor_mB59A72EB114EF28EA453943745627230767314C2 (Pair2_tDADA88364D4F4BE398DB5F478F50E12EB2C2D221* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointB1, const RuntimeMethod* method) ;
+// System.Void FunkyCode.Utilities.Polygon2D::AddPoint(FunkyCode.Utilities.Vector2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2D_AddPoint_mC493D66CAA0FE45685C9066DF21E5EB7F6E250BB (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>::.ctor()
 inline void List_1__ctor_mB6F0B56187AD9119E0450E9DC862840A9EFFCD5E (List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55* __this, const RuntimeMethod* method)
 {
@@ -2447,8 +2407,6 @@ inline void List_1_Add_mAAF7A46E5988118762E8CAAA6CE21A15CAFDC9BB_inline (List_1_
 {
 	((  void (*) (List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55*, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
 }
-// System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Polygon2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PointInPoly_m5618FCDE71970AD3DDAAD4567E63101C4D3FCFAA (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly1, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2D>::get_Count()
 inline int32_t List_1_get_Count_mAFD63FFFEE1B4D3D086018394BE3C2954AE510B8_inline (List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55* __this, const RuntimeMethod* method)
 {
@@ -2471,15 +2429,11 @@ inline Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* Enumerator_get_Curre
 {
 	return ((  Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* (*) (Enumerator_t8B05B604B89D7B948EF99D627B62D3C236EA5B3F*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
 }
-// System.Boolean FunkyCode.Utilities.Math2D::PolyIntersectPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyIntersectPoly_m4BA3BE65B000565E829A2932C0F0CD6116436059 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) ;
 // System.Boolean System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2D>::MoveNext()
 inline bool Enumerator_MoveNext_m599592AFD400C29C217ECE2F22CCD12C8B4ABF22 (Enumerator_t8B05B604B89D7B948EF99D627B62D3C236EA5B3F* __this, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Enumerator_t8B05B604B89D7B948EF99D627B62D3C236EA5B3F*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
-// System.Boolean FunkyCode.Utilities.Math2D::PolyInPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyInPoly_m2005B6C265E6BA23509F15F68164D719897E2857 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) ;
 // System.Boolean FunkyCode.Utilities.Polygon2D::PointInPoly(FunkyCode.Utilities.Vector2D)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Polygon2D_PointInPoly_mF06BAD9E1D1141CECA7CAD5F01F4A63853906863 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* __this, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, const RuntimeMethod* method) ;
 // System.Boolean FunkyCode.Utilities.Polygon2D::IsClockwise()
@@ -2491,28 +2445,6 @@ inline void List_1_Reverse_mCACA3263A8C5BE6F134F2D2CDBE1FAB49F0DFD5E (List_1_tE7
 }
 // System.Void FunkyCode.Utilities.Polygon2D::Normalize()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2D_Normalize_m28F69ABC3BF9E098A1BD87AEE850577AEEA8AEEB (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D> FunkyCode.Utilities.Pair2D::GetList(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___list0, bool ___connect1, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<FunkyCode.Utilities.Pair2D>::GetEnumerator()
-inline Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9 (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* __this, const RuntimeMethod* method)
-{
-	return ((  Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 (*) (List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Pair2D>::Dispose()
-inline void Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
-}
-// T System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Pair2D>::get_Current()
-inline Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_inline (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4* __this, const RuntimeMethod* method)
-{
-	return ((  Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* (*) (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
-}
-// System.Boolean System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Pair2D>::MoveNext()
-inline bool Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4* __this, const RuntimeMethod* method)
-{
-	return ((  bool (*) (Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
-}
 // System.Double FunkyCode.Utilities.Polygon2D::GetArea()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Polygon2D_GetArea_m4355176C0BC74FFC3D3D0CCDBB1441CC26AE6697 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* __this, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Mathf::Min(System.Single,System.Single)
@@ -2626,12 +2558,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Rect_get_x_mB267B718E0D067F2BAE31BA477647FBF964916EB (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Rect::get_y()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___x0, float ___y1, float ___width2, float ___height3, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Sprite::get_pixelsPerUnit()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Sprite_get_pixelsPerUnit_m5A5984BC298062DF4CD2CB3E8534443FFCF31826 (Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Vector2::.ctor(System.Single,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) ;
 // UnityEngine.Vector2 UnityEngine.Sprite::get_pivot()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Sprite_get_pivot_mDFC0A205317DB2F3B6C720B8A5BE1C27D01C1D44 (Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* __this, const RuntimeMethod* method) ;
 // UnityEngine.Vector2 UnityEngine.Rect::get_center()
@@ -2774,12 +2702,6 @@ inline Collider2DU5BU5D_t4771A44B23D278BC01AB6ED33A9A28E48DC0B034* GameObject_Ge
 {
 	return ((  Collider2DU5BU5D_t4771A44B23D278BC01AB6ED33A9A28E48DC0B034* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponents_TisRuntimeObject_m1654344F5C897CA86F9AB51530972086BDB05948_gshared)(__this, method);
 }
-// System.Type System.Object::GetType()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3 (RuntimeObject* __this, const RuntimeMethod* method) ;
-// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___handle0, const RuntimeMethod* method) ;
-// System.Boolean System.Type::op_Equality(System.Type,System.Type)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC (Type_t* ___left0, Type_t* ___right1, const RuntimeMethod* method) ;
 // FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromBoxCollider(UnityEngine.BoxCollider2D)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* Polygon2DCollider2D_CreateFromBoxCollider_mD737ABB0EBFA0C80BE0D681F36F86B024ABDD919 (BoxCollider2D_tF860C7737FFB062CEC06577E0CD8364EEC1D4EDA* ___boxCollider0, const RuntimeMethod* method) ;
 // FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider2D::CreateFromCircleCollider(UnityEngine.CircleCollider2D,System.Int32)
@@ -2792,11 +2714,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55* Polygon2DListCollider2D_CreateFromPolygonColliderToLocalSpace_m428A31EB8B8036D6C7B23E187DA722FCA39C543C (PolygonCollider2D_t7CEFFFEE6522175436B408712B052D236889C89E* ___collider0, const RuntimeMethod* method) ;
 // System.Void FunkyCode.Utilities.Polygon2DCollider2D::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2DCollider2D__ctor_m2680037FC60D735FACB2F93E514FBB9F934C47D5 (Polygon2DCollider2D_tDA230EA0F324998CF46E08080D8866A62EFE4E8E* __this, const RuntimeMethod* method) ;
-// T[] UnityEngine.GameObject::GetComponents<UnityEngine.Collider>()
-inline ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* GameObject_GetComponents_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_mC866FD3319709BA8DB8AD60E437A77EF06C10E99 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method)
-{
-	return ((  ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponents_TisRuntimeObject_m1654344F5C897CA86F9AB51530972086BDB05948_gshared)(__this, method);
-}
 // FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromBoxCollider(UnityEngine.BoxCollider)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* Polygon2DCollider3D_CreateFromBoxCollider_m02252A326D424B3ACB9F770735BFE0FD99B453B1 (BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* ___boxCollider0, const RuntimeMethod* method) ;
 // FunkyCode.Utilities.Polygon2D FunkyCode.Utilities.Polygon2DCollider3D::CreateFromSphereCollider(UnityEngine.SphereCollider,System.Int32)
@@ -2807,18 +2724,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t8DF88F8B55D44D7E4077824A12CA08C394450B55* Polygon2DCollider3D_CreateFromMeshCollider_mF3C946B7AF4E9C41C6AB0C6F23C5026F3908D5FB (MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* ___meshCollider0, const RuntimeMethod* method) ;
 // System.Void FunkyCode.Utilities.Polygon2DCollider3D::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2DCollider3D__ctor_mED725F31A6FCF0A58F1708D0EB8459A38410726C (Polygon2DCollider3D_t3F9D173E3A6567C4E21A901D8FC1D9F314CDDC9A* __this, const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Transform::get_lossyScale()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Transform::get_eulerAngles()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
-// UnityEngine.Vector3 UnityEngine.Transform::get_position()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 // System.String System.Double::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Double_ToString_m7499A5D792419537DCB9470A3675CEF5117DE339 (double* __this, const RuntimeMethod* method) ;
 // System.String System.String::Concat(System.String[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___values0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single,System.Single)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
 inline void List_1__ctor_mB118A944D7B2A4AFFE0E26BF5C2113FF436B3B6F (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* __this, RuntimeObject* ___collection0, const RuntimeMethod* method)
 {
@@ -2831,8 +2740,6 @@ inline bool List_1_Remove_mEADE900C32A82D50530C506465B334157561C7F3 (List_1_tE7B
 {
 	return ((  bool (*) (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___item0, method);
 }
-// FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Math2D::GetPointLineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineA0, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineB1, const RuntimeMethod* method) ;
 // System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectSlice(FunkyCode.Utilities.Pair2D,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* Math2D_GetListLineIntersectSlice_mAD5EC5EEAE8982CAB8891ABD5F46789BB8A991DE (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___pair0, List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___slice1, const RuntimeMethod* method) ;
 // TSource System.Linq.Enumerable::First<FunkyCode.Utilities.Vector2D>(System.Collections.Generic.IEnumerable`1<TSource>)
@@ -3269,266 +3176,8 @@ inline void List_1_Sort_mC2478158DE66642F378D562E8C1FDAF4A8EBC26C (List_1_tDE215
 }
 // System.Void FunkyCode.Utilities.Polygon2DTriangulation.DTSweepConstraint::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint,FunkyCode.Utilities.Polygon2DTriangulation.TriangulationPoint)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DTSweepConstraint__ctor_mA37997CEAA3A5E4B17F918C2CF39D8FD6A5C0938 (DTSweepConstraint_tF6370F58D7018F1239B06556D8FD1C9A28554FB3* __this, TriangulationPoint_t70715ABE72355B18CB2312504213B9855B18269D* ___p10, TriangulationPoint_t70715ABE72355B18CB2312504213B9855B18269D* ___p21, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor(System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, double ___x0, double ___y1, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Subtract(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2D_Subtract_m79D8916AB2FA100BE98081D060EC4696E529369A (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p0, const RuntimeMethod* method) ;
-// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::MagnitudeSquared()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Point2D_MagnitudeSquared_m879ABEC187FB07778C03626E262911844EEE4CC2 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::Intersects(FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Rect2D_Intersects_m204F9EBFFD8059F4AFA7847EA31C2E05CA2C7B18 (Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* __this, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___r0, const RuntimeMethod* method) ;
-// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Rect2D::get_Width()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Rect2D_get_Width_m744EEBBCB807C45F3820A974F3C4B2AAFFE5987C (Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* __this, const RuntimeMethod* method) ;
-// System.Double System.Math::Min(System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1 (double ___val10, double ___val21, const RuntimeMethod* method) ;
-// System.Double System.Math::Max(System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26 (double ___val10, double ___val21, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LinesIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TriangulationUtil_LinesIntersect2D_m3F728959DC9795375DDCACA82B1507A01D8B5612 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptStart00, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptEnd01, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptStart12, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptEnd13, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7** ___pIntersectionPt4, double ___epsilon5, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonContainsPolygon_m9113E7289EF94169A4D5A06A25EC89721FB248AA (RuntimeObject* ___poly10, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect11, RuntimeObject* ___poly22, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect23, bool ___runIntersectionTest4, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsAreSame2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonsAreSame2D_m785F4EEDD4B0A932B112F8BDF64846369723AB99 (RuntimeObject* ___poly10, RuntimeObject* ___poly21, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsIntersect2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonsIntersect2D_mE55448188CD69B5E14CF00380C00992C87F6801E (RuntimeObject* ___poly10, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect11, RuntimeObject* ___poly22, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect23, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PointInPolygon2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PointInPolygon2D_mB3926F32311A0C29309C8BAC79F9450D0A2FF9C2 (RuntimeObject* ___polygon0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::.ctor()
-inline void List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* __this, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
-}
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::Add(T)
-inline void List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___item0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::RaysIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TriangulationUtil_RaysIntersect2D_m0F3A5E30E31F45937E08ADA24A7FEBB89FE5052A (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptRayOrigin00, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptRayVector01, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptRayOrigin12, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptRayVector13, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7** ___ptIntersection4, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::.ctor(System.Collections.Generic.IEnumerable`1<T>)
-inline void List_1__ctor_m4E6142012AA8B972541646F6324B2D3EA9E67221 (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* __this, RuntimeObject* ___collection0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*, RuntimeObject*, const RuntimeMethod*))List_1__ctor_mE097DBD72433D1AFC11733F5678602603A756424_gshared)(__this, ___collection0, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToEdge2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_ClipPolygonToEdge2D_m0FC8B827C15506FA367B459402E6AC125F6DDF10 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___edgeBegin0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___edgeEnd1, RuntimeObject* ___poly2, List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** ___outPoly3, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::Clear()
-inline void List_1_Clear_m4339A803A1BB070C0F542D3015E3C57A858CA644_inline (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* __this, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*, const RuntimeMethod*))List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline)(__this, method);
-}
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::AddRange(System.Collections.Generic.IEnumerable`1<T>)
-inline void List_1_AddRange_m766B30E845BFCD58DB8B3EDF99EB26B9710929CE (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* __this, RuntimeObject* ___collection0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*, RuntimeObject*, const RuntimeMethod*))List_1_AddRange_m1F76B300133150E6046C5FED00E88B5DE0A02E17_gshared)(__this, ___collection0, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonOperationContext__ctor_m4C8C08A108AF5B6F1B532AA319F5F248A9B26F74 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* __this, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::Init(FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonOperationContext_Init_m24D7F378AFEF35EA6E5A673D57FC0B5164DE345A (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* __this, uint32_t ___operations0, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon11, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon22, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnionInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_PolygonUnionInternal_mB3CF2221B2277D9742E751964A135986A5885E15 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Union()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* PolygonOperationContext_get_Union_m59F5A017BDEEFE4AB0EE08937CDEDB7400782C5B (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* __this, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Clear()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2DList_Clear_m5114C3B7CD79E46858EFAE266CFB951AB8ABA568 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>::GetEnumerator()
-inline Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A (List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* __this, const RuntimeMethod* method)
-{
-	return ((  Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C (*) (List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2*, const RuntimeMethod*))List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared)(__this, method);
-}
-// System.Void System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>::Dispose()
-inline void Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94 (Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C* __this, const RuntimeMethod* method)
-{
-	((  void (*) (Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C*, const RuntimeMethod*))Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared)(__this, method);
-}
-// T System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>::get_Current()
-inline EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_inline (Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C* __this, const RuntimeMethod* method)
-{
-	return ((  EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* (*) (Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C*, const RuntimeMethod*))Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline)(__this, method);
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_IntersectionPoint()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, const RuntimeMethod* method) ;
-// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Epsilon()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69_inline (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p0, double ___epsilon1, const RuntimeMethod* method) ;
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::IndexOf(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Point2DList_IndexOf_mA37E67F9B83F1E740164AC001913A688A212191D (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p0, const RuntimeMethod* method) ;
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::NextIndex(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32)
-inline int32_t List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___index0, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, int32_t, const RuntimeMethod*))List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_gshared)(__this, ___index0, method);
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::PointInPolygonAngle(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonOperationContext_PointInPolygonAngle_m4B73907865E7713D7DD70EC52AABE8B0D2DAB59F (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___point0, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon1, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<System.Int32>::set_Item(System.Int32,T)
-inline void List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587 (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, int32_t ___index0, int32_t ___value1, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*, int32_t, int32_t, const RuntimeMethod*))List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_gshared)(__this, ___index0, ___value1, method);
-}
-// System.Boolean System.Collections.Generic.List`1/Enumerator<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>::MoveNext()
-inline bool Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58 (Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C* __this, const RuntimeMethod* method)
-{
-	return ((  bool (*) (Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
-}
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::get_Count()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersectInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_PolygonIntersectInternal_mB557E56124ABCEFF07096E98243B65A741AC76E3 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Intersect()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* PolygonOperationContext_get_Intersect_m0E5BE87297178A57E0BAC47EFF4125A49BFE3748 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* __this, const RuntimeMethod* method) ;
-// T System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo>::get_Item(System.Int32)
-inline EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* List_1_get_Item_mF108F2A1AB1A8305855B364F78F1BA302E55BA4C (List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* __this, int32_t ___index0, const RuntimeMethod* method)
-{
-	return ((  EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* (*) (List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Contains(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Point2DList_Contains_m2B1BB0F27820A0DB9FB82C4CB03FB7AA63098A45 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p0, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtractInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_PolygonSubtractInternal_m4634E315D34363A1CC01DA1E8F4DE2869BFB0009 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext::get_Subtract()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* PolygonOperationContext_get_Subtract_m22833F3C8276525F022A146A2A950051718A430E (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* __this, const RuntimeMethod* method) ;
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::PreviousIndex(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Point2DList_PreviousIndex_m32FE470DF5ED0318C16F5D9A33504695A6AA9C3F (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_PolygonOperation_mF8ABE88E1EE67F27AB272175C680E61145D1F745 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::.ctor()
-inline void List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode__ctor_mC7301E92627CB66FC67164FCAB1E7C9B8C85B107 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___pos0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::Add(T)
-inline void List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_inline (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___item0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
-}
-// T System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::get_Item(System.Int32)
-inline SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, int32_t ___index0, const RuntimeMethod* method)
-{
-	return ((  SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::AddConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___toMe0, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::get_Count()
-inline int32_t List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_inline (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, int32_t ___index0, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Equality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___lhs0, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___rhs1, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2D__ctor_m1AE6C89406AC1B14BB5C1445A1DB933C0CD82061 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Position()
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.TriangulationUtil::LinesIntersect2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Boolean,System.Boolean,System.Boolean,FunkyCode.Utilities.Polygon2DTriangulation.Point2D&,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TriangulationUtil_LinesIntersect2D_m6CB40306F9BF524A890749C1D58B4FF400B51222 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptStart00, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptEnd01, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptStart12, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___ptEnd13, bool ___firstIsSegment4, bool ___secondIsSegment5, bool ___coincidentEndPointCollisions6, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7** ___pIntersectionPt7, double ___epsilon8, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::IndexOf(T)
-inline int32_t List_1_IndexOf_m15D851E66B879ABA75685C88ABE1CAA21CD6B033 (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___item0, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*, const RuntimeMethod*))List_1_IndexOf_m378F61BA812B79DEE58D86FE8AA9F20E3FC7D85F_gshared)(__this, ___item0, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___fromMe0, const RuntimeMethod* method) ;
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_NumConnected()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) ;
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.Point2D::op_Subtraction(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___lhs0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___rhs1, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Inequality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___lhs0, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___rhs1, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ClearConnections()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_ClearConnections_m097D34EE8CAABE650FF1611D9EBCAE8F23DA29DB (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::RemoveAt(System.Int32)
-inline void List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, int32_t ___index0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, int32_t, const RuntimeMethod*))List_1_RemoveAt_m54F62297ADEE4D4FDA697F49ED807BF901201B54_gshared)(__this, ___index0, method);
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* SplitComplexPolygonNode_GetRightestConnection_mFE4AD9029A6513EFCC92800C388E88A76FACC6F4 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___incomingDir0, const RuntimeMethod* method) ;
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygonCleanup(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4C6409F93C562B69408929822AF1ED688D478D06* PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA (RuntimeObject* ___orig0, const RuntimeMethod* method) ;
-// System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count()
-inline int32_t List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_inline (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* __this, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___incoming0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>::.ctor()
-inline void List_1__ctor_m7A0337C6183CCFA0C26430CBF07655FC28061B25 (List_1_t4C6409F93C562B69408929822AF1ED688D478D06* __this, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t4C6409F93C562B69408929822AF1ED688D478D06*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2DList__ctor_mC4D886F76C56CB8D1BCA993D5ED0EAA3AB566650 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, RuntimeObject* ___l0, const RuntimeMethod* method) ;
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>::Add(T)
-inline void List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_inline (List_1_t4C6409F93C562B69408929822AF1ED688D478D06* __this, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___item0, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t4C6409F93C562B69408929822AF1ED688D478D06*, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*, const RuntimeMethod*))List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline)(__this, ___item0, method);
-}
-// System.Int32 System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>::get_Count()
-inline int32_t List_1_get_Count_m2D57C60729FD1A60C53C1DD7EEB3E9510DEFB79B_inline (List_1_t4C6409F93C562B69408929822AF1ED688D478D06* __this, const RuntimeMethod* method)
-{
-	return ((  int32_t (*) (List_1_t4C6409F93C562B69408929822AF1ED688D478D06*, const RuntimeMethod*))List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline)(__this, method);
-}
-// T System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>::get_Item(System.Int32)
-inline Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457 (List_1_t4C6409F93C562B69408929822AF1ED688D478D06* __this, int32_t ___index0, const RuntimeMethod* method)
-{
-	return ((  Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* (*) (List_1_t4C6409F93C562B69408929822AF1ED688D478D06*, int32_t, const RuntimeMethod*))List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared)(__this, ___index0, method);
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2DList__ctor_mD73FDB92E64EE2E863CFD081D581EE9C60E3076A (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Simplify()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2DList_Simplify_m9E25BB104EF53642118CD89DE9A2A8B4BA1E35FE (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeOne(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_EdgeOne_mCA3EED47239C3DBA9147802E999F12243BCB5369_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___value0, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeTwo(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_EdgeTwo_m01A5D4981077187330C8691F6BDA1FFDE29A87F6_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___value0, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_IntersectionPoint(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_IntersectionPoint_m3947A1EAC204D859646D60100A77D2266B66712B_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___value0, const RuntimeMethod* method) ;
-// System.Boolean System.Object::Equals(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_Equals_m07105C4585D3FE204F2A80D58523D001DC43F63B (RuntimeObject* __this, RuntimeObject* ___obj0, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_Equals_mF31DF80B54BFDD8BF46B8A6B83E86027E7E7D06B (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___pn0, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Equals(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Point2D_Equals_m9261EDD94C68F906C163F763F59DC0B40DA3ED2D (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p0, const RuntimeMethod* method) ;
-// System.Int32 System.Object::GetHashCode()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Object_GetHashCode_m372C5A7AB16CAC13307C11C4256D706CE57E090C (RuntimeObject* __this, const RuntimeMethod* method) ;
-// System.Void System.Text.StringBuilder::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringBuilder__ctor_m2619CA8D2C3476DF1A302D9D941498BB1C6164C5 (StringBuilder_t* __this, int32_t ___capacity0, const RuntimeMethod* method) ;
-// System.Boolean System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::Contains(T)
-inline bool List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___item0, const RuntimeMethod* method)
-{
-	return ((  bool (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*, const RuntimeMethod*))List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared)(__this, ___item0, method);
-}
-// System.Boolean System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::Remove(T)
-inline bool List_1_Remove_m3F74C0AC1A2BD3E4F2D6515EB1C17A7D9A8B0C92 (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___item0, const RuntimeMethod* method)
-{
-	return ((  bool (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*, const RuntimeMethod*))List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared)(__this, ___item0, method);
-}
-// System.Void System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode>::Clear()
-inline void List_1_Clear_m5A63CA6B78D66FB8E391FA7EEB148761AFB05FA3_inline (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* __this, const RuntimeMethod* method)
-{
-	((  void (*) (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*, const RuntimeMethod*))List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline)(__this, method);
-}
-// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Magnitude()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Point2D_Magnitude_m392DAA55FA47FFD9C23B8D6FCBDA090E090F5528 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, const RuntimeMethod* method) ;
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Normalize()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Point2D_Normalize_mF289F65568CD4C49E45BF4CBCE704823F7611DE4 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* __this, const RuntimeMethod* method) ;
-// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Dot(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Point2D_Dot_m1001D121DA61A142559E08F2D2074864C021E553 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___lhs0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___rhs1, const RuntimeMethod* method) ;
-// System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Cross(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Point2D_Cross_m7100E05A1A5D58402189B21334C191B81BC22557 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___lhs0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___rhs1, const RuntimeMethod* method) ;
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsRighter(System.Double,System.Double,System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_IsRighter_m2B8372480D3798C57D87CB414576746E82C2E3B9 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, double ___sinA0, double ___cosA1, double ___sinB2, double ___cosB3, const RuntimeMethod* method) ;
+// System.Boolean UnityEngine.Vector2::op_Equality(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Equality_m6F2E069A50E787D131261E5CB25FC9E03F95B5E1_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lhs0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___rhs1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, float ___d1, const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::Internal_FromEulerRad(UnityEngine.Vector3)
@@ -3537,6 +3186,5193 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___r0, float ___g1, float ___b2, float ___a3, const RuntimeMethod* method) ;
 // System.Void System.Array::Clear(System.Array,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___array0, int32_t ___index1, int32_t ___length2, const RuntimeMethod* method) ;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2> FunkyCode.Utilities.Polygon2ListCollider3D::CreateFromGameObject(UnityEngine.GameObject)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* Polygon2ListCollider3D_CreateFromGameObject_m7585C170B6CA1851BDDF53371D143E4B6A43837D (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___gameObject0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameObject_GetComponents_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_mC866FD3319709BA8DB8AD60E437A77EF06C10E99_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mB9716F4D2719A7DB44ECA85680A88BC1F814A94F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275_0_0_0_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Type_t_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* V_0 = NULL;
+	ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* V_1 = NULL;
+	int32_t V_2 = 0;
+	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* V_3 = NULL;
+	BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* V_4 = NULL;
+	SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275* V_5 = NULL;
+	CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* V_6 = NULL;
+	Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F V_7;
+	memset((&V_7), 0, sizeof(V_7));
+	Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* V_8 = NULL;
+	Type_t* G_B3_0 = NULL;
+	Type_t* G_B2_0 = NULL;
+	Type_t* G_B5_0 = NULL;
+	Type_t* G_B4_0 = NULL;
+	Type_t* G_B7_0 = NULL;
+	Type_t* G_B6_0 = NULL;
+	{
+		// List<Polygon2> result = new List<Polygon2>();
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_0 = (List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2*)il2cpp_codegen_object_new(List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		List_1__ctor_mB9716F4D2719A7DB44ECA85680A88BC1F814A94F(L_0, List_1__ctor_mB9716F4D2719A7DB44ECA85680A88BC1F814A94F_RuntimeMethod_var);
+		V_0 = L_0;
+		// foreach(Collider collider in gameObject.GetComponents<Collider> ()) {
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = ___gameObject0;
+		NullCheck(L_1);
+		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_2;
+		L_2 = GameObject_GetComponents_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_mC866FD3319709BA8DB8AD60E437A77EF06C10E99(L_1, GameObject_GetComponents_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_mC866FD3319709BA8DB8AD60E437A77EF06C10E99_RuntimeMethod_var);
+		V_1 = L_2;
+		V_2 = 0;
+		goto IL_00e8;
+	}
+
+IL_0014:
+	{
+		// foreach(Collider collider in gameObject.GetComponents<Collider> ()) {
+		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_3 = V_1;
+		int32_t L_4 = V_2;
+		NullCheck(L_3);
+		int32_t L_5 = L_4;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
+		V_3 = L_6;
+		// System.Type type = collider.GetType();
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_7 = V_3;
+		NullCheck(L_7);
+		Type_t* L_8;
+		L_8 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_7, NULL);
+		// if (type == typeof(BoxCollider)) {
+		Type_t* L_9 = L_8;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_10 = { reinterpret_cast<intptr_t> (BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_11;
+		L_11 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_10, NULL);
+		bool L_12;
+		L_12 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_9, L_11, NULL);
+		G_B2_0 = L_9;
+		if (!L_12)
+		{
+			G_B3_0 = L_9;
+			goto IL_0045;
+		}
+	}
+	{
+		// BoxCollider boxCollider = (BoxCollider)collider;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_13 = V_3;
+		V_4 = ((BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23*)CastclassClass((RuntimeObject*)L_13, BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23_il2cpp_TypeInfo_var));
+		// result.Add(CreateFromBoxCollider(boxCollider));
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_14 = V_0;
+		BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* L_15 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_16;
+		L_16 = Polygon2Collider3D_CreateFromBoxCollider_m6CE1C5C1ED995D038DE5D271DA6F169D14DFF76F(L_15, NULL);
+		NullCheck(L_14);
+		List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_inline(L_14, L_16, List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_RuntimeMethod_var);
+		G_B3_0 = G_B2_0;
+	}
+
+IL_0045:
+	{
+		// if (type == typeof(SphereCollider)) {
+		Type_t* L_17 = G_B3_0;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_18 = { reinterpret_cast<intptr_t> (SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_19;
+		L_19 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_18, NULL);
+		bool L_20;
+		L_20 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_17, L_19, NULL);
+		G_B4_0 = L_17;
+		if (!L_20)
+		{
+			G_B5_0 = L_17;
+			goto IL_006d;
+		}
+	}
+	{
+		// SphereCollider sphereCollider = (SphereCollider)collider;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_21 = V_3;
+		V_5 = ((SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275*)CastclassClass((RuntimeObject*)L_21, SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275_il2cpp_TypeInfo_var));
+		// result.Add(CreateFromSphereCollider(sphereCollider));
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_22 = V_0;
+		SphereCollider_tBA111C542CE97F6873DE742757213D6265C7D275* L_23 = V_5;
+		il2cpp_codegen_runtime_class_init_inline(Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_24;
+		L_24 = Polygon2Collider3D_CreateFromSphereCollider_m165CC299C47BA3995E0040038D429D4272FD9DCC(L_23, (-1), NULL);
+		NullCheck(L_22);
+		List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_inline(L_22, L_24, List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_RuntimeMethod_var);
+		G_B5_0 = G_B4_0;
+	}
+
+IL_006d:
+	{
+		// if (type == typeof(CapsuleCollider)) {
+		Type_t* L_25 = G_B5_0;
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_26 = { reinterpret_cast<intptr_t> (CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_27;
+		L_27 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_26, NULL);
+		bool L_28;
+		L_28 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(L_25, L_27, NULL);
+		G_B6_0 = L_25;
+		if (!L_28)
+		{
+			G_B7_0 = L_25;
+			goto IL_0095;
+		}
+	}
+	{
+		// CapsuleCollider capsuleCollider = (CapsuleCollider)collider;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_29 = V_3;
+		V_6 = ((CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808*)CastclassClass((RuntimeObject*)L_29, CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808_il2cpp_TypeInfo_var));
+		// result.Add(CreateFromCapsuleCollider(capsuleCollider));
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_30 = V_0;
+		CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* L_31 = V_6;
+		il2cpp_codegen_runtime_class_init_inline(Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_32;
+		L_32 = Polygon2Collider3D_CreateFromCapsuleCollider_mD32037F0109239DD88298F64B2F4469257CA0C8C(L_31, (-1), NULL);
+		NullCheck(L_30);
+		List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_inline(L_30, L_32, List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_RuntimeMethod_var);
+		G_B7_0 = G_B6_0;
+	}
+
+IL_0095:
+	{
+		// if (type == typeof(MeshCollider)) {
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_33 = { reinterpret_cast<intptr_t> (MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_0_0_0_var) };
+		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
+		Type_t* L_34;
+		L_34 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_33, NULL);
+		bool L_35;
+		L_35 = Type_op_Equality_m99930A0E44E420A685FABA60E60BA1CC5FA0EBDC(G_B7_0, L_34, NULL);
+		if (!L_35)
+		{
+			goto IL_00e4;
+		}
+	}
+	{
+		// MeshCollider meshCollider = (MeshCollider)collider;
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_36 = V_3;
+		// List<Polygon2> polygons = CreateFromMeshCollider(meshCollider);
+		il2cpp_codegen_runtime_class_init_inline(Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_37;
+		L_37 = Polygon2Collider3D_CreateFromMeshCollider_m133F68DA7BAB5C2525E1E564AE096276F4DAD759(((MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455*)CastclassClass((RuntimeObject*)L_36, MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_il2cpp_TypeInfo_var)), NULL);
+		// foreach(Polygon2 polygon in polygons) {
+		NullCheck(L_37);
+		Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F L_38;
+		L_38 = List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629(L_37, List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629_RuntimeMethod_var);
+		V_7 = L_38;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00d6:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD((&V_7), Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_00cb_1;
+			}
+
+IL_00ba_1:
+			{
+				// foreach(Polygon2 polygon in polygons) {
+				Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_39;
+				L_39 = Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_inline((&V_7), Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_RuntimeMethod_var);
+				V_8 = L_39;
+				// result.Add(polygon);
+				List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_40 = V_0;
+				Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_41 = V_8;
+				NullCheck(L_40);
+				List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_inline(L_40, L_41, List_1_Add_mAFBF358D11B50F1057174CBD0B521CBF67A98583_RuntimeMethod_var);
+			}
+
+IL_00cb_1:
+			{
+				// foreach(Polygon2 polygon in polygons) {
+				bool L_42;
+				L_42 = Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E((&V_7), Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E_RuntimeMethod_var);
+				if (L_42)
+				{
+					goto IL_00ba_1;
+				}
+			}
+			{
+				goto IL_00e4;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00e4:
+	{
+		int32_t L_43 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_43, 1));
+	}
+
+IL_00e8:
+	{
+		// foreach(Collider collider in gameObject.GetComponents<Collider> ()) {
+		int32_t L_44 = V_2;
+		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_45 = V_1;
+		NullCheck(L_45);
+		if ((((int32_t)L_44) < ((int32_t)((int32_t)(((RuntimeArray*)L_45)->max_length)))))
+		{
+			goto IL_0014;
+		}
+	}
+	{
+		// foreach(Polygon2 poly in result) {
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_46 = V_0;
+		NullCheck(L_46);
+		Enumerator_tCAAFB572A3E4A82CE1F6376C9FBC9D78B245AC5F L_47;
+		L_47 = List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629(L_46, List_1_GetEnumerator_m3B587154BCB88AED28EEBB0C721B9B308D112629_RuntimeMethod_var);
+		V_7 = L_47;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0112:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD((&V_7), Enumerator_Dispose_m23D2AE32249BE507BEF4CA5F96DBBFDCF1FF00FD_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0107_1;
+			}
+
+IL_00fb_1:
+			{
+				// foreach(Polygon2 poly in result) {
+				Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_48;
+				L_48 = Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_inline((&V_7), Enumerator_get_Current_m62EC4A0E2B3DB4E2596752E7CB3CA1ACA2580F44_RuntimeMethod_var);
+				// poly.Normalize();
+				NullCheck(L_48);
+				Polygon2_Normalize_m3F19E90F7CF12CD4E6796197EF4C034CA9323DCD(L_48, NULL);
+			}
+
+IL_0107_1:
+			{
+				// foreach(Polygon2 poly in result) {
+				bool L_49;
+				L_49 = Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E((&V_7), Enumerator_MoveNext_m301D78ADF73D9654DF68FC3B1F6CB9B231F8252E_RuntimeMethod_var);
+				if (L_49)
+				{
+					goto IL_00fb_1;
+				}
+			}
+			{
+				goto IL_0120;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0120:
+	{
+		// return(result);
+		List_1_tDE1E9F6AD117ADA8F357F3E9E28B0525058700C2* L_50 = V_0;
+		return L_50;
+	}
+}
+// System.Void FunkyCode.Utilities.Polygon2ListCollider3D::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Polygon2ListCollider3D__ctor_m48F4471F10868770FE4B9EF67494B02A89D4DDC9 (Polygon2ListCollider3D_t9C31FD7F2EA9BCADE46F9DC0654BE91CCD2DBADC* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(Polygon2Collider3D_t141CE177AD376A60FF4B372E8DBBA0D89665A7F5_il2cpp_TypeInfo_var);
+		Polygon2Collider3D__ctor_mB735D372C7393B15F72E954A5ABEA05486B5671D(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Single FunkyCode.Utilities.Vector2Extensions::Atan2(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Vector2Extensions_Atan2_mBE4AB9FA9022AAA1D7F4A5B00D8B2B5FBC1BD924 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, const RuntimeMethod* method) 
+{
+	{
+		// return(Mathf.Atan2 (a.y, a.x));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___a0;
+		float L_3 = L_2.___x_0;
+		float L_4;
+		L_4 = atan2f(L_1, L_3);
+		return L_4;
+	}
+}
+// System.Single FunkyCode.Utilities.Vector2Extensions::Atan2(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Vector2Extensions_Atan2_m548A3CAE80CDA1FB7AFE893E07F313347420A622 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, const RuntimeMethod* method) 
+{
+	{
+		// return(Mathf.Atan2 (a.y - b.y, a.x - b.x));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___b1;
+		float L_3 = L_2.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___a0;
+		float L_5 = L_4.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___b1;
+		float L_7 = L_6.___x_0;
+		float L_8;
+		L_8 = atan2f(((float)il2cpp_codegen_subtract(L_1, L_3)), ((float)il2cpp_codegen_subtract(L_5, L_7)));
+		return L_8;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::Push(UnityEngine.Vector2,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_Push_m18613DE074684B196F3A7D598207E5806D780CDF (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, float ___direction1, float ___distance2, const RuntimeMethod* method) 
+{
+	{
+		// a.x += Mathf.Cos(direction) * distance;
+		float* L_0 = (&(&___a0)->___x_0);
+		float* L_1 = L_0;
+		float L_2 = *((float*)L_1);
+		float L_3 = ___direction1;
+		float L_4;
+		L_4 = cosf(L_3);
+		float L_5 = ___distance2;
+		*((float*)L_1) = (float)((float)il2cpp_codegen_add(L_2, ((float)il2cpp_codegen_multiply(L_4, L_5))));
+		// a.y += Mathf.Sin(direction) * distance;
+		float* L_6 = (&(&___a0)->___y_1);
+		float* L_7 = L_6;
+		float L_8 = *((float*)L_7);
+		float L_9 = ___direction1;
+		float L_10;
+		L_10 = sinf(L_9);
+		float L_11 = ___distance2;
+		*((float*)L_7) = (float)((float)il2cpp_codegen_add(L_8, ((float)il2cpp_codegen_multiply(L_10, L_11))));
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = ___a0;
+		return L_12;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::RotToVec(UnityEngine.Vector2,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_RotToVec_m1A0F398063F3FC3D77E0116FA72713862DB06F4D (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, float ___rotation1, float ___distance2, const RuntimeMethod* method) 
+{
+	{
+		// a.x = Mathf.Cos(rotation) * distance;
+		float L_0 = ___rotation1;
+		float L_1;
+		L_1 = cosf(L_0);
+		float L_2 = ___distance2;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_multiply(L_1, L_2));
+		// a.y = Mathf.Sin(rotation) * distance;
+		float L_3 = ___rotation1;
+		float L_4;
+		L_4 = sinf(L_3);
+		float L_5 = ___distance2;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_multiply(L_4, L_5));
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___a0;
+		return L_6;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::RotToVec(UnityEngine.Vector2,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_RotToVec_m6293604B52B20B22004108BB199E3BB4B12FFE1A (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, float ___rotation1, const RuntimeMethod* method) 
+{
+	{
+		// a.x = Mathf.Cos(rotation);
+		float L_0 = ___rotation1;
+		float L_1;
+		L_1 = cosf(L_0);
+		(&___a0)->___x_0 = L_1;
+		// a.y = Mathf.Sin(rotation);
+		float L_2 = ___rotation1;
+		float L_3;
+		L_3 = sinf(L_2);
+		(&___a0)->___y_1 = L_3;
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___a0;
+		return L_4;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXY(UnityEngine.Vector2,UnityEngine.Transform)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_TransformToWorldXY_m371AA25DB44E6886C622B3CD2E7617773548661A (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	{
+		// float angle = transform.eulerAngles.z * Mathf.Deg2Rad;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___transform1;
+		NullCheck(L_0);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_0, NULL);
+		float L_2 = L_1.___z_4;
+		// float cos = Mathf.Cos(angle);
+		float L_3 = ((float)il2cpp_codegen_multiply(L_2, (0.0174532924f)));
+		float L_4;
+		L_4 = cosf(L_3);
+		V_0 = L_4;
+		// float sin = Mathf.Sin(angle);
+		float L_5;
+		L_5 = sinf(L_3);
+		V_1 = L_5;
+		// float x = a.x * transform.lossyScale.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___a0;
+		float L_7 = L_6.___x_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = ___transform1;
+		NullCheck(L_8);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
+		L_9 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_8, NULL);
+		float L_10 = L_9.___x_2;
+		V_2 = ((float)il2cpp_codegen_multiply(L_7, L_10));
+		// float y = a.y * transform.lossyScale.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = ___a0;
+		float L_12 = L_11.___y_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = ___transform1;
+		NullCheck(L_13);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_13, NULL);
+		float L_15 = L_14.___y_3;
+		V_3 = ((float)il2cpp_codegen_multiply(L_12, L_15));
+		// a.x = x * cos - y * sin + transform.position.x;
+		float L_16 = V_2;
+		float L_17 = V_0;
+		float L_18 = V_3;
+		float L_19 = V_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20 = ___transform1;
+		NullCheck(L_20);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
+		L_21 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_20, NULL);
+		float L_22 = L_21.___x_2;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_multiply(L_16, L_17)), ((float)il2cpp_codegen_multiply(L_18, L_19)))), L_22));
+		// a.y = x * sin + y * cos + transform.position.y;
+		float L_23 = V_2;
+		float L_24 = V_1;
+		float L_25 = V_3;
+		float L_26 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27 = ___transform1;
+		NullCheck(L_27);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
+		L_28 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_27, NULL);
+		float L_29 = L_28.___y_3;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_23, L_24)), ((float)il2cpp_codegen_multiply(L_25, L_26)))), L_29));
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_30 = ___a0;
+		return L_30;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXYFlipped(UnityEngine.Vector2,UnityEngine.Transform)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_TransformToWorldXYFlipped_m034DD67734FBB3700EE4324B30511D86FDDCBE05 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	{
+		// float dist = Mathf.Sqrt(a.x * a.x + a.y * a.y);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___a0;
+		float L_3 = L_2.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___a0;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___a0;
+		float L_7 = L_6.___y_1;
+		float L_8;
+		L_8 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))));
+		V_0 = L_8;
+		// float angle = Mathf.Atan2(a.y, a.x) + transform.eulerAngles.z * Mathf.Deg2Rad;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = ___a0;
+		float L_10 = L_9.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = ___a0;
+		float L_12 = L_11.___x_0;
+		float L_13;
+		L_13 = atan2f(L_10, L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14 = ___transform1;
+		NullCheck(L_14);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
+		L_15 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_14, NULL);
+		float L_16 = L_15.___z_4;
+		V_1 = ((float)il2cpp_codegen_add(L_13, ((float)il2cpp_codegen_multiply(L_16, (0.0174532924f)))));
+		// a.x = Mathf.Cos(angle) * dist;
+		float L_17 = V_1;
+		float L_18;
+		L_18 = cosf(L_17);
+		float L_19 = V_0;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_multiply(L_18, L_19));
+		// a.y = Mathf.Sin(angle) * dist;
+		float L_20 = V_1;
+		float L_21;
+		L_21 = sinf(L_20);
+		float L_22 = V_0;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_multiply(L_21, L_22));
+		// a.x = -(a.x * transform.lossyScale.x + transform.position.x);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = ___a0;
+		float L_24 = L_23.___x_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25 = ___transform1;
+		NullCheck(L_25);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
+		L_26 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_25, NULL);
+		float L_27 = L_26.___x_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_28 = ___transform1;
+		NullCheck(L_28);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
+		L_29 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_28, NULL);
+		float L_30 = L_29.___x_2;
+		(&___a0)->___x_0 = ((-((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_24, L_27)), L_30))));
+		// a.y = a.y * transform.lossyScale.x + transform.position.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = ___a0;
+		float L_32 = L_31.___y_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = ___transform1;
+		NullCheck(L_33);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
+		L_34 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_33, NULL);
+		float L_35 = L_34.___x_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36 = ___transform1;
+		NullCheck(L_36);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
+		L_37 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_36, NULL);
+		float L_38 = L_37.___y_3;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_32, L_35)), L_38));
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39 = ___a0;
+		return L_39;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXZFlipped(UnityEngine.Vector2,UnityEngine.Transform)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_TransformToWorldXZFlipped_mC32682014E6C6E4308AFE00090071EC1373463EF (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	{
+		// float dist = Mathf.Sqrt(a.x * a.x + a.y * a.y);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___a0;
+		float L_3 = L_2.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___a0;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___a0;
+		float L_7 = L_6.___y_1;
+		float L_8;
+		L_8 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))));
+		V_0 = L_8;
+		// float angle = Mathf.Atan2(a.y, a.x) - transform.eulerAngles.y * Mathf.Deg2Rad;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = ___a0;
+		float L_10 = L_9.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = ___a0;
+		float L_12 = L_11.___x_0;
+		float L_13;
+		L_13 = atan2f(L_10, L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14 = ___transform1;
+		NullCheck(L_14);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
+		L_15 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_14, NULL);
+		float L_16 = L_15.___y_3;
+		V_1 = ((float)il2cpp_codegen_subtract(L_13, ((float)il2cpp_codegen_multiply(L_16, (0.0174532924f)))));
+		// a.x = Mathf.Cos(angle) * dist;
+		float L_17 = V_1;
+		float L_18;
+		L_18 = cosf(L_17);
+		float L_19 = V_0;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_multiply(L_18, L_19));
+		// a.y = Mathf.Sin(angle) * dist;
+		float L_20 = V_1;
+		float L_21;
+		L_21 = sinf(L_20);
+		float L_22 = V_0;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_multiply(L_21, L_22));
+		// a.x = a.x * transform.lossyScale.x + transform.position.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = ___a0;
+		float L_24 = L_23.___x_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25 = ___transform1;
+		NullCheck(L_25);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
+		L_26 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_25, NULL);
+		float L_27 = L_26.___x_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_28 = ___transform1;
+		NullCheck(L_28);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
+		L_29 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_28, NULL);
+		float L_30 = L_29.___x_2;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_24, L_27)), L_30));
+		// a.y = a.y * transform.lossyScale.z + transform.position.z;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = ___a0;
+		float L_32 = L_31.___y_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = ___transform1;
+		NullCheck(L_33);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
+		L_34 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_33, NULL);
+		float L_35 = L_34.___z_4;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36 = ___transform1;
+		NullCheck(L_36);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
+		L_37 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_36, NULL);
+		float L_38 = L_37.___z_4;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_32, L_35)), L_38));
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39 = ___a0;
+		return L_39;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Vector2Extensions::TransformToWorldXZ(UnityEngine.Vector2,UnityEngine.Transform)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2Extensions_TransformToWorldXZ_m02BEF95623218C5D55E958A71B47AC921BE257C5 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___transform1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	{
+		// float dist = Mathf.Sqrt(a.x * a.x + a.y * a.y);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___a0;
+		float L_3 = L_2.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___a0;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___a0;
+		float L_7 = L_6.___y_1;
+		float L_8;
+		L_8 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))));
+		V_0 = L_8;
+		// float angle = Mathf.Atan2(a.y, a.x) - transform.eulerAngles.y * Mathf.Deg2Rad;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_9 = ___a0;
+		float L_10 = L_9.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_11 = ___a0;
+		float L_12 = L_11.___x_0;
+		float L_13;
+		L_13 = atan2f(L_10, L_12);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14 = ___transform1;
+		NullCheck(L_14);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
+		L_15 = Transform_get_eulerAngles_mCAAF48EFCF628F1ED91C2FFE75A4FD19C039DD6A(L_14, NULL);
+		float L_16 = L_15.___y_3;
+		V_1 = ((float)il2cpp_codegen_subtract(L_13, ((float)il2cpp_codegen_multiply(L_16, (0.0174532924f)))));
+		// a.x = Mathf.Cos(angle) * dist;
+		float L_17 = V_1;
+		float L_18;
+		L_18 = cosf(L_17);
+		float L_19 = V_0;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_multiply(L_18, L_19));
+		// a.y = Mathf.Sin(angle) * dist;
+		float L_20 = V_1;
+		float L_21;
+		L_21 = sinf(L_20);
+		float L_22 = V_0;
+		(&___a0)->___y_1 = ((float)il2cpp_codegen_multiply(L_21, L_22));
+		// a.x = a.x * transform.lossyScale.x + transform.position.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = ___a0;
+		float L_24 = L_23.___x_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_25 = ___transform1;
+		NullCheck(L_25);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
+		L_26 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_25, NULL);
+		float L_27 = L_26.___x_2;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_28 = ___transform1;
+		NullCheck(L_28);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
+		L_29 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_28, NULL);
+		float L_30 = L_29.___x_2;
+		(&___a0)->___x_0 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_24, L_27)), L_30));
+		// a.y = -(a.y * transform.lossyScale.z + transform.position.z);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = ___a0;
+		float L_32 = L_31.___y_1;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33 = ___transform1;
+		NullCheck(L_33);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
+		L_34 = Transform_get_lossyScale_mFF740DA4BE1489C6882CD2F3A37B7321176E5D07(L_33, NULL);
+		float L_35 = L_34.___z_4;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36 = ___transform1;
+		NullCheck(L_36);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
+		L_37 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_36, NULL);
+		float L_38 = L_37.___z_4;
+		(&___a0)->___y_1 = ((-((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_32, L_35)), L_38))));
+		// return(a);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39 = ___a0;
+		return L_39;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void FunkyCode.Utilities.DoublePair2::.ctor(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DoublePair2__ctor_mF7D20AA459BB48C0E0391543249A96E0E1153615 (DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointB1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pointC2, const RuntimeMethod* method) 
+{
+	{
+		// public DoublePair2(Vector2 pointA, Vector2 pointB, Vector2 pointC)
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		// A = pointA;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___pointA0;
+		__this->___A_0 = L_0;
+		// B = pointB;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1 = ___pointB1;
+		__this->___B_1 = L_1;
+		// C = pointC;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___pointC2;
+		__this->___C_2 = L_2;
+		// }
+		return;
+	}
+}
+// System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2> FunkyCode.Utilities.DoublePair2::GetList(UnityEngine.Vector2[],System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t033CFB1F92EDFE4783967CE396237099F065666E* DoublePair2_GetList_m192757F21082CA8B87993421CD307D56FA6E1BAB (Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___list0, bool ___connect1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t033CFB1F92EDFE4783967CE396237099F065666E_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t033CFB1F92EDFE4783967CE396237099F065666E* V_0 = NULL;
+	int32_t V_1 = 0;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	int32_t G_B4_0 = 0;
+	int32_t G_B3_0 = 0;
+	{
+		// List<DoublePair2> pairsList = new List<DoublePair2>();
+		List_1_t033CFB1F92EDFE4783967CE396237099F065666E* L_0 = (List_1_t033CFB1F92EDFE4783967CE396237099F065666E*)il2cpp_codegen_object_new(List_1_t033CFB1F92EDFE4783967CE396237099F065666E_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D(L_0, List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D_RuntimeMethod_var);
+		V_0 = L_0;
+		// if (list.Length > 0) {
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_1 = ___list0;
+		NullCheck(L_1);
+		if (!(((RuntimeArray*)L_1)->max_length))
+		{
+			goto IL_005d;
+		}
+	}
+	{
+		// for(int i = 0; i < list.Length; i++) {
+		V_1 = 0;
+		goto IL_0057;
+	}
+
+IL_000e:
+	{
+		// Vector2 pB = list[i];
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_2 = ___list0;
+		int32_t L_3 = V_1;
+		NullCheck(L_2);
+		int32_t L_4 = L_3;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
+		V_2 = L_5;
+		// int indexB = i;
+		int32_t L_6 = V_1;
+		// int indexA = (indexB - 1);
+		int32_t L_7 = L_6;
+		V_3 = ((int32_t)il2cpp_codegen_subtract(L_7, 1));
+		// if (indexA < 0) {
+		int32_t L_8 = V_3;
+		G_B3_0 = L_7;
+		if ((((int32_t)L_8) >= ((int32_t)0)))
+		{
+			G_B4_0 = L_7;
+			goto IL_0025;
+		}
+	}
+	{
+		// indexA += list.Length;
+		int32_t L_9 = V_3;
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_10 = ___list0;
+		NullCheck(L_10);
+		V_3 = ((int32_t)il2cpp_codegen_add(L_9, ((int32_t)(((RuntimeArray*)L_10)->max_length))));
+		G_B4_0 = G_B3_0;
+	}
+
+IL_0025:
+	{
+		// int indexC = (indexB + 1);
+		V_4 = ((int32_t)il2cpp_codegen_add(G_B4_0, 1));
+		// if (indexC >= list.Length) {
+		int32_t L_11 = V_4;
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_12 = ___list0;
+		NullCheck(L_12);
+		if ((((int32_t)L_11) < ((int32_t)((int32_t)(((RuntimeArray*)L_12)->max_length)))))
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		// indexC -= list.Length;
+		int32_t L_13 = V_4;
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_14 = ___list0;
+		NullCheck(L_14);
+		V_4 = ((int32_t)il2cpp_codegen_subtract(L_13, ((int32_t)(((RuntimeArray*)L_14)->max_length))));
+	}
+
+IL_0038:
+	{
+		// pairsList.Add (new DoublePair2 (list[indexA], pB, list[indexC]));
+		List_1_t033CFB1F92EDFE4783967CE396237099F065666E* L_15 = V_0;
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_16 = ___list0;
+		int32_t L_17 = V_3;
+		NullCheck(L_16);
+		int32_t L_18 = L_17;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_20 = V_2;
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_21 = ___list0;
+		int32_t L_22 = V_4;
+		NullCheck(L_21);
+		int32_t L_23 = L_22;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
+		DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207* L_25 = (DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207*)il2cpp_codegen_object_new(DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207_il2cpp_TypeInfo_var);
+		NullCheck(L_25);
+		DoublePair2__ctor_mF7D20AA459BB48C0E0391543249A96E0E1153615(L_25, L_19, L_20, L_24, NULL);
+		NullCheck(L_15);
+		List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_inline(L_15, L_25, List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_RuntimeMethod_var);
+		// for(int i = 0; i < list.Length; i++) {
+		int32_t L_26 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_26, 1));
+	}
+
+IL_0057:
+	{
+		// for(int i = 0; i < list.Length; i++) {
+		int32_t L_27 = V_1;
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_28 = ___list0;
+		NullCheck(L_28);
+		if ((((int32_t)L_27) < ((int32_t)((int32_t)(((RuntimeArray*)L_28)->max_length)))))
+		{
+			goto IL_000e;
+		}
+	}
+
+IL_005d:
+	{
+		// return(pairsList);
+		List_1_t033CFB1F92EDFE4783967CE396237099F065666E* L_29 = V_0;
+		return L_29;
+	}
+}
+// System.Collections.Generic.List`1<FunkyCode.Utilities.DoublePair2> FunkyCode.Utilities.DoublePair2::GetListCopy(System.Collections.Generic.List`1<UnityEngine.Vector2>,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t033CFB1F92EDFE4783967CE396237099F065666E* DoublePair2_GetListCopy_m8D4C865818F31C2313D99D71125D351F8C1F4134 (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* ___list0, bool ___connect1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t033CFB1F92EDFE4783967CE396237099F065666E_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t033CFB1F92EDFE4783967CE396237099F065666E* V_0 = NULL;
+	Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	int32_t G_B5_0 = 0;
+	int32_t G_B4_0 = 0;
+	{
+		// List<DoublePair2> pairsList = new List<DoublePair2>();
+		List_1_t033CFB1F92EDFE4783967CE396237099F065666E* L_0 = (List_1_t033CFB1F92EDFE4783967CE396237099F065666E*)il2cpp_codegen_object_new(List_1_t033CFB1F92EDFE4783967CE396237099F065666E_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D(L_0, List_1__ctor_mBD3C04E4ADD1C7038151E87BA18BB7586FA5A85D_RuntimeMethod_var);
+		V_0 = L_0;
+		// if (list.Count > 0) {
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_1 = ___list0;
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_1, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		if ((((int32_t)L_2) <= ((int32_t)0)))
+		{
+			goto IL_0085;
+		}
+	}
+	{
+		// foreach (Vector2 pB in list) {
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_3 = ___list0;
+		NullCheck(L_3);
+		Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931 L_4;
+		L_4 = List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA(L_3, List_1_GetEnumerator_m3FE49C02F31954ACBAF7DF56A1CFED61E50524BA_RuntimeMethod_var);
+		V_1 = L_4;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0077:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C((&V_1), Enumerator_Dispose_mCD48FDD0F418E976C266AF07E14C127B6E896A8C_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_006c_1;
+			}
+
+IL_0018_1:
+			{
+				// foreach (Vector2 pB in list) {
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5;
+				L_5 = Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_inline((&V_1), Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_RuntimeMethod_var);
+				V_2 = L_5;
+				// int indexB = list.IndexOf (pB);
+				List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_6 = ___list0;
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7 = V_2;
+				NullCheck(L_6);
+				int32_t L_8;
+				L_8 = List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D(L_6, L_7, List_1_IndexOf_m654AEDA82EBFECD4A63DFD78C073003EFDB1C67D_RuntimeMethod_var);
+				// int indexA = (indexB - 1);
+				int32_t L_9 = L_8;
+				V_3 = ((int32_t)il2cpp_codegen_subtract(L_9, 1));
+				// if (indexA < 0) {
+				int32_t L_10 = V_3;
+				G_B4_0 = L_9;
+				if ((((int32_t)L_10) >= ((int32_t)0)))
+				{
+					G_B5_0 = L_9;
+					goto IL_0038_1;
+				}
+			}
+			{
+				// indexA += list.Count;
+				int32_t L_11 = V_3;
+				List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_12 = ___list0;
+				NullCheck(L_12);
+				int32_t L_13;
+				L_13 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_12, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+				V_3 = ((int32_t)il2cpp_codegen_add(L_11, L_13));
+				G_B5_0 = G_B4_0;
+			}
+
+IL_0038_1:
+			{
+				// int indexC = (indexB + 1);
+				V_4 = ((int32_t)il2cpp_codegen_add(G_B5_0, 1));
+				// if (indexC >= list.Count) {
+				int32_t L_14 = V_4;
+				List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_15 = ___list0;
+				NullCheck(L_15);
+				int32_t L_16;
+				L_16 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_15, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+				if ((((int32_t)L_14) < ((int32_t)L_16)))
+				{
+					goto IL_0051_1;
+				}
+			}
+			{
+				// indexC -= list.Count;
+				int32_t L_17 = V_4;
+				List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_18 = ___list0;
+				NullCheck(L_18);
+				int32_t L_19;
+				L_19 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_18, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+				V_4 = ((int32_t)il2cpp_codegen_subtract(L_17, L_19));
+			}
+
+IL_0051_1:
+			{
+				// pairsList.Add (new DoublePair2 (list[indexA], pB, list[indexC]));
+				List_1_t033CFB1F92EDFE4783967CE396237099F065666E* L_20 = V_0;
+				List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_21 = ___list0;
+				int32_t L_22 = V_3;
+				NullCheck(L_21);
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23;
+				L_23 = List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543(L_21, L_22, List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24 = V_2;
+				List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_25 = ___list0;
+				int32_t L_26 = V_4;
+				NullCheck(L_25);
+				Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27;
+				L_27 = List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543(L_25, L_26, List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+				DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207* L_28 = (DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207*)il2cpp_codegen_object_new(DoublePair2_tF2424A691D80F5194633CBC9F7AE200469B31207_il2cpp_TypeInfo_var);
+				NullCheck(L_28);
+				DoublePair2__ctor_mF7D20AA459BB48C0E0391543249A96E0E1153615(L_28, L_23, L_24, L_27, NULL);
+				NullCheck(L_20);
+				List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_inline(L_20, L_28, List_1_Add_m61D658AF5DF69F091D8E28231A462B70BD4A85F7_RuntimeMethod_var);
+			}
+
+IL_006c_1:
+			{
+				// foreach (Vector2 pB in list) {
+				bool L_29;
+				L_29 = Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA((&V_1), Enumerator_MoveNext_m5DDD3E697A492E99DDE91E6AB7B2390C491F89AA_RuntimeMethod_var);
+				if (L_29)
+				{
+					goto IL_0018_1;
+				}
+			}
+			{
+				goto IL_0085;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0085:
+	{
+		// return(pairsList);
+		List_1_t033CFB1F92EDFE4783967CE396237099F065666E* L_30 = V_0;
+		return L_30;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Single FunkyCode.Utilities.Math2D::Range(System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Math2D_Range_m29C0ECFF24560429637FF61D656273DA2489DDBE (float ___value0, float ___min1, float ___max2, const RuntimeMethod* method) 
+{
+	float G_B3_0 = 0.0f;
+	float G_B6_0 = 0.0f;
+	{
+		// value = (value > max) ? max : value;
+		float L_0 = ___value0;
+		float L_1 = ___max2;
+		if ((((float)L_0) > ((float)L_1)))
+		{
+			goto IL_0007;
+		}
+	}
+	{
+		float L_2 = ___value0;
+		G_B3_0 = L_2;
+		goto IL_0008;
+	}
+
+IL_0007:
+	{
+		float L_3 = ___max2;
+		G_B3_0 = L_3;
+	}
+
+IL_0008:
+	{
+		___value0 = G_B3_0;
+		// value =  (value < min) ? min : value;
+		float L_4 = ___value0;
+		float L_5 = ___min1;
+		if ((((float)L_4) < ((float)L_5)))
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		float L_6 = ___value0;
+		G_B6_0 = L_6;
+		goto IL_0012;
+	}
+
+IL_0011:
+	{
+		float L_7 = ___min1;
+		G_B6_0 = L_7;
+	}
+
+IL_0012:
+	{
+		___value0 = G_B6_0;
+		// return(value);
+		float L_8 = ___value0;
+		return L_8;
+	}
+}
+// System.Single FunkyCode.Utilities.Math2D::NormalizeRotation(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Math2D_NormalizeRotation_m1DC78FC1D6EC415DF1EB43785B739ACE9BA24BEE (float ___rotation0, const RuntimeMethod* method) 
+{
+	{
+		// return((rotation + 720) % 360);
+		float L_0 = ___rotation0;
+		return (fmodf(((float)il2cpp_codegen_add(L_0, (720.0f))), (360.0f)));
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Math2D::ClosestPointOnLine(UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Math2D_ClosestPointOnLine_m7B56B8BCAAE41F1C0CA185C9F3250CF2E30940D0 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vA0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vB1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	float V_5 = 0.0f;
+	{
+		// float vx = (vB.x - vA.x);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___vB1;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___vA0;
+		float L_3 = L_2.___x_0;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		// float vy = (vB.y - vA.y);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___vB1;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___vA0;
+		float L_7 = L_6.___y_1;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		// float distance = Mathf.Sqrt(vx * vx + vy * vy);
+		float L_8 = V_0;
+		float L_9 = V_0;
+		float L_10 = V_1;
+		float L_11 = V_1;
+		float L_12;
+		L_12 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_8, L_9)), ((float)il2cpp_codegen_multiply(L_10, L_11)))));
+		V_2 = L_12;
+		// vx = vx / distance;
+		float L_13 = V_0;
+		float L_14 = V_2;
+		V_0 = ((float)(L_13/L_14));
+		// vy = vy / distance;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		V_1 = ((float)(L_15/L_16));
+		// float t = vx * -vA.x + vy * -vA.y;
+		float L_17 = V_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_18 = ___vA0;
+		float L_19 = L_18.___x_0;
+		float L_20 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21 = ___vA0;
+		float L_22 = L_21.___y_1;
+		V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_17, ((-L_19)))), ((float)il2cpp_codegen_multiply(L_20, ((-L_22))))));
+		// if (t <= 0)
+		float L_23 = V_3;
+		if ((!(((float)L_23) <= ((float)(0.0f)))))
+		{
+			goto IL_004f;
+		}
+	}
+	{
+		// return vA;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24 = ___vA0;
+		return L_24;
+	}
+
+IL_004f:
+	{
+		// float xs = vA.x - vB.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_25 = ___vA0;
+		float L_26 = L_25.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27 = ___vB1;
+		float L_28 = L_27.___x_0;
+		V_4 = ((float)il2cpp_codegen_subtract(L_26, L_28));
+		// float ys = vA.y - vB.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29 = ___vA0;
+		float L_30 = L_29.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = ___vB1;
+		float L_32 = L_31.___y_1;
+		V_5 = ((float)il2cpp_codegen_subtract(L_30, L_32));
+		// bool dist = (t * t) >= (xs * xs + ys * ys);
+		float L_33 = V_3;
+		float L_34 = V_3;
+		float L_35 = V_4;
+		float L_36 = V_4;
+		float L_37 = V_5;
+		float L_38 = V_5;
+		// if (dist)
+		if (!((((int32_t)((!(((float)((float)il2cpp_codegen_multiply(L_33, L_34))) >= ((float)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_35, L_36)), ((float)il2cpp_codegen_multiply(L_37, L_38)))))))? 1 : 0)) == ((int32_t)0))? 1 : 0))
+		{
+			goto IL_0084;
+		}
+	}
+	{
+		// return vB;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39 = ___vB1;
+		return L_39;
+	}
+
+IL_0084:
+	{
+		// vA.x += vx * t;
+		float* L_40 = (&(&___vA0)->___x_0);
+		float* L_41 = L_40;
+		float L_42 = *((float*)L_41);
+		float L_43 = V_0;
+		float L_44 = V_3;
+		*((float*)L_41) = (float)((float)il2cpp_codegen_add(L_42, ((float)il2cpp_codegen_multiply(L_43, L_44))));
+		// vA.y += vy * t;
+		float* L_45 = (&(&___vA0)->___y_1);
+		float* L_46 = L_45;
+		float L_47 = *((float*)L_46);
+		float L_48 = V_1;
+		float L_49 = V_3;
+		*((float*)L_46) = (float)((float)il2cpp_codegen_add(L_47, ((float)il2cpp_codegen_multiply(L_48, L_49))));
+		// return vA;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_50 = ___vA0;
+		return L_50;
+	}
+}
+// UnityEngine.Vector2 FunkyCode.Utilities.Math2D::ClosestPointOnLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Math2D_ClosestPointOnLine_m7FFA8FA28127A1780E80D63B5B128902CBDE3323 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vPoint0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vA1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___vB2, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	float V_5 = 0.0f;
+	float V_6 = 0.0f;
+	float V_7 = 0.0f;
+	{
+		// float vx = (vB.x - vA.x);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___vB2;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___vA1;
+		float L_3 = L_2.___x_0;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		// float vy = (vB.y - vA.y);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___vB2;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___vA1;
+		float L_7 = L_6.___y_1;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		// float distance = Mathf.Sqrt(vx * vx + vy * vy);
+		float L_8 = V_0;
+		float L_9 = V_0;
+		float L_10 = V_1;
+		float L_11 = V_1;
+		float L_12;
+		L_12 = sqrtf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_8, L_9)), ((float)il2cpp_codegen_multiply(L_10, L_11)))));
+		V_2 = L_12;
+		// vx = vx / distance;
+		float L_13 = V_0;
+		float L_14 = V_2;
+		V_0 = ((float)(L_13/L_14));
+		// vy = vy / distance;
+		float L_15 = V_1;
+		float L_16 = V_2;
+		V_1 = ((float)(L_15/L_16));
+		// float v1x = vPoint.x - vA.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17 = ___vPoint0;
+		float L_18 = L_17.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19 = ___vA1;
+		float L_20 = L_19.___x_0;
+		V_3 = ((float)il2cpp_codegen_subtract(L_18, L_20));
+		// float v1y = vPoint.y - vA.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21 = ___vPoint0;
+		float L_22 = L_21.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = ___vA1;
+		float L_24 = L_23.___y_1;
+		V_4 = ((float)il2cpp_codegen_subtract(L_22, L_24));
+		// float t = vx * v1x + vy * v1y;
+		float L_25 = V_0;
+		float L_26 = V_3;
+		float L_27 = V_1;
+		float L_28 = V_4;
+		V_5 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_25, L_26)), ((float)il2cpp_codegen_multiply(L_27, L_28))));
+		// if (t <= 0) {
+		float L_29 = V_5;
+		if ((!(((float)L_29) <= ((float)(0.0f)))))
+		{
+			goto IL_0063;
+		}
+	}
+	{
+		// return vA;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_30 = ___vA1;
+		return L_30;
+	}
+
+IL_0063:
+	{
+		// float xs = vA.x - vB.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = ___vA1;
+		float L_32 = L_31.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_33 = ___vB2;
+		float L_34 = L_33.___x_0;
+		V_6 = ((float)il2cpp_codegen_subtract(L_32, L_34));
+		// float ys = vA.y - vB.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_35 = ___vA1;
+		float L_36 = L_35.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_37 = ___vB2;
+		float L_38 = L_37.___y_1;
+		V_7 = ((float)il2cpp_codegen_subtract(L_36, L_38));
+		// bool dist = (t * t) >= (xs * xs + ys * ys);
+		float L_39 = V_5;
+		float L_40 = V_5;
+		float L_41 = V_6;
+		float L_42 = V_6;
+		float L_43 = V_7;
+		float L_44 = V_7;
+		// if (dist) {
+		if (!((((int32_t)((!(((float)((float)il2cpp_codegen_multiply(L_39, L_40))) >= ((float)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_41, L_42)), ((float)il2cpp_codegen_multiply(L_43, L_44)))))))? 1 : 0)) == ((int32_t)0))? 1 : 0))
+		{
+			goto IL_009a;
+		}
+	}
+	{
+		// return vB;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_45 = ___vB2;
+		return L_45;
+	}
+
+IL_009a:
+	{
+		// vA.x += vx * t;
+		float* L_46 = (&(&___vA1)->___x_0);
+		float* L_47 = L_46;
+		float L_48 = *((float*)L_47);
+		float L_49 = V_0;
+		float L_50 = V_5;
+		*((float*)L_47) = (float)((float)il2cpp_codegen_add(L_48, ((float)il2cpp_codegen_multiply(L_49, L_50))));
+		// vA.y += vy * t;
+		float* L_51 = (&(&___vA1)->___y_1);
+		float* L_52 = L_51;
+		float L_53 = *((float*)L_52);
+		float L_54 = V_1;
+		float L_55 = V_5;
+		*((float*)L_52) = (float)((float)il2cpp_codegen_add(L_53, ((float)il2cpp_codegen_multiply(L_54, L_55))));
+		// return vA;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_56 = ___vA1;
+		return L_56;
+	}
+}
+// UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollRad(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Math2D_GetPitchYawRollRad_mF22278783BA92877E94698966BB1A66B5641A6E4 (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation0, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	{
+		// float roll = Mathf.Atan2(2*rotation.y*rotation.w - 2*rotation.x*rotation.z, 1 - 2*rotation.y*rotation.y - 2*rotation.z*rotation.z);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ___rotation0;
+		float L_1 = L_0.___y_1;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_2 = ___rotation0;
+		float L_3 = L_2.___w_3;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4 = ___rotation0;
+		float L_5 = L_4.___x_0;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_6 = ___rotation0;
+		float L_7 = L_6.___z_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8 = ___rotation0;
+		float L_9 = L_8.___y_1;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10 = ___rotation0;
+		float L_11 = L_10.___y_1;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_12 = ___rotation0;
+		float L_13 = L_12.___z_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = ___rotation0;
+		float L_15 = L_14.___z_2;
+		float L_16;
+		L_16 = atan2f(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_1)), L_3)), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_5)), L_7)))), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract((1.0f), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_9)), L_11)))), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_13)), L_15)))));
+		V_0 = L_16;
+		// float pitch = Mathf.Atan2(2*rotation.x*rotation.w - 2*rotation.y*rotation.z, 1 - 2*rotation.x*rotation.x - 2*rotation.z*rotation.z);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_17 = ___rotation0;
+		float L_18 = L_17.___x_0;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_19 = ___rotation0;
+		float L_20 = L_19.___w_3;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_21 = ___rotation0;
+		float L_22 = L_21.___y_1;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_23 = ___rotation0;
+		float L_24 = L_23.___z_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_25 = ___rotation0;
+		float L_26 = L_25.___x_0;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_27 = ___rotation0;
+		float L_28 = L_27.___x_0;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_29 = ___rotation0;
+		float L_30 = L_29.___z_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_31 = ___rotation0;
+		float L_32 = L_31.___z_2;
+		float L_33;
+		L_33 = atan2f(((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_18)), L_20)), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_22)), L_24)))), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract((1.0f), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_26)), L_28)))), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_30)), L_32)))));
+		// float yaw = Mathf.Asin(2*rotation.x*rotation.y + 2*rotation.z*rotation.w);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_34 = ___rotation0;
+		float L_35 = L_34.___x_0;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_36 = ___rotation0;
+		float L_37 = L_36.___y_1;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38 = ___rotation0;
+		float L_39 = L_38.___z_2;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_40 = ___rotation0;
+		float L_41 = L_40.___w_3;
+		float L_42;
+		L_42 = asinf(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_35)), L_37)), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((2.0f), L_39)), L_41)))));
+		V_1 = L_42;
+		// return new Vector3(pitch, roll, yaw);
+		float L_43 = V_0;
+		float L_44 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45;
+		memset((&L_45), 0, sizeof(L_45));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_45), L_33, L_43, L_44, /*hidden argument*/NULL);
+		return L_45;
+	}
+}
+// UnityEngine.Vector3 FunkyCode.Utilities.Math2D::GetPitchYawRollDeg(UnityEngine.Quaternion)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Math2D_GetPitchYawRollDeg_mA4665114B09AC85B0A3F7EB90D9EBD40987C0DD5 (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rotation0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		// Vector3 radResult = GetPitchYawRollRad(rotation);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ___rotation0;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Math2D_GetPitchYawRollRad_mF22278783BA92877E94698966BB1A66B5641A6E4(L_0, NULL);
+		V_0 = L_1;
+		// return new Vector3(radResult.x * Mathf.Rad2Deg, radResult.y * Mathf.Rad2Deg, radResult.z * Mathf.Rad2Deg);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = V_0;
+		float L_3 = L_2.___x_2;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_0;
+		float L_5 = L_4.___y_3;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_0;
+		float L_7 = L_6.___z_4;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		memset((&L_8), 0, sizeof(L_8));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_8), ((float)il2cpp_codegen_multiply(L_3, (57.2957802f))), ((float)il2cpp_codegen_multiply(L_5, (57.2957802f))), ((float)il2cpp_codegen_multiply(L_7, (57.2957802f))), /*hidden argument*/NULL);
+		return L_8;
+	}
+}
+// UnityEngine.Rect FunkyCode.Utilities.Math2D::GetBounds(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Math2D_GetBounds_m86EECFAF71ABDA05973CD85316D2579F0A4A8172 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___pointsList0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_5 = NULL;
+	{
+		// double rMinX = 1e+10f;
+		V_0 = (10000000000.0);
+		// double rMinY = 1e+10f;
+		V_1 = (10000000000.0);
+		// double rMaxX = -1e+10f;
+		V_2 = (-10000000000.0);
+		// double rMaxY = -1e+10f;
+		V_3 = (-10000000000.0);
+		// foreach (Vector2D id in pointsList) {
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_0 = ___pointsList0;
+		NullCheck(L_0);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_1;
+		L_1 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_0, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_4 = L_1;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_007e:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_4), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0073_1;
+			}
+
+IL_0032_1:
+			{
+				// foreach (Vector2D id in pointsList) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_2;
+				L_2 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_4), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_5 = L_2;
+				// rMinX = System.Math.Min (rMinX, id.x);
+				double L_3 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4 = V_5;
+				NullCheck(L_4);
+				double L_5 = L_4->___x_0;
+				il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+				double L_6;
+				L_6 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_3, L_5, NULL);
+				V_0 = L_6;
+				// rMinY = System.Math.Min (rMinY, id.y);
+				double L_7 = V_1;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_8 = V_5;
+				NullCheck(L_8);
+				double L_9 = L_8->___y_1;
+				double L_10;
+				L_10 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_7, L_9, NULL);
+				V_1 = L_10;
+				// rMaxX = System.Math.Max (rMaxX, id.x);
+				double L_11 = V_2;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_12 = V_5;
+				NullCheck(L_12);
+				double L_13 = L_12->___x_0;
+				double L_14;
+				L_14 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(L_11, L_13, NULL);
+				V_2 = L_14;
+				// rMaxY = System.Math.Max (rMaxY, id.y);
+				double L_15 = V_3;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_16 = V_5;
+				NullCheck(L_16);
+				double L_17 = L_16->___y_1;
+				double L_18;
+				L_18 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(L_15, L_17, NULL);
+				V_3 = L_18;
+			}
+
+IL_0073_1:
+			{
+				// foreach (Vector2D id in pointsList) {
+				bool L_19;
+				L_19 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_4), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_19)
+				{
+					goto IL_0032_1;
+				}
+			}
+			{
+				goto IL_008c;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_008c:
+	{
+		// return(new Rect((float)rMinX, (float)rMinY, (float)System.Math.Abs(rMinX - rMaxX), (float)System.Math.Abs(rMinY - rMaxY)));
+		double L_20 = V_0;
+		double L_21 = V_1;
+		double L_22 = V_0;
+		double L_23 = V_2;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_24;
+		L_24 = fabs(((double)il2cpp_codegen_subtract(L_22, L_23)));
+		double L_25 = V_1;
+		double L_26 = V_3;
+		double L_27;
+		L_27 = fabs(((double)il2cpp_codegen_subtract(L_25, L_26)));
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_28;
+		memset((&L_28), 0, sizeof(L_28));
+		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_28), ((float)L_20), ((float)L_21), ((float)L_24), ((float)L_27), /*hidden argument*/NULL);
+		return L_28;
+	}
+}
+// UnityEngine.Rect FunkyCode.Utilities.Math2D::GetBounds(FunkyCode.Utilities.Pair2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D Math2D_GetBounds_m03591B51DD9B042A5FFE0A3F03758C5D8FAB2ECC (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___pair0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_4 = NULL;
+	{
+		// double rMinX = 1e+10f;
+		V_0 = (10000000000.0);
+		// double rMinY = 1e+10f;
+		V_1 = (10000000000.0);
+		// double rMaxX = -1e+10f;
+		V_2 = (-10000000000.0);
+		// double rMaxY = -1e+10f;
+		V_3 = (-10000000000.0);
+		// Vector2D id = pair.A;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = ___pair0;
+		NullCheck(L_0);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_1 = L_0->___A_0;
+		V_4 = L_1;
+		// rMinX = System.Math.Min (rMinX, id.x);
+		double L_2 = V_0;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_3 = V_4;
+		NullCheck(L_3);
+		double L_4 = L_3->___x_0;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_5;
+		L_5 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_2, L_4, NULL);
+		V_0 = L_5;
+		// rMinY = System.Math.Min (rMinY, id.y);
+		double L_6 = V_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = V_4;
+		NullCheck(L_7);
+		double L_8 = L_7->___y_1;
+		double L_9;
+		L_9 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_6, L_8, NULL);
+		V_1 = L_9;
+		// rMaxX = System.Math.Max (rMaxX, id.x);
+		double L_10 = V_2;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_11 = V_4;
+		NullCheck(L_11);
+		double L_12 = L_11->___x_0;
+		double L_13;
+		L_13 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(L_10, L_12, NULL);
+		V_2 = L_13;
+		// rMaxY = System.Math.Max (rMaxY, id.y);
+		double L_14 = V_3;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_15 = V_4;
+		NullCheck(L_15);
+		double L_16 = L_15->___y_1;
+		double L_17;
+		L_17 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(L_14, L_16, NULL);
+		V_3 = L_17;
+		// id = pair.B;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_18 = ___pair0;
+		NullCheck(L_18);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_19 = L_18->___B_1;
+		V_4 = L_19;
+		// rMinX = System.Math.Min (rMinX, id.x);
+		double L_20 = V_0;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_21 = V_4;
+		NullCheck(L_21);
+		double L_22 = L_21->___x_0;
+		double L_23;
+		L_23 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_20, L_22, NULL);
+		V_0 = L_23;
+		// rMinY = System.Math.Min (rMinY, id.y);
+		double L_24 = V_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_25 = V_4;
+		NullCheck(L_25);
+		double L_26 = L_25->___y_1;
+		double L_27;
+		L_27 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_24, L_26, NULL);
+		V_1 = L_27;
+		// rMaxX = System.Math.Max (rMaxX, id.x);
+		double L_28 = V_2;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_29 = V_4;
+		NullCheck(L_29);
+		double L_30 = L_29->___x_0;
+		double L_31;
+		L_31 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(L_28, L_30, NULL);
+		V_2 = L_31;
+		// rMaxY = System.Math.Max (rMaxY, id.y);
+		double L_32 = V_3;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_33 = V_4;
+		NullCheck(L_33);
+		double L_34 = L_33->___y_1;
+		double L_35;
+		L_35 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(L_32, L_34, NULL);
+		V_3 = L_35;
+		// return(new Rect((float)rMinX, (float)rMinY, (float)System.Math.Abs(rMinX - rMaxX), (float)System.Math.Abs(rMinY - rMaxY)));
+		double L_36 = V_0;
+		double L_37 = V_1;
+		double L_38 = V_0;
+		double L_39 = V_2;
+		double L_40;
+		L_40 = fabs(((double)il2cpp_codegen_subtract(L_38, L_39)));
+		double L_41 = V_1;
+		double L_42 = V_3;
+		double L_43;
+		L_43 = fabs(((double)il2cpp_codegen_subtract(L_41, L_42)));
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_44;
+		memset((&L_44), 0, sizeof(L_44));
+		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_44), ((float)L_36), ((float)L_37), ((float)L_40), ((float)L_43), /*hidden argument*/NULL);
+		return L_44;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PolyInPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyInPoly_m2005B6C265E6BA23509F15F68164D719897E2857 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	{
+		// foreach (Pair2D p in Pair2D.GetList(polyB.pointsList)) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_0 = ___polyB1;
+		NullCheck(L_0);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = L_0->___pointsList_0;
+		List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* L_2;
+		L_2 = Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B(L_1, (bool)1, NULL);
+		NullCheck(L_2);
+		Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 L_3;
+		L_3 = List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9(L_2, List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+		V_0 = L_3;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0037:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E((&V_0), Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_002c_1;
+			}
+
+IL_0014_1:
+			{
+				// foreach (Pair2D p in Pair2D.GetList(polyB.pointsList)) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4;
+				L_4 = Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_inline((&V_0), Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+				// if (PointInPoly (p.A, polyA) == false) {
+				NullCheck(L_4);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_5 = L_4->___A_0;
+				Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_6 = ___polyA0;
+				il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+				bool L_7;
+				L_7 = Math2D_PointInPoly_m5618FCDE71970AD3DDAAD4567E63101C4D3FCFAA(L_5, L_6, NULL);
+				if (L_7)
+				{
+					goto IL_002c_1;
+				}
+			}
+			{
+				// return(false);
+				V_1 = (bool)0;
+				goto IL_0052;
+			}
+
+IL_002c_1:
+			{
+				// foreach (Pair2D p in Pair2D.GetList(polyB.pointsList)) {
+				bool L_8;
+				L_8 = Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE((&V_0), Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+				if (L_8)
+				{
+					goto IL_0014_1;
+				}
+			}
+			{
+				goto IL_0045;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0045:
+	{
+		// if (PolyIntersectPoly (polyA, polyB) == true) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_9 = ___polyA0;
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_10 = ___polyB1;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		bool L_11;
+		L_11 = Math2D_PolyIntersectPoly_m4BA3BE65B000565E829A2932C0F0CD6116436059(L_9, L_10, NULL);
+		if (!L_11)
+		{
+			goto IL_0050;
+		}
+	}
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_0050:
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_0052:
+	{
+		// }
+		bool L_12 = V_1;
+		return L_12;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PolyCollidePoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyCollidePoly_m0F9448D9F6B63F80023A1938DC9BFAFA9B36D68C (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (PolyIntersectPoly (polyA, polyB) == true) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_0 = ___polyA0;
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_1 = ___polyB1;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		bool L_2;
+		L_2 = Math2D_PolyIntersectPoly_m4BA3BE65B000565E829A2932C0F0CD6116436059(L_0, L_1, NULL);
+		if (!L_2)
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_000b:
+	{
+		// if (PolyInPoly (polyA, polyB) == true) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_3 = ___polyA0;
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_4 = ___polyB1;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		bool L_5;
+		L_5 = Math2D_PolyInPoly_m2005B6C265E6BA23509F15F68164D719897E2857(L_3, L_4, NULL);
+		if (!L_5)
+		{
+			goto IL_0016;
+		}
+	}
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_0016:
+	{
+		// if (PolyInPoly (polyB, polyA) == true) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_6 = ___polyB1;
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_7 = ___polyA0;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		bool L_8;
+		L_8 = Math2D_PolyInPoly_m2005B6C265E6BA23509F15F68164D719897E2857(L_6, L_7, NULL);
+		if (!L_8)
+		{
+			goto IL_0021;
+		}
+	}
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_0021:
+	{
+		// return(false);
+		return (bool)0;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PolyIntersectPoly(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolyIntersectPoly_m4BA3BE65B000565E829A2932C0F0CD6116436059 (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyA0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___polyB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_1 = NULL;
+	Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_3 = NULL;
+	bool V_4 = false;
+	{
+		// foreach (Pair2D a in Pair2D.GetList(polyA.pointsList)) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_0 = ___polyA0;
+		NullCheck(L_0);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = L_0->___pointsList_0;
+		List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* L_2;
+		L_2 = Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B(L_1, (bool)1, NULL);
+		NullCheck(L_2);
+		Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 L_3;
+		L_3 = List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9(L_2, List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+		V_0 = L_3;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_006a:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E((&V_0), Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_005f_1;
+			}
+
+IL_0014_1:
+			{
+				// foreach (Pair2D a in Pair2D.GetList(polyA.pointsList)) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4;
+				L_4 = Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_inline((&V_0), Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+				V_1 = L_4;
+				// foreach (Pair2D b in Pair2D.GetList(polyB.pointsList)) {
+				Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_5 = ___polyB1;
+				NullCheck(L_5);
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_6 = L_5->___pointsList_0;
+				List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* L_7;
+				L_7 = Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B(L_6, (bool)1, NULL);
+				NullCheck(L_7);
+				Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 L_8;
+				L_8 = List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9(L_7, List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+				V_2 = L_8;
+			}
+			{
+				auto __finallyBlock = il2cpp::utils::Finally([&]
+				{
+
+FINALLY_0051_1:
+					{// begin finally (depth: 2)
+						Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E((&V_2), Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+						return;
+					}// end finally (depth: 2)
+				});
+				try
+				{// begin try (depth: 2)
+					{
+						goto IL_0046_2;
+					}
+
+IL_0030_2:
+					{
+						// foreach (Pair2D b in Pair2D.GetList(polyB.pointsList)) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_9;
+						L_9 = Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_inline((&V_2), Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+						V_3 = L_9;
+						// if (LineIntersectLine (a, b)) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_10 = V_1;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_11 = V_3;
+						il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+						bool L_12;
+						L_12 = Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D(L_10, L_11, NULL);
+						if (!L_12)
+						{
+							goto IL_0046_2;
+						}
+					}
+					{
+						// return(true);
+						V_4 = (bool)1;
+						goto IL_007a;
+					}
+
+IL_0046_2:
+					{
+						// foreach (Pair2D b in Pair2D.GetList(polyB.pointsList)) {
+						bool L_13;
+						L_13 = Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE((&V_2), Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+						if (L_13)
+						{
+							goto IL_0030_2;
+						}
+					}
+					{
+						goto IL_005f_1;
+					}
+				}// end try (depth: 2)
+				catch(Il2CppExceptionWrapper& e)
+				{
+					__finallyBlock.StoreException(e.ex);
+				}
+			}
+
+IL_005f_1:
+			{
+				// foreach (Pair2D a in Pair2D.GetList(polyA.pointsList)) {
+				bool L_14;
+				L_14 = Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE((&V_0), Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+				if (L_14)
+				{
+					goto IL_0014_1;
+				}
+			}
+			{
+				goto IL_0078;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0078:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_007a:
+	{
+		// }
+		bool L_15 = V_4;
+		return L_15;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectPoly(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_SliceIntersectPoly_m6C81FE4D66B918A30587035C387AF1A81F93FCF0 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___slice0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_0 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_2 = NULL;
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_3 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_5 = NULL;
+	bool V_6 = false;
+	{
+		// Pair2D pairA = new Pair2D(null,  null);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_0, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+		V_0 = L_0;
+		// foreach (Vector2D pointA in slice) {
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = ___slice0;
+		NullCheck(L_1);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_2;
+		L_2 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_1, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_1 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00ae:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_1), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_00a0_1;
+			}
+
+IL_0014_1:
+			{
+				// foreach (Vector2D pointA in slice) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_3;
+				L_3 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_1), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_2 = L_3;
+				// pairA.B = pointA;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_5 = V_2;
+				NullCheck(L_4);
+				L_4->___B_1 = L_5;
+				Il2CppCodeGenWriteBarrier((void**)(&L_4->___B_1), (void*)L_5);
+				// if (pairA.A != null && pairA.B != null) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = V_0;
+				NullCheck(L_6);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = L_6->___A_0;
+				if (!L_7)
+				{
+					goto IL_0099_1;
+				}
+			}
+			{
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_8 = V_0;
+				NullCheck(L_8);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_9 = L_8->___B_1;
+				if (!L_9)
+				{
+					goto IL_0099_1;
+				}
+			}
+			{
+				// Pair2D pairB = new Pair2D(new Vector2D(poly.pointsList.Last()),  null);
+				Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_10 = ___poly1;
+				NullCheck(L_10);
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_11 = L_10->___pointsList_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_12;
+				L_12 = Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4(L_11, Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13 = (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)il2cpp_codegen_object_new(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+				NullCheck(L_13);
+				Vector2D__ctor_m4CBB6B6514F1C67B3CF53D317320786BB4FC9F58(L_13, L_12, NULL);
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_14 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+				NullCheck(L_14);
+				Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_14, L_13, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+				V_3 = L_14;
+				// foreach (Vector2D pointB in poly.pointsList) {
+				Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_15 = ___poly1;
+				NullCheck(L_15);
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_16 = L_15->___pointsList_0;
+				NullCheck(L_16);
+				Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_17;
+				L_17 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_16, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+				V_4 = L_17;
+			}
+			{
+				auto __finallyBlock = il2cpp::utils::Finally([&]
+				{
+
+FINALLY_008b_1:
+					{// begin finally (depth: 2)
+						Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_4), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+						return;
+					}// end finally (depth: 2)
+				});
+				try
+				{// begin try (depth: 2)
+					{
+						goto IL_0080_2;
+					}
+
+IL_0059_2:
+					{
+						// foreach (Vector2D pointB in poly.pointsList) {
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_18;
+						L_18 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_4), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+						V_5 = L_18;
+						// pairB.B = pointB;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_19 = V_3;
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_20 = V_5;
+						NullCheck(L_19);
+						L_19->___B_1 = L_20;
+						Il2CppCodeGenWriteBarrier((void**)(&L_19->___B_1), (void*)L_20);
+						// if (LineIntersectLine (pairA, pairB)) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_21 = V_0;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_22 = V_3;
+						il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+						bool L_23;
+						L_23 = Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D(L_21, L_22, NULL);
+						if (!L_23)
+						{
+							goto IL_0078_2;
+						}
+					}
+					{
+						// return(true);
+						V_6 = (bool)1;
+						goto IL_00be;
+					}
+
+IL_0078_2:
+					{
+						// pairB.A = pointB;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_24 = V_3;
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_25 = V_5;
+						NullCheck(L_24);
+						L_24->___A_0 = L_25;
+						Il2CppCodeGenWriteBarrier((void**)(&L_24->___A_0), (void*)L_25);
+					}
+
+IL_0080_2:
+					{
+						// foreach (Vector2D pointB in poly.pointsList) {
+						bool L_26;
+						L_26 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_4), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+						if (L_26)
+						{
+							goto IL_0059_2;
+						}
+					}
+					{
+						goto IL_0099_1;
+					}
+				}// end try (depth: 2)
+				catch(Il2CppExceptionWrapper& e)
+				{
+					__finallyBlock.StoreException(e.ex);
+				}
+			}
+
+IL_0099_1:
+			{
+				// pairA.A = pointA;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_27 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_28 = V_2;
+				NullCheck(L_27);
+				L_27->___A_0 = L_28;
+				Il2CppCodeGenWriteBarrier((void**)(&L_27->___A_0), (void*)L_28);
+			}
+
+IL_00a0_1:
+			{
+				// foreach (Vector2D pointA in slice) {
+				bool L_29;
+				L_29 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_1), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_29)
+				{
+					goto IL_0014_1;
+				}
+			}
+			{
+				goto IL_00bc;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00bc:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_00be:
+	{
+		// }
+		bool L_30 = V_6;
+		return L_30;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectSlice(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_SliceIntersectSlice_mA8CAC5D91AF5959FAF8352DDD372198B8CE91B61 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___sliceA0, List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___sliceB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_0 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_2 = NULL;
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_3 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_5 = NULL;
+	bool V_6 = false;
+	{
+		// Pair2D pairA = new Pair2D(null,  null);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_0, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+		V_0 = L_0;
+		// foreach (Vector2D pointA in sliceA) {
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = ___sliceA0;
+		NullCheck(L_1);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_2;
+		L_2 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_1, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_1 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00aa:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_1), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_009c_1;
+			}
+
+IL_0014_1:
+			{
+				// foreach (Vector2D pointA in sliceA) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_3;
+				L_3 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_1), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_2 = L_3;
+				// pairA.B = pointA;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_5 = V_2;
+				NullCheck(L_4);
+				L_4->___B_1 = L_5;
+				Il2CppCodeGenWriteBarrier((void**)(&L_4->___B_1), (void*)L_5);
+				// if (pairA.A != null && pairA.B != null) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = V_0;
+				NullCheck(L_6);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = L_6->___A_0;
+				if (!L_7)
+				{
+					goto IL_0095_1;
+				}
+			}
+			{
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_8 = V_0;
+				NullCheck(L_8);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_9 = L_8->___B_1;
+				if (!L_9)
+				{
+					goto IL_0095_1;
+				}
+			}
+			{
+				// Pair2D pairB = new Pair2D(null,  null);
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_10 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+				NullCheck(L_10);
+				Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_10, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+				V_3 = L_10;
+				// foreach (Vector2D pointB in sliceB) {
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_11 = ___sliceB1;
+				NullCheck(L_11);
+				Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_12;
+				L_12 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_11, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+				V_4 = L_12;
+			}
+			{
+				auto __finallyBlock = il2cpp::utils::Finally([&]
+				{
+
+FINALLY_0087_1:
+					{// begin finally (depth: 2)
+						Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_4), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+						return;
+					}// end finally (depth: 2)
+				});
+				try
+				{// begin try (depth: 2)
+					{
+						goto IL_007c_2;
+					}
+
+IL_0045_2:
+					{
+						// foreach (Vector2D pointB in sliceB) {
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13;
+						L_13 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_4), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+						V_5 = L_13;
+						// pairB.B = pointB;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_14 = V_3;
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_15 = V_5;
+						NullCheck(L_14);
+						L_14->___B_1 = L_15;
+						Il2CppCodeGenWriteBarrier((void**)(&L_14->___B_1), (void*)L_15);
+						// if (pairB.A != null && pairB.B != null) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_16 = V_3;
+						NullCheck(L_16);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_17 = L_16->___A_0;
+						if (!L_17)
+						{
+							goto IL_0074_2;
+						}
+					}
+					{
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_18 = V_3;
+						NullCheck(L_18);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_19 = L_18->___B_1;
+						if (!L_19)
+						{
+							goto IL_0074_2;
+						}
+					}
+					{
+						// if (LineIntersectLine (pairA, pairB)) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_20 = V_0;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_21 = V_3;
+						il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+						bool L_22;
+						L_22 = Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D(L_20, L_21, NULL);
+						if (!L_22)
+						{
+							goto IL_0074_2;
+						}
+					}
+					{
+						// return(true);
+						V_6 = (bool)1;
+						goto IL_00ba;
+					}
+
+IL_0074_2:
+					{
+						// pairB.A = pointB;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_23 = V_3;
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_24 = V_5;
+						NullCheck(L_23);
+						L_23->___A_0 = L_24;
+						Il2CppCodeGenWriteBarrier((void**)(&L_23->___A_0), (void*)L_24);
+					}
+
+IL_007c_2:
+					{
+						// foreach (Vector2D pointB in sliceB) {
+						bool L_25;
+						L_25 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_4), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+						if (L_25)
+						{
+							goto IL_0045_2;
+						}
+					}
+					{
+						goto IL_0095_1;
+					}
+				}// end try (depth: 2)
+				catch(Il2CppExceptionWrapper& e)
+				{
+					__finallyBlock.StoreException(e.ex);
+				}
+			}
+
+IL_0095_1:
+			{
+				// pairA.A = pointA;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_26 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_27 = V_2;
+				NullCheck(L_26);
+				L_26->___A_0 = L_27;
+				Il2CppCodeGenWriteBarrier((void**)(&L_26->___A_0), (void*)L_27);
+			}
+
+IL_009c_1:
+			{
+				// foreach (Vector2D pointA in sliceA) {
+				bool L_28;
+				L_28 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_1), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_28)
+				{
+					goto IL_0014_1;
+				}
+			}
+			{
+				goto IL_00b8;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00b8:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_00ba:
+	{
+		// }
+		bool L_29 = V_6;
+		return L_29;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::LineIntersectPoly(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_LineIntersectPoly_m718DB089670360D9952D402A51617E935BCE4E29 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___line0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_0 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_2 = NULL;
+	bool V_3 = false;
+	{
+		// Pair2D pair = new Pair2D(new Vector2D(poly.pointsList.Last()), new Vector2D(Vector2.zero));
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_0 = ___poly1;
+		NullCheck(L_0);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = L_0->___pointsList_0;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_2;
+		L_2 = Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4(L_1, Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_3 = (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)il2cpp_codegen_object_new(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		NullCheck(L_3);
+		Vector2D__ctor_m4CBB6B6514F1C67B3CF53D317320786BB4FC9F58(L_3, L_2, NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4;
+		L_4 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_5 = (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)il2cpp_codegen_object_new(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		NullCheck(L_5);
+		Vector2D__ctor_m719F414E728D86859EC8AD3A5DEAFFE788A02D8D(L_5, L_4, NULL);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		NullCheck(L_6);
+		Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_6, L_3, L_5, NULL);
+		V_0 = L_6;
+		// foreach (Vector2D point in poly.pointsList) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_7 = ___poly1;
+		NullCheck(L_7);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_8 = L_7->___pointsList_0;
+		NullCheck(L_8);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_9;
+		L_9 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_8, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_1 = L_9;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_005c:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_1), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0051_1;
+			}
+
+IL_002e_1:
+			{
+				// foreach (Vector2D point in poly.pointsList) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_10;
+				L_10 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_1), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_2 = L_10;
+				// pair.B = point;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_11 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_12 = V_2;
+				NullCheck(L_11);
+				L_11->___B_1 = L_12;
+				Il2CppCodeGenWriteBarrier((void**)(&L_11->___B_1), (void*)L_12);
+				// if (LineIntersectLine (line, pair)) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_13 = ___line0;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_14 = V_0;
+				il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+				bool L_15;
+				L_15 = Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D(L_13, L_14, NULL);
+				if (!L_15)
+				{
+					goto IL_004a_1;
+				}
+			}
+			{
+				// return(true);
+				V_3 = (bool)1;
+				goto IL_006c;
+			}
+
+IL_004a_1:
+			{
+				// pair.A = point;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_16 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_17 = V_2;
+				NullCheck(L_16);
+				L_16->___A_0 = L_17;
+				Il2CppCodeGenWriteBarrier((void**)(&L_16->___A_0), (void*)L_17);
+			}
+
+IL_0051_1:
+			{
+				// foreach (Vector2D point in poly.pointsList) {
+				bool L_18;
+				L_18 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_1), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_18)
+				{
+					goto IL_002e_1;
+				}
+			}
+			{
+				goto IL_006a;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_006a:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_006c:
+	{
+		// }
+		bool L_19 = V_3;
+		return L_19;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::LineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_LineIntersectLine_m83F7124167E6D7D10BB3FFE115C3970FDA079C3D (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineA0, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// if (GetPointLineIntersectLine (lineA, lineB) != null) {
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = ___lineA0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_1 = ___lineB1;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_2;
+		L_2 = Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1(L_0, L_1, NULL);
+		if (!L_2)
+		{
+			goto IL_000b;
+		}
+	}
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_000b:
+	{
+		// return(false);
+		return (bool)0;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PolygonIntersectItself(System.Collections.Generic.List`1<UnityEngine.Vector2>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolygonIntersectItself_mA3F76A75A3D9162A9E8DBCADA5CE67621F21BC21 (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* ___points0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	int32_t V_4 = 0;
+	int32_t V_5 = 0;
+	Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD V_6;
+	memset((&V_6), 0, sizeof(V_6));
+	{
+		// Vector2 pairAA = Vector2.zero;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
+		L_0 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		V_0 = L_0;
+		// Vector2 pairAB = Vector2.zero;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
+		L_1 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		V_1 = L_1;
+		// Vector2 pairBA = Vector2.zero;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2;
+		L_2 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		V_2 = L_2;
+		// Vector2 pairBB = Vector2.zero;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
+		L_3 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
+		V_3 = L_3;
+		// for(int i = 0; i < points.Count; i++)
+		V_4 = 0;
+		goto IL_00b9;
+	}
+
+IL_0020:
+	{
+		// pairAA = points[i % points.Count];
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_4 = ___points0;
+		int32_t L_5 = V_4;
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_6 = ___points0;
+		NullCheck(L_6);
+		int32_t L_7;
+		L_7 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_6, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		NullCheck(L_4);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8;
+		L_8 = List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543(L_4, ((int32_t)(L_5%L_7)), List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+		V_0 = L_8;
+		// pairAB = points[(i + 1) % points.Count];
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_9 = ___points0;
+		int32_t L_10 = V_4;
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_11 = ___points0;
+		NullCheck(L_11);
+		int32_t L_12;
+		L_12 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_11, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		NullCheck(L_9);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13;
+		L_13 = List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543(L_9, ((int32_t)(((int32_t)il2cpp_codegen_add(L_10, 1))%L_12)), List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+		V_1 = L_13;
+		// for(int x = 0; x < points.Count; x++)
+		V_5 = 0;
+		goto IL_00a9;
+	}
+
+IL_0047:
+	{
+		// pairBA = points[x % points.Count];
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_14 = ___points0;
+		int32_t L_15 = V_5;
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_16 = ___points0;
+		NullCheck(L_16);
+		int32_t L_17;
+		L_17 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_16, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		NullCheck(L_14);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_18;
+		L_18 = List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543(L_14, ((int32_t)(L_15%L_17)), List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+		V_2 = L_18;
+		// pairBB = points[(x + 1) % points.Count];
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_19 = ___points0;
+		int32_t L_20 = V_5;
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_21 = ___points0;
+		NullCheck(L_21);
+		int32_t L_22;
+		L_22 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_21, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		NullCheck(L_19);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23;
+		L_23 = List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543(L_19, ((int32_t)(((int32_t)il2cpp_codegen_add(L_20, 1))%L_22)), List_1_get_Item_m1F8E226CAD72B83C5E75BB66B43025247806B543_RuntimeMethod_var);
+		V_3 = L_23;
+		// if (GetPointLineIntersectLine3 (pairAA, pairAB, pairBA, pairBB) != null)
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24 = V_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_25 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26 = V_2;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27 = V_3;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_28;
+		L_28 = Math2D_GetPointLineIntersectLine3_mC183C70C56DB40C66F1A560E75D15639A238BE48(L_24, L_25, L_26, L_27, NULL);
+		V_6 = L_28;
+		bool L_29;
+		L_29 = Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_inline((&V_6), Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_RuntimeMethod_var);
+		if (!L_29)
+		{
+			goto IL_00a3;
+		}
+	}
+	{
+		// if (pairAA != pairBA && pairAB != pairBB && pairAA != pairBB && pairAB != pairBA)
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_30 = V_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = V_2;
+		bool L_32;
+		L_32 = Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline(L_30, L_31, NULL);
+		if (!L_32)
+		{
+			goto IL_00a3;
+		}
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_33 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_34 = V_3;
+		bool L_35;
+		L_35 = Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline(L_33, L_34, NULL);
+		if (!L_35)
+		{
+			goto IL_00a3;
+		}
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_36 = V_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_37 = V_3;
+		bool L_38;
+		L_38 = Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline(L_36, L_37, NULL);
+		if (!L_38)
+		{
+			goto IL_00a3;
+		}
+	}
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_39 = V_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_40 = V_2;
+		bool L_41;
+		L_41 = Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline(L_39, L_40, NULL);
+		if (!L_41)
+		{
+			goto IL_00a3;
+		}
+	}
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_00a3:
+	{
+		// for(int x = 0; x < points.Count; x++)
+		int32_t L_42 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_42, 1));
+	}
+
+IL_00a9:
+	{
+		// for(int x = 0; x < points.Count; x++)
+		int32_t L_43 = V_5;
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_44 = ___points0;
+		NullCheck(L_44);
+		int32_t L_45;
+		L_45 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_44, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		if ((((int32_t)L_43) < ((int32_t)L_45)))
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		// for(int i = 0; i < points.Count; i++)
+		int32_t L_46 = V_4;
+		V_4 = ((int32_t)il2cpp_codegen_add(L_46, 1));
+	}
+
+IL_00b9:
+	{
+		// for(int i = 0; i < points.Count; i++)
+		int32_t L_47 = V_4;
+		List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* L_48 = ___points0;
+		NullCheck(L_48);
+		int32_t L_49;
+		L_49 = List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_inline(L_48, List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_RuntimeMethod_var);
+		if ((((int32_t)L_47) < ((int32_t)L_49)))
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		// return(false);
+		return (bool)0;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::SliceIntersectItself(System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_SliceIntersectItself_mA3DCEB7BD84D80FAEEA6E654F9FB2484CDFB9F38 (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___slice0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_0 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_2 = NULL;
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_3 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_5 = NULL;
+	bool V_6 = false;
+	{
+		// Pair2D pairA = new Pair2D(null,  null);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_0, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+		V_0 = L_0;
+		// foreach (Vector2D va in slice) {
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = ___slice0;
+		NullCheck(L_1);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_2;
+		L_2 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_1, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_1 = L_2;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_00e8:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_1), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_00da_1;
+			}
+
+IL_0014_1:
+			{
+				// foreach (Vector2D va in slice) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_3;
+				L_3 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_1), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_2 = L_3;
+				// pairA.B = va;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_5 = V_2;
+				NullCheck(L_4);
+				L_4->___B_1 = L_5;
+				Il2CppCodeGenWriteBarrier((void**)(&L_4->___B_1), (void*)L_5);
+				// if (pairA.A != null && pairA.B != null) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = V_0;
+				NullCheck(L_6);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = L_6->___A_0;
+				if (!L_7)
+				{
+					goto IL_00d3_1;
+				}
+			}
+			{
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_8 = V_0;
+				NullCheck(L_8);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_9 = L_8->___B_1;
+				if (!L_9)
+				{
+					goto IL_00d3_1;
+				}
+			}
+			{
+				// Pair2D pairB = new Pair2D(null,  null);
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_10 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+				NullCheck(L_10);
+				Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_10, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+				V_3 = L_10;
+				// foreach (Vector2D vb in slice) {
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_11 = ___slice0;
+				NullCheck(L_11);
+				Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_12;
+				L_12 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_11, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+				V_4 = L_12;
+			}
+			{
+				auto __finallyBlock = il2cpp::utils::Finally([&]
+				{
+
+FINALLY_00c5_1:
+					{// begin finally (depth: 2)
+						Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_4), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+						return;
+					}// end finally (depth: 2)
+				});
+				try
+				{// begin try (depth: 2)
+					{
+						goto IL_00ba_2;
+					}
+
+IL_004b_2:
+					{
+						// foreach (Vector2D vb in slice) {
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13;
+						L_13 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_4), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+						V_5 = L_13;
+						// pairB.B = vb;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_14 = V_3;
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_15 = V_5;
+						NullCheck(L_14);
+						L_14->___B_1 = L_15;
+						Il2CppCodeGenWriteBarrier((void**)(&L_14->___B_1), (void*)L_15);
+						// if (pairB.A != null && pairB.B != null) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_16 = V_3;
+						NullCheck(L_16);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_17 = L_16->___A_0;
+						if (!L_17)
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_18 = V_3;
+						NullCheck(L_18);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_19 = L_18->___B_1;
+						if (!L_19)
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						// if (GetPointLineIntersectLine (pairA, pairB) != null) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_20 = V_0;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_21 = V_3;
+						il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_22;
+						L_22 = Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1(L_20, L_21, NULL);
+						if (!L_22)
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						// if (pairA.A != pairB.A && pairA.B != pairB.B && pairA.A != pairB.B && pairA.B != pairB.A) {
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_23 = V_0;
+						NullCheck(L_23);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_24 = L_23->___A_0;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_25 = V_3;
+						NullCheck(L_25);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_26 = L_25->___A_0;
+						if ((((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_24) == ((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_26)))
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_27 = V_0;
+						NullCheck(L_27);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_28 = L_27->___B_1;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_29 = V_3;
+						NullCheck(L_29);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_30 = L_29->___B_1;
+						if ((((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_28) == ((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_30)))
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_31 = V_0;
+						NullCheck(L_31);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_32 = L_31->___A_0;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_33 = V_3;
+						NullCheck(L_33);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_34 = L_33->___B_1;
+						if ((((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_32) == ((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_34)))
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_35 = V_0;
+						NullCheck(L_35);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_36 = L_35->___B_1;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_37 = V_3;
+						NullCheck(L_37);
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_38 = L_37->___A_0;
+						if ((((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_36) == ((RuntimeObject*)(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)L_38)))
+						{
+							goto IL_00b2_2;
+						}
+					}
+					{
+						// return(true);
+						V_6 = (bool)1;
+						goto IL_00f8;
+					}
+
+IL_00b2_2:
+					{
+						// pairB.A = vb;
+						Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_39 = V_3;
+						Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_40 = V_5;
+						NullCheck(L_39);
+						L_39->___A_0 = L_40;
+						Il2CppCodeGenWriteBarrier((void**)(&L_39->___A_0), (void*)L_40);
+					}
+
+IL_00ba_2:
+					{
+						// foreach (Vector2D vb in slice) {
+						bool L_41;
+						L_41 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_4), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+						if (L_41)
+						{
+							goto IL_004b_2;
+						}
+					}
+					{
+						goto IL_00d3_1;
+					}
+				}// end try (depth: 2)
+				catch(Il2CppExceptionWrapper& e)
+				{
+					__finallyBlock.StoreException(e.ex);
+				}
+			}
+
+IL_00d3_1:
+			{
+				// pairA.A = va;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_42 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_43 = V_2;
+				NullCheck(L_42);
+				L_42->___A_0 = L_43;
+				Il2CppCodeGenWriteBarrier((void**)(&L_42->___A_0), (void*)L_43);
+			}
+
+IL_00da_1:
+			{
+				// foreach (Vector2D va in slice) {
+				bool L_44;
+				L_44 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_1), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_44)
+				{
+					goto IL_0014_1;
+				}
+			}
+			{
+				goto IL_00f6;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_00f6:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_00f8:
+	{
+		// }
+		bool L_45 = V_6;
+		return L_45;
+	}
+}
+// FunkyCode.Utilities.Vector2D FunkyCode.Utilities.Math2D::GetPointLineIntersectLine(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineA0, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	double V_4 = 0.0;
+	double V_5 = 0.0;
+	double V_6 = 0.0;
+	double V_7 = 0.0;
+	double V_8 = 0.0;
+	double V_9 = 0.0;
+	{
+		// double dx_cx = lineB.B.x - lineB.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = ___lineB1;
+		NullCheck(L_0);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_1 = L_0->___B_1;
+		NullCheck(L_1);
+		double L_2 = L_1->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_3 = ___lineB1;
+		NullCheck(L_3);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4 = L_3->___A_0;
+		NullCheck(L_4);
+		double L_5 = L_4->___x_0;
+		V_2 = ((double)il2cpp_codegen_subtract(L_2, L_5));
+		// double dy_cy = lineB.B.y - lineB.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = ___lineB1;
+		NullCheck(L_6);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = L_6->___B_1;
+		NullCheck(L_7);
+		double L_8 = L_7->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_9 = ___lineB1;
+		NullCheck(L_9);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_10 = L_9->___A_0;
+		NullCheck(L_10);
+		double L_11 = L_10->___y_1;
+		V_3 = ((double)il2cpp_codegen_subtract(L_8, L_11));
+		// double bx_ax = lineA.B.x - lineA.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_12 = ___lineA0;
+		NullCheck(L_12);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13 = L_12->___B_1;
+		NullCheck(L_13);
+		double L_14 = L_13->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_15 = ___lineA0;
+		NullCheck(L_15);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_16 = L_15->___A_0;
+		NullCheck(L_16);
+		double L_17 = L_16->___x_0;
+		V_4 = ((double)il2cpp_codegen_subtract(L_14, L_17));
+		// double by_ay = lineA.B.y - lineA.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_18 = ___lineA0;
+		NullCheck(L_18);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_19 = L_18->___B_1;
+		NullCheck(L_19);
+		double L_20 = L_19->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_21 = ___lineA0;
+		NullCheck(L_21);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_22 = L_21->___A_0;
+		NullCheck(L_22);
+		double L_23 = L_22->___y_1;
+		V_5 = ((double)il2cpp_codegen_subtract(L_20, L_23));
+		// double de = bx_ax * dy_cy - by_ay * dx_cx;
+		double L_24 = V_4;
+		double L_25 = V_3;
+		double L_26 = V_5;
+		double L_27 = V_2;
+		V_6 = ((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_24, L_25)), ((double)il2cpp_codegen_multiply(L_26, L_27))));
+		// double tor = 1E-10;
+		V_7 = (1.0E-10);
+		// if (System.Math.Abs(de) < 0.0001d) {
+		double L_28 = V_6;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_29;
+		L_29 = fabs(L_28);
+		if ((!(((double)L_29) < ((double)(0.0001)))))
+		{
+			goto IL_008c;
+		}
+	}
+	{
+		// return(null);
+		return (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL;
+	}
+
+IL_008c:
+	{
+		// if (de > - tor && de < tor) {
+		double L_30 = V_6;
+		double L_31 = V_7;
+		if ((!(((double)L_30) > ((double)((-L_31))))))
+		{
+			goto IL_009b;
+		}
+	}
+	{
+		double L_32 = V_6;
+		double L_33 = V_7;
+		if ((!(((double)L_32) < ((double)L_33))))
+		{
+			goto IL_009b;
+		}
+	}
+	{
+		// return(null);
+		return (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL;
+	}
+
+IL_009b:
+	{
+		// ax_cx = lineA.A.x - lineB.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_34 = ___lineA0;
+		NullCheck(L_34);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_35 = L_34->___A_0;
+		NullCheck(L_35);
+		double L_36 = L_35->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_37 = ___lineB1;
+		NullCheck(L_37);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_38 = L_37->___A_0;
+		NullCheck(L_38);
+		double L_39 = L_38->___x_0;
+		V_0 = ((double)il2cpp_codegen_subtract(L_36, L_39));
+		// ay_cy = lineA.A.y - lineB.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_40 = ___lineA0;
+		NullCheck(L_40);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_41 = L_40->___A_0;
+		NullCheck(L_41);
+		double L_42 = L_41->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_43 = ___lineB1;
+		NullCheck(L_43);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_44 = L_43->___A_0;
+		NullCheck(L_44);
+		double L_45 = L_44->___y_1;
+		// double r = (ay_cy * dx_cx - ax_cx * dy_cy) / de;
+		double L_46 = ((double)il2cpp_codegen_subtract(L_42, L_45));
+		double L_47 = V_2;
+		double L_48 = V_0;
+		double L_49 = V_3;
+		double L_50 = V_6;
+		V_8 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_46, L_47)), ((double)il2cpp_codegen_multiply(L_48, L_49))))/L_50));
+		// double s = (ay_cy * bx_ax - ax_cx * by_ay) / de;
+		double L_51 = V_4;
+		double L_52 = V_0;
+		double L_53 = V_5;
+		double L_54 = V_6;
+		V_9 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_46, L_51)), ((double)il2cpp_codegen_multiply(L_52, L_53))))/L_54));
+		// if ((r < 0) || (r > 1) || (s < 0)|| (s > 1)) {
+		double L_55 = V_8;
+		if ((((double)L_55) < ((double)(0.0))))
+		{
+			goto IL_0117;
+		}
+	}
+	{
+		double L_56 = V_8;
+		if ((((double)L_56) > ((double)(1.0))))
+		{
+			goto IL_0117;
+		}
+	}
+	{
+		double L_57 = V_9;
+		if ((((double)L_57) < ((double)(0.0))))
+		{
+			goto IL_0117;
+		}
+	}
+	{
+		double L_58 = V_9;
+		if ((!(((double)L_58) > ((double)(1.0)))))
+		{
+			goto IL_0119;
+		}
+	}
+
+IL_0117:
+	{
+		// return(null);
+		return (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL;
+	}
+
+IL_0119:
+	{
+		// px = lineA.A.x + r * bx_ax;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_59 = ___lineA0;
+		NullCheck(L_59);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_60 = L_59->___A_0;
+		NullCheck(L_60);
+		double L_61 = L_60->___x_0;
+		double L_62 = V_8;
+		double L_63 = V_4;
+		// py = lineA.A.y + r * by_ay;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_64 = ___lineA0;
+		NullCheck(L_64);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_65 = L_64->___A_0;
+		NullCheck(L_65);
+		double L_66 = L_65->___y_1;
+		double L_67 = V_8;
+		double L_68 = V_5;
+		V_1 = ((double)il2cpp_codegen_add(L_66, ((double)il2cpp_codegen_multiply(L_67, L_68))));
+		// return(new Vector2D (px, py));
+		double L_69 = V_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_70 = (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)il2cpp_codegen_object_new(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		NullCheck(L_70);
+		Vector2D__ctor_m4859523908C2D0693A21477878021C3FFA7B0B4F(L_70, ((double)il2cpp_codegen_add(L_61, ((double)il2cpp_codegen_multiply(L_62, L_63)))), L_69, NULL);
+		return L_70;
+	}
+}
+// System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine2(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Pair2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD Math2D_GetPointLineIntersectLine2_m3AD0CB15455C9022C4E2B9EBFED19CABD8425F13 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineA0, Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___lineB1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	double V_4 = 0.0;
+	double V_5 = 0.0;
+	double V_6 = 0.0;
+	double V_7 = 0.0;
+	double V_8 = 0.0;
+	float V_9 = 0.0f;
+	Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD V_10;
+	memset((&V_10), 0, sizeof(V_10));
+	{
+		// double dx_cx = lineB.B.x - lineB.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = ___lineB1;
+		NullCheck(L_0);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_1 = L_0->___B_1;
+		NullCheck(L_1);
+		double L_2 = L_1->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_3 = ___lineB1;
+		NullCheck(L_3);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4 = L_3->___A_0;
+		NullCheck(L_4);
+		double L_5 = L_4->___x_0;
+		V_1 = ((double)il2cpp_codegen_subtract(L_2, L_5));
+		// double dy_cy = lineB.B.y - lineB.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = ___lineB1;
+		NullCheck(L_6);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = L_6->___B_1;
+		NullCheck(L_7);
+		double L_8 = L_7->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_9 = ___lineB1;
+		NullCheck(L_9);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_10 = L_9->___A_0;
+		NullCheck(L_10);
+		double L_11 = L_10->___y_1;
+		V_2 = ((double)il2cpp_codegen_subtract(L_8, L_11));
+		// double bx_ax = lineA.B.x - lineA.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_12 = ___lineA0;
+		NullCheck(L_12);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13 = L_12->___B_1;
+		NullCheck(L_13);
+		double L_14 = L_13->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_15 = ___lineA0;
+		NullCheck(L_15);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_16 = L_15->___A_0;
+		NullCheck(L_16);
+		double L_17 = L_16->___x_0;
+		V_3 = ((double)il2cpp_codegen_subtract(L_14, L_17));
+		// double by_ay = lineA.B.y - lineA.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_18 = ___lineA0;
+		NullCheck(L_18);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_19 = L_18->___B_1;
+		NullCheck(L_19);
+		double L_20 = L_19->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_21 = ___lineA0;
+		NullCheck(L_21);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_22 = L_21->___A_0;
+		NullCheck(L_22);
+		double L_23 = L_22->___y_1;
+		V_4 = ((double)il2cpp_codegen_subtract(L_20, L_23));
+		// double de = bx_ax * dy_cy - by_ay * dx_cx;
+		double L_24 = V_3;
+		double L_25 = V_2;
+		double L_26 = V_4;
+		double L_27 = V_1;
+		V_5 = ((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_24, L_25)), ((double)il2cpp_codegen_multiply(L_26, L_27))));
+		// double tor = 1E-10;
+		V_6 = (1.0E-10);
+		// if (System.Math.Abs(de) < 0.0001d) {
+		double L_28 = V_5;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_29;
+		L_29 = fabs(L_28);
+		if ((!(((double)L_29) < ((double)(0.0001)))))
+		{
+			goto IL_0093;
+		}
+	}
+	{
+		// return(null);
+		il2cpp_codegen_initobj((&V_10), sizeof(Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD));
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_30 = V_10;
+		return L_30;
+	}
+
+IL_0093:
+	{
+		// if (de > - tor && de < tor) {
+		double L_31 = V_5;
+		double L_32 = V_6;
+		if ((!(((double)L_31) > ((double)((-L_32))))))
+		{
+			goto IL_00ab;
+		}
+	}
+	{
+		double L_33 = V_5;
+		double L_34 = V_6;
+		if ((!(((double)L_33) < ((double)L_34))))
+		{
+			goto IL_00ab;
+		}
+	}
+	{
+		// return(null);
+		il2cpp_codegen_initobj((&V_10), sizeof(Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD));
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_35 = V_10;
+		return L_35;
+	}
+
+IL_00ab:
+	{
+		// ax_cx = lineA.A.x - lineB.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_36 = ___lineA0;
+		NullCheck(L_36);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_37 = L_36->___A_0;
+		NullCheck(L_37);
+		double L_38 = L_37->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_39 = ___lineB1;
+		NullCheck(L_39);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_40 = L_39->___A_0;
+		NullCheck(L_40);
+		double L_41 = L_40->___x_0;
+		V_0 = ((double)il2cpp_codegen_subtract(L_38, L_41));
+		// ay_cy = lineA.A.y - lineB.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_42 = ___lineA0;
+		NullCheck(L_42);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_43 = L_42->___A_0;
+		NullCheck(L_43);
+		double L_44 = L_43->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_45 = ___lineB1;
+		NullCheck(L_45);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_46 = L_45->___A_0;
+		NullCheck(L_46);
+		double L_47 = L_46->___y_1;
+		// double r = (ay_cy * dx_cx - ax_cx * dy_cy) / de;
+		double L_48 = ((double)il2cpp_codegen_subtract(L_44, L_47));
+		double L_49 = V_1;
+		double L_50 = V_0;
+		double L_51 = V_2;
+		double L_52 = V_5;
+		V_7 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_48, L_49)), ((double)il2cpp_codegen_multiply(L_50, L_51))))/L_52));
+		// double s = (ay_cy * bx_ax - ax_cx * by_ay) / de;
+		double L_53 = V_3;
+		double L_54 = V_0;
+		double L_55 = V_4;
+		double L_56 = V_5;
+		V_8 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_48, L_53)), ((double)il2cpp_codegen_multiply(L_54, L_55))))/L_56));
+		// if ((r < 0) || (r > 1) || (s < 0)|| (s > 1)) {
+		double L_57 = V_7;
+		if ((((double)L_57) < ((double)(0.0))))
+		{
+			goto IL_0126;
+		}
+	}
+	{
+		double L_58 = V_7;
+		if ((((double)L_58) > ((double)(1.0))))
+		{
+			goto IL_0126;
+		}
+	}
+	{
+		double L_59 = V_8;
+		if ((((double)L_59) < ((double)(0.0))))
+		{
+			goto IL_0126;
+		}
+	}
+	{
+		double L_60 = V_8;
+		if ((!(((double)L_60) > ((double)(1.0)))))
+		{
+			goto IL_0131;
+		}
+	}
+
+IL_0126:
+	{
+		// return(null);
+		il2cpp_codegen_initobj((&V_10), sizeof(Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD));
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_61 = V_10;
+		return L_61;
+	}
+
+IL_0131:
+	{
+		// float px = (float)(lineA.A.x + r * bx_ax);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_62 = ___lineA0;
+		NullCheck(L_62);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_63 = L_62->___A_0;
+		NullCheck(L_63);
+		double L_64 = L_63->___x_0;
+		double L_65 = V_7;
+		double L_66 = V_3;
+		// float py = (float)(lineA.A.y + r * by_ay);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_67 = ___lineA0;
+		NullCheck(L_67);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_68 = L_67->___A_0;
+		NullCheck(L_68);
+		double L_69 = L_68->___y_1;
+		double L_70 = V_7;
+		double L_71 = V_4;
+		V_9 = ((float)((double)il2cpp_codegen_add(L_69, ((double)il2cpp_codegen_multiply(L_70, L_71)))));
+		// return(new Vector2 (px, py));
+		float L_72 = V_9;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_73;
+		memset((&L_73), 0, sizeof(L_73));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_73), ((float)((double)il2cpp_codegen_add(L_64, ((double)il2cpp_codegen_multiply(L_65, L_66))))), L_72, /*hidden argument*/NULL);
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_74;
+		memset((&L_74), 0, sizeof(L_74));
+		Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73((&L_74), L_73, /*hidden argument*/Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_RuntimeMethod_var);
+		return L_74;
+	}
+}
+// System.Nullable`1<UnityEngine.Vector2> FunkyCode.Utilities.Math2D::GetPointLineIntersectLine3(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD Math2D_GetPointLineIntersectLine3_mC183C70C56DB40C66F1A560E75D15639A238BE48 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a_a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a_b1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b_a2, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b_b3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	double V_4 = 0.0;
+	double V_5 = 0.0;
+	double V_6 = 0.0;
+	double V_7 = 0.0;
+	Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD V_8;
+	memset((&V_8), 0, sizeof(V_8));
+	{
+		// double dx_cx = b_b.x - b_a.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___b_b3;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___b_a2;
+		float L_3 = L_2.___x_0;
+		V_0 = ((double)((float)il2cpp_codegen_subtract(L_1, L_3)));
+		// double dy_cy = b_b.y - b_a.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___b_b3;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___b_a2;
+		float L_7 = L_6.___y_1;
+		V_1 = ((double)((float)il2cpp_codegen_subtract(L_5, L_7)));
+		// double bx_ax = a_b.x - a_a.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8 = ___a_b1;
+		float L_9 = L_8.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = ___a_a0;
+		float L_11 = L_10.___x_0;
+		V_2 = ((double)((float)il2cpp_codegen_subtract(L_9, L_11)));
+		// double by_ay = a_b.y - a_a.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = ___a_b1;
+		float L_13 = L_12.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14 = ___a_a0;
+		float L_15 = L_14.___y_1;
+		V_3 = ((double)((float)il2cpp_codegen_subtract(L_13, L_15)));
+		// double de = bx_ax * dy_cy - by_ay * dx_cx;
+		double L_16 = V_2;
+		double L_17 = V_1;
+		double L_18 = V_3;
+		double L_19 = V_0;
+		V_4 = ((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_16, L_17)), ((double)il2cpp_codegen_multiply(L_18, L_19))));
+		// if (System.Math.Abs(de) < 0.0001d) {
+		double L_20 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_21;
+		L_21 = fabs(L_20);
+		if ((!(((double)L_21) < ((double)(0.0001)))))
+		{
+			goto IL_0062;
+		}
+	}
+	{
+		// return(null);
+		il2cpp_codegen_initobj((&V_8), sizeof(Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD));
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_22 = V_8;
+		return L_22;
+	}
+
+IL_0062:
+	{
+		// if (de > - tor && de < tor) {
+		double L_23 = V_4;
+		if ((!(((double)L_23) > ((double)(-1.0E-10)))))
+		{
+			goto IL_0087;
+		}
+	}
+	{
+		double L_24 = V_4;
+		if ((!(((double)L_24) < ((double)(1.0E-10)))))
+		{
+			goto IL_0087;
+		}
+	}
+	{
+		// return(null);
+		il2cpp_codegen_initobj((&V_8), sizeof(Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD));
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_25 = V_8;
+		return L_25;
+	}
+
+IL_0087:
+	{
+		// double ax_cx = a_a.x - b_a.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26 = ___a_a0;
+		float L_27 = L_26.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_28 = ___b_a2;
+		float L_29 = L_28.___x_0;
+		V_5 = ((double)((float)il2cpp_codegen_subtract(L_27, L_29)));
+		// double ay_cy = a_a.y - b_a.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_30 = ___a_a0;
+		float L_31 = L_30.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_32 = ___b_a2;
+		float L_33 = L_32.___y_1;
+		// double r = (ay_cy * dx_cx - ax_cx * dy_cy) / de;
+		double L_34 = ((double)((float)il2cpp_codegen_subtract(L_31, L_33)));
+		double L_35 = V_0;
+		double L_36 = V_5;
+		double L_37 = V_1;
+		double L_38 = V_4;
+		V_6 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_34, L_35)), ((double)il2cpp_codegen_multiply(L_36, L_37))))/L_38));
+		// double s = (ay_cy * bx_ax - ax_cx * by_ay) / de;
+		double L_39 = V_2;
+		double L_40 = V_5;
+		double L_41 = V_3;
+		double L_42 = V_4;
+		V_7 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_34, L_39)), ((double)il2cpp_codegen_multiply(L_40, L_41))))/L_42));
+		// if ((r < 0) || (r > 1) || (s < 0)|| (s > 1)) {
+		double L_43 = V_6;
+		if ((((double)L_43) < ((double)(0.0))))
+		{
+			goto IL_00f2;
+		}
+	}
+	{
+		double L_44 = V_6;
+		if ((((double)L_44) > ((double)(1.0))))
+		{
+			goto IL_00f2;
+		}
+	}
+	{
+		double L_45 = V_7;
+		if ((((double)L_45) < ((double)(0.0))))
+		{
+			goto IL_00f2;
+		}
+	}
+	{
+		double L_46 = V_7;
+		if ((!(((double)L_46) > ((double)(1.0)))))
+		{
+			goto IL_00fd;
+		}
+	}
+
+IL_00f2:
+	{
+		// return(null);
+		il2cpp_codegen_initobj((&V_8), sizeof(Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD));
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_47 = V_8;
+		return L_47;
+	}
+
+IL_00fd:
+	{
+		// return(new Vector2 ((float)(a_a.x + r * bx_ax),  (float)(a_a.y + r * by_ay)));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_48 = ___a_a0;
+		float L_49 = L_48.___x_0;
+		double L_50 = V_6;
+		double L_51 = V_2;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_52 = ___a_a0;
+		float L_53 = L_52.___y_1;
+		double L_54 = V_6;
+		double L_55 = V_3;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_56;
+		memset((&L_56), 0, sizeof(L_56));
+		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_56), ((float)((double)il2cpp_codegen_add(((double)L_49), ((double)il2cpp_codegen_multiply(L_50, L_51))))), ((float)((double)il2cpp_codegen_add(((double)L_53), ((double)il2cpp_codegen_multiply(L_54, L_55))))), /*hidden argument*/NULL);
+		Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD L_57;
+		memset((&L_57), 0, sizeof(L_57));
+		Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73((&L_57), L_56, /*hidden argument*/Nullable_1__ctor_m5B4AD6C29FA5950EF6C215B9A459707DCC95EF73_RuntimeMethod_var);
+		return L_57;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::GetPointLineIntersectLine4(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_GetPointLineIntersectLine4_m9FB9EA3E8DDE18923CB7D93C072A4E851C2096F3 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a_a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a_b1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b_a2, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b_b3, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	double V_4 = 0.0;
+	double V_5 = 0.0;
+	double V_6 = 0.0;
+	double V_7 = 0.0;
+	{
+		// double dx_cx = b_b.x - b_a.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___b_b3;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___b_a2;
+		float L_3 = L_2.___x_0;
+		V_0 = ((double)((float)il2cpp_codegen_subtract(L_1, L_3)));
+		// double dy_cy = b_b.y - b_a.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___b_b3;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___b_a2;
+		float L_7 = L_6.___y_1;
+		V_1 = ((double)((float)il2cpp_codegen_subtract(L_5, L_7)));
+		// double bx_ax = a_b.x - a_a.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8 = ___a_b1;
+		float L_9 = L_8.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = ___a_a0;
+		float L_11 = L_10.___x_0;
+		V_2 = ((double)((float)il2cpp_codegen_subtract(L_9, L_11)));
+		// double by_ay = a_b.y - a_a.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = ___a_b1;
+		float L_13 = L_12.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14 = ___a_a0;
+		float L_15 = L_14.___y_1;
+		V_3 = ((double)((float)il2cpp_codegen_subtract(L_13, L_15)));
+		// double de = bx_ax * dy_cy - by_ay * dx_cx;
+		double L_16 = V_2;
+		double L_17 = V_1;
+		double L_18 = V_3;
+		double L_19 = V_0;
+		V_4 = ((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_16, L_17)), ((double)il2cpp_codegen_multiply(L_18, L_19))));
+		// if (System.Math.Abs(de) < 0.0001d) {
+		double L_20 = V_4;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_21;
+		L_21 = fabs(L_20);
+		if ((!(((double)L_21) < ((double)(0.0001)))))
+		{
+			goto IL_0059;
+		}
+	}
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_0059:
+	{
+		// if (de > - tor && de < tor) {
+		double L_22 = V_4;
+		if ((!(((double)L_22) > ((double)(-1.0E-10)))))
+		{
+			goto IL_0075;
+		}
+	}
+	{
+		double L_23 = V_4;
+		if ((!(((double)L_23) < ((double)(1.0E-10)))))
+		{
+			goto IL_0075;
+		}
+	}
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_0075:
+	{
+		// double ax_cx = a_a.x - b_a.x;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_24 = ___a_a0;
+		float L_25 = L_24.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_26 = ___b_a2;
+		float L_27 = L_26.___x_0;
+		V_5 = ((double)((float)il2cpp_codegen_subtract(L_25, L_27)));
+		// double ay_cy = a_a.y - b_a.y;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_28 = ___a_a0;
+		float L_29 = L_28.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_30 = ___b_a2;
+		float L_31 = L_30.___y_1;
+		// double r = (ay_cy * dx_cx - ax_cx * dy_cy) / de;
+		double L_32 = ((double)((float)il2cpp_codegen_subtract(L_29, L_31)));
+		double L_33 = V_0;
+		double L_34 = V_5;
+		double L_35 = V_1;
+		double L_36 = V_4;
+		V_6 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_32, L_33)), ((double)il2cpp_codegen_multiply(L_34, L_35))))/L_36));
+		// double s = (ay_cy * bx_ax - ax_cx * by_ay) / de;
+		double L_37 = V_2;
+		double L_38 = V_5;
+		double L_39 = V_3;
+		double L_40 = V_4;
+		V_7 = ((double)(((double)il2cpp_codegen_subtract(((double)il2cpp_codegen_multiply(L_32, L_37)), ((double)il2cpp_codegen_multiply(L_38, L_39))))/L_40));
+		// if ((r < 0) || (r > 1) || (s < 0)|| (s > 1)) {
+		double L_41 = V_6;
+		if ((((double)L_41) < ((double)(0.0))))
+		{
+			goto IL_00e0;
+		}
+	}
+	{
+		double L_42 = V_6;
+		if ((((double)L_42) > ((double)(1.0))))
+		{
+			goto IL_00e0;
+		}
+	}
+	{
+		double L_43 = V_7;
+		if ((((double)L_43) < ((double)(0.0))))
+		{
+			goto IL_00e0;
+		}
+	}
+	{
+		double L_44 = V_7;
+		if ((!(((double)L_44) > ((double)(1.0)))))
+		{
+			goto IL_00e2;
+		}
+	}
+
+IL_00e0:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_00e2:
+	{
+		// return(true);
+		return (bool)1;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(UnityEngine.Vector2,FunkyCode.Utilities.Polygon2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PointInPoly_mFC54791B078DDA70D69C102018FB55FAA49C99A1 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___point0, Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* ___poly1, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	int32_t V_5 = 0;
+	int32_t V_6 = 0;
+	int32_t V_7 = 0;
+	int32_t G_B7_0 = 0;
+	int32_t G_B11_0 = 0;
+	int32_t G_B16_0 = 0;
+	int32_t G_B20_0 = 0;
+	{
+		// int count = poly.points.Length;
+		Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_0 = ___poly1;
+		NullCheck(L_0);
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_1 = L_0->___points_0;
+		NullCheck(L_1);
+		V_0 = ((int32_t)(((RuntimeArray*)L_1)->max_length));
+		// if (count < 3) {
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) >= ((int32_t)3)))
+		{
+			goto IL_000f;
+		}
+	}
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_000f:
+	{
+		// int total = 0;
+		V_1 = 0;
+		// int diff = 0;
+		V_2 = 0;
+		// Vector2 A = poly.points[count - 1];
+		Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_3 = ___poly1;
+		NullCheck(L_3);
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_4 = L_3->___points_0;
+		int32_t L_5 = V_0;
+		NullCheck(L_4);
+		int32_t L_6 = ((int32_t)il2cpp_codegen_subtract(L_5, 1));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
+		V_3 = L_7;
+		// for(int i = 0; i < count; i++) {
+		V_5 = 0;
+		goto IL_0133;
+	}
+
+IL_002a:
+	{
+		// B = poly.points[i];
+		Polygon2_t4F7BAD902DC18688C662147715607358AF78BCA3* L_8 = ___poly1;
+		NullCheck(L_8);
+		Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* L_9 = L_8->___points_0;
+		int32_t L_10 = V_5;
+		NullCheck(L_9);
+		int32_t L_11 = L_10;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
+		V_4 = L_12;
+		// int vertARes = 0;
+		V_6 = 0;
+		// int vertBRes = 0;
+		V_7 = 0;
+		// if (A.x < point.x) {
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_13 = V_3;
+		float L_14 = L_13.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_15 = ___point0;
+		float L_16 = L_15.___x_0;
+		if ((!(((float)L_14) < ((float)L_16))))
+		{
+			goto IL_0063;
+		}
+	}
+	{
+		// vertARes = (A.y < point.y) ? 1 : 4;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_17 = V_3;
+		float L_18 = L_17.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_19 = ___point0;
+		float L_20 = L_19.___y_1;
+		if ((((float)L_18) < ((float)L_20)))
+		{
+			goto IL_005e;
+		}
+	}
+	{
+		G_B7_0 = 4;
+		goto IL_005f;
+	}
+
+IL_005e:
+	{
+		G_B7_0 = 1;
+	}
+
+IL_005f:
+	{
+		V_6 = G_B7_0;
+		goto IL_0077;
+	}
+
+IL_0063:
+	{
+		// vertARes = (A.y < point.y) ? 2 : 3;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_21 = V_3;
+		float L_22 = L_21.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_23 = ___point0;
+		float L_24 = L_23.___y_1;
+		if ((((float)L_22) < ((float)L_24)))
+		{
+			goto IL_0074;
+		}
+	}
+	{
+		G_B11_0 = 3;
+		goto IL_0075;
+	}
+
+IL_0074:
+	{
+		G_B11_0 = 2;
+	}
+
+IL_0075:
+	{
+		V_6 = G_B11_0;
+	}
+
+IL_0077:
+	{
+		// if (B.x < point.x) {
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_25 = V_4;
+		float L_26 = L_25.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_27 = ___point0;
+		float L_28 = L_27.___x_0;
+		if ((!(((float)L_26) < ((float)L_28))))
+		{
+			goto IL_009d;
+		}
+	}
+	{
+		// vertBRes = (B.y < point.y) ? 1 : 4;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_29 = V_4;
+		float L_30 = L_29.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_31 = ___point0;
+		float L_32 = L_31.___y_1;
+		if ((((float)L_30) < ((float)L_32)))
+		{
+			goto IL_0098;
+		}
+	}
+	{
+		G_B16_0 = 4;
+		goto IL_0099;
+	}
+
+IL_0098:
+	{
+		G_B16_0 = 1;
+	}
+
+IL_0099:
+	{
+		V_7 = G_B16_0;
+		goto IL_00b2;
+	}
+
+IL_009d:
+	{
+		// vertBRes = (B.y < point.y) ? 2 : 3;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_33 = V_4;
+		float L_34 = L_33.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_35 = ___point0;
+		float L_36 = L_35.___y_1;
+		if ((((float)L_34) < ((float)L_36)))
+		{
+			goto IL_00af;
+		}
+	}
+	{
+		G_B20_0 = 3;
+		goto IL_00b0;
+	}
+
+IL_00af:
+	{
+		G_B20_0 = 2;
+	}
+
+IL_00b0:
+	{
+		V_7 = G_B20_0;
+	}
+
+IL_00b2:
+	{
+		// diff = vertARes - vertBRes;
+		int32_t L_37 = V_6;
+		int32_t L_38 = V_7;
+		V_2 = ((int32_t)il2cpp_codegen_subtract(L_37, L_38));
+		int32_t L_39 = V_2;
+		switch (((int32_t)il2cpp_codegen_subtract(L_39, ((int32_t)-3))))
+		{
+			case 0:
+			{
+				goto IL_0124;
+			}
+			case 1:
+			{
+				goto IL_00df;
+			}
+			case 2:
+			{
+				goto IL_0126;
+			}
+			case 3:
+			{
+				goto IL_0126;
+			}
+			case 4:
+			{
+				goto IL_0126;
+			}
+			case 5:
+			{
+				goto IL_00df;
+			}
+			case 6:
+			{
+				goto IL_0120;
+			}
+		}
+	}
+	{
+		goto IL_0126;
+	}
+
+IL_00df:
+	{
+		// if ((B.x - (((B.y - point.y) * (A.x - B.x)) / (A.y - B.y))) < point.x)
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_40 = V_4;
+		float L_41 = L_40.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_42 = V_4;
+		float L_43 = L_42.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_44 = ___point0;
+		float L_45 = L_44.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_46 = V_3;
+		float L_47 = L_46.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_48 = V_4;
+		float L_49 = L_48.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_50 = V_3;
+		float L_51 = L_50.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_52 = V_4;
+		float L_53 = L_52.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_54 = ___point0;
+		float L_55 = L_54.___x_0;
+		if ((!(((float)((float)il2cpp_codegen_subtract(L_41, ((float)(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_43, L_45)), ((float)il2cpp_codegen_subtract(L_47, L_49))))/((float)il2cpp_codegen_subtract(L_51, L_53))))))) < ((float)L_55))))
+		{
+			goto IL_0126;
+		}
+	}
+	{
+		// diff = -diff;
+		int32_t L_56 = V_2;
+		V_2 = ((-L_56));
+		// break;
+		goto IL_0126;
+	}
+
+IL_0120:
+	{
+		// diff = -1;
+		V_2 = (-1);
+		// break;
+		goto IL_0126;
+	}
+
+IL_0124:
+	{
+		// diff = 1;
+		V_2 = 1;
+	}
+
+IL_0126:
+	{
+		// total += diff;
+		int32_t L_57 = V_1;
+		int32_t L_58 = V_2;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_57, L_58));
+		// A = B;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_59 = V_4;
+		V_3 = L_59;
+		// for(int i = 0; i < count; i++) {
+		int32_t L_60 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_60, 1));
+	}
+
+IL_0133:
+	{
+		// for(int i = 0; i < count; i++) {
+		int32_t L_61 = V_5;
+		int32_t L_62 = V_0;
+		if ((((int32_t)L_61) < ((int32_t)L_62)))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		// return(total == 4 || total == -4);
+		int32_t L_63 = V_1;
+		if ((((int32_t)L_63) == ((int32_t)4)))
+		{
+			goto IL_0145;
+		}
+	}
+	{
+		int32_t L_64 = V_1;
+		return (bool)((((int32_t)L_64) == ((int32_t)((int32_t)-4)))? 1 : 0);
+	}
+
+IL_0145:
+	{
+		return (bool)1;
+	}
+}
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectPoly(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* Math2D_GetListLineIntersectPoly_m1F80809820CF316CE03077EB004F007C22F34913 (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___line0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* V_0 = NULL;
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_1 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_3 = NULL;
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_4 = NULL;
+	{
+		// List <Vector2D> result = new List <Vector2D>() ;
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_0 = (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*)il2cpp_codegen_object_new(List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186(L_0, List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186_RuntimeMethod_var);
+		V_0 = L_0;
+		// Pair2D pair = new Pair2D(new Vector2D(poly.pointsList.Last()),  null);
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_1 = ___poly1;
+		NullCheck(L_1);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_2 = L_1->___pointsList_0;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_3;
+		L_3 = Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4(L_2, Enumerable_Last_TisVector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_mD5DD11F9AB58B31C80B225949609E2AD9D5C1AB4_RuntimeMethod_var);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4 = (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)il2cpp_codegen_object_new(Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A_il2cpp_TypeInfo_var);
+		NullCheck(L_4);
+		Vector2D__ctor_m4CBB6B6514F1C67B3CF53D317320786BB4FC9F58(L_4, L_3, NULL);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_5 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		NullCheck(L_5);
+		Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_5, L_4, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+		V_1 = L_5;
+		// foreach (Vector2D point in poly.pointsList) {
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_6 = ___poly1;
+		NullCheck(L_6);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_7 = L_6->___pointsList_0;
+		NullCheck(L_7);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_8;
+		L_8 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_7, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_2 = L_8;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0061:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_2), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0056_1;
+			}
+
+IL_002b_1:
+			{
+				// foreach (Vector2D point in poly.pointsList) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_9;
+				L_9 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_2), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_3 = L_9;
+				// pair.B = point;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_10 = V_1;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_11 = V_3;
+				NullCheck(L_10);
+				L_10->___B_1 = L_11;
+				Il2CppCodeGenWriteBarrier((void**)(&L_10->___B_1), (void*)L_11);
+				// Vector2D intersection = GetPointLineIntersectLine (line, pair);
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_12 = ___line0;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_13 = V_1;
+				il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_14;
+				L_14 = Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1(L_12, L_13, NULL);
+				V_4 = L_14;
+				// if (intersection != null) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_15 = V_4;
+				if (!L_15)
+				{
+					goto IL_004f_1;
+				}
+			}
+			{
+				// result.Add(intersection);
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_16 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_17 = V_4;
+				NullCheck(L_16);
+				List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_inline(L_16, L_17, List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_RuntimeMethod_var);
+			}
+
+IL_004f_1:
+			{
+				// pair.A = point;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_18 = V_1;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_19 = V_3;
+				NullCheck(L_18);
+				L_18->___A_0 = L_19;
+				Il2CppCodeGenWriteBarrier((void**)(&L_18->___A_0), (void*)L_19);
+			}
+
+IL_0056_1:
+			{
+				// foreach (Vector2D point in poly.pointsList) {
+				bool L_20;
+				L_20 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_2), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_20)
+				{
+					goto IL_002b_1;
+				}
+			}
+			{
+				goto IL_006f;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_006f:
+	{
+		// return(result);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_21 = V_0;
+		return L_21;
+	}
+}
+// System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D> FunkyCode.Utilities.Math2D::GetListLineIntersectSlice(FunkyCode.Utilities.Pair2D,System.Collections.Generic.List`1<FunkyCode.Utilities.Vector2D>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* Math2D_GetListLineIntersectSlice_mAD5EC5EEAE8982CAB8891ABD5F46789BB8A991DE (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___pair0, List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* ___slice1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* V_0 = NULL;
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_1 = NULL;
+	Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_3 = NULL;
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_4 = NULL;
+	{
+		// List<Vector2D> resultList = new List<Vector2D> ();
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_0 = (List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49*)il2cpp_codegen_object_new(List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186(L_0, List_1__ctor_mED1DCE86004C04CDAF05C6D8400921A7191D8186_RuntimeMethod_var);
+		V_0 = L_0;
+		// Pair2D id = new Pair2D(null,  null);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_1 = (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B*)il2cpp_codegen_object_new(Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B_il2cpp_TypeInfo_var);
+		NullCheck(L_1);
+		Pair2D__ctor_m492096F2DBB3928D947B94C8082BA3CE9D5AAD11(L_1, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A*)NULL, NULL);
+		V_1 = L_1;
+		// foreach (Vector2D point in slice) {
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_2 = ___slice1;
+		NullCheck(L_2);
+		Enumerator_tF41EFF8D88A514E703E1447D69647A7455CD67ED L_3;
+		L_3 = List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018(L_2, List_1_GetEnumerator_m9314FA14121DE92F39E74182DBC6567E5A2BC018_RuntimeMethod_var);
+		V_2 = L_3;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_005d:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10((&V_2), Enumerator_Dispose_m5D7000ADAD99430508375966195370317616DB10_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0052_1;
+			}
+
+IL_0017_1:
+			{
+				// foreach (Vector2D point in slice) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4;
+				L_4 = Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_inline((&V_2), Enumerator_get_Current_mCBA57BF7B15EAF20FF993AEBBEEFFB0871703F31_RuntimeMethod_var);
+				V_3 = L_4;
+				// id.B = point;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_5 = V_1;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_6 = V_3;
+				NullCheck(L_5);
+				L_5->___B_1 = L_6;
+				Il2CppCodeGenWriteBarrier((void**)(&L_5->___B_1), (void*)L_6);
+				// if (id.A != null && id.B != null) {
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_7 = V_1;
+				NullCheck(L_7);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_8 = L_7->___A_0;
+				if (!L_8)
+				{
+					goto IL_004b_1;
+				}
+			}
+			{
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_9 = V_1;
+				NullCheck(L_9);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_10 = L_9->___B_1;
+				if (!L_10)
+				{
+					goto IL_004b_1;
+				}
+			}
+			{
+				// Vector2D result = GetPointLineIntersectLine(id, pair);
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_11 = V_1;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_12 = ___pair0;
+				il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13;
+				L_13 = Math2D_GetPointLineIntersectLine_m605400B6B7A74FA4D9DCB64649BDBC3A57CDD7D1(L_11, L_12, NULL);
+				V_4 = L_13;
+				// if (result != null) {
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_14 = V_4;
+				if (!L_14)
+				{
+					goto IL_004b_1;
+				}
+			}
+			{
+				// resultList.Add(result);
+				List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_15 = V_0;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_16 = V_4;
+				NullCheck(L_15);
+				List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_inline(L_15, L_16, List_1_Add_mBA34FA74871099B3DC890DC46FD52F1493D9123A_RuntimeMethod_var);
+			}
+
+IL_004b_1:
+			{
+				// id.A = point;
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_17 = V_1;
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_18 = V_3;
+				NullCheck(L_17);
+				L_17->___A_0 = L_18;
+				Il2CppCodeGenWriteBarrier((void**)(&L_17->___A_0), (void*)L_18);
+			}
+
+IL_0052_1:
+			{
+				// foreach (Vector2D point in slice) {
+				bool L_19;
+				L_19 = Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6((&V_2), Enumerator_MoveNext_mF5277D43E06724AE38DA5F266075182B5734F1C6_RuntimeMethod_var);
+				if (L_19)
+				{
+					goto IL_0017_1;
+				}
+			}
+			{
+				goto IL_006b;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_006b:
+	{
+		// return(resultList);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_20 = V_0;
+		return L_20;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PolygonIntersectCircle(FunkyCode.Utilities.Polygon2D,FunkyCode.Utilities.Vector2D,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PolygonIntersectCircle_m1553932EEAB542031B9658475A34D2F230CC3F1A (Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___circle1, float ___radius2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	bool V_1 = false;
+	{
+		// foreach (Pair2D id in Pair2D.GetList(poly.pointsList))
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_0 = ___poly0;
+		NullCheck(L_0);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = L_0->___pointsList_0;
+		List_1_t94A616F8F1DE06B12C9054505C94AD8BBFF5F98F* L_2;
+		L_2 = Pair2D_GetList_m8C8C90EC2D6BA298B2F09A2E3DA2EAF36F64439B(L_1, (bool)1, NULL);
+		NullCheck(L_2);
+		Enumerator_t6C2A839A1961982E241453C83FA6EA09969994A4 L_3;
+		L_3 = List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9(L_2, List_1_GetEnumerator_m5D2A8CC6D0F448AF1972F4AF30C55413829C17E9_RuntimeMethod_var);
+		V_0 = L_3;
+	}
+	{
+		auto __finallyBlock = il2cpp::utils::Finally([&]
+		{
+
+FINALLY_0033:
+			{// begin finally (depth: 1)
+				Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E((&V_0), Enumerator_Dispose_m8A880E1B73D8E7CC164F46EE8695463459ABE53E_RuntimeMethod_var);
+				return;
+			}// end finally (depth: 1)
+		});
+		try
+		{// begin try (depth: 1)
+			{
+				goto IL_0028_1;
+			}
+
+IL_0014_1:
+			{
+				// foreach (Pair2D id in Pair2D.GetList(poly.pointsList))
+				Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4;
+				L_4 = Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_inline((&V_0), Enumerator_get_Current_mA2FBC9846FE2ACAA7EF11C8863463D0291E1D599_RuntimeMethod_var);
+				// if (LineIntersectCircle(id, circle, radius))
+				Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_5 = ___circle1;
+				float L_6 = ___radius2;
+				il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+				bool L_7;
+				L_7 = Math2D_LineIntersectCircle_mD3026ECB83638C83386A44A0221939C639BE0B3E(L_4, L_5, L_6, NULL);
+				if (!L_7)
+				{
+					goto IL_0028_1;
+				}
+			}
+			{
+				// return(true);
+				V_1 = (bool)1;
+				goto IL_0043;
+			}
+
+IL_0028_1:
+			{
+				// foreach (Pair2D id in Pair2D.GetList(poly.pointsList))
+				bool L_8;
+				L_8 = Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE((&V_0), Enumerator_MoveNext_m5B12232DDA94FF467693E90A332F1FD2814748EE_RuntimeMethod_var);
+				if (L_8)
+				{
+					goto IL_0014_1;
+				}
+			}
+			{
+				goto IL_0041;
+			}
+		}// end try (depth: 1)
+		catch(Il2CppExceptionWrapper& e)
+		{
+			__finallyBlock.StoreException(e.ex);
+		}
+	}
+
+IL_0041:
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_0043:
+	{
+		// }
+		bool L_9 = V_1;
+		return L_9;
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::LineIntersectCircle(FunkyCode.Utilities.Pair2D,FunkyCode.Utilities.Vector2D,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_LineIntersectCircle_mD3026ECB83638C83386A44A0221939C639BE0B3E (Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* ___line0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___circle1, float ___radius2, const RuntimeMethod* method) 
+{
+	double V_0 = 0.0;
+	double V_1 = 0.0;
+	double V_2 = 0.0;
+	double V_3 = 0.0;
+	{
+		// double sx = line.B.x - line.A.x;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0 = ___line0;
+		NullCheck(L_0);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_1 = L_0->___B_1;
+		NullCheck(L_1);
+		double L_2 = L_1->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_3 = ___line0;
+		NullCheck(L_3);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4 = L_3->___A_0;
+		NullCheck(L_4);
+		double L_5 = L_4->___x_0;
+		V_0 = ((double)il2cpp_codegen_subtract(L_2, L_5));
+		// double sy = line.B.y - line.A.y;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_6 = ___line0;
+		NullCheck(L_6);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_7 = L_6->___B_1;
+		NullCheck(L_7);
+		double L_8 = L_7->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_9 = ___line0;
+		NullCheck(L_9);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_10 = L_9->___A_0;
+		NullCheck(L_10);
+		double L_11 = L_10->___y_1;
+		V_1 = ((double)il2cpp_codegen_subtract(L_8, L_11));
+		// double q = ((circle.x - line.A.x) * (line.B.x - line.A.x) + (circle.y - line.A.y) * (line.B.y - line.A.y)) / (sx * sx + sy * sy);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_12 = ___circle1;
+		NullCheck(L_12);
+		double L_13 = L_12->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_14 = ___line0;
+		NullCheck(L_14);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_15 = L_14->___A_0;
+		NullCheck(L_15);
+		double L_16 = L_15->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_17 = ___line0;
+		NullCheck(L_17);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_18 = L_17->___B_1;
+		NullCheck(L_18);
+		double L_19 = L_18->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_20 = ___line0;
+		NullCheck(L_20);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_21 = L_20->___A_0;
+		NullCheck(L_21);
+		double L_22 = L_21->___x_0;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_23 = ___circle1;
+		NullCheck(L_23);
+		double L_24 = L_23->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_25 = ___line0;
+		NullCheck(L_25);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_26 = L_25->___A_0;
+		NullCheck(L_26);
+		double L_27 = L_26->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_28 = ___line0;
+		NullCheck(L_28);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_29 = L_28->___B_1;
+		NullCheck(L_29);
+		double L_30 = L_29->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_31 = ___line0;
+		NullCheck(L_31);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_32 = L_31->___A_0;
+		NullCheck(L_32);
+		double L_33 = L_32->___y_1;
+		double L_34 = V_0;
+		double L_35 = V_0;
+		double L_36 = V_1;
+		double L_37 = V_1;
+		V_2 = ((double)(((double)il2cpp_codegen_add(((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(L_13, L_16)), ((double)il2cpp_codegen_subtract(L_19, L_22)))), ((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(L_24, L_27)), ((double)il2cpp_codegen_subtract(L_30, L_33))))))/((double)il2cpp_codegen_add(((double)il2cpp_codegen_multiply(L_34, L_35)), ((double)il2cpp_codegen_multiply(L_36, L_37))))));
+		// if (q < 0.0f)
+		double L_38 = V_2;
+		if ((!(((double)L_38) < ((double)(0.0)))))
+		{
+			goto IL_00a6;
+		}
+	}
+	{
+		// q = 0.0f;
+		V_2 = (0.0);
+		goto IL_00bc;
+	}
+
+IL_00a6:
+	{
+		// else if (q > 1.0)
+		double L_39 = V_2;
+		if ((!(((double)L_39) > ((double)(1.0)))))
+		{
+			goto IL_00bc;
+		}
+	}
+	{
+		// q = 1.0f;
+		V_2 = (1.0);
+	}
+
+IL_00bc:
+	{
+		// double dx = circle.x - ((1.0f - q) * line.A.x + q * line.B.x);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_40 = ___circle1;
+		NullCheck(L_40);
+		double L_41 = L_40->___x_0;
+		double L_42 = V_2;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_43 = ___line0;
+		NullCheck(L_43);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_44 = L_43->___A_0;
+		NullCheck(L_44);
+		double L_45 = L_44->___x_0;
+		double L_46 = V_2;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_47 = ___line0;
+		NullCheck(L_47);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_48 = L_47->___B_1;
+		NullCheck(L_48);
+		double L_49 = L_48->___x_0;
+		// double dy = circle.y - ((1.0f - q) * line.A.y + q * line.B.y);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_50 = ___circle1;
+		NullCheck(L_50);
+		double L_51 = L_50->___y_1;
+		double L_52 = V_2;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_53 = ___line0;
+		NullCheck(L_53);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_54 = L_53->___A_0;
+		NullCheck(L_54);
+		double L_55 = L_54->___y_1;
+		double L_56 = V_2;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_57 = ___line0;
+		NullCheck(L_57);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_58 = L_57->___B_1;
+		NullCheck(L_58);
+		double L_59 = L_58->___y_1;
+		V_3 = ((double)il2cpp_codegen_subtract(L_51, ((double)il2cpp_codegen_add(((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract((1.0), L_52)), L_55)), ((double)il2cpp_codegen_multiply(L_56, L_59))))));
+		// if (dx * dx + dy * dy < radius * radius) {
+		double L_60 = ((double)il2cpp_codegen_subtract(L_41, ((double)il2cpp_codegen_add(((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract((1.0), L_42)), L_45)), ((double)il2cpp_codegen_multiply(L_46, L_49))))));
+		double L_61 = V_3;
+		double L_62 = V_3;
+		float L_63 = ___radius2;
+		float L_64 = ___radius2;
+		if ((!(((double)((double)il2cpp_codegen_add(((double)il2cpp_codegen_multiply(L_60, L_60)), ((double)il2cpp_codegen_multiply(L_61, L_62))))) < ((double)((double)((float)il2cpp_codegen_multiply(L_63, L_64)))))))
+		{
+			goto IL_0123;
+		}
+	}
+	{
+		// return(true);
+		return (bool)1;
+	}
+
+IL_0123:
+	{
+		// return(false);
+		return (bool)0;
+	}
+}
+// System.Single FunkyCode.Utilities.Math2D::IsAPointLeftOfVectorOrOnTheLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Math2D_IsAPointLeftOfVectorOrOnTheLine_m30524E6793AB7928EFB79993D79679EE73291894 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___a0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___b1, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___p2, const RuntimeMethod* method) 
+{
+	{
+		// return ((a.x - p.x) * (b.y - p.y) - (a.y - p.y) * (b.x - p.x));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___a0;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___p2;
+		float L_3 = L_2.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___b1;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___p2;
+		float L_7 = L_6.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8 = ___a0;
+		float L_9 = L_8.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = ___p2;
+		float L_11 = L_10.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_12 = ___b1;
+		float L_13 = L_12.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_14 = ___p2;
+		float L_15 = L_14.___x_0;
+		return ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, L_3)), ((float)il2cpp_codegen_subtract(L_5, L_7)))), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_9, L_11)), ((float)il2cpp_codegen_subtract(L_13, L_15))))));
+	}
+}
+// System.Boolean FunkyCode.Utilities.Math2D::PointInPoly(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Polygon2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Math2D_PointInPoly_m5618FCDE71970AD3DDAAD4567E63101C4D3FCFAA (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___point0, Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* ___poly1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m8B5B34D10F34D8EA8A313E0514DEFBFEE19C877D_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* V_3 = NULL;
+	Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* V_4 = NULL;
+	int32_t V_5 = 0;
+	{
+		// int count = poly.pointsList.Count;
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_0 = ___poly1;
+		NullCheck(L_0);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_1 = L_0->___pointsList_0;
+		NullCheck(L_1);
+		int32_t L_2;
+		L_2 = List_1_get_Count_m8B5B34D10F34D8EA8A313E0514DEFBFEE19C877D_inline(L_1, List_1_get_Count_m8B5B34D10F34D8EA8A313E0514DEFBFEE19C877D_RuntimeMethod_var);
+		V_0 = L_2;
+		// if (count < 3) {
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) >= ((int32_t)3)))
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		// return(false);
+		return (bool)0;
+	}
+
+IL_0012:
+	{
+		// int total = 0;
+		V_1 = 0;
+		// int diff = 0;
+		V_2 = 0;
+		// Pair2D id = pointInPoly_Pair2D;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_4 = ((Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_StaticFields*)il2cpp_codegen_static_fields_for(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var))->___pointInPoly_Pair2D_1;
+		V_3 = L_4;
+		// id.A = poly.pointsList[count - 1];
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_5 = V_3;
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_6 = ___poly1;
+		NullCheck(L_6);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_7 = L_6->___pointsList_0;
+		int32_t L_8 = V_0;
+		NullCheck(L_7);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_9;
+		L_9 = List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407(L_7, ((int32_t)il2cpp_codegen_subtract(L_8, 1)), List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407_RuntimeMethod_var);
+		NullCheck(L_5);
+		L_5->___A_0 = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&L_5->___A_0), (void*)L_9);
+		// for(int i = 0; i < count; i++) {
+		V_5 = 0;
+		goto IL_0107;
+	}
+
+IL_0038:
+	{
+		// p = poly.pointsList[i];
+		Polygon2D_tA01DD2725F5B811814D810F9ED68C717AB7D8F7C* L_10 = ___poly1;
+		NullCheck(L_10);
+		List_1_tE7BB9D323211165B5A2932350D0FB3BCBA079A49* L_11 = L_10->___pointsList_0;
+		int32_t L_12 = V_5;
+		NullCheck(L_11);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_13;
+		L_13 = List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407(L_11, L_12, List_1_get_Item_m5B120E250860BBF3607AC8A4687439613F721407_RuntimeMethod_var);
+		V_4 = L_13;
+		// id.B = p;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_14 = V_3;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_15 = V_4;
+		NullCheck(L_14);
+		L_14->___B_1 = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&L_14->___B_1), (void*)L_15);
+		// diff = (GetQuad (point, id.A) - GetQuad (point, id.B));
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_16 = ___point0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_17 = V_3;
+		NullCheck(L_17);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_18 = L_17->___A_0;
+		il2cpp_codegen_runtime_class_init_inline(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		int32_t L_19;
+		L_19 = Math2D_GetQuad_m50A6588EE4753E94B608487D55BED79576F4F83D(L_16, L_18, NULL);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_20 = ___point0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_21 = V_3;
+		NullCheck(L_21);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_22 = L_21->___B_1;
+		int32_t L_23;
+		L_23 = Math2D_GetQuad_m50A6588EE4753E94B608487D55BED79576F4F83D(L_20, L_22, NULL);
+		V_2 = ((int32_t)il2cpp_codegen_subtract(L_19, L_23));
+		int32_t L_24 = V_2;
+		switch (((int32_t)il2cpp_codegen_subtract(L_24, ((int32_t)-3))))
+		{
+			case 0:
+			{
+				goto IL_00ef;
+			}
+			case 1:
+			{
+				goto IL_0090;
+			}
+			case 2:
+			{
+				goto IL_00f1;
+			}
+			case 3:
+			{
+				goto IL_00f1;
+			}
+			case 4:
+			{
+				goto IL_00f1;
+			}
+			case 5:
+			{
+				goto IL_0090;
+			}
+			case 6:
+			{
+				goto IL_00eb;
+			}
+		}
+	}
+	{
+		goto IL_00f1;
+	}
+
+IL_0090:
+	{
+		// if ((id.B.x - (((id.B.y - point.y) * (id.A.x - id.B.x)) / (id.A.y - id.B.y))) < point.x)
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_25 = V_3;
+		NullCheck(L_25);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_26 = L_25->___B_1;
+		NullCheck(L_26);
+		double L_27 = L_26->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_28 = V_3;
+		NullCheck(L_28);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_29 = L_28->___B_1;
+		NullCheck(L_29);
+		double L_30 = L_29->___y_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_31 = ___point0;
+		NullCheck(L_31);
+		double L_32 = L_31->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_33 = V_3;
+		NullCheck(L_33);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_34 = L_33->___A_0;
+		NullCheck(L_34);
+		double L_35 = L_34->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_36 = V_3;
+		NullCheck(L_36);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_37 = L_36->___B_1;
+		NullCheck(L_37);
+		double L_38 = L_37->___x_0;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_39 = V_3;
+		NullCheck(L_39);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_40 = L_39->___A_0;
+		NullCheck(L_40);
+		double L_41 = L_40->___y_1;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_42 = V_3;
+		NullCheck(L_42);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_43 = L_42->___B_1;
+		NullCheck(L_43);
+		double L_44 = L_43->___y_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_45 = ___point0;
+		NullCheck(L_45);
+		double L_46 = L_45->___x_0;
+		if ((!(((double)((double)il2cpp_codegen_subtract(L_27, ((double)(((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(L_30, L_32)), ((double)il2cpp_codegen_subtract(L_35, L_38))))/((double)il2cpp_codegen_subtract(L_41, L_44))))))) < ((double)L_46))))
+		{
+			goto IL_00f1;
+		}
+	}
+	{
+		// diff = -diff;
+		int32_t L_47 = V_2;
+		V_2 = ((-L_47));
+		// break;
+		goto IL_00f1;
+	}
+
+IL_00eb:
+	{
+		// diff = -1;
+		V_2 = (-1);
+		// break;
+		goto IL_00f1;
+	}
+
+IL_00ef:
+	{
+		// diff = 1;
+		V_2 = 1;
+	}
+
+IL_00f1:
+	{
+		// total += diff;
+		int32_t L_48 = V_1;
+		int32_t L_49 = V_2;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_48, L_49));
+		// id.A = id.B;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_50 = V_3;
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_51 = V_3;
+		NullCheck(L_51);
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_52 = L_51->___B_1;
+		NullCheck(L_50);
+		L_50->___A_0 = L_52;
+		Il2CppCodeGenWriteBarrier((void**)(&L_50->___A_0), (void*)L_52);
+		// for(int i = 0; i < count; i++) {
+		int32_t L_53 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_53, 1));
+	}
+
+IL_0107:
+	{
+		// for(int i = 0; i < count; i++) {
+		int32_t L_54 = V_5;
+		int32_t L_55 = V_0;
+		if ((((int32_t)L_54) < ((int32_t)L_55)))
+		{
+			goto IL_0038;
+		}
+	}
+	{
+		// return(System.Math.Abs(total) == 4);
+		int32_t L_56 = V_1;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		int32_t L_57;
+		L_57 = il2cpp_codegen_abs(L_56);
+		return (bool)((((int32_t)L_57) == ((int32_t)4))? 1 : 0);
+	}
+}
+// System.Int32 FunkyCode.Utilities.Math2D::GetQuad(FunkyCode.Utilities.Vector2D,FunkyCode.Utilities.Vector2D)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math2D_GetQuad_m50A6588EE4753E94B608487D55BED79576F4F83D (Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___axis0, Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* ___vert1, const RuntimeMethod* method) 
+{
+	{
+		// if (vert.x < axis.x) {
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_0 = ___vert1;
+		NullCheck(L_0);
+		double L_1 = L_0->___x_0;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_2 = ___axis0;
+		NullCheck(L_2);
+		double L_3 = L_2->___x_0;
+		if ((!(((double)L_1) < ((double)L_3))))
+		{
+			goto IL_0020;
+		}
+	}
+	{
+		// if (vert.y < axis.y) {
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_4 = ___vert1;
+		NullCheck(L_4);
+		double L_5 = L_4->___y_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_6 = ___axis0;
+		NullCheck(L_6);
+		double L_7 = L_6->___y_1;
+		if ((!(((double)L_5) < ((double)L_7))))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		// return(1);
+		return 1;
+	}
+
+IL_001e:
+	{
+		// return(4);
+		return 4;
+	}
+
+IL_0020:
+	{
+		// if (vert.y < axis.y) {
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_8 = ___vert1;
+		NullCheck(L_8);
+		double L_9 = L_8->___y_1;
+		Vector2D_tFC45A65A7A3D5D205F447C900F9BFD62DE30E84A* L_10 = ___axis0;
+		NullCheck(L_10);
+		double L_11 = L_10->___y_1;
+		if ((!(((double)L_9) < ((double)L_11))))
+		{
+			goto IL_0030;
+		}
+	}
+	{
+		// return(2);
+		return 2;
+	}
+
+IL_0030:
+	{
+		// return(3);
+		return 3;
+	}
+}
+// System.Void FunkyCode.Utilities.Math2D::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Math2D__cctor_m416BEAC1324D85C0C988FDC616650946B89E54C2 (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// private static Pair2D pointInPoly_Pair2D = Pair2D.Zero();
+		Pair2D_t24F80FF739D3FBAA2496E755223503D1B375107B* L_0;
+		L_0 = Pair2D_Zero_m61E30C11E2494BB93A2AEE0BC3DDA2C7FB97521B(NULL);
+		((Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_StaticFields*)il2cpp_codegen_static_fields_for(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var))->___pointInPoly_Pair2D_1 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_StaticFields*)il2cpp_codegen_static_fields_for(Math2D_tB73A97540B11E23BE741C52B51A3BEB43BB6FFE6_il2cpp_TypeInfo_var))->___pointInPoly_Pair2D_1), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -21636,6206 +26472,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TriangulationConstraint_tECA06126AFD0EFE483AE
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2DList/WindingOrderType FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::CalculateWindingOrder(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_CalculateWindingOrder_m488F5012DAA0C0ADB54864623889792323811123 (RuntimeObject* ___l0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	double V_0 = 0.0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	{
-		// double area = 0.0;
-		V_0 = (0.0);
-		// for (int i = 0; i < l.Count; i++) {
-		V_1 = 0;
-		goto IL_0055;
-	}
-
-IL_000e:
-	{
-		// int j = (i + 1) % l.Count;
-		int32_t L_0 = V_1;
-		RuntimeObject* L_1 = ___l0;
-		NullCheck(L_1);
-		int32_t L_2;
-		L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_1);
-		V_2 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_0, 1))%L_2));
-		// area += l[i].X * l[j].Y;
-		double L_3 = V_0;
-		RuntimeObject* L_4 = ___l0;
-		int32_t L_5 = V_1;
-		NullCheck(L_4);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_6;
-		L_6 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_4, L_5);
-		NullCheck(L_6);
-		double L_7;
-		L_7 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_6);
-		RuntimeObject* L_8 = ___l0;
-		int32_t L_9 = V_2;
-		NullCheck(L_8);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_10;
-		L_10 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_8, L_9);
-		NullCheck(L_10);
-		double L_11;
-		L_11 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_10);
-		V_0 = ((double)il2cpp_codegen_add(L_3, ((double)il2cpp_codegen_multiply(L_7, L_11))));
-		// area -= l[i].Y * l[j].X;
-		double L_12 = V_0;
-		RuntimeObject* L_13 = ___l0;
-		int32_t L_14 = V_1;
-		NullCheck(L_13);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_15;
-		L_15 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_13, L_14);
-		NullCheck(L_15);
-		double L_16;
-		L_16 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_15);
-		RuntimeObject* L_17 = ___l0;
-		int32_t L_18 = V_2;
-		NullCheck(L_17);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_19;
-		L_19 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_17, L_18);
-		NullCheck(L_19);
-		double L_20;
-		L_20 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_19);
-		V_0 = ((double)il2cpp_codegen_subtract(L_12, ((double)il2cpp_codegen_multiply(L_16, L_20))));
-		// for (int i = 0; i < l.Count; i++) {
-		int32_t L_21 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_21, 1));
-	}
-
-IL_0055:
-	{
-		// for (int i = 0; i < l.Count; i++) {
-		int32_t L_22 = V_1;
-		RuntimeObject* L_23 = ___l0;
-		NullCheck(L_23);
-		int32_t L_24;
-		L_24 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_23);
-		if ((((int32_t)L_22) < ((int32_t)L_24)))
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		// area /= 2.0f;
-		double L_25 = V_0;
-		V_0 = ((double)(L_25/(2.0)));
-		// if (area < 0.0)
-		double L_26 = V_0;
-		if ((!(((double)L_26) < ((double)(0.0)))))
-		{
-			goto IL_0078;
-		}
-	}
-	{
-		// return Point2DList.WindingOrderType.CW;
-		return (int32_t)(0);
-	}
-
-IL_0078:
-	{
-		// else if (area > 0.0)
-		double L_27 = V_0;
-		if ((!(((double)L_27) > ((double)(0.0)))))
-		{
-			goto IL_0086;
-		}
-	}
-	{
-		// return Point2DList.WindingOrderType.CCW;
-		return (int32_t)(1);
-	}
-
-IL_0086:
-	{
-		// return Point2DList.WindingOrderType.Unknown;
-		return (int32_t)(2);
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsAreSame2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonsAreSame2D_m785F4EEDD4B0A932B112F8BDF64846369723AB99 (RuntimeObject* ___poly10, RuntimeObject* ___poly21, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_2 = NULL;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
-	bool V_5 = false;
-	bool V_6 = false;
-	int32_t V_7 = 0;
-	{
-		// int numVerts1 = poly1.Count;
-		RuntimeObject* L_0 = ___poly10;
-		NullCheck(L_0);
-		int32_t L_1;
-		L_1 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_0);
-		V_0 = L_1;
-		// int numVerts2 = poly2.Count;
-		RuntimeObject* L_2 = ___poly21;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_2);
-		V_1 = L_3;
-		// if (numVerts1 != numVerts2)
-		int32_t L_4 = V_0;
-		int32_t L_5 = V_1;
-		if ((((int32_t)L_4) == ((int32_t)L_5)))
-		{
-			goto IL_0014;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0014:
-	{
-		// Point2D vdelta = new Point2D(0.0, 0.0);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_6 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_6);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_6, (0.0), (0.0), NULL);
-		V_2 = L_6;
-		// for (int k = 0; k < numVerts2; ++k)
-		V_3 = 0;
-		goto IL_00d6;
-	}
-
-IL_0033:
-	{
-		// vdelta.Set(poly1[0]);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_7 = V_2;
-		RuntimeObject* L_8 = ___poly10;
-		NullCheck(L_8);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_9;
-		L_9 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_8, 0);
-		NullCheck(L_7);
-		VirtualActionInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* >::Invoke(10 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(FunkyCode.Utilities.Polygon2DTriangulation.Point2D) */, L_7, L_9);
-		// vdelta.Subtract(poly2[k]);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_10 = V_2;
-		RuntimeObject* L_11 = ___poly21;
-		int32_t L_12 = V_3;
-		NullCheck(L_11);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_13;
-		L_13 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_11, L_12);
-		NullCheck(L_10);
-		Point2D_Subtract_m79D8916AB2FA100BE98081D060EC4696E529369A(L_10, L_13, NULL);
-		// if (vdelta.MagnitudeSquared() < kEpsilonSq)
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_14 = V_2;
-		NullCheck(L_14);
-		double L_15;
-		L_15 = Point2D_MagnitudeSquared_m879ABEC187FB07778C03626E262911844EEE4CC2(L_14, NULL);
-		if ((!(((double)L_15) < ((double)(0.0001)))))
-		{
-			goto IL_00d2;
-		}
-	}
-	{
-		// int matchedVertIndex = k;
-		int32_t L_16 = V_3;
-		V_4 = L_16;
-		// bool bReverseSearch = false;
-		V_5 = (bool)0;
-	}
-
-IL_0064:
-	{
-		// bool bMatchFound = true;
-		V_6 = (bool)1;
-		// for (int i = 1; i < numVerts1; ++i)
-		V_7 = 1;
-		goto IL_00c7;
-	}
-
-IL_006c:
-	{
-		// if (!bReverseSearch)
-		bool L_17 = V_5;
-		if (L_17)
-		{
-			goto IL_0076;
-		}
-	}
-	{
-		// ++k;
-		int32_t L_18 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_18, 1));
-		goto IL_0082;
-	}
-
-IL_0076:
-	{
-		// --k;
-		int32_t L_19 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_subtract(L_19, 1));
-		// if (k < 0)
-		int32_t L_20 = V_3;
-		if ((((int32_t)L_20) >= ((int32_t)0)))
-		{
-			goto IL_0082;
-		}
-	}
-	{
-		// k = numVerts2 - 1;
-		int32_t L_21 = V_1;
-		V_3 = ((int32_t)il2cpp_codegen_subtract(L_21, 1));
-	}
-
-IL_0082:
-	{
-		// vdelta.Set(poly1[i]);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_22 = V_2;
-		RuntimeObject* L_23 = ___poly10;
-		int32_t L_24 = V_7;
-		NullCheck(L_23);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_25;
-		L_25 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_23, L_24);
-		NullCheck(L_22);
-		VirtualActionInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* >::Invoke(10 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(FunkyCode.Utilities.Polygon2DTriangulation.Point2D) */, L_22, L_25);
-		// vdelta.Subtract(poly2[k % numVerts2]);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_26 = V_2;
-		RuntimeObject* L_27 = ___poly21;
-		int32_t L_28 = V_3;
-		int32_t L_29 = V_1;
-		NullCheck(L_27);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_30;
-		L_30 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_27, ((int32_t)(L_28%L_29)));
-		NullCheck(L_26);
-		Point2D_Subtract_m79D8916AB2FA100BE98081D060EC4696E529369A(L_26, L_30, NULL);
-		// if (vdelta.MagnitudeSquared() >= kEpsilonSq)
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_31 = V_2;
-		NullCheck(L_31);
-		double L_32;
-		L_32 = Point2D_MagnitudeSquared_m879ABEC187FB07778C03626E262911844EEE4CC2(L_31, NULL);
-		if ((!(((double)L_32) >= ((double)(0.0001)))))
-		{
-			goto IL_00c1;
-		}
-	}
-	{
-		// if (bReverseSearch)
-		bool L_33 = V_5;
-		if (!L_33)
-		{
-			goto IL_00b6;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_00b6:
-	{
-		// k = matchedVertIndex;
-		int32_t L_34 = V_4;
-		V_3 = L_34;
-		// bReverseSearch = true;
-		V_5 = (bool)1;
-		// bMatchFound = false;
-		V_6 = (bool)0;
-		// break;
-		goto IL_00cc;
-	}
-
-IL_00c1:
-	{
-		// for (int i = 1; i < numVerts1; ++i)
-		int32_t L_35 = V_7;
-		V_7 = ((int32_t)il2cpp_codegen_add(L_35, 1));
-	}
-
-IL_00c7:
-	{
-		// for (int i = 1; i < numVerts1; ++i)
-		int32_t L_36 = V_7;
-		int32_t L_37 = V_0;
-		if ((((int32_t)L_36) < ((int32_t)L_37)))
-		{
-			goto IL_006c;
-		}
-	}
-
-IL_00cc:
-	{
-		// if (bMatchFound)
-		bool L_38 = V_6;
-		if (!L_38)
-		{
-			goto IL_0064;
-		}
-	}
-	{
-		// return true;
-		return (bool)1;
-	}
-
-IL_00d2:
-	{
-		// for (int k = 0; k < numVerts2; ++k)
-		int32_t L_39 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_39, 1));
-	}
-
-IL_00d6:
-	{
-		// for (int k = 0; k < numVerts2; ++k)
-		int32_t L_40 = V_3;
-		int32_t L_41 = V_1;
-		if ((((int32_t)L_40) < ((int32_t)L_41)))
-		{
-			goto IL_0033;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PointInPolygon2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PointInPolygon2D_mB3926F32311A0C29309C8BAC79F9450D0A2FF9C2 (RuntimeObject* ___polygon0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___p1, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_1 = NULL;
-	bool V_2 = false;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_3 = NULL;
-	bool V_4 = false;
-	int32_t V_5 = 0;
-	bool V_6 = false;
-	int32_t G_B6_0 = 0;
-	int32_t G_B10_0 = 0;
-	{
-		// if (polygon == null || polygon.Count < 3)
-		RuntimeObject* L_0 = ___polygon0;
-		if (!L_0)
-		{
-			goto IL_000c;
-		}
-	}
-	{
-		RuntimeObject* L_1 = ___polygon0;
-		NullCheck(L_1);
-		int32_t L_2;
-		L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_1);
-		if ((((int32_t)L_2) >= ((int32_t)3)))
-		{
-			goto IL_000e;
-		}
-	}
-
-IL_000c:
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_000e:
-	{
-		// int numVerts = polygon.Count;
-		RuntimeObject* L_3 = ___polygon0;
-		NullCheck(L_3);
-		int32_t L_4;
-		L_4 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_3);
-		V_0 = L_4;
-		// Point2D p0 = polygon[numVerts - 1];
-		RuntimeObject* L_5 = ___polygon0;
-		int32_t L_6 = V_0;
-		NullCheck(L_5);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_7;
-		L_7 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_5, ((int32_t)il2cpp_codegen_subtract(L_6, 1)));
-		V_1 = L_7;
-		// bool bYFlag0 = (p0.Y >= p.Y) ? true : false;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_8 = V_1;
-		NullCheck(L_8);
-		double L_9;
-		L_9 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_8);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_10 = ___p1;
-		NullCheck(L_10);
-		double L_11;
-		L_11 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_10);
-		if ((((double)L_9) >= ((double)L_11)))
-		{
-			goto IL_0030;
-		}
-	}
-	{
-		G_B6_0 = 0;
-		goto IL_0031;
-	}
-
-IL_0030:
-	{
-		G_B6_0 = 1;
-	}
-
-IL_0031:
-	{
-		V_2 = (bool)G_B6_0;
-		// Point2D p1 = null;
-		V_3 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)NULL;
-		// bool bInside = false;
-		V_4 = (bool)0;
-		// for (int j = 0; j < numVerts; ++j)
-		V_5 = 0;
-		goto IL_00af;
-	}
-
-IL_003c:
-	{
-		// p1 = polygon[j];
-		RuntimeObject* L_12 = ___polygon0;
-		int32_t L_13 = V_5;
-		NullCheck(L_12);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_14;
-		L_14 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_12, L_13);
-		V_3 = L_14;
-		// bool bYFlag1 = (p1.Y >= p.Y) ? true : false;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_15 = V_3;
-		NullCheck(L_15);
-		double L_16;
-		L_16 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_15);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_17 = ___p1;
-		NullCheck(L_17);
-		double L_18;
-		L_18 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_17);
-		if ((((double)L_16) >= ((double)L_18)))
-		{
-			goto IL_0056;
-		}
-	}
-	{
-		G_B10_0 = 0;
-		goto IL_0057;
-	}
-
-IL_0056:
-	{
-		G_B10_0 = 1;
-	}
-
-IL_0057:
-	{
-		V_6 = (bool)G_B10_0;
-		// if (bYFlag0 != bYFlag1)
-		bool L_19 = V_2;
-		bool L_20 = V_6;
-		if ((((int32_t)L_19) == ((int32_t)L_20)))
-		{
-			goto IL_00a4;
-		}
-	}
-	{
-		// if (((p1.Y - p.Y) * (p0.X - p1.X) >= (p1.X - p.X) * (p0.Y - p1.Y)) == bYFlag1)
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_21 = V_3;
-		NullCheck(L_21);
-		double L_22;
-		L_22 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_21);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_23 = ___p1;
-		NullCheck(L_23);
-		double L_24;
-		L_24 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_23);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_25 = V_1;
-		NullCheck(L_25);
-		double L_26;
-		L_26 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_25);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_27 = V_3;
-		NullCheck(L_27);
-		double L_28;
-		L_28 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_27);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_29 = V_3;
-		NullCheck(L_29);
-		double L_30;
-		L_30 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_29);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_31 = ___p1;
-		NullCheck(L_31);
-		double L_32;
-		L_32 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_31);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_33 = V_1;
-		NullCheck(L_33);
-		double L_34;
-		L_34 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_33);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_35 = V_3;
-		NullCheck(L_35);
-		double L_36;
-		L_36 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_35);
-		bool L_37 = V_6;
-		if ((!(((uint32_t)((((int32_t)((!(((double)((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(L_22, L_24)), ((double)il2cpp_codegen_subtract(L_26, L_28))))) >= ((double)((double)il2cpp_codegen_multiply(((double)il2cpp_codegen_subtract(L_30, L_32)), ((double)il2cpp_codegen_subtract(L_34, L_36)))))))? 1 : 0)) == ((int32_t)0))? 1 : 0)) == ((uint32_t)L_37))))
-		{
-			goto IL_00a4;
-		}
-	}
-	{
-		// bInside = !bInside;
-		bool L_38 = V_4;
-		V_4 = (bool)((((int32_t)L_38) == ((int32_t)0))? 1 : 0);
-	}
-
-IL_00a4:
-	{
-		// bYFlag0 = bYFlag1;
-		bool L_39 = V_6;
-		V_2 = L_39;
-		// p0 = p1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_40 = V_3;
-		V_1 = L_40;
-		// for (int j = 0; j < numVerts; ++j)
-		int32_t L_41 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_41, 1));
-	}
-
-IL_00af:
-	{
-		// for (int j = 0; j < numVerts; ++j)
-		int32_t L_42 = V_5;
-		int32_t L_43 = V_0;
-		if ((((int32_t)L_42) < ((int32_t)L_43)))
-		{
-			goto IL_003c;
-		}
-	}
-	{
-		// return bInside;
-		bool L_44 = V_4;
-		return L_44;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonsIntersect2D(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonsIntersect2D_mE55448188CD69B5E14CF00380C00992C87F6801E (RuntimeObject* ___poly10, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect11, RuntimeObject* ___poly22, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect23, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	double V_0 = 0.0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
-	int32_t V_5 = 0;
-	int32_t V_6 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_7 = NULL;
-	{
-		// if (poly1 == null || poly1.Count < 3 || boundRect1 == null || poly2 == null || poly2.Count < 3 || boundRect2 == null)
-		RuntimeObject* L_0 = ___poly10;
-		if (!L_0)
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		RuntimeObject* L_1 = ___poly10;
-		NullCheck(L_1);
-		int32_t L_2;
-		L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_1);
-		if ((((int32_t)L_2) < ((int32_t)3)))
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_3 = ___boundRect11;
-		if (!L_3)
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		RuntimeObject* L_4 = ___poly22;
-		if (!L_4)
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		RuntimeObject* L_5 = ___poly22;
-		NullCheck(L_5);
-		int32_t L_6;
-		L_6 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_5);
-		if ((((int32_t)L_6) < ((int32_t)3)))
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_7 = ___boundRect23;
-		if (L_7)
-		{
-			goto IL_0020;
-		}
-	}
-
-IL_001e:
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0020:
-	{
-		// if (!boundRect1.Intersects(boundRect2))
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_8 = ___boundRect11;
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_9 = ___boundRect23;
-		NullCheck(L_8);
-		bool L_10;
-		L_10 = Rect2D_Intersects_m204F9EBFFD8059F4AFA7847EA31C2E05CA2C7B18(L_8, L_9, NULL);
-		if (L_10)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_002b:
-	{
-		// double epsilon = Math.Max(Math.Min(boundRect1.Width, boundRect2.Width) * 0.001f, MathUtil.EPSILON);
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_11 = ___boundRect11;
-		NullCheck(L_11);
-		double L_12;
-		L_12 = Rect2D_get_Width_m744EEBBCB807C45F3820A974F3C4B2AAFFE5987C(L_11, NULL);
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_13 = ___boundRect23;
-		NullCheck(L_13);
-		double L_14;
-		L_14 = Rect2D_get_Width_m744EEBBCB807C45F3820A974F3C4B2AAFFE5987C(L_13, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		double L_15;
-		L_15 = Math_Min_mA3310F1FF7876DA2FC7F37B822E6DD66410565C1(L_12, L_14, NULL);
-		il2cpp_codegen_runtime_class_init_inline(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var);
-		double L_16 = ((MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_StaticFields*)il2cpp_codegen_static_fields_for(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var))->___EPSILON_0;
-		double L_17;
-		L_17 = Math_Max_m7BAC743E1752A51F258BB82DEBDD13E7C6D3ED26(((double)il2cpp_codegen_multiply(L_15, (0.0010000000474974513))), L_16, NULL);
-		V_0 = L_17;
-		// int numVerts1 = poly1.Count;
-		RuntimeObject* L_18 = ___poly10;
-		NullCheck(L_18);
-		int32_t L_19;
-		L_19 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_18);
-		V_1 = L_19;
-		// int numVerts2 = poly2.Count;
-		RuntimeObject* L_20 = ___poly22;
-		NullCheck(L_20);
-		int32_t L_21;
-		L_21 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_20);
-		V_2 = L_21;
-		// for (int i = 0; i < numVerts1; ++i)
-		V_3 = 0;
-		goto IL_00c0;
-	}
-
-IL_0063:
-	{
-		// int lineEndVert1 = i + 1;
-		int32_t L_22 = V_3;
-		V_4 = ((int32_t)il2cpp_codegen_add(L_22, 1));
-		// if (lineEndVert1 == numVerts1)
-		int32_t L_23 = V_4;
-		int32_t L_24 = V_1;
-		if ((!(((uint32_t)L_23) == ((uint32_t)L_24))))
-		{
-			goto IL_0070;
-		}
-	}
-	{
-		// lineEndVert1 = 0;
-		V_4 = 0;
-	}
-
-IL_0070:
-	{
-		// for (int j = 0; j < numVerts2; ++j)
-		V_5 = 0;
-		goto IL_00b7;
-	}
-
-IL_0075:
-	{
-		// int lineEndVert2 = j + 1;
-		int32_t L_25 = V_5;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_25, 1));
-		// if (lineEndVert2 == numVerts2)
-		int32_t L_26 = V_6;
-		int32_t L_27 = V_2;
-		if ((!(((uint32_t)L_26) == ((uint32_t)L_27))))
-		{
-			goto IL_0083;
-		}
-	}
-	{
-		// lineEndVert2 = 0;
-		V_6 = 0;
-	}
-
-IL_0083:
-	{
-		// Point2D tmp = null;
-		V_7 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)NULL;
-		// if (TriangulationUtil.LinesIntersect2D(poly1[i], poly1[lineEndVert1], poly2[j], poly2[lineEndVert2], ref tmp, epsilon))
-		RuntimeObject* L_28 = ___poly10;
-		int32_t L_29 = V_3;
-		NullCheck(L_28);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_30;
-		L_30 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_28, L_29);
-		RuntimeObject* L_31 = ___poly10;
-		int32_t L_32 = V_4;
-		NullCheck(L_31);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_33;
-		L_33 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_31, L_32);
-		RuntimeObject* L_34 = ___poly22;
-		int32_t L_35 = V_5;
-		NullCheck(L_34);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_36;
-		L_36 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_34, L_35);
-		RuntimeObject* L_37 = ___poly22;
-		int32_t L_38 = V_6;
-		NullCheck(L_37);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_39;
-		L_39 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_37, L_38);
-		double L_40 = V_0;
-		bool L_41;
-		L_41 = TriangulationUtil_LinesIntersect2D_m3F728959DC9795375DDCACA82B1507A01D8B5612(L_30, L_33, L_36, L_39, (&V_7), L_40, NULL);
-		if (!L_41)
-		{
-			goto IL_00b1;
-		}
-	}
-	{
-		// return true;
-		return (bool)1;
-	}
-
-IL_00b1:
-	{
-		// for (int j = 0; j < numVerts2; ++j)
-		int32_t L_42 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_42, 1));
-	}
-
-IL_00b7:
-	{
-		// for (int j = 0; j < numVerts2; ++j)
-		int32_t L_43 = V_5;
-		int32_t L_44 = V_2;
-		if ((((int32_t)L_43) < ((int32_t)L_44)))
-		{
-			goto IL_0075;
-		}
-	}
-	{
-		// for (int i = 0; i < numVerts1; ++i)
-		int32_t L_45 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_45, 1));
-	}
-
-IL_00c0:
-	{
-		// for (int i = 0; i < numVerts1; ++i)
-		int32_t L_46 = V_3;
-		int32_t L_47 = V_1;
-		if ((((int32_t)L_46) < ((int32_t)L_47)))
-		{
-			goto IL_0063;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonContainsPolygon_m037ABEE9CC26AC657EBE4A3CDACE5FBF56AC9DDF (PolygonUtil_tC9D6F3E0B26CC92D619DC868213715914DCDEC5A* __this, RuntimeObject* ___poly10, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect11, RuntimeObject* ___poly22, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect23, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) 
 {
 	{
-		// return PolygonContainsPolygon(poly1, boundRect1, poly2, boundRect2, true);
-		RuntimeObject* L_0 = ___poly10;
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_1 = ___boundRect11;
-		RuntimeObject* L_2 = ___poly22;
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_3 = ___boundRect23;
-		bool L_4;
-		L_4 = PolygonUtil_PolygonContainsPolygon_m9113E7289EF94169A4D5A06A25EC89721FB248AA(L_0, L_1, L_2, L_3, (bool)1, NULL);
-		return L_4;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonContainsPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,FunkyCode.Utilities.Polygon2DTriangulation.Rect2D,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PolygonUtil_PolygonContainsPolygon_m9113E7289EF94169A4D5A06A25EC89721FB248AA (RuntimeObject* ___poly10, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect11, RuntimeObject* ___poly22, Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* ___boundRect23, bool ___runIntersectionTest4, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// if (poly1 == null || poly1.Count < 3 || poly2 == null || poly2.Count < 3)
-		RuntimeObject* L_0 = ___poly10;
-		if (!L_0)
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		RuntimeObject* L_1 = ___poly10;
-		NullCheck(L_1);
-		int32_t L_2;
-		L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_1);
-		if ((((int32_t)L_2) < ((int32_t)3)))
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		RuntimeObject* L_3 = ___poly22;
-		if (!L_3)
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		RuntimeObject* L_4 = ___poly22;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_4);
-		if ((((int32_t)L_5) >= ((int32_t)3)))
-		{
-			goto IL_001a;
-		}
-	}
-
-IL_0018:
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_001a:
-	{
-		// if (runIntersectionTest)
-		bool L_6 = ___runIntersectionTest4;
-		if (!L_6)
-		{
-			goto IL_0044;
-		}
-	}
-	{
-		// if (poly1.Count == poly2.Count)
-		RuntimeObject* L_7 = ___poly10;
-		NullCheck(L_7);
-		int32_t L_8;
-		L_8 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_7);
-		RuntimeObject* L_9 = ___poly22;
-		NullCheck(L_9);
-		int32_t L_10;
-		L_10 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_9);
-		if ((!(((uint32_t)L_8) == ((uint32_t)L_10))))
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		// if (PolygonUtil.PolygonsAreSame2D(poly1, poly2))
-		RuntimeObject* L_11 = ___poly10;
-		RuntimeObject* L_12 = ___poly22;
-		bool L_13;
-		L_13 = PolygonUtil_PolygonsAreSame2D_m785F4EEDD4B0A932B112F8BDF64846369723AB99(L_11, L_12, NULL);
-		if (!L_13)
-		{
-			goto IL_0037;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0037:
-	{
-		// bool bIntersect = PolygonUtil.PolygonsIntersect2D(poly1, boundRect1, poly2, boundRect2);
-		RuntimeObject* L_14 = ___poly10;
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_15 = ___boundRect11;
-		RuntimeObject* L_16 = ___poly22;
-		Rect2D_t741331CF78DA6820D5FDA684954CFDA5790D04EB* L_17 = ___boundRect23;
-		bool L_18;
-		L_18 = PolygonUtil_PolygonsIntersect2D_mE55448188CD69B5E14CF00380C00992C87F6801E(L_14, L_15, L_16, L_17, NULL);
-		// if (bIntersect)
-		if (!L_18)
-		{
-			goto IL_0044;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0044:
-	{
-		// if (PolygonUtil.PointInPolygon2D(poly1, poly2[0]))
-		RuntimeObject* L_19 = ___poly10;
-		RuntimeObject* L_20 = ___poly22;
-		NullCheck(L_20);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_21;
-		L_21 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_20, 0);
-		bool L_22;
-		L_22 = PolygonUtil_PointInPolygon2D_mB3926F32311A0C29309C8BAC79F9450D0A2FF9C2(L_19, L_21, NULL);
-		if (!L_22)
-		{
-			goto IL_0055;
-		}
-	}
-	{
-		// return true;
-		return (bool)1;
-	}
-
-IL_0055:
-	{
-		// return false;
-		return (bool)0;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToEdge2D(FunkyCode.Utilities.Polygon2DTriangulation.Point2D,FunkyCode.Utilities.Polygon2DTriangulation.Point2D,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_ClipPolygonToEdge2D_m0FC8B827C15506FA367B459402E6AC125F6DDF10 (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___edgeBegin0, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___edgeEnd1, RuntimeObject* ___poly2, List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** ___outPoly3, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_1 = NULL;
-	bool V_2 = false;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_3 = NULL;
-	int32_t V_4 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_5 = NULL;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_6 = NULL;
-	int32_t G_B8_0 = 0;
-	int32_t G_B12_0 = 0;
-	int32_t G_B17_0 = 0;
-	int32_t G_B13_0 = 0;
-	int32_t G_B15_0 = 0;
-	int32_t G_B14_0 = 0;
-	int32_t G_B20_0 = 0;
-	int32_t G_B16_0 = 0;
-	int32_t G_B18_0 = 0;
-	int32_t G_B19_0 = 0;
-	{
-		// outPoly = null;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_0 = ___outPoly3;
-		*((RuntimeObject**)L_0) = (RuntimeObject*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_0, (void*)(RuntimeObject*)NULL);
-		// if (edgeBegin == null ||
-		// edgeEnd == null ||
-		// poly == null ||
-		// poly.Count < 3)
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_1 = ___edgeBegin0;
-		if (!L_1)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_2 = ___edgeEnd1;
-		if (!L_2)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		RuntimeObject* L_3 = ___poly2;
-		if (!L_3)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		RuntimeObject* L_4 = ___poly2;
-		NullCheck(L_4);
-		int32_t L_5;
-		L_5 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_4);
-		if ((((int32_t)L_5) >= ((int32_t)3)))
-		{
-			goto IL_0016;
-		}
-	}
-
-IL_0015:
-	{
-		// return;
-		return;
-	}
-
-IL_0016:
-	{
-		// outPoly = new List<Point2D>();
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_6 = ___outPoly3;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_7 = (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*)il2cpp_codegen_object_new(List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var);
-		NullCheck(L_7);
-		List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E(L_7, List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E_RuntimeMethod_var);
-		*((RuntimeObject**)L_6) = (RuntimeObject*)L_7;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_6, (void*)(RuntimeObject*)L_7);
-		// int lastVertex = poly.Count - 1;
-		RuntimeObject* L_8 = ___poly2;
-		NullCheck(L_8);
-		int32_t L_9;
-		L_9 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_8);
-		V_0 = ((int32_t)il2cpp_codegen_subtract(L_9, 1));
-		// Point2D edgeRayVector = new Point2D(edgeEnd.X - edgeBegin.X, edgeEnd.Y - edgeBegin.Y);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_10 = ___edgeEnd1;
-		NullCheck(L_10);
-		double L_11;
-		L_11 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_10);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_12 = ___edgeBegin0;
-		NullCheck(L_12);
-		double L_13;
-		L_13 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_12);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_14 = ___edgeEnd1;
-		NullCheck(L_14);
-		double L_15;
-		L_15 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_14);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_16 = ___edgeBegin0;
-		NullCheck(L_16);
-		double L_17;
-		L_17 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_16);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_18 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_18);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_18, ((double)il2cpp_codegen_subtract(L_11, L_13)), ((double)il2cpp_codegen_subtract(L_15, L_17)), NULL);
-		V_1 = L_18;
-		// bool bLastVertexIsToRight = TriangulationUtil.Orient2d(edgeBegin, edgeEnd, poly[lastVertex]) == Orientation.CW ? true : false;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_19 = ___edgeBegin0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_20 = ___edgeEnd1;
-		RuntimeObject* L_21 = ___poly2;
-		int32_t L_22 = V_0;
-		NullCheck(L_21);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_23;
-		L_23 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_21, L_22);
-		int32_t L_24;
-		L_24 = TriangulationUtil_Orient2d_m7457FCAA2EDCDB2A5F163610BFDE276E2199B3B4(L_19, L_20, L_23, NULL);
-		if (!L_24)
-		{
-			goto IL_0059;
-		}
-	}
-	{
-		G_B8_0 = 0;
-		goto IL_005a;
-	}
-
-IL_0059:
-	{
-		G_B8_0 = 1;
-	}
-
-IL_005a:
-	{
-		V_2 = (bool)G_B8_0;
-		// Point2D tempRay = new Point2D(0.0, 0.0);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_25 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_25);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_25, (0.0), (0.0), NULL);
-		V_3 = L_25;
-		// for (int curVertex = 0; curVertex < poly.Count; curVertex++)
-		V_4 = 0;
-		goto IL_01ac;
-	}
-
-IL_007b:
-	{
-		// bool bCurVertexIsToRight = TriangulationUtil.Orient2d(edgeBegin, edgeEnd, poly[curVertex]) == Orientation.CW ? true : false;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_26 = ___edgeBegin0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_27 = ___edgeEnd1;
-		RuntimeObject* L_28 = ___poly2;
-		int32_t L_29 = V_4;
-		NullCheck(L_28);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_30;
-		L_30 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_28, L_29);
-		int32_t L_31;
-		L_31 = TriangulationUtil_Orient2d_m7457FCAA2EDCDB2A5F163610BFDE276E2199B3B4(L_26, L_27, L_30, NULL);
-		if (!L_31)
-		{
-			goto IL_008f;
-		}
-	}
-	{
-		G_B12_0 = 0;
-		goto IL_0090;
-	}
-
-IL_008f:
-	{
-		G_B12_0 = 1;
-	}
-
-IL_0090:
-	{
-		// if (bCurVertexIsToRight)
-		int32_t L_32 = G_B12_0;
-		G_B13_0 = L_32;
-		if (!L_32)
-		{
-			G_B17_0 = L_32;
-			goto IL_0130;
-		}
-	}
-	{
-		// if (bLastVertexIsToRight)
-		bool L_33 = V_2;
-		G_B14_0 = G_B13_0;
-		if (!L_33)
-		{
-			G_B15_0 = G_B13_0;
-			goto IL_00ad;
-		}
-	}
-	{
-		// outPoly.Add(poly[curVertex]);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_34 = ___outPoly3;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_35 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_34);
-		RuntimeObject* L_36 = ___poly2;
-		int32_t L_37 = V_4;
-		NullCheck(L_36);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_38;
-		L_38 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_36, L_37);
-		NullCheck(L_35);
-		List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline(L_35, L_38, List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		G_B20_0 = G_B14_0;
-		goto IL_01a2;
-	}
-
-IL_00ad:
-	{
-		// tempRay.Set(poly[curVertex].X - poly[lastVertex].X, poly[curVertex].Y - poly[lastVertex].Y);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_39 = V_3;
-		RuntimeObject* L_40 = ___poly2;
-		int32_t L_41 = V_4;
-		NullCheck(L_40);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_42;
-		L_42 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_40, L_41);
-		NullCheck(L_42);
-		double L_43;
-		L_43 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_42);
-		RuntimeObject* L_44 = ___poly2;
-		int32_t L_45 = V_0;
-		NullCheck(L_44);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_46;
-		L_46 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_44, L_45);
-		NullCheck(L_46);
-		double L_47;
-		L_47 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_46);
-		RuntimeObject* L_48 = ___poly2;
-		int32_t L_49 = V_4;
-		NullCheck(L_48);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_50;
-		L_50 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_48, L_49);
-		NullCheck(L_50);
-		double L_51;
-		L_51 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_50);
-		RuntimeObject* L_52 = ___poly2;
-		int32_t L_53 = V_0;
-		NullCheck(L_52);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_54;
-		L_54 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_52, L_53);
-		NullCheck(L_54);
-		double L_55;
-		L_55 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_54);
-		NullCheck(L_39);
-		VirtualActionInvoker2< double, double >::Invoke(9 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(System.Double,System.Double) */, L_39, ((double)il2cpp_codegen_subtract(L_43, L_47)), ((double)il2cpp_codegen_subtract(L_51, L_55)));
-		// Point2D ptIntersection = new Point2D(0.0, 0.0);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_56 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_56);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_56, (0.0), (0.0), NULL);
-		V_5 = L_56;
-		// bool bIntersect = TriangulationUtil.RaysIntersect2D(poly[lastVertex], tempRay, edgeBegin, edgeRayVector, ref ptIntersection);
-		RuntimeObject* L_57 = ___poly2;
-		int32_t L_58 = V_0;
-		NullCheck(L_57);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_59;
-		L_59 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_57, L_58);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_60 = V_3;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_61 = ___edgeBegin0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_62 = V_1;
-		bool L_63;
-		L_63 = TriangulationUtil_RaysIntersect2D_m0F3A5E30E31F45937E08ADA24A7FEBB89FE5052A(L_59, L_60, L_61, L_62, (&V_5), NULL);
-		// if (bIntersect)
-		G_B16_0 = G_B15_0;
-		if (!L_63)
-		{
-			G_B20_0 = G_B15_0;
-			goto IL_01a2;
-		}
-	}
-	{
-		// outPoly.Add(ptIntersection);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_64 = ___outPoly3;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_65 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_64);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_66 = V_5;
-		NullCheck(L_65);
-		List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline(L_65, L_66, List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		// outPoly.Add(poly[curVertex]);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_67 = ___outPoly3;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_68 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_67);
-		RuntimeObject* L_69 = ___poly2;
-		int32_t L_70 = V_4;
-		NullCheck(L_69);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_71;
-		L_71 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_69, L_70);
-		NullCheck(L_68);
-		List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline(L_68, L_71, List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		G_B20_0 = G_B16_0;
-		goto IL_01a2;
-	}
-
-IL_0130:
-	{
-		// else if (bLastVertexIsToRight)
-		bool L_72 = V_2;
-		G_B18_0 = G_B17_0;
-		if (!L_72)
-		{
-			G_B20_0 = G_B17_0;
-			goto IL_01a2;
-		}
-	}
-	{
-		// tempRay.Set(poly[curVertex].X - poly[lastVertex].X, poly[curVertex].Y - poly[lastVertex].Y);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_73 = V_3;
-		RuntimeObject* L_74 = ___poly2;
-		int32_t L_75 = V_4;
-		NullCheck(L_74);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_76;
-		L_76 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_74, L_75);
-		NullCheck(L_76);
-		double L_77;
-		L_77 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_76);
-		RuntimeObject* L_78 = ___poly2;
-		int32_t L_79 = V_0;
-		NullCheck(L_78);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_80;
-		L_80 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_78, L_79);
-		NullCheck(L_80);
-		double L_81;
-		L_81 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_80);
-		RuntimeObject* L_82 = ___poly2;
-		int32_t L_83 = V_4;
-		NullCheck(L_82);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_84;
-		L_84 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_82, L_83);
-		NullCheck(L_84);
-		double L_85;
-		L_85 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_84);
-		RuntimeObject* L_86 = ___poly2;
-		int32_t L_87 = V_0;
-		NullCheck(L_86);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_88;
-		L_88 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_86, L_87);
-		NullCheck(L_88);
-		double L_89;
-		L_89 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_88);
-		NullCheck(L_73);
-		VirtualActionInvoker2< double, double >::Invoke(9 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2D::Set(System.Double,System.Double) */, L_73, ((double)il2cpp_codegen_subtract(L_77, L_81)), ((double)il2cpp_codegen_subtract(L_85, L_89)));
-		// Point2D ptIntersection = new Point2D(0.0, 0.0);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_90 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_90);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_90, (0.0), (0.0), NULL);
-		V_6 = L_90;
-		// bool bIntersect = TriangulationUtil.RaysIntersect2D(poly[lastVertex], tempRay, edgeBegin, edgeRayVector, ref ptIntersection);
-		RuntimeObject* L_91 = ___poly2;
-		int32_t L_92 = V_0;
-		NullCheck(L_91);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_93;
-		L_93 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_91, L_92);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_94 = V_3;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_95 = ___edgeBegin0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_96 = V_1;
-		bool L_97;
-		L_97 = TriangulationUtil_RaysIntersect2D_m0F3A5E30E31F45937E08ADA24A7FEBB89FE5052A(L_93, L_94, L_95, L_96, (&V_6), NULL);
-		// if (bIntersect)
-		G_B19_0 = G_B18_0;
-		if (!L_97)
-		{
-			G_B20_0 = G_B18_0;
-			goto IL_01a2;
-		}
-	}
-	{
-		// outPoly.Add(ptIntersection);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_98 = ___outPoly3;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_99 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_98);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_100 = V_6;
-		NullCheck(L_99);
-		List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline(L_99, L_100, List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		G_B20_0 = G_B19_0;
-	}
-
-IL_01a2:
-	{
-		// lastVertex = curVertex;
-		int32_t L_101 = V_4;
-		V_0 = L_101;
-		// bLastVertexIsToRight = bCurVertexIsToRight;
-		V_2 = (bool)G_B20_0;
-		// for (int curVertex = 0; curVertex < poly.Count; curVertex++)
-		int32_t L_102 = V_4;
-		V_4 = ((int32_t)il2cpp_codegen_add(L_102, 1));
-	}
-
-IL_01ac:
-	{
-		// for (int curVertex = 0; curVertex < poly.Count; curVertex++)
-		int32_t L_103 = V_4;
-		RuntimeObject* L_104 = ___poly2;
-		NullCheck(L_104);
-		int32_t L_105;
-		L_105 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_104);
-		if ((((int32_t)L_103) < ((int32_t)L_105)))
-		{
-			goto IL_007b;
-		}
-	}
-	{
-		// }
+		float L_0 = ___x0;
+		__this->___x_2 = L_0;
+		float L_1 = ___y1;
+		__this->___y_3 = L_1;
+		float L_2 = ___z2;
+		__this->___z_4 = L_2;
 		return;
 	}
 }
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::ClipPolygonToPolygon(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>,System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_ClipPolygonToPolygon_m7084BFB0E91AD364F879AA9A6435F34484179390 (RuntimeObject* ___poly0, RuntimeObject* ___clipPoly1, List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** ___outPoly2, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_AddRange_m766B30E845BFCD58DB8B3EDF99EB26B9710929CE_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_m4339A803A1BB070C0F542D3015E3C57A858CA644_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m4E6142012AA8B972541646F6324B2D3EA9E67221_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	int32_t V_2 = 0;
-	List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* V_3 = NULL;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_4 = NULL;
-	{
-		// outPoly = null;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_0 = ___outPoly2;
-		*((RuntimeObject**)L_0) = (RuntimeObject*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_0, (void*)(RuntimeObject*)NULL);
-		// if (poly == null || poly.Count < 3 || clipPoly == null || clipPoly.Count < 3)
-		RuntimeObject* L_1 = ___poly0;
-		if (!L_1)
-		{
-			goto IL_001b;
-		}
-	}
-	{
-		RuntimeObject* L_2 = ___poly0;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_2);
-		if ((((int32_t)L_3) < ((int32_t)3)))
-		{
-			goto IL_001b;
-		}
-	}
-	{
-		RuntimeObject* L_4 = ___clipPoly1;
-		if (!L_4)
-		{
-			goto IL_001b;
-		}
-	}
-	{
-		RuntimeObject* L_5 = ___clipPoly1;
-		NullCheck(L_5);
-		int32_t L_6;
-		L_6 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_5);
-		if ((((int32_t)L_6) >= ((int32_t)3)))
-		{
-			goto IL_001c;
-		}
-	}
-
-IL_001b:
-	{
-		// return;
-		return;
-	}
-
-IL_001c:
-	{
-		// outPoly = new List<Point2D>(poly);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_7 = ___outPoly2;
-		RuntimeObject* L_8 = ___poly0;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_9 = (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*)il2cpp_codegen_object_new(List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var);
-		NullCheck(L_9);
-		List_1__ctor_m4E6142012AA8B972541646F6324B2D3EA9E67221(L_9, L_8, List_1__ctor_m4E6142012AA8B972541646F6324B2D3EA9E67221_RuntimeMethod_var);
-		*((RuntimeObject**)L_7) = (RuntimeObject*)L_9;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_7, (void*)(RuntimeObject*)L_9);
-		// int numClipVertices = clipPoly.Count;
-		RuntimeObject* L_10 = ___clipPoly1;
-		NullCheck(L_10);
-		int32_t L_11;
-		L_11 = InterfaceFuncInvoker0< int32_t >::Invoke(0 /* System.Int32 System.Collections.Generic.ICollection`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Count() */, ICollection_1_tC28A71255CDB9C5BBA5D73F92DFB864725485A20_il2cpp_TypeInfo_var, L_10);
-		V_0 = L_11;
-		// int lastVertex = numClipVertices - 1;
-		int32_t L_12 = V_0;
-		V_1 = ((int32_t)il2cpp_codegen_subtract(L_12, 1));
-		// for (int curVertex = 0; curVertex < numClipVertices; curVertex++)
-		V_2 = 0;
-		goto IL_0065;
-	}
-
-IL_0033:
-	{
-		// List<Point2D> clippedPoly = null;
-		V_3 = (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*)NULL;
-		// Point2D edgeBegin = clipPoly[lastVertex];
-		RuntimeObject* L_13 = ___clipPoly1;
-		int32_t L_14 = V_1;
-		NullCheck(L_13);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_15;
-		L_15 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_13, L_14);
-		// Point2D edgeEnd = clipPoly[curVertex];
-		RuntimeObject* L_16 = ___clipPoly1;
-		int32_t L_17 = V_2;
-		NullCheck(L_16);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_18;
-		L_18 = InterfaceFuncInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*, int32_t >::Invoke(0 /* T System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>::get_Item(System.Int32) */, IList_1_t307ADEA9B6F0AEDD3177016166472A3B7B70C2B4_il2cpp_TypeInfo_var, L_16, L_17);
-		V_4 = L_18;
-		// PolygonUtil.ClipPolygonToEdge2D(edgeBegin, edgeEnd, outPoly, out clippedPoly);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_19 = V_4;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_20 = ___outPoly2;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_21 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_20);
-		PolygonUtil_ClipPolygonToEdge2D_m0FC8B827C15506FA367B459402E6AC125F6DDF10(L_15, L_19, L_21, (&V_3), NULL);
-		// outPoly.Clear();
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_22 = ___outPoly2;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_23 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_22);
-		NullCheck(L_23);
-		List_1_Clear_m4339A803A1BB070C0F542D3015E3C57A858CA644_inline(L_23, List_1_Clear_m4339A803A1BB070C0F542D3015E3C57A858CA644_RuntimeMethod_var);
-		// outPoly.AddRange(clippedPoly);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346** L_24 = ___outPoly2;
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_25 = *((List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346**)L_24);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_26 = V_3;
-		NullCheck(L_25);
-		List_1_AddRange_m766B30E845BFCD58DB8B3EDF99EB26B9710929CE(L_25, L_26, List_1_AddRange_m766B30E845BFCD58DB8B3EDF99EB26B9710929CE_RuntimeMethod_var);
-		// lastVertex = curVertex;
-		int32_t L_27 = V_2;
-		V_1 = L_27;
-		// for (int curVertex = 0; curVertex < numClipVertices; curVertex++)
-		int32_t L_28 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_28, 1));
-	}
-
-IL_0065:
-	{
-		// for (int curVertex = 0; curVertex < numClipVertices; curVertex++)
-		int32_t L_29 = V_2;
-		int32_t L_30 = V_0;
-		if ((((int32_t)L_29) < ((int32_t)L_30)))
-		{
-			goto IL_0033;
-		}
-	}
-	{
-		// }
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnion(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_PolygonUnion_m3BD23968F4C4B7DAB90A29A60B51FA299AEB841A (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon10, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon21, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C** ___union2, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* V_0 = NULL;
-	{
-		// PolygonOperationContext ctx = new PolygonOperationContext();
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1*)il2cpp_codegen_object_new(PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		PolygonOperationContext__ctor_m4C8C08A108AF5B6F1B532AA319F5F248A9B26F74(L_0, NULL);
-		V_0 = L_0;
-		// ctx.Init(PolygonUtil.PolyOperation.Union, polygon1, polygon2);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_1 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_2 = ___polygon10;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_3 = ___polygon21;
-		NullCheck(L_1);
-		bool L_4;
-		L_4 = PolygonOperationContext_Init_m24D7F378AFEF35EA6E5A673D57FC0B5164DE345A(L_1, 1, L_2, L_3, NULL);
-		// PolygonUnionInternal(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_5 = V_0;
-		PolygonUtil_PolygonUnionInternal_mB3CF2221B2277D9742E751964A135986A5885E15(L_5, NULL);
-		// union = ctx.Union;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C** L_6 = ___union2;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_7 = V_0;
-		NullCheck(L_7);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_8;
-		L_8 = PolygonOperationContext_get_Union_m59F5A017BDEEFE4AB0EE08937CDEDB7400782C5B(L_7, NULL);
-		*((RuntimeObject**)L_6) = (RuntimeObject*)L_8;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_6, (void*)(RuntimeObject*)L_8);
-		// return ctx.mError;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_9 = V_0;
-		NullCheck(L_9);
-		int32_t L_10 = L_9->___mError_7;
-		return L_10;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonUnionInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_PolygonUnionInternal_mB3CF2221B2277D9742E751964A135986A5885E15 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_0 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_1 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_2 = NULL;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* V_3 = NULL;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_4 = NULL;
-	int32_t V_5 = 0;
-	int32_t V_6 = 0;
-	int32_t V_7 = 0;
-	Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C V_8;
-	memset((&V_8), 0, sizeof(V_8));
-	EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* V_9 = NULL;
-	int32_t V_10 = 0;
-	int32_t V_11 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_12 = NULL;
-	bool V_13 = false;
-	int32_t G_B12_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B12_1 = NULL;
-	int32_t G_B11_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B11_1 = NULL;
-	int32_t G_B13_0 = 0;
-	int32_t G_B13_1 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B13_2 = NULL;
-	int32_t G_B17_0 = 0;
-	{
-		// Point2DList union = ctx.Union;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = ___ctx0;
-		NullCheck(L_0);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_1;
-		L_1 = PolygonOperationContext_get_Union_m59F5A017BDEEFE4AB0EE08937CDEDB7400782C5B(L_0, NULL);
-		V_0 = L_1;
-		// if (ctx.mStartingIndex == -1)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_2 = ___ctx0;
-		NullCheck(L_2);
-		int32_t L_3 = L_2->___mStartingIndex_6;
-		if ((!(((uint32_t)L_3) == ((uint32_t)(-1)))))
-		{
-			goto IL_003d;
-		}
-	}
-	{
-		// switch (ctx.mError)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_4 = ___ctx0;
-		NullCheck(L_4);
-		int32_t L_5 = L_4->___mError_7;
-		V_7 = L_5;
-		int32_t L_6 = V_7;
-		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_6, 1)))
-		{
-			case 0:
-			{
-				goto IL_002f;
-			}
-			case 1:
-			{
-				goto IL_0030;
-			}
-			case 2:
-			{
-				goto IL_002f;
-			}
-		}
-	}
-	{
-		goto IL_003d;
-	}
-
-IL_002f:
-	{
-		// return;
-		return;
-	}
-
-IL_0030:
-	{
-		// union.AddRange(ctx.mOriginalPolygon2);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_7 = V_0;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_8 = ___ctx0;
-		NullCheck(L_8);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_9 = L_8->___mOriginalPolygon2_2;
-		NullCheck(L_7);
-		VirtualActionInvoker1< Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* >::Invoke(21 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::AddRange(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList) */, L_7, L_9);
-		// return;
-		return;
-	}
-
-IL_003d:
-	{
-		// Point2DList currentPoly = ctx.mPoly1;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_10 = ___ctx0;
-		NullCheck(L_10);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_11 = L_10->___mPoly1_3;
-		V_1 = L_11;
-		// Point2DList otherPoly = ctx.mPoly2;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_12 = ___ctx0;
-		NullCheck(L_12);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_13 = L_12->___mPoly2_4;
-		V_2 = L_13;
-		// List<int> currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_14 = ___ctx0;
-		NullCheck(L_14);
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_15 = L_14->___mPoly1VectorAngles_8;
-		V_3 = L_15;
-		// Point2D startingVertex = ctx.mPoly1[ctx.mStartingIndex];
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_16 = ___ctx0;
-		NullCheck(L_16);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_17 = L_16->___mPoly1_3;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_18 = ___ctx0;
-		NullCheck(L_18);
-		int32_t L_19 = L_18->___mStartingIndex_6;
-		NullCheck(L_17);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_20;
-		L_20 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_17, L_19, NULL);
-		V_4 = L_20;
-		// int currentIndex = ctx.mStartingIndex;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_21 = ___ctx0;
-		NullCheck(L_21);
-		int32_t L_22 = L_21->___mStartingIndex_6;
-		V_5 = L_22;
-		// int firstPoly2Index = -1;
-		V_6 = (-1);
-		// union.Clear();
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_23 = V_0;
-		NullCheck(L_23);
-		Point2DList_Clear_m5114C3B7CD79E46858EFAE266CFB951AB8ABA568(L_23, NULL);
-	}
-
-IL_0076:
-	{
-		// union.Add(currentPoly[currentIndex]);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_24 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_25 = V_1;
-		int32_t L_26 = V_5;
-		NullCheck(L_25);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_27;
-		L_27 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_25, L_26, NULL);
-		NullCheck(L_24);
-		VirtualActionInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* >::Invoke(19 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D) */, L_24, L_27);
-		// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_28 = ___ctx0;
-		NullCheck(L_28);
-		List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* L_29 = L_28->___mIntersections_5;
-		NullCheck(L_29);
-		Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C L_30;
-		L_30 = List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A(L_29, List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var);
-		V_8 = L_30;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_0173:
-			{// begin finally (depth: 1)
-				Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94((&V_8), Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var);
-				return;
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_0165_1;
-			}
-
-IL_0096_1:
-			{
-				// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_31;
-				L_31 = Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_inline((&V_8), Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var);
-				V_9 = L_31;
-				// if (currentPoly[currentIndex].Equals(intersect.IntersectionPoint, currentPoly.Epsilon))
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_32 = V_1;
-				int32_t L_33 = V_5;
-				NullCheck(L_32);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_34;
-				L_34 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_32, L_33, NULL);
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_35 = V_9;
-				NullCheck(L_35);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_36;
-				L_36 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_35, NULL);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_37 = V_1;
-				NullCheck(L_37);
-				double L_38;
-				L_38 = Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69_inline(L_37, NULL);
-				NullCheck(L_34);
-				bool L_39;
-				L_39 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_34, L_36, L_38, NULL);
-				if (!L_39)
-				{
-					goto IL_0165_1;
-				}
-			}
-			{
-				// int otherIndex = otherPoly.IndexOf(intersect.IntersectionPoint);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_40 = V_2;
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_41 = V_9;
-				NullCheck(L_41);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_42;
-				L_42 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_41, NULL);
-				NullCheck(L_40);
-				int32_t L_43;
-				L_43 = Point2DList_IndexOf_mA37E67F9B83F1E740164AC001913A688A212191D(L_40, L_42, NULL);
-				V_10 = L_43;
-				// int comparePointIndex = otherPoly.NextIndex(otherIndex);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_44 = V_2;
-				int32_t L_45 = V_10;
-				NullCheck(L_44);
-				int32_t L_46;
-				L_46 = Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501(L_44, L_45, NULL);
-				V_11 = L_46;
-				// Point2D comparePoint = otherPoly[comparePointIndex];
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_47 = V_2;
-				int32_t L_48 = V_11;
-				NullCheck(L_47);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_49;
-				L_49 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_47, L_48, NULL);
-				V_12 = L_49;
-				// bool bPointInPolygonAngle = false;
-				V_13 = (bool)0;
-				// if (currentPolyVectorAngles[comparePointIndex] == -1)
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_50 = V_3;
-				int32_t L_51 = V_11;
-				NullCheck(L_50);
-				int32_t L_52;
-				L_52 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_50, L_51, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((!(((uint32_t)L_52) == ((uint32_t)(-1)))))
-				{
-					goto IL_010c_1;
-				}
-			}
-			{
-				// bPointInPolygonAngle = ctx.PointInPolygonAngle(comparePoint, currentPoly);
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_53 = ___ctx0;
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_54 = V_12;
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_55 = V_1;
-				NullCheck(L_53);
-				bool L_56;
-				L_56 = PolygonOperationContext_PointInPolygonAngle_m4B73907865E7713D7DD70EC52AABE8B0D2DAB59F(L_53, L_54, L_55, NULL);
-				V_13 = L_56;
-				// currentPolyVectorAngles[comparePointIndex] = bPointInPolygonAngle ? 1 : 0;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_57 = V_3;
-				int32_t L_58 = V_11;
-				bool L_59 = V_13;
-				G_B11_0 = L_58;
-				G_B11_1 = L_57;
-				if (L_59)
-				{
-					G_B12_0 = L_58;
-					G_B12_1 = L_57;
-					goto IL_0104_1;
-				}
-			}
-			{
-				G_B13_0 = 0;
-				G_B13_1 = G_B11_0;
-				G_B13_2 = G_B11_1;
-				goto IL_0105_1;
-			}
-
-IL_0104_1:
-			{
-				G_B13_0 = 1;
-				G_B13_1 = G_B12_0;
-				G_B13_2 = G_B12_1;
-			}
-
-IL_0105_1:
-			{
-				NullCheck(G_B13_2);
-				List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(G_B13_2, G_B13_1, G_B13_0, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-				goto IL_011d_1;
-			}
-
-IL_010c_1:
-			{
-				// bPointInPolygonAngle = (currentPolyVectorAngles[comparePointIndex] == 1) ? true : false;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_60 = V_3;
-				int32_t L_61 = V_11;
-				NullCheck(L_60);
-				int32_t L_62;
-				L_62 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_60, L_61, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((((int32_t)L_62) == ((int32_t)1)))
-				{
-					goto IL_011a_1;
-				}
-			}
-			{
-				G_B17_0 = 0;
-				goto IL_011b_1;
-			}
-
-IL_011a_1:
-			{
-				G_B17_0 = 1;
-			}
-
-IL_011b_1:
-			{
-				V_13 = (bool)G_B17_0;
-			}
-
-IL_011d_1:
-			{
-				// if (!bPointInPolygonAngle)
-				bool L_63 = V_13;
-				if (L_63)
-				{
-					goto IL_0165_1;
-				}
-			}
-			{
-				// if (currentPoly == ctx.mPoly1)
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_64 = V_1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_65 = ___ctx0;
-				NullCheck(L_65);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_66 = L_65->___mPoly1_3;
-				if ((!(((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_64) == ((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_66))))
-				{
-					goto IL_014a_1;
-				}
-			}
-			{
-				// currentPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_67 = ___ctx0;
-				NullCheck(L_67);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_68 = L_67->___mPoly2_4;
-				V_1 = L_68;
-				// currentPolyVectorAngles = ctx.mPoly2VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_69 = ___ctx0;
-				NullCheck(L_69);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_70 = L_69->___mPoly2VectorAngles_9;
-				V_3 = L_70;
-				// otherPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_71 = ___ctx0;
-				NullCheck(L_71);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_72 = L_71->___mPoly1_3;
-				V_2 = L_72;
-				// if (firstPoly2Index < 0)
-				int32_t L_73 = V_6;
-				if ((((int32_t)L_73) >= ((int32_t)0)))
-				{
-					goto IL_015f_1;
-				}
-			}
-			{
-				// firstPoly2Index = otherIndex;
-				int32_t L_74 = V_10;
-				V_6 = L_74;
-				goto IL_015f_1;
-			}
-
-IL_014a_1:
-			{
-				// currentPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_75 = ___ctx0;
-				NullCheck(L_75);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_76 = L_75->___mPoly1_3;
-				V_1 = L_76;
-				// currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_77 = ___ctx0;
-				NullCheck(L_77);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_78 = L_77->___mPoly1VectorAngles_8;
-				V_3 = L_78;
-				// otherPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_79 = ___ctx0;
-				NullCheck(L_79);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_80 = L_79->___mPoly2_4;
-				V_2 = L_80;
-			}
-
-IL_015f_1:
-			{
-				// currentIndex = otherIndex;
-				int32_t L_81 = V_10;
-				V_5 = L_81;
-				// break;
-				goto IL_0181;
-			}
-
-IL_0165_1:
-			{
-				// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-				bool L_82;
-				L_82 = Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58((&V_8), Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var);
-				if (L_82)
-				{
-					goto IL_0096_1;
-				}
-			}
-			{
-				goto IL_0181;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_0181:
-	{
-		// currentIndex = currentPoly.NextIndex(currentIndex);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_83 = V_1;
-		int32_t L_84 = V_5;
-		NullCheck(L_83);
-		int32_t L_85;
-		L_85 = Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501(L_83, L_84, NULL);
-		V_5 = L_85;
-		// if (currentPoly == ctx.mPoly1)
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_86 = V_1;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_87 = ___ctx0;
-		NullCheck(L_87);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_88 = L_87->___mPoly1_3;
-		if ((!(((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_86) == ((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_88))))
-		{
-			goto IL_019a;
-		}
-	}
-	{
-		// if (currentIndex == 0)
-		int32_t L_89 = V_5;
-		if (L_89)
-		{
-			goto IL_01a5;
-		}
-	}
-	{
-		// break;
-		goto IL_01d3;
-	}
-
-IL_019a:
-	{
-		// if (firstPoly2Index >= 0 && currentIndex == firstPoly2Index)
-		int32_t L_90 = V_6;
-		if ((((int32_t)L_90) < ((int32_t)0)))
-		{
-			goto IL_01a5;
-		}
-	}
-	{
-		int32_t L_91 = V_5;
-		int32_t L_92 = V_6;
-		if ((((int32_t)L_91) == ((int32_t)L_92)))
-		{
-			goto IL_01d3;
-		}
-	}
-
-IL_01a5:
-	{
-		// } while ((currentPoly[currentIndex] != startingVertex) && (union.Count <= (ctx.mPoly1.Count + ctx.mPoly2.Count)));
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_93 = V_1;
-		int32_t L_94 = V_5;
-		NullCheck(L_93);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_95;
-		L_95 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_93, L_94, NULL);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_96 = V_4;
-		if ((((RuntimeObject*)(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)L_95) == ((RuntimeObject*)(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)L_96)))
-		{
-			goto IL_01d3;
-		}
-	}
-	{
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_97 = V_0;
-		NullCheck(L_97);
-		int32_t L_98;
-		L_98 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_97, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_99 = ___ctx0;
-		NullCheck(L_99);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_100 = L_99->___mPoly1_3;
-		NullCheck(L_100);
-		int32_t L_101;
-		L_101 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_100, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_102 = ___ctx0;
-		NullCheck(L_102);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_103 = L_102->___mPoly2_4;
-		NullCheck(L_103);
-		int32_t L_104;
-		L_104 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_103, NULL);
-		if ((((int32_t)L_98) <= ((int32_t)((int32_t)il2cpp_codegen_add(L_101, L_104)))))
-		{
-			goto IL_0076;
-		}
-	}
-
-IL_01d3:
-	{
-		// if (union.Count > (ctx.mPoly1.Count + ctx.mPoly2.Count))
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_105 = V_0;
-		NullCheck(L_105);
-		int32_t L_106;
-		L_106 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_105, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_107 = ___ctx0;
-		NullCheck(L_107);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_108 = L_107->___mPoly1_3;
-		NullCheck(L_108);
-		int32_t L_109;
-		L_109 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_108, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_110 = ___ctx0;
-		NullCheck(L_110);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_111 = L_110->___mPoly2_4;
-		NullCheck(L_111);
-		int32_t L_112;
-		L_112 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_111, NULL);
-		if ((((int32_t)L_106) <= ((int32_t)((int32_t)il2cpp_codegen_add(L_109, L_112)))))
-		{
-			goto IL_01f9;
-		}
-	}
-	{
-		// ctx.mError = PolygonUtil.PolyUnionError.InfiniteLoop;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_113 = ___ctx0;
-		NullCheck(L_113);
-		L_113->___mError_7 = 3;
-	}
-
-IL_01f9:
-	{
-		// return;
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersect(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_PolygonIntersect_m1E5AD6DC66A18A5FFBC467DAFB3992A9B734ADF0 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon10, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon21, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C** ___intersectOut2, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* V_0 = NULL;
-	{
-		// PolygonOperationContext ctx = new PolygonOperationContext();
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1*)il2cpp_codegen_object_new(PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		PolygonOperationContext__ctor_m4C8C08A108AF5B6F1B532AA319F5F248A9B26F74(L_0, NULL);
-		V_0 = L_0;
-		// ctx.Init(PolygonUtil.PolyOperation.Intersect, polygon1, polygon2);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_1 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_2 = ___polygon10;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_3 = ___polygon21;
-		NullCheck(L_1);
-		bool L_4;
-		L_4 = PolygonOperationContext_Init_m24D7F378AFEF35EA6E5A673D57FC0B5164DE345A(L_1, 2, L_2, L_3, NULL);
-		// PolygonIntersectInternal(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_5 = V_0;
-		PolygonUtil_PolygonIntersectInternal_mB557E56124ABCEFF07096E98243B65A741AC76E3(L_5, NULL);
-		// intersectOut = ctx.Intersect;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C** L_6 = ___intersectOut2;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_7 = V_0;
-		NullCheck(L_7);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_8;
-		L_8 = PolygonOperationContext_get_Intersect_m0E5BE87297178A57E0BAC47EFF4125A49BFE3748(L_7, NULL);
-		*((RuntimeObject**)L_6) = (RuntimeObject*)L_8;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_6, (void*)(RuntimeObject*)L_8);
-		// return ctx.mError;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_9 = V_0;
-		NullCheck(L_9);
-		int32_t L_10 = L_9->___mError_7;
-		return L_10;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonIntersectInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_PolygonIntersectInternal_mB557E56124ABCEFF07096E98243B65A741AC76E3 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mF108F2A1AB1A8305855B364F78F1BA302E55BA4C_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_0 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_1 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_2 = NULL;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* V_3 = NULL;
-	int32_t V_4 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_5 = NULL;
-	int32_t V_6 = 0;
-	int32_t V_7 = 0;
-	int32_t V_8 = 0;
-	Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C V_9;
-	memset((&V_9), 0, sizeof(V_9));
-	EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* V_10 = NULL;
-	int32_t V_11 = 0;
-	int32_t V_12 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_13 = NULL;
-	bool V_14 = false;
-	int32_t G_B13_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B13_1 = NULL;
-	int32_t G_B12_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B12_1 = NULL;
-	int32_t G_B14_0 = 0;
-	int32_t G_B14_1 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B14_2 = NULL;
-	int32_t G_B18_0 = 0;
-	{
-		// Point2DList intersectOut = ctx.Intersect;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = ___ctx0;
-		NullCheck(L_0);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_1;
-		L_1 = PolygonOperationContext_get_Intersect_m0E5BE87297178A57E0BAC47EFF4125A49BFE3748(L_0, NULL);
-		V_0 = L_1;
-		// if (ctx.mStartingIndex == -1)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_2 = ___ctx0;
-		NullCheck(L_2);
-		int32_t L_3 = L_2->___mStartingIndex_6;
-		if ((!(((uint32_t)L_3) == ((uint32_t)(-1)))))
-		{
-			goto IL_003d;
-		}
-	}
-	{
-		// switch (ctx.mError)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_4 = ___ctx0;
-		NullCheck(L_4);
-		int32_t L_5 = L_4->___mError_7;
-		V_8 = L_5;
-		int32_t L_6 = V_8;
-		switch (((int32_t)il2cpp_codegen_subtract((int32_t)L_6, 1)))
-		{
-			case 0:
-			{
-				goto IL_002f;
-			}
-			case 1:
-			{
-				goto IL_0030;
-			}
-			case 2:
-			{
-				goto IL_002f;
-			}
-		}
-	}
-	{
-		goto IL_003d;
-	}
-
-IL_002f:
-	{
-		// return;
-		return;
-	}
-
-IL_0030:
-	{
-		// intersectOut.AddRange(ctx.mOriginalPolygon2);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_7 = V_0;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_8 = ___ctx0;
-		NullCheck(L_8);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_9 = L_8->___mOriginalPolygon2_2;
-		NullCheck(L_7);
-		VirtualActionInvoker1< Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* >::Invoke(21 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::AddRange(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList) */, L_7, L_9);
-		// return;
-		return;
-	}
-
-IL_003d:
-	{
-		// Point2DList currentPoly = ctx.mPoly1;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_10 = ___ctx0;
-		NullCheck(L_10);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_11 = L_10->___mPoly1_3;
-		V_1 = L_11;
-		// Point2DList otherPoly = ctx.mPoly2;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_12 = ___ctx0;
-		NullCheck(L_12);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_13 = L_12->___mPoly2_4;
-		V_2 = L_13;
-		// List<int> currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_14 = ___ctx0;
-		NullCheck(L_14);
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_15 = L_14->___mPoly1VectorAngles_8;
-		V_3 = L_15;
-		// int currentIndex = ctx.mPoly1.IndexOf(ctx.mIntersections[0].IntersectionPoint);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_16 = ___ctx0;
-		NullCheck(L_16);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_17 = L_16->___mPoly1_3;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_18 = ___ctx0;
-		NullCheck(L_18);
-		List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* L_19 = L_18->___mIntersections_5;
-		NullCheck(L_19);
-		EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_20;
-		L_20 = List_1_get_Item_mF108F2A1AB1A8305855B364F78F1BA302E55BA4C(L_19, 0, List_1_get_Item_mF108F2A1AB1A8305855B364F78F1BA302E55BA4C_RuntimeMethod_var);
-		NullCheck(L_20);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_21;
-		L_21 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_20, NULL);
-		NullCheck(L_17);
-		int32_t L_22;
-		L_22 = Point2DList_IndexOf_mA37E67F9B83F1E740164AC001913A688A212191D(L_17, L_21, NULL);
-		V_4 = L_22;
-		// Point2D startingVertex = ctx.mPoly1[currentIndex];
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_23 = ___ctx0;
-		NullCheck(L_23);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_24 = L_23->___mPoly1_3;
-		int32_t L_25 = V_4;
-		NullCheck(L_24);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_26;
-		L_26 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_24, L_25, NULL);
-		V_5 = L_26;
-		// int firstPoly1Index = currentIndex;
-		int32_t L_27 = V_4;
-		V_6 = L_27;
-		// int firstPoly2Index = -1;
-		V_7 = (-1);
-		// intersectOut.Clear();
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_28 = V_0;
-		NullCheck(L_28);
-		Point2DList_Clear_m5114C3B7CD79E46858EFAE266CFB951AB8ABA568(L_28, NULL);
-	}
-
-IL_008c:
-	{
-		// if (intersectOut.Contains(currentPoly[currentIndex]))
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_29 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_30 = V_1;
-		int32_t L_31 = V_4;
-		NullCheck(L_30);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_32;
-		L_32 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_30, L_31, NULL);
-		NullCheck(L_29);
-		bool L_33;
-		L_33 = Point2DList_Contains_m2B1BB0F27820A0DB9FB82C4CB03FB7AA63098A45(L_29, L_32, NULL);
-		if (L_33)
-		{
-			goto IL_01fe;
-		}
-	}
-	{
-		// intersectOut.Add(currentPoly[currentIndex]);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_34 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_35 = V_1;
-		int32_t L_36 = V_4;
-		NullCheck(L_35);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_37;
-		L_37 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_35, L_36, NULL);
-		NullCheck(L_34);
-		VirtualActionInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* >::Invoke(19 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D) */, L_34, L_37);
-		// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_38 = ___ctx0;
-		NullCheck(L_38);
-		List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* L_39 = L_38->___mIntersections_5;
-		NullCheck(L_39);
-		Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C L_40;
-		L_40 = List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A(L_39, List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var);
-		V_9 = L_40;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_019c:
-			{// begin finally (depth: 1)
-				Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94((&V_9), Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var);
-				return;
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_018e_1;
-			}
-
-IL_00bf_1:
-			{
-				// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_41;
-				L_41 = Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_inline((&V_9), Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var);
-				V_10 = L_41;
-				// if (currentPoly[currentIndex].Equals(intersect.IntersectionPoint, currentPoly.Epsilon))
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_42 = V_1;
-				int32_t L_43 = V_4;
-				NullCheck(L_42);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_44;
-				L_44 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_42, L_43, NULL);
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_45 = V_10;
-				NullCheck(L_45);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_46;
-				L_46 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_45, NULL);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_47 = V_1;
-				NullCheck(L_47);
-				double L_48;
-				L_48 = Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69_inline(L_47, NULL);
-				NullCheck(L_44);
-				bool L_49;
-				L_49 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_44, L_46, L_48, NULL);
-				if (!L_49)
-				{
-					goto IL_018e_1;
-				}
-			}
-			{
-				// int otherIndex = otherPoly.IndexOf(intersect.IntersectionPoint);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_50 = V_2;
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_51 = V_10;
-				NullCheck(L_51);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_52;
-				L_52 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_51, NULL);
-				NullCheck(L_50);
-				int32_t L_53;
-				L_53 = Point2DList_IndexOf_mA37E67F9B83F1E740164AC001913A688A212191D(L_50, L_52, NULL);
-				V_11 = L_53;
-				// int comparePointIndex = otherPoly.NextIndex(otherIndex);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_54 = V_2;
-				int32_t L_55 = V_11;
-				NullCheck(L_54);
-				int32_t L_56;
-				L_56 = Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501(L_54, L_55, NULL);
-				V_12 = L_56;
-				// Point2D comparePoint = otherPoly[comparePointIndex];
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_57 = V_2;
-				int32_t L_58 = V_12;
-				NullCheck(L_57);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_59;
-				L_59 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_57, L_58, NULL);
-				V_13 = L_59;
-				// bool bPointInPolygonAngle = false;
-				V_14 = (bool)0;
-				// if (currentPolyVectorAngles[comparePointIndex] == -1)
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_60 = V_3;
-				int32_t L_61 = V_12;
-				NullCheck(L_60);
-				int32_t L_62;
-				L_62 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_60, L_61, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((!(((uint32_t)L_62) == ((uint32_t)(-1)))))
-				{
-					goto IL_0135_1;
-				}
-			}
-			{
-				// bPointInPolygonAngle = ctx.PointInPolygonAngle(comparePoint, currentPoly);
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_63 = ___ctx0;
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_64 = V_13;
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_65 = V_1;
-				NullCheck(L_63);
-				bool L_66;
-				L_66 = PolygonOperationContext_PointInPolygonAngle_m4B73907865E7713D7DD70EC52AABE8B0D2DAB59F(L_63, L_64, L_65, NULL);
-				V_14 = L_66;
-				// currentPolyVectorAngles[comparePointIndex] = bPointInPolygonAngle ? 1 : 0;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_67 = V_3;
-				int32_t L_68 = V_12;
-				bool L_69 = V_14;
-				G_B12_0 = L_68;
-				G_B12_1 = L_67;
-				if (L_69)
-				{
-					G_B13_0 = L_68;
-					G_B13_1 = L_67;
-					goto IL_012d_1;
-				}
-			}
-			{
-				G_B14_0 = 0;
-				G_B14_1 = G_B12_0;
-				G_B14_2 = G_B12_1;
-				goto IL_012e_1;
-			}
-
-IL_012d_1:
-			{
-				G_B14_0 = 1;
-				G_B14_1 = G_B13_0;
-				G_B14_2 = G_B13_1;
-			}
-
-IL_012e_1:
-			{
-				NullCheck(G_B14_2);
-				List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(G_B14_2, G_B14_1, G_B14_0, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-				goto IL_0146_1;
-			}
-
-IL_0135_1:
-			{
-				// bPointInPolygonAngle = (currentPolyVectorAngles[comparePointIndex] == 1) ? true : false;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_70 = V_3;
-				int32_t L_71 = V_12;
-				NullCheck(L_70);
-				int32_t L_72;
-				L_72 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_70, L_71, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((((int32_t)L_72) == ((int32_t)1)))
-				{
-					goto IL_0143_1;
-				}
-			}
-			{
-				G_B18_0 = 0;
-				goto IL_0144_1;
-			}
-
-IL_0143_1:
-			{
-				G_B18_0 = 1;
-			}
-
-IL_0144_1:
-			{
-				V_14 = (bool)G_B18_0;
-			}
-
-IL_0146_1:
-			{
-				// if (bPointInPolygonAngle)
-				bool L_73 = V_14;
-				if (!L_73)
-				{
-					goto IL_018e_1;
-				}
-			}
-			{
-				// if (currentPoly == ctx.mPoly1)
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_74 = V_1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_75 = ___ctx0;
-				NullCheck(L_75);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_76 = L_75->___mPoly1_3;
-				if ((!(((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_74) == ((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_76))))
-				{
-					goto IL_0173_1;
-				}
-			}
-			{
-				// currentPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_77 = ___ctx0;
-				NullCheck(L_77);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_78 = L_77->___mPoly2_4;
-				V_1 = L_78;
-				// currentPolyVectorAngles = ctx.mPoly2VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_79 = ___ctx0;
-				NullCheck(L_79);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_80 = L_79->___mPoly2VectorAngles_9;
-				V_3 = L_80;
-				// otherPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_81 = ___ctx0;
-				NullCheck(L_81);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_82 = L_81->___mPoly1_3;
-				V_2 = L_82;
-				// if (firstPoly2Index < 0)
-				int32_t L_83 = V_7;
-				if ((((int32_t)L_83) >= ((int32_t)0)))
-				{
-					goto IL_0188_1;
-				}
-			}
-			{
-				// firstPoly2Index = otherIndex;
-				int32_t L_84 = V_11;
-				V_7 = L_84;
-				goto IL_0188_1;
-			}
-
-IL_0173_1:
-			{
-				// currentPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_85 = ___ctx0;
-				NullCheck(L_85);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_86 = L_85->___mPoly1_3;
-				V_1 = L_86;
-				// currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_87 = ___ctx0;
-				NullCheck(L_87);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_88 = L_87->___mPoly1VectorAngles_8;
-				V_3 = L_88;
-				// otherPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_89 = ___ctx0;
-				NullCheck(L_89);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_90 = L_89->___mPoly2_4;
-				V_2 = L_90;
-			}
-
-IL_0188_1:
-			{
-				// currentIndex = otherIndex;
-				int32_t L_91 = V_11;
-				V_4 = L_91;
-				// break;
-				goto IL_01aa;
-			}
-
-IL_018e_1:
-			{
-				// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-				bool L_92;
-				L_92 = Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58((&V_9), Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var);
-				if (L_92)
-				{
-					goto IL_00bf_1;
-				}
-			}
-			{
-				goto IL_01aa;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_01aa:
-	{
-		// currentIndex = currentPoly.NextIndex(currentIndex);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_93 = V_1;
-		int32_t L_94 = V_4;
-		NullCheck(L_93);
-		int32_t L_95;
-		L_95 = Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501(L_93, L_94, NULL);
-		V_4 = L_95;
-		// if (currentPoly == ctx.mPoly1)
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_96 = V_1;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_97 = ___ctx0;
-		NullCheck(L_97);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_98 = L_97->___mPoly1_3;
-		if ((!(((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_96) == ((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_98))))
-		{
-			goto IL_01c5;
-		}
-	}
-	{
-		// if (currentIndex == firstPoly1Index)
-		int32_t L_99 = V_4;
-		int32_t L_100 = V_6;
-		if ((!(((uint32_t)L_99) == ((uint32_t)L_100))))
-		{
-			goto IL_01d0;
-		}
-	}
-	{
-		// break;
-		goto IL_01fe;
-	}
-
-IL_01c5:
-	{
-		// if (firstPoly2Index >= 0 && currentIndex == firstPoly2Index)
-		int32_t L_101 = V_7;
-		if ((((int32_t)L_101) < ((int32_t)0)))
-		{
-			goto IL_01d0;
-		}
-	}
-	{
-		int32_t L_102 = V_4;
-		int32_t L_103 = V_7;
-		if ((((int32_t)L_102) == ((int32_t)L_103)))
-		{
-			goto IL_01fe;
-		}
-	}
-
-IL_01d0:
-	{
-		// } while ((currentPoly[currentIndex] != startingVertex) && (intersectOut.Count <= (ctx.mPoly1.Count + ctx.mPoly2.Count)));
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_104 = V_1;
-		int32_t L_105 = V_4;
-		NullCheck(L_104);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_106;
-		L_106 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_104, L_105, NULL);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_107 = V_5;
-		if ((((RuntimeObject*)(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)L_106) == ((RuntimeObject*)(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)L_107)))
-		{
-			goto IL_01fe;
-		}
-	}
-	{
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_108 = V_0;
-		NullCheck(L_108);
-		int32_t L_109;
-		L_109 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_108, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_110 = ___ctx0;
-		NullCheck(L_110);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_111 = L_110->___mPoly1_3;
-		NullCheck(L_111);
-		int32_t L_112;
-		L_112 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_111, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_113 = ___ctx0;
-		NullCheck(L_113);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_114 = L_113->___mPoly2_4;
-		NullCheck(L_114);
-		int32_t L_115;
-		L_115 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_114, NULL);
-		if ((((int32_t)L_109) <= ((int32_t)((int32_t)il2cpp_codegen_add(L_112, L_115)))))
-		{
-			goto IL_008c;
-		}
-	}
-
-IL_01fe:
-	{
-		// if (intersectOut.Count > (ctx.mPoly1.Count + ctx.mPoly2.Count))
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_116 = V_0;
-		NullCheck(L_116);
-		int32_t L_117;
-		L_117 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_116, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_118 = ___ctx0;
-		NullCheck(L_118);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_119 = L_118->___mPoly1_3;
-		NullCheck(L_119);
-		int32_t L_120;
-		L_120 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_119, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_121 = ___ctx0;
-		NullCheck(L_121);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_122 = L_121->___mPoly2_4;
-		NullCheck(L_122);
-		int32_t L_123;
-		L_123 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_122, NULL);
-		if ((((int32_t)L_117) <= ((int32_t)((int32_t)il2cpp_codegen_add(L_120, L_123)))))
-		{
-			goto IL_0224;
-		}
-	}
-	{
-		// ctx.mError = PolygonUtil.PolyUnionError.InfiniteLoop;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_124 = ___ctx0;
-		NullCheck(L_124);
-		L_124->___mError_7 = 3;
-	}
-
-IL_0224:
-	{
-		// return;
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtract(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_PolygonSubtract_mD2DEF683A03A03CCB1BB24ADD4473A0E3659CCB3 (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon10, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon21, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C** ___subtract2, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* V_0 = NULL;
-	{
-		// PolygonOperationContext ctx = new PolygonOperationContext();
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1*)il2cpp_codegen_object_new(PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		PolygonOperationContext__ctor_m4C8C08A108AF5B6F1B532AA319F5F248A9B26F74(L_0, NULL);
-		V_0 = L_0;
-		// ctx.Init(PolygonUtil.PolyOperation.Subtract, polygon1, polygon2);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_1 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_2 = ___polygon10;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_3 = ___polygon21;
-		NullCheck(L_1);
-		bool L_4;
-		L_4 = PolygonOperationContext_Init_m24D7F378AFEF35EA6E5A673D57FC0B5164DE345A(L_1, 4, L_2, L_3, NULL);
-		// PolygonSubtractInternal(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_5 = V_0;
-		PolygonUtil_PolygonSubtractInternal_m4634E315D34363A1CC01DA1E8F4DE2869BFB0009(L_5, NULL);
-		// subtract = ctx.Subtract;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C** L_6 = ___subtract2;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_7 = V_0;
-		NullCheck(L_7);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_8;
-		L_8 = PolygonOperationContext_get_Subtract_m22833F3C8276525F022A146A2A950051718A430E(L_7, NULL);
-		*((RuntimeObject**)L_6) = (RuntimeObject*)L_8;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_6, (void*)(RuntimeObject*)L_8);
-		// return ctx.mError;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_9 = V_0;
-		NullCheck(L_9);
-		int32_t L_10 = L_9->___mError_7;
-		return L_10;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonSubtractInternal(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil_PolygonSubtractInternal_m4634E315D34363A1CC01DA1E8F4DE2869BFB0009 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_0 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_1 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_2 = NULL;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* V_3 = NULL;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_4 = NULL;
-	int32_t V_5 = 0;
-	bool V_6 = false;
-	int32_t V_7 = 0;
-	Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C V_8;
-	memset((&V_8), 0, sizeof(V_8));
-	EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* V_9 = NULL;
-	int32_t V_10 = 0;
-	int32_t V_11 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_12 = NULL;
-	bool V_13 = false;
-	int32_t V_14 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_15 = NULL;
-	bool V_16 = false;
-	int32_t G_B11_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B11_1 = NULL;
-	int32_t G_B10_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B10_1 = NULL;
-	int32_t G_B12_0 = 0;
-	int32_t G_B12_1 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B12_2 = NULL;
-	int32_t G_B16_0 = 0;
-	int32_t G_B25_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B25_1 = NULL;
-	int32_t G_B24_0 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B24_1 = NULL;
-	int32_t G_B26_0 = 0;
-	int32_t G_B26_1 = 0;
-	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* G_B26_2 = NULL;
-	int32_t G_B30_0 = 0;
-	{
-		// Point2DList subtract = ctx.Subtract;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = ___ctx0;
-		NullCheck(L_0);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_1;
-		L_1 = PolygonOperationContext_get_Subtract_m22833F3C8276525F022A146A2A950051718A430E(L_0, NULL);
-		V_0 = L_1;
-		// if (ctx.mStartingIndex == -1)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_2 = ___ctx0;
-		NullCheck(L_2);
-		int32_t L_3 = L_2->___mStartingIndex_6;
-		if ((!(((uint32_t)L_3) == ((uint32_t)(-1)))))
-		{
-			goto IL_0020;
-		}
-	}
-	{
-		// switch (ctx.mError)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_4 = ___ctx0;
-		NullCheck(L_4);
-		int32_t L_5 = L_4->___mError_7;
-		V_7 = L_5;
-		int32_t L_6 = V_7;
-		if ((!(((uint32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_6, 1))) <= ((uint32_t)2))))
-		{
-			goto IL_0020;
-		}
-	}
-	{
-		// return;
-		return;
-	}
-
-IL_0020:
-	{
-		// Point2DList currentPoly = ctx.mPoly1;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_7 = ___ctx0;
-		NullCheck(L_7);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_8 = L_7->___mPoly1_3;
-		V_1 = L_8;
-		// Point2DList otherPoly = ctx.mPoly2;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_9 = ___ctx0;
-		NullCheck(L_9);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_10 = L_9->___mPoly2_4;
-		V_2 = L_10;
-		// List<int> currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_11 = ___ctx0;
-		NullCheck(L_11);
-		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_12 = L_11->___mPoly1VectorAngles_8;
-		V_3 = L_12;
-		// Point2D startingVertex = ctx.mPoly1[ctx.mStartingIndex];
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_13 = ___ctx0;
-		NullCheck(L_13);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_14 = L_13->___mPoly1_3;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_15 = ___ctx0;
-		NullCheck(L_15);
-		int32_t L_16 = L_15->___mStartingIndex_6;
-		NullCheck(L_14);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_17;
-		L_17 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_14, L_16, NULL);
-		V_4 = L_17;
-		// int currentIndex = ctx.mStartingIndex;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_18 = ___ctx0;
-		NullCheck(L_18);
-		int32_t L_19 = L_18->___mStartingIndex_6;
-		V_5 = L_19;
-		// subtract.Clear();
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_20 = V_0;
-		NullCheck(L_20);
-		Point2DList_Clear_m5114C3B7CD79E46858EFAE266CFB951AB8ABA568(L_20, NULL);
-		// bool forward = true;
-		V_6 = (bool)1;
-	}
-
-IL_0059:
-	{
-		// subtract.Add(currentPoly[currentIndex]);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_21 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_22 = V_1;
-		int32_t L_23 = V_5;
-		NullCheck(L_22);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_24;
-		L_24 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_22, L_23, NULL);
-		NullCheck(L_21);
-		VirtualActionInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* >::Invoke(19 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D) */, L_21, L_24);
-		// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_25 = ___ctx0;
-		NullCheck(L_25);
-		List_1_tC60A3D4CCC3A66270DF2975AE7F2FD91753A1AD2* L_26 = L_25->___mIntersections_5;
-		NullCheck(L_26);
-		Enumerator_tBE82F8BAFEDFA9083B65EE81A631CA5452768E5C L_27;
-		L_27 = List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A(L_26, List_1_GetEnumerator_mEF940F7B1D1E76DFDEDEE700109DD681F8B5368A_RuntimeMethod_var);
-		V_8 = L_27;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_01f7:
-			{// begin finally (depth: 1)
-				Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94((&V_8), Enumerator_Dispose_m712EE297ABDBE5111A693AD013B724940C391A94_RuntimeMethod_var);
-				return;
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			{
-				goto IL_01e9_1;
-			}
-
-IL_0079_1:
-			{
-				// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_28;
-				L_28 = Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_inline((&V_8), Enumerator_get_Current_m12B92F01CB6735CCD4AD4EE040DAF7C46CCD5032_RuntimeMethod_var);
-				V_9 = L_28;
-				// if (currentPoly[currentIndex].Equals(intersect.IntersectionPoint, currentPoly.Epsilon))
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_29 = V_1;
-				int32_t L_30 = V_5;
-				NullCheck(L_29);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_31;
-				L_31 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_29, L_30, NULL);
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_32 = V_9;
-				NullCheck(L_32);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_33;
-				L_33 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_32, NULL);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_34 = V_1;
-				NullCheck(L_34);
-				double L_35;
-				L_35 = Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69_inline(L_34, NULL);
-				NullCheck(L_31);
-				bool L_36;
-				L_36 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_31, L_33, L_35, NULL);
-				if (!L_36)
-				{
-					goto IL_01e9_1;
-				}
-			}
-			{
-				// int otherIndex = otherPoly.IndexOf(intersect.IntersectionPoint);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_37 = V_2;
-				EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* L_38 = V_9;
-				NullCheck(L_38);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_39;
-				L_39 = EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline(L_38, NULL);
-				NullCheck(L_37);
-				int32_t L_40;
-				L_40 = Point2DList_IndexOf_mA37E67F9B83F1E740164AC001913A688A212191D(L_37, L_39, NULL);
-				V_10 = L_40;
-				// if (forward)
-				bool L_41 = V_6;
-				if (!L_41)
-				{
-					goto IL_0153_1;
-				}
-			}
-			{
-				// int compareIndex = otherPoly.PreviousIndex(otherIndex);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_42 = V_2;
-				int32_t L_43 = V_10;
-				NullCheck(L_42);
-				int32_t L_44;
-				L_44 = Point2DList_PreviousIndex_m32FE470DF5ED0318C16F5D9A33504695A6AA9C3F(L_42, L_43, NULL);
-				V_11 = L_44;
-				// Point2D compareVertex = otherPoly[compareIndex];
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_45 = V_2;
-				int32_t L_46 = V_11;
-				NullCheck(L_45);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_47;
-				L_47 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_45, L_46, NULL);
-				V_12 = L_47;
-				// bool bPointInPolygonAngle = false;
-				V_13 = (bool)0;
-				// if (currentPolyVectorAngles[compareIndex] == -1)
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_48 = V_3;
-				int32_t L_49 = V_11;
-				NullCheck(L_48);
-				int32_t L_50;
-				L_50 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_48, L_49, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((!(((uint32_t)L_50) == ((uint32_t)(-1)))))
-				{
-					goto IL_00f6_1;
-				}
-			}
-			{
-				// bPointInPolygonAngle = ctx.PointInPolygonAngle(compareVertex, currentPoly);
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_51 = ___ctx0;
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_52 = V_12;
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_53 = V_1;
-				NullCheck(L_51);
-				bool L_54;
-				L_54 = PolygonOperationContext_PointInPolygonAngle_m4B73907865E7713D7DD70EC52AABE8B0D2DAB59F(L_51, L_52, L_53, NULL);
-				V_13 = L_54;
-				// currentPolyVectorAngles[compareIndex] = bPointInPolygonAngle ? 1 : 0;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_55 = V_3;
-				int32_t L_56 = V_11;
-				bool L_57 = V_13;
-				G_B10_0 = L_56;
-				G_B10_1 = L_55;
-				if (L_57)
-				{
-					G_B11_0 = L_56;
-					G_B11_1 = L_55;
-					goto IL_00ee_1;
-				}
-			}
-			{
-				G_B12_0 = 0;
-				G_B12_1 = G_B10_0;
-				G_B12_2 = G_B10_1;
-				goto IL_00ef_1;
-			}
-
-IL_00ee_1:
-			{
-				G_B12_0 = 1;
-				G_B12_1 = G_B11_0;
-				G_B12_2 = G_B11_1;
-			}
-
-IL_00ef_1:
-			{
-				NullCheck(G_B12_2);
-				List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(G_B12_2, G_B12_1, G_B12_0, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-				goto IL_0107_1;
-			}
-
-IL_00f6_1:
-			{
-				// bPointInPolygonAngle = (currentPolyVectorAngles[compareIndex] == 1) ? true : false;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_58 = V_3;
-				int32_t L_59 = V_11;
-				NullCheck(L_58);
-				int32_t L_60;
-				L_60 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_58, L_59, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((((int32_t)L_60) == ((int32_t)1)))
-				{
-					goto IL_0104_1;
-				}
-			}
-			{
-				G_B16_0 = 0;
-				goto IL_0105_1;
-			}
-
-IL_0104_1:
-			{
-				G_B16_0 = 1;
-			}
-
-IL_0105_1:
-			{
-				V_13 = (bool)G_B16_0;
-			}
-
-IL_0107_1:
-			{
-				// if (bPointInPolygonAngle)
-				bool L_61 = V_13;
-				if (!L_61)
-				{
-					goto IL_01e9_1;
-				}
-			}
-			{
-				// if (currentPoly == ctx.mPoly1)
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_62 = V_1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_63 = ___ctx0;
-				NullCheck(L_63);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_64 = L_63->___mPoly1_3;
-				if ((!(((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_62) == ((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_64))))
-				{
-					goto IL_012e_1;
-				}
-			}
-			{
-				// currentPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_65 = ___ctx0;
-				NullCheck(L_65);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_66 = L_65->___mPoly2_4;
-				V_1 = L_66;
-				// currentPolyVectorAngles = ctx.mPoly2VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_67 = ___ctx0;
-				NullCheck(L_67);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_68 = L_67->___mPoly2VectorAngles_9;
-				V_3 = L_68;
-				// otherPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_69 = ___ctx0;
-				NullCheck(L_69);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_70 = L_69->___mPoly1_3;
-				V_2 = L_70;
-				goto IL_0143_1;
-			}
-
-IL_012e_1:
-			{
-				// currentPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_71 = ___ctx0;
-				NullCheck(L_71);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_72 = L_71->___mPoly1_3;
-				V_1 = L_72;
-				// currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_73 = ___ctx0;
-				NullCheck(L_73);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_74 = L_73->___mPoly1VectorAngles_8;
-				V_3 = L_74;
-				// otherPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_75 = ___ctx0;
-				NullCheck(L_75);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_76 = L_75->___mPoly2_4;
-				V_2 = L_76;
-			}
-
-IL_0143_1:
-			{
-				// currentIndex = otherIndex;
-				int32_t L_77 = V_10;
-				V_5 = L_77;
-				// forward = !forward;
-				bool L_78 = V_6;
-				V_6 = (bool)((((int32_t)L_78) == ((int32_t)0))? 1 : 0);
-				// break;
-				goto IL_0205;
-			}
-
-IL_0153_1:
-			{
-				// int compareIndex = otherPoly.NextIndex(otherIndex);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_79 = V_2;
-				int32_t L_80 = V_10;
-				NullCheck(L_79);
-				int32_t L_81;
-				L_81 = Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501(L_79, L_80, NULL);
-				V_14 = L_81;
-				// Point2D compareVertex = otherPoly[compareIndex];
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_82 = V_2;
-				int32_t L_83 = V_14;
-				NullCheck(L_82);
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_84;
-				L_84 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_82, L_83, NULL);
-				V_15 = L_84;
-				// bool bPointInPolygonAngle = false;
-				V_16 = (bool)0;
-				// if (currentPolyVectorAngles[compareIndex] == -1)
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_85 = V_3;
-				int32_t L_86 = V_14;
-				NullCheck(L_85);
-				int32_t L_87;
-				L_87 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_85, L_86, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((!(((uint32_t)L_87) == ((uint32_t)(-1)))))
-				{
-					goto IL_0192_1;
-				}
-			}
-			{
-				// bPointInPolygonAngle = ctx.PointInPolygonAngle(compareVertex, currentPoly);
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_88 = ___ctx0;
-				Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_89 = V_15;
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_90 = V_1;
-				NullCheck(L_88);
-				bool L_91;
-				L_91 = PolygonOperationContext_PointInPolygonAngle_m4B73907865E7713D7DD70EC52AABE8B0D2DAB59F(L_88, L_89, L_90, NULL);
-				V_16 = L_91;
-				// currentPolyVectorAngles[compareIndex] = bPointInPolygonAngle ? 1 : 0;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_92 = V_3;
-				int32_t L_93 = V_14;
-				bool L_94 = V_16;
-				G_B24_0 = L_93;
-				G_B24_1 = L_92;
-				if (L_94)
-				{
-					G_B25_0 = L_93;
-					G_B25_1 = L_92;
-					goto IL_018a_1;
-				}
-			}
-			{
-				G_B26_0 = 0;
-				G_B26_1 = G_B24_0;
-				G_B26_2 = G_B24_1;
-				goto IL_018b_1;
-			}
-
-IL_018a_1:
-			{
-				G_B26_0 = 1;
-				G_B26_1 = G_B25_0;
-				G_B26_2 = G_B25_1;
-			}
-
-IL_018b_1:
-			{
-				NullCheck(G_B26_2);
-				List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(G_B26_2, G_B26_1, G_B26_0, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-				goto IL_01a3_1;
-			}
-
-IL_0192_1:
-			{
-				// bPointInPolygonAngle = (currentPolyVectorAngles[compareIndex] == 1) ? true : false;
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_95 = V_3;
-				int32_t L_96 = V_14;
-				NullCheck(L_95);
-				int32_t L_97;
-				L_97 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_95, L_96, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
-				if ((((int32_t)L_97) == ((int32_t)1)))
-				{
-					goto IL_01a0_1;
-				}
-			}
-			{
-				G_B30_0 = 0;
-				goto IL_01a1_1;
-			}
-
-IL_01a0_1:
-			{
-				G_B30_0 = 1;
-			}
-
-IL_01a1_1:
-			{
-				V_16 = (bool)G_B30_0;
-			}
-
-IL_01a3_1:
-			{
-				// if (!bPointInPolygonAngle)
-				bool L_98 = V_16;
-				if (L_98)
-				{
-					goto IL_01e9_1;
-				}
-			}
-			{
-				// if (currentPoly == ctx.mPoly1)
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_99 = V_1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_100 = ___ctx0;
-				NullCheck(L_100);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_101 = L_100->___mPoly1_3;
-				if ((!(((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_99) == ((RuntimeObject*)(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)L_101))))
-				{
-					goto IL_01c7_1;
-				}
-			}
-			{
-				// currentPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_102 = ___ctx0;
-				NullCheck(L_102);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_103 = L_102->___mPoly2_4;
-				V_1 = L_103;
-				// currentPolyVectorAngles = ctx.mPoly2VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_104 = ___ctx0;
-				NullCheck(L_104);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_105 = L_104->___mPoly2VectorAngles_9;
-				V_3 = L_105;
-				// otherPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_106 = ___ctx0;
-				NullCheck(L_106);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_107 = L_106->___mPoly1_3;
-				V_2 = L_107;
-				goto IL_01dc_1;
-			}
-
-IL_01c7_1:
-			{
-				// currentPoly = ctx.mPoly1;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_108 = ___ctx0;
-				NullCheck(L_108);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_109 = L_108->___mPoly1_3;
-				V_1 = L_109;
-				// currentPolyVectorAngles = ctx.mPoly1VectorAngles;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_110 = ___ctx0;
-				NullCheck(L_110);
-				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_111 = L_110->___mPoly1VectorAngles_8;
-				V_3 = L_111;
-				// otherPoly = ctx.mPoly2;
-				PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_112 = ___ctx0;
-				NullCheck(L_112);
-				Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_113 = L_112->___mPoly2_4;
-				V_2 = L_113;
-			}
-
-IL_01dc_1:
-			{
-				// currentIndex = otherIndex;
-				int32_t L_114 = V_10;
-				V_5 = L_114;
-				// forward = !forward;
-				bool L_115 = V_6;
-				V_6 = (bool)((((int32_t)L_115) == ((int32_t)0))? 1 : 0);
-				// break;
-				goto IL_0205;
-			}
-
-IL_01e9_1:
-			{
-				// foreach (EdgeIntersectInfo intersect in ctx.mIntersections)
-				bool L_116;
-				L_116 = Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58((&V_8), Enumerator_MoveNext_mCC73326C1749BB9B754B7AEBB36A74C94CBE7E58_RuntimeMethod_var);
-				if (L_116)
-				{
-					goto IL_0079_1;
-				}
-			}
-			{
-				goto IL_0205;
-			}
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_0205:
-	{
-		// if (forward)
-		bool L_117 = V_6;
-		if (!L_117)
-		{
-			goto IL_0215;
-		}
-	}
-	{
-		// currentIndex = currentPoly.NextIndex(currentIndex);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_118 = V_1;
-		int32_t L_119 = V_5;
-		NullCheck(L_118);
-		int32_t L_120;
-		L_120 = Point2DList_NextIndex_m04A3363E926D6F33FACEEB6C002B02B27D157501(L_118, L_119, NULL);
-		V_5 = L_120;
-		goto IL_021f;
-	}
-
-IL_0215:
-	{
-		// currentIndex = currentPoly.PreviousIndex(currentIndex);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_121 = V_1;
-		int32_t L_122 = V_5;
-		NullCheck(L_121);
-		int32_t L_123;
-		L_123 = Point2DList_PreviousIndex_m32FE470DF5ED0318C16F5D9A33504695A6AA9C3F(L_121, L_122, NULL);
-		V_5 = L_123;
-	}
-
-IL_021f:
-	{
-		// } while ((currentPoly[currentIndex] != startingVertex) && (subtract.Count <= (ctx.mPoly1.Count + ctx.mPoly2.Count)));
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_124 = V_1;
-		int32_t L_125 = V_5;
-		NullCheck(L_124);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_126;
-		L_126 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_124, L_125, NULL);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_127 = V_4;
-		if ((((RuntimeObject*)(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)L_126) == ((RuntimeObject*)(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)L_127)))
-		{
-			goto IL_024d;
-		}
-	}
-	{
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_128 = V_0;
-		NullCheck(L_128);
-		int32_t L_129;
-		L_129 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_128, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_130 = ___ctx0;
-		NullCheck(L_130);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_131 = L_130->___mPoly1_3;
-		NullCheck(L_131);
-		int32_t L_132;
-		L_132 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_131, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_133 = ___ctx0;
-		NullCheck(L_133);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_134 = L_133->___mPoly2_4;
-		NullCheck(L_134);
-		int32_t L_135;
-		L_135 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_134, NULL);
-		if ((((int32_t)L_129) <= ((int32_t)((int32_t)il2cpp_codegen_add(L_132, L_135)))))
-		{
-			goto IL_0059;
-		}
-	}
-
-IL_024d:
-	{
-		// if (subtract.Count > (ctx.mPoly1.Count + ctx.mPoly2.Count))
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_136 = V_0;
-		NullCheck(L_136);
-		int32_t L_137;
-		L_137 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_136, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_138 = ___ctx0;
-		NullCheck(L_138);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_139 = L_138->___mPoly1_3;
-		NullCheck(L_139);
-		int32_t L_140;
-		L_140 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_139, NULL);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_141 = ___ctx0;
-		NullCheck(L_141);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_142 = L_141->___mPoly2_4;
-		NullCheck(L_142);
-		int32_t L_143;
-		L_143 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_142, NULL);
-		if ((((int32_t)L_137) <= ((int32_t)((int32_t)il2cpp_codegen_add(L_140, L_143)))))
-		{
-			goto IL_0273;
-		}
-	}
-	{
-		// ctx.mError = PolygonUtil.PolyUnionError.InfiniteLoop;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_144 = ___ctx0;
-		NullCheck(L_144);
-		L_144->___mError_7 = 3;
-	}
-
-IL_0273:
-	{
-		// return;
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyOperation,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Collections.Generic.Dictionary`2<System.UInt32,FunkyCode.Utilities.Polygon2DTriangulation.Point2DList>&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_PolygonOperation_mE6ED2C8BAB2EAF27619702769FCEF32EA57B8B69 (uint32_t ___operations0, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon11, Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___polygon22, Dictionary_2_t8B5974C86BE99AA0CBBC468A0CE5CCD3B5F9B7A1** ___results3, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* V_0 = NULL;
-	{
-		// PolygonOperationContext ctx = new PolygonOperationContext();
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1*)il2cpp_codegen_object_new(PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		PolygonOperationContext__ctor_m4C8C08A108AF5B6F1B532AA319F5F248A9B26F74(L_0, NULL);
-		V_0 = L_0;
-		// ctx.Init(operations, polygon1, polygon2);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_1 = V_0;
-		uint32_t L_2 = ___operations0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_3 = ___polygon11;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_4 = ___polygon22;
-		NullCheck(L_1);
-		bool L_5;
-		L_5 = PolygonOperationContext_Init_m24D7F378AFEF35EA6E5A673D57FC0B5164DE345A(L_1, L_2, L_3, L_4, NULL);
-		// results = ctx.mOutput;
-		Dictionary_2_t8B5974C86BE99AA0CBBC468A0CE5CCD3B5F9B7A1** L_6 = ___results3;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_7 = V_0;
-		NullCheck(L_7);
-		Dictionary_2_t8B5974C86BE99AA0CBBC468A0CE5CCD3B5F9B7A1* L_8 = L_7->___mOutput_10;
-		*((RuntimeObject**)L_6) = (RuntimeObject*)L_8;
-		Il2CppCodeGenWriteBarrier((void**)(RuntimeObject**)L_6, (void*)(RuntimeObject*)L_8);
-		// return PolygonUtil.PolygonOperation(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_9 = V_0;
-		int32_t L_10;
-		L_10 = PolygonUtil_PolygonOperation_mF8ABE88E1EE67F27AB272175C680E61145D1F745(L_9, NULL);
-		return L_10;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil/PolyUnionError FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::PolygonOperation(FunkyCode.Utilities.Polygon2DTriangulation.PolygonOperationContext)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PolygonUtil_PolygonOperation_mF8ABE88E1EE67F27AB272175C680E61145D1F745 (PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* ___ctx0, const RuntimeMethod* method) 
-{
-	{
-		// if ((ctx.mOperations & PolygonUtil.PolyOperation.Union) == PolygonUtil.PolyOperation.Union)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_0 = ___ctx0;
-		NullCheck(L_0);
-		uint32_t L_1 = L_0->___mOperations_0;
-		if ((!(((uint32_t)((int32_t)((int32_t)L_1&1))) == ((uint32_t)1))))
-		{
-			goto IL_0011;
-		}
-	}
-	{
-		// PolygonUtil.PolygonUnionInternal(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_2 = ___ctx0;
-		PolygonUtil_PolygonUnionInternal_mB3CF2221B2277D9742E751964A135986A5885E15(L_2, NULL);
-	}
-
-IL_0011:
-	{
-		// if ((ctx.mOperations & PolygonUtil.PolyOperation.Intersect) == PolygonUtil.PolyOperation.Intersect)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_3 = ___ctx0;
-		NullCheck(L_3);
-		uint32_t L_4 = L_3->___mOperations_0;
-		if ((!(((uint32_t)((int32_t)((int32_t)L_4&2))) == ((uint32_t)2))))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		// PolygonUtil.PolygonIntersectInternal(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_5 = ___ctx0;
-		PolygonUtil_PolygonIntersectInternal_mB557E56124ABCEFF07096E98243B65A741AC76E3(L_5, NULL);
-	}
-
-IL_0022:
-	{
-		// if ((ctx.mOperations & PolygonUtil.PolyOperation.Subtract) == PolygonUtil.PolyOperation.Subtract)
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_6 = ___ctx0;
-		NullCheck(L_6);
-		uint32_t L_7 = L_6->___mOperations_0;
-		if ((!(((uint32_t)((int32_t)((int32_t)L_7&4))) == ((uint32_t)4))))
-		{
-			goto IL_0033;
-		}
-	}
-	{
-		// PolygonUtil.PolygonSubtractInternal(ctx);
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_8 = ___ctx0;
-		PolygonUtil_PolygonSubtractInternal_m4634E315D34363A1CC01DA1E8F4DE2869BFB0009(L_8, NULL);
-	}
-
-IL_0033:
-	{
-		// return ctx.mError;
-		PolygonOperationContext_tD474D1C55A5321D0C1C594B0C2BA8D11788A34C1* L_9 = ___ctx0;
-		NullCheck(L_9);
-		int32_t L_10 = L_9->___mError_7;
-		return L_10;
-	}
-}
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygon(FunkyCode.Utilities.Polygon2DTriangulation.Point2DList,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4C6409F93C562B69408929822AF1ED688D478D06* PolygonUtil_SplitComplexPolygon_m06C203214FC1CF955CBB5EAF036344C09D6B5D0C (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* ___verts0, double ___epsilon1, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_IndexOf_m15D851E66B879ABA75685C88ABE1CAA21CD6B033_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
-	List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* V_2 = NULL;
-	bool V_3 = false;
-	int32_t V_4 = 0;
-	bool V_5 = false;
-	int32_t V_6 = 0;
-	double V_7 = 0.0;
-	double V_8 = 0.0;
-	double V_9 = 0.0;
-	int32_t V_10 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_11 = NULL;
-	List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* V_12 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_13 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_14 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_15 = NULL;
-	int32_t V_16 = 0;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_17 = NULL;
-	int32_t V_18 = 0;
-	int32_t V_19 = 0;
-	int32_t V_20 = 0;
-	int32_t V_21 = 0;
-	int32_t V_22 = 0;
-	int32_t V_23 = 0;
-	int32_t V_24 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_25 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_26 = NULL;
-	int32_t V_27 = 0;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_28 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_29 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_30 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_31 = NULL;
-	int32_t V_32 = 0;
-	int32_t V_33 = 0;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_34 = NULL;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_35 = NULL;
-	int32_t V_36 = 0;
-	int32_t V_37 = 0;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_38 = NULL;
-	int32_t V_39 = 0;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_40 = NULL;
-	int32_t G_B7_0 = 0;
-	int32_t G_B10_0 = 0;
-	{
-		// int numVerts = verts.Count;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_0 = ___verts0;
-		NullCheck(L_0);
-		int32_t L_1;
-		L_1 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_0, NULL);
-		V_0 = L_1;
-		// int nNodes = 0;
-		V_1 = 0;
-		// List<SplitComplexPolygonNode> nodes = new List<SplitComplexPolygonNode>();
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_2 = (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*)il2cpp_codegen_object_new(List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var);
-		NullCheck(L_2);
-		List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E(L_2, List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var);
-		V_2 = L_2;
-		// for (int i = 0; i < verts.Count; ++i)
-		V_16 = 0;
-		goto IL_0048;
-	}
-
-IL_0014:
-	{
-		// SplitComplexPolygonNode newNode = new SplitComplexPolygonNode(new Point2D(verts[i].X, verts[i].Y));
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_3 = ___verts0;
-		int32_t L_4 = V_16;
-		NullCheck(L_3);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_5;
-		L_5 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_3, L_4, NULL);
-		NullCheck(L_5);
-		double L_6;
-		L_6 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_5);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_7 = ___verts0;
-		int32_t L_8 = V_16;
-		NullCheck(L_7);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_9;
-		L_9 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_7, L_8, NULL);
-		NullCheck(L_9);
-		double L_10;
-		L_10 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_9);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_11 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_11);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_11, L_6, L_10, NULL);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_12 = (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)il2cpp_codegen_object_new(SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var);
-		NullCheck(L_12);
-		SplitComplexPolygonNode__ctor_mC7301E92627CB66FC67164FCAB1E7C9B8C85B107(L_12, L_11, NULL);
-		V_17 = L_12;
-		// nodes.Add(newNode);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_13 = V_2;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_14 = V_17;
-		NullCheck(L_13);
-		List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_inline(L_13, L_14, List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_RuntimeMethod_var);
-		// for (int i = 0; i < verts.Count; ++i)
-		int32_t L_15 = V_16;
-		V_16 = ((int32_t)il2cpp_codegen_add(L_15, 1));
-	}
-
-IL_0048:
-	{
-		// for (int i = 0; i < verts.Count; ++i)
-		int32_t L_16 = V_16;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_17 = ___verts0;
-		NullCheck(L_17);
-		int32_t L_18;
-		L_18 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_17, NULL);
-		if ((((int32_t)L_16) < ((int32_t)L_18)))
-		{
-			goto IL_0014;
-		}
-	}
-	{
-		// for (int i = 0; i < verts.Count; ++i)
-		V_18 = 0;
-		goto IL_00a6;
-	}
-
-IL_0057:
-	{
-		// int iplus = (i == numVerts - 1) ? 0 : i + 1;
-		int32_t L_19 = V_18;
-		int32_t L_20 = V_0;
-		if ((((int32_t)L_19) == ((int32_t)((int32_t)il2cpp_codegen_subtract(L_20, 1)))))
-		{
-			goto IL_0064;
-		}
-	}
-	{
-		int32_t L_21 = V_18;
-		G_B7_0 = ((int32_t)il2cpp_codegen_add(L_21, 1));
-		goto IL_0065;
-	}
-
-IL_0064:
-	{
-		G_B7_0 = 0;
-	}
-
-IL_0065:
-	{
-		V_19 = G_B7_0;
-		// int iminus = (i == 0) ? numVerts - 1 : i - 1;
-		int32_t L_22 = V_18;
-		if (!L_22)
-		{
-			goto IL_0071;
-		}
-	}
-	{
-		int32_t L_23 = V_18;
-		G_B10_0 = ((int32_t)il2cpp_codegen_subtract(L_23, 1));
-		goto IL_0074;
-	}
-
-IL_0071:
-	{
-		int32_t L_24 = V_0;
-		G_B10_0 = ((int32_t)il2cpp_codegen_subtract(L_24, 1));
-	}
-
-IL_0074:
-	{
-		V_20 = G_B10_0;
-		// nodes[i].AddConnection(nodes[iplus]);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_25 = V_2;
-		int32_t L_26 = V_18;
-		NullCheck(L_25);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_27;
-		L_27 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_25, L_26, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_28 = V_2;
-		int32_t L_29 = V_19;
-		NullCheck(L_28);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_30;
-		L_30 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_28, L_29, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_27);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_27, L_30, NULL);
-		// nodes[i].AddConnection(nodes[iminus]);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_31 = V_2;
-		int32_t L_32 = V_18;
-		NullCheck(L_31);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_33;
-		L_33 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_31, L_32, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_34 = V_2;
-		int32_t L_35 = V_20;
-		NullCheck(L_34);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_36;
-		L_36 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_34, L_35, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_33);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_33, L_36, NULL);
-		// for (int i = 0; i < verts.Count; ++i)
-		int32_t L_37 = V_18;
-		V_18 = ((int32_t)il2cpp_codegen_add(L_37, 1));
-	}
-
-IL_00a6:
-	{
-		// for (int i = 0; i < verts.Count; ++i)
-		int32_t L_38 = V_18;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_39 = ___verts0;
-		NullCheck(L_39);
-		int32_t L_40;
-		L_40 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_39, NULL);
-		if ((((int32_t)L_38) < ((int32_t)L_40)))
-		{
-			goto IL_0057;
-		}
-	}
-	{
-		// nNodes = nodes.Count;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_41 = V_2;
-		NullCheck(L_41);
-		int32_t L_42;
-		L_42 = List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_inline(L_41, List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		V_1 = L_42;
-		// bool dirty = true;
-		V_3 = (bool)1;
-		// int counter = 0;
-		V_4 = 0;
-		goto IL_034a;
-	}
-
-IL_00c1:
-	{
-		// dirty = false;
-		V_3 = (bool)0;
-		// for (int i = 0; !dirty && i < nNodes; ++i)
-		V_21 = 0;
-		goto IL_0339;
-	}
-
-IL_00cb:
-	{
-		// for (int j = 0; !dirty && j < nodes[i].NumConnected; ++j)
-		V_22 = 0;
-		goto IL_031c;
-	}
-
-IL_00d3:
-	{
-		// for (int k = 0; !dirty && k < nNodes; ++k)
-		V_23 = 0;
-		goto IL_030b;
-	}
-
-IL_00db:
-	{
-		// if (k == i || nodes[k] == nodes[i][j])
-		int32_t L_43 = V_23;
-		int32_t L_44 = V_21;
-		if ((((int32_t)L_43) == ((int32_t)L_44)))
-		{
-			goto IL_0305;
-		}
-	}
-	{
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_45 = V_2;
-		int32_t L_46 = V_23;
-		NullCheck(L_45);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_47;
-		L_47 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_45, L_46, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_48 = V_2;
-		int32_t L_49 = V_21;
-		NullCheck(L_48);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_50;
-		L_50 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_48, L_49, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_51 = V_22;
-		NullCheck(L_50);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_52;
-		L_52 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_50, L_51, NULL);
-		bool L_53;
-		L_53 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_47, L_52, NULL);
-		if (L_53)
-		{
-			goto IL_0305;
-		}
-	}
-	{
-		// for (int l = 0; !dirty && l < nodes[k].NumConnected; ++l)
-		V_24 = 0;
-		goto IL_02ee;
-	}
-
-IL_010d:
-	{
-		// if (nodes[k][l] == nodes[i][j] || nodes[k][l] == nodes[i])
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_54 = V_2;
-		int32_t L_55 = V_23;
-		NullCheck(L_54);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_56;
-		L_56 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_54, L_55, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_57 = V_24;
-		NullCheck(L_56);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_58;
-		L_58 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_56, L_57, NULL);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_59 = V_2;
-		int32_t L_60 = V_21;
-		NullCheck(L_59);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_61;
-		L_61 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_59, L_60, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_62 = V_22;
-		NullCheck(L_61);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_63;
-		L_63 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_61, L_62, NULL);
-		bool L_64;
-		L_64 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_58, L_63, NULL);
-		if (L_64)
-		{
-			goto IL_02e8;
-		}
-	}
-	{
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_65 = V_2;
-		int32_t L_66 = V_23;
-		NullCheck(L_65);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_67;
-		L_67 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_65, L_66, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_68 = V_24;
-		NullCheck(L_67);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_69;
-		L_69 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_67, L_68, NULL);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_70 = V_2;
-		int32_t L_71 = V_21;
-		NullCheck(L_70);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_72;
-		L_72 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_70, L_71, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		bool L_73;
-		L_73 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_69, L_72, NULL);
-		if (L_73)
-		{
-			goto IL_02e8;
-		}
-	}
-	{
-		// Point2D intersectPt = new Point2D();
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_74 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_74);
-		Point2D__ctor_m1AE6C89406AC1B14BB5C1445A1DB933C0CD82061(L_74, NULL);
-		V_25 = L_74;
-		// bool crosses = TriangulationUtil.LinesIntersect2D(  nodes[i].Position,
-		//                                                     nodes[i][j].Position,
-		//                                                     nodes[k].Position,
-		//                                                     nodes[k][l].Position,
-		//                                                     true, true, true,
-		//                                                     ref intersectPt,
-		//                                                     epsilon);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_75 = V_2;
-		int32_t L_76 = V_21;
-		NullCheck(L_75);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_77;
-		L_77 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_75, L_76, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_77);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_78;
-		L_78 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_77, NULL);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_79 = V_2;
-		int32_t L_80 = V_21;
-		NullCheck(L_79);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_81;
-		L_81 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_79, L_80, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_82 = V_22;
-		NullCheck(L_81);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_83;
-		L_83 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_81, L_82, NULL);
-		NullCheck(L_83);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_84;
-		L_84 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_83, NULL);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_85 = V_2;
-		int32_t L_86 = V_23;
-		NullCheck(L_85);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_87;
-		L_87 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_85, L_86, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_87);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_88;
-		L_88 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_87, NULL);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_89 = V_2;
-		int32_t L_90 = V_23;
-		NullCheck(L_89);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_91;
-		L_91 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_89, L_90, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_92 = V_24;
-		NullCheck(L_91);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_93;
-		L_93 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_91, L_92, NULL);
-		NullCheck(L_93);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_94;
-		L_94 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_93, NULL);
-		double L_95 = ___epsilon1;
-		bool L_96;
-		L_96 = TriangulationUtil_LinesIntersect2D_m6CB40306F9BF524A890749C1D58B4FF400B51222(L_78, L_84, L_88, L_94, (bool)1, (bool)1, (bool)1, (&V_25), L_95, NULL);
-		// if (crosses)
-		if (!L_96)
-		{
-			goto IL_02e8;
-		}
-	}
-	{
-		// dirty = true;
-		V_3 = (bool)1;
-		// SplitComplexPolygonNode intersectionNode = new SplitComplexPolygonNode(intersectPt);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_97 = V_25;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_98 = (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)il2cpp_codegen_object_new(SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var);
-		NullCheck(L_98);
-		SplitComplexPolygonNode__ctor_mC7301E92627CB66FC67164FCAB1E7C9B8C85B107(L_98, L_97, NULL);
-		V_26 = L_98;
-		// int idx = nodes.IndexOf(intersectionNode);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_99 = V_2;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_100 = V_26;
-		NullCheck(L_99);
-		int32_t L_101;
-		L_101 = List_1_IndexOf_m15D851E66B879ABA75685C88ABE1CAA21CD6B033(L_99, L_100, List_1_IndexOf_m15D851E66B879ABA75685C88ABE1CAA21CD6B033_RuntimeMethod_var);
-		V_27 = L_101;
-		// if (idx >= 0 && idx < nodes.Count)
-		int32_t L_102 = V_27;
-		if ((((int32_t)L_102) < ((int32_t)0)))
-		{
-			goto IL_01df;
-		}
-	}
-	{
-		int32_t L_103 = V_27;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_104 = V_2;
-		NullCheck(L_104);
-		int32_t L_105;
-		L_105 = List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_inline(L_104, List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		if ((((int32_t)L_103) >= ((int32_t)L_105)))
-		{
-			goto IL_01df;
-		}
-	}
-	{
-		// intersectionNode = nodes[idx];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_106 = V_2;
-		int32_t L_107 = V_27;
-		NullCheck(L_106);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_108;
-		L_108 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_106, L_107, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_26 = L_108;
-		goto IL_01ee;
-	}
-
-IL_01df:
-	{
-		// nodes.Add(intersectionNode);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_109 = V_2;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_110 = V_26;
-		NullCheck(L_109);
-		List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_inline(L_109, L_110, List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_RuntimeMethod_var);
-		// nNodes = nodes.Count;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_111 = V_2;
-		NullCheck(L_111);
-		int32_t L_112;
-		L_112 = List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_inline(L_111, List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		V_1 = L_112;
-	}
-
-IL_01ee:
-	{
-		// SplitComplexPolygonNode nodei = nodes[i];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_113 = V_2;
-		int32_t L_114 = V_21;
-		NullCheck(L_113);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_115;
-		L_115 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_113, L_114, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_28 = L_115;
-		// SplitComplexPolygonNode connij = nodes[i][j];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_116 = V_2;
-		int32_t L_117 = V_21;
-		NullCheck(L_116);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_118;
-		L_118 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_116, L_117, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_119 = V_22;
-		NullCheck(L_118);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_120;
-		L_120 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_118, L_119, NULL);
-		V_29 = L_120;
-		// SplitComplexPolygonNode nodek = nodes[k];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_121 = V_2;
-		int32_t L_122 = V_23;
-		NullCheck(L_121);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_123;
-		L_123 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_121, L_122, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_30 = L_123;
-		// SplitComplexPolygonNode connkl = nodes[k][l];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_124 = V_2;
-		int32_t L_125 = V_23;
-		NullCheck(L_124);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_126;
-		L_126 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_124, L_125, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		int32_t L_127 = V_24;
-		NullCheck(L_126);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_128;
-		L_128 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_126, L_127, NULL);
-		V_31 = L_128;
-		// connij.RemoveConnection(nodei);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_129 = V_29;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_130 = V_28;
-		NullCheck(L_129);
-		SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1(L_129, L_130, NULL);
-		// nodei.RemoveConnection(connij);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_131 = V_28;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_132 = V_29;
-		NullCheck(L_131);
-		SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1(L_131, L_132, NULL);
-		// connkl.RemoveConnection(nodek);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_133 = V_31;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_134 = V_30;
-		NullCheck(L_133);
-		SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1(L_133, L_134, NULL);
-		// nodek.RemoveConnection(connkl);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_135 = V_30;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_136 = V_31;
-		NullCheck(L_135);
-		SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1(L_135, L_136, NULL);
-		// if (!intersectionNode.Position.Equals(nodei.Position, epsilon))
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_137 = V_26;
-		NullCheck(L_137);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_138;
-		L_138 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_137, NULL);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_139 = V_28;
-		NullCheck(L_139);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_140;
-		L_140 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_139, NULL);
-		double L_141 = ___epsilon1;
-		NullCheck(L_138);
-		bool L_142;
-		L_142 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_138, L_140, L_141, NULL);
-		if (L_142)
-		{
-			goto IL_0270;
-		}
-	}
-	{
-		// intersectionNode.AddConnection(nodei);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_143 = V_26;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_144 = V_28;
-		NullCheck(L_143);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_143, L_144, NULL);
-		// nodei.AddConnection(intersectionNode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_145 = V_28;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_146 = V_26;
-		NullCheck(L_145);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_145, L_146, NULL);
-	}
-
-IL_0270:
-	{
-		// if (!intersectionNode.Position.Equals(nodek.Position, epsilon))
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_147 = V_26;
-		NullCheck(L_147);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_148;
-		L_148 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_147, NULL);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_149 = V_30;
-		NullCheck(L_149);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_150;
-		L_150 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_149, NULL);
-		double L_151 = ___epsilon1;
-		NullCheck(L_148);
-		bool L_152;
-		L_152 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_148, L_150, L_151, NULL);
-		if (L_152)
-		{
-			goto IL_0298;
-		}
-	}
-	{
-		// intersectionNode.AddConnection(nodek);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_153 = V_26;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_154 = V_30;
-		NullCheck(L_153);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_153, L_154, NULL);
-		// nodek.AddConnection(intersectionNode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_155 = V_30;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_156 = V_26;
-		NullCheck(L_155);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_155, L_156, NULL);
-	}
-
-IL_0298:
-	{
-		// if (!intersectionNode.Position.Equals(connij.Position, epsilon))
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_157 = V_26;
-		NullCheck(L_157);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_158;
-		L_158 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_157, NULL);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_159 = V_29;
-		NullCheck(L_159);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_160;
-		L_160 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_159, NULL);
-		double L_161 = ___epsilon1;
-		NullCheck(L_158);
-		bool L_162;
-		L_162 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_158, L_160, L_161, NULL);
-		if (L_162)
-		{
-			goto IL_02c0;
-		}
-	}
-	{
-		// intersectionNode.AddConnection(connij);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_163 = V_26;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_164 = V_29;
-		NullCheck(L_163);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_163, L_164, NULL);
-		// connij.AddConnection(intersectionNode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_165 = V_29;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_166 = V_26;
-		NullCheck(L_165);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_165, L_166, NULL);
-	}
-
-IL_02c0:
-	{
-		// if (!intersectionNode.Position.Equals(connkl.Position, epsilon))
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_167 = V_26;
-		NullCheck(L_167);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_168;
-		L_168 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_167, NULL);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_169 = V_31;
-		NullCheck(L_169);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_170;
-		L_170 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_169, NULL);
-		double L_171 = ___epsilon1;
-		NullCheck(L_168);
-		bool L_172;
-		L_172 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_168, L_170, L_171, NULL);
-		if (L_172)
-		{
-			goto IL_02e8;
-		}
-	}
-	{
-		// intersectionNode.AddConnection(connkl);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_173 = V_26;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_174 = V_31;
-		NullCheck(L_173);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_173, L_174, NULL);
-		// connkl.AddConnection(intersectionNode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_175 = V_31;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_176 = V_26;
-		NullCheck(L_175);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_175, L_176, NULL);
-	}
-
-IL_02e8:
-	{
-		// for (int l = 0; !dirty && l < nodes[k].NumConnected; ++l)
-		int32_t L_177 = V_24;
-		V_24 = ((int32_t)il2cpp_codegen_add(L_177, 1));
-	}
-
-IL_02ee:
-	{
-		// for (int l = 0; !dirty && l < nodes[k].NumConnected; ++l)
-		bool L_178 = V_3;
-		if (L_178)
-		{
-			goto IL_0305;
-		}
-	}
-	{
-		int32_t L_179 = V_24;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_180 = V_2;
-		int32_t L_181 = V_23;
-		NullCheck(L_180);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_182;
-		L_182 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_180, L_181, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_182);
-		int32_t L_183;
-		L_183 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_182, NULL);
-		if ((((int32_t)L_179) < ((int32_t)L_183)))
-		{
-			goto IL_010d;
-		}
-	}
-
-IL_0305:
-	{
-		// for (int k = 0; !dirty && k < nNodes; ++k)
-		int32_t L_184 = V_23;
-		V_23 = ((int32_t)il2cpp_codegen_add(L_184, 1));
-	}
-
-IL_030b:
-	{
-		// for (int k = 0; !dirty && k < nNodes; ++k)
-		bool L_185 = V_3;
-		if (L_185)
-		{
-			goto IL_0316;
-		}
-	}
-	{
-		int32_t L_186 = V_23;
-		int32_t L_187 = V_1;
-		if ((((int32_t)L_186) < ((int32_t)L_187)))
-		{
-			goto IL_00db;
-		}
-	}
-
-IL_0316:
-	{
-		// for (int j = 0; !dirty && j < nodes[i].NumConnected; ++j)
-		int32_t L_188 = V_22;
-		V_22 = ((int32_t)il2cpp_codegen_add(L_188, 1));
-	}
-
-IL_031c:
-	{
-		// for (int j = 0; !dirty && j < nodes[i].NumConnected; ++j)
-		bool L_189 = V_3;
-		if (L_189)
-		{
-			goto IL_0333;
-		}
-	}
-	{
-		int32_t L_190 = V_22;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_191 = V_2;
-		int32_t L_192 = V_21;
-		NullCheck(L_191);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_193;
-		L_193 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_191, L_192, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_193);
-		int32_t L_194;
-		L_194 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_193, NULL);
-		if ((((int32_t)L_190) < ((int32_t)L_194)))
-		{
-			goto IL_00d3;
-		}
-	}
-
-IL_0333:
-	{
-		// for (int i = 0; !dirty && i < nNodes; ++i)
-		int32_t L_195 = V_21;
-		V_21 = ((int32_t)il2cpp_codegen_add(L_195, 1));
-	}
-
-IL_0339:
-	{
-		// for (int i = 0; !dirty && i < nNodes; ++i)
-		bool L_196 = V_3;
-		if (L_196)
-		{
-			goto IL_0344;
-		}
-	}
-	{
-		int32_t L_197 = V_21;
-		int32_t L_198 = V_1;
-		if ((((int32_t)L_197) < ((int32_t)L_198)))
-		{
-			goto IL_00cb;
-		}
-	}
-
-IL_0344:
-	{
-		// ++counter;
-		int32_t L_199 = V_4;
-		V_4 = ((int32_t)il2cpp_codegen_add(L_199, 1));
-	}
-
-IL_034a:
-	{
-		// while (dirty)
-		bool L_200 = V_3;
-		if (L_200)
-		{
-			goto IL_00c1;
-		}
-	}
-	{
-		// bool foundDupe = true;
-		V_5 = (bool)1;
-		// int nActive = nNodes;
-		int32_t L_201 = V_1;
-		V_6 = L_201;
-		// double epsilonSquared = epsilon * epsilon;
-		double L_202 = ___epsilon1;
-		double L_203 = ___epsilon1;
-		V_7 = ((double)il2cpp_codegen_multiply(L_202, L_203));
-		goto IL_046c;
-	}
-
-IL_0360:
-	{
-		// foundDupe = false;
-		V_5 = (bool)0;
-		// for (int i = 0; i < nNodes; ++i)
-		V_32 = 0;
-		goto IL_0464;
-	}
-
-IL_036b:
-	{
-		// if (nodes[i].NumConnected == 0)
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_204 = V_2;
-		int32_t L_205 = V_32;
-		NullCheck(L_204);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_206;
-		L_206 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_204, L_205, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_206);
-		int32_t L_207;
-		L_207 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_206, NULL);
-		if (!L_207)
-		{
-			goto IL_045e;
-		}
-	}
-	{
-		// for (int j = i + 1; j < nNodes; ++j)
-		int32_t L_208 = V_32;
-		V_33 = ((int32_t)il2cpp_codegen_add(L_208, 1));
-		goto IL_0456;
-	}
-
-IL_0388:
-	{
-		// if (nodes[j].NumConnected == 0)
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_209 = V_2;
-		int32_t L_210 = V_33;
-		NullCheck(L_209);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_211;
-		L_211 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_209, L_210, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_211);
-		int32_t L_212;
-		L_212 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_211, NULL);
-		if (!L_212)
-		{
-			goto IL_0450;
-		}
-	}
-	{
-		// Point2D diff = nodes[i].Position - nodes[j].Position;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_213 = V_2;
-		int32_t L_214 = V_32;
-		NullCheck(L_213);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_215;
-		L_215 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_213, L_214, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_215);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_216;
-		L_216 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_215, NULL);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_217 = V_2;
-		int32_t L_218 = V_33;
-		NullCheck(L_217);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_219;
-		L_219 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_217, L_218, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_219);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_220;
-		L_220 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_219, NULL);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_221;
-		L_221 = Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A(L_216, L_220, NULL);
-		// if (diff.MagnitudeSquared() <= epsilonSquared)
-		NullCheck(L_221);
-		double L_222;
-		L_222 = Point2D_MagnitudeSquared_m879ABEC187FB07778C03626E262911844EEE4CC2(L_221, NULL);
-		double L_223 = V_7;
-		if ((!(((double)L_222) <= ((double)L_223))))
-		{
-			goto IL_0450;
-		}
-	}
-	{
-		// if (nActive <= 3)
-		int32_t L_224 = V_6;
-		if ((((int32_t)L_224) > ((int32_t)3)))
-		{
-			goto IL_03d5;
-		}
-	}
-	{
-		// throw new Exception("Eliminated so many duplicate points that resulting polygon has < 3 vertices!");
-		Exception_t* L_225 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
-		NullCheck(L_225);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_225, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral633D575B992D8D7A43F03F3E8CBD7AAC87029DE0)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_225, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PolygonUtil_SplitComplexPolygon_m06C203214FC1CF955CBB5EAF036344C09D6B5D0C_RuntimeMethod_var)));
-	}
-
-IL_03d5:
-	{
-		// --nActive;
-		int32_t L_226 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_subtract(L_226, 1));
-		// foundDupe = true;
-		V_5 = (bool)1;
-		// SplitComplexPolygonNode inode = nodes[i];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_227 = V_2;
-		int32_t L_228 = V_32;
-		NullCheck(L_227);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_229;
-		L_229 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_227, L_228, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_34 = L_229;
-		// SplitComplexPolygonNode jnode = nodes[j];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_230 = V_2;
-		int32_t L_231 = V_33;
-		NullCheck(L_230);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_232;
-		L_232 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_230, L_231, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_35 = L_232;
-		// int njConn = jnode.NumConnected;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_233 = V_35;
-		NullCheck(L_233);
-		int32_t L_234;
-		L_234 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_233, NULL);
-		V_36 = L_234;
-		// for (int k = 0; k < njConn; ++k)
-		V_37 = 0;
-		goto IL_0437;
-	}
-
-IL_0400:
-	{
-		// SplitComplexPolygonNode knode = jnode[k];
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_235 = V_35;
-		int32_t L_236 = V_37;
-		NullCheck(L_235);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_237;
-		L_237 = SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6(L_235, L_236, NULL);
-		V_38 = L_237;
-		// if (knode != inode)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_238 = V_38;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_239 = V_34;
-		bool L_240;
-		L_240 = SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA(L_238, L_239, NULL);
-		if (!L_240)
-		{
-			goto IL_0428;
-		}
-	}
-	{
-		// inode.AddConnection(knode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_241 = V_34;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_242 = V_38;
-		NullCheck(L_241);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_241, L_242, NULL);
-		// knode.AddConnection(inode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_243 = V_38;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_244 = V_34;
-		NullCheck(L_243);
-		SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3(L_243, L_244, NULL);
-	}
-
-IL_0428:
-	{
-		// knode.RemoveConnection(jnode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_245 = V_38;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_246 = V_35;
-		NullCheck(L_245);
-		SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1(L_245, L_246, NULL);
-		// for (int k = 0; k < njConn; ++k)
-		int32_t L_247 = V_37;
-		V_37 = ((int32_t)il2cpp_codegen_add(L_247, 1));
-	}
-
-IL_0437:
-	{
-		// for (int k = 0; k < njConn; ++k)
-		int32_t L_248 = V_37;
-		int32_t L_249 = V_36;
-		if ((((int32_t)L_248) < ((int32_t)L_249)))
-		{
-			goto IL_0400;
-		}
-	}
-	{
-		// jnode.ClearConnections();
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_250 = V_35;
-		NullCheck(L_250);
-		SplitComplexPolygonNode_ClearConnections_m097D34EE8CAABE650FF1611D9EBCAE8F23DA29DB(L_250, NULL);
-		// nodes.RemoveAt(j);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_251 = V_2;
-		int32_t L_252 = V_33;
-		NullCheck(L_251);
-		List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E(L_251, L_252, List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E_RuntimeMethod_var);
-		// --nNodes;
-		int32_t L_253 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_subtract(L_253, 1));
-	}
-
-IL_0450:
-	{
-		// for (int j = i + 1; j < nNodes; ++j)
-		int32_t L_254 = V_33;
-		V_33 = ((int32_t)il2cpp_codegen_add(L_254, 1));
-	}
-
-IL_0456:
-	{
-		// for (int j = i + 1; j < nNodes; ++j)
-		int32_t L_255 = V_33;
-		int32_t L_256 = V_1;
-		if ((((int32_t)L_255) < ((int32_t)L_256)))
-		{
-			goto IL_0388;
-		}
-	}
-
-IL_045e:
-	{
-		// for (int i = 0; i < nNodes; ++i)
-		int32_t L_257 = V_32;
-		V_32 = ((int32_t)il2cpp_codegen_add(L_257, 1));
-	}
-
-IL_0464:
-	{
-		// for (int i = 0; i < nNodes; ++i)
-		int32_t L_258 = V_32;
-		int32_t L_259 = V_1;
-		if ((((int32_t)L_258) < ((int32_t)L_259)))
-		{
-			goto IL_036b;
-		}
-	}
-
-IL_046c:
-	{
-		// while (foundDupe)
-		bool L_260 = V_5;
-		if (L_260)
-		{
-			goto IL_0360;
-		}
-	}
-	{
-		// double minY = double.MaxValue;
-		V_8 = (1.7976931348623157E+308);
-		// double maxX = -double.MaxValue;
-		V_9 = (-1.7976931348623157E+308);
-		// int minYIndex = -1;
-		V_10 = (-1);
-		// for (int i = 0; i < nNodes; ++i)
-		V_39 = 0;
-		goto IL_0542;
-	}
-
-IL_0494:
-	{
-		// if (nodes[i].Position.Y < minY && nodes[i].NumConnected > 1)
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_261 = V_2;
-		int32_t L_262 = V_39;
-		NullCheck(L_261);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_263;
-		L_263 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_261, L_262, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_263);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_264;
-		L_264 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_263, NULL);
-		NullCheck(L_264);
-		double L_265;
-		L_265 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_264);
-		double L_266 = V_8;
-		if ((!(((double)L_265) < ((double)L_266))))
-		{
-			goto IL_04e8;
-		}
-	}
-	{
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_267 = V_2;
-		int32_t L_268 = V_39;
-		NullCheck(L_267);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_269;
-		L_269 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_267, L_268, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_269);
-		int32_t L_270;
-		L_270 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_269, NULL);
-		if ((((int32_t)L_270) <= ((int32_t)1)))
-		{
-			goto IL_04e8;
-		}
-	}
-	{
-		// minY = nodes[i].Position.Y;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_271 = V_2;
-		int32_t L_272 = V_39;
-		NullCheck(L_271);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_273;
-		L_273 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_271, L_272, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_273);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_274;
-		L_274 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_273, NULL);
-		NullCheck(L_274);
-		double L_275;
-		L_275 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_274);
-		V_8 = L_275;
-		// minYIndex = i;
-		int32_t L_276 = V_39;
-		V_10 = L_276;
-		// maxX = nodes[i].Position.X;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_277 = V_2;
-		int32_t L_278 = V_39;
-		NullCheck(L_277);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_279;
-		L_279 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_277, L_278, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_279);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_280;
-		L_280 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_279, NULL);
-		NullCheck(L_280);
-		double L_281;
-		L_281 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_280);
-		V_9 = L_281;
-		goto IL_053c;
-	}
-
-IL_04e8:
-	{
-		// else if (nodes[i].Position.Y == minY && nodes[i].Position.X > maxX && nodes[i].NumConnected > 1)
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_282 = V_2;
-		int32_t L_283 = V_39;
-		NullCheck(L_282);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_284;
-		L_284 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_282, L_283, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_284);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_285;
-		L_285 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_284, NULL);
-		NullCheck(L_285);
-		double L_286;
-		L_286 = VirtualFuncInvoker0< double >::Invoke(7 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_Y() */, L_285);
-		double L_287 = V_8;
-		if ((!(((double)L_286) == ((double)L_287))))
-		{
-			goto IL_053c;
-		}
-	}
-	{
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_288 = V_2;
-		int32_t L_289 = V_39;
-		NullCheck(L_288);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_290;
-		L_290 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_288, L_289, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_290);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_291;
-		L_291 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_290, NULL);
-		NullCheck(L_291);
-		double L_292;
-		L_292 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_291);
-		double L_293 = V_9;
-		if ((!(((double)L_292) > ((double)L_293))))
-		{
-			goto IL_053c;
-		}
-	}
-	{
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_294 = V_2;
-		int32_t L_295 = V_39;
-		NullCheck(L_294);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_296;
-		L_296 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_294, L_295, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_296);
-		int32_t L_297;
-		L_297 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(L_296, NULL);
-		if ((((int32_t)L_297) <= ((int32_t)1)))
-		{
-			goto IL_053c;
-		}
-	}
-	{
-		// minYIndex = i;
-		int32_t L_298 = V_39;
-		V_10 = L_298;
-		// maxX = nodes[i].Position.X;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_299 = V_2;
-		int32_t L_300 = V_39;
-		NullCheck(L_299);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_301;
-		L_301 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_299, L_300, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_301);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_302;
-		L_302 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_301, NULL);
-		NullCheck(L_302);
-		double L_303;
-		L_303 = VirtualFuncInvoker0< double >::Invoke(5 /* System.Double FunkyCode.Utilities.Polygon2DTriangulation.Point2D::get_X() */, L_302);
-		V_9 = L_303;
-	}
-
-IL_053c:
-	{
-		// for (int i = 0; i < nNodes; ++i)
-		int32_t L_304 = V_39;
-		V_39 = ((int32_t)il2cpp_codegen_add(L_304, 1));
-	}
-
-IL_0542:
-	{
-		// for (int i = 0; i < nNodes; ++i)
-		int32_t L_305 = V_39;
-		int32_t L_306 = V_1;
-		if ((((int32_t)L_305) < ((int32_t)L_306)))
-		{
-			goto IL_0494;
-		}
-	}
-	{
-		// Point2D origDir = new Point2D(1.0f, 0.0f);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_307 = (Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7*)il2cpp_codegen_object_new(Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7_il2cpp_TypeInfo_var);
-		NullCheck(L_307);
-		Point2D__ctor_m20484BA102C1F43B3A5B06A9542B6C2B4CDB3A77(L_307, (1.0), (0.0), NULL);
-		V_11 = L_307;
-		// List<Point2D> resultVecs = new List<Point2D>();
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_308 = (List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346*)il2cpp_codegen_object_new(List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346_il2cpp_TypeInfo_var);
-		NullCheck(L_308);
-		List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E(L_308, List_1__ctor_m039BACE5614EE961A42A1D40C10E0F6E1DCCC43E_RuntimeMethod_var);
-		V_12 = L_308;
-		// SplitComplexPolygonNode currentNode = nodes[minYIndex];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_309 = V_2;
-		int32_t L_310 = V_10;
-		NullCheck(L_309);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_311;
-		L_311 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_309, L_310, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_13 = L_311;
-		// SplitComplexPolygonNode startNode = currentNode;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_312 = V_13;
-		V_14 = L_312;
-		// SplitComplexPolygonNode nextNode = currentNode.GetRightestConnection(origDir);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_313 = V_13;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_314 = V_11;
-		NullCheck(L_313);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_315;
-		L_315 = SplitComplexPolygonNode_GetRightestConnection_mFE4AD9029A6513EFCC92800C388E88A76FACC6F4(L_313, L_314, NULL);
-		V_15 = L_315;
-		// if (nextNode == null)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_316 = V_15;
-		bool L_317;
-		L_317 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_316, (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)NULL, NULL);
-		if (!L_317)
-		{
-			goto IL_0594;
-		}
-	}
-	{
-		// return PolygonUtil.SplitComplexPolygonCleanup(verts);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_318 = ___verts0;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_319;
-		L_319 = PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA(L_318, NULL);
-		return L_319;
-	}
-
-IL_0594:
-	{
-		// resultVecs.Add(startNode.Position);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_320 = V_12;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_321 = V_14;
-		NullCheck(L_321);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_322;
-		L_322 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_321, NULL);
-		NullCheck(L_320);
-		List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline(L_320, L_322, List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		goto IL_05ee;
-	}
-
-IL_05a4:
-	{
-		// if (resultVecs.Count > (4 * nNodes))
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_323 = V_12;
-		NullCheck(L_323);
-		int32_t L_324;
-		L_324 = List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_inline(L_323, List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_RuntimeMethod_var);
-		int32_t L_325 = V_1;
-		if ((((int32_t)L_324) <= ((int32_t)((int32_t)il2cpp_codegen_multiply(4, L_325)))))
-		{
-			goto IL_05bb;
-		}
-	}
-	{
-		// throw new Exception("nodes should never be visited four times apiece (proof?), so we've probably hit a loop...crap");
-		Exception_t* L_326 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
-		NullCheck(L_326);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_326, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral455E97A5B9BF088B98E5F6F67F14F20C06CFBBBC)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_326, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PolygonUtil_SplitComplexPolygon_m06C203214FC1CF955CBB5EAF036344C09D6B5D0C_RuntimeMethod_var)));
-	}
-
-IL_05bb:
-	{
-		// resultVecs.Add(nextNode.Position);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_327 = V_12;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_328 = V_15;
-		NullCheck(L_328);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_329;
-		L_329 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_328, NULL);
-		NullCheck(L_327);
-		List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_inline(L_327, L_329, List_1_Add_mEDC9ACE43CC55E5A07B6A5B84ED4F700E10AD966_RuntimeMethod_var);
-		// SplitComplexPolygonNode oldNode = currentNode;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_330 = V_13;
-		V_40 = L_330;
-		// currentNode = nextNode;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_331 = V_15;
-		V_13 = L_331;
-		// nextNode = currentNode.GetRightestConnection(oldNode);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_332 = V_13;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_333 = V_40;
-		NullCheck(L_332);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_334;
-		L_334 = SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119(L_332, L_333, NULL);
-		V_15 = L_334;
-		// if (nextNode == null)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_335 = V_15;
-		bool L_336;
-		L_336 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_335, (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)NULL, NULL);
-		if (!L_336)
-		{
-			goto IL_05ee;
-		}
-	}
-	{
-		// return PolygonUtil.SplitComplexPolygonCleanup(resultVecs);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_337 = V_12;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_338;
-		L_338 = PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA(L_337, NULL);
-		return L_338;
-	}
-
-IL_05ee:
-	{
-		// while (nextNode != startNode)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_339 = V_15;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_340 = V_14;
-		bool L_341;
-		L_341 = SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA(L_339, L_340, NULL);
-		if (L_341)
-		{
-			goto IL_05a4;
-		}
-	}
-	{
-		// if (resultVecs.Count < 1)
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_342 = V_12;
-		NullCheck(L_342);
-		int32_t L_343;
-		L_343 = List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_inline(L_342, List_1_get_Count_mF269DFF639B649FB0B9792057A86EC71AC56D0E1_RuntimeMethod_var);
-		if ((((int32_t)L_343) >= ((int32_t)1)))
-		{
-			goto IL_060a;
-		}
-	}
-	{
-		// return PolygonUtil.SplitComplexPolygonCleanup(verts);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_344 = ___verts0;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_345;
-		L_345 = PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA(L_344, NULL);
-		return L_345;
-	}
-
-IL_060a:
-	{
-		// return PolygonUtil.SplitComplexPolygonCleanup(resultVecs);
-		List_1_tE5DA5D65F7FB06F6625EAFEE10DE17B8FB73C346* L_346 = V_12;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_347;
-		L_347 = PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA(L_346, NULL);
-		return L_347;
-	}
-}
-// System.Collections.Generic.List`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2DList> FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::SplitComplexPolygonCleanup(System.Collections.Generic.IList`1<FunkyCode.Utilities.Polygon2DTriangulation.Point2D>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t4C6409F93C562B69408929822AF1ED688D478D06* PolygonUtil_SplitComplexPolygonCleanup_m1A5185FBBBC052ECA50CE7608D3A2EECF74977EA (RuntimeObject* ___orig0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m7A0337C6183CCFA0C26430CBF07655FC28061B25_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m2D57C60729FD1A60C53C1DD7EEB3E9510DEFB79B_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t4C6409F93C562B69408929822AF1ED688D478D06_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	List_1_t4C6409F93C562B69408929822AF1ED688D478D06* V_0 = NULL;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_1 = NULL;
-	int32_t V_2 = 0;
-	int32_t V_3 = 0;
-	int32_t V_4 = 0;
-	int32_t V_5 = 0;
-	int32_t V_6 = 0;
-	int32_t V_7 = 0;
-	Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* V_8 = NULL;
-	int32_t V_9 = 0;
-	{
-		// List<Point2DList> l = new List<Point2DList>();
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_0 = (List_1_t4C6409F93C562B69408929822AF1ED688D478D06*)il2cpp_codegen_object_new(List_1_t4C6409F93C562B69408929822AF1ED688D478D06_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		List_1__ctor_m7A0337C6183CCFA0C26430CBF07655FC28061B25(L_0, List_1__ctor_m7A0337C6183CCFA0C26430CBF07655FC28061B25_RuntimeMethod_var);
-		V_0 = L_0;
-		// Point2DList origP2DL = new Point2DList(orig);
-		RuntimeObject* L_1 = ___orig0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_2 = (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)il2cpp_codegen_object_new(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C_il2cpp_TypeInfo_var);
-		NullCheck(L_2);
-		Point2DList__ctor_mC4D886F76C56CB8D1BCA993D5ED0EAA3AB566650(L_2, L_1, NULL);
-		V_1 = L_2;
-		// l.Add(origP2DL);
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_3 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_4 = V_1;
-		NullCheck(L_3);
-		List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_inline(L_3, L_4, List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_RuntimeMethod_var);
-		// int listIdx = 0;
-		V_2 = 0;
-		// int numLists = l.Count;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_5 = V_0;
-		NullCheck(L_5);
-		int32_t L_6;
-		L_6 = List_1_get_Count_m2D57C60729FD1A60C53C1DD7EEB3E9510DEFB79B_inline(L_5, List_1_get_Count_m2D57C60729FD1A60C53C1DD7EEB3E9510DEFB79B_RuntimeMethod_var);
-		V_3 = L_6;
-		goto IL_00fc;
-	}
-
-IL_0022:
-	{
-		// int numPoints = l[listIdx].Count;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_7 = V_0;
-		int32_t L_8 = V_2;
-		NullCheck(L_7);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_9;
-		L_9 = List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457(L_7, L_8, List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		NullCheck(L_9);
-		int32_t L_10;
-		L_10 = Point2DList_get_Count_m287513A2EF615F0EA91628E1ACAAA1D43123C57C(L_9, NULL);
-		V_4 = L_10;
-		// for (int i = 0; i < numPoints; ++i)
-		V_5 = 0;
-		goto IL_00e3;
-	}
-
-IL_0038:
-	{
-		// for (int j = i + 1; j < numPoints; ++j)
-		int32_t L_11 = V_5;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_11, 1));
-		goto IL_00d4;
-	}
-
-IL_0043:
-	{
-		// if (l[listIdx][i].Equals(l[listIdx][j], origP2DL.Epsilon))
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_12 = V_0;
-		int32_t L_13 = V_2;
-		NullCheck(L_12);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_14;
-		L_14 = List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457(L_12, L_13, List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		int32_t L_15 = V_5;
-		NullCheck(L_14);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_16;
-		L_16 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_14, L_15, NULL);
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_17 = V_0;
-		int32_t L_18 = V_2;
-		NullCheck(L_17);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_19;
-		L_19 = List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457(L_17, L_18, List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		int32_t L_20 = V_6;
-		NullCheck(L_19);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_21;
-		L_21 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_19, L_20, NULL);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_22 = V_1;
-		NullCheck(L_22);
-		double L_23;
-		L_23 = Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69_inline(L_22, NULL);
-		NullCheck(L_16);
-		bool L_24;
-		L_24 = Point2D_Equals_mBAFDDFE3F4C3948CB7C808C48B090BD0B1509DA4(L_16, L_21, L_23, NULL);
-		if (!L_24)
-		{
-			goto IL_00ce;
-		}
-	}
-	{
-		// int numToRemove = j - i;
-		int32_t L_25 = V_6;
-		int32_t L_26 = V_5;
-		V_7 = ((int32_t)il2cpp_codegen_subtract(L_25, L_26));
-		// Point2DList newList = new Point2DList();
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_27 = (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C*)il2cpp_codegen_object_new(Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C_il2cpp_TypeInfo_var);
-		NullCheck(L_27);
-		Point2DList__ctor_mD73FDB92E64EE2E863CFD081D581EE9C60E3076A(L_27, NULL);
-		V_8 = L_27;
-		// for (int k = i + 1; k <= j; ++k)
-		int32_t L_28 = V_5;
-		V_9 = ((int32_t)il2cpp_codegen_add(L_28, 1));
-		goto IL_009d;
-	}
-
-IL_0082:
-	{
-		// newList.Add(l[listIdx][k]);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_29 = V_8;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_30 = V_0;
-		int32_t L_31 = V_2;
-		NullCheck(L_30);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_32;
-		L_32 = List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457(L_30, L_31, List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		int32_t L_33 = V_9;
-		NullCheck(L_32);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_34;
-		L_34 = Point2DList_get_Item_m226F522EAE034FB884D08B5CC21B83F9BAF56769(L_32, L_33, NULL);
-		NullCheck(L_29);
-		VirtualActionInvoker1< Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* >::Invoke(19 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::Add(FunkyCode.Utilities.Polygon2DTriangulation.Point2D) */, L_29, L_34);
-		// for (int k = i + 1; k <= j; ++k)
-		int32_t L_35 = V_9;
-		V_9 = ((int32_t)il2cpp_codegen_add(L_35, 1));
-	}
-
-IL_009d:
-	{
-		// for (int k = i + 1; k <= j; ++k)
-		int32_t L_36 = V_9;
-		int32_t L_37 = V_6;
-		if ((((int32_t)L_36) <= ((int32_t)L_37)))
-		{
-			goto IL_0082;
-		}
-	}
-	{
-		// l[listIdx].RemoveRange(i + 1, numToRemove);
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_38 = V_0;
-		int32_t L_39 = V_2;
-		NullCheck(L_38);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_40;
-		L_40 = List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457(L_38, L_39, List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		int32_t L_41 = V_5;
-		int32_t L_42 = V_7;
-		NullCheck(L_40);
-		VirtualActionInvoker2< int32_t, int32_t >::Invoke(26 /* System.Void FunkyCode.Utilities.Polygon2DTriangulation.Point2DList::RemoveRange(System.Int32,System.Int32) */, L_40, ((int32_t)il2cpp_codegen_add(L_41, 1)), L_42);
-		// l.Add(newList);
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_43 = V_0;
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_44 = V_8;
-		NullCheck(L_43);
-		List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_inline(L_43, L_44, List_1_Add_mEB4D18B737BD9DE84ADE5FDB3DAAEF45C9EA55CF_RuntimeMethod_var);
-		// ++numLists;
-		int32_t L_45 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_45, 1));
-		// numPoints -= numToRemove;
-		int32_t L_46 = V_4;
-		int32_t L_47 = V_7;
-		V_4 = ((int32_t)il2cpp_codegen_subtract(L_46, L_47));
-		// j = i + 1;
-		int32_t L_48 = V_5;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_48, 1));
-	}
-
-IL_00ce:
-	{
-		// for (int j = i + 1; j < numPoints; ++j)
-		int32_t L_49 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_49, 1));
-	}
-
-IL_00d4:
-	{
-		// for (int j = i + 1; j < numPoints; ++j)
-		int32_t L_50 = V_6;
-		int32_t L_51 = V_4;
-		if ((((int32_t)L_50) < ((int32_t)L_51)))
-		{
-			goto IL_0043;
-		}
-	}
-	{
-		// for (int i = 0; i < numPoints; ++i)
-		int32_t L_52 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_52, 1));
-	}
-
-IL_00e3:
-	{
-		// for (int i = 0; i < numPoints; ++i)
-		int32_t L_53 = V_5;
-		int32_t L_54 = V_4;
-		if ((((int32_t)L_53) < ((int32_t)L_54)))
-		{
-			goto IL_0038;
-		}
-	}
-	{
-		// l[listIdx].Simplify();
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_55 = V_0;
-		int32_t L_56 = V_2;
-		NullCheck(L_55);
-		Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* L_57;
-		L_57 = List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457(L_55, L_56, List_1_get_Item_m9E6ADDB5490AEDE77FEC55572D34A2D4AD030457_RuntimeMethod_var);
-		NullCheck(L_57);
-		Point2DList_Simplify_m9E25BB104EF53642118CD89DE9A2A8B4BA1E35FE(L_57, NULL);
-		// ++listIdx;
-		int32_t L_58 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_58, 1));
-	}
-
-IL_00fc:
-	{
-		// while (listIdx < numLists)
-		int32_t L_59 = V_2;
-		int32_t L_60 = V_3;
-		if ((((int32_t)L_59) < ((int32_t)L_60)))
-		{
-			goto IL_0022;
-		}
-	}
-	{
-		// return l;
-		List_1_t4C6409F93C562B69408929822AF1ED688D478D06* L_61 = V_0;
-		return L_61;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.PolygonUtil::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PolygonUtil__ctor_m3BC8CD33009DB203378DC0FC0C484DA4A52C4DF3 (PolygonUtil_tC9D6F3E0B26CC92D619DC868213715914DCDEC5A* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Edge,FunkyCode.Utilities.Polygon2DTriangulation.Edge,FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EdgeIntersectInfo__ctor_m6F1AA41B52E041876BFB2FCF48BEB437FF8E1732 (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___edgeOne0, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___edgeTwo1, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___intersectionPoint2, const RuntimeMethod* method) 
-{
-	{
-		// public EdgeIntersectInfo(Edge edgeOne, Edge edgeTwo, Point2D intersectionPoint)
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		// EdgeOne = edgeOne;
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = ___edgeOne0;
-		EdgeIntersectInfo_set_EdgeOne_mCA3EED47239C3DBA9147802E999F12243BCB5369_inline(__this, L_0, NULL);
-		// EdgeTwo = edgeTwo;
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_1 = ___edgeTwo1;
-		EdgeIntersectInfo_set_EdgeTwo_m01A5D4981077187330C8691F6BDA1FFDE29A87F6_inline(__this, L_1, NULL);
-		// IntersectionPoint = intersectionPoint;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_2 = ___intersectionPoint2;
-		EdgeIntersectInfo_set_IntersectionPoint_m3947A1EAC204D859646D60100A77D2266B66712B_inline(__this, L_2, NULL);
-		// }
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_EdgeOne()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* EdgeIntersectInfo_get_EdgeOne_m7159A3D500A533264357E4A73749E15B0A23A7B5 (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Edge EdgeOne { get; private set; }
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = __this->___U3CEdgeOneU3Ek__BackingField_0;
-		return L_0;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeOne(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_EdgeOne_mCA3EED47239C3DBA9147802E999F12243BCB5369 (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Edge EdgeOne { get; private set; }
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = ___value0;
-		__this->___U3CEdgeOneU3Ek__BackingField_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CEdgeOneU3Ek__BackingField_0), (void*)L_0);
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.Edge FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_EdgeTwo()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* EdgeIntersectInfo_get_EdgeTwo_mA83E6FC96886E8F4787153D66939D9D4B7066EDA (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Edge EdgeTwo { get; private set; }
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = __this->___U3CEdgeTwoU3Ek__BackingField_1;
-		return L_0;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_EdgeTwo(FunkyCode.Utilities.Polygon2DTriangulation.Edge)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_EdgeTwo_m01A5D4981077187330C8691F6BDA1FFDE29A87F6 (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Edge EdgeTwo { get; private set; }
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = ___value0;
-		__this->___U3CEdgeTwoU3Ek__BackingField_1 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CEdgeTwoU3Ek__BackingField_1), (void*)L_0);
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::get_IntersectionPoint()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5 (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D IntersectionPoint { get; private set; }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = __this->___U3CIntersectionPointU3Ek__BackingField_2;
-		return L_0;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.EdgeIntersectInfo::set_IntersectionPoint(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_IntersectionPoint_m3947A1EAC204D859646D60100A77D2266B66712B (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D IntersectionPoint { get; private set; }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = ___value0;
-		__this->___U3CIntersectionPointU3Ek__BackingField_2 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CIntersectionPointU3Ek__BackingField_2), (void*)L_0);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_NumConnected()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public int NumConnected { get { return mConnected.Count; } }
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = __this->___mConnected_0;
-		NullCheck(L_0);
-		int32_t L_1;
-		L_1 = List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_inline(L_0, List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		return L_1;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.Point2D FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Position()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D Position { get { return mPosition; } set { mPosition = value; } }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = __this->___mPosition_1;
-		return L_0;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::set_Position(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_set_Position_m58E2616ACE3D13C853E668B03C4FCC1CAB15DD46 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D Position { get { return mPosition; } set { mPosition = value; } }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = ___value0;
-		__this->___mPosition_1 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___mPosition_1), (void*)L_0);
-		// public Point2D Position { get { return mPosition; } set { mPosition = value; } }
-		return;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::get_Item(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* SplitComplexPolygonNode_get_Item_mE78D180C8C570F2C6FB5F8442FB425AF98E9A8A6 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, int32_t ___index0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// get { return mConnected[index]; }
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = __this->___mConnected_0;
-		int32_t L_1 = ___index0;
-		NullCheck(L_0);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_2;
-		L_2 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_0, L_1, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		return L_2;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode__ctor_mFD846CCDEA76E55BB6FFC24CA1C3E920DF976B75 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// private List<SplitComplexPolygonNode> mConnected = new List<SplitComplexPolygonNode>();
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*)il2cpp_codegen_object_new(List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E(L_0, List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var);
-		__this->___mConnected_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___mConnected_0), (void*)L_0);
-		// public SplitComplexPolygonNode()
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		// }
-		return;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::.ctor(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode__ctor_mC7301E92627CB66FC67164FCAB1E7C9B8C85B107 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___pos0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// private List<SplitComplexPolygonNode> mConnected = new List<SplitComplexPolygonNode>();
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = (List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765*)il2cpp_codegen_object_new(List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E(L_0, List_1__ctor_m0ECD60240F92EFF5D5642885464E202C98B6057E_RuntimeMethod_var);
-		__this->___mConnected_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___mConnected_0), (void*)L_0);
-		// public SplitComplexPolygonNode(Point2D pos)
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		// mPosition = pos;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_1 = ___pos0;
-		__this->___mPosition_1 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___mPosition_1), (void*)L_1);
-		// }
-		return;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(System.Object)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_Equals_m1CFF781B1F37FDCEE53BA5406D3D1749D5213154 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, RuntimeObject* ___obj0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_0 = NULL;
-	{
-		// SplitComplexPolygonNode pn = obj as SplitComplexPolygonNode;
-		RuntimeObject* L_0 = ___obj0;
-		V_0 = ((SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)IsInstClass((RuntimeObject*)L_0, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var));
-		// if (pn == null)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_1 = V_0;
-		bool L_2;
-		L_2 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_1, (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)NULL, NULL);
-		if (!L_2)
-		{
-			goto IL_0018;
-		}
-	}
-	{
-		// return base.Equals(obj);
-		RuntimeObject* L_3 = ___obj0;
-		bool L_4;
-		L_4 = Object_Equals_m07105C4585D3FE204F2A80D58523D001DC43F63B(__this, L_3, NULL);
-		return L_4;
-	}
-
-IL_0018:
-	{
-		// return Equals(pn);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_5 = V_0;
-		bool L_6;
-		L_6 = SplitComplexPolygonNode_Equals_mF31DF80B54BFDD8BF46B8A6B83E86027E7E7D06B(__this, L_5, NULL);
-		return L_6;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::Equals(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_Equals_mF31DF80B54BFDD8BF46B8A6B83E86027E7E7D06B (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___pn0, const RuntimeMethod* method) 
-{
-	{
-		// if ((System.Object)pn == null)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_0 = ___pn0;
-		if (L_0)
-		{
-			goto IL_0005;
-		}
-	}
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0005:
-	{
-		// if (mPosition == null || pn.Position == null)
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_1 = __this->___mPosition_1;
-		if (!L_1)
-		{
-			goto IL_0015;
-		}
-	}
-	{
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_2 = ___pn0;
-		NullCheck(L_2);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_3;
-		L_3 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_2, NULL);
-		if (L_3)
-		{
-			goto IL_0017;
-		}
-	}
-
-IL_0015:
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0017:
-	{
-		// return mPosition.Equals(pn.Position);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_4 = __this->___mPosition_1;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_5 = ___pn0;
-		NullCheck(L_5);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_6;
-		L_6 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_5, NULL);
-		NullCheck(L_4);
-		bool L_7;
-		L_7 = Point2D_Equals_m9261EDD94C68F906C163F763F59DC0B40DA3ED2D(L_4, L_6, NULL);
-		return L_7;
-	}
-}
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetHashCode()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SplitComplexPolygonNode_GetHashCode_m4D805E5902DFC72560DB3D86B1BBF7002CA51CC6 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	{
-		// return base.GetHashCode();
-		int32_t L_0;
-		L_0 = Object_GetHashCode_m372C5A7AB16CAC13307C11C4256D706CE57E090C(__this, NULL);
-		return L_0;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Equality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___lhs0, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___rhs1, const RuntimeMethod* method) 
-{
-	{
-		// public static bool operator ==(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return lhs.Equals(rhs); } if ((System.Object)rhs == null) { return true; } else { return false; } }
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_0 = ___lhs0;
-		if (!L_0)
-		{
-			goto IL_000b;
-		}
-	}
-	{
-		// public static bool operator ==(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return lhs.Equals(rhs); } if ((System.Object)rhs == null) { return true; } else { return false; } }
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_1 = ___lhs0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_2 = ___rhs1;
-		NullCheck(L_1);
-		bool L_3;
-		L_3 = SplitComplexPolygonNode_Equals_mF31DF80B54BFDD8BF46B8A6B83E86027E7E7D06B(L_1, L_2, NULL);
-		return L_3;
-	}
-
-IL_000b:
-	{
-		// public static bool operator ==(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return lhs.Equals(rhs); } if ((System.Object)rhs == null) { return true; } else { return false; } }
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_4 = ___rhs1;
-		if (L_4)
-		{
-			goto IL_0010;
-		}
-	}
-	{
-		// public static bool operator ==(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return lhs.Equals(rhs); } if ((System.Object)rhs == null) { return true; } else { return false; } }
-		return (bool)1;
-	}
-
-IL_0010:
-	{
-		// public static bool operator ==(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return lhs.Equals(rhs); } if ((System.Object)rhs == null) { return true; } else { return false; } }
-		return (bool)0;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::op_Inequality(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode,FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___lhs0, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___rhs1, const RuntimeMethod* method) 
-{
-	{
-		// public static bool operator !=(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return !lhs.Equals(rhs); } if ((System.Object)rhs == null) { return false; } else { return true; } }
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_0 = ___lhs0;
-		if (!L_0)
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		// public static bool operator !=(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return !lhs.Equals(rhs); } if ((System.Object)rhs == null) { return false; } else { return true; } }
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_1 = ___lhs0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_2 = ___rhs1;
-		NullCheck(L_1);
-		bool L_3;
-		L_3 = SplitComplexPolygonNode_Equals_mF31DF80B54BFDD8BF46B8A6B83E86027E7E7D06B(L_1, L_2, NULL);
-		return (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
-	}
-
-IL_000e:
-	{
-		// public static bool operator !=(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return !lhs.Equals(rhs); } if ((System.Object)rhs == null) { return false; } else { return true; } }
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_4 = ___rhs1;
-		if (L_4)
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		// public static bool operator !=(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return !lhs.Equals(rhs); } if ((System.Object)rhs == null) { return false; } else { return true; } }
-		return (bool)0;
-	}
-
-IL_0013:
-	{
-		// public static bool operator !=(SplitComplexPolygonNode lhs, SplitComplexPolygonNode rhs) { if ((object)lhs != null) { return !lhs.Equals(rhs); } if ((System.Object)rhs == null) { return false; } else { return true; } }
-		return (bool)1;
-	}
-}
-// System.String FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ToString()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SplitComplexPolygonNode_ToString_mBF4950CF80F77B7F93FA33478CD9DC808B3324A3 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringBuilder_t_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9D98CF45AE5B5E623759A6DCB43B04AC6BAE9719);
-		s_Il2CppMethodInitialized = true;
-	}
-	StringBuilder_t* V_0 = NULL;
-	int32_t V_1 = 0;
-	{
-		// StringBuilder sb = new StringBuilder(256);
-		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
-		NullCheck(L_0);
-		StringBuilder__ctor_m2619CA8D2C3476DF1A302D9D941498BB1C6164C5(L_0, ((int32_t)256), NULL);
-		V_0 = L_0;
-		// sb.Append(mPosition.ToString());
-		StringBuilder_t* L_1 = V_0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_2 = __this->___mPosition_1;
-		NullCheck(L_2);
-		String_t* L_3;
-		L_3 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_2);
-		NullCheck(L_1);
-		StringBuilder_t* L_4;
-		L_4 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_1, L_3, NULL);
-		// sb.Append(" -> ");
-		StringBuilder_t* L_5 = V_0;
-		NullCheck(L_5);
-		StringBuilder_t* L_6;
-		L_6 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_5, _stringLiteral9D98CF45AE5B5E623759A6DCB43B04AC6BAE9719, NULL);
-		// for (int i = 0; i < NumConnected; ++i)
-		V_1 = 0;
-		goto IL_005d;
-	}
-
-IL_002d:
-	{
-		// if (i != 0)
-		int32_t L_7 = V_1;
-		if (!L_7)
-		{
-			goto IL_003c;
-		}
-	}
-	{
-		// sb.Append(", ");
-		StringBuilder_t* L_8 = V_0;
-		NullCheck(L_8);
-		StringBuilder_t* L_9;
-		L_9 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_8, _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, NULL);
-	}
-
-IL_003c:
-	{
-		// sb.Append(mConnected[i].Position.ToString());
-		StringBuilder_t* L_10 = V_0;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_11 = __this->___mConnected_0;
-		int32_t L_12 = V_1;
-		NullCheck(L_11);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_13;
-		L_13 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_11, L_12, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_13);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_14;
-		L_14 = SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline(L_13, NULL);
-		NullCheck(L_14);
-		String_t* L_15;
-		L_15 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_14);
-		NullCheck(L_10);
-		StringBuilder_t* L_16;
-		L_16 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_10, L_15, NULL);
-		// for (int i = 0; i < NumConnected; ++i)
-		int32_t L_17 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_17, 1));
-	}
-
-IL_005d:
-	{
-		// for (int i = 0; i < NumConnected; ++i)
-		int32_t L_18 = V_1;
-		int32_t L_19;
-		L_19 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(__this, NULL);
-		if ((((int32_t)L_18) < ((int32_t)L_19)))
-		{
-			goto IL_002d;
-		}
-	}
-	{
-		// return sb.ToString();
-		StringBuilder_t* L_20 = V_0;
-		NullCheck(L_20);
-		String_t* L_21;
-		L_21 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_20);
-		return L_21;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsRighter(System.Double,System.Double,System.Double,System.Double)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_IsRighter_m2B8372480D3798C57D87CB414576746E82C2E3B9 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, double ___sinA0, double ___cosA1, double ___sinB2, double ___cosB3, const RuntimeMethod* method) 
-{
-	{
-		// if (sinA < 0)
-		double L_0 = ___sinA0;
-		if ((!(((double)L_0) < ((double)(0.0)))))
-		{
-			goto IL_0021;
-		}
-	}
-	{
-		// if (sinB > 0 || cosA <= cosB)
-		double L_1 = ___sinB2;
-		if ((((double)L_1) > ((double)(0.0))))
-		{
-			goto IL_001d;
-		}
-	}
-	{
-		double L_2 = ___cosA1;
-		double L_3 = ___cosB3;
-		if ((!(((double)L_2) <= ((double)L_3))))
-		{
-			goto IL_001f;
-		}
-	}
-
-IL_001d:
-	{
-		// return true;
-		return (bool)1;
-	}
-
-IL_001f:
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0021:
-	{
-		// if (sinB < 0 || cosA <= cosB)
-		double L_4 = ___sinB2;
-		if ((((double)L_4) < ((double)(0.0))))
-		{
-			goto IL_0032;
-		}
-	}
-	{
-		double L_5 = ___cosA1;
-		double L_6 = ___cosB3;
-		if ((!(((double)L_5) <= ((double)L_6))))
-		{
-			goto IL_0034;
-		}
-	}
-
-IL_0032:
-	{
-		// return false;
-		return (bool)0;
-	}
-
-IL_0034:
-	{
-		// return true;
-		return (bool)1;
-	}
-}
-// System.Int32 FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::remainder(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SplitComplexPolygonNode_remainder_m53EBBC63C72E18C6F8D785E82307B8B0B586416B (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, int32_t ___x0, int32_t ___modulus1, const RuntimeMethod* method) 
-{
-	int32_t V_0 = 0;
-	{
-		// int rem = x % modulus;
-		int32_t L_0 = ___x0;
-		int32_t L_1 = ___modulus1;
-		V_0 = ((int32_t)(L_0%L_1));
-		goto IL_000a;
-	}
-
-IL_0006:
-	{
-		// rem += modulus;
-		int32_t L_2 = V_0;
-		int32_t L_3 = ___modulus1;
-		V_0 = ((int32_t)il2cpp_codegen_add(L_2, L_3));
-	}
-
-IL_000a:
-	{
-		// while (rem < 0)
-		int32_t L_4 = V_0;
-		if ((((int32_t)L_4) < ((int32_t)0)))
-		{
-			goto IL_0006;
-		}
-	}
-	{
-		// return rem;
-		int32_t L_5 = V_0;
-		return L_5;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::AddConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_AddConnection_mA57CF2AD724948637F60F11A097088076D1C68F3 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___toMe0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// if (!mConnected.Contains(toMe) && toMe != this)
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = __this->___mConnected_0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_1 = ___toMe0;
-		NullCheck(L_0);
-		bool L_2;
-		L_2 = List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C(L_0, L_1, List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C_RuntimeMethod_var);
-		if (L_2)
-		{
-			goto IL_0023;
-		}
-	}
-	{
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_3 = ___toMe0;
-		bool L_4;
-		L_4 = SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA(L_3, __this, NULL);
-		if (!L_4)
-		{
-			goto IL_0023;
-		}
-	}
-	{
-		// mConnected.Add(toMe);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_5 = __this->___mConnected_0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_6 = ___toMe0;
-		NullCheck(L_5);
-		List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_inline(L_5, L_6, List_1_Add_mFE19BA296CCC6DBD261A97E7B13213309195DD1E_RuntimeMethod_var);
-	}
-
-IL_0023:
-	{
-		// }
-		return;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_RemoveConnection_m7529E3AEE95514BDD34661DCE035F6C1D02598D1 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___fromMe0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Remove_m3F74C0AC1A2BD3E4F2D6515EB1C17A7D9A8B0C92_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// mConnected.Remove(fromMe);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = __this->___mConnected_0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_1 = ___fromMe0;
-		NullCheck(L_0);
-		bool L_2;
-		L_2 = List_1_Remove_m3F74C0AC1A2BD3E4F2D6515EB1C17A7D9A8B0C92(L_0, L_1, List_1_Remove_m3F74C0AC1A2BD3E4F2D6515EB1C17A7D9A8B0C92_RuntimeMethod_var);
-		// }
-		return;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::RemoveConnectionByIndex(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_RemoveConnectionByIndex_m7D545A542843F7B4FABA498FCC1B23F21EF73ACC (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, int32_t ___index0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// if (index < 0 || index >= mConnected.Count)
-		int32_t L_0 = ___index0;
-		if ((((int32_t)L_0) < ((int32_t)0)))
-		{
-			goto IL_0012;
-		}
-	}
-	{
-		int32_t L_1 = ___index0;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_2 = __this->___mConnected_0;
-		NullCheck(L_2);
-		int32_t L_3;
-		L_3 = List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_inline(L_2, List_1_get_Count_mA631F75D4CEDA4220B06B32E49B88522B4A8F544_RuntimeMethod_var);
-		if ((((int32_t)L_1) < ((int32_t)L_3)))
-		{
-			goto IL_0013;
-		}
-	}
-
-IL_0012:
-	{
-		// return;
-		return;
-	}
-
-IL_0013:
-	{
-		// mConnected.RemoveAt(index);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_4 = __this->___mConnected_0;
-		int32_t L_5 = ___index0;
-		NullCheck(L_4);
-		List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E(L_4, L_5, List_1_RemoveAt_mB8705F701573511951FA105C4AB8BA7EC31D804E_RuntimeMethod_var);
-		// }
-		return;
-	}
-}
-// System.Void FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::ClearConnections()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SplitComplexPolygonNode_ClearConnections_m097D34EE8CAABE650FF1611D9EBCAE8F23DA29DB (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Clear_m5A63CA6B78D66FB8E391FA7EEB148761AFB05FA3_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// mConnected.Clear();
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = __this->___mConnected_0;
-		NullCheck(L_0);
-		List_1_Clear_m5A63CA6B78D66FB8E391FA7EEB148761AFB05FA3_inline(L_0, List_1_Clear_m5A63CA6B78D66FB8E391FA7EEB148761AFB05FA3_RuntimeMethod_var);
-		// }
-		return;
-	}
-}
-// System.Boolean FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::IsConnectedTo(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplitComplexPolygonNode_IsConnectedTo_mA63002B3B52F37B704919C8ADDD6661829C99BD1 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___me0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// return mConnected.Contains(me);
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_0 = __this->___mConnected_0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_1 = ___me0;
-		NullCheck(L_0);
-		bool L_2;
-		L_2 = List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C(L_0, L_1, List_1_Contains_mD40752F0AA1E44C16AE9F02F792C66D0E2E5989C_RuntimeMethod_var);
-		return L_2;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* ___incoming0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_0 = NULL;
-	double V_1 = 0.0;
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_2 = NULL;
-	int32_t V_3 = 0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_4 = NULL;
-	double V_5 = 0.0;
-	double V_6 = 0.0;
-	Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* V_7 = NULL;
-	double V_8 = 0.0;
-	double V_9 = 0.0;
-	{
-		// if (NumConnected == 0)
-		int32_t L_0;
-		L_0 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(__this, NULL);
-		if (L_0)
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		// throw new Exception("the connection graph is inconsistent");
-		Exception_t* L_1 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
-		NullCheck(L_1);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral15F4323C90D6C07949CD76F44F260B4631F8D055)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119_RuntimeMethod_var)));
-	}
-
-IL_0013:
-	{
-		// if (NumConnected == 1)
-		int32_t L_2;
-		L_2 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(__this, NULL);
-		if ((!(((uint32_t)L_2) == ((uint32_t)1))))
-		{
-			goto IL_001e;
-		}
-	}
-	{
-		// return incoming;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_3 = ___incoming0;
-		return L_3;
-	}
-
-IL_001e:
-	{
-		// Point2D inDir = mPosition - incoming.mPosition;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_4 = __this->___mPosition_1;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_5 = ___incoming0;
-		NullCheck(L_5);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_6 = L_5->___mPosition_1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_7;
-		L_7 = Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A(L_4, L_6, NULL);
-		V_0 = L_7;
-		// double inLength = inDir.Magnitude();
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_8 = V_0;
-		NullCheck(L_8);
-		double L_9;
-		L_9 = Point2D_Magnitude_m392DAA55FA47FFD9C23B8D6FCBDA090E090F5528(L_8, NULL);
-		V_1 = L_9;
-		// inDir.Normalize();
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_10 = V_0;
-		NullCheck(L_10);
-		Point2D_Normalize_mF289F65568CD4C49E45BF4CBCE704823F7611DE4(L_10, NULL);
-		// if (inLength <= MathUtil.EPSILON)
-		double L_11 = V_1;
-		il2cpp_codegen_runtime_class_init_inline(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var);
-		double L_12 = ((MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_StaticFields*)il2cpp_codegen_static_fields_for(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var))->___EPSILON_0;
-		if ((!(((double)L_11) <= ((double)L_12))))
-		{
-			goto IL_0050;
-		}
-	}
-	{
-		// throw new Exception("Length too small");
-		Exception_t* L_13 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
-		NullCheck(L_13);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_13, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral972C242EAA5C2C409490342E19DE074153348E63)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_13, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119_RuntimeMethod_var)));
-	}
-
-IL_0050:
-	{
-		// SplitComplexPolygonNode result = null;
-		V_2 = (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)NULL;
-		// for (int i = 0; i < NumConnected; ++i)
-		V_3 = 0;
-		goto IL_012f;
-	}
-
-IL_0059:
-	{
-		// if (mConnected[i] == incoming)
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_14 = __this->___mConnected_0;
-		int32_t L_15 = V_3;
-		NullCheck(L_14);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_16;
-		L_16 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_14, L_15, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_17 = ___incoming0;
-		bool L_18;
-		L_18 = SplitComplexPolygonNode_op_Equality_m7A436AE367DD1AC437261F3BAEFF3C6A067F1191(L_16, L_17, NULL);
-		if (L_18)
-		{
-			goto IL_012b;
-		}
-	}
-	{
-		// Point2D testDir = mConnected[i].mPosition - mPosition;
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_19 = __this->___mConnected_0;
-		int32_t L_20 = V_3;
-		NullCheck(L_19);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_21;
-		L_21 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_19, L_20, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		NullCheck(L_21);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_22 = L_21->___mPosition_1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_23 = __this->___mPosition_1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_24;
-		L_24 = Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A(L_22, L_23, NULL);
-		V_4 = L_24;
-		// double testLengthSqr = testDir.MagnitudeSquared();
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_25 = V_4;
-		NullCheck(L_25);
-		double L_26;
-		L_26 = Point2D_MagnitudeSquared_m879ABEC187FB07778C03626E262911844EEE4CC2(L_25, NULL);
-		// testDir.Normalize();
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_27 = V_4;
-		NullCheck(L_27);
-		Point2D_Normalize_mF289F65568CD4C49E45BF4CBCE704823F7611DE4(L_27, NULL);
-		// if (testLengthSqr <= (MathUtil.EPSILON * MathUtil.EPSILON))
-		il2cpp_codegen_runtime_class_init_inline(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var);
-		double L_28 = ((MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_StaticFields*)il2cpp_codegen_static_fields_for(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var))->___EPSILON_0;
-		double L_29 = ((MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_StaticFields*)il2cpp_codegen_static_fields_for(MathUtil_tB29DCFBD1BFF8A16DAB1A71051460C3EF83FBA30_il2cpp_TypeInfo_var))->___EPSILON_0;
-		if ((!(((double)L_26) <= ((double)((double)il2cpp_codegen_multiply(L_28, L_29))))))
-		{
-			goto IL_00b4;
-		}
-	}
-	{
-		// throw new Exception("Length too small");
-		Exception_t* L_30 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
-		NullCheck(L_30);
-		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_30, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral972C242EAA5C2C409490342E19DE074153348E63)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_30, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119_RuntimeMethod_var)));
-	}
-
-IL_00b4:
-	{
-		// double myCos = Point2D.Dot(inDir, testDir);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_31 = V_0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_32 = V_4;
-		double L_33;
-		L_33 = Point2D_Dot_m1001D121DA61A142559E08F2D2074864C021E553(L_31, L_32, NULL);
-		V_5 = L_33;
-		// double mySin = Point2D.Cross(inDir, testDir);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_34 = V_0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_35 = V_4;
-		double L_36;
-		L_36 = Point2D_Cross_m7100E05A1A5D58402189B21334C191B81BC22557(L_34, L_35, NULL);
-		V_6 = L_36;
-		// if (result != null)
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_37 = V_2;
-		bool L_38;
-		L_38 = SplitComplexPolygonNode_op_Inequality_m33AE8EB3AB9DCC41BAA865FE2E7161FA8798B5DA(L_37, (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)NULL, NULL);
-		if (!L_38)
-		{
-			goto IL_011e;
-		}
-	}
-	{
-		// Point2D resultDir = result.mPosition - mPosition;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_39 = V_2;
-		NullCheck(L_39);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_40 = L_39->___mPosition_1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_41 = __this->___mPosition_1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_42;
-		L_42 = Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A(L_40, L_41, NULL);
-		V_7 = L_42;
-		// resultDir.Normalize();
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_43 = V_7;
-		NullCheck(L_43);
-		Point2D_Normalize_mF289F65568CD4C49E45BF4CBCE704823F7611DE4(L_43, NULL);
-		// double resCos = Point2D.Dot(inDir, resultDir);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_44 = V_0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_45 = V_7;
-		double L_46;
-		L_46 = Point2D_Dot_m1001D121DA61A142559E08F2D2074864C021E553(L_44, L_45, NULL);
-		V_8 = L_46;
-		// double resSin = Point2D.Cross(inDir, resultDir);
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_47 = V_0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_48 = V_7;
-		double L_49;
-		L_49 = Point2D_Cross_m7100E05A1A5D58402189B21334C191B81BC22557(L_47, L_48, NULL);
-		V_9 = L_49;
-		// if (IsRighter(mySin, myCos, resSin, resCos))
-		double L_50 = V_6;
-		double L_51 = V_5;
-		double L_52 = V_9;
-		double L_53 = V_8;
-		bool L_54;
-		L_54 = SplitComplexPolygonNode_IsRighter_m2B8372480D3798C57D87CB414576746E82C2E3B9(__this, L_50, L_51, L_52, L_53, NULL);
-		if (!L_54)
-		{
-			goto IL_012b;
-		}
-	}
-	{
-		// result = mConnected[i];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_55 = __this->___mConnected_0;
-		int32_t L_56 = V_3;
-		NullCheck(L_55);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_57;
-		L_57 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_55, L_56, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_2 = L_57;
-		goto IL_012b;
-	}
-
-IL_011e:
-	{
-		// result = mConnected[i];
-		List_1_t44FEC5DD5492DE74424705DF76392DB6737AA765* L_58 = __this->___mConnected_0;
-		int32_t L_59 = V_3;
-		NullCheck(L_58);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_60;
-		L_60 = List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E(L_58, L_59, List_1_get_Item_mFB821BB900C02CA1A2EB504144DD1B9AB0B8063E_RuntimeMethod_var);
-		V_2 = L_60;
-	}
-
-IL_012b:
-	{
-		// for (int i = 0; i < NumConnected; ++i)
-		int32_t L_61 = V_3;
-		V_3 = ((int32_t)il2cpp_codegen_add(L_61, 1));
-	}
-
-IL_012f:
-	{
-		// for (int i = 0; i < NumConnected; ++i)
-		int32_t L_62 = V_3;
-		int32_t L_63;
-		L_63 = SplitComplexPolygonNode_get_NumConnected_m283A2AE530064CDDA829D307DE37FE81FFD2E610(__this, NULL);
-		if ((((int32_t)L_62) < ((int32_t)L_63)))
-		{
-			goto IL_0059;
-		}
-	}
-	{
-		// return result;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_64 = V_2;
-		return L_64;
-	}
-}
-// FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode FunkyCode.Utilities.Polygon2DTriangulation.SplitComplexPolygonNode::GetRightestConnection(FunkyCode.Utilities.Polygon2DTriangulation.Point2D)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* SplitComplexPolygonNode_GetRightestConnection_mFE4AD9029A6513EFCC92800C388E88A76FACC6F4 (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___incomingDir0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* V_0 = NULL;
-	{
-		// Point2D diff = mPosition - incomingDir;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = __this->___mPosition_1;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_1 = ___incomingDir0;
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_2;
-		L_2 = Point2D_op_Subtraction_m1A6ED27D594EFC059E8FE3CD906C6D76C755D90A(L_0, L_1, NULL);
-		// SplitComplexPolygonNode temp = new SplitComplexPolygonNode(diff);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_3 = (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94*)il2cpp_codegen_object_new(SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94_il2cpp_TypeInfo_var);
-		NullCheck(L_3);
-		SplitComplexPolygonNode__ctor_mC7301E92627CB66FC67164FCAB1E7C9B8C85B107(L_3, L_2, NULL);
-		V_0 = L_3;
-		// SplitComplexPolygonNode res = GetRightestConnection(temp);
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_4 = V_0;
-		SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* L_5;
-		L_5 = SplitComplexPolygonNode_GetRightestConnection_m492F8004CA3CA90D947C69E36222F1FA29615119(__this, L_4, NULL);
-		// return res;
-		return L_5;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27856,6 +26504,34 @@ IL_0009:
 	{
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1 = V_0;
 		return L_1;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lhs0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___rhs1, const RuntimeMethod* method) 
+{
+	bool V_0 = false;
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___lhs0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1 = ___rhs1;
+		bool L_2;
+		L_2 = Vector2_op_Equality_m6F2E069A50E787D131261E5CB25FC9E03F95B5E1_inline(L_0, L_1, NULL);
+		V_0 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		bool L_3 = V_0;
+		return L_3;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) 
+{
+	{
+		float L_0 = ___x0;
+		__this->___x_0 = L_0;
+		float L_1 = ___y1;
+		__this->___y_1 = L_1;
+		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___a0, float ___b1, const RuntimeMethod* method) 
@@ -27952,16 +26628,6 @@ IL_0019:
 	{
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7 = V_0;
 		return L_7;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___x0, float ___y1, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = ___x0;
-		__this->___x_0 = L_0;
-		float L_1 = ___y1;
-		__this->___y_1 = L_1;
-		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___v0, const RuntimeMethod* method) 
@@ -28101,18 +26767,6 @@ IL_0009:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		return L_1;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) 
-{
-	{
-		float L_0 = ___x0;
-		__this->___x_2 = L_0;
-		float L_1 = ___y1;
-		__this->___y_3 = L_1;
-		float L_2 = ___z2;
-		__this->___z_4 = L_2;
-		return;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) 
@@ -28261,67 +26915,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DTSweepContext_set_Tail_m2E2
 		return;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* EdgeIntersectInfo_get_IntersectionPoint_m2CE8684CAB409194BC01D43CCE2C5E9530549FF5_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D IntersectionPoint { get; private set; }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = __this->___U3CIntersectionPointU3Ek__BackingField_2;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double Point2DList_get_Epsilon_m3514F296C69DD7E1EC132C74D2AD8C66B0E30E69_inline (Point2DList_t318ACF00C940B78B7EAF66D09ED18AB8FC061F5C* __this, const RuntimeMethod* method) 
-{
-	{
-		// public double Epsilon { get { return mEpsilon; } }
-		double L_0 = __this->___mEpsilon_6;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* SplitComplexPolygonNode_get_Position_m8161496FEA98C1164BA731254D03C4368ECCCD90_inline (SplitComplexPolygonNode_tF068919C7ACF05B0D81C6F0476D39011DE567A94* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D Position { get { return mPosition; } set { mPosition = value; } }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = __this->___mPosition_1;
-		return L_0;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_EdgeOne_mCA3EED47239C3DBA9147802E999F12243BCB5369_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Edge EdgeOne { get; private set; }
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = ___value0;
-		__this->___U3CEdgeOneU3Ek__BackingField_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CEdgeOneU3Ek__BackingField_0), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_EdgeTwo_m01A5D4981077187330C8691F6BDA1FFDE29A87F6_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Edge EdgeTwo { get; private set; }
-		Edge_tDD25CCD6A387AA4BC9CE5E2D76C01AB9BDE26526* L_0 = ___value0;
-		__this->___U3CEdgeTwoU3Ek__BackingField_1 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CEdgeTwoU3Ek__BackingField_1), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EdgeIntersectInfo_set_IntersectionPoint_m3947A1EAC204D859646D60100A77D2266B66712B_inline (EdgeIntersectInfo_tA84318466A17A608B4E438903C633A47CBFF9AAB* __this, Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* ___value0, const RuntimeMethod* method) 
-{
-	{
-		// public Point2D IntersectionPoint { get; private set; }
-		Point2D_t7D4F444FDA2607E22E62B30DC846E6E4FFF123E7* L_0 = ___value0;
-		__this->___U3CIntersectionPointU3Ek__BackingField_2 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CIntersectionPointU3Ek__BackingField_2), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
-{
-	{
-		int32_t L_0 = (int32_t)__this->____size_2;
-		return L_0;
-	}
-}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___item0, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -28359,6 +26952,27 @@ IL_0034:
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mF1C0C56457C655BDFFC6EE5B46FAD8BAEC1F588B_gshared_inline (List_1_t8F3790B7F8C471B3A1336522C7415FB0AC36D47B* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = (int32_t)__this->____size_2;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Enumerator_get_Current_m03DDB9D6C95434581544F1F2FF0D1A36EEAB09AF_gshared_inline (Enumerator_t24E4C96B84374CD9F71B748A47AB020F220D9931* __this, const RuntimeMethod* method) 
+{
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7)__this->____current_3;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m2E9343B9161EB12C0123A2A9801D2BD86422CEEB_gshared_inline (Nullable_1_tAC9037ECF4C188DFFE614617119CAC19A784F9FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28366,10 +26980,10 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m2E9
 		return L_0;
 	}
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
-		RuntimeObject* L_0 = (RuntimeObject*)__this->____current_3;
+		int32_t L_0 = (int32_t)__this->____size_2;
 		return L_0;
 	}
 }
@@ -28446,6 +27060,36 @@ IL_0035:
 IL_003c:
 	{
 		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Equality_m6F2E069A50E787D131261E5CB25FC9E03F95B5E1_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___lhs0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___rhs1, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	bool V_2 = false;
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___lhs0;
+		float L_1 = L_0.___x_0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = ___rhs1;
+		float L_3 = L_2.___x_0;
+		V_0 = ((float)il2cpp_codegen_subtract(L_1, L_3));
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = ___lhs0;
+		float L_5 = L_4.___y_1;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = ___rhs1;
+		float L_7 = L_6.___y_1;
+		V_1 = ((float)il2cpp_codegen_subtract(L_5, L_7));
+		float L_8 = V_0;
+		float L_9 = V_0;
+		float L_10 = V_1;
+		float L_11 = V_1;
+		V_2 = (bool)((((float)((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_8, L_9)), ((float)il2cpp_codegen_multiply(L_10, L_11))))) < ((float)(9.99999944E-11f)))? 1 : 0);
+		goto IL_002e;
+	}
+
+IL_002e:
+	{
+		bool L_12 = V_2;
+		return L_12;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___a0, float ___d1, const RuntimeMethod* method) 

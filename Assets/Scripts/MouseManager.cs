@@ -23,6 +23,7 @@ public class MouseManager : MonoBehaviour
     public BagAnimation bagAnimation;
     public MouseMode mouseMode = MouseMode.None;
     public List<Vector3Int> targets = new List<Vector3Int>();
+    public Vector3Int positionBeforeWalk;
 
     public void Awake() {
         globalValues = Manager.GetGlobalValues();
@@ -242,7 +243,7 @@ public class MouseManager : MonoBehaviour
 
         if (inventory.items.Contains(itemSelected)) {
             Actions.i.ThrowItem(position, origin, itemSelected, inventory);
-            currentStats.ChangeActionPoints(-1);
+            currentStats.UseActionPoints(-1);
             SelectItem(null);
             EndOfAction(currentCharacter, currentStats);
             return true;
@@ -250,7 +251,7 @@ public class MouseManager : MonoBehaviour
         var skill = itemSelected as Skill;
         if (currentStats.DoIHavenEnoughNormalActionPoints(skill.GetAPCost()))
         itemSelected.Call(position, origin, inventory.gameObject, CallType.OnActivate);
-        GameUIManager.i.apUIElement.HighlightAP(-1,null);
+        //GameUIManager.i.apUIElement.HighlightAP(-1,null);
         currentStats.gameObject.GetComponent<SpringToTarget3D>().Nudge(PartyManager.i.currentCharacter.transform.position + new Vector3(0, globalValues.onAttackNudgeAmount/3f), 50, 800);
         PathingManager.i.FlipCharacter(currentStats.gameObject,position, origin);
         SelectItem(null);
@@ -262,7 +263,7 @@ public class MouseManager : MonoBehaviour
     public bool Attack(Vector3Int position, Vector3Int origin,GameObject target,GameObject currentCharacter) {
         if (target == null) { return false; }
         var currentStats = currentCharacter.GetComponent<Stats>();
-        if (!currentStats.DoIHavenEnoughNormalActionPoints(1)) { return false; }
+        if (!currentStats.DoIHavenEnoughNormalActionPoints(1)) { currentStats.ClearAP(); return true; }
         if (!GridManager.i.goMethods.IsInSight(origin, position)) { return false; }
         var inventory = currentCharacter.GetComponent<Inventory>();
         if(currentStats.state == State.Idle) {
@@ -276,7 +277,7 @@ public class MouseManager : MonoBehaviour
         }
         else {
             PathingManager.i.FlipCharacter(currentCharacter, position, origin);
-            currentStats.ChangeActionPoints(-1);
+            currentStats.UseActionPoints(1);
 
            
             if (inventory.mainHand || inventory.offHand) { return true; }
@@ -287,7 +288,7 @@ public class MouseManager : MonoBehaviour
         Meelee:
         var range = GridManager.i.tools.MeeleeRange(origin);
         if (range.Contains(position) && currentStats.DoIHavenEnoughNormalActionPoints(1)) {
-            currentStats.ChangeActionPoints(-1);
+            currentStats.UseActionPoints(1);
             target.GetComponent<Stats>().TakeDamage(1, origin);
             PathingManager.i.FlipCharacter(currentCharacter,position, origin);
             currentCharacter.GetComponent<SpringToTarget3D>().Nudge(new Vector3(0, globalValues.onAttackNudgeAmount), 24, 1000);
@@ -311,7 +312,7 @@ public class MouseManager : MonoBehaviour
         if (target != currentCharacter) { return; }
         if (position.Item() == null) {
             currentStats.SpawnHitNumber("Wait", Color.blue, 1);
-            currentStats.ChangeActionPoints(-1);
+            currentStats.Wait();
             EndOfAction(currentCharacter, currentStats);
             return;
         }
@@ -331,7 +332,7 @@ public class MouseManager : MonoBehaviour
             }
         }
 
-        currentStats.ChangeActionPoints(-1);
+        currentStats.UseActionPoints(1);
         EndOfAction(currentCharacter, currentStats);
     }
 
@@ -341,6 +342,7 @@ public class MouseManager : MonoBehaviour
 
         var walked = PathingManager.i.MoveOneStepLeader(position, origin,stats.gameObject);
         if (walked) {
+            positionBeforeWalk = origin;
             stats.UseWalkActionPoints();
             return true;
         }
@@ -352,6 +354,7 @@ public class MouseManager : MonoBehaviour
         if (!stats.DoIHaveActionPointsToWalk()) { return false; }
         var walked = PathingManager.i.MoveOneStep(position, origin);
         if (walked) {
+            positionBeforeWalk = origin;
             stats.UseWalkActionPoints();
             return true;
         }
@@ -461,7 +464,7 @@ public class MouseManager : MonoBehaviour
             GameUIManager.i.HideHighlight(); return;
         }
 
-        GameUIManager.i.HighlightMouseTile(MousePositionOnGrid());
+        GameUIManager.i.HighlightMouseTile(MousePositionOnGrid(),true);
 
         if (itemSelected is not Skill) { return; }
         var skill = itemSelected as Skill;

@@ -14,13 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPalettes:
   - {fileID: 11400000, guid: 89d93ec78bc29b24d9d763cd03c4829c, type: 2}
+  - {fileID: 11400000, guid: 13a90c91fdd7fab4da439739fde37880, type: 2}
   - {fileID: 11400000, guid: 0bb927ea9b588f2439588c8bc21835aa, type: 2}
+  - {fileID: 11400000, guid: 33ba680cfe0e2a94cbb972422d1b31e6, type: 2}
   features:
-  - {fileID: 21300000, guid: 9145ed1e85cbd994c9375fcf0cd987d4, type: 3}
+  - {fileID: 21300000, guid: 81c1c05d2717cd0419864b0f3d30b914, type: 3}
   - {fileID: 21300000, guid: 1fdf60418e0df57439518ccf9e7d4428, type: 3}
+  - {fileID: 21300000, guid: 9145ed1e85cbd994c9375fcf0cd987d4, type: 3}
   featurePalettes:
   - {fileID: 11400000, guid: 322494b5ad964584784f0f6b5ecaf717, type: 2}
   - {fileID: 11400000, guid: 44140395f03977645aa15ae18ae4ba36, type: 2}
-  permanentTraits: []
+  permanentTraits:
+  - {fileID: 11400000, guid: 4e9ea6065a3a4f846a34b979deb55bf1, type: 2}
+  - {fileID: 11400000, guid: fb8d2324833f5824fbf3bdb26102de78, type: 2}
   extraPartHead: {fileID: 21300000, guid: 7a1db193228d22b47bfb2438dcc98f76, type: 3}
   extraPartBody: {fileID: 21300000, guid: e75e93547d5282b40b02d4e511965019, type: 3}

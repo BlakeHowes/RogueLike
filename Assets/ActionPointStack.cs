@@ -6,13 +6,18 @@ public class ActionPointStack : MonoBehaviour
 {
     public List<ActionPoint> basePoints = new List<ActionPoint>();
     public List<ActionPoint> points = new List<ActionPoint>();
-
-    public void ChangeActionPoints(int amount) {
+    private Stats stats;
+    public void OnEnable() {
+        stats = GetComponent<Stats>();  
+    }
+    public void UseActionPoints(int amount) {
+        APElementCombiner.elements.Clear();
+        if (stats.state == PartyManager.State.Idle) { return; }
         int amountRemoved = 0;
         for (int i = points.Count -1; i >= 0; i--) {
             if (points[i].type == ActionPointType.Movement) {continue;}
             if (points[i].type == ActionPointType.Custom) {
-                CallItem(points[i].item);
+                CallItem(points[i].item,false);
             }
             points.Remove(points[i]);
             amountRemoved++;
@@ -20,15 +25,17 @@ public class ActionPointStack : MonoBehaviour
                 break;
             }
         }
+        APElementCombiner.CallElement();
     }
 
-    public void CallItem(ItemAbstract item) {
-        var mousePos = MouseManager.i.MousePositionOnGrid();
+    public void CallItem(ItemAbstract item,bool walk) {
+
+        var position = MouseManager.i.MousePositionOnGrid();
         var origin = gameObject.Position();
-        var position = origin; 
-        if(item is Weapon) {
-            item.Call(mousePos, origin, gameObject, CallType.OnActivate);
-            return;
+        if (walk) { position = MouseManager.i.positionBeforeWalk; }
+        if (item is ActionPointElement) {
+            var element = item as ActionPointElement;
+            APElementCombiner.AddElement(element.surface, position, origin,gameObject);
         }
         item.Call(position, origin, gameObject, CallType.OnActivate);
     }
@@ -41,6 +48,7 @@ public class ActionPointStack : MonoBehaviour
     }
 
     public void UseWalkActionPoints(int amount) {
+        APElementCombiner.elements.Clear();
         int amountRemoved = 0;
         for (int i = points.Count - 1; i >= 0; i--) {
             if (points[i].type != ActionPointType.Movement) { continue; }
@@ -52,7 +60,7 @@ public class ActionPointStack : MonoBehaviour
         }
         for (int i = points.Count - 1; i >= 0; i--) {
             if (points[i].type == ActionPointType.Custom) {
-                CallItem(points[i].item);
+                CallItem(points[i].item,true);
             }
             points.Remove(points[i]);
             amountRemoved++;
@@ -60,6 +68,7 @@ public class ActionPointStack : MonoBehaviour
                 return;
             }
         }
+        APElementCombiner.CallElement();
     }
 
     public bool DoIHaveActionPointsToWalk(int amount) {
@@ -89,4 +98,8 @@ public class ActionPointStack : MonoBehaviour
 public class ActionPoint {
     public ActionPointType type;
     public ItemAbstract item;
+    public ActionPoint(ActionPointType type, ItemAbstract item) { 
+    this.type = type;
+    this.item = item;
+    }
 }

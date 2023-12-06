@@ -46,6 +46,16 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
+    - action: {fileID: 11400000, guid: 6a13b750043fb5a498a3c956d3d7de42, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   description: 
   shopValue: 10
   subItems: []
@@ -55,3 +65,4 @@ MonoBehaviour:
   thrownLocation: {x: 0, y: 0, z: 0}
   viableTargets:
   - {fileID: 3381531369335737414, guid: 1f1601b96b85bd94f9f66c0dad56ef57, type: 3}
+  - {fileID: 3381531369335737414, guid: 713a520ec170155448c7cc080373b158, type: 3}

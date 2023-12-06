@@ -388,10 +388,10 @@ MonoBehaviour:
     item: {fileID: 0}
   - type: 0
     item: {fileID: 0}
-  - type: 0
-    item: {fileID: 0}
-  - type: 0
-    item: {fileID: 0}
+  - type: 2
+    item: {fileID: 11400000, guid: 1d9d55e1f67b3054798ca14f7094399a, type: 2}
+  - type: 2
+    item: {fileID: 11400000, guid: 1d9d55e1f67b3054798ca14f7094399a, type: 2}
   - type: 1
     item: {fileID: 0}
   - type: 1

@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Kick
+      stringValue: Pull a character towards you
     - action: {fileID: 11400000, guid: 242c1f441d8db854bb1b247bb25adbaa, type: 2}
       intValue: 20
       floatValue: 0
@@ -95,12 +95,12 @@ MonoBehaviour:
       stringValue: Kick
   rangeType: 0
   targetsTags: -1
+  weaponType: 0
   range: 5
   AOE: 0
   actionPointCost: 1
   coolDown: 0
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

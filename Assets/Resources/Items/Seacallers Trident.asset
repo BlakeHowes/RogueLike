@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
+  m_Name: Seacallers Trident
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 1dd6f3902b30c2e428444f9aa7ad0016, type: 2}
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 875bd14135ae53e47a4cb62407842c41, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: a9dc6512f1920d64ab6c5c706c0391a5, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 3, y: 1}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: c277371054bfa2640937a92073f036d0, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 3, y: 1}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 568943927c191564f80dbb8ca8ac948e, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 4af58df6164b6a94085977398000f310, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 3, y: 1}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 663a26766991da445b5e6305b99852a3, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 4af58df6164b6a94085977398000f310, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 3, y: 1}
+      surfaceValue: {fileID: 11400000, guid: fb91e95bf6b37024b8b67a78c9e6750c, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  - callType: 10
+    actionContainers:
+    - action: {fileID: 11400000, guid: e3130203548a3a24e965947238ad3922, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 471a8a2732c62e6478e802fb5d608346, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  shopValue: 50
+  weaponType: 0
+  damageRange: {x: 5, y: 8}
+  accuracyBase: 100
+  rangeBase: 2
+  heldOffset: {x: -3, y: 2, z: 0}
+  twoHanded: 1
+  parentGO: {fileID: 0}
+  target: {fileID: 0}
+  damageTotal: 0

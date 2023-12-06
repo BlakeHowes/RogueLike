@@ -48,6 +48,118 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
+  - callType: 2
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: a5ad691e04845d542aa905dff8227556, type: 3}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Shield Bash Enemies
+    - action: {fileID: 11400000, guid: b08e53df69bbafa44a46b78719c2cd86, type: 2}
+      intValue: 1
+      floatValue: 0.2
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 3b191e5224aef8442aa6b72eac2468db, type: 2}
+      intValue: 1
+      floatValue: 0.2
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0a410748905f0204389c32748a361d00, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: da6dc9add706734439cf8f2f75c0e5f4, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 758f536bb716b88499fd60c64e8b3cd9, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+      intValue: 1
+      floatValue: 0.2
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: b175c9666dd5b1d4cb312af3064f711c, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+      intValue: 1
+      floatValue: 0.1
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 303c3ca73e5f6f048b7402c155701197, type: 2}
+      intValue: 1
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+      intValue: 1
+      floatValue: 0.2
+      itemValue: {fileID: 11400000, guid: 670b825d65e96a74f8d5eea4283ec0c2, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 1, y: 4}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   shopValue: 10
   armour: 0
   equipmentType: 1

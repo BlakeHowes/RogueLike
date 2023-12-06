@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06252a1ea6c6dd3439218420cde6c3d7, type: 3}
+  m_Name: Hellfire
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 17afce58a28caa8469f70839026af993, type: 2}
+  iconColour: {r: 1, g: 0.039559267, b: 0, a: 1}
+  combinations:
+  - inputSurface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
+    resultingSurface: {fileID: 11400000, guid: e8d088f09a687b34cb6a3e16181cf343, type: 2}
+    subItem: {fileID: 0}
+  - inputSurface: {fileID: 11400000, guid: 13360019c5a4cad409fb8d38e90bb243, type: 2}
+    resultingSurface: {fileID: 11400000}
+    subItem: {fileID: 11400000, guid: 8dd2794bf795c2642bf371687f1b35f6, type: 2}
+  - inputSurface: {fileID: 11400000, guid: 42ec6803fe554094ead4945c24c5288e, type: 2}
+    resultingSurface: {fileID: 0}
+    subItem: {fileID: 0}
+  abilities: []
+  StatusEffect: {fileID: 11400000, guid: cfc116324bc34e44fa5d5e63d8b986c2, type: 2}
+  duration: {x: 10, y: 15}
+  counter: 0
+  effectPrefab: {fileID: 8288408381700605430, guid: af6d5fc68edeb644fb7bffa7241dd03e,
+    type: 3}
+  dryUpSurface: {fileID: 11400000, guid: c3b1199835172e54691528759083a4a3, type: 2}
+  dryUp: 1
+  tryToSpread: 1
+  allowAnySurfaceToSetOverThis: 0
+  description: 

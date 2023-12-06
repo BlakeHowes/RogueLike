@@ -13,15 +13,57 @@ MonoBehaviour:
   m_Name: Throw
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 334fc86254cfe80478f82096cc2f51fe, type: 2}
-  abilities: []
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 3e2a762c35e7699468bc614dd449b83a, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 7499ab1656192544c8d47a88fbe969f8, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 8d07bea534e8f394eb83d11b284d2e92, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 38de8ba1ab58e734fa00c2df4ed4e3a0, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
   rangeType: 0
   targetsTags: -1
-  range: 2
+  weaponType: 0
+  range: 7
   AOE: 0
   actionPointCost: 1
   coolDown: 0
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

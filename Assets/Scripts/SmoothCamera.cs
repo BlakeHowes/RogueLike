@@ -47,6 +47,10 @@ public class SmoothCamera : MonoBehaviour {
         if (Drag == true) {
             Camera.main.transform.position = Origin - Diference;
         }
+        if(Input.GetAxisRaw("Mouse ScrollWheel") != 0){
+            var touchZoom = GetComponent<LeanCameraZoom>();
+            touchZoom.enabled = false;
+        }
         size -= Input.GetAxis("Mouse ScrollWheel") * ZoomSensitivity;
         var sizeLerp = Mathf.Lerp(mCamera.orthographicSize, size, zoomSpeed);
         mCamera.orthographicSize = Mathf.Clamp(sizeLerp, minZoom, maxZoom);

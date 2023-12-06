@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Turn armour into Damage
+      stringValue: Deal damage equal too your armour then set too zero
     - action: {fileID: 11400000, guid: c6d48289743e3124dbedfa50c251c51b, type: 2}
       intValue: 20
       floatValue: 0
@@ -73,12 +73,12 @@ MonoBehaviour:
       stringValue: Turn armour into Damage
   rangeType: 0
   targetsTags: -1
+  weaponType: 0
   range: 1
   AOE: 0
   actionPointCost: 1
-  coolDown: 0
+  coolDown: 1
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

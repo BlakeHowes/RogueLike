@@ -228,11 +228,12 @@ public class GridManager : MonoBehaviour {
     public void RemoveFromStack(Action action) {
         if (itemsInActionStack.Contains(action)) { itemsInActionStack.Remove(action); }
     }
-    public void AddToStack(Action action) {
+    public Action AddToStack(Action action) {
         var clone = Instantiate(action);
         clone.name += UnityEngine.Random.Range(0.000f, 100.000f);
-        if (insertToStack) { itemsInActionStack.Insert(1,clone);return; }
+        if (insertToStack) { itemsInActionStack.Insert(1,clone);return clone; }
         itemsInActionStack.Add(clone);
+        return clone;
     }
 
     public void AddToStack(Action action, bool instantiate) {

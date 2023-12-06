@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143d52ba78b423647a0221d72e5d32bd, type: 3}
+  m_Name: DamageMainHandIgnoringRange
+  m_EditorClassIdentifier: 
+  origin: {x: 23, y: 8, z: 0}
+  position: {x: 19, y: 10, z: 0}
+  parentGO: {fileID: 0}
+  parentItem: {fileID: 11400000, guid: 471a8a2732c62e6478e802fb5d608346, type: 2}
+  extraVariableType: 0
+  damage: 0
+  areaRange: 0
+  damageSource: 11
+  weapon: {fileID: 0}
+  targetGo: {fileID: 0}
+  damageRange: {x: 0, y: 0}
+  element: {fileID: 0}

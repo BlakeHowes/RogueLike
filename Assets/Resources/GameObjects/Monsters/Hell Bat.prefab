@@ -92,6 +92,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: b4d250f26f78afc49a84b284d66fdd9a, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 200
   maxArmourBase: 0
   actionPointsBase: 6
@@ -269,3 +270,6 @@ MonoBehaviour:
   - weaponType: 0
     surface: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
     damageMultiplier: 0
+  - weaponType: 0
+    surface: {fileID: 11400000, guid: ac4341030e7b19d44ac0ed5749d1d127, type: 2}
+    damageMultiplier: 1.2

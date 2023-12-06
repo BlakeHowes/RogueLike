@@ -208,11 +208,12 @@ public class Stats : MonoBehaviour {
         if (!infiniteHealth)health -= damage;
 
         if (gameObject.CompareTag("Enemy") && originGO) {
-            if (state != PartyManager.State.Combat) {
-                state = PartyManager.State.Combat;
+            var originStats = originGO.GetComponent<Stats>();
+            if (state != PartyManager.State.Combat || originStats.state != PartyManager.State.Combat) {
+                state = PartyManager.State.Combat; 
                 PartyManager.i.enemyParty.Add(gameObject);
                 if (originGO.CompareTag("Party") && health > 0) {
-                    originGO.GetComponent<Stats>().state = PartyManager.State.Combat;
+                    originStats.state = PartyManager.State.Combat;
                     GetComponent<Behaviours>().target = originGO;
                 }
 
@@ -307,9 +308,20 @@ public class Stats : MonoBehaviour {
     }
 
 
-    public void ChangeActionPoints(int amount) {
+    public void UseActionPoints(int amount) {
         if (actionPointStack) {
-            actionPointStack.ChangeActionPoints(amount);
+            actionPointStack.UseActionPoints(amount);
+            return;
+        }
+
+        actionPoints -= amount;
+    }
+
+    public void GainActionPoints(int amount) {
+        if (actionPointStack) {
+            for (int i = 0; i < amount; i++) {
+                actionPointStack.points.Add(new ActionPoint(ActionPointType.Normal,null));
+            }
             return;
         }
 
@@ -354,6 +366,19 @@ public class Stats : MonoBehaviour {
         if (actionPointStack) { actionPointStack.ResetActionPoints(); }
         actionPoints = actionPointsTemp;
         if(actionPoints == 0) { actionPoints = actionPointsBase; }
+    }
+
+    public void Wait() {
+        if (actionPointStack) {
+            actionPointStack.UseWalkActionPoints(1);
+        }
+    }
+
+    public void ClearAP() {
+        if (actionPointStack) { 
+            actionPointStack.points.Clear();
+            Debug.Log(actionPointStack.points.Count);
+        }
     }
 
     public void RefreshCharacter(Vector3Int position) {

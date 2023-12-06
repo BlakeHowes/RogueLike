@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 8420445016691513090}
   - component: {fileID: -568506143789610820}
   - component: {fileID: 6239783329631998961}
+  - component: {fileID: -4074177193800058311}
   m_Layer: 0
   m_Name: GenericCharacter
   m_TagString: Party
@@ -167,6 +168,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: f24e8679fdc752043bd68bae07de0aab, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 50
   maxArmourBase: 0
   actionPointsBase: 4
@@ -332,6 +334,32 @@ MonoBehaviour:
   position: 0
   direction: 0
   tooltip: 
+--- !u!114 &-4074177193800058311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5542796673496099087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b92bf1a635be1c45abc12ecdb020115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePoints:
+  - type: 0
+    item: {fileID: 11400000, guid: 7252269420e26004e8504f204ccca940, type: 2}
+  - type: 0
+    item: {fileID: 11400000, guid: 6b51b67e965cfac4592ff2dbd985b981, type: 2}
+  - type: 0
+    item: {fileID: 0}
+  - type: 0
+    item: {fileID: 0}
+  - type: 1
+    item: {fileID: 0}
+  - type: 1
+    item: {fileID: 0}
+  points: []
 --- !u!1001 &5644671997302293045
 PrefabInstance:
   m_ObjectHideFlags: 0

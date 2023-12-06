@@ -45,7 +45,7 @@ public class AddStat : Action, IDescription {
                 break;
             case Stat.MaxActionPoints: stats.actionPointsTemp += amount; break;
             case Stat.Damage: stats.meleeDamage += amount; break;
-            case Stat.ActionPoints: stats.actionPoints += amount;
+            case Stat.ActionPoints: stats.GainActionPoints(amount);
                 if (set) { stats.actionPoints = amount; }
                 break;
             case Stat.DamageTaken: stats.damageTaken = amount; break;

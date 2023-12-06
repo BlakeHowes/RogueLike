@@ -17,14 +17,15 @@ public class Surface : ScriptableObject
     GameObject effectClone;
     public Surface dryUpSurface;
     public bool dryUp = true;
-    public bool tryToSpread;
+    public bool tryToSpreadOnEverything;
+    public List<Surface> spreadSpecific = new List<Surface>();
+    public bool allowAnySurfaceToSetOverThis;
     public string description;
     public void Spread(Vector3Int position) {
         if (counter < 2) { return; }
-        var walkableTilemap = GridManager.i.floorTilemap;
         var circle = position.Circle(1);
         foreach (var cell in circle) {
-            if (!walkableTilemap.GetTile(cell)) { continue; }
+            if (!FloorManager.i.IsWalkable(cell)) { continue; }
             if(GridManager.i.CombineSurface(cell, this)) {
                 if(cell.x > position.x || cell.y > position.y) {
                     GridManager.i.GetOrSpawnSurface(cell).counter--;
@@ -44,6 +45,29 @@ public class Surface : ScriptableObject
         }
     }
 
+    public void SpreadSpecific(Vector3Int position) {
+        if (counter < 2) { return; }
+        var circle = position.Circle(1);
+        foreach (var cell in circle) {
+            if (!FloorManager.i.IsWalkable(cell)) { continue; }
+            var surface = GridManager.i.GetOrSpawnSurface(cell);
+            if (!surface) { continue; }
+            bool correctSurface = false;
+            foreach(var specificSurface in spreadSpecific) {
+                if(GridManager.i.IsSameSurface(specificSurface, surface)) {
+                    correctSurface = true;
+                }
+            }
+            if (!correctSurface) { continue; }
+            if (GridManager.i.CombineSurface(cell, this)) {
+                if (cell.x > position.x || cell.y > position.y) {
+                    GridManager.i.GetOrSpawnSurface(cell).counter--;
+                }
+                continue;
+            }
+        }
+    }
+
     public void DryUp(Vector3Int position) {
         if (counter > Random.Range(duration.x, duration.y)) {
             counter = 0;
@@ -52,7 +76,7 @@ public class Surface : ScriptableObject
             return;
         }
 
-        if (dryUp || tryToSpread) {
+        if (dryUp || tryToSpreadOnEverything) {
             var surfaceTilemap = GridManager.i.surfaceTilemap;
             var circle = GridManager.i.tools.Circle(1, position);
             foreach (var cell in circle) {
@@ -75,9 +99,10 @@ public class Surface : ScriptableObject
             effectClone.transform.parent = null;
             //GridManager.i.surfaceTilemap.SetColor(position,Color.clear);
         }
-        if (tryToSpread) {
+        if (tryToSpreadOnEverything) {
             Spread(position);
         }
+        if(spreadSpecific.Count > 0) { SpreadSpecific(position); }
         DryUp(position);
         
 
@@ -107,6 +132,10 @@ public class Surface : ScriptableObject
                 if (combination.subItem) { combination.subItem.Call(position, position,null, ItemStatic.CallType.OnActivate); }
                 return true;
             }
+        }
+        if (allowAnySurfaceToSetOverThis) { 
+            GridManager.i.SetSurface(position, surface); 
+            return true;
         }
         return false;
     }

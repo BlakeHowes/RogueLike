@@ -27,6 +27,17 @@ MonoBehaviour:
       surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
       spriteValue: {fileID: 0}
       stringValue: 
+    - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 6375196592243838218, guid: 864d4fd45943c524c99213928a26a468,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
     - action: {fileID: 11400000, guid: 95b965062ed01374997609207908785c, type: 2}
       intValue: 2
       floatValue: 0

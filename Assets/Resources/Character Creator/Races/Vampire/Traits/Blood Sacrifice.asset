@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751d7de29112efe4caa928efc5de1090, type: 3}
   m_Name: Blood Sacrifice
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 5109417d454ea684a911f86357cf24c7, type: 2}
+  tile: {fileID: 11400000, guid: ad4c1ea9ddc4e934ca911f06427dcb01, type: 2}
   abilities:
   - callType: 0
     actionContainers:
@@ -24,7 +24,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300000, guid: 75af448489997a64c987f1d1a934e23b, type: 3}
+      spriteValue: {fileID: 21300000, guid: 9fc2d6cfc11aafb45b8a56b451b6a948, type: 3}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 4
@@ -77,14 +77,14 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
-  rangeType: 0
+  rangeType: 5
   targetsTags: 1
+  weaponType: 0
   range: 0
   AOE: 0
   actionPointCost: 0
   coolDown: 0
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

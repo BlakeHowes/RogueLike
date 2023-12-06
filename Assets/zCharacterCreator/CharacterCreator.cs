@@ -91,6 +91,10 @@ public class CharacterCreator : MonoBehaviour {
         character.transform.position = editPosition.position;
         editLayout.gameObject.SetActive(true);
         selectLayout.gameObject.SetActive(false);
+        if (options.body.name == "Undead") {
+            var paletteButtonsInLayout = editLayout.Find("Race").Find("PaletteLayout");
+            CreatePaletteButtons(paletteButtonsInLayout, CCAssets.i.undeadPalettes, PaletteButtonType.Body);
+        }
         RefreshContent(character,false);
     }
 

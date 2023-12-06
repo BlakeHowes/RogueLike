@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
@@ -41,7 +42,14 @@ public class GlobalValues : ScriptableObject
     [Header("Inventory")]
     public int maxItems = 9;
     public StatusEffect stun;
+    public ActionContainer spinningThrowProjectile;
+    public ActionContainer straightThrowProjectile;
 
+    [Header("Elemets")]
+    public List<ActionPointElement> actionPointElements;
+    public List<ActionPointElement> actionPointElementsPoolForTraits;
+    public TextAsset comboCSV;
+    public string[,] surfaceResult;
 
     [Header("Pathing")]
     public int maxPathLength;
@@ -94,7 +102,44 @@ public class GlobalValues : ScriptableObject
         return waitSeconds;
     }
 
+    private T[,] Make2DArray<T>(T[] input, int height, int width) {
+        T[,] output = new T[height, width];
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                output[i, j] = input[i * width + j];
+            }
+        }
+        return output;
+    }
+
+    public string getResultingSurface(string surface1,string surface2) {
+        int row = 0;
+        int col = 0;
+        int length = 3;
+        for (int i = 0; i < length; i++) {
+            if(surface1.Equals(surfaceResult[i, 0])) {
+                row = i;
+                break;
+            }
+        }
+        for (int i = 0; i < length; i++) {
+            if (surface2 == surfaceResult[0, i]) {
+                col = i;
+                break;
+            }
+        }
+        return surfaceResult[row, col];
+    }
+
     public void OnStartOfRun() {
+        var surfaces = Regex.Split(comboCSV.text, "[,\n]");
+        for (int i2 = 0; i2 < surfaces.Length; i2++) {
+            surfaces[i2] = surfaces[i2].Trim();
+        }
+        var length = surfaces.Length;
+        int size = Mathf.FloorToInt(Mathf.Sqrt(surfaces.Length));
+        surfaceResult = new string[size, size];
+        surfaceResult = Make2DArray(surfaces, size, size);
         chosenItems.Clear();
     }
 

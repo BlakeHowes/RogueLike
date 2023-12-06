@@ -10,6 +10,7 @@ public class ToggleColour : MonoBehaviour
     public bool toggle;
     public void Toggle() {
         toggle = !toggle;
+        PartyManager.i.follow = toggle;
         if (toggle) { GetComponent<Image>().color = colorOn; } else {
             GetComponent<Image>().color = colorOff;
         }

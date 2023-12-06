@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Summon Random Animal
+      stringValue: Summon a Rabbit
     - action: {fileID: 11400000, guid: e445fb7a8f2ecda459424f96e9c1d165, type: 2}
       intValue: 0
       floatValue: 0
@@ -51,12 +51,12 @@ MonoBehaviour:
       stringValue: 
   rangeType: 0
   targetsTags: -1
+  weaponType: 0
   range: 1
   AOE: 0
   actionPointCost: 2
   coolDown: 8
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

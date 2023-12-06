@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CCAssets : MonoBehaviour
@@ -13,6 +14,7 @@ public class CCAssets : MonoBehaviour
     public List<ItemAbstract> undeadTraits = new List<ItemAbstract> ();
     public void Awake() {
         i = this;
+        UpdateAssets();
         var raceResources = Resources.LoadAll<CCRace>("Character Creator/Races");
         foreach (CCRace race in raceResources) { races.Add(race); }
         var loadoutResources = Resources.LoadAll<CCLoadout>("Character Creator/ClassesLoadouts");
@@ -27,6 +29,37 @@ public class CCAssets : MonoBehaviour
         foreach (CCPalette palette in facePaletteResources) { facePalettes.Add(palette); }
         var undeadPaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Races/Undead");
         foreach (CCPalette palette in undeadPaletteResources) { undeadPalettes.Add(palette); }
+    }
+
+    private static void UpdateAssets() {
+        var races = Resources.LoadAll<CCRace>("Character Creator/Races");
+        foreach (var race in races) {
+            string path = "Character Creator/Races/" + race.name;
+            race.bodyPalettes.Clear();
+            race.featurePalettes.Clear();
+            var palettes = Resources.LoadAll<CCPalette>(path + "/Palettes");
+            foreach (var palette in palettes) {
+                if (palette.name.Contains("Body")) { race.bodyPalettes.Add(palette); }
+                if (palette.name.Contains("Feature")) { race.featurePalettes.Add(palette); }
+            }
+            var traits = Resources.LoadAll<ItemAbstract>(path + "/Traits");
+            race.permanentTraits.Clear();
+            foreach (var trait in traits) {
+                race.permanentTraits.Add(trait);
+            }
+            var featureResources = Resources.LoadAll<Sprite>(path + "/Features");
+            race.features.Clear();
+            foreach (var feature in featureResources) {
+                race.features.Add(feature);
+            }
+            var extraParts = Resources.LoadAll<Sprite>(path);
+            race.extraPartHead = null;
+            race.extraPartBody = null;
+            foreach (var sprite in extraParts) {
+                if (sprite.name.Contains("Head")) { race.extraPartHead = sprite; }
+                if (sprite.name.Contains("Body")) { race.extraPartBody = sprite; }
+            }
+        }
     }
 
     public T NextOption<T>(int direction, List<T> list, T current) {

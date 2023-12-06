@@ -43,4 +43,4 @@ MonoBehaviour:
   wornSprite: {fileID: 0}
   customDescription: 
   wornOffset: {x: 0, y: 0, z: 0}
-  hideHair: 0
+  hideHair: 1

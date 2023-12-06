@@ -41,6 +41,45 @@ MonoBehaviour:
   lightAlphaNonSelectedCharacter: 0
   maxItems: 9
   stun: {fileID: 11400000, guid: aa92fadb9d85d72448468ca31dc32a53, type: 2}
+  spinningThrowProjectile:
+    action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+    intValue: 0
+    floatValue: 0
+    itemValue: {fileID: 0}
+    prefabValue: {fileID: 6375196592243838218, guid: d4074137829b63c4e8afa23686965622,
+      type: 3}
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vector2IntValue: {x: 0, y: 0}
+    surfaceValue: {fileID: 0}
+    spriteValue: {fileID: 0}
+    stringValue: 
+  straightThrowProjectile:
+    action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+    intValue: 0
+    floatValue: 0
+    itemValue: {fileID: 0}
+    prefabValue: {fileID: 6375196592243838218, guid: 39e91c78d629bc44399656e4cbd4ff7c,
+      type: 3}
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vector2IntValue: {x: 0, y: 0}
+    surfaceValue: {fileID: 0}
+    spriteValue: {fileID: 0}
+    stringValue: 
+  actionPointElements:
+  - {fileID: 11400000, guid: 1d9d55e1f67b3054798ca14f7094399a, type: 2}
+  - {fileID: 11400000, guid: 77882dc720e002942b36780df26f112f, type: 2}
+  - {fileID: 11400000, guid: 8d3d7be7042cd3f48a0008f32c856a53, type: 2}
+  - {fileID: 11400000, guid: 37732058039a85242b50c194266690ab, type: 2}
+  - {fileID: 11400000, guid: 7a9071910a389e34d91ab203c3c2b41c, type: 2}
+  - {fileID: 11400000, guid: f26a34fc488f44541b3c8457c57eeb39, type: 2}
+  - {fileID: 11400000, guid: 9bc034d7825128b479fc3b03c3538981, type: 2}
+  actionPointElementsPoolForTraits:
+  - {fileID: 11400000, guid: 1d9d55e1f67b3054798ca14f7094399a, type: 2}
+  - {fileID: 11400000, guid: 77882dc720e002942b36780df26f112f, type: 2}
+  - {fileID: 11400000, guid: 9bc034d7825128b479fc3b03c3538981, type: 2}
+  - {fileID: 11400000, guid: f26a34fc488f44541b3c8457c57eeb39, type: 2}
+  - {fileID: 11400000, guid: 8d3d7be7042cd3f48a0008f32c856a53, type: 2}
+  comboCSV: {fileID: 4900000, guid: 902e4a86bd0a68349985024285657420, type: 3}
   maxPathLength: 30
   stepAnimationHeight: 5.18
   stepAnimationSpeed: 0.31
@@ -134,4 +173,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 956b348c4a249b34a83a3dc13862b8d1, type: 2}
   - {fileID: 11400000, guid: b06f2f5f1973a344f99d2481b6891759, type: 2}
   - {fileID: 11400000, guid: ed8adfbf45d4469479b487969c797f0d, type: 2}
+  - {fileID: 11400000, guid: f6cdb7d5ad6b9d34fb1cbd19e813ee8b, type: 2}
+  - {fileID: 11400000, guid: d0809c4f7c6bd5b489bd24772734f7dd, type: 2}
   chosenItems: []

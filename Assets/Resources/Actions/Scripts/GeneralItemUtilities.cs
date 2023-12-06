@@ -23,6 +23,7 @@ public class GeneralItemUtilities : Action {
                 if (offHand) { if (offHand.weaponType != weaponType) { return false; } }
                 break;
             case Type.IfOriginGo: if (!origin.GameObjectGo()) { return false; } break;
+            case Type.DestroyThisItem:this.AddToStack(); break;
 
         }
         return true;
@@ -30,6 +31,19 @@ public class GeneralItemUtilities : Action {
     }
 
     public override IEnumerator StackAction() {
+        Action actionToRemove = null;
+        if(type == Type.DestroyThisItem) {
+            foreach(var item in GridManager.i.itemsInActionStack) {
+                if(item is UtilityActions) {
+                    var dropItem = item as UtilityActions;
+                    if(dropItem.type == UtilityActions.Type.DropItem) {
+                        actionToRemove = item;
+                    }
+                }
+            }
+            GridManager.i.RemoveFromStack(actionToRemove);
+        }
+
         yield return null;
     }
 
@@ -43,6 +57,7 @@ public class GeneralItemUtilities : Action {
         Debug,
         IfPositionInIdle,
         IfOriginGo,
+        DestroyThisItem,
     }
 }
 

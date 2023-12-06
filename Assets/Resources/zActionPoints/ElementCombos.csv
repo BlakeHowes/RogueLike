@@ -1,0 +1,7 @@
+Null,Fire,Water,Oil,Ice,Steam,Explosive
+Fire,Hellfire,Steam,Explosive,Water,Steam,Explosive
+Water,Steam,Water,Oil,Ice,Water,Steam
+Oil,Explosive,Oil,Oil,Oil,Oil,Explosive
+Ice,Water,Ice,Oil,Ice,Water,Steam
+Steam,Steam,Water,Oil,Water,Steam,Steam
+Explosive,Explosive,Steam,Explosive,Steam,Steam,Explosive

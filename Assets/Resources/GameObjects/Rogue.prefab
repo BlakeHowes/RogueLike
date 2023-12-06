@@ -168,13 +168,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePoints:
   - type: 2
-    item: {fileID: 11400000, guid: 7252269420e26004e8504f204ccca940, type: 2}
+    item: {fileID: 11400000, guid: f26a34fc488f44541b3c8457c57eeb39, type: 2}
   - type: 2
-    item: {fileID: 11400000, guid: 6b51b67e965cfac4592ff2dbd985b981, type: 2}
-  - type: 0
-    item: {fileID: 0}
-  - type: 0
-    item: {fileID: 0}
+    item: {fileID: 11400000, guid: 8d3d7be7042cd3f48a0008f32c856a53, type: 2}
+  - type: 2
+    item: {fileID: 11400000, guid: 1d9d55e1f67b3054798ca14f7094399a, type: 2}
+  - type: 2
+    item: {fileID: 11400000, guid: 1d9d55e1f67b3054798ca14f7094399a, type: 2}
   - type: 1
     item: {fileID: 0}
   - type: 1
@@ -255,8 +255,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af0d447c440855341912d2d63fdc32b6, type: 2}
   - {fileID: 11400000, guid: 95a1a4e5a05b6dc4d826441d5a38e675, type: 2}
   traits:
-  - {fileID: 11400000, guid: 8ac1bb7ff9c47a24d8d42f9e6ca5c89d, type: 2}
-  - {fileID: 11400000, guid: d9cfcb8eec5ea234ea1dcb0e7004b2db, type: 2}
   - {fileID: 11400000, guid: 3861e3f7c2f426f42b46dfe8cce291c0, type: 2}
   - {fileID: 11400000, guid: e2fd7d1eb258cff4c9bb3e9a177077b5, type: 2}
   - {fileID: 11400000, guid: 3c856b9744f71824a83d9edeb46a5c23, type: 2}
@@ -267,9 +265,9 @@ MonoBehaviour:
   statusEffects: []
   mainHand: {fileID: 11400000, guid: 85b1d7a58134d854aa0efa07a4fe50d3, type: 2}
   offHand: {fileID: 11400000, guid: af0d447c440855341912d2d63fdc32b6, type: 2}
-  helmet: {fileID: 0}
+  helmet: {fileID: 11400000, guid: 5c9c5269f5204f045b0505d94695cb95, type: 2}
   armour: {fileID: 11400000, guid: e9266809da9eb504ba444080470830d8, type: 2}
-  trinket1: {fileID: 11400000, guid: 3eef8e428404eba4482d5c56fef962ef, type: 2}
+  trinket1: {fileID: 0}
   trinket2: {fileID: 11400000, guid: d262d4956d0e39542be84a034b1d9b83, type: 2}
   trinket3: {fileID: 0}
   trinket4: {fileID: 0}

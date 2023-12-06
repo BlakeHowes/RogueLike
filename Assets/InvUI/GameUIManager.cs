@@ -44,7 +44,8 @@ public class GameUIManager : MonoBehaviour {
         return true;
     }
 
-    public void HighlightMouseTile(Vector3Int position) {
+
+    public void HighlightMouseTile(Vector3Int position,bool hideCursor) {
         if (!MouseManager.i.itemSelected) {
             groundUI.ClearAllTiles();
         }
@@ -52,7 +53,7 @@ public class GameUIManager : MonoBehaviour {
         uiTilemap.ClearAllTiles();
         if (!FloorManager.i.IsWalkable(position)) { HideHighlight(); return; }
         //var origin = PartyManager.i.GetCurrentTurnCharacter().Position();
-        uiTilemap.SetTile(position, globalValues.mouseHighlight);
+        if(!hideCursor)uiTilemap.SetTile(position, globalValues.mouseHighlight);
         var character = GridManager.i.goMethods.GetGameObjectOrSpawnFromTile(position);
 
         if (character != null) {

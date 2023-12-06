@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Green Torch
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: c96054988b3fbf94f80f2d26295dae63, type: 2}
-  particles: {fileID: 8288408381700605430, guid: da7ee32d0c257ff41988740771cae0cf,
+  description: 
+  particles: {fileID: 8288408381700605430, guid: 8d41ec47ea57c3944bcfca90ed188cc5,
     type: 3}
   particleOffset: {x: 0.05, y: 1.67, z: 0}
   statusEffect: {fileID: 11400000, guid: 03b4a8fd547fbb649a944d2511b4eb85, type: 2}

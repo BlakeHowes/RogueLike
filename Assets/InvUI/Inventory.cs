@@ -300,7 +300,8 @@ public class Inventory : MonoBehaviour
             statusEffects[i].Call(position, origin, gameObject, callType);
         }
         foreach (var item in traits) {
-            if (item) { item.Call(position, origin, gameObject, callType);}  }
+            if (item) { item.Call(position, origin, gameObject, callType);} 
+        }
         foreach (var item in generalAbilities) { 
             if(item.callType == callType)
             item.Call(position, origin,gameObject, null);

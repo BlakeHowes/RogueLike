@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76d8c5e9f7195d4eaa2a8968bc62cba, type: 3}
   m_Name: Vampire
   m_EditorClassIdentifier: 
-  skinColours:
-  - {fileID: 11400000, guid: 3e59c6807c0b48840b42aa343bc35aa5, type: 2}
+  bodyPalettes:
+  - {fileID: 11400000, guid: 54b9679f11d29cb41b5d11b3ea391d91, type: 2}
+  - {fileID: 11400000, guid: 85efc1ef30e589b4bbd858df1faa8bc4, type: 2}
+  - {fileID: 11400000, guid: b347b3e8de3ced04dbf0bd1e8e648191, type: 2}
+  - {fileID: 11400000, guid: 30bb2b7ac96eccf44aec249a1076121b, type: 2}
   features: []
   featurePalettes: []
-  permanentTraits: []
+  permanentTraits:
+  - {fileID: 11400000, guid: 4bd24b55709d4414bbca6f81dd41235f, type: 2}
+  - {fileID: 11400000, guid: a65e4424526071140b7f24943a70d8a4, type: 2}
+  extraPartHead: {fileID: 0}
+  extraPartBody: {fileID: 0}

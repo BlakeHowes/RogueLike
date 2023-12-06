@@ -20,7 +20,7 @@ public class Skill : ItemAbstract{
 
     [HideInInspector]public Vector3Int targetedStartPosition;
     [HideInInspector] public bool startPositionSet = false;
-    [HideInInspector] public int totalTargets = 0;
+    public int totalTargets = 0;
 
 
 
@@ -66,10 +66,12 @@ public class Skill : ItemAbstract{
         }
         if (MouseManager.i.itemSelected != this) { return; }
 
-        if (callType == CallType.OnActivate && rangeType == RangeType.Multi) {
-            var inventory = parentGO.GetComponent<Inventory>();
-            if (inventory.GetCoolDown(this) > 0) { return; }
-            inventory.AddCoolDown(coolDown + 1, this);
+        if (callType == CallType.OnActivate && coolDown > 0) {
+            if (rangeType == RangeType.Multi || rangeType == RangeType.TwoTargets) {
+                var inventory = parentGO.GetComponent<Inventory>();
+                if (inventory.GetCoolDown(this) > 0) { return; }
+                inventory.AddCoolDown(coolDown + 1, this);
+            }
         }
 
         if (rangeType == RangeType.Multi && callType == CallType.OnActivate) {
@@ -80,7 +82,7 @@ public class Skill : ItemAbstract{
                     }
                 }
             }
-            parentGO.GetComponent<Stats>().ChangeActionPoints(GetAPCost());
+            parentGO.GetComponent<Stats>().UseActionPoints(GetAPCost());
             return;
         }
 
@@ -92,18 +94,21 @@ public class Skill : ItemAbstract{
             return;
         }
 
-        if (callType == CallType.OnActivate) {
+        if (callType == CallType.OnActivate && coolDown > 0) {
             var inventory = parentGO.GetComponent<Inventory>();
             if (inventory.GetCoolDown(this) > 0) { return; }
             inventory.AddCoolDown(coolDown + 1, this);
 
-            parentGO.GetComponent<Stats>().ChangeActionPoints(GetAPCost());
+
         }
 
         foreach (var ability in abilities) {
             if (ability.callType == callType) {
                 ability.Call(position, origin, parentGO, this);
             }
+        }
+        if (callType == CallType.OnActivate) {
+            parentGO.GetComponent<Stats>().UseActionPoints(GetAPCost());
         }
 
     }

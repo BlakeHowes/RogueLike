@@ -63,6 +63,7 @@ public static class CharacterSpriteGenerator {
     }
 
     public static Sprite CreateCharacterSprite(GameObject character) {
+        if (character == null) { Debug.LogError("Character to create sprite for is null"); }
         character.TryGetComponent(out CCOptions options);
         Inventory inventory = character.GetComponent<Inventory>();
         if (!options) { return null; }
@@ -90,7 +91,10 @@ public static class CharacterSpriteGenerator {
             Equipment armourItem = armour as Equipment;
             baseTexture = PasteSprite(armourItem.wornSprite, baseTexture, characterOffset);
         }
-        if (helmet && !options.hideHelmet) { baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset + characterOffset); }
+        if (helmet && !options.hideHelmet) {
+            Equipment helmetItem = helmet as Equipment;
+            baseTexture = PasteSprite(helmet.tile.sprite, baseTexture, options.headOffset + characterOffset + helmetItem.wornOffset);
+        }
 
         if (inventory.mainHand && !options.hideWeapons) {
             var weapon = inventory.mainHand as Weapon;

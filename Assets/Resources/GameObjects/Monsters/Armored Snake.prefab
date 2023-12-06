@@ -53,6 +53,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 3a915e24cb0ae234dad25faa9b4bc11d, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 80
   maxArmourBase: 20
   actionPointsBase: 2
@@ -95,7 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generalAbilities: []
-  items: []
+  items:
+  - {fileID: 11400000, guid: 5c9c5269f5204f045b0505d94695cb95, type: 2}
   traits:
   - {fileID: 11400000, guid: f38ff9c34db631644bffbb0b7e2af260, type: 2}
   skills: []

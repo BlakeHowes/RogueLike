@@ -13,6 +13,11 @@ public class Particle : Action {
         return true;
     }
 
+    public void ConditionWithoutAC(Vector3Int position) {
+        this.position = position;
+        this.AddToStack();
+    }
+
     public override IEnumerator StackAction() {
         if (particle) {
             if (attach) { EffectManager.i.AttachSingleToGO(position, particle); } else {

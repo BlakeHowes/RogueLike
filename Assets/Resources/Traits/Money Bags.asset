@@ -37,9 +37,9 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: 5% of dropping a coin on hit
+      stringValue: 15% of dropping a coin on hit
     - action: {fileID: 11400000, guid: 1a64771c6adfa2d48878159548c12851, type: 2}
-      intValue: 5
+      intValue: 15
       floatValue: 0
       itemValue: {fileID: 0}
       prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
@@ -50,6 +50,17 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 5% of dropping a coin on hit
     - action: {fileID: 11400000, guid: 7ef7bbc2cf99c0046900b06313aae087, type: 2}
+      intValue: 5
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 2fd76d04e82d18348bd6e780ee88038d, type: 2}
+      prefabValue: {fileID: 6780645703283991136, guid: 9bd6583f242b2ac4e9d7bb8abbb5f1a1,
+        type: 3}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 5% of dropping a coin on hit
+    - action: {fileID: 11400000, guid: 758f536bb716b88499fd60c64e8b3cd9, type: 2}
       intValue: 5
       floatValue: 0
       itemValue: {fileID: 11400000, guid: 2fd76d04e82d18348bd6e780ee88038d, type: 2}

@@ -7,4 +7,8 @@ public class CancelButton : MonoBehaviour
     public void Cancel() {
         MouseManager.i.Cancel();
     }
+
+    public void EndTurn() {
+        PartyManager.i.EndTurn();
+    }
 }

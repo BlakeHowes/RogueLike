@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Eletrocute enemies
+      stringValue: Spread Water and eletrocute characters
     - action: {fileID: 11400000, guid: 63309fe9d24883b42a8ad863662ee96c, type: 2}
       intValue: 1
       floatValue: 0
@@ -116,12 +116,12 @@ MonoBehaviour:
       stringValue: 
   rangeType: 1
   targetsTags: -1
+  weaponType: 0
   range: 6
   AOE: 3
   actionPointCost: 2
   coolDown: 2
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

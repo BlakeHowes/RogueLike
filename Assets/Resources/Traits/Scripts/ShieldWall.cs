@@ -12,6 +12,7 @@ public class ShieldWall : Action {
         if (offhand is not Equipment) {
             return false;
         }
+        if (!origin.GameObjectGo()) { return false; }
         stats = origin.GameObjectGo().GetComponent<Stats>();
         stats.BlockDamage();
         target = parentGO;
