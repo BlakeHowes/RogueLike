@@ -17,8 +17,8 @@ public class CCAssets : MonoBehaviour
         UpdateAssets();
         var raceResources = Resources.LoadAll<CCRace>("Character Creator/Races");
         foreach (CCRace race in raceResources) { races.Add(race); }
-        var loadoutResources = Resources.LoadAll<CCLoadout>("Character Creator/ClassesLoadouts");
-        foreach (CCLoadout loadout in loadoutResources) { loadouts.Add(loadout); }
+        //var loadoutResources = Resources.LoadAll<CCLoadout>("Character Creator/ClassesLoadouts");
+        //foreach (CCLoadout loadout in loadoutResources) { loadouts.Add(loadout); }
         var hairResources = Resources.LoadAll<Sprite>("Character Creator/Hair");
         foreach (Sprite sprite in hairResources) { hairs.Add(sprite); }
         var hairPaletteResources = Resources.LoadAll<CCPalette>("Character Creator/Hair");

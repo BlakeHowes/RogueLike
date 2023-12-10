@@ -91,6 +91,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 37083263bc220da47b28d61d0de13c9d, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 90
   maxArmourBase: 0
   actionPointsBase: 3
@@ -138,7 +139,7 @@ MonoBehaviour:
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
+  mainHand: {fileID: 11400000, guid: dbb113b661eac214abf29821700745cb, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}

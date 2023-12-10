@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using static ItemStatic;
+using UnityEngine.SocialPlatforms;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Items/Weapon")]
 
@@ -61,7 +62,8 @@ public class Weapon : ItemAbstract {
     }
 
     public int GetRange(GameObject ParentGO) {
-        return rangeBase;
+        var stats = ParentGO.GetComponent<Stats>();
+        return Mathf.Clamp(rangeBase, stats.minRange, int.MaxValue); ;
     }
 
     private bool isAttackAMiss(Stats stats) {

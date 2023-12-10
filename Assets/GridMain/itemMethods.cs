@@ -71,7 +71,6 @@ public class itemMethods {
     }
 
     public float FloodFillDropItem(Vector3Int position, Vector3Int origin, List<ItemAbstract> items) {
-        var actions = Actions.i;
         var timeTaken = 0.1f;
         var gridManager = GridManager.i;
         if (items.Count == 0) { return timeTaken; }
@@ -113,7 +112,6 @@ public class itemMethods {
     }
 
     public Vector3Int FloodFillDropItem(Vector3Int position, bool placeItemOnFloor, ItemAbstract item) {
-        var actions = Actions.i;
         Queue<Vector3Int> cellstocheck = new Queue<Vector3Int>();
         List<Vector3Int> checkedCells = new List<Vector3Int>();
         if (!position.GameObjectGo() && !GetItem(position)) {

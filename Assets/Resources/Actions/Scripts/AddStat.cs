@@ -7,6 +7,7 @@ public class AddStat : Action, IDescription {
     public Stat stat;
     public bool userGainsStat = true;
     public bool set;
+    public bool movementAP;
     [HideInInspector] public int amount;
     public override bool Condition(Vector3Int position, Vector3Int origin, GameObject parentGO, ItemAbstract parentItem, Ability ability, ActionContainer actionContainer) {
         amount = actionContainer.intValue;
@@ -45,7 +46,14 @@ public class AddStat : Action, IDescription {
                 break;
             case Stat.MaxActionPoints: stats.actionPointsTemp += amount; break;
             case Stat.Damage: stats.meleeDamage += amount; break;
-            case Stat.ActionPoints: stats.GainActionPoints(amount);
+            case Stat.ActionPoints:
+                if (movementAP) {
+                    stats.GainActionPoints(amount, ActionPointType.Movement, null);
+                }
+                else {
+                    stats.GainActionPoints(amount);
+                }
+
                 if (set) { stats.actionPoints = amount; }
                 break;
             case Stat.DamageTaken: stats.damageTaken = amount; break;
@@ -53,6 +61,7 @@ public class AddStat : Action, IDescription {
             case Stat.ActionPointCost: stats.actionPointSkillCostChange += amount; break;
             case Stat.EnemyAlertRange: stats.enemyAlertRangeTemp += amount; break;
             case Stat.DamageMultiple: stats.meleeDamageMultiple += amount; break;
+            case Stat.MinRange: stats.SetMinRange(amount); break;
         }
     }
 

@@ -52,18 +52,19 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: d1dc7f953531e9746aca94ef8997cf25, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 1
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 0
-  walkCostBase: 0
   enemyAlertRangeBase: 0
   skillRangeBase: 0
   maxHealthTemp: 0
   maxArmourTemp: 0
   actionPointsTemp: 0
+  actionPointSkillCostChange: 0
   throwingRangeTemp: 0
-  walkCostTemp: 0
+  walkCost: 1
   enemyAlertRangeTemp: 0
   skillRangeTemp: 0
   directDamage: 0
@@ -186,6 +187,7 @@ MonoBehaviour:
   Damping: 15
   Stiffness: 1000
   healthbar: {fileID: 0}
+  disableSpring: 0
 --- !u!114 &3011359740961232716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,5 +218,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushImmunity: 1
   statusImmunites: []
-  actionImmunities: []
   damageInteractions: []

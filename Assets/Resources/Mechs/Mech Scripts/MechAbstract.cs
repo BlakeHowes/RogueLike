@@ -12,8 +12,9 @@ public abstract class MechAbstract : ScriptableObject {
 public static class MechStatic {
     public enum Signal {
         Tick,
-        ClickOnWhileStandingOntopOf,
+        OnPickupItem,
         OnEnable,
-        ItemDroppedOnto
+        ItemDroppedOnto,
+        ClickWhileStandingOntopOf
     }
 }

@@ -37,9 +37,9 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Deal damage equal too your armour then set too zero
-    - action: {fileID: 11400000, guid: c6d48289743e3124dbedfa50c251c51b, type: 2}
-      intValue: 20
+      stringValue: Deal damage equal too your armour too adjacent characters
+    - action: {fileID: 11400000, guid: e9065653003bcd244a3261c9582701cf, type: 2}
+      intValue: 0
       floatValue: 0
       itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
       prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
@@ -49,6 +49,74 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: Turn armour into Damage
+    - action: {fileID: 11400000, guid: 4bba517e7d3f3f9448def083d49178c2, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3,
+        type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Turn armour into Damage
+    - action: {fileID: 11400000, guid: 242c1f441d8db854bb1b247bb25adbaa, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Turn armour into Damage
+    - action: {fileID: 11400000, guid: bdb245fee6201c94a8658566d85b8fbe, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Turn armour into Damage
+    - action: {fileID: 11400000, guid: c6d48289743e3124dbedfa50c251c51b, type: 2}
+      intValue: 20
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Turn armour into Damage
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Turn armour into Damage
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 72d1871d02a9f234088f99b03bcf75df, type: 2}
+      prefabValue: {fileID: 8288408381700605430, guid: 20586fb797c48cd4e9e8cf9398f7da67,
+        type: 3}
+      colorValue: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Set your Armour to 0
     - action: {fileID: 11400000, guid: 1b54edbe82db45949a47d7440671c507, type: 2}
       intValue: 0
       floatValue: 0

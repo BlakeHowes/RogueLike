@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Summon a Rabbit
+      stringValue: Summon a Rabbit to fight for you
     - action: {fileID: 11400000, guid: e445fb7a8f2ecda459424f96e9c1d165, type: 2}
       intValue: 0
       floatValue: 0

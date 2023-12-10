@@ -867,9 +867,9 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 3
-      scalar: 4
-      minScalar: 0.2
+      minMaxState: 0
+      scalar: 0
+      minScalar: 0.01
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -978,7 +978,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 0
+        scalar: 1
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1028,9 +1028,9 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-      cycleCount: 4
-      repeatInterval: 0.2
-      probability: 1
+      cycleCount: 1
+      repeatInterval: 1
+      probability: 0.03
   SizeModule:
     enabled: 1
     curve:
@@ -1365,7 +1365,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 0}
+        key1: {r: 0, g: 0.2062214, b: 0.41509432, a: 0}
         key2: {r: 1, g: 0.39275518, b: 0.11764705, a: 0}
         key3: {r: 1, g: 0.03424205, b: 0, a: 0.039215688}
         key4: {r: 1, g: 0.017601715, b: 0, a: 0.039215688}
@@ -4598,7 +4598,7 @@ ParticleSystem:
     vector1_0:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4859,8 +4859,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 708697295
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_RenderMode: 4
   m_MeshDistribution: 0

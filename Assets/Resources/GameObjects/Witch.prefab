@@ -235,6 +235,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04f7d9d4b8700644b9c2f67146dc0098, type: 2}
   - {fileID: 11400000, guid: e5728ddc1a583614e9a24e95a237efae, type: 2}
   - {fileID: 11400000, guid: ecf886643230e484fa36718981811656, type: 2}
+  - {fileID: 11400000, guid: 479ded912e2720a40b282ac3526203d0, type: 2}
   skills: []
   coolDowns: []
   statusEffects: []

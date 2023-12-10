@@ -46,9 +46,10 @@ public class GridGraphics
                 var position = new Vector3Int(x, y);
                 if (fogMap[x,y] == 0) { continue; }
                 if (itemGrid[x, y] != null) {
-                    if(itemTilemap.GetTile(position) != itemGrid[x, y].tile) {
+                    shadowTilemap.SetTile(position, globalValues.shadowTile);
+                    if (itemTilemap.GetTile(position) != itemGrid[x, y].tile) {
                         itemTilemap.SetTile(position, itemGrid[x, y].tile);
-                        shadowTilemap.SetTile(position, globalValues.shadowTile);
+                       
                     }
                 }
 
@@ -247,30 +248,30 @@ public class GridGraphics
             TimeElapsed += Time.deltaTime;
             yield return null;
         }
+        Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, 0f), Vector3.one);
+        tilemap.SetTransformMatrix(targetTile, matrix);
     }
 
     public IEnumerator FlashAnimation(GameObject character, Vector3Int origin,Color colour) {
         if (character == null) yield break;
         //var position = character.position();
         var renderer = character.GetComponent<SpriteRenderer>();
+        var normalMaterial = PartyManager.i.GetCharacterMaterial(character);
+        var hitMaterial = globalValues.hitMaterial;
         //var startPosition = character.transform.position;
         //GridManager.i.goTilemap.SetColor(position, Color.clear);
 
         if (renderer == null) { yield break; }
         //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
-        renderer.material = globalValues.hitMaterial;
+        renderer.material = hitMaterial;
         renderer.material.color = colour;
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = globalValues.normalMaterial; }
+        if (renderer) { renderer.material = normalMaterial; }
         //character.transform.position = startPosition;
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = globalValues.hitMaterial; }
+        if (renderer) { renderer.material = hitMaterial; }
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = globalValues.normalMaterial; }
-       
-        if (character == PartyManager.i.currentCharacter) {
-            if (renderer) renderer.material = globalValues.outlineMaterial;
-        }
+        if (renderer) { renderer.material = normalMaterial; }
         globalValues.hitMaterial.color = Color.white;
     }
 
@@ -278,18 +279,17 @@ public class GridGraphics
         if (character == null) yield break;
         //var position = character.position();
         var renderer = character.GetComponent<SpriteRenderer>();
+        var normalMaterial = PartyManager.i.GetCharacterMaterial(character);
+        var hitMaterial = globalValues.hitMaterial;
         //var startPosition = character.transform.position;
         //GridManager.i.goTilemap.SetColor(position, Color.clear);
 
         if (renderer == null) { yield break; }
         //character.transform.position = Vector3.MoveTowards(character.transform.position, startPosition, -0.17f);
-        renderer.material = globalValues.hitMaterial;
+        renderer.material = hitMaterial;
         renderer.material.color = colour;
         yield return new WaitForSeconds(0.15f);
-        if (renderer) { renderer.material = globalValues.normalMaterial; }
-        if (character == PartyManager.i.currentCharacter) {
-            if (renderer) renderer.material = globalValues.outlineMaterial;
-        }
-        renderer.material.color = Color.white;
+        if (renderer) { renderer.material = normalMaterial; }
+        globalValues.hitMaterial.color = Color.white;
     }
 }

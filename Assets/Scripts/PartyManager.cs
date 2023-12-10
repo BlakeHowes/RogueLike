@@ -1,3 +1,4 @@
+using LlamAcademy.Spring.Runtime;
 using Panda;
 using System;
 using System.Collections;
@@ -9,11 +10,11 @@ using static ItemStatic;
 public class PartyManager : MonoBehaviour {
     public static PartyManager i;
     public GameObject currentCharacter;
-    public List<GameObject> party = new List<GameObject>();
-    public List<GameObject> enemyParty = new List<GameObject>();
+    public List<GameObject> party = new();
+    public List<GameObject> enemyParty = new();
     [HideInInspector]public Vector3Int characterFollowPosition;
-    public List<GameObject> partyMemberTurnTaken = new List<GameObject>();
-    public List<GameObject> enemyTurnTaken = new List<GameObject>();
+    public List<GameObject> partyMemberTurnTaken = new();
+    public List<GameObject> enemyTurnTaken = new();
     public bool follow = true;
     private GlobalValues globalValues;
     string currentTag;
@@ -160,19 +161,49 @@ public class PartyManager : MonoBehaviour {
         }
     }
 
+    public void ChangeCharacterMaterial(GameObject character) {
+        if (!character) { return; }
+        Material outlineMaterial = null;
+        State state = character.GetComponent<Stats>().state;
+        if (character.CompareTag("Party")) {
+            if(character == currentCharacter) { character.GetComponent<SpriteRenderer>().material = globalValues.currentCharacterMaterial; return; }
+            outlineMaterial = globalValues.partyMaterial; 
+        }
+        if (character.CompareTag("Enemy")) { outlineMaterial = globalValues.enemyoutlineMaterial; }
+        if (character.CompareTag("Summon")) { outlineMaterial = globalValues.summonMaterial; }
+        if (state == State.Idle) { outlineMaterial = globalValues.normalMaterial; }
+        character.GetComponent<SpriteRenderer>().material = outlineMaterial;
+    }
+
+    public Material GetCharacterMaterial(GameObject character) {
+        if (!character) { return null; }
+
+        State state = character.GetComponent<Stats>().state;
+        if (state == State.Idle) { return globalValues.normalMaterial; }
+
+        if (character.CompareTag("Party")) {
+            if (character == currentCharacter) { return globalValues.currentCharacterMaterial; }
+            return globalValues.partyMaterial;
+        }
+        if (character.CompareTag("Enemy")) { return globalValues.enemyoutlineMaterial; }
+        if (character.CompareTag("Summon")) { return globalValues.summonMaterial; }
+       
+        return null;
+    }
+
+
     public void SetCurrentCharacter(GameObject character) {
-        if (currentCharacter) { currentCharacter.GetComponent<SpriteRenderer>().material = globalValues.normalMaterial; }
         var previousCharacter = currentCharacter;
         currentCharacter = character;
+
+        ChangeCharacterMaterial(previousCharacter);
+        ChangeCharacterMaterial(character);
 
         Manager.OnSwitchCharacterCall(currentCharacter, previousCharacter);
 
         currentTag = character.tag;
         var stats = character.GetComponent<Stats>();
-
-        if(currentCharacter.tag == "Summon") { character.GetComponent<SpriteRenderer>().material = globalValues.summonMaterial; }
-        if(currentCharacter.tag == "Party") { character.GetComponent<SpriteRenderer>().material = globalValues.outlineMaterial;}
-        if(currentCharacter.tag == "Enemy") { character.GetComponent<SpriteRenderer>().material = globalValues.enemyoutlineMaterial; }
+        ChangeCharacterMaterial(character);
 
 
         if (currentCharacter.tag == "Summon") { MouseManager.i.disableMouseAndUI = true; }
@@ -233,16 +264,16 @@ public class PartyManager : MonoBehaviour {
 
     public void EndTurn() {
         partyMemberTurnTaken.Add(currentCharacter);
+        GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
         var previousPosition = currentCharacter.Position();
-        currentCharacter.GetComponent<Inventory>().CallEquipment(previousPosition, previousPosition, CallType.OnEndOfIndivualTurn);
+        if(currentCharacter)currentCharacter.GetComponent<Inventory>().CallEquipment(previousPosition, previousPosition, CallType.OnEndOfIndivualTurn);
         SwitchToNextCharacter();
-   
         if (partyMemberTurnTaken.Count >= party.Count) {
             EnemyPartyStartTurn();
         }
         else {
             var pos = currentCharacter.Position();
-            currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
+            if (currentCharacter) currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
             GridManager.i.StartStack();
         }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
@@ -284,7 +315,7 @@ public class PartyManager : MonoBehaviour {
 
             if (!target) { continue; }
             if (pathingInstance.IsPathable(target.Position(), member.Position())) {
-                partyOrder.Add(member, 0);
+                partyOrder.Add(member, 0); //same key
                 continue;
             }
             partyOrder.Add(member, pathingInstance.PathDistance(target.Position(), member.Position()));
@@ -335,7 +366,7 @@ public class PartyManager : MonoBehaviour {
         if(party.Count == 0) { GameUIManager.i.ShowGameOverUI(); return; }
         SetCurrentCharacter(party[0]);
         partyMemberTurnTaken.Clear();
-
+        GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
         var pos = currentCharacter.Position();
         currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
         GridManager.i.StartStack();
@@ -353,6 +384,7 @@ public class PartyManager : MonoBehaviour {
         var stats = enemy.GetComponent<Stats>();
         stats.SpawnHitNumber("!", Color.red, 2);
         stats.state = State.Combat;
+        stats.OnStartOfCombat();
         var clone = Instantiate(GameUIManager.i.enemyInCombatUI, enemy.transform);
         clone.transform.localPosition = Vector3.zero;
         PathingManager.i.FlipCharacter(enemy, origin, enemy.Position());

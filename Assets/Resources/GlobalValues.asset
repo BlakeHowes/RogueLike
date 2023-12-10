@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 66
   height: 45
+  itemHeight: 0.23
+  shadowHeight: 0.15
+  itemAnimationSpeed: 2.11
+  itemAnimationHeight: 0.06
   onHitNudgeAmount: 1.5
   onAttackNudgeAmount: 10.47
+  mobileSettings: 1
+  usePartyInventory: 1
   shadowTile: {fileID: 11400000, guid: 0369ba64565147a4b8256b16fd02b51a, type: 2}
   fog: {fileID: 11400000, guid: 2c396ea2d6ce5d949a0e70a8eba393a0, type: 2}
   bigFog: {fileID: 11400000, guid: 19e6a58cc88fe4c4f9141464049730be, type: 2}
@@ -39,7 +45,7 @@ MonoBehaviour:
     type: 3}
   lightAlphaCurrentCharacter: 0.72
   lightAlphaNonSelectedCharacter: 0
-  maxItems: 9
+  maxItems: 16
   stun: {fileID: 11400000, guid: aa92fadb9d85d72448468ca31dc32a53, type: 2}
   spinningThrowProjectile:
     action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
@@ -60,6 +66,17 @@ MonoBehaviour:
     itemValue: {fileID: 0}
     prefabValue: {fileID: 6375196592243838218, guid: 39e91c78d629bc44399656e4cbd4ff7c,
       type: 3}
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vector2IntValue: {x: 0, y: 0}
+    surfaceValue: {fileID: 0}
+    spriteValue: {fileID: 0}
+    stringValue: 
+  dropItem:
+    action: {fileID: 11400000, guid: 7ef7bbc2cf99c0046900b06313aae087, type: 2}
+    intValue: 0
+    floatValue: 0
+    itemValue: {fileID: 0}
+    prefabValue: {fileID: 0}
     colorValue: {r: 0, g: 0, b: 0, a: 0}
     vector2IntValue: {x: 0, y: 0}
     surfaceValue: {fileID: 0}
@@ -100,8 +117,10 @@ MonoBehaviour:
   passiveHightlightColour: {r: 1, g: 0.7045615, b: 0, a: 1}
   interactableHightlightColour: {r: 1, g: 0.9456895, b: 0, a: 1}
   fadedColour: {r: 1, g: 1, b: 1, a: 0.49803922}
-  outlineMaterial: {fileID: 2100000, guid: 63f90299b0acce349a3819d53cca9ec1, type: 2}
-  summonMaterial: {fileID: 2100000, guid: 9384d6beb91992545a0c70af37853f0a, type: 2}
+  currentCharacterMaterial: {fileID: 2100000, guid: 63f90299b0acce349a3819d53cca9ec1,
+    type: 2}
+  partyMaterial: {fileID: 2100000, guid: 9384d6beb91992545a0c70af37853f0a, type: 2}
+  summonMaterial: {fileID: 2100000, guid: 67ae855940e0fa84bb62acf972048e08, type: 2}
   enemyoutlineMaterial: {fileID: 2100000, guid: 7ed846eec062237448c6e4d8555c8e46,
     type: 2}
   normalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
@@ -155,10 +174,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48c189ae1ae057e4da2c737c943ef43c, type: 2}
   - {fileID: 11400000, guid: f3673bfc8a2051649af2892ee1b6e01f, type: 2}
   traitItems:
-  - {fileID: 11400000, guid: f89229f48d5eca04d84c62fb1c755850, type: 2}
-  - {fileID: 11400000, guid: 2e0d4d8a0c9027e4a9bdcd47181df65d, type: 2}
-  - {fileID: 11400000, guid: 09d54176d5b6a2140b4db137ae8e9a19, type: 2}
-  - {fileID: 11400000, guid: 37957a4b4a891324abc6c01ee36320d2, type: 2}
+  - {fileID: 11400000, guid: db21a24609f91194d99d9a6b4ced8cc6, type: 2}
+  - {fileID: 11400000, guid: 808d163032874d049aa3f740703a20ce, type: 2}
+  - {fileID: 11400000, guid: b07d6cdeab2f06e478e2c3589b92b84d, type: 2}
+  - {fileID: 11400000, guid: fabf3b652bea57b46b59964ab778c8be, type: 2}
   traits:
   - {fileID: 11400000, guid: 453d807b36692194ca7072d32395f8f1, type: 2}
   - {fileID: 11400000, guid: ecf886643230e484fa36718981811656, type: 2}

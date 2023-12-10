@@ -70,7 +70,7 @@ public class Skill : ItemAbstract{
             if (rangeType == RangeType.Multi || rangeType == RangeType.TwoTargets) {
                 var inventory = parentGO.GetComponent<Inventory>();
                 if (inventory.GetCoolDown(this) > 0) { return; }
-                inventory.AddCoolDown(coolDown + 1, this);
+                inventory.AddCoolDown(coolDown, this);
             }
         }
 
@@ -97,7 +97,7 @@ public class Skill : ItemAbstract{
         if (callType == CallType.OnActivate && coolDown > 0) {
             var inventory = parentGO.GetComponent<Inventory>();
             if (inventory.GetCoolDown(this) > 0) { return; }
-            inventory.AddCoolDown(coolDown + 1, this);
+            inventory.AddCoolDown(coolDown, this);
 
 
         }

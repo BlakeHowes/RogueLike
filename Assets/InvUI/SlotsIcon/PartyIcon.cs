@@ -6,6 +6,54 @@ public class PartyIcon : MonoBehaviour
     GameObject character;
     public Vector2Int offset;
     public bool abilitySelection;
+    public Color turnTakenColour;
+    Image image;
+    Image background;
+    Stats stats;
+    public bool setCharacter = true;
+    public void OnEnable() {
+        Manager.OnSwitchCharacter += OnSwitchCharacter;
+    }
+
+    public void OnDisable() {
+        Manager.OnSwitchCharacter -= OnSwitchCharacter;
+    }
+
+    public void OnSwitchCharacter(GameObject currentCharacter, GameObject previousCharacter) {
+        if(currentCharacter == character) {
+            transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else {
+            transform.GetChild(1).gameObject.SetActive(false);
+        }
+    }
+
+    public void GreyOutImage() {
+        if (!image) { image = transform.GetChild(0).GetComponent<Image>(); }
+        image.color = turnTakenColour;
+
+        if (!background) { background = GetComponent<Image>(); }
+        if (!stats) { stats = character.GetComponent<Stats>(); }
+        var colour = Color.black;
+        if (stats.state == PartyManager.State.Combat) {
+            colour = Color.red;
+        }
+        background.color = colour;
+    }
+
+    public void ResetImageColor() {
+        if (!image) { image = transform.GetChild(0).GetComponent<Image>(); }
+        image.color = Color.white;
+
+
+        if (!background) { background = GetComponent<Image>(); }
+        if (!stats) { stats = character.GetComponent<Stats>(); }
+        var colour = Color.black;
+        if (stats.state == PartyManager.State.Combat) {
+            colour = Color.red;
+        }
+        background.color = colour;
+    }
     public void SetIcon(GameObject character) {
         if(character == null) {
             Destroy(gameObject);
@@ -15,7 +63,7 @@ public class PartyIcon : MonoBehaviour
         if (character == null) { 
             return;
         }
-        var image = transform.GetChild(0).GetComponent<Image>();
+        if (!image) { image = transform.GetChild(0).GetComponent<Image>(); }
         var characterSprite = character.GetComponent<SpriteRenderer>().sprite;
         var characterTexture = characterSprite.texture;
         var cropOffset = new Vector2Int(characterTexture.width/2 - 8, characterTexture.height - 16);
@@ -46,6 +94,7 @@ public class PartyIcon : MonoBehaviour
             selector.HideIconHighlights();
             EnableHighlight();
         }
+        if (!setCharacter) { return; }
         if (!PartyManager.i.partyMemberTurnTaken.Contains(character)) {
             PartyManager.i.SetCurrentCharacter(character);
         }

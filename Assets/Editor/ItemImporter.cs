@@ -105,8 +105,8 @@ public static class ItemImporter {
             if (name == "") { return; }
             foreach (var item in items) {
                 if (item.name == name) {
-                    UpdateWeaponValues(itemData, item as Weapon);
-                    EditorUtility.SetDirty(item);
+                    //UpdateWeaponValues(itemData, item as Weapon);
+                    //EditorUtility.SetDirty(item);
                     return;
                 }
             }
@@ -121,8 +121,8 @@ public static class ItemImporter {
             if (name == "") { return; }
             foreach (var item in items) {
                 if (item.name == name) {
-                    UpdateGeneralItemValues(itemData, item as GeneralItem);
-                    EditorUtility.SetDirty(item);
+                    //UpdateGeneralItemValues(itemData, item as GeneralItem);
+                    //EditorUtility.SetDirty(item);
                     return;
                 }
             }
@@ -138,8 +138,8 @@ public static class ItemImporter {
             if (name == "") { return; }
             foreach (var item in items) {
                 if (item.name == name) {
-                    UpdateEquipmentValues(itemData, item as Equipment);
-                    EditorUtility.SetDirty(item);
+                    //UpdateEquipmentValues(itemData, item as Equipment);
+                    //EditorUtility.SetDirty(item);
                     return;
                 }
             }

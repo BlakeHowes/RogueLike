@@ -59,13 +59,25 @@ public class Pokeball : Action {
         capturedGO.TryGetComponent(out NPCSearch npcSearch);
         capturedGO.TryGetComponent(out PandaBehaviour panda);
         capturedGO.TryGetComponent(out Behaviours behaviours);
+        capturedGO.TryGetComponent(out ActionPointStack apStack);
         if (panda) Destroy(panda);
         if (behaviours) Destroy(behaviours);
         if (!npcSearch) {
             var search = capturedGO.AddComponent<NPCSearch>();
             search.targetsTags = Tags.Enemies;
             
-        } 
+        }
+        if (!apStack) {
+            var apsta = capturedGO.AddComponent<ActionPointStack>();
+            apsta.basePoints.Add(new ActionPoint(ItemStatic.ActionPointType.Normal, null));
+            apsta.basePoints.Add(new ActionPoint(ItemStatic.ActionPointType.Normal, null));
+            apsta.basePoints.Add(new ActionPoint(ItemStatic.ActionPointType.Normal, null));
+            apsta.basePoints.Add(new ActionPoint(ItemStatic.ActionPointType.Normal, null));
+            apsta.basePoints.Add(new ActionPoint(ItemStatic.ActionPointType.Movement, null));
+            apsta.basePoints.Add(new ActionPoint(ItemStatic.ActionPointType.Movement, null));
+            capturedGO.GetComponent<Stats>().actionPointStack = apsta;
+
+        }
         capturedGO.tag = "Party";
         foreach (Transform child in capturedGO.transform) {
             Destroy(child.gameObject);

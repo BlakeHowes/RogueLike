@@ -16,6 +16,27 @@ MonoBehaviour:
   abilities:
   - callType: 0
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 4af58df6164b6a94085977398000f310, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 3, y: 1}
+      surfaceValue: {fileID: 11400000, guid: fb91e95bf6b37024b8b67a78c9e6750c, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 4af58df6164b6a94085977398000f310, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 3, y: 1}
+      surfaceValue: {fileID: 11400000, guid: fb91e95bf6b37024b8b67a78c9e6750c, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: When thrown deal 3 Electric damage to adjacent tiles, give Electrified,
+        and spread Electrified Water
     - action: {fileID: 11400000, guid: ef6392aedabf9c346a7b5c76916909b7, type: 2}
       intValue: 0
       floatValue: 0
@@ -78,6 +99,16 @@ MonoBehaviour:
       stringValue: 
   - callType: 10
     actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 11400000, guid: 471a8a2732c62e6478e802fb5d608346, type: 2}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: eb322732460c32846aefc754eb8ec8f5, type: 3}
+      stringValue: 
     - action: {fileID: 11400000, guid: e3130203548a3a24e965947238ad3922, type: 2}
       intValue: 0
       floatValue: 0

@@ -14,7 +14,7 @@ public class CoolDown {
     public CoolDown(int coolDown, ItemAbstract item, GameObject go) {
         this.coolDownTimer = coolDown;
         this.item = item;
-        this.go = go;   
+        this.go = go;  
     }
 }
 
@@ -101,8 +101,11 @@ public class Inventory : MonoBehaviour
 
     public bool AddItem(ItemAbstract item) {
         if(item == null) { return true; }
-        if(items.Count < globalValues.maxItems) {
-            items.Add(item);
+        var itemDestination = items;
+        if (globalValues.usePartyInventory) { itemDestination = InventoryManager.i.partyInventory; }
+        if(itemDestination.Count < globalValues.maxItems) {
+            itemDestination.Add(item);
+            InventoryManager.i.UpdateInvetorySlots(this);
             return false;
         }
         var pos = gameObject.Position();
@@ -179,6 +182,13 @@ public class Inventory : MonoBehaviour
     }
 
     public void RemoveItem(ItemAbstract item) {
+        if (globalValues.usePartyInventory) {
+            if (InventoryManager.i.partyInventory.Contains(item)) {
+                InventoryManager.i.partyInventory.Remove(item);
+                return;
+            }
+            return;
+        }
         if (items.Contains(item)) {
             items.Remove(item);
             return;

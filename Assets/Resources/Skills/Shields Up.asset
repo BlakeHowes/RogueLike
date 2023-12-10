@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Give Allies within 4 tiles Armour Up
+      stringValue: Give Allies Armour Up and 20 Armour
     - action: {fileID: 11400000, guid: 07b63b36e780a6148b01fa29e44a67ff, type: 2}
       intValue: 0
       floatValue: 0
@@ -94,12 +94,12 @@ MonoBehaviour:
       stringValue: 
   rangeType: 5
   targetsTags: 1
+  weaponType: 0
   range: 4
   AOE: 0
   actionPointCost: 1
   coolDown: 2
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 0
-  skillDamage: {x: 0, y: 0}
-  weaponType: 0

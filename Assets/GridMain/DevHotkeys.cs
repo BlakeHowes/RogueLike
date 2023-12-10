@@ -68,7 +68,7 @@ public class DevHotkeys : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)) {
             PartyManager.i.currentCharacter.GetComponent<Stats>().SpawnHitNumber("Wait", Color.blue, 1);
             //currentStats.actionPoints -= 1;
-            MouseManager.i.EndOfAction(PartyManager.i.currentCharacter, PartyManager.i.currentCharacter.GetComponent<Stats>());
+            MouseManager.i.EndOfAction(PartyManager.i.currentCharacter, PartyManager.i.currentCharacter.GetComponent<Stats>(), PartyManager.i.currentCharacter.Position());
         }
 
         if (Input.GetKeyDown(KeyCode.B)) {

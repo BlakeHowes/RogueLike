@@ -14,8 +14,10 @@ public class UITrait : Action {
         if(parentItem is not StatusEffect) { CallTypeFormat(ability); }
         */
         if(parentItem)description += parentItem.name + ": ";
+
         //if (parentItem is not StatusEffect) { CallTypeFormat(ability); }
         icon = actionContainer.spriteValue;
+        if (!icon && parentItem) { icon = parentItem.tile.sprite; }
         foreach (var container in ability.actionContainers) {
             if (container.action == this) { continue; }
             if(container.action is IDescription) {

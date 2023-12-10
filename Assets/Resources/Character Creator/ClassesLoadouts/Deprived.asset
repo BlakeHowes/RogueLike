@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39da24aab86c72740b1f20b5f61239ac, type: 3}
   m_Name: Deprived
   m_EditorClassIdentifier: 
-  mainHand: {fileID: 0}
+  mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 0}
-  trinkets: []
+  traits: []

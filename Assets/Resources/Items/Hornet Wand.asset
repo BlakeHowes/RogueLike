@@ -40,7 +40,7 @@ MonoBehaviour:
   shopValue: 15
   weaponType: 3
   damageRange: {x: 4, y: 8}
-  accuracyBase: 100
+  accuracyBase: 80
   rangeBase: 8
   heldOffset: {x: 0, y: 0, z: 0}
   twoHanded: 0

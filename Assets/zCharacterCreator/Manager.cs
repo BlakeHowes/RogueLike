@@ -43,6 +43,12 @@ public static class Manager {
     }
 
     public static void LoadNextScene() {
+        if (PartyManager.i) {
+            foreach (var character in PartyManager.i.party) {
+                var spring = character.GetComponent<SpringToTarget3D>();
+                spring.disableSpring = true;
+            }
+        }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
         Camera.main.TryGetComponent(out SmoothCamera smoothCamera);

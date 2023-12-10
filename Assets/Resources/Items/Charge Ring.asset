@@ -136,7 +136,20 @@ MonoBehaviour:
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
       stringValue: 
+  - callType: 7
+    actionContainers:
+    - action: {fileID: 11400000, guid: 4e042d02829137043b1ef3d2977ac859, type: 2}
+      intValue: 6
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 21300000, guid: 734ba44138cedee498fbf6e435046e5d, type: 3}
+      stringValue: 
   shopValue: 15
+  armour: 0
   equipmentType: 4
   weight: 0
   wornSprite: {fileID: 0}

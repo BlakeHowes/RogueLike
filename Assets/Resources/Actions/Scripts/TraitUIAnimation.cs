@@ -24,6 +24,9 @@ public class TraitUIAnimation : Action {
     }
 
     public override IEnumerator StackAction() {
+        if (!GameUIManager.i.traitAnimation) {
+            GameUIManager.i.traitAnimation = Transform.FindObjectOfType<TraitAnimation>();
+        }
         GameUIManager.i.traitAnimation.AddTrait(description, sprite,parentGO,parentItem,positionGO);
         yield return null;
     }

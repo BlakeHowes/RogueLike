@@ -274,13 +274,33 @@ public class GoMethod
     }
 
     public Vector3Int FindGameObjectOnGrid(GameObject gameobject) {
+        if(gameobject == null) {
+            return globalValues.NullValue;
+        }
+
+
+        // Optimization 1: Check the cell of the gameobject
         if (!gameobject) { return globalValues.NullValue; }
         var goWorldPositionOnGrid = gameobject.transform.position.FloorToInt();
         if (GetGameObject(goWorldPositionOnGrid) == gameobject) {
             return goWorldPositionOnGrid; 
         }
 
+        //Optimization 2: Check 5 tiles around gameobject
+        for (int x = goWorldPositionOnGrid.x -5; x < goWorldPositionOnGrid.x + 5; x++) {
+            for (int y = goWorldPositionOnGrid.y- 5; y < goWorldPositionOnGrid.y + 5; y++) {
+                var pos = new Vector3Int(x, y, 0);
+                if (!pos.InBounds()) { continue; }
+                if (goGrid[x, y] == gameobject) {
+                    return pos;
+                }
+            }
+        }
 
+        //Optimzation 3: Check if the gameobject is dead
+        if (!gameobject.activeSelf) { return globalValues.NullValue; }
+
+        //Check whole grid
         for (int x = 0; x < globalValues.width; x++) {
             for (int y = 0; y < globalValues.height; y++) {
                 if (goGrid[x, y] == gameobject) {
@@ -288,7 +308,7 @@ public class GoMethod
                 }
             }
         }
-        //Debug.LogError("Could not find "+gameobject+" on goGrid cell ");
+        Debug.LogError("Could not find "+gameobject+" on goGrid cell ");
         return globalValues.NullValue;
     }
 

@@ -83,6 +83,9 @@ public class SkillSlot : MonoBehaviour
     }
 
     public void EnableToolTip() {
+        if (MouseManager.i.itemSelected) { 
+            if(MouseManager.i.itemSelected is Skill) { return; }
+        }
         GameUIManager.i.tooltipGameObject.SetActive(true);
         GameUIManager.i.itemtooltip.UpdateToolTip(skill, false);
         if (!skill) { return;}
@@ -92,7 +95,11 @@ public class SkillSlot : MonoBehaviour
     }
 
     public void DisableToolTip() {
+
         GameUIManager.i.tooltipGameObject.SetActive(false);
+        if (MouseManager.i.itemSelected) {
+            if (MouseManager.i.itemSelected is Skill) { return; }
+        }
         GameUIManager.i.apUIElement.HighlightAP(0, null);
     }
 }

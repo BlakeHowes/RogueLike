@@ -37,7 +37,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: When you kill an enemy, summon a Skeleton
+      stringValue: When you kill an enemy, summon a Skeleton to fight for you
     - action: {fileID: 11400000, guid: be43e855424a0c84bb480102a51d3ef7, type: 2}
       intValue: 0
       floatValue: 0

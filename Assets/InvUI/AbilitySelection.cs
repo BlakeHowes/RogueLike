@@ -7,12 +7,34 @@ using UnityEngine.UI;
 public class AbilitySelection : MonoBehaviour
 {
     public UIPartySelector partySelector;
-
+    public List<GameObject> gameObjectsToHide;
+    public ItemAbstract selectedTrait;
+    public GameObject abilityUI;
+    public GameObject particles;
+    public Color color;
     public void GiveAbilityToCharacter(ItemAbstract item) {
-        if(partySelector.selectedGO) partySelector.selectedGO.GetComponent<Inventory>().AddTrait(item,false);
+        selectedTrait = item;
+    }
+
+    public void Confirm() {
+        if(selectedTrait == null) { return; }
+        UnHide();
+        if (partySelector.selectedGO) partySelector.selectedGO.GetComponent<Inventory>().AddTrait(selectedTrait, false);
+        abilityUI.SetActive(false);
+
+        GridManager.i.StartCoroutine(GridManager.i.graphics.FlashAnimation(partySelector.selectedGO,Vector3Int.zero, color));
+        EffectManager.i.AttachSingleToGO(partySelector.selectedGO.Position(), particles,new Vector3(0,1f));
+    }
+
+    public void UnHide() {
+        foreach (var go in gameObjectsToHide) {
+            go.SetActive(true);
+        }
     }
     public void AddTrait(List<Trait> traits) {
-
+        foreach(var go in gameObjectsToHide) {
+            go.SetActive(false);
+        }
         foreach(Transform child in transform) {
             child.gameObject.SetActive(false);
         }

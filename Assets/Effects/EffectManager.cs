@@ -68,4 +68,15 @@ public class EffectManager : MonoBehaviour
             clone.transform.localPosition = Vector3.zero;
         }
     }
+
+    public void AttachSingleToGO(Vector3 position, GameObject partPrefab,Vector3 offset) {
+        if (partPrefab == null) { return; }
+        var clone = Instantiate(partPrefab);
+        clone.transform.position = position + offset;
+        var target = position.FloorToInt().GameObjectGo();
+        if (target) {
+            clone.transform.SetParent(target.transform);
+            clone.transform.localPosition = offset;
+        }
+    }
 }

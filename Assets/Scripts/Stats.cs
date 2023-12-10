@@ -32,6 +32,7 @@ public class Stats : MonoBehaviour {
     public int directDamage;
     public int armour;
     public int damageTaken;
+    public int minRange;
 
     [Header("Weapon Stats")]
     public int meleeDamage;
@@ -73,6 +74,7 @@ public class Stats : MonoBehaviour {
         meleeAccuracy = 0f;
         meleeAccuracyMultiple = 1f;
         actionPointSkillCostChange = 0;
+        minRange = 0;
         blockDamage = false;
     }
 
@@ -98,9 +100,20 @@ public class Stats : MonoBehaviour {
         blockDamage = true;
     }
 
+    public void SetMinRange(int amount) {
+        if(minRange < amount) { minRange = amount; }
+    }
+
 
     public void OnStartOfCombat() {
-
+        state = PartyManager.State.Combat;
+        PartyManager.i.ChangeCharacterMaterial(gameObject);
+        GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
+    }
+    public void OnExitCombat() {
+        state = PartyManager.State.Idle;
+        PartyManager.i.ChangeCharacterMaterial(gameObject);
+        GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
     }
 
     //Hack to set armour too armour temp, I cant figure out a better way
@@ -315,6 +328,17 @@ public class Stats : MonoBehaviour {
         }
 
         actionPoints -= amount;
+    }
+
+    public void GainActionPoints(int amount,ActionPointType type, ItemAbstract item) {
+        if (actionPointStack) {
+            for (int i = 0; i < amount; i++) {
+                actionPointStack.points.Add(new ActionPoint(type, item));
+            }
+            return;
+        }
+
+        actionPoints += amount;
     }
 
     public void GainActionPoints(int amount) {

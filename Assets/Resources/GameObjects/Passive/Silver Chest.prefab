@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -7609951924661499120}
   m_Layer: 0
   m_Name: Silver Chest
-  m_TagString: Passive
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,6 +54,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 49df0393bf1e4344ba29832ce8da7751, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 1
   maxArmourBase: 0
   actionPointsBase: 3

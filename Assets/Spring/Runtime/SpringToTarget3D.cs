@@ -103,6 +103,9 @@ namespace LlamAcademy.Spring.Runtime
             while (!Mathf.Approximately(Vector3.SqrMagnitude(transform.position - TargetPosition), 0))
             {
                 if (disableSpring) {
+                    spring.Reset();
+                    moving = false;
+                    disableSpring = false;
                     yield break; 
                 }
                 transform.position = spring.Evaluate(Time.deltaTime);

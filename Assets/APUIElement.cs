@@ -7,6 +7,7 @@ public class APUIElement : MonoBehaviour
 {
     public Color highlightColour;
     public Color defaultColor;
+    public Color notEnoughColour;
     private Sprite normalAPSprite;
     private Sprite walkAPSprite;
 
@@ -23,7 +24,7 @@ public class APUIElement : MonoBehaviour
                     if (child.gameObject.activeSelf) {
                         var rend = child.GetComponent<Image>();
                         if(rend.sprite == walkAPSprite) { continue; }
-                        rend.color = Color.red;
+                        rend.color = notEnoughColour;
                     }
 
                 }
@@ -44,6 +45,18 @@ public class APUIElement : MonoBehaviour
         }
     }
 
+    public void ShowCost(int amount) {
+        for (int i = 0; i < amount; i++) {
+            var element = transform.GetChild(i).gameObject;
+            element.SetActive(true);
+        }
+        var i2 = 0;
+        foreach (Transform child in transform) {
+            if (i2 >= amount) { child.gameObject.SetActive(false); }
+            i2++;
+        }
+    }
+
     public void UpdateActionPointUI(Stats stats) {
         if (!stats.actionPointStack) { return; }
         var points = stats.actionPointStack.points;
@@ -51,6 +64,7 @@ public class APUIElement : MonoBehaviour
         foreach (var point in points) {
             var element = transform.GetChild(i).gameObject;
             element.SetActive(true);
+            element.GetComponent<Image>().color = Color.white;
             var image = element.GetComponent<Image>();
             switch (point.type) {
                 case ItemStatic.ActionPointType.Normal: image.sprite = normalAPSprite; break;
@@ -88,7 +102,7 @@ public class APUIElement : MonoBehaviour
         }
         yield return new WaitForSeconds(0.1f);
         foreach (Image image in images) {
-            image.color = Color.white;
+            image.color = notEnoughColour;
         }
     }
 }

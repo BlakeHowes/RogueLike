@@ -76,12 +76,12 @@ MonoBehaviour:
       stringValue: 
   rangeType: 4
   targetsTags: 1
-  range: 4
+  weaponType: 0
+  range: 6
   AOE: 0
   actionPointCost: 2
   coolDown: 2
+  useWeaponRange: 0
   targetedStartPosition: {x: 0, y: 0, z: 0}
   startPositionSet: 0
   totalTargets: 2
-  skillDamage: {x: 4, y: 10}
-  weaponType: 0

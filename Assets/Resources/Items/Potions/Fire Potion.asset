@@ -48,7 +48,7 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
   description: 
-  shopValue: 10
+  shopValue: 4
   subItems: []
   destroyOnUse: 1
   pickUpByStandingOver: 0

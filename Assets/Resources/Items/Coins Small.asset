@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f64c26c8e6df3846a08fec356c7cb63, type: 3}
   m_Name: Coins Small
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 7abb4e66a13a5db4aa1d6e56f0cc5c29, type: 2}
+  tile: {fileID: 11400000, guid: 0b0ccff67c7ddc2428c48644f0a44d19, type: 2}
   abilities:
   - callType: 5
     actionContainers:
@@ -49,11 +49,8 @@ MonoBehaviour:
   description: 
   shopValue: 0
   subItems: []
-  totalUses: 1
-  timesUsed: 1
-  endlessUses: 0
+  destroyOnUse: 0
   pickUpByStandingOver: 1
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}
-  destroyOnUse: 0
   viableTargets: []

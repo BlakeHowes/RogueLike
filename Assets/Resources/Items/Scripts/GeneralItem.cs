@@ -7,9 +7,7 @@ using static ItemStatic;
 public class GeneralItem : ItemAbstract {
     public string description;
     public int shopValue;
-    public List<ItemAbstract> subItems = new List<ItemAbstract>();
     public bool destroyOnUse = false;
-    public bool pickUpByStandingOver;
     [HideInInspector] public GameObject parentGO;
     [HideInInspector] public Vector3Int thrownLocation;
 

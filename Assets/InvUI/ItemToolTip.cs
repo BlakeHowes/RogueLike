@@ -17,13 +17,14 @@ public class ItemToolTip : MonoBehaviour
     public GameObject statsPrefab;
     public RectTransform backgroundRect;
     public RectTransform parentRect;
+    public APUIElement apUI;
 
     public void UpdateToolTip(ItemAbstract item,bool top) {
         if(item == null) {
             gameObject.SetActive(false);
             return;
         }
-
+        int apCost = 0;
         handle.transform.localPosition = new Vector3(offset.x, offset.y, 0);
         foreach (Transform trait in traitsLayout) {
             if(trait.gameObject != titleGo) Destroy(trait.gameObject);
@@ -32,7 +33,13 @@ public class ItemToolTip : MonoBehaviour
         Title.text = item.name.ToString();
         if(item is Weapon) {
             AddTraitUIItem(item.tile.sprite, ((Weapon)item).CreateDescription());
+            apCost = 1;
         }
+        if(item is Skill) {
+            var skill = item as Skill;
+            apCost = skill.GetAPCost();
+         }
+        apUI.ShowCost(apCost);
         AddAbilitysToUI(item.abilities,null, item);
         var position = Input.mousePosition;
         transform.position = new Vector3(position.x, position.y, 0);
@@ -58,12 +65,14 @@ public class ItemToolTip : MonoBehaviour
             if (trait.gameObject != titleGo) Destroy(trait.gameObject);
         }
         Title.text = item.name.ToString();
+        int apCost = 0;
         if (item is Weapon) {
             AddTraitUIItem(item.tile.sprite, ((Weapon)item).CreateDescription());
+            apCost = 1;
         }
 
         var descriptionElements = TraitUIGenerator.CreateAbilityDescriptions(item.abilities,null,item);
-        AddElementsToToolTip(descriptionElements);
+        AddElementsToToolTip(descriptionElements, apCost);
     }
 
     public void ToolTipMech(MechAbstract mech) {
@@ -73,7 +82,7 @@ public class ItemToolTip : MonoBehaviour
         }
         Title.text = mech.name.ToString();
         var descriptionElements = TraitUIGenerator.CreateMechDescriptions(mech);
-        AddElementsToToolTip(descriptionElements);
+        AddElementsToToolTip(descriptionElements,0);
     }
 
     public void ToolTipSurface(Surface surface) {
@@ -83,7 +92,7 @@ public class ItemToolTip : MonoBehaviour
         }
         Title.text = surface.name.ToString();
         var descriptionElements = TraitUIGenerator.CreateSurfaceDescriptions(surface);
-        AddElementsToToolTip(descriptionElements);
+        AddElementsToToolTip(descriptionElements,0);
     }
 
     public void ToolTipGo(GameObject character) {
@@ -99,7 +108,7 @@ public class ItemToolTip : MonoBehaviour
 
         Title.text = character.name.ToString();
         var descriptionElements = TraitUIGenerator.CreateGoDescriptions(character);
-        AddElementsToToolTip(descriptionElements);
+        AddElementsToToolTip(descriptionElements, 0);
     }
 
     public void KeepFullyOnScreen() {
@@ -125,11 +134,12 @@ public class ItemToolTip : MonoBehaviour
 
 
 
-    public void AddElementsToToolTip(List<GameObject> elements) {
+    public void AddElementsToToolTip(List<GameObject> elements, int apCost) {
         foreach (var descriptionElement in elements) {
             descriptionElement.transform.SetParent(traitsLayout.transform);
             descriptionElement.transform.localScale = new Vector3(1, 1, 1);
         }
+        apUI.ShowCost(apCost);
         var position = Input.mousePosition;
         var offset = 0;
         if (position.x > 1500) { offset = -420; }

@@ -34,6 +34,7 @@ public class Roll : Action {
 
     public override IEnumerator StackAction() {
         if (!rollOther) { position = parentGO.Position(); }
+        if(endPos == position || parentGO == null) { yield break; }
         var goHit = damagePrigin.GameObjectGo();
         if (hideAnimation) { PathingManager.i.Slide(endPos, position, speed * 13); }
         else {

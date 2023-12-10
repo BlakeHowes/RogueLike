@@ -28,6 +28,18 @@ public class GameUIManager : MonoBehaviour {
         apUIElement.UpdateActionPointUI(stats);
     }
 
+    public void PartyIconTurnTakenGraphicUpdate() {
+        foreach(Transform icon in partyIconLayout.transform) {
+            var partyIcon = icon.GetComponent<PartyIcon>();
+            if (PartyManager.i.partyMemberTurnTaken.Contains(partyIcon.GetCharacter())) {
+                partyIcon.GreyOutImage();
+            }
+            else {
+                partyIcon.ResetImageColor();
+            }
+        }
+    }
+
     public void AnimateNotEnoughAP() {
         StartCoroutine(apUIElement.NoEnoughAPAnimation());
     }
@@ -42,6 +54,14 @@ public class GameUIManager : MonoBehaviour {
         Manager.coins += amount;
         coinsText.text = Manager.coins.ToString();
         return true;
+    }
+
+    public void SetCombatOutlines() {
+        foreach(var character in PartyManager.i.party) {
+            if(character.GetComponent<Stats>().state == PartyManager.State.Combat) {
+
+            }
+        }
     }
 
 
@@ -67,12 +87,13 @@ public class GameUIManager : MonoBehaviour {
                 if (character.tag == "Enemy") {
                     uiTilemap.SetColor(position, globalValues.enemyHightlightColour);
                     var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
-                    //inventory.CallEquipment(origin, origin, Signal.CalculateStats);
                     if (MouseManager.i.itemSelected) { return; }
+
+                    //This dumb bit of code shows the weapon range
                     var weapon = inventory.mainHand as Weapon;
                     var origin = inventory.gameObject.Position();
                     if (!weapon) { ShowRange(origin, 1); }
-                    else { ShowRange(origin, weapon.GetRange(character)); }
+                    else { ShowRange(origin, weapon.GetRange(PartyManager.i.currentCharacter)); }
                 }
             }
         }
@@ -166,9 +187,24 @@ public class GameUIManager : MonoBehaviour {
     public void EnableUI() {
         canvasOverlay.gameObject.SetActive(true);
     }
-
+    List<GameObject> PartyCopy = new();
     public void UpdatePartyIcons(List<GameObject> party) {
         if (!globalValues.partyIconPrefab) { Debug.LogError("Party Icon not set"); return; }
+        bool remakeIcons = false;
+
+        if (PartyCopy.Count == 0) {
+            foreach (var member in PartyManager.i.party) {
+                PartyCopy.Add(member);
+            }
+            remakeIcons = true;
+        }
+        if (PartyCopy.Count != PartyManager.i.party.Count) { remakeIcons = true; }
+        foreach (var member in PartyManager.i.party) {
+            if (!PartyCopy.Contains(member)) { remakeIcons = true; break; }
+            if (!member.activeSelf) { remakeIcons = true; break; }
+            
+        }
+        if (!remakeIcons) { return; }
         foreach (Transform child in partyIconLayout.transform) {
             Destroy(child.gameObject);
         }

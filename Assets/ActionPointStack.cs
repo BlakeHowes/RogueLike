@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static ItemStatic;
+
 public class ActionPointStack : MonoBehaviour
 {
     public List<ActionPoint> basePoints = new List<ActionPoint>();
@@ -28,11 +29,25 @@ public class ActionPointStack : MonoBehaviour
         APElementCombiner.CallElement();
     }
 
-    public void CallItem(ItemAbstract item,bool walk) {
+    public bool IsMySkillTargetingMe() {
+        var item = MouseManager.i.itemSelected;
+        if (item) {
+            if (item is Skill) {
+                var skill = item as Skill;
+                if (skill.rangeType == Skill.RangeType.ClickAnywhere) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
+
+    public void CallItem(ItemAbstract item,bool walk) {
         var position = MouseManager.i.MousePositionOnGrid();
         var origin = gameObject.Position();
-        if (walk) { position = MouseManager.i.positionBeforeWalk; }
+        if (walk || IsMySkillTargetingMe()) { position = MouseManager.i.positionBeforeWalk; }
+
         if (item is ActionPointElement) {
             var element = item as ActionPointElement;
             APElementCombiner.AddElement(element.surface, position, origin,gameObject);

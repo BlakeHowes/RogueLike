@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -10,16 +9,15 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryLayout;
     public GameObject equipmentLayout;
     public GameObject skillLayout;
-    public GameObject bagLayout;
-    private List<SkillSlot> skillSlots = new List<SkillSlot>();
+    public List<SkillSlot> skillSlots = new List<SkillSlot>();
     public List<ItemAbstract> skills = new List<ItemAbstract>();
+    public List<ItemAbstract> partyInventory = new();
     Inventory currentInventory;
+    public GlobalValues globalValues;
+    public bool throwItem;
     public void Awake() {
         i = this;
-        if (!skillLayout) { return; }
-        foreach (Transform slot in skillLayout.transform) {
-            skillSlots.Add(slot.gameObject.GetComponent<SkillSlot>());
-        }
+        globalValues = Manager.GetGlobalValues();
     }
 
     public GameObject InstantiateGo(GameObject go) {
@@ -62,7 +60,40 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void EquipItem(ItemAbstract item) {
+        var inventory = PartyManager.i.currentCharacter.GetComponent<Inventory>();
+        List<EquipmentSlot> slots = new List<EquipmentSlot>();
+        foreach (Transform child in equipmentLayout.transform) { slots.Add(child.GetComponent<EquipmentSlot>()); }
+        if (item is Weapon) {
+            var weapon = item as Weapon;
+            if(!inventory.mainHand || weapon.twoHanded || inventory.offHand) {
+                slots[0].Equip(item);
+                return;
+            }
+            if (inventory.mainHand) { if (inventory.GetMainHandAsWeapon().twoHanded) { slots[0].Equip(item); return; } }
+            slots[1].Equip(item);
+            return;
+        }
+        if(item is Equipment) {
+            var equipment = item as Equipment;
+            switch (equipment.equipmentType) {
+                case ItemStatic.EquipmentType.offHand:
+                    if (inventory.mainHand) { if (inventory.GetMainHandAsWeapon().twoHanded) { slots[0].RemoveItem(inventory); } }
+                    slots[1].Equip(item); return;
+                case ItemStatic.EquipmentType.helmet: slots[2].Equip(item);  return;
+                case ItemStatic.EquipmentType.armour: slots[3].Equip(item);  return;
+                case ItemStatic.EquipmentType.trinket:
+                    if (!slots[4].item) { slots[4].Equip(item); return; }
+                    if (!slots[5].item) { slots[5].Equip(item); return; }
+                    if (!slots[6].item) { slots[6].Equip(item); return; }
+                    if (!slots[7].item) { slots[7].Equip(item); return; }
+                    slots[4].Equip(item);  return;
+            }
+        }
+    }
+
     public void UpdateEquipmentSlots(Inventory inventory) {
+        if (equipmentLayout == null) { equipmentLayout= LayoutReferences.i.equipmentLayout; }
         List<EquipmentSlot> slots = new List<EquipmentSlot>();
         foreach (Transform child in equipmentLayout.transform) { slots.Add(child.GetComponent<EquipmentSlot>()); }
         slots[0].SetItem(inventory.mainHand);
@@ -78,9 +109,17 @@ public class InventoryManager : MonoBehaviour
     public void UpdateInvetorySlots(Inventory inventory) {
         int i = 0;
         int inventoryLength = inventory.items.Count;
-        foreach(Transform slot in inventoryLayout.transform) {
+        var items = inventory.items;
+        if (globalValues.usePartyInventory) {
+            items = partyInventory;
+            inventoryLength = partyInventory.Count;
+        }
+
+        if (inventoryLayout == null) { inventoryLayout = LayoutReferences.i.inventoryLayout; }
+
+        foreach (Transform slot in inventoryLayout.transform) {
             if (i < inventoryLength) {
-                var item = inventory.items[i];
+                var item = items[i];
                 if (!item) { continue; }
                 slot.GetComponent<InventorySlot>().AddItem(item); 
                 slot.gameObject.SetActive(true);
@@ -110,7 +149,6 @@ public class InventoryManager : MonoBehaviour
             i++;
         }
     }
-
 
     public void UpdateInventory(GameObject character) { //THIS HAPPENS A LOT
         var inventory = character.GetComponent<Inventory>();

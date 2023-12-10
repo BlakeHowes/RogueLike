@@ -46,12 +46,15 @@ public class GridManager : MonoBehaviour {
     public int lootCounter = 1;
     private bool semiFog = false;
     bool insertToStack = false;
+    public AnimationCurve myCurve;
     public void Awake() {
         i = this;
         globalValues = Manager.GetGlobalValues();
         assets = new AssetManager();
         tools = new GridTools(globalValues);
         Initialize();
+        itemTilemap.transform.position = new Vector3(0, globalValues.itemHeight);
+        shadowTilemap.transform.position = new Vector3(0, globalValues.shadowHeight);
         mechMethods = new mechMethods(mechGrid, assets, mechTilemap);
         itemMethods = new itemMethods(itemGrid, assets, itemTilemap, globalValues);
         goMethods = new GoMethod(goGrid, assets, goTilemap, floorTilemap, globalValues);
@@ -75,6 +78,11 @@ public class GridManager : MonoBehaviour {
             }
         }
     }
+    public void Update() {
+        itemTilemap.transform.position = new Vector3(transform.position.x, Mathf.Sin(Time.time * globalValues.itemAnimationSpeed) * globalValues.itemAnimationHeight, transform.position.z);
+        itemTilemap.transform.position = new Vector3(itemTilemap.transform.position.x, itemTilemap.transform.position.y + globalValues.itemHeight);
+    }
+
 
     public void TickCharacter(GameObject character,Vector3Int characterPos) {
         insertToStack = true;
@@ -161,7 +169,9 @@ public class GridManager : MonoBehaviour {
     //List<Action> itemsCheckedHack = new List<Action>();
     public IEnumerator Stack(bool update) {
         //itemsCheckedHack.Clear();
+        int itemTotal = 0;
         while (itemsInActionStack.Count > 0) {
+            
             Action action = itemsInActionStack[0];
             //if (itemsCheckedHack.Contains(action)) { itemsInActionStack.Remove(action); continue; }
             //itemsCheckedHack.Add(action);
@@ -169,6 +179,13 @@ public class GridManager : MonoBehaviour {
             
             if (itemsInActionStack.Count == 0) { break; } //WHHHYYY
             itemsInActionStack.Remove(itemsInActionStack[0]); //I cant insert into stack, god knows why this is happening, 2 more hours wasted trying to debug this
+            itemTotal ++;
+
+            //Fail safe breaker, 1000 is just a random number
+            if(itemTotal > 1000) {
+                itemsInActionStack.Clear();
+                break; 
+            }
         }
         if (update) {
             EndStack();

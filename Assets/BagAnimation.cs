@@ -18,9 +18,12 @@ public class BagAnimation : MonoBehaviour
         image = GetComponent<Image>();
     }
     public void PlayAnimation(ItemAbstract item) {
+        if(item is TraitItem) { return; }
+        if (!gameObject.activeSelf) { return; }
         animationGO.SetActive(true);
         itemImage.texture = item.tile.sprite.texture;
         image.sprite = open;
+
         StartCoroutine(CloseBag());
     }
     public IEnumerator CloseBag() {

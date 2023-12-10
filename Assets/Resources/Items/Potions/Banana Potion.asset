@@ -13,9 +13,42 @@ MonoBehaviour:
   m_Name: Banana Potion
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: 68572a55bf5079f439e6e6b1879e6c37, type: 2}
-  abilities: []
+  abilities:
+  - callType: 0
+    actionContainers:
+    - action: {fileID: 11400000, guid: 26ae68e21cc4ae84a8bd9daaa18271f9, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: bd92a27476135fa4bb6cf382cf0958f9, type: 2}
+      intValue: 30
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 8288408381700605430, guid: 8f986f2e27991734bb1ade7390fad210,
+        type: 3}
+      colorValue: {r: 1, g: 0.42352945, b: 0.27058825, a: 1}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+    - action: {fileID: 11400000, guid: 79b761c95518c6f4c8045370e6ccf76a, type: 2}
+      intValue: 2
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 11400000, guid: 4d390d26c6ef1dd49ae8070a7070d194, type: 2}
+      spriteValue: {fileID: 0}
+      stringValue: 
   description: 
-  shopValue: 10
+  shopValue: 4
   subItems: []
   destroyOnUse: 1
   pickUpByStandingOver: 0

@@ -12,18 +12,29 @@ public class InventorySlot : MonoBehaviour
     }
 
     public void SelectItem() {
+        if (!InventoryManager.i.throwItem) {
+            if (item is Weapon || item is Equipment) {
+                InventoryManager.i.EquipItem(item);
+                if (gameObject.activeSelf) {
+                    GameUIManager.i.itemtooltip.UpdateToolTip(item, true);
+                }
+                else {
+                    GameUIManager.i.tooltipGameObject.SetActive(false);
+                }
+
+
+                return;
+            }
+        }
+
         if (MouseManager.i.itemSelected) { MouseManager.i.SelectItem(null); return; }
         MouseManager.i.SelectItem(item);
         GetComponent<Image>().color = Color.yellow;
     }
 
     public void EnableToolTip() {
-        bool top = false;
-        if(transform.parent.gameObject == InventoryManager.i.equipmentLayout) {
-            top = true;
-        }
         GameUIManager.i.tooltipGameObject.SetActive(true);
-        GameUIManager.i.itemtooltip.UpdateToolTip(item,top);
+        GameUIManager.i.itemtooltip.UpdateToolTip(item,true);
         Debug.Log("Skill slot");
     }
 

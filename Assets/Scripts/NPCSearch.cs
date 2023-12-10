@@ -34,6 +34,7 @@ public class NPCSearch : MonoBehaviour
             if (partyTurns.Contains(gameObject)) {
                 partyTurns.Remove(gameObject);
             }
+            if(stats.state == State.Combat) { stats.OnExitCombat(); }
             stats.state = State.Idle;
             stats.OnIdleTick();
             return;
@@ -43,14 +44,14 @@ public class NPCSearch : MonoBehaviour
                 if (enemy == null) { continue; }
                 PartyManager.i.AddEnemy(enemy,origin);
             }
+
+            //If idle before switching too combat
             if (stats.state == State.Idle) { 
                 MouseManager.i.isRepeatingActionsOutsideCombat = false; Debug.Log("Walked Disabled by NPC Search");
                 stats.OnStartOfCombat();
             }
+            //SwitchToCombat
             stats.state = State.Combat;
-
-          
-            
         }
     }
 }

@@ -130,6 +130,7 @@ public static class ItemStatic {
         ActionPointCost,
         EnemyAlertRange,
         DamageMultiple,
+        MinRange,
     }
 
     public enum CallType {

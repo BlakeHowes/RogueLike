@@ -11,8 +11,14 @@ public class GlobalValues : ScriptableObject
     [Header("Main")]
     public int width;
     public int height;
+    public float itemHeight;
+    public float shadowHeight;
+    public float itemAnimationSpeed;
+    public float itemAnimationHeight;
     public float onHitNudgeAmount =1;
     public float onAttackNudgeAmount =1;
+    public bool mobileSettings;
+    public bool usePartyInventory;
 
     [Header("Fog")]
     public Tile shadowTile;
@@ -44,6 +50,7 @@ public class GlobalValues : ScriptableObject
     public StatusEffect stun;
     public ActionContainer spinningThrowProjectile;
     public ActionContainer straightThrowProjectile;
+    public ActionContainer dropItem;
 
     [Header("Elemets")]
     public List<ActionPointElement> actionPointElements;
@@ -74,7 +81,8 @@ public class GlobalValues : ScriptableObject
     public Color passiveHightlightColour = Color.white;
     public Color interactableHightlightColour = Color.white;
     public Color fadedColour = Color.white;
-    public Material outlineMaterial;
+    public Material currentCharacterMaterial;
+    public Material partyMaterial;
     public Material summonMaterial;
     public Material enemyoutlineMaterial;
     public Material normalMaterial;

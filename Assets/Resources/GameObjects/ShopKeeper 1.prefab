@@ -177,6 +177,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 21877e8986478e44a9ad75868eff0a11, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 500
   maxArmourBase: 0
   actionPointsBase: 6
@@ -221,7 +222,7 @@ MonoBehaviour:
   generalAbilities:
   - callType: 2
     actionContainers:
-    - action: {fileID: 11400000, guid: 37aff16ffbed4fa4ea7cb8970868c321, type: 2}
+    - action: {fileID: 11400000, guid: 34682cca73a2453499638a8b6cd44ca9, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
@@ -330,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 0
   lootGroup2: 0
+  Drops: []
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0

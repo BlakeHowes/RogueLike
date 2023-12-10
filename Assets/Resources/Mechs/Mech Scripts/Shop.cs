@@ -31,7 +31,7 @@ public class Shop : MechAbstract
             createdUI = true;
         }
 
-        if (signal == Signal.ClickOnWhileStandingOntopOf) {
+        if (signal == Signal.OnPickupItem) {
             var item = position.Item();
             if (!item) { return; }
             var value = GetValue(item);

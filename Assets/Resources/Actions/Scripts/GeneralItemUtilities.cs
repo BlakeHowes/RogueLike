@@ -24,6 +24,20 @@ public class GeneralItemUtilities : Action {
                 break;
             case Type.IfOriginGo: if (!origin.GameObjectGo()) { return false; } break;
             case Type.DestroyThisItem:this.AddToStack(); break;
+            case Type.IfTagNotParty:if (parentGO.gameObject.CompareTag("Party")) { return false; } break;
+            case Type.IfWeaponInRange:
+                var weapon = parentGO.GetComponent<Inventory>().GetMainHandAsWeapon();
+                if (weapon) {
+                    if(!position.InRange(parentGO.Position(), weapon.GetRange(parentGO))) return false; //change this to use offhand
+
+                } break;
+            case Type.IfOriginGoWeaponInRange:
+                var weapon2 = origin.GameObjectGo().GetComponent<Inventory>().GetMainHandAsWeapon();
+                if (weapon2) {
+                    if (!position.InRange(origin, weapon2.GetRange(parentGO))) return false; //change this to use offhand
+
+                }
+                break;
 
         }
         return true;
@@ -58,6 +72,10 @@ public class GeneralItemUtilities : Action {
         IfPositionInIdle,
         IfOriginGo,
         DestroyThisItem,
+        IfTagNotParty,
+        IfWeaponInRange,
+        IfOriginGoWeaponInRange,
+
     }
 }
 

@@ -93,7 +93,7 @@ MonoBehaviour:
   state: 0
   elementalStats: {fileID: 0}
   actionPointStack: {fileID: 0}
-  maxHealthBase: 200
+  maxHealthBase: 300
   maxArmourBase: 0
   actionPointsBase: 6
   throwingRangeBase: 1
@@ -110,11 +110,12 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  minRange: 0
   meleeDamage: 0
   meleeDamageMultiple: 1
   meleeAccuracy: 0
   meleeAccuracyMultiple: 1
-  health: 200
+  health: 300
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0

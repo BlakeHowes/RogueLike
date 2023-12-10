@@ -93,7 +93,8 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: 19652850ce04e8847b0b544c026632be, type: 2}
   state: 0
   elementalStats: {fileID: 0}
-  maxHealthBase: 85
+  actionPointStack: {fileID: 0}
+  maxHealthBase: 40
   maxArmourBase: 0
   actionPointsBase: 3
   throwingRangeBase: 1
@@ -114,7 +115,7 @@ MonoBehaviour:
   meleeDamageMultiple: 1
   meleeAccuracy: 0
   meleeAccuracyMultiple: 1
-  health: 70
+  health: 40
   actionPoints: 0
   actionPointsSum: 0
   infiniteHealth: 0
@@ -138,8 +139,12 @@ MonoBehaviour:
   items: []
   traits: []
   skills: []
-  coolDowns: []
-  statusEffects: []
+  coolDowns:
+  - coolDownTimer: 106
+    item: {fileID: 11400000, guid: 941f6fff1e0e3aa4498e8f55fabe5cc8, type: 2}
+    go: {fileID: 0}
+  statusEffects:
+  - {fileID: 11400000, guid: 941f6fff1e0e3aa4498e8f55fabe5cc8, type: 2}
   mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

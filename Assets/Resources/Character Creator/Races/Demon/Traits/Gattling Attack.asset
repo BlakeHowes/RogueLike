@@ -37,7 +37,8 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Attack 6 times
+      stringValue: Select 6 tiles for you character to then rapidly attack with their
+        weapon
     - action: {fileID: 11400000, guid: c1f79d98365da08439dc247be2bc2809, type: 2}
       intValue: 20
       floatValue: 0

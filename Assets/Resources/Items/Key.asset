@@ -35,7 +35,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Unlocks Grey Doors
+      stringValue: Throw at Grey Doors to unlock them
     - action: {fileID: 11400000, guid: 249ba737b9e287b4eac72e99b8949295, type: 2}
       intValue: 0
       floatValue: 0
@@ -58,9 +58,7 @@ MonoBehaviour:
       stringValue: 
   description: 
   shopValue: 10
-  subItems: []
   destroyOnUse: 0
-  pickUpByStandingOver: 0
   parentGO: {fileID: 0}
   thrownLocation: {x: 0, y: 0, z: 0}
   viableTargets:
