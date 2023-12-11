@@ -71,6 +71,7 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  minRange: 0
   meleeDamage: 0
   meleeDamageMultiple: 1
   meleeAccuracy: 0
@@ -232,3 +233,4 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   targetsTags: 18
+  clickOnHack: 1

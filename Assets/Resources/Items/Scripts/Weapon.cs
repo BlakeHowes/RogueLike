@@ -62,6 +62,7 @@ public class Weapon : ItemAbstract {
     }
 
     public int GetRange(GameObject ParentGO) {
+        if (!parentGO) { return rangeBase; }
         var stats = ParentGO.GetComponent<Stats>();
         return Mathf.Clamp(rangeBase, stats.minRange, int.MaxValue); ;
     }

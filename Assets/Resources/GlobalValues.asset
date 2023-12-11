@@ -18,6 +18,7 @@ MonoBehaviour:
   shadowHeight: 0.15
   itemAnimationSpeed: 2.11
   itemAnimationHeight: 0.06
+  disableDevHotkeys: 0
   onHitNudgeAmount: 1.5
   onAttackNudgeAmount: 10.47
   mobileSettings: 1

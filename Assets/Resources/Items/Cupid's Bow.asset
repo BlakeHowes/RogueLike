@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4ca60863e396a24494cffb1652543d9, type: 3}
-  m_Name: Bingie Bow
+  m_Name: Cupid's Bow
   m_EditorClassIdentifier: 
   tile: {fileID: 11400000, guid: cfc97ca0e706a404db49da4039319f02, type: 2}
   abilities:
   - callType: 0
     actionContainers:
-    - action: {fileID: 11400000, guid: 3975e09ec845bbc4990c06693079bc5d, type: 2}
+    - action: {fileID: 11400000, guid: 2883c671858c3544f90cadce49555cf5, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}
-      prefabValue: {fileID: 6375196592243838218, guid: e1057407af1f00443a6b54fc2c9cfa00,
+      prefabValue: {fileID: 6375196592243838218, guid: 21e759f959576d54d9efac3ef38848e5,
         type: 3}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
-      spriteValue: {fileID: 21300030, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+      spriteValue: {fileID: 0}
       stringValue: 
     - action: {fileID: 11400000, guid: 0d5b481d889b77f429247f817264f655, type: 2}
       intValue: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
       vector2IntValue: {x: 0, y: 0}
       surfaceValue: {fileID: 0}
       spriteValue: {fileID: 0}
-      stringValue: Attacks three times
+      stringValue: Attacks Four times
     - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
       intValue: 0
       floatValue: 0.1
@@ -72,6 +72,36 @@ MonoBehaviour:
     - action: {fileID: 11400000, guid: 81f7b1f4efb38594a97cd9dd1191fc58, type: 2}
       intValue: 0
       floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Attacks twice
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+      intValue: 0
+      floatValue: 0.1
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Attacks twice
+    - action: {fileID: 11400000, guid: 81f7b1f4efb38594a97cd9dd1191fc58, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: Attacks twice
+    - action: {fileID: 11400000, guid: 9b2fac919c78b6543bff788ca25ebda7, type: 2}
+      intValue: 0
+      floatValue: 0.1
       itemValue: {fileID: 0}
       prefabValue: {fileID: 0}
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -93,8 +123,8 @@ MonoBehaviour:
   weaponType: 2
   damageRange: {x: 12, y: 17}
   accuracyBase: 100
-  rangeBase: 3
-  heldOffset: {x: 0, y: 0, z: 0}
+  rangeBase: 8
+  heldOffset: {x: 6, y: 6, z: 0}
   twoHanded: 1
   parentGO: {fileID: 0}
   target: {fileID: 0}

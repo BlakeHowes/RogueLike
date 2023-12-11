@@ -60,12 +60,17 @@ public class MouseManager : MonoBehaviour
         var mousePosition = MousePositionOnGrid();
 
         if (inspectTimerOn) { inspectTimer += Time.deltaTime; }
-        if (inspectTimer > 0.35f) {
-            if ((inspectTapScreenLocation - Input.mousePosition).magnitude > 40f) { ResetInspectTimer(); return; }
-            Inspect(mousePosition); ResetInspectTimer(); }
+        if(inspectTimer > 0.1f) {
+            UpdateHightlight(MousePositionOnGrid());
+            if (inspectTimer > 0.5f) {
+                if ((inspectTapScreenLocation - Input.mousePosition).magnitude > 40f) { ResetInspectTimer(); return; }
+                Inspect(mousePosition); ResetInspectTimer();
+            }
+
+        }
 
         if (!CheckMouseValidity()) { return; }
-        UpdateHightlight(mousePosition);
+        if(!globalValues.mobileSettings)UpdateHightlight(mousePosition);
 
 
         if (Input.GetMouseButtonDown(1)) {
@@ -98,10 +103,14 @@ public class MouseManager : MonoBehaviour
         GameUIManager.i.tooltipGameObject.SetActive(false);
     }
 
-    public IEnumerator EndOfTurnMouseDisableToPreventMissClick() {
+    public IEnumerator DisableMouseBriefly(float delay) {
         disableMouse = true;
         yield return new WaitForSeconds(0.5f);
         disableMouse = false;
+    }
+
+    public void StartDisableMouseBriefly(float delay) {
+        StartCoroutine(DisableMouseBriefly(delay));
     }
 
     public void OnMouseDown() {
@@ -126,7 +135,7 @@ public class MouseManager : MonoBehaviour
             }
         }
 
-        UpdateHightlight(mousePosition);
+        if (!globalValues.mobileSettings) UpdateHightlight(mousePosition);
         var toolTip = GameUIManager.i.tooltipGameObject;
         if (toolTip.activeSelf) { toolTip.SetActive(false); return; }
         switch (mouseMode) {
@@ -223,6 +232,13 @@ public class MouseManager : MonoBehaviour
                     mousePosition = mousePosition + new Vector3Int(0, -1);
                     clickPosition = mousePosition;
                     gameobjectundermouse = go;
+                }
+                if (go.CompareTag("Enemy") && globalValues.mobileSettings) {
+                    if (go.GetComponent<Behaviours>().clickOnHack) {
+                        mousePosition = mousePosition + new Vector3Int(0, -1);
+                        clickPosition = mousePosition;
+                        gameobjectundermouse = go;
+                    }
                 }
             }
         }
@@ -558,8 +574,8 @@ public class MouseManager : MonoBehaviour
     }
 
     public void UpdateHightlight(Vector3Int mousePosition) {
-        if (mousePosition == lastMouseCoord) { return; }
-        if(Input.mousePosition == lastMousePosition) { return; }
+        if (mousePosition == lastMouseCoord && !globalValues.mobileSettings) { return; }
+        if(Input.mousePosition == lastMousePosition && !globalValues.mobileSettings) { return; }
         lastMouseCoord = mousePosition;
         if (!mousePosition.InBounds()) { GameUIManager.i.HideHighlight(); return; }
         if (EventSystem.current.IsPointerOverGameObject()) { GameUIManager.i.HideHighlight(); return; }

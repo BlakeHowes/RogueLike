@@ -11,13 +11,14 @@ public class Shop : MechAbstract
     public GameObject priceUIPrefab;
     private TextMeshProUGUI text;
     private GameObject image;
+    public GameObject priceInstance;
     public override void Call(Vector3Int position,Signal signal) {
         if (!createdUI) {
-            var priceUI = GridManager.i.InstantiateGo(priceUIPrefab);
-            priceUI.transform.SetParent(GameUIManager.i.canvasWorld);
-            priceUI.transform.position = position + new Vector3(0.5f, -0.2f);
-            text = priceUI.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-            image = priceUI.transform.Find("Image").gameObject;
+            priceInstance = GridManager.i.InstantiateGo(priceUIPrefab);
+            priceInstance.transform.SetParent(GameUIManager.i.canvasWorld);
+            priceInstance.transform.position = position + new Vector3(0.5f, -0.2f);
+            text = priceInstance.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+            image = priceInstance.transform.Find("Image").gameObject;
             var item = position.Item();
       
             if (item) { 

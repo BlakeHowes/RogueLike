@@ -91,9 +91,10 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: e87d7ea9042758a42bbac8d793651bf7, type: 2}
   state: 0
   elementalStats: {fileID: 0}
-  maxHealthBase: 500
+  actionPointStack: {fileID: 0}
+  maxHealthBase: 180
   maxArmourBase: 0
-  actionPointsBase: 12
+  actionPointsBase: 6
   throwingRangeBase: 1
   enemyAlertRangeBase: 10
   skillRangeBase: 0
@@ -108,6 +109,7 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  minRange: 0
   meleeDamage: 0
   meleeDamageMultiple: 1
   meleeAccuracy: 0
@@ -160,8 +162,8 @@ MonoBehaviour:
   skills: []
   coolDowns: []
   statusEffects: []
-  mainHand: {fileID: 11400000, guid: 8f60402c32e156446b64d5e2ce136d06, type: 2}
-  offHand: {fileID: 11400000, guid: 8f60402c32e156446b64d5e2ce136d06, type: 2}
+  mainHand: {fileID: 11400000, guid: 71bf60ffdb70d8d4eae392bc92e9b49e, type: 2}
+  offHand: {fileID: 0}
   helmet: {fileID: 0}
   armour: {fileID: 11400000, guid: 6890aa93dba6f3c41a13ce3cefc20b0d, type: 2}
   trinket1: {fileID: 11400000, guid: 0c859058e1524874dab930b9d3fde7d3, type: 2}
@@ -234,6 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 0
   lootGroup2: 0
+  Drops: []
 --- !u!114 &-1371616870617058851
 MonoBehaviour:
   m_ObjectHideFlags: 0

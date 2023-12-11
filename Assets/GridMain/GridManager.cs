@@ -297,7 +297,12 @@ public class GridManager : MonoBehaviour {
                     PartyManager.i.AddPartyMember(character);
                 }
             }
-            PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
+            if (!Manager.currentCharacter) {
+                PartyManager.i.SetCurrentCharacter(PartyManager.i.party[0]);
+            }
+            else {
+                PartyManager.i.SetCurrentCharacter(Manager.currentCharacter);
+            }
             return;
         }
     DebugSpawn:

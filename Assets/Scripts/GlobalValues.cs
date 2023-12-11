@@ -15,6 +15,7 @@ public class GlobalValues : ScriptableObject
     public float shadowHeight;
     public float itemAnimationSpeed;
     public float itemAnimationHeight;
+    public bool disableDevHotkeys;
     public float onHitNudgeAmount =1;
     public float onAttackNudgeAmount =1;
     public bool mobileSettings;

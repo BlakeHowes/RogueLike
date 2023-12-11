@@ -277,7 +277,7 @@ public class PartyManager : MonoBehaviour {
             GridManager.i.StartStack();
         }
         Camera.main.GetComponent<SmoothCamera>().resetFollow();
-        StartCoroutine(MouseManager.i.EndOfTurnMouseDisableToPreventMissClick());
+        MouseManager.i.StartDisableMouseBriefly(0.5f);
     }
 
     public void EnemyPartyStartTurn() {
@@ -292,6 +292,7 @@ public class PartyManager : MonoBehaviour {
         }
         enemyTurnTaken.Clear();
         SetCurrentCharacter(enemyParty[0]);
+        TurnUI.i.EnemyTurn();
         var pos = currentCharacter.Position();
         currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
         currentCharacter.GetComponent<PandaBehaviour>().tickOn = BehaviourTree.UpdateOrder.Update;
@@ -369,6 +370,7 @@ public class PartyManager : MonoBehaviour {
         GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
         var pos = currentCharacter.Position();
         currentCharacter.GetComponent<Inventory>().CallEquipment(pos, pos, CallType.StartOfIndividualTurn);
+        TurnUI.i.PartyTurn();
         GridManager.i.StartStack();
         MouseManager.i.UpdateHightlight(MouseManager.i.MousePositionOnGrid());
         //enemyTurnTaken.Clear();

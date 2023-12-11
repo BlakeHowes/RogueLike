@@ -77,6 +77,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   targetsTags: 18
+  clickOnHack: 1
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +93,7 @@ MonoBehaviour:
   tile: {fileID: 11400000, guid: c7aa6c35bac97864b9eefc044ad3f691, type: 2}
   state: 0
   elementalStats: {fileID: 0}
+  actionPointStack: {fileID: 0}
   maxHealthBase: 70
   maxArmourBase: 0
   actionPointsBase: 3
@@ -109,6 +111,7 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  minRange: 0
   meleeDamage: 0
   meleeDamageMultiple: 1
   meleeAccuracy: 0
@@ -250,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootGroup: 0
   lootGroup2: 0
+  Drops: []
 --- !u!114 &752585418151326076
 MonoBehaviour:
   m_ObjectHideFlags: 0

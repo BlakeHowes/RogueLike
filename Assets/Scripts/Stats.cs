@@ -109,11 +109,13 @@ public class Stats : MonoBehaviour {
         state = PartyManager.State.Combat;
         PartyManager.i.ChangeCharacterMaterial(gameObject);
         GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
+        TurnUI.i.StartCombat(gameObject);
     }
     public void OnExitCombat() {
         state = PartyManager.State.Idle;
         PartyManager.i.ChangeCharacterMaterial(gameObject);
         GameUIManager.i.PartyIconTurnTakenGraphicUpdate();
+        TurnUI.i.ExitCombat();
     }
 
     //Hack to set armour too armour temp, I cant figure out a better way
@@ -288,6 +290,7 @@ public class Stats : MonoBehaviour {
             gameObject.SetActive(false);
             GridManager.i.goMethods.RemoveGameObject(position);
         }
+        MouseManager.i.StartDisableMouseBriefly(0.25f);
     }
 
     public void EndOfStackGORemoval(bool idkwhyIhavetomakeavariable) {

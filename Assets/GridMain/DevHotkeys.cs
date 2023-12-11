@@ -4,11 +4,16 @@ public class DevHotkeys : MonoBehaviour
 {
     public bool suspendStack;
     public static DevHotkeys i;
+    GlobalValues globalValues;
+    bool disable = false;
     public void Awake() {
         i = this;
+        globalValues = Manager.GetGlobalValues();
+        disable = globalValues.disableDevHotkeys;
     }
 
     public void Update() {
+        if (disable) { return; }
         if (Input.GetKeyDown(KeyCode.Z)) {
             var go = PartyManager.i.currentCharacter;
             var stats = go.GetComponent<Stats>();

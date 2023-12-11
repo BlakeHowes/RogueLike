@@ -78,6 +78,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   targetsTags: 18
+  clickOnHack: 0
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +112,7 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  minRange: 0
   meleeDamage: 0
   meleeDamageMultiple: 1
   meleeAccuracy: 0
@@ -139,12 +141,8 @@ MonoBehaviour:
   items: []
   traits: []
   skills: []
-  coolDowns:
-  - coolDownTimer: 106
-    item: {fileID: 11400000, guid: 941f6fff1e0e3aa4498e8f55fabe5cc8, type: 2}
-    go: {fileID: 0}
-  statusEffects:
-  - {fileID: 11400000, guid: 941f6fff1e0e3aa4498e8f55fabe5cc8, type: 2}
+  coolDowns: []
+  statusEffects: []
   mainHand: {fileID: 11400000, guid: 73c7ba347688ed14b91074d331cf9563, type: 2}
   offHand: {fileID: 0}
   helmet: {fileID: 0}

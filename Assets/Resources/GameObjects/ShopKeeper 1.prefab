@@ -162,6 +162,7 @@ MonoBehaviour:
   target: {fileID: 0}
   sightRange: 12
   targetsTags: 18
+  clickOnHack: 1
 --- !u!114 &3243932232630802517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   state: 0
   elementalStats: {fileID: 0}
   actionPointStack: {fileID: 0}
-  maxHealthBase: 500
+  maxHealthBase: 300
   maxArmourBase: 0
   actionPointsBase: 6
   throwingRangeBase: 1
@@ -195,6 +196,7 @@ MonoBehaviour:
   directDamage: 0
   armour: 0
   damageTaken: 0
+  minRange: 0
   meleeDamage: 0
   meleeDamageMultiple: 1
   meleeAccuracy: 0
@@ -243,6 +245,18 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       stringValue: 
     - action: {fileID: 11400000, guid: 38de8ba1ab58e734fa00c2df4ed4e3a0, type: 2}
+      intValue: 0
+      floatValue: 0
+      itemValue: {fileID: 0}
+      prefabValue: {fileID: 0}
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      vector2IntValue: {x: 0, y: 0}
+      surfaceValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      stringValue: 
+  - callType: 4
+    actionContainers:
+    - action: {fileID: 11400000, guid: 8b407a237fd69cf41a547d1b4ac51822, type: 2}
       intValue: 0
       floatValue: 0
       itemValue: {fileID: 0}

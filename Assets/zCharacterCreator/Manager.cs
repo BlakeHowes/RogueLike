@@ -15,7 +15,7 @@ public static class Manager {
     public static System.Action<Vector3Int, Vector3Int, CallType> OnAttackEvent;
     public static System.Action<GameObject, GameObject> OnSwitchCharacter;
     public static Action<bool> EndOfStackEvent;
-
+    public static GameObject currentCharacter;
     public static int coins = 0;
 
     public static void OnEndOfStackCall() {
@@ -44,6 +44,7 @@ public static class Manager {
 
     public static void LoadNextScene() {
         if (PartyManager.i) {
+            currentCharacter = PartyManager.i.currentCharacter;
             foreach (var character in PartyManager.i.party) {
                 var spring = character.GetComponent<SpringToTarget3D>();
                 spring.disableSpring = true;

@@ -17,4 +17,13 @@ public class mechMethods
     public MechAbstract GetMechanism(Vector3Int position) {
         return mechGrid[position.x, position.y];
     }
+
+    public void RemoveMech(Vector3Int position) {
+        mechGrid[position.x, position.y] = null;
+        mechTilemap.SetTile(position, null);
+    }
+
+    public void GetMechsInRoom() {
+
+    }
 }

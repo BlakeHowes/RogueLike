@@ -46,8 +46,8 @@ public class ActionPointStack : MonoBehaviour
     public void CallItem(ItemAbstract item,bool walk) {
         var position = MouseManager.i.MousePositionOnGrid();
         var origin = gameObject.Position();
-        if (walk || IsMySkillTargetingMe()) { position = MouseManager.i.positionBeforeWalk; }
-
+        //if (walk || IsMySkillTargetingMe()) { position = MouseManager.i.positionBeforeWalk; }
+        if (walk) { return; }
         if (item is ActionPointElement) {
             var element = item as ActionPointElement;
             APElementCombiner.AddElement(element.surface, position, origin,gameObject);
@@ -83,7 +83,6 @@ public class ActionPointStack : MonoBehaviour
                 return;
             }
         }
-        APElementCombiner.CallElement();
     }
 
     public bool DoIHaveActionPointsToWalk(int amount) {

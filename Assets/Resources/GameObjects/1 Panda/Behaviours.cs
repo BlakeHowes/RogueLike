@@ -18,7 +18,7 @@ public class Behaviours : MonoBehaviour
     private List<string> targetStrings = new List<string>();
     public Tags targetsTags = Tags.Enemies | Tags.Summon;
     private GlobalValues globalValues;
-
+    public bool clickOnHack = false;
     public void OnEnable() {
         gotilemap = GridManager.i.goTilemap;
         targetStrings = ConvertFlagsEnumToStringList(targetsTags,gameObject);
